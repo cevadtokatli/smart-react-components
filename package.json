@@ -1,0 +1,60 @@
+{
+  "name": "smart-react-components",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "React UI library, wide variety of editable ready to use Styled and React components.",
+  "keywords": [
+    "react-ui-library",
+    "javascript",
+    "typescript",
+    "react",
+    "styled-components",
+    "component",
+    "grid"
+  ],
+  "author": {
+    "name": "Cevad Tokatli",
+    "email": "cevadtokatli@hotmail.com",
+    "url": "http://cevadtokatli.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cevadtokatli/smart-react-components"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rollup -c --environment INCLUDE_DEPS,BUILD:production",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/color": "^3.0.1",
+    "@types/enzyme": "^3.10.5",
+    "@types/jest": "^25.1.4",
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
+    "@types/styled-components": "^4.4.2",
+    "color": "^3.1.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "jest": "^25.2.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "rollup": "^1.29.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "styled-components": "^5.0.0",
+    "ts-jest": "^25.3.0",
+    "tslib": "^1.10.0",
+    "typescript": "^3.7.5"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-components": "^5.0.0"
+  }
+}
