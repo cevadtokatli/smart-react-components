@@ -1,4 +1,4 @@
-import {ColorObject} from "../types"
+import {Coordinator, ColorObject} from "../types"
 import {ThemeVariable, Value} from "../props"
 import {Grid} from "../types/grid"
 import ColorHelper from "../helper/ColorHelper"
@@ -15,10 +15,22 @@ export interface Type {
     lighter?: string
     lightest?: string
     shadow?: string
+
+    // components
+    form?: {
+        radioColor?: string
+        radioBorder?: string
+        inputBackground?: string
+        inputBorder?: string
+        inputFont?: string
+        inputPlaceholder?: string
+        inputPlaceholderFill?: string
+    }
 }
 
 export interface TypeOptions {
     util?: boolean
+    form?: boolean
 }
 
 export interface Theme {
@@ -38,10 +50,35 @@ export interface Theme {
     iconSize: ThemeVariable<Value>
 
     // components
+    badge: {
+        fixedSize: ThemeVariable<string>
+        padding: ThemeVariable<Coordinator<string>>
+        margin: Coordinator<string>
+        radius: ThemeVariable<string>
+        fontSize: ThemeVariable<string>
+    }
+    fixedBox: {
+        boxShadow: string
+    }
+    form: {
+        disabledOpacity: number
+        radioSpanSpace: string
+        radioSpanFontSize: ThemeVariable<string>
+        inputPadding: ThemeVariable<Coordinator<string>>
+        inputRadius: ThemeVariable<string>
+        inputFontSize: ThemeVariable<string>
+        optionPadding: ThemeVariable<string>
+        optionMargin: ThemeVariable<Coordinator<string>>
+        optionFontSize: ThemeVariable<string>
+    }
     grid: {
         breakpoint: Grid
         containerWidth: Grid
         columnGap: string
+    }
+    overlay: {
+        space: string
+        background: string
     }
 }
 
@@ -81,6 +118,17 @@ export const createType = (value:string|Type, options:boolean|TypeOptions=true):
         type.lighter = type.lighter || color.darken(DV.LIGHTER_LEVEL).hex().toString()
         type.lightest = type.lightest || ColorHelper.getColor(type.lighter).darken(DV.LIGHT_LEVEL).hex().toString()
         type.shadow = type.shadow || color.alpha(DV.SHADOW_FADE_LEVEL).rgb().toString()
+    }
+
+    if(options === true || typeOptions.form) {
+        type.form = type.form || {}
+        type.form.radioColor = type.form.radioColor || DV.FORM_RADIO_COLOR
+        type.form.radioBorder = type.form.radioBorder || DV.FORM_RADIO_BORDER_COLOR
+        type.form.inputBackground = type.form.inputBackground || DV.FORM_INPUT_BG_COLOR
+        type.form.inputBorder = type.form.inputBorder || DV.FORM_INPUT_BORDER_COLOR
+        type.form.inputFont = type.form.inputFont || ColorHelper.getFontColor(type.form.inputBackground)
+        type.form.inputPlaceholder = type.form.inputPlaceholder || DV.FORM_INPUT_PLACEHOLDER_COLOR
+        type.form.inputPlaceholderFill = type.form.inputPlaceholderFill || ColorHelper.getColor(type.font).alpha(DV.FORM_INPUT_PLACEHOLDER_FILL_FADE_LEVEL).rgb().toString()
     }
 
     return type
@@ -194,6 +242,102 @@ const theme: Theme = {
     },
 
     // components
+    badge: {
+        fixedSize: {
+            small: "18px",
+            default: "20px",
+            large: "22px"
+        },
+        padding: {
+            small: {
+                x: ".1875rem",
+                y: ".09375rem"
+            },
+            default: {
+                x: ".375rem",
+                y: ".1875rem"
+            },
+            large: {
+                x: ".65rem",
+                y: ".3rem"
+            }
+        },
+        margin: {
+            x: ".3125rem",
+            y: ".3125rem"
+        },
+        radius: {
+            default: ".15rem",
+            square: "0",
+            rounded: ".875rem",
+            circle: "100%"
+        },
+        fontSize: {
+            small: ".75rem",
+            default: ".75rem",
+            large: ".875rem"
+        }
+    },
+    fixedBox: {
+        boxShadow: "0 0 35px 0 rgba(154,161,171,.15)"
+    },
+    form: {
+        disabledOpacity: .7,
+        radioSpanSpace: ".46875rem",
+        radioSpanFontSize: {
+            small: ".875rem",
+            default: "1rem",
+            large: "1rem"
+        },
+        inputPadding: {
+            small: {
+                x: ".8rem",
+                y: ".28rem"
+            },
+            default: {
+                x: ".9rem",
+                y: ".45rem"
+            },
+            large: {
+                x: "1rem",
+                y: ".5rem"
+            }
+        },
+        inputRadius: {
+            default: ".2rem",
+            square: "0",
+            rounded: "2rem"
+        },
+        inputFontSize: {
+            small: ".875rem",
+            default: "1rem",
+            large: "1rem"
+        },
+        optionPadding: {
+            small: ".15625rem",
+            default: ".3125rem",
+            large: ".625rem"
+        },
+        optionMargin: {
+            small: {
+                x: ".28rem",
+                y: ".06rem"
+            },
+            default: {
+                x: ".45rem",
+                y: ".125rem"
+            },
+            large: {
+                x: ".5rem",
+                y: ".175rem"
+            }
+        },
+        optionFontSize: {
+            small: ".875rem",
+            default: ".875rem",
+            large: "1rem"
+        }
+    },
     grid: {
         breakpoint: {
             small: 576,
@@ -208,6 +352,10 @@ const theme: Theme = {
             xlarge: 1140
         },
         columnGap: "15px"
+    },
+    overlay: {
+        space: "1.75rem",
+        background: "rgba(0,0,0,.3)"
     }
 }
 
