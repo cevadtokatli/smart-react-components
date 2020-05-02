@@ -1,6 +1,6 @@
 {
   "name": "smart-react-components",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "license": "MIT",
   "description": "React UI library, wide variety of editable ready to use Styled and React components.",
   "keywords": [
@@ -10,7 +10,12 @@
     "react",
     "styled-components",
     "component",
-    "grid"
+    "badge",
+    "grid",
+    "fixed-box",
+    "form",
+    "overlay",
+    "transition"
   ],
   "author": {
     "name": "Cevad Tokatli",
@@ -21,6 +26,7 @@
     "type": "git",
     "url": "https://github.com/cevadtokatli/smart-react-components"
   },
+  "homepage": "https://cevadtokatli.github.io/smart-react-components/",
   "files": [
     "dist",
     "LICENSE",
@@ -41,6 +47,7 @@
     "color": "^3.1.2",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.4.4",
     "jest": "^25.2.6",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
