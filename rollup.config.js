@@ -6,6 +6,10 @@ module.exports = {
     input: {
         "default-value": "./src/default-value/index$.tsx",
         "theme": "./src/theme/index.tsx",
+        "badge/index": "./src/badge/index.tsx",
+        "badge/Container": "./src/badge/Container$.tsx",
+        "badge/Icon": "./src/badge/Icon$.tsx",
+        "badge/Text": "./src/badge/Text$.tsx",
         "element/A": "./src/element/A.tsx",
         "element/Abbr": "./src/element/Abbr.tsx",
         "element/Address": "./src/element/Address.tsx",
@@ -101,9 +105,26 @@ module.exports = {
         "element/Var": "./src/element/Var.tsx",
         "element/Video": "./src/element/Video.tsx",
         "element/Wbr": "./src/element/Wbr.tsx",
+        "fixed-box/index": "./src/fixed-box/index.tsx",
+        "form/Radio": "./src/form/Radio.tsx",
+        "form/Checkbox": "./src/form/Checkbox.tsx",
+        "form/Switch": "./src/form/Switch.tsx",
+        "form/Input": "./src/form/Input$.tsx",
+        "form/InputElement": "./src/form/InputElement$.tsx",
+        "form/InputFile": "./src/form/InputFile.tsx",
+        "form/Textarea": "./src/form/Textarea.tsx",
+        "form/TextareaElement": "./src/form/TextareaElement$.tsx",
+        "form/Select": "./src/form/Select.tsx",
+        "form/SelectBox": "./src/form/SelectBox.tsx",
+        "form/Option": "./src/form/Option.tsx",
+        "form/OptionCategory": "./src/form/OptionCategory.tsx",
         "grid/Container": "./src/grid/Container.tsx",
         "grid/Row": "./src/grid/Row.tsx",
-        "grid/Column": "./src/grid/Column.tsx"
+        "grid/Column": "./src/grid/Column.tsx",
+        "overlay/index": "./src/overlay/index.tsx",
+        "transition/Transition": "./src/transition/Transition$.tsx",
+        "transition/CSSTransition": "./src/transition/CSSTransition$.tsx",
+        "transition/SlideTransition": "./src/transition/SlideTransition$.tsx"
     },
     output: [
         {
