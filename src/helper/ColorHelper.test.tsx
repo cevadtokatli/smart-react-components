@@ -17,4 +17,8 @@ describe("ColorHelper", () => {
         expect(ColorHelper.getFontColor("#000")).toEqual(DV.LIGHT_FONT_COLOR)
         expect(ColorHelper.getFontColor("#fff")).toEqual(DV.DARK_FONT_COLOR)
     })
+
+    it("should convert the given color value to rgb value", () => {
+        expect(ColorHelper.convertToRgb("#000")).toEqual("rgb(0, 0, 0)")
+    })
 })

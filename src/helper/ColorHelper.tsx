@@ -51,4 +51,13 @@ export default class ColorHelper {
     static getFontColor(value:string): string {
         return this.getColor(value).isDark() ? DV.LIGHT_FONT_COLOR : DV.DARK_FONT_COLOR
     }
+
+    /**
+     * Converts the given string color value to rgb string value. 
+     * 
+     * @param value 
+     */
+    static convertToRgb(value:string) {
+        return this.getColor(value).rgb().toString()
+    }
 }
