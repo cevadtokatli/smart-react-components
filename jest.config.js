@@ -4,5 +4,6 @@ module.exports = {
         "^.+\\.tsx?$": "ts-jest"
     },
     testRegex: "/src/.*.test.tsx$",
-    moduleFileExtensions: ["ts", "tsx", "js", "json", "node"]
+    moduleFileExtensions: ["ts", "tsx", "js", "json", "node"],
+    snapshotSerializers: ["enzyme-to-json/serializer"]
 }
