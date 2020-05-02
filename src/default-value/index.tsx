@@ -32,7 +32,15 @@ const DV : {
     LIGHT_LEVEL: .075,
     LIGHTER_LEVEL: .175,
     SHADOW_FADE_LEVEL: .5,
-    JSX_ELEMENT_PROPS: {}
+    JSX_ELEMENT_PROPS: {},
+
+    // form
+    FORM_RADIO_COLOR: "#fff",
+    FORM_RADIO_BORDER_COLOR: "#dbdbdb",
+    FORM_INPUT_BG_COLOR: "#fff",
+    FORM_INPUT_BORDER_COLOR: "#dbdbdb",
+    FORM_INPUT_PLACEHOLDER_COLOR: "#b1bbc4",
+    FORM_INPUT_PLACEHOLDER_FILL_FADE_LEVEL: .3
 }
 
 export default DV
