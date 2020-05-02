@@ -115,15 +115,16 @@ const theme: Theme = {
 
     // variables
     zIndex: {
+        buttonLoading: 10,
         fixedBox: 1000,
-        loading: 1010,
-        modal: 1040,
-        overlay: 1030,
-        popover: 1060,
-        popup: 1050,
+        loading: 10,
+        modal: 1000,
+        overlay: 2000,
+        popover: 1000,
+        popup: 1000,
         routerProgressBar: 9999,
-        tooltip: 1070,
-        waveEffect: 1080
+        tooltip: 1000,
+        waveEffect: 10
     },
     length: {
         "-5": "-3rem",
