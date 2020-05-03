@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Option /> should match snapshot 1`] = `
+<div
+  class="sc-AxjAm sc-AxirZ eGnNeZ"
+  shape="default"
+  type="primary"
+  value="option-1"
+>
+  Option-1
+</div>
+`;
