@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SelectBox /> should match snapshot 1`] = `
+<div
+  class="sc-AxjAm sc-fzokOt gMZWcK"
+>
+  <label
+    class="sc-fzqBZW sc-fzqNJr hvPyVx"
+  >
+    Label
+  </label>
+  <div
+    class="sc-fzoyAV sc-fzoLag dynLCI"
+    data-src-active="false"
+    data-src-placeholder-style="false"
+    display="block"
+    font-family="inherit"
+    placeholder="Placeholder..."
+    shape="default"
+    tabindex="0"
+    width="100%"
+  >
+    <div
+      class="sc-AxjAm bSfLnR"
+      display="flex"
+    >
+      <div
+        class="sc-AxjAm jfvPlI"
+      >
+        Value-2
+      </div>
+      <svg
+        class="sc-AxhUy sc-fzozJi iXmFV"
+        viewBox="5 4 14 14"
+      >
+        <path
+          d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
