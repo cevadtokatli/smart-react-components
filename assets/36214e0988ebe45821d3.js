@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{88:function(n,o,e){"use strict";var r=e(1),t=e(69),i=e.n(t);o.a=Object(r.default)(i.a)(({theme:n})=>`\n    display: inline-block;\n    color ${n.src.color.darkblue};\n    \n    &:not([href]) {\n        cursor: default;\n        transition: opacity ${n.util.anchorTransition};\n        \n        &:hover {\n            opacity: .8;\n        }\n    }\n\n    &[href] {\n        &:hover {\n            text-decoration: underline;\n        }\n    }\n`)}}]);
-//# sourceMappingURL=36214e0988ebe45821d3.js.map
