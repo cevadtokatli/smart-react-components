@@ -33,8 +33,13 @@ $ yarn add smart-react-components
 * [Default Values](https://cevadtokatli.github.io/smart-react-components?page=default-values)
 * [Styled Properties](https://cevadtokatli.github.io/smart-react-components?page=styled-properties)
 * [Server Side Rendering](https://cevadtokatli.github.io/smart-react-components?page=server-side-rendering)
+* [Badge](https://cevadtokatli.github.io/smart-react-components?page=components/badge)
 * [Element](https://cevadtokatli.github.io/smart-react-components?page=components/element)
+* [Fixed-Box](https://cevadtokatli.github.io/smart-react-components?page=components/fixed-box)
+* [Form](https://cevadtokatli.github.io/smart-react-components?page=components/form)
 * [Grid](https://cevadtokatli.github.io/smart-react-components?page=components/grid)
+* [Overlay](https://cevadtokatli.github.io/smart-react-components?page=components/overlay)
+* [Transition](https://cevadtokatli.github.io/smart-react-components?page=components/transition)
 
 ### Usage
 After attaching the SRC theme to the Styled Components theme context, you are ready to use all the Styled and React components of SRC.
