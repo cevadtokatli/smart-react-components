@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputFile /> should match snapshot 1`] = `
+<div
+  class="sc-AxjAm sc-fznKkj gdHwSh"
+>
+  <label
+    class="sc-fznZeY sc-fzokOt irGTil"
+  >
+    Label
+  </label>
+  <input
+    class="sc-AxmLO jIliE"
+    display="none"
+    multiple=""
+    placeholder="Placeholder..."
+    type="file"
+  />
+  <div
+    class="sc-AxmLO sc-fzozJi cHrMyr"
+    data-src-placeholder-style="false"
+    display="block"
+    font-family="inherit"
+    shape="default"
+    width="100%"
+  >
+    <div
+      class="sc-AxjAm sc-AxirZ gIiDzh"
+    >
+      <div
+        class="sc-AxjAm sc-AxiKw iLNbuB src-badge "
+        data-src-not-clickable="true"
+        shape="default"
+        type="primary"
+      >
+        <div
+          class="sc-AxjAm sc-AxhCb evxtSu src-badge-icon "
+        >
+          <svg
+            class="sc-AxhUy sc-AxgMl gRracT"
+            viewBox="2 2 14 14"
+          >
+            <path
+              d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"
+            />
+          </svg>
+        </div>
+        <span
+          class="sc-AxheI sc-Axmtr ckxLBy src-badge-text "
+        >
+          notes.txt
+        </span>
+      </div>
+      <div
+        class="sc-AxjAm sc-AxiKw iLNbuB src-badge "
+        data-src-not-clickable="true"
+        shape="default"
+        type="primary"
+      >
+        <div
+          class="sc-AxjAm sc-AxhCb evxtSu src-badge-icon "
+        >
+          <svg
+            class="sc-AxhUy sc-AxgMl gRracT"
+            viewBox="2 2 14 14"
+          >
+            <path
+              d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"
+            />
+          </svg>
+        </div>
+        <span
+          class="sc-AxheI sc-Axmtr ckxLBy src-badge-text "
+        >
+          image.jpg
+        </span>
+      </div>
+      <div
+        class="sc-AxjAm sc-AxiKw iLNbuB src-badge "
+        data-src-not-clickable="true"
+        shape="default"
+        type="primary"
+      >
+        <div
+          class="sc-AxjAm sc-AxhCb evxtSu src-badge-icon "
+        >
+          <svg
+            class="sc-AxhUy sc-AxgMl gRracT"
+            viewBox="2 2 14 14"
+          >
+            <path
+              d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"
+            />
+          </svg>
+        </div>
+        <span
+          class="sc-AxheI sc-Axmtr ckxLBy src-badge-text "
+        >
+          video.mp4
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
