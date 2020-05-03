@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OptionCategory /> should match snapshot 1`] = `
+<OptionCategory>
+  <Styled(styled.div)
+    size="default"
+    type="primary"
+  >
+    <div
+      className="sc-AxjAm sc-AxirZ fEEAp"
+      size="default"
+      type="primary"
+    >
+      Category
+    </div>
+  </Styled(styled.div)>
+</OptionCategory>
+`;
