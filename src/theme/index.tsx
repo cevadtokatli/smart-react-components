@@ -17,6 +17,11 @@ export interface Type {
     shadow?: string
 
     // components
+    button?: {
+        background?: string
+        placeholder?: string
+        placeholderFill?: string
+    }
     form?: {
         radioColor?: string
         radioBorder?: string
@@ -26,11 +31,22 @@ export interface Type {
         inputPlaceholder?: string
         inputPlaceholderFill?: string
     }
+    progressBar?: {
+        background?: string
+        backgroundFill?: string
+        backgroundAlt?: string
+    }
+    waveEffect?: {
+        color?: string
+    }
 }
 
 export interface TypeOptions {
     util?: boolean
+    button?: boolean
     form?: boolean
+    progressBar?: boolean
+    waveEffect?: boolean
 }
 
 export interface Theme {
@@ -57,6 +73,14 @@ export interface Theme {
         radius: ThemeVariable<string>
         fontSize: ThemeVariable<string>
     }
+    button: {
+        fixedSize: ThemeVariable<string>
+        padding: ThemeVariable<Coordinator<string>&{xHalf:string}>
+        radius: ThemeVariable<string>
+        fontSize: ThemeVariable<string>
+        disabledOpacity: number
+        transition: string
+    }
     fixedBox: {
         boxShadow: string
     }
@@ -76,9 +100,21 @@ export interface Theme {
         containerWidth: Grid
         columnGap: string
     }
+    loading: {
+        size: ThemeVariable<string>
+        animation: string
+    }
+    progressBar: {
+        radius: ThemeVariable<string>
+        transitionType: string
+        stripedAnimationType: string
+    }
     overlay: {
         space: string
         background: string
+    }
+    waveEffect: {
+        transition: string
     }
 }
 
@@ -120,6 +156,13 @@ export const createType = (value:string|Type, options:boolean|TypeOptions=true):
         type.shadow = type.shadow || color.alpha(DV.SHADOW_FADE_LEVEL).rgb().toString()
     }
 
+    if(options === true || typeOptions.button) {
+        type.button = type.button || {}
+        type.button.background = type.button.background || DV.BUTTON_BG_COLOR
+        type.button.placeholder = type.button.placeholder || type.main
+        type.button.placeholderFill = type.button.placeholderFill || ColorHelper.getFontColor(type.main)
+    }
+
     if(options === true || typeOptions.form) {
         type.form = type.form || {}
         type.form.radioColor = type.form.radioColor || DV.FORM_RADIO_COLOR
@@ -129,6 +172,19 @@ export const createType = (value:string|Type, options:boolean|TypeOptions=true):
         type.form.inputFont = type.form.inputFont || ColorHelper.getFontColor(type.form.inputBackground)
         type.form.inputPlaceholder = type.form.inputPlaceholder || DV.FORM_INPUT_PLACEHOLDER_COLOR
         type.form.inputPlaceholderFill = type.form.inputPlaceholderFill || ColorHelper.getColor(type.font).alpha(DV.FORM_INPUT_PLACEHOLDER_FILL_FADE_LEVEL).rgb().toString()
+    }
+
+    if(options === true || typeOptions.progressBar) {
+        type.progressBar = type.progressBar || {}
+        type.progressBar.background = type.progressBar.background || DV.PROGRESS_BAR_BG
+        type.progressBar.backgroundFill = type.progressBar.backgroundFill || DV.PROGRESS_BAR_BG_FILL
+        type.progressBar.backgroundAlt = type.progressBar.backgroundAlt || color.alpha(DV.PROGRESS_BAR_BG_ALT_FADE_LEVEL).rgb().toString()
+    }
+
+    if(options === true || typeOptions.waveEffect) {
+        type.waveEffect = type.waveEffect || {}
+        const waveEffectColor = ColorHelper.getColor((type.waveEffect.color || type.main))
+        type.waveEffect.color = `radial-gradient(${waveEffectColor.alpha(.2).toString()} 0, ${waveEffectColor.alpha(.3).toString()} 40%, ${waveEffectColor.alpha(.4).toString()} 50%, ${waveEffectColor.alpha(.5).toString()} 60%, ${waveEffectColor.alpha(0).toString()} 70%)`
     }
 
     return type
@@ -278,6 +334,43 @@ const theme: Theme = {
             large: ".875rem"
         }
     },
+    button: {
+        fixedSize: {
+            small: "30px",
+            default: "36px",
+            large: "40px"
+        },
+        padding: {
+            small: {
+                x: ".8rem",
+                y: ".28rem",
+                xHalf: ".4rem"
+            },
+            default: {
+                x: ".9rem",
+                y: ".45rem",
+                xHalf: ".45rem"
+            },
+            large: {
+                x: "1rem",
+                y: ".5rem",
+                xHalf: ".5rem"
+            }
+        },
+        radius: {
+            default: ".125rem",
+            square: "0",
+            rounded: "1.8rem",
+            circle: "100%"
+        },
+        fontSize: {
+            small: ".875rem",
+            default: ".875rem",
+            large: "1rem"
+        },
+        disabledOpacity: .7,
+        transition: "ease-in-out 200ms 0ms"
+    },
     fixedBox: {
         boxShadow: "0 0 35px 0 rgba(154,161,171,.15)"
     },
@@ -353,9 +446,30 @@ const theme: Theme = {
         },
         columnGap: "15px"
     },
+    loading: {
+        size: {
+            small: "10px",
+            default: "20px",
+            large: "30px"
+        },
+        animation: "linear 2000ms 0ms"
+    },
     overlay: {
         space: "1.75rem",
         background: "rgba(0,0,0,.3)"
+    },
+    progressBar: {
+        radius: {
+            default: ".125rem",
+            square: "0",
+            rounded: "1rem",
+            circle: "100%"
+        },
+        transitionType: "ease-in-out",
+        stripedAnimationType: "linear"
+    },
+    waveEffect: {
+        transition: `${DV.WAVE_EFFECT_TRANSITION_TYPE} ${DV.WAVE_EFFECT_TRANSITION_DURATION}ms 0ms` 
     }
 }
 
