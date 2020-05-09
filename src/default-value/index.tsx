@@ -34,13 +34,25 @@ const DV : {
     SHADOW_FADE_LEVEL: .5,
     JSX_ELEMENT_PROPS: {},
 
+    // button
+    BUTTON_BG_COLOR: "#fff",
+
     // form
     FORM_RADIO_COLOR: "#fff",
     FORM_RADIO_BORDER_COLOR: "#dbdbdb",
     FORM_INPUT_BG_COLOR: "#fff",
     FORM_INPUT_BORDER_COLOR: "#dbdbdb",
     FORM_INPUT_PLACEHOLDER_COLOR: "#b1bbc4",
-    FORM_INPUT_PLACEHOLDER_FILL_FADE_LEVEL: .3
+    FORM_INPUT_PLACEHOLDER_FILL_FADE_LEVEL: .3,
+
+    // progress bar
+    PROGRESS_BAR_BG: "transparent",
+    PROGRESS_BAR_BG_FILL: "#eee",
+    PROGRESS_BAR_BG_ALT_FADE_LEVEL: .3,
+
+    // wave effect
+    WAVE_EFFECT_TRANSITION_TYPE: "ease-out",
+    WAVE_EFFECT_TRANSITION_DURATION: 750
 }
 
 export default DV
