@@ -1,7 +1,16 @@
+/// <reference path="../modules/global.d.tsx" />
 import React from "react"
 import {createGlobalStyle} from "styled-components"
+import {Value} from "../props"
 import DOMHelper from "../helper/DOMHelper"
 import Transition from "./Transition"
+
+let id = 0
+
+const getID = () => id++
+
+if(typeof global !== "undefined")
+    global.srcSlideTransitionCleanID = () => id = 0
 
 interface GlobalStyleProps {
     id: number
@@ -37,6 +46,7 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>(({id,type,duration}) => 
 export interface Props {
     children: JSX.Element
     status?: boolean
+    value?: Value
     display?: boolean
     type?: string
     duration?: number
@@ -47,7 +57,7 @@ export interface Props {
 }
 
 const SlideTransition: React.FC<Props> = ({children,status,display,type="ease-in-out",duration=150,beforeShow,beforeHide,afterShow,afterHide}) => {
-    const [id] = React.useState<number>(() => new Date().getTime())
+    const [id] = React.useState<number>(() => getID())
     
     const show = (el:HTMLElement): Promise<void> => new Promise(resolve => {
         let className: string = el.className || ""

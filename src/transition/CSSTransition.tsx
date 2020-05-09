@@ -1,7 +1,16 @@
+/// <reference path="../modules/global.d.tsx" />
 import React from "react"
 import {createGlobalStyle} from "styled-components"
+import {Value} from "../props"
 import DOMHelper from "../helper/DOMHelper"
 import Transition from "./Transition"
+
+let id = 0
+
+const getID = () => id++
+
+if(typeof global !== "undefined")
+    global.srcCSSTransitionCleanID = () => id = 0
 
 const style = {
     "src-overlay-fixed-box-up": (transition, _duration, _type, theme) => `
@@ -236,6 +245,7 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>(({theme,id,className,typ
 export interface Props {
     children: JSX.Element
     status?: boolean
+    value?: Value
     display?: boolean
     className: string
     type?: string
@@ -249,7 +259,7 @@ export interface Props {
 }
 
 const CSSTransition: React.FC<Props> = ({children,status,display,className,type="ease-in-out",duration=200,showAnimation=true,hideAnimation=true,beforeShow,beforeHide,afterShow,afterHide}) => {
-    const [id] = React.useState<number>(() => new Date().getTime())
+    const [id] = React.useState<number>(() => getID())
 
     const show = (el:HTMLElement): Promise<void> => new Promise(resolve => {
         if(!showAnimation)
