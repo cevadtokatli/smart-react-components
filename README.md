@@ -34,12 +34,16 @@ $ yarn add smart-react-components
 * [Styled Properties](https://cevadtokatli.github.io/smart-react-components?page=styled-properties)
 * [Server Side Rendering](https://cevadtokatli.github.io/smart-react-components?page=server-side-rendering)
 * [Badge](https://cevadtokatli.github.io/smart-react-components?page=components/badge)
+* [Button](https://cevadtokatli.github.io/smart-react-components?page=components/button)
 * [Element](https://cevadtokatli.github.io/smart-react-components?page=components/element)
 * [Fixed-Box](https://cevadtokatli.github.io/smart-react-components?page=components/fixed-box)
 * [Form](https://cevadtokatli.github.io/smart-react-components?page=components/form)
 * [Grid](https://cevadtokatli.github.io/smart-react-components?page=components/grid)
+* [Loading](https://cevadtokatli.github.io/smart-react-components?page=components/loading)
 * [Overlay](https://cevadtokatli.github.io/smart-react-components?page=components/overlay)
+* [Progress Bar](https://cevadtokatli.github.io/smart-react-components?page=components/progress-bar)
 * [Transition](https://cevadtokatli.github.io/smart-react-components?page=components/transition)
+* [Wave Effect](https://cevadtokatli.github.io/smart-react-components?page=components/wave-effect)
 
 ### Usage
 After attaching the SRC theme to the Styled Components theme context, you are ready to use all the Styled and React components of SRC.
