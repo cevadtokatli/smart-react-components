@@ -1,6 +1,6 @@
 {
   "name": "smart-react-components",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "license": "MIT",
   "description": "React UI library, wide variety of editable ready to use Styled and React components.",
   "keywords": [
@@ -11,11 +11,15 @@
     "styled-components",
     "component",
     "badge",
+    "button",
     "grid",
     "fixed-box",
     "form",
+    "loading",
     "overlay",
-    "transition"
+    "progress-bar",
+    "transition",
+    "wave-effect"
   ],
   "author": {
     "name": "Cevad Tokatli",
