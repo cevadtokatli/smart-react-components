@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Group /> should match snapshot 1`] = `
+<div
+  class="sc-AxjAm sc-AxirZ goZcrM"
+  display="inline-block"
+>
+  <a
+    class="sc-AxhCb sc-AxhUy eDVuak"
+    data-src-wave-effect="0"
+    shape="default"
+    tabindex="0"
+  >
+    Button-1
+  </a>
+  <a
+    class="sc-AxhCb sc-AxhUy eDVuak"
+    data-src-wave-effect="0"
+    shape="default"
+    tabindex="0"
+  >
+    Button-2
+  </a>
+  <a
+    class="sc-AxhCb sc-AxhUy eDVuak"
+    data-src-wave-effect="0"
+    shape="default"
+    tabindex="0"
+  >
+    Button-3
+  </a>
+</div>
+`;
