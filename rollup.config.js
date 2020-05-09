@@ -10,6 +10,10 @@ module.exports = {
         "badge/Container": "./src/badge/Container$.tsx",
         "badge/Icon": "./src/badge/Icon$.tsx",
         "badge/Text": "./src/badge/Text$.tsx",
+        "button/index": "./src/button/index.tsx",
+        "button/Element": "./src/button/Element$.tsx",
+        "button/Select": "./src/button/Select.tsx",
+        "button/Group": "./src/button/Group.tsx",
         "element/A": "./src/element/A.tsx",
         "element/Abbr": "./src/element/Abbr.tsx",
         "element/Address": "./src/element/Address.tsx",
@@ -121,10 +125,14 @@ module.exports = {
         "grid/Container": "./src/grid/Container.tsx",
         "grid/Row": "./src/grid/Row.tsx",
         "grid/Column": "./src/grid/Column.tsx",
+        "loading/index": "./src/loading/index.tsx",
         "overlay/index": "./src/overlay/index.tsx",
+        "progress-bar/index": "./src/progress-bar/index.tsx",
+        "ssr/init": "./src/ssr/init.tsx",
         "transition/Transition": "./src/transition/Transition$.tsx",
         "transition/CSSTransition": "./src/transition/CSSTransition$.tsx",
-        "transition/SlideTransition": "./src/transition/SlideTransition$.tsx"
+        "transition/SlideTransition": "./src/transition/SlideTransition$.tsx",
+        "wave-effect/index": "./src/wave-effect/index.tsx"
     },
     output: [
         {
