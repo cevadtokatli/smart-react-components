@@ -17,6 +17,14 @@ export interface Type {
     shadow?: string
 
     // components
+    alert?: {
+        background?: string
+        border?: string
+        font?: string
+        fontFill?: string
+        linkFont?: string
+        hr?: string
+    }
     button?: {
         background?: string
         placeholder?: string
@@ -43,6 +51,7 @@ export interface Type {
 
 export interface TypeOptions {
     util?: boolean
+    alert?: boolean
     button?: boolean
     form?: boolean
     progressBar?: boolean
@@ -66,6 +75,12 @@ export interface Theme {
     iconSize: ThemeVariable<Value>
 
     // components
+    alert: {
+        padding: ThemeVariable<Coordinator<string>&{xHalf:string}>
+        radius: string
+        fontSize: ThemeVariable<string>
+        linkFontWeight: string
+    }
     badge: {
         fixedSize: ThemeVariable<string>
         padding: ThemeVariable<Coordinator<string>>
@@ -154,6 +169,16 @@ export const createType = (value:string|Type, options:boolean|TypeOptions=true):
         type.lighter = type.lighter || color.darken(DV.LIGHTER_LEVEL).hex().toString()
         type.lightest = type.lightest || ColorHelper.getColor(type.lighter).darken(DV.LIGHT_LEVEL).hex().toString()
         type.shadow = type.shadow || color.alpha(DV.SHADOW_FADE_LEVEL).rgb().toString()
+    }
+
+    if(options === true || typeOptions.alert) {
+        type.alert = type.alert || {}
+        type.alert.background = type.alert.background || ColorHelper.mix(type.main, DV.ALERT_BG_LEVEL)
+        type.alert.border = type.alert.border || ColorHelper.mix(type.main, DV.ALERT_BORDER_LEVEL)
+        type.alert.font = type.alert.font || ColorHelper.mix(type.main, DV.ALERT_FONT_LEVEL)
+        type.alert.fontFill = type.alert.fontFill || (type.font || ColorHelper.getFontColor(type.main))
+        type.alert.linkFont = type.alert.linkFont || ColorHelper.getColor(type.alert.font).darken(DV.ALERT_LINK_FONT_DARKEN_LEVEL).rgb().toString()
+        type.alert.hr = type.alert.hr || ColorHelper.getColor(type.alert.border).darken(DV.ALERT_HR_DARKEN_LEVEL).rgb().toString()
     }
 
     if(options === true || typeOptions.button) {
@@ -298,6 +323,32 @@ const theme: Theme = {
     },
 
     // components
+    alert: {
+        padding: {
+            small: {
+                x: "1.25rem",
+                y: ".375rem",
+                xHalf: ".625rem"
+            },
+            default: {
+                x: "1.25rem",
+                y: ".75rem",
+                xHalf: ".625rem"
+            },
+            large: {
+                x: "1.25rem",
+                y: "1rem",
+                xHalf: ".625rem"
+            }
+        },
+        radius: ".25rem",
+        fontSize: {
+            small: ".875rem",
+            default: "1rem",
+            large: "1rem"
+        },
+        linkFontWeight: "600"
+    },
     badge: {
         fixedSize: {
             small: "18px",
