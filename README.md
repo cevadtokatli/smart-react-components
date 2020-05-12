@@ -33,6 +33,7 @@ $ yarn add smart-react-components
 * [Default Values](https://cevadtokatli.github.io/smart-react-components?page=default-values)
 * [Styled Properties](https://cevadtokatli.github.io/smart-react-components?page=styled-properties)
 * [Server Side Rendering](https://cevadtokatli.github.io/smart-react-components?page=server-side-rendering)
+* [Alert](https://cevadtokatli.github.io/smart-react-components?page=components/alert)
 * [Badge](https://cevadtokatli.github.io/smart-react-components?page=components/badge)
 * [Button](https://cevadtokatli.github.io/smart-react-components?page=components/button)
 * [Element](https://cevadtokatli.github.io/smart-react-components?page=components/element)
