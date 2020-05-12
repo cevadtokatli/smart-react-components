@@ -6,6 +6,8 @@ module.exports = {
     input: {
         "default-value": "./src/default-value/index$.tsx",
         "theme": "./src/theme/index.tsx",
+        "alert/index": "./src/alert/index.tsx",
+        "alert/CloseIcon": "./src/alert/CloseIcon.tsx",
         "badge/index": "./src/badge/index.tsx",
         "badge/Container": "./src/badge/Container$.tsx",
         "badge/Icon": "./src/badge/Icon$.tsx",
