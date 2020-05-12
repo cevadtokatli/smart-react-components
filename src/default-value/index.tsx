@@ -34,6 +34,13 @@ const DV : {
     SHADOW_FADE_LEVEL: .5,
     JSX_ELEMENT_PROPS: {},
 
+    // alert
+    ALERT_BG_LEVEL: -.8,
+    ALERT_BORDER_LEVEL: -.72,
+    ALERT_FONT_LEVEL: .4,
+    ALERT_LINK_FONT_DARKEN_LEVEL: .1,
+    ALERT_HR_DARKEN_LEVEL: .05,
+    
     // button
     BUTTON_BG_COLOR: "#fff",
 
