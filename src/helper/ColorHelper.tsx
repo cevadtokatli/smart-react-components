@@ -16,30 +16,31 @@ export default class ColorHelper {
      * Mixes two colors.
      * If weight is a negative number, mixs value with white.
      * If weight is a positive number, mixs value with black.
+     * Weight could be an three-length array. It applies different weight for red, green and blue respectively.
      * 
      * @param value
      * @param weight 
      */
-    static mix(value:string, weight:number): string {
-        const hex1 = weight > 0 ? "#000000" : "#FFFFFF"
+    static mix(value:string, weight:number|number[]): string {
+        if(typeof weight === "number")
+            weight = [weight, weight, weight] as number[]
+
+        const rgb = []
         const hex2 = this.getColor(value).hex().toString()
-        const red1 = parseInt(hex1.substring(1, 3), 16)
-        const green1 = parseInt(hex1.substring(3, 5), 16)
-        const blue1 = parseInt(hex1.substring(5, 7), 16)
-        const red2 = parseInt(hex2.substring(1, 3), 16)
-        const green2 = parseInt(hex2.substring(3, 5), 16)
-        const blue2 = parseInt(hex2.substring(5, 7), 16)
-        weight = Math.abs(weight)
-        let redMixed = Math.floor(red1*weight+red2*(1-weight)).toString(16)
-        let greenMixed = Math.floor(green1*weight+green2*(1-weight)).toString(16)
-        let blueMixed = Math.floor(blue1*weight+blue2*(1-weight)).toString(16)
-        if(redMixed.length == 1)
-            redMixed = `0${redMixed}`
-        if(greenMixed.length == 1)
-            greenMixed = `0${greenMixed}`
-        if(blueMixed.length == 1)
-            blueMixed = `0${blueMixed}`
-        return `#${redMixed}${greenMixed}${blueMixed}`
+        for(let i=0; i<3; i++) {
+            const hex1 = weight[i] > 0 ? "#000000" : "#FFFFFF"
+            weight[i] = Math.abs(weight[i])
+            const startValue = i * 2 + 1
+            const endValue = startValue + 2
+            const value1 = parseInt(hex1.substring(startValue, endValue), 16)
+            const value2 = parseInt(hex2.substring(startValue, endValue), 16)
+            let mixedValue = Math.floor(value1*weight[i]+value2*(1-weight[i])).toString(16)
+            if(mixedValue.length == 1)
+                mixedValue = `0${mixedValue}`
+            rgb.push(mixedValue)
+        }
+
+        return `#${rgb.join("")}`
     }
 
     /**
