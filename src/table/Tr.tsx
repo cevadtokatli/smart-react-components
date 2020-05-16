@@ -14,15 +14,9 @@ export default styled(Tr)<Props>`
             color: ${theme.src.type[type].table.font} !important; 
         }
 
-        thead > & > *:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            z-index: -1;
-            background: ${theme.src.type[type].table.striped} !important;
+        thead > & > * {
+            background: ${theme.src.type[type].table.stripedBackground} !important;
+            color: ${theme.src.type[type].table.stripedFont} !important; 
         }
     `}
 `
