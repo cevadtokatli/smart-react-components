@@ -43,6 +43,7 @@ $ yarn add smart-react-components
 * [Loading](https://cevadtokatli.github.io/smart-react-components?page=components/loading)
 * [Overlay](https://cevadtokatli.github.io/smart-react-components?page=components/overlay)
 * [Progress Bar](https://cevadtokatli.github.io/smart-react-components?page=components/progress-bar)
+* [Table](https://cevadtokatli.github.io/smart-react-components?page=components/table)
 * [Transition](https://cevadtokatli.github.io/smart-react-components?page=components/transition)
 * [Wave Effect](https://cevadtokatli.github.io/smart-react-components?page=components/wave-effect)
 
