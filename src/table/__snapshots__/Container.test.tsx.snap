@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Container /> should match snapshot 1`] = `
+<div
+  class="sc-AxjAm sc-AxirZ bAAnQB"
+>
+  <table
+    class="sc-AxiKw sc-AxhCb lnRIzg"
+    type="light"
+  >
+    <thead
+      class="sc-AxhUy sc-AxgMl kfbrdB"
+    >
+      <tr
+        class="sc-fzoLsD sc-fzpans bRzNfu"
+      >
+        <th
+          class="sc-fzplWN sc-fznyAO glIEAp"
+          font-weight="semiBold"
+        >
+          Thead-1
+        </th>
+        <th
+          class="sc-fzplWN sc-fznyAO glIEAp"
+          font-weight="semiBold"
+        >
+          Thead-2
+        </th>
+        <th
+          class="sc-fzplWN sc-fznyAO glIEAp"
+          font-weight="semiBold"
+        >
+          Thead-3
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="sc-AxheI sc-Axmtr ENWqQ"
+    >
+      <tr
+        class="sc-fzoLsD sc-fzpans bRzNfu"
+      >
+        <td
+          class="sc-fznKkj sc-fznZeY gmKgZU"
+        >
+          Tbody-1-1
+        </td>
+        <td
+          class="sc-fznKkj sc-fznZeY gmKgZU"
+        >
+          Tbody-1-2
+        </td>
+        <td
+          class="sc-fznKkj sc-fznZeY gmKgZU"
+        >
+          Tbody-1-3
+        </td>
+      </tr>
+      <tr
+        class="sc-fzoLsD sc-fzpans bRzNfu"
+      >
+        <td
+          class="sc-fznKkj sc-fznZeY gmKgZU"
+        >
+          Tbody-2-1
+        </td>
+        <td
+          class="sc-fznKkj sc-fznZeY gmKgZU"
+        >
+          Tbody-2-2
+        </td>
+        <td
+          class="sc-fznKkj sc-fznZeY gmKgZU"
+        >
+          Tbody-2-3
+        </td>
+      </tr>
+      <tr
+        class="sc-fzoLsD sc-fzpans bRzNfu"
+      >
+        <td
+          class="sc-fznKkj sc-fznZeY gmKgZU"
+        >
+          Tbody-3-1
+        </td>
+        <td
+          class="sc-fznKkj sc-fznZeY gmKgZU"
+        >
+          Tbody-3-2
+        </td>
+        <td
+          class="sc-fznKkj sc-fznZeY gmKgZU"
+        >
+          Tbody-3-3
+        </td>
+      </tr>
+    </tbody>
+    <tfoot
+      class="sc-AxmLO sc-fzozJi hHUnMk"
+    >
+      <tr
+        class="sc-fzoLsD sc-fzpans bRzNfu"
+      >
+        <td
+          class="sc-fznKkj sc-fznZeY gmKgZU"
+        >
+          Tfoot-1
+        </td>
+        <td
+          class="sc-fznKkj sc-fznZeY gmKgZU"
+        >
+          Tfoot-2
+        </td>
+        <td
+          class="sc-fznKkj sc-fznZeY gmKgZU"
+        >
+          Tfoot-3
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+`;
