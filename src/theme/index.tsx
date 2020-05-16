@@ -44,6 +44,15 @@ export interface Type {
         backgroundFill?: string
         backgroundAlt?: string
     }
+    table?: {
+        background?: string
+        border?: string
+        font?: string
+        stripedBackground?: string
+        stripedFont?: string
+        hoverBackground?: string
+        hoverFont?: string
+    }
     waveEffect?: {
         color?: string
     }
@@ -55,6 +64,7 @@ export interface TypeOptions {
     button?: boolean
     form?: boolean
     progressBar?: boolean
+    table?: boolean
     waveEffect?: boolean
 }
 
@@ -119,14 +129,20 @@ export interface Theme {
         size: ThemeVariable<string>
         animation: string
     }
+    overlay: {
+        space: string
+        background: string
+    }
     progressBar: {
         radius: ThemeVariable<string>
         transitionType: string
         stripedAnimationType: string
-    }
-    overlay: {
-        space: string
-        background: string
+    }    
+    table: {
+        padding: ThemeVariable<string>
+        fontSize: ThemeVariable<string>
+        stripedOrientation: string
+        hoverTransition: string
     }
     waveEffect: {
         transition: string
@@ -206,6 +222,17 @@ export const createType = (value:string|Type, options:boolean|TypeOptions=true):
         type.progressBar.backgroundAlt = type.progressBar.backgroundAlt || color.alpha(DV.PROGRESS_BAR_BG_ALT_FADE_LEVEL).rgb().toString()
     }
 
+    if(options === true || typeOptions.table) {
+        type.table = type.table || {}
+        type.table.background = type.table.background || ColorHelper.mix(type.main, DV.TABLE_BG_LEVEL)
+        type.table.border = type.table.border || ColorHelper.mix(type.main, DV.TABLE_BORDER_LEVEL)
+        type.table.font = type.table.font || ColorHelper.getFontColor(type.table.background)
+        type.table.stripedBackground = type.table.stripedBackground || ColorHelper.mix(type.table.background, DV.TABLE_STRIPED_BG_LEVEL)
+        type.table.stripedFont = type.table.stripedFont || ColorHelper.getFontColor(type.table.stripedBackground)
+        type.table.hoverBackground = type.table.hoverBackground || ColorHelper.mix(type.table.background, DV.TABLE_HOVER_BG_LEVEL)
+        type.table.hoverFont = type.table.hoverFont || ColorHelper.getFontColor(type.table.hoverBackground)
+    }
+
     if(options === true || typeOptions.waveEffect) {
         type.waveEffect = type.waveEffect || {}
         const waveEffectColor = ColorHelper.getColor((type.waveEffect.color || type.main))
@@ -230,14 +257,28 @@ const theme: Theme = {
         }),
         warning: createType(DV.YELLOW),
         info: createType(DV.CYAN),
-        light: createType(DV.GRAY_100),
+        light: createType({
+            main: DV.GRAY_100,
+            table: {
+                background: DV.TABLE_LIGHT_BG_COLOR,
+                border: DV.TABLE_LIGHT_BORDER_COLOR
+            },
+            waveEffect: {
+                color: DV.WHITE
+            }
+        }),
         gray: createType(DV.GRAY_500),
         dark: createType({
-            main: DV.GRAY_900
+            main: DV.GRAY_900,
+            table: {
+                background: DV.TABLE_DARK_BG_COLOR,
+                border: DV.TABLE_DARK_BORDER_COLOR
+            },
+            waveEffect: {
+                color: DV.BLACK
+            }
         }),
-        white: createType({
-            main: DV.WHITE
-        }),
+        white: createType(DV.WHITE),
         black: createType(DV.BLACK)
     },
     isMobile: DOMHelper.isMobile,
@@ -518,6 +559,20 @@ const theme: Theme = {
         },
         transitionType: "ease-in-out",
         stripedAnimationType: "linear"
+    },
+    table: {
+        padding: {
+            small: ".3rem",
+            default: ".75rem",
+            large: "1rem"
+        },
+        fontSize: {
+            small: ".875rem",
+            default: "1rem",
+            large: "1rem"
+        },
+        stripedOrientation: "odd",
+        hoverTransition: "ease-in-out 300ms 0ms"
     },
     waveEffect: {
         transition: `${DV.WAVE_EFFECT_TRANSITION_TYPE} ${DV.WAVE_EFFECT_TRANSITION_DURATION}ms 0ms` 
