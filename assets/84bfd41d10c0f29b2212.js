@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[25],{163:function(e,t,a){"use strict";a.r(t);var n=a(0),o=a.n(n),l=a(98),r=a.n(l),c=a(4),i=a(134),m=a(135),p=a(136),s=a(141);t.default=()=>(Object(i.a)({title:"Nothing Found"}),o.a.createElement(m.a,null,o.a.createElement(p.a,null,o.a.createElement("div",null,o.a.createElement(r.a,{color:"primary"},"404 Not Found!"),o.a.createElement(c.Link,{to:"/smart-react-components?page=getting-started",elementProps:{as:s.a}},"Click")," for homepage."))))}}]);
-//# sourceMappingURL=84bfd41d10c0f29b2212.js.map
