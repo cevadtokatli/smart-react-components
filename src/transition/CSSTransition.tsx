@@ -66,7 +66,7 @@ const style = {
             }
         }
     `,
-    "src-overlay-modal-down": (transition, theme) => `
+    "src-overlay-modal-down": (transition, _duration, _type, theme) => `
         will-change: opacity;
 
         > * {
