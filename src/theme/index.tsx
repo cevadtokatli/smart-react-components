@@ -129,6 +129,16 @@ export interface Theme {
         size: ThemeVariable<string>
         animation: string
     }
+    modal: {
+        width: ThemeVariable<string>
+        borderColor: string
+        borderRadius: string
+        backgroundColor: string
+        modalContentPadding: Coordinator<string>
+        modalContentBorderColor: string
+        modalFooterPadding: Coordinator<string>
+        modalFooterContentMargin: Coordinator<string>
+    }
     overlay: {
         space: string
         background: string
@@ -545,6 +555,29 @@ const theme: Theme = {
             large: "30px"
         },
         animation: "linear 2000ms 0ms"
+    },
+    modal: {
+        width: {
+            small: "300px",
+            default: "500px",
+            large: "800px"
+        },
+        borderColor: "rgba(0,0,0,.2)",
+        borderRadius: ".3rem",
+        backgroundColor: "#fff",
+        modalContentPadding: {
+            x: "1rem",
+            y: "1rem"
+        },
+        modalContentBorderColor: "#dee2e6",
+        modalFooterPadding: {
+            x: ".75rem",
+            y: ".75rem"
+        },
+        modalFooterContentMargin: {
+            x: ".25rem",
+            y: ".25rem"
+        }
     },
     overlay: {
         space: "1.75rem",
