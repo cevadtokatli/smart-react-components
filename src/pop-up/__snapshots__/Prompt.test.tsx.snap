@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Prompt /> should match snapshot 1`] = `
+<div
+  class="sc-AxjAm sc-AxirZ hSRXiD"
+>
+  <div
+    class="sc-AxjAm sc-AxiKw ithbYY"
+  >
+    <header
+      class="sc-AxhCb sc-AxhUy kbgGyV"
+      display="flex"
+    >
+      <h3
+        class="sc-AxgMl sc-AxheI bfrlKY"
+      >
+        Title
+      </h3>
+    </header>
+    <div
+      class="sc-AxjAm sc-Axmtr bjFBcY"
+      overflow="auto"
+    >
+      <p>
+        Message
+      </p>
+      <input
+        class="sc-AxmLO sc-fzozJi jiToWk"
+        display="block"
+        font-family="inherit"
+        placeholder="Placeholder"
+        shape="default"
+        value="Value"
+        width="100%"
+      />
+    </div>
+    <footer
+      class="sc-fzoLsD sc-fzpans hFFXvy"
+    >
+      <a
+        class="sc-fznyAO sc-fznKkj icMEmk"
+        data-src-wave-effect="0"
+        shape="default"
+        tabindex="0"
+      >
+        Cancel
+      </a>
+      <a
+        class="sc-fznyAO sc-fznKkj ciPMrs"
+        data-src-wave-effect="0"
+        shape="default"
+        tabindex="0"
+      >
+        OK
+      </a>
+    </footer>
+  </div>
+</div>
+`;
