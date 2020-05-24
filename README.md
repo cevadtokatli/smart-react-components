@@ -43,9 +43,11 @@ $ yarn add smart-react-components
 * [Loading](https://cevadtokatli.github.io/smart-react-components?page=components/loading)
 * [Modal](https://cevadtokatli.github.io/smart-react-components?page=components/modal)
 * [Overlay](https://cevadtokatli.github.io/smart-react-components?page=components/overlay)
-* [Pop Up](https://cevadtokatli.github.io/smart-react-components?page=components/pop-up)
+* [Pop-up](https://cevadtokatli.github.io/smart-react-components?page=components/pop-up)
+* [Popover](https://cevadtokatli.github.io/smart-react-components?page=components/popover)
 * [Progress Bar](https://cevadtokatli.github.io/smart-react-components?page=components/progress-bar)
 * [Table](https://cevadtokatli.github.io/smart-react-components?page=components/table)
+* [Tooltip](https://cevadtokatli.github.io/smart-react-components?page=components/tooltip)
 * [Transition](https://cevadtokatli.github.io/smart-react-components?page=components/transition)
 * [Wave Effect](https://cevadtokatli.github.io/smart-react-components?page=components/wave-effect)
 
