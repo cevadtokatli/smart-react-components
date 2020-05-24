@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Popover /> should match snapshot 1`] = `
+Array [
+  <button>
+    Toggle element
+  </button>,
+  <div
+    class="sc-AxjAm sc-AxiKw hXUdoB"
+    type="white"
+  >
+    <div
+      class="sc-AxjAm sc-AxhCb rbHCK  src-popover-body"
+    >
+      Popover element
+    </div>
+    <div
+      class="sc-AxjAm sc-AxirZ biZfXt"
+    />
+  </div>,
+]
+`;
