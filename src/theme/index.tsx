@@ -39,6 +39,12 @@ export interface Type {
         inputPlaceholder?: string
         inputPlaceholderFill?: string
     }
+    popover?: {
+        background?: string
+        border?: string
+        headerBackground?: string
+        headerBorder?: string
+    }
     progressBar?: {
         background?: string
         backgroundFill?: string
@@ -63,6 +69,7 @@ export interface TypeOptions {
     alert?: boolean
     button?: boolean
     form?: boolean
+    popover?: boolean
     progressBar?: boolean
     table?: boolean
     waveEffect?: boolean
@@ -143,6 +150,12 @@ export interface Theme {
         space: string
         background: string
     }
+    popover: {
+        radius: string
+        fontSize: ThemeVariable<string>
+        headerPadding: ThemeVariable<Coordinator<string>>
+        bodyPadding: ThemeVariable<Coordinator<string>>
+    }
     progressBar: {
         radius: ThemeVariable<string>
         transitionType: string
@@ -153,6 +166,11 @@ export interface Theme {
         fontSize: ThemeVariable<string>
         stripedOrientation: string
         hoverTransition: string
+    }
+    tooltip: {
+        padding: ThemeVariable<Coordinator<string>>
+        radius: string
+        fontSize: ThemeVariable<string>
     }
     waveEffect: {
         transition: string
@@ -223,6 +241,16 @@ export const createType = (value:string|Type, options:boolean|TypeOptions=true):
         type.form.inputFont = type.form.inputFont || ColorHelper.getFontColor(type.form.inputBackground)
         type.form.inputPlaceholder = type.form.inputPlaceholder || DV.FORM_INPUT_PLACEHOLDER_COLOR
         type.form.inputPlaceholderFill = type.form.inputPlaceholderFill || ColorHelper.getColor(type.font).alpha(DV.FORM_INPUT_PLACEHOLDER_FILL_FADE_LEVEL).rgb().toString()
+    }
+
+    if(options === true || typeOptions.popover) {
+        type.popover = type.popover || {}
+        type.popover.background = type.popover.background || type.main
+        const popoverBgColor = ColorHelper.getColor(type.popover.background)
+        type.popover.border = type.popover.border || popoverBgColor.darken(DV.POPOVER_BORDER_DARKEN_LEVEL).hex().toString()
+        type.popover.headerBackground = type.popover.headerBackground || popoverBgColor.darken(DV.POPOVER_HEADER_BG_DARKEN_LEVEL).hex().toString()
+        const popoverHeaderBgColor = ColorHelper.getColor(type.popover.headerBackground)
+        type.popover.headerBorder = type.popover.headerBorder || popoverHeaderBgColor.darken(DV.POPOVER_BORDER_DARKEN_LEVEL).hex().toString()
     }
 
     if(options === true || typeOptions.progressBar) {
@@ -301,7 +329,6 @@ const theme: Theme = {
         modal: 1000,
         overlay: 2000,
         popover: 1000,
-        popup: 1000,
         routerProgressBar: 9999,
         tooltip: 1000,
         waveEffect: 10
@@ -583,6 +610,42 @@ const theme: Theme = {
         space: "1.75rem",
         background: "rgba(0,0,0,.3)"
     },
+    popover: {
+        radius: ".25rem",
+        fontSize: {
+            small: ".875rem",
+            default: ".875rem",
+            large: "1rem"
+        },
+        headerPadding: {
+            small: {
+                x: ".5rem",
+                y: ".4rem"
+            },
+            default: {
+                x: ".8rem",
+                y: ".7rem"
+            },
+            large: {
+                x: "1.1rem",
+                y: "1rem"
+            }
+        },
+        bodyPadding: {
+            small: {
+                x: ".5rem",
+                y: ".25rem"
+            },
+            default: {
+                x: ".75rem",
+                y: ".5rem"
+            },
+            large: {
+                x: "1rem",
+                y: ".75rem"
+            }
+        }
+    },
     progressBar: {
         radius: {
             default: ".125rem",
@@ -606,6 +669,28 @@ const theme: Theme = {
         },
         stripedOrientation: "odd",
         hoverTransition: "ease-in-out 300ms 0ms"
+    },
+    tooltip: {
+        padding: {
+            small: {
+                x: ".4rem",
+                y: ".15rem"
+            },
+            default: {
+                x: ".6rem",
+                y: ".3rem"
+            },
+            large: {
+                x: ".8rem",
+                y: ".45rem"
+            }
+        },
+        radius: ".25rem",
+        fontSize: {
+            small: ".75rem",
+            default: ".875rem",
+            large: "1rem"
+        }
     },
     waveEffect: {
         transition: `${DV.WAVE_EFFECT_TRANSITION_TYPE} ${DV.WAVE_EFFECT_TRANSITION_DURATION}ms 0ms` 
