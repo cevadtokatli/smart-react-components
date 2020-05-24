@@ -118,4 +118,13 @@ export default class DOMHelper {
         
         return null
     }
+
+    /**
+     * Checks if an element can be rendered in the React portal.
+     * 
+     * @param renderInPortal 
+     */
+    static canBeRenderedInPortal(renderInPortal:boolean): boolean {
+        return (renderInPortal && typeof window !== "undefined" && process.env.NODE_ENV !== "test") ? true : false
+    } 
 }
