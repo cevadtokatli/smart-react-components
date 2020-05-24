@@ -100,7 +100,7 @@ const Overlay = React.forwardRef<HTMLDivElement, Props>(({children,elementProps=
 
     const Element = <OverlayElement {...elementProps} ref={ref || el} breakpoint={breakpoint} background={background}>{children}</OverlayElement>
 
-    return (renderInBody && typeof window !== "undefined" && process.env.NODE_ENV !== "test") ? createPortal(Element, document.body) : Element
+    return DOMHelper.canBeRenderedInPortal(renderInBody) ? createPortal(Element, document.body) : Element
 })
 
 export default Overlay
