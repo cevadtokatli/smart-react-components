@@ -52,6 +52,10 @@ const DV : {
     FORM_INPUT_PLACEHOLDER_COLOR: "#b1bbc4",
     FORM_INPUT_PLACEHOLDER_FILL_FADE_LEVEL: .3,
 
+    // popover
+    POPOVER_BORDER_DARKEN_LEVEL: .15,
+    POPOVER_HEADER_BG_DARKEN_LEVEL: .03,
+    
     // progress bar
     PROGRESS_BAR_BG: "transparent",
     PROGRESS_BAR_BG_FILL: "#eee",
