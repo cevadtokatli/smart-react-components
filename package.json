@@ -1,6 +1,6 @@
 {
   "name": "smart-react-components",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "license": "MIT",
   "description": "React UI library, wide variety of editable ready to use Styled and React components.",
   "keywords": [
@@ -20,8 +20,10 @@
     "modal",
     "overlay",
     "pop-up",
+    "popover",
     "progress-bar",
     "table",
+    "tooltip",
     "transition",
     "wave-effect"
   ],
