@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProgressBar /> should match snapshot 1`] = `
+<div
+  class="sc-AxjAm blklUi"
+>
+  <div
+    class="sc-AxjAm sc-AxhCb bwprCi"
+    height="4px"
+    shape="default"
+    type="primary"
+  >
+    <div
+      class="sc-AxiKw bkIjoo"
+      style="width:50%"
+    />
+  </div>
+</div>
+`;
