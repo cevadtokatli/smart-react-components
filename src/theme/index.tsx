@@ -25,6 +25,11 @@ export interface Type {
         linkFont?: string
         hr?: string
     }
+    breadcrumb?: {
+        background?: string
+        font?: string
+        fontFill?: string
+    }
     button?: {
         background?: string
         placeholder?: string
@@ -38,6 +43,11 @@ export interface Type {
         inputFont?: string
         inputPlaceholder?: string
         inputPlaceholderFill?: string
+    }
+    pagination?: {
+        background?: string
+        border?: string
+        font?: string
     }
     popover?: {
         background?: string
@@ -67,8 +77,10 @@ export interface Type {
 export interface TypeOptions {
     util?: boolean
     alert?: boolean
+    breadcrumb?: boolean
     button?: boolean
     form?: boolean
+    pagination?: boolean
     popover?: boolean
     progressBar?: boolean
     table?: boolean
@@ -104,6 +116,13 @@ export interface Theme {
         margin: Coordinator<string>
         radius: ThemeVariable<string>
         fontSize: ThemeVariable<string>
+    }
+    breadcrumb: {
+        padding: Coordinator<string>
+        radius: ThemeVariable<string>
+        fontSize: string
+        disabledOpacity: number
+        transition: string
     }
     button: {
         fixedSize: ThemeVariable<string>
@@ -149,6 +168,15 @@ export interface Theme {
     overlay: {
         space: string
         background: string
+    }
+    pagination: {
+        padding: Coordinator<string>
+        margin: Coordinator<string>
+        fixedSize: string
+        radius: ThemeVariable<string>
+        fontSize: string
+        disabledOpacity: number
+        transition: string
     }
     popover: {
         radius: string
@@ -225,6 +253,13 @@ export const createType = (value:string|Type, options:boolean|TypeOptions=true):
         type.alert.hr = type.alert.hr || ColorHelper.getColor(type.alert.border).darken(DV.ALERT_HR_DARKEN_LEVEL).rgb().toString()
     }
 
+    if(options === true || typeOptions.breadcrumb) {
+        type.breadcrumb = type.breadcrumb || {}
+        type.breadcrumb.background = type.breadcrumb.background || DV.BREADCRUMB_BG_COLOR
+        type.breadcrumb.font = type.breadcrumb.font || DV.BREADCRUMB_FONT_COLOR
+        type.breadcrumb.fontFill = type.breadcrumb.fontFill || (color.isDark() ? DV.BREADCRUMB_FONT_FILL_LIGHT_COLOR : DV.BREADCRUMB_FONT_FILL_DARK_COLOR)
+    }
+
     if(options === true || typeOptions.button) {
         type.button = type.button || {}
         type.button.background = type.button.background || DV.BUTTON_BG_COLOR
@@ -241,6 +276,13 @@ export const createType = (value:string|Type, options:boolean|TypeOptions=true):
         type.form.inputFont = type.form.inputFont || ColorHelper.getFontColor(type.form.inputBackground)
         type.form.inputPlaceholder = type.form.inputPlaceholder || DV.FORM_INPUT_PLACEHOLDER_COLOR
         type.form.inputPlaceholderFill = type.form.inputPlaceholderFill || ColorHelper.getColor(type.font).alpha(DV.FORM_INPUT_PLACEHOLDER_FILL_FADE_LEVEL).rgb().toString()
+    }
+
+    if(options === true || typeOptions.pagination) {
+        type.pagination = type.pagination || {}
+        type.pagination.background = type.pagination.background || DV.PAGINATION_BG_COLOR
+        type.pagination.border = type.pagination.border || DV.PAGINATION_BORDER_COLOR
+        type.pagination.font = type.pagination.font || ColorHelper.getFontColor(type.pagination.background)
     }
 
     if(options === true || typeOptions.popover) {
@@ -463,6 +505,20 @@ const theme: Theme = {
             large: ".875rem"
         }
     },
+    breadcrumb: {
+        padding: {
+            x: ".6rem",
+            y: ".475rem"
+        },
+        radius: {
+            default: ".125rem",
+            square: "0",
+            rounded: ".875rem"
+        },
+        fontSize: "1rem",
+        disabledOpacity: .7,
+        transition: "ease-in-out 200ms 0ms"
+    },
     button: {
         fixedSize: {
             small: "30px",
@@ -609,6 +665,25 @@ const theme: Theme = {
     overlay: {
         space: "1.75rem",
         background: "rgba(0,0,0,.3)"
+    },
+    pagination: {
+        padding: {
+            x: ".65rem",
+            y: ".4rem"
+        },
+        margin: {
+            x: ".2525rem",
+            y: ".2525rem"
+        },
+        radius: {
+            default: ".125rem",
+            square: "0",
+            rounded: ".5rem"
+        },
+        fixedSize: "32px",
+        fontSize: "1rem",
+        disabledOpacity: .7,
+        transition: "ease-in-out 200ms 0ms"
     },
     popover: {
         radius: ".25rem",
