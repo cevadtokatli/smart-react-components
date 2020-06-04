@@ -41,6 +41,12 @@ const DV : {
     ALERT_LINK_FONT_DARKEN_LEVEL: .1,
     ALERT_HR_DARKEN_LEVEL: .05,
     
+    // breadcrumb
+    BREADCRUMB_BG_COLOR: "#fff",
+    BREADCRUMB_FONT_COLOR: "#6c757d",
+    BREADCRUMB_FONT_FILL_LIGHT_COLOR: "#fff",
+    BREADCRUMB_FONT_FILL_DARK_COLOR: "rgba(0,0,0,.5)",
+    
     // button
     BUTTON_BG_COLOR: "#fff",
 
@@ -52,6 +58,10 @@ const DV : {
     FORM_INPUT_PLACEHOLDER_COLOR: "#b1bbc4",
     FORM_INPUT_PLACEHOLDER_FILL_FADE_LEVEL: .3,
 
+    // pagination
+    PAGINATION_BG_COLOR: "#fff",
+    PAGINATION_BORDER_COLOR: "#dee2e6",
+    
     // popover
     POPOVER_BORDER_DARKEN_LEVEL: .15,
     POPOVER_HEADER_BG_DARKEN_LEVEL: .03,
