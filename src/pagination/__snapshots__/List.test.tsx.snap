@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List /> should match snapshot 1`] = `
+<ul
+  class="sc-AxjAm sc-AxirZ jnnZIg"
+  shape="default"
+  type="primary"
+>
+  <li
+    class="sc-AxiKw sc-AxhCb crerFQ"
+  >
+    <a
+      href="/1"
+    >
+      1
+    </a>
+  </li>
+  <li
+    class="sc-AxiKw sc-AxhCb crerFQ"
+  >
+    <a
+      href="/2"
+    >
+      2
+    </a>
+  </li>
+  <li
+    class="sc-AxiKw sc-AxhCb crerFQ"
+  >
+    <a
+      href="/3"
+    >
+      3
+    </a>
+  </li>
+</ul>
+`;
