@@ -1,6 +1,6 @@
 {
   "name": "smart-react-components",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "license": "MIT",
   "description": "React UI library, wide variety of editable ready to use Styled and React components.",
   "keywords": [
@@ -12,6 +12,7 @@
     "component",
     "alert",
     "badge",
+    "breadcrumb",
     "button",
     "fixed-box",
     "form",
@@ -19,9 +20,11 @@
     "loading",
     "modal",
     "overlay",
+    "pagination",
     "pop-up",
     "popover",
     "progress-bar",
+    "router",
     "table",
     "tooltip",
     "transition",
@@ -38,10 +41,12 @@
   },
   "homepage": "https://cevadtokatli.github.io/smart-react-components/",
   "files": [
-    "dist",
     "LICENSE",
     "README.md"
   ],
+  "publishConfig": {
+    "directory": "dist"
+  },
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c --environment INCLUDE_DEPS,BUILD:production",
@@ -53,6 +58,8 @@
     "@types/jest": "^25.1.4",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
+    "@types/react-loadable": "^5.5.3",
+    "@types/react-router": "^5.1.7",
     "@types/styled-components": "^4.4.2",
     "color": "^3.1.2",
     "enzyme": "^3.11.0",
@@ -61,6 +68,9 @@
     "jest": "^25.2.6",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-is": "^16.13.1",
+    "react-loadable": "^5.5.0",
+    "react-router": "^5.2.0",
     "rollup": "^1.29.1",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
@@ -73,6 +83,8 @@
   "peerDependencies": {
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-loadable": "^5.5.0",
+    "react-router": "^5.2.0",
     "styled-components": "^5.0.0"
   }
 }
