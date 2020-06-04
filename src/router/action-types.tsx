@@ -1,0 +1,5 @@
+export const SET_URL = "SET_URL"
+export const SET_NEW_URL = "SET_NEW_URL"
+export const SET_CANCEL_CALLBACK = "SET_CANCEL_CALLBACK"
+export const SET_PERCENTAGE = "SET_PERCENTAGE"
+export const SET_LOADER_MODULE = "SET_LOADER_MODULE"
