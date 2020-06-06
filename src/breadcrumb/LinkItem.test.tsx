@@ -5,7 +5,7 @@ import RouterHelper from "../helper/RouterHelper"
 import RouterContext from "../router/RouterContext"
 import LinkItem from "./LinkItem"
 
-describe("<Link />", () => {
+describe("<LinkItem />", () => {
     let children
 
     history.push = () => {}
