@@ -1,6 +1,6 @@
 {
   "name": "smart-react-components",
-  "version": "1.7.0",
+  "version": "1.7.3",
   "license": "MIT",
   "description": "React UI library, wide variety of editable ready to use Styled and React components.",
   "keywords": [
@@ -40,16 +40,10 @@
     "url": "https://github.com/cevadtokatli/smart-react-components"
   },
   "homepage": "https://cevadtokatli.github.io/smart-react-components/",
-  "files": [
-    "LICENSE",
-    "README.md"
-  ],
-  "publishConfig": {
-    "directory": "dist"
-  },
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c --environment INCLUDE_DEPS,BUILD:production",
+    "release": "node release.js && yarn run build",
     "test": "jest"
   },
   "devDependencies": {
