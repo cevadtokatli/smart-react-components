@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Link /> should match snapshot 1`] = `
+exports[`<LinkItem /> should match snapshot 1`] = `
 <ul>
   <li
     class="sc-AxirZ sc-AxiKw bquBBA"
