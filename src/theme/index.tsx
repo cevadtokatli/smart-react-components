@@ -132,6 +132,14 @@ export interface Theme {
         disabledOpacity: number
         transition: string
     }
+    colorPicker: {
+        colorLight: string
+        colorDark: string
+        pickerBoxShadow: string
+        draggerBoxShadow: string
+        paletteIconColor: string
+        paletteBorderColor: string
+    }
     fixedBox: {
         boxShadow: string
     }
@@ -555,6 +563,14 @@ const theme: Theme = {
         },
         disabledOpacity: .7,
         transition: "ease-in-out 200ms 0ms"
+    },
+    colorPicker: {
+        colorLight: "#f4f4f4",
+        colorDark: "#1d1d1d",
+        pickerBoxShadow: "0 0 3px rgba(0,0,0,.3) inset",
+        draggerBoxShadow: "0 0 5px rgba(0,0,0,.5)",
+        paletteIconColor: "#c5cbd7",
+        paletteBorderColor: "#d7def0"
     },
     fixedBox: {
         boxShadow: "0 0 35px 0 rgba(154,161,171,.15)"
