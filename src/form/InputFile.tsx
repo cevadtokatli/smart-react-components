@@ -23,7 +23,7 @@ interface Value$ {
     isPlaceholder: boolean
 }
 
-const InputFile: React.FC<Props> = ({size="default",sizeSm,sizeMd,sizeLg,sizeXl,containerProps=DV.JSX_ELEMENT_PROPS,inputProps=DV.JSX_ELEMENT_PROPS,boxProps=DV.JSX_ELEMENT_PROPS,labelProps=DV.JSX_ELEMENT_PROPS,label,value,setValue,type,fill,border,shape="default",badgeType="primary",error,leftAddon,rightAddon}) => {
+const InputFile: React.FC<Props> = ({size="default",sizeSm,sizeMd,sizeLg,sizeXl,containerProps=DV.JSX_ELEMENT_PROPS,inputProps=DV.JSX_ELEMENT_PROPS,boxProps=DV.JSX_ELEMENT_PROPS,labelProps=DV.JSX_ELEMENT_PROPS,label,value,setValue,type,fill,border,shape="default",badgeType="primary",error,leftAddon,leftAddonProps=DV.JSX_ELEMENT_PROPS,leftAddonAbsolute,rightAddon,rightAddonProps=DV.JSX_ELEMENT_PROPS,rightAddonAbsolute}) => {
     const boxEl = React.useRef<HTMLDivElement>(null)
     const inputEl = React.useRef<HTMLInputElement>(null)
 
@@ -105,11 +105,11 @@ const InputFile: React.FC<Props> = ({size="default",sizeSm,sizeMd,sizeLg,sizeXl,
                 <BoxElement 
                 {...boxProps} ref={boxEl} 
                 size$={size} size$Sm={sizeSm} size$Md={sizeMd} size$Lg={sizeLg} size$Xl={sizeXl} type$={type} fill$={fill} border$={border} shape={shape} 
-                leftAddon={leftAddon ? true : false} rightAddon={rightAddon ? true : false} inputElement={false} 
+                leftAddon={leftAddon ? true : false} leftAddonAbsolute={leftAddonAbsolute} rightAddon={rightAddon ? true : false} rightAddonAbsolute={rightAddonAbsolute} inputElement={false} 
                 data-src-placeholder-style={value$.isPlaceholder} onClick={boxClick}>{value$.text}</BoxElement>
             </>
         ),
-        containerProps,inputProps,labelProps,label,shape,leftAddon,rightAddon,error
+        containerProps,inputProps,labelProps,label,shape,leftAddon,leftAddonProps,leftAddonAbsolute,rightAddon,rightAddonProps,rightAddonAbsolute,error
     })
 }
 
