@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Palette /> should match snapshot 1`] = `
+<div>
+  <hr
+    class="sc-AxiKw bEMSys"
+  />
+  <ul
+    class="sc-AxhCb jehzDC"
+  >
+    <li
+      class="sc-AxhUy bEMBCG src-color-picker-palette-item src-color-picker-bg-transparent"
+    >
+      <div
+        style="background:red"
+      />
+    </li>
+    <li
+      class="sc-AxhUy bEMBCG src-color-picker-palette-item src-color-picker-bg-transparent"
+    >
+      <div
+        style="background:green"
+      />
+    </li>
+    <li
+      class="sc-AxhUy bEMBCG src-color-picker-palette-item src-color-picker-bg-transparent"
+    >
+      <div
+        style="background:blue"
+      />
+    </li>
+  </ul>
+</div>
+`;

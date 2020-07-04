@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OpacityPicker /> should match snapshot 1`] = `
+<div
+  class="sc-AxjAm StDqN src-color-picker-bg-transparent"
+>
+  <div
+    class="src-color-picker-picker-shadow"
+  >
+    <span
+      class="sc-AxirZ ktnnZK"
+    />
+  </div>
+</div>
+`;
