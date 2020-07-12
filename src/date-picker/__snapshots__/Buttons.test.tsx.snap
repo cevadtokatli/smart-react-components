@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Buttons /> should match snapshot 1`] = `
+<div
+  class="sc-AxjAm kVchmj src-date-picker-buttons"
+  display="flex"
+>
+  <a
+    class="sc-AxiKw sc-AxhCb fswfCI"
+    data-src-wave-effect="0"
+    shape="default"
+    tabindex="0"
+  >
+    CANCEL
+  </a>
+  <a
+    class="sc-AxiKw sc-AxhCb fswfCI"
+    data-src-wave-effect="0"
+    shape="default"
+    tabindex="0"
+  >
+    OK
+  </a>
+</div>
+`;

@@ -1,0 +1,383 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DatePicker /> should match snapshot 1`] = `
+<div
+  class="sc-AxjAm sc-AxirZ fnjbEC"
+  type="primary"
+>
+  <header
+    class="sc-AxmLO kCJjEb"
+    type="primary"
+  >
+    <span
+      class="sc-AxhCb bIqyJL src-date-picker-span-element"
+      color="primary.font"
+    >
+      Fri, 10 Jul 2020
+    </span>
+    <div
+      class="sc-AxjAm gpOieN"
+      display="flex"
+    >
+      <div
+        class="sc-AxiKw kKjxUC src-date-picker-icon-container"
+      >
+        <div>
+          <svg
+            class="sc-AxhUy sc-AxgMl ewSVZA"
+            viewBox="0 0 1792 1792"
+          >
+            <path
+              d="M1024 544v448q0 14-9 23t-23 9h-320q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h224v-352q0-14 9-23t23-9h64q14 0 23 9t9 23zm416 352q0-148-73-273t-198-198-273-73-273 73-198 198-73 273 73 273 198 198 273 73 273-73 198-198 73-273zm224 0q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div
+    class="sc-fzoXzr bRcYqg src-date-picker-body"
+  >
+    <div
+      class="sc-fznKkj iSBHBt"
+    >
+      <header
+        class="sc-fzpans iBKTIt src-date-picker-date-header"
+      >
+        <span
+          class="src-date-picker-span-element"
+        >
+          July 2020
+        </span>
+        <div
+          class="sc-AxjAm gpOieN"
+          display="flex"
+        >
+          <div
+            class="sc-AxiKw kKjxUC src-date-picker-icon-container"
+          >
+            <svg
+              class="sc-AxhUy sc-fzozJi gJiFrp"
+              viewBox="0 0 1792 1792"
+            >
+              <path
+                d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"
+              />
+            </svg>
+          </div>
+          <div
+            class="sc-AxiKw kKjxUC src-date-picker-icon-container"
+          >
+            <svg
+              class="sc-AxhUy sc-fzoLsD gdXpyH"
+              viewBox="0 0 1792 1792"
+            >
+              <path
+                d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"
+              />
+            </svg>
+          </div>
+        </div>
+      </header>
+      <div>
+        <div>
+          <ul
+            class="sc-fzplWN jnCOMy"
+          >
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+            >
+              Mo
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+            >
+              Tu
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+            >
+              We
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+            >
+              Th
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+            >
+              Fr
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+            >
+              Sa
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+            >
+              Su
+            </li>
+          </ul>
+          <ul
+            class="sc-fzplWN jnCOMy"
+          >
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+            >
+              29
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+            >
+              30
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              1
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              2
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              3
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              4
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              5
+            </li>
+          </ul>
+          <ul
+            class="sc-fzplWN jnCOMy"
+          >
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              6
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              7
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              8
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              9
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item src-date-picker-item-active "
+            >
+              10
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              11
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              12
+            </li>
+          </ul>
+          <ul
+            class="sc-fzplWN jnCOMy"
+          >
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              13
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              14
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              15
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              16
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              17
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              18
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              19
+            </li>
+          </ul>
+          <ul
+            class="sc-fzplWN jnCOMy"
+          >
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              20
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              21
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              22
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              23
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              24
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              25
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              26
+            </li>
+          </ul>
+          <ul
+            class="sc-fzplWN jnCOMy"
+          >
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              27
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              28
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              29
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              30
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+            >
+              31
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+            >
+              1
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+            >
+              2
+            </li>
+          </ul>
+          <ul
+            class="sc-fzplWN jnCOMy"
+          >
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+            >
+              3
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+            >
+              4
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+            >
+              5
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+            >
+              6
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+            >
+              7
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+            >
+              8
+            </li>
+            <li
+              class="sc-fznyAO hhkkzx src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+            >
+              9
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="sc-AxjAm kVchmj src-date-picker-buttons"
+    display="flex"
+  >
+    <a
+      class="sc-fzoyAV sc-fzoLag kJJgzu"
+      data-src-wave-effect="0"
+      shape="default"
+      tabindex="0"
+    >
+      CANCEL
+    </a>
+    <a
+      class="sc-fzoyAV sc-fzoLag kJJgzu"
+      data-src-wave-effect="0"
+      shape="default"
+      tabindex="0"
+    >
+      OK
+    </a>
+  </div>
+</div>
+`;

@@ -1,0 +1,279 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DateWeek /> should match snapshot 1`] = `
+<div>
+  <ul
+    class="sc-AxjAm bzDpNA"
+  >
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+    >
+      Mo
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+    >
+      Tu
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+    >
+      We
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+    >
+      Th
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+    >
+      Fr
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+    >
+      Sa
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+    >
+      Su
+    </li>
+  </ul>
+  <ul
+    class="sc-AxjAm bzDpNA"
+  >
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+    >
+      29
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+    >
+      30
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      1
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      2
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      3
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      4
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      5
+    </li>
+  </ul>
+  <ul
+    class="sc-AxjAm bzDpNA"
+  >
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      6
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      7
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      8
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      9
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      10
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      11
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      12
+    </li>
+  </ul>
+  <ul
+    class="sc-AxjAm bzDpNA"
+  >
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      13
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      14
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      15
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      16
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      17
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      18
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      19
+    </li>
+  </ul>
+  <ul
+    class="sc-AxjAm bzDpNA"
+  >
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      20
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      21
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      22
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      23
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      24
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      25
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      26
+    </li>
+  </ul>
+  <ul
+    class="sc-AxjAm bzDpNA"
+  >
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      27
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      28
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      29
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      30
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  "
+    >
+      31
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+    >
+      1
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+    >
+      2
+    </li>
+  </ul>
+  <ul
+    class="sc-AxjAm bzDpNA"
+  >
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+    >
+      3
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+    >
+      4
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+    >
+      5
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+    >
+      6
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+    >
+      7
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+    >
+      8
+    </li>
+    <li
+      class="sc-AxirZ bpurbs src-date-picker-week-item src-date-picker-week-item src-date-picker-item  src-date-picker-item-inactive"
+    >
+      9
+    </li>
+  </ul>
+</div>
+`;
