@@ -1,6 +1,6 @@
 {
   "name": "smart-react-components",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "license": "MIT",
   "description": "React UI library, wide variety of editable ready to use Styled and React components.",
   "keywords": [
@@ -15,6 +15,7 @@
     "breadcrumb",
     "button",
     "color-picker",
+    "date-picker",
     "fixed-box",
     "form",
     "grid",
