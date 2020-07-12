@@ -38,6 +38,7 @@ $ yarn add smart-react-components
 * [Breadcrumb](https://cevadtokatli.github.io/smart-react-components?page=components/breadcrumb)
 * [Button](https://cevadtokatli.github.io/smart-react-components?page=components/button)
 * [Color Picker](https://cevadtokatli.github.io/smart-react-components?page=components/color-picker)
+* [Date Picker](https://cevadtokatli.github.io/smart-react-components?page=components/date-picker)
 * [Element](https://cevadtokatli.github.io/smart-react-components?page=components/element)
 * [Fixed-Box](https://cevadtokatli.github.io/smart-react-components?page=components/fixed-box)
 * [Form](https://cevadtokatli.github.io/smart-react-components?page=components/form)
