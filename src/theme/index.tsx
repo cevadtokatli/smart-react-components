@@ -140,6 +140,12 @@ export interface Theme {
         paletteIconColor: string
         paletteBorderColor: string
     }
+    datePicker: {
+        background: string
+        font: string
+        inactive: string
+        arrowActive: string
+    }
     fixedBox: {
         boxShadow: string
     }
@@ -571,6 +577,12 @@ const theme: Theme = {
         draggerBoxShadow: "0 0 5px rgba(0,0,0,.5)",
         paletteIconColor: "#c5cbd7",
         paletteBorderColor: "#d7def0"
+    },
+    datePicker: {
+        background: "#fff",
+        font: "#4d4d4d",
+        inactive: "#919191",
+        arrowActive: "#000"
     },
     fixedBox: {
         boxShadow: "0 0 35px 0 rgba(154,161,171,.15)"
