@@ -1,10 +1,12 @@
 import React from "react"
 import {findDOMNode} from "react-dom"
+import {Value} from "../props"
 
 export interface Props {
     children: JSX.Element
     status?: boolean
     display?: boolean
+    value?: Value
     beforeShow?: () => Promise<void>
     beforeHide?: () => Promise<void>
     show?: (el:HTMLElement) => Promise<void>

@@ -245,8 +245,8 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>(({theme,id,className,typ
 export interface Props {
     children: JSX.Element
     status?: boolean
-    value?: Value
     display?: boolean
+    value?: Value
     className: string
     type?: string
     duration?: number

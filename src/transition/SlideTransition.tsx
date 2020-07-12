@@ -46,8 +46,8 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>(({id,type,duration}) => 
 export interface Props {
     children: JSX.Element
     status?: boolean
-    value?: Value
     display?: boolean
+    value?: Value
     type?: string
     duration?: number
     beforeShow?: () => Promise<void>
