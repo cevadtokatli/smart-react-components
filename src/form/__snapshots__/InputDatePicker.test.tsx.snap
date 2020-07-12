@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputDatePicker /> should match snapshot 1`] = `
+<div
+  class="sc-AxjAm sc-Axmtr jtvZOT"
+>
+  <label
+    class="sc-AxmLO sc-fzozJi gncWLU"
+  >
+    Label
+  </label>
+  <input
+    class="sc-fzoLsD sc-fzpans ja-dlgi"
+    display="block"
+    font-family="inherit"
+    shape="default"
+    tabindex="-1"
+    width="100%"
+  />
+</div>
+`;
