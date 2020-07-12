@@ -20,6 +20,7 @@ module.exports = {
         "button/Select": "./src/button/Select.tsx",
         "button/Group": "./src/button/Group.tsx",
         "color-picker/index": "./src/color-picker/index.tsx",
+        "date-picker/index": "./src/date-picker/index.tsx",
         "element/A": "./src/element/A.tsx",
         "element/Abbr": "./src/element/Abbr.tsx",
         "element/Address": "./src/element/Address.tsx",
@@ -123,6 +124,7 @@ module.exports = {
         "form/InputElement": "./src/form/InputElement$.tsx",
         "form/InputFile": "./src/form/InputFile.tsx",
         "form/InputColorPicker": "./src/form/InputColorPicker.tsx",
+        "form/InputDatePicker": "./src/form/InputDatePicker.tsx",
         "form/Textarea": "./src/form/Textarea.tsx",
         "form/TextareaElement": "./src/form/TextareaElement$.tsx",
         "form/Select": "./src/form/Select.tsx",
@@ -164,6 +166,7 @@ module.exports = {
         "transition/Transition": "./src/transition/Transition$.tsx",
         "transition/CSSTransition": "./src/transition/CSSTransition$.tsx",
         "transition/SlideTransition": "./src/transition/SlideTransition$.tsx",
+        "transition/TransitionSwitch": "./src/transition/TransitionSwitch$.tsx",
         "wave-effect/index": "./src/wave-effect/index.tsx"
     },
     output: [
