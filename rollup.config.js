@@ -19,6 +19,7 @@ module.exports = {
         "button/Element": "./src/button/Element$.tsx",
         "button/Select": "./src/button/Select.tsx",
         "button/Group": "./src/button/Group.tsx",
+        "button/Link": "./src/button/Link.tsx",
         "color-picker/index": "./src/color-picker/index.tsx",
         "date-picker/index": "./src/date-picker/index.tsx",
         "element/A": "./src/element/A.tsx",
