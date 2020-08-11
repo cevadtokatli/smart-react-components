@@ -26,6 +26,7 @@ export default styled(Div).attrs<Props>({customKeys})<Props>(({theme,type,arrow}
     background: ${theme.src.type[type].main};
     color: ${theme.src.type[type].font};
     fill: ${theme.src.type[type].font};
+    font-family: ${theme.src.fontFamily.tooltip};
 
     ${arrow == "right" ? `
         ${ArrowElement}:before {

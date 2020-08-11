@@ -432,9 +432,14 @@ const theme: Theme = {
     fontFamily: {
         primary: "Nunito",
         secondary: "Open Sans",
+        alert: "inherit",
+        badge: "inherit",
+        button: "inherit",
         radioSpan: "inherit",
         input: "inherit",
-        option: "inherit"
+        option: "inherit",
+        popver: "inherit",
+        tooltip: "inherit"
     },
     fontWeight: {
         light: "300",

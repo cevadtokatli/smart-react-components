@@ -65,6 +65,7 @@ const AlertElement = styled(Div).attrs<AlertElementProps>(({size="default",type=
     border-radius: ${theme.src.alert.radius};
     word-wrap: break-word;
     word-break: break-word;
+    font-family: ${theme.src.fontFamily.alert};
 
     ${fill$
     ? `

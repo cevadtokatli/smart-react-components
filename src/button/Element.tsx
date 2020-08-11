@@ -56,6 +56,7 @@ export default styled(A).attrs<Props>(({size$="default",type$="primary",fill$=tr
     user-select: none;
     word-wrap: break-word;
     word-break: break-word;
+    font-family: ${theme.src.fontFamily.button};
     transition: ${theme.src.button.transition};
     transition-property: border, background, color, fill, box-shadow;
 

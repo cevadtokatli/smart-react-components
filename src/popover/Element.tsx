@@ -32,6 +32,7 @@ export default styled(Div).attrs<Props>({customKeys})<Props>(({theme,type,arrow,
     box-sizing: border-box;
     border: solid 1px ${theme.src.type[type].popover.border};
     background: ${theme.src.type[type].popover.background};
+    font-family: ${theme.src.fontFamily.popover};
 
     > * {
         color: ${theme.src.type[type].font};

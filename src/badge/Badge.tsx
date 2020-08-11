@@ -53,6 +53,7 @@ export default styled(Div).attrs<Props>(({className="",size="default",type="prim
     background: ${theme.src.type[type].main};
     color: ${theme.src.type[type].font};
     fill: ${theme.src.type[type].font};
+    font-family: ${theme.src.fontFamily.badge};
     word-wrap: break-word;
     word-break: break-word;
 
