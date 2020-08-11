@@ -431,7 +431,10 @@ const theme: Theme = {
     },
     fontFamily: {
         primary: "Nunito",
-        secondary: "Open Sans"
+        secondary: "Open Sans",
+        radioSpan: "inherit",
+        input: "inherit",
+        option: "inherit"
     },
     fontWeight: {
         light: "300",
