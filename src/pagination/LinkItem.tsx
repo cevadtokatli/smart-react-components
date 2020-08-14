@@ -14,8 +14,8 @@ interface Props extends LinkProps {
     waveEffect?: string
 }
 
-const LinkItem: React.FC<Props> = ({children,to,exact=true,elementProps=DV.JSX_ELEMENT_PROPS,isActive,disabled,waveEffect}) => {
-    const {click, active} = useLinkMethods({to,exact})
+const LinkItem: React.FC<Props> = ({children,to,path,exact=true,elementProps=DV.JSX_ELEMENT_PROPS,isActive,disabled,waveEffect}) => {
+    const {click, active} = useLinkMethods({to,path,exact})
 
     const getActive$ = () => typeof isActive !== "undefined" ? isActive : active
 

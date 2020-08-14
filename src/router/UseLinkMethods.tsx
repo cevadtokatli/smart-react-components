@@ -5,6 +5,7 @@ import RouterHelper from "../helper/RouterHelper"
 
 interface Props {
     to: string
+    path?: string
     exact?: boolean
     checkActive?: boolean
 }
@@ -15,10 +16,10 @@ interface Return {
     activating: boolean
 }
 
-export default ({to,exact,checkActive=true}:Props): Return => {
+export default ({to,path,exact,checkActive=true}:Props): Return => {
     const router = React.useContext(RouterContext)
 
-    const isActive = (url:Url) => url && (RouterHelper.matchPath(url.pathname, {path:to,exact}) ? true : false)
+    const isActive = (url:Url) => url && (RouterHelper.matchPath(url.pathname, {path:(path || to),exact}) ? true : false)
 
     const [active, setActive] = React.useState<boolean>(() => checkActive ? isActive(router.state.url) : false)
     const [activating, setActivating] = React.useState<boolean>(() => checkActive ? isActive(router.state.newUrl) : false)

@@ -11,8 +11,8 @@ export interface Props extends LinkProps {
     waveEffect?: string
 }
 
-const LinkItem: React.FC<Props> = ({children,to,exact=true,elementProps=DV.JSX_ELEMENT_PROPS,disabled,waveEffect}) => {
-    const {click,active,activating} = useLinkMethods({to,exact})
+const LinkItem: React.FC<Props> = ({children,to,path,exact=true,elementProps=DV.JSX_ELEMENT_PROPS,disabled,waveEffect}) => {
+    const {click,active,activating} = useLinkMethods({to,path,exact})
 
     const LinkElement = <A {...elementProps} href={to} onClick={click} className={`${elementProps.className || ""} ${active ? "active" : ""} ${activating ? "activating" : ""}`} data-disabled={disabled}>{children}</A>
 
