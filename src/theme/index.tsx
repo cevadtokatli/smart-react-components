@@ -438,7 +438,7 @@ const theme: Theme = {
         radioSpan: "inherit",
         input: "inherit",
         option: "inherit",
-        popver: "inherit",
+        popover: "inherit",
         tooltip: "inherit"
     },
     fontWeight: {
