@@ -35,6 +35,9 @@ export default ({to,path,exact,checkActive=true}:Props): Return => {
     }, [router.state.newUrl])
 
     const click = (e:React.FormEvent<HTMLAnchorElement>): void => {
+        if((e as any).ctrlKey)
+            return
+
         e.preventDefault()
         if((!router.state.newUrl && router.state.url.fullpath != to) || (router.state.newUrl && router.state.newUrl.fullpath != to))
             history.push(to)
