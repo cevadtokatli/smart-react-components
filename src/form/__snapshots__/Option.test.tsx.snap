@@ -2,7 +2,7 @@
 
 exports[`<Option /> should match snapshot 1`] = `
 <div
-  class="sc-AxjAm sc-AxirZ eGnNeZ"
+  class="sc-AxjAm sc-AxirZ oamce"
   shape="default"
   type="primary"
   value="option-1"

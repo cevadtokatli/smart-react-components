@@ -6,7 +6,7 @@ exports[`<Group /> should match snapshot 1`] = `
   display="inline-block"
 >
   <a
-    class="sc-AxhCb sc-AxhUy eDVuak"
+    class="sc-AxhCb sc-AxhUy iPdFHO"
     data-src-wave-effect="0"
     shape="default"
     tabindex="0"
@@ -14,7 +14,7 @@ exports[`<Group /> should match snapshot 1`] = `
     Button-1
   </a>
   <a
-    class="sc-AxhCb sc-AxhUy eDVuak"
+    class="sc-AxhCb sc-AxhUy iPdFHO"
     data-src-wave-effect="0"
     shape="default"
     tabindex="0"
@@ -22,7 +22,7 @@ exports[`<Group /> should match snapshot 1`] = `
     Button-2
   </a>
   <a
-    class="sc-AxhCb sc-AxhUy eDVuak"
+    class="sc-AxhCb sc-AxhUy iPdFHO"
     data-src-wave-effect="0"
     shape="default"
     tabindex="0"

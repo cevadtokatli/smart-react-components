@@ -2,7 +2,7 @@
 
 exports[`<Alert /> should match snapshot 1`] = `
 <div
-  class="sc-AxjAm sc-AxiKw hELdDk"
+  class="sc-AxjAm sc-AxiKw eBqVEq"
   type="primary"
 >
   Alert

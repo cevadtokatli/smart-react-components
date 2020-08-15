@@ -6,7 +6,7 @@ exports[`<Buttons /> should match snapshot 1`] = `
   display="flex"
 >
   <a
-    class="sc-AxiKw sc-AxhCb fswfCI"
+    class="sc-AxiKw sc-AxhCb DlASu"
     data-src-wave-effect="0"
     shape="default"
     tabindex="0"
@@ -14,7 +14,7 @@ exports[`<Buttons /> should match snapshot 1`] = `
     CANCEL
   </a>
   <a
-    class="sc-AxiKw sc-AxhCb fswfCI"
+    class="sc-AxiKw sc-AxhCb DlASu"
     data-src-wave-effect="0"
     shape="default"
     tabindex="0"

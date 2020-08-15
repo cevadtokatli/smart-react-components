@@ -10,7 +10,7 @@ exports[`<Textarea /> should match snapshot 1`] = `
     Label
   </label>
   <textarea
-    class="sc-AxmLO sc-fzozJi sc-fzoLsD kVNngZ"
+    class="sc-AxmLO sc-fzozJi sc-fzoLsD bXerVi"
     display="block"
     font-family="inherit"
     placeholder="Placeholder..."

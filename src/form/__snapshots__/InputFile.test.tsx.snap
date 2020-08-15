@@ -17,7 +17,7 @@ exports[`<InputFile /> should match snapshot 1`] = `
     type="file"
   />
   <div
-    class="sc-AxmLO sc-fzozJi cHrMyr"
+    class="sc-AxmLO sc-fzozJi cQbhMM"
     data-src-placeholder-style="false"
     display="block"
     font-family="inherit"
@@ -28,7 +28,7 @@ exports[`<InputFile /> should match snapshot 1`] = `
       class="sc-AxjAm sc-AxirZ gIiDzh"
     >
       <div
-        class="sc-AxjAm sc-AxiKw iLNbuB src-badge "
+        class="sc-AxjAm sc-AxiKw kydDEv src-badge "
         data-src-not-clickable="true"
         shape="default"
         type="primary"
@@ -52,7 +52,7 @@ exports[`<InputFile /> should match snapshot 1`] = `
         </span>
       </div>
       <div
-        class="sc-AxjAm sc-AxiKw iLNbuB src-badge "
+        class="sc-AxjAm sc-AxiKw kydDEv src-badge "
         data-src-not-clickable="true"
         shape="default"
         type="primary"
@@ -76,7 +76,7 @@ exports[`<InputFile /> should match snapshot 1`] = `
         </span>
       </div>
       <div
-        class="sc-AxjAm sc-AxiKw iLNbuB src-badge "
+        class="sc-AxjAm sc-AxiKw kydDEv src-badge "
         data-src-not-clickable="true"
         shape="default"
         type="primary"

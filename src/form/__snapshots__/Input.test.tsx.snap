@@ -10,7 +10,7 @@ exports[`<Input /> should match snapshot 1`] = `
     Label
   </label>
   <input
-    class="sc-AxmLO sc-fzozJi jiToWk"
+    class="sc-AxmLO sc-fzozJi gHzaL"
     display="block"
     font-family="inherit"
     placeholder="Placeholder..."

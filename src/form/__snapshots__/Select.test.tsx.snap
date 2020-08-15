@@ -10,7 +10,7 @@ exports[`<Select /> should match snapshot 1`] = `
     Label
   </label>
   <div
-    class="sc-fzqBZW sc-fzqNJr ieLFiq"
+    class="sc-fzqBZW sc-fzqNJr dxETip"
     display="block"
     font-family="inherit"
     placeholder="Placeholder..."
@@ -18,7 +18,7 @@ exports[`<Select /> should match snapshot 1`] = `
     width="100%"
   >
     <div
-      class="sc-AxjAm sc-AxirZ iQJjQP"
+      class="sc-AxjAm sc-AxirZ bcPEjQ"
       shape="default"
       type="primary"
       value="value-1"
@@ -26,7 +26,7 @@ exports[`<Select /> should match snapshot 1`] = `
       Value-1
     </div>
     <div
-      class="sc-AxjAm sc-AxirZ iQJjQP src-option-active"
+      class="sc-AxjAm sc-AxirZ bcPEjQ src-option-active"
       shape="default"
       type="primary"
       value="value-2"
@@ -34,7 +34,7 @@ exports[`<Select /> should match snapshot 1`] = `
       Value-2
     </div>
     <div
-      class="sc-AxjAm sc-AxirZ iQJjQP"
+      class="sc-AxjAm sc-AxirZ bcPEjQ"
       shape="default"
       type="primary"
       value="value-3"

@@ -363,7 +363,7 @@ exports[`<DatePicker /> should match snapshot 1`] = `
     display="flex"
   >
     <a
-      class="sc-fzoyAV sc-fzoLag kJJgzu"
+      class="sc-fzoyAV sc-fzoLag dsImIM"
       data-src-wave-effect="0"
       shape="default"
       tabindex="0"
@@ -371,7 +371,7 @@ exports[`<DatePicker /> should match snapshot 1`] = `
       CANCEL
     </a>
     <a
-      class="sc-fzoyAV sc-fzoLag kJJgzu"
+      class="sc-fzoyAV sc-fzoLag dsImIM"
       data-src-wave-effect="0"
       shape="default"
       tabindex="0"

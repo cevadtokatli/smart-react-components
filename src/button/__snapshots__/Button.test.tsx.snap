@@ -2,7 +2,7 @@
 
 exports[`<Button /> should match snapshot 1`] = `
 <a
-  class="sc-AxirZ sc-AxiKw kwnTFm"
+  class="sc-AxirZ sc-AxiKw eGlZiE"
   data-src-wave-effect="0"
   shape="default"
   tabindex="0"

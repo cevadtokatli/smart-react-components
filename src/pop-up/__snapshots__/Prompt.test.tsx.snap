@@ -25,7 +25,7 @@ exports[`<Prompt /> should match snapshot 1`] = `
         Message
       </p>
       <input
-        class="sc-AxmLO sc-fzozJi jiToWk"
+        class="sc-AxmLO sc-fzozJi gHzaL"
         display="block"
         font-family="inherit"
         placeholder="Placeholder"
@@ -38,7 +38,7 @@ exports[`<Prompt /> should match snapshot 1`] = `
       class="sc-fzoLsD sc-fzpans hFFXvy"
     >
       <a
-        class="sc-fznyAO sc-fznKkj icMEmk"
+        class="sc-fznyAO sc-fznKkj imiJBW"
         data-src-wave-effect="0"
         shape="default"
         tabindex="0"
@@ -46,7 +46,7 @@ exports[`<Prompt /> should match snapshot 1`] = `
         Cancel
       </a>
       <a
-        class="sc-fznyAO sc-fznKkj ciPMrs"
+        class="sc-fznyAO sc-fznKkj kkYDGq"
         data-src-wave-effect="0"
         shape="default"
         tabindex="0"

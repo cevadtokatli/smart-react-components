@@ -10,7 +10,7 @@ exports[`<InputColorPicker /> should match snapshot 1`] = `
     Label
   </label>
   <input
-    class="sc-fzoLsD sc-fzpans ja-dlgi"
+    class="sc-fzoLsD sc-fzpans cKluuF"
     display="block"
     font-family="inherit"
     shape="default"
