@@ -1,15 +1,14 @@
 import * as Action from "./action-types"
-import RouterHelper from "../helper/RouterHelper"
-import {CancelCallback, LoaderModule} from "../types/router"
+import {Url, CancelCallback, LoaderModule} from "../types/router"
 
-export const setUrl = (url:string) => ({
+export const setUrl = (url:Url) => ({
     type: Action.SET_URL,
-    payload: RouterHelper.setUrl(url)
+    payload: url
 })
 
-export const setNewUrl = (newUrl:string, key:string) => ({
+export const setNewUrl = (newUrl:Url, key:string) => ({
     type: Action.SET_NEW_URL,
-    payload: RouterHelper.setUrl(newUrl),
+    payload: newUrl,
     key
 })
 

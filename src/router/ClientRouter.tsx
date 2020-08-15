@@ -25,8 +25,9 @@ interface Props {
 const ClientRouter: React.FC<Props> = ({children,params={},progressBarProps=DV.JSX_ELEMENT_PROPS}) => {
     const [state, dispatch] = React.useReducer(reducer, getInitialState())
 
-    const setRouterUrl = React.useCallback((url:string) => {
-        const oldUrl = state.url.pathname
+    const setRouterUrl = React.useCallback((_url:string) => {
+        const url = RouterHelper.setUrl(_url)
+        const oldUrlPathname = state.url.pathname
         let loaderModules = []
         for(let path in state.loaderModules) {
             let item = state.loaderModules[path]
@@ -34,9 +35,9 @@ const ClientRouter: React.FC<Props> = ({children,params={},progressBarProps=DV.J
             let oldMatch
             if(
                 item.module && 
-                (match = RouterHelper.matchPath(url, {path,exact:item.exact})) && 
+                (match = RouterHelper.matchPath(url.pathname, {path,exact:item.exact})) && 
                 (
-                    !(oldMatch = RouterHelper.matchPath(oldUrl, {path,exact:item.exact})) ||
+                    !(oldMatch = RouterHelper.matchPath(oldUrlPathname, {path,exact:item.exact})) ||
                     (oldMatch && oldMatch.key != match.key)
                 )
             )
@@ -56,7 +57,7 @@ const ClientRouter: React.FC<Props> = ({children,params={},progressBarProps=DV.J
                     setPercentage$(10)
                     for(let i in loaderModules) {
                         const module$ = await loaderModules[i].module.preload()
-                        await (module$ as any as PreloadModule).default.get(loaderModules[i].match, RouterHelper.setUrl(url), setPercentage$, setCancelCallback$, params)
+                        await (module$ as any as PreloadModule).default.get(loaderModules[i].match, url, setPercentage$, setCancelCallback$, params)
                     }
                     setPercentage$(100)
                 } catch(ignored) {}
