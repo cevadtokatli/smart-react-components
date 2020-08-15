@@ -26,17 +26,24 @@ const ClientRouter: React.FC<Props> = ({children,params={},progressBarProps=DV.J
     const [state, dispatch] = React.useReducer(reducer, getInitialState())
 
     const setRouterUrl = React.useCallback((url:string) => {
-        let loaderModule
-        let match
+        const oldUrl = state.url.pathname
+        let loaderModules = []
         for(let path in state.loaderModules) {
             let item = state.loaderModules[path]
-            if(item.module && (match = RouterHelper.matchPath(url, {path,exact:item.exact}))) {
-                loaderModule = item.module
-                break
-            }
+            let match
+            let oldMatch
+            if(
+                item.module && 
+                (match = RouterHelper.matchPath(url, {path,exact:item.exact})) && 
+                (
+                    !(oldMatch = RouterHelper.matchPath(oldUrl, {path,exact:item.exact})) ||
+                    (oldMatch && oldMatch.key != match.key)
+                )
+            )
+                loaderModules.push({module:item.module,match})
         }
 
-        if(!loaderModule)
+        if(loaderModules.length == 0)
             dispatch(setUrl(url))
         else {
             let key = new Date().getTime().toString()
@@ -47,12 +54,15 @@ const ClientRouter: React.FC<Props> = ({children,params={},progressBarProps=DV.J
                     const setPercentage$ = (payload:number) => dispatch(setPercentage(payload, key))
                     const setCancelCallback$ = (payload:CancelCallback) => dispatch(setCancelCallback(payload, key))
                     setPercentage$(10)
-                    const module$ = await loaderModule.preload()
-                    await (module$ as any as PreloadModule).default.get(match, RouterHelper.setUrl(url), setPercentage$, setCancelCallback$, params)
+                    for(let i in loaderModules) {
+                        const module$ = await loaderModules[i].module.preload()
+                        await (module$ as any as PreloadModule).default.get(loaderModules[i].match, RouterHelper.setUrl(url), setPercentage$, setCancelCallback$, params)
+                    }
+                    setPercentage$(100)
                 } catch(ignored) {}
             }())
         }
-    }, [state.loaderModules])
+    }, [state.loaderModules, state.url.pathname])
 
     const popstate = () => setRouterUrl(RouterHelper.getUrl())
 
@@ -67,7 +77,7 @@ const ClientRouter: React.FC<Props> = ({children,params={},progressBarProps=DV.J
         return () => {
             DOMHelper.removeEventListener(window, ["popstate"], popstate)
         }
-    }, [state.loaderModules])
+    }, [state.loaderModules, state.url.pathname])
 
     return (
         <RouterContext.Provider value={{state,dispatch}}>
