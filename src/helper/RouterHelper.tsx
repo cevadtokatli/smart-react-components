@@ -1,5 +1,5 @@
 import {matchPath} from "react-router"
-import {Url, RouteProps, LoaderMethod, PreloadModule, RouteMatch} from "../types/router"
+import {Path, Url, RouteProps, LoaderMethod, PreloadModule, RouteMatch} from "../types/router"
 
 export default class RouterHelper {
     /**
@@ -69,7 +69,7 @@ export default class RouterHelper {
         return new Promise(async resolve => {
             for(let i in routes) {
                 const item = routes[i]
-                const match = matchPath(url, {path:item.path,exact:item.exact})
+                const match = this.matchPath(url, {path:item.path,exact:item.exact})
                 if(match) {
                     if(item.loaderModule) {
                         const _module = await item.loaderModule.preload()
@@ -91,8 +91,8 @@ export default class RouterHelper {
      * @param url 
      * @param param1 
      */
-    static matchPath(url:string, {path,exact}:{path:string,exact:boolean}): RouteMatch {
-        const match = matchPath(url, {path,exact})
+    static matchPath(url:string, {path,exact}:{path:Path,exact:boolean}): RouteMatch {
+        const match = matchPath(url, {path:path as any,exact})
         return match ? {...match,key:JSON.stringify(match.params)} : null
     }
 }

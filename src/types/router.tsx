@@ -2,6 +2,8 @@ import React from "react"
 import Loadable from "react-loadable"
 import {match as Match} from "react-router"
 
+export type Path = string|RegExp
+
 export interface Url {
     pathname: string
     search: string
@@ -44,7 +46,7 @@ export interface RouterContextValue {
 }
 
 export interface RouteProps {
-    path: string
+    path: Path
     exact?: boolean
     Component?: React.ComponentType<any>
     render?: (match:Match, url:Url) => JSX.Element|JSX.Element[]

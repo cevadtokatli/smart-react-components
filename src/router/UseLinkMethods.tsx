@@ -1,11 +1,11 @@
 import React from "react"
 import RouterContext from "./RouterContext"
-import {Url} from "../types/router"
+import {Path, Url} from "../types/router"
 import RouterHelper from "../helper/RouterHelper"
 
 interface Props {
     to: string
-    path?: string
+    path?: Path
     exact?: boolean
     checkActive?: boolean
 }
