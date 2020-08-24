@@ -25,9 +25,9 @@ const customKeys = {
 
 const placeholder = ["::-webkit-input-placeholder", "::-moz-placeholder", ":-moz-placeholder", ":-ms-input-placeholder", "::placeholder"]
 
-export default styled(Input).attrs<Props>(({size$="default",type$="gray",border$=true,shape="default",inputElement=true,flex="1 1 auto",display="block",width="100%",fontFamily="inherit"}) => ({
+export default styled(Input).attrs<Props>(({as,size$="default",type$="gray",border$=true,shape="default",inputElement=true,flex="1 1 auto",display="block",width="100%",fontFamily="inherit"}) => ({
     customKeys,
-    as: inputElement ? "input" : "div",
+    as: as || (inputElement ? "input" : "div"),
     size$,
     type$,
     border$,
