@@ -1,9 +1,10 @@
 import * as Action from "./action-types"
+import RouterHelper from "../helper/RouterHelper"
 import {setUrl, setNewUrl, setCancelCallback, setPercentage, setLoaderModule} from "./actions"
 
 describe("actions", () => {
     it("should handle setUrl action", () => {
-        expect(setUrl("/")).toEqual({
+        expect(setUrl(RouterHelper.setUrl("/"))).toEqual({
             type: Action.SET_URL,
             payload: {
                 "fullpath": "/",
@@ -18,7 +19,7 @@ describe("actions", () => {
     })
 
     it("should handle setNewUrl action", () => {
-        expect(setNewUrl("/", "1")).toEqual({
+        expect(setNewUrl(RouterHelper.setUrl("/"), "1")).toEqual({
             type: Action.SET_NEW_URL,
             payload: {
                 "fullpath": "/",

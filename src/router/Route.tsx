@@ -18,8 +18,8 @@ const Route: React.FC<Props> = ({path,exact,Component,render,loaderModule,switch
     }, [router.state.url])
 
     React.useEffect(() => {
-        if(loaderModule || (!loaderModule && router.state.loaderModules[path]))
-            router.dispatch(setLoaderModule(loaderModule, path, exact))
+        if(loaderModule || (!loaderModule && router.state.loaderModules[path as string]))
+            router.dispatch(setLoaderModule(loaderModule, path as string, exact))
     }, [loaderModule])
 
     return (
