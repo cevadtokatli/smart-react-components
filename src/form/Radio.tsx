@@ -96,9 +96,9 @@ export interface Props extends SizeProps {
     children?: JSXChild
     type?: string
     fill?: boolean
-    value: Value
-    active: Value
-    setActive: SetValue<Value>
+    value: Value|boolean
+    active: Value|boolean
+    setActive: SetValue<Value|boolean>
 }
 
 const Radio: React.FC<Props> = ({size="default",sizeSm,sizeMd,sizeLg,sizeXl,containerProps=DV.JSX_ELEMENT_PROPS,inputProps=DV.JSX_ELEMENT_PROPS,spanProps=DV.JSX_ELEMENT_PROPS,children,type="primary",fill=true,value,active,setActive}) => {
