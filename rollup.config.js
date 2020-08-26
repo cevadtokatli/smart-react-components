@@ -3,7 +3,7 @@ const commonjs = require("rollup-plugin-commonjs")
 const typescript = require("rollup-plugin-typescript2")
 
 module.exports = {
-    input: {
+    input: {                
         "default-value": "./src/default-value/index$.tsx",
         "theme": "./src/theme/index.tsx",
         "alert/index": "./src/alert/index.tsx",
@@ -22,6 +22,10 @@ module.exports = {
         "button/Link": "./src/button/Link.tsx",
         "color-picker/index": "./src/color-picker/index.tsx",
         "date-picker/index": "./src/date-picker/index.tsx",
+        "dropdown/index": "./src/dropdown/index.tsx",
+        "dropdown/List": "./src/dropdown/List.tsx",
+        "dropdown/Item": "./src/dropdown/Item.tsx",
+        "dropdown/Category": "./src/dropdown/Category.tsx",
         "element/A": "./src/element/A.tsx",
         "element/Abbr": "./src/element/Abbr.tsx",
         "element/Address": "./src/element/Address.tsx",
