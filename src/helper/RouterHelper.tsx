@@ -43,15 +43,15 @@ export default class RouterHelper {
      * Runs all the matched get methods from loader modules for ssr.
      * 
      * @param routes 
-     * @param url
+     * @param fullpath
      * @param params
      */
-    static runLoaders(routes:RouteProps[], url:string, params:any={}): Promise<LoaderMethod[]> {
-        url = url.split("?")[0]
+    static runLoaders(routes:RouteProps[], fullpath:string, params:any={}): Promise<LoaderMethod[]> {
+        const {pathname, query} = this.setUrl(fullpath)
 
         return new Promise(async resolve => {
             const loaderMethods = []
-            await this.getLoaderMethods(routes, url, loaderMethods, params)
+            await this.getLoaderMethods(routes, pathname, query, loaderMethods, params)
             for(let i in loaderMethods) {
                 await loaderMethods[i]()
             }
@@ -64,14 +64,15 @@ export default class RouterHelper {
      * 
      * @param routes 
      * @param url 
+     * @param query
      * @param arr 
      * @param params
      */
-    private static getLoaderMethods(routes:RouteProps[], url:string, arr:LoaderMethod[], params:any): Promise<void> {
+    private static getLoaderMethods(routes:RouteProps[], url:string, query:{[key:string]: string}, arr:LoaderMethod[], params:any): Promise<void> {
         return new Promise(async resolve => {
             for(let i in routes) {
                 const item = routes[i]
-                const match = this.matchPath(url, {path:item.path,exact:item.exact})
+                const match = this.matchPath(url, query, {path:item.path,exact:item.exact,searchKeys:item.searchKeys})
                 if(match) {
                     if(item.loaderModule) {
                         const _module = await item.loaderModule.preload()
@@ -79,7 +80,7 @@ export default class RouterHelper {
                     }
     
                     if(item.children)
-                        await this.getLoaderMethods(item.children, url, arr, params)
+                        await this.getLoaderMethods(item.children, url, query, arr, params)
                 }
             }
 
@@ -93,8 +94,26 @@ export default class RouterHelper {
      * @param url 
      * @param param1 
      */
-    static matchPath(url:string, {path,exact}:{path:Path,exact:boolean}): RouteMatch {
+    static matchPath(url:string, query:{[key:string]: string}, {path,exact,searchKeys}:{path:Path,exact:boolean,searchKeys:string[]}): RouteMatch {
         const match = matchPath(url, {path:path as any,exact})
-        return match ? {...match,key:JSON.stringify(match.params)} : null
+        let key = ""
+
+        if(match) {
+            var _key = {
+                matchKey: match.params,
+                searchKey: {}
+            }
+
+            if(searchKeys) {
+                searchKeys.forEach(item => {
+                    if(query[item])
+                        _key.searchKey[item] = query[item]
+                })
+            }
+
+            key = JSON.stringify(_key)
+        }
+        
+        return match ? {...match,key} : null
     }
 }

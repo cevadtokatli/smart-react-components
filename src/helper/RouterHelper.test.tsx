@@ -14,11 +14,16 @@ describe("RouterHelper", () => {
     })
 
     it("should match path with url pathname", () => {
-        expect(RouterHelper.matchPath("/1", {path:"/:id",exact:true})).toEqual({
+        expect(RouterHelper.matchPath("/1", {}, {path:"/:id",exact:true,searchKeys:null})).toEqual({
             isExact: true,
-            key: `{"id":"1"}`,
+            key: JSON.stringify({
+                matchKey: {
+                    id: "1"
+                },
+                searchKey: {}
+            }),
             params: {
-                id: "1"
+                id: "1",
             },
             path: "/:id",
             url: "/1"
