@@ -47,6 +47,8 @@ export default class RouterHelper {
      * @param params
      */
     static runLoaders(routes:RouteProps[], url:string, params:any={}): Promise<LoaderMethod[]> {
+        url = url.split("?")[0]
+
         return new Promise(async resolve => {
             const loaderMethods = []
             await this.getLoaderMethods(routes, url, loaderMethods, params)
