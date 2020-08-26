@@ -35,6 +35,10 @@ export interface Type {
         placeholder?: string
         placeholderFill?: string
     }
+    dropdown?: {
+        background?: string
+        font?: string
+    }
     form?: {
         radioColor?: string
         radioBorder?: string
@@ -79,6 +83,7 @@ export interface TypeOptions {
     alert?: boolean
     breadcrumb?: boolean
     button?: boolean
+    dropdown?: boolean
     form?: boolean
     pagination?: boolean
     popover?: boolean
@@ -145,6 +150,12 @@ export interface Theme {
         font: string
         inactive: string
         arrowActive: string
+    }
+    dropdown: {
+        padding: ThemeVariable<string>
+        margin: ThemeVariable<Coordinator<string>>
+        radius: ThemeVariable<string>
+        fontSize: ThemeVariable<string>
     }
     fixedBox: {
         boxShadow: string
@@ -279,6 +290,12 @@ export const createType = (value:string|Type, options:boolean|TypeOptions=true):
         type.button.background = type.button.background || DV.BUTTON_BG_COLOR
         type.button.placeholder = type.button.placeholder || type.main
         type.button.placeholderFill = type.button.placeholderFill || ColorHelper.getFontColor(type.main)
+    }
+
+    if(options == true || typeOptions.dropdown) {
+        type.dropdown = type.dropdown || {}
+        type.dropdown.background = type.dropdown.background || DV.DROPDOWN_BG_COLOR
+        type.dropdown.font = type.dropdown.font || ColorHelper.getFontColor(type.dropdown.background)
     }
 
     if(options === true || typeOptions.form) {
@@ -435,6 +452,7 @@ const theme: Theme = {
         alert: "inherit",
         badge: "inherit",
         button: "inherit",
+        dropdown: "inherit",
         radioSpan: "inherit",
         input: "inherit",
         option: "inherit",
@@ -591,6 +609,37 @@ const theme: Theme = {
         font: "#4d4d4d",
         inactive: "#919191",
         arrowActive: "#000"
+    },
+    dropdown: {
+        padding: {
+            small: ".15625rem",
+            default: ".3125rem",
+            large: ".625rem"
+        },
+        margin: {
+            small: {
+                x: ".28rem",
+                y: ".06rem"
+            },
+            default: {
+                x: ".45rem",
+                y: ".125rem"
+            },
+            large: {
+                x: ".5rem",
+                y: ".175rem"
+            }
+        },
+        radius: {
+            default: ".2rem",
+            square: "0",
+            rounded: "2rem"
+        },
+        fontSize: {
+            small: ".875rem",
+            default: ".875rem",
+            large: "1rem"
+        }
     },
     fixedBox: {
         boxShadow: "0 0 35px 0 rgba(154,161,171,.15)"
