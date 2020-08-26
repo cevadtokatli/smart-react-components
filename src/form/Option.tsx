@@ -1,9 +1,11 @@
 import React from "react"
 import {SizeProps} from "../props/size-props"
-import {JSXChild, Value, ValueMix, SetValue} from "../props"
+import {JSXElementProps, JSXChild, Value, ValueMix, SetValue} from "../props"
+import DV from "../default-value"
 import OptionElement from "./OptionElement"
 
 export interface Props extends SizeProps {
+    elementProps?: JSXElementProps
     children: JSXChild
     value: Value
     searchValue?: string
@@ -18,7 +20,7 @@ export interface Props extends SizeProps {
     setActive?: SetValue<ValueMix>
 }
 
-const Option: React.FC<Props> = ({size="default",sizeSm,sizeMd,sizeLg,sizeXl,children,value,disabled,box,type="primary",fill,shape="default",hover,active,setActive}) => {
+const Option: React.FC<Props> = ({size="default",sizeSm,sizeMd,sizeLg,sizeXl,elementProps=DV.JSX_ELEMENT_PROPS,children,value,disabled,box,type="primary",fill,shape="default",hover,active,setActive}) => {
     /**
      * Returns active$ status of the element. 
      */
@@ -48,7 +50,7 @@ const Option: React.FC<Props> = ({size="default",sizeSm,sizeMd,sizeLg,sizeXl,chi
             setActive(value)
     }
 
-    return <OptionElement className={`${active$ ? "src-option-active" : ""}`} size={size} sizeSm={sizeSm} sizeMd={sizeMd} sizeLg={sizeLg} sizeXl={sizeXl} box={box} type={type} fill$={fill} shape={shape} hover={hover} disabled={disabled} value={value} onClick={set}>{children}</OptionElement>
+    return <OptionElement {...elementProps} className={`${active$ ? "src-option-active" : ""}`} size={size} sizeSm={sizeSm} sizeMd={sizeMd} sizeLg={sizeLg} sizeXl={sizeXl} box={box} type={type} fill$={fill} shape={shape} hover={hover} disabled={disabled} value={value} onClick={set}>{children}</OptionElement>
 }
 
 export default Option
