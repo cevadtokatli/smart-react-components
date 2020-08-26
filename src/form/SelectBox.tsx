@@ -14,6 +14,7 @@ export interface Props extends SelectProps {
     boxProps?: JSXElementProps
     placeholder?: JSXChild
     badgeType?: string
+    arrow?: boolean
     minWidth?: number
     boxShadow?: boolean
     transitionClassName?: string
@@ -23,8 +24,8 @@ export interface Props extends SelectProps {
     hideAnimation?: boolean
 }
 
-const SelectBox: React.FC<Props> = ({size="default",sizeSm,sizeMd,sizeLg,sizeXl,containerProps=DV.JSX_ELEMENT_PROPS,selectProps=DV.JSX_ELEMENT_PROPS,boxProps=DV.JSX_ELEMENT_PROPS,labelProps=DV.JSX_ELEMENT_PROPS,label,children,placeholder,optionType="primary",badgeType="primary",active,setActive,type="gray",fill,border,shape="default",hover=true,error,leftAddon,leftAddonProps=DV.JSX_ELEMENT_PROPS,leftAddonAbsolute,rightAddon,rightAddonProps=DV.JSX_ELEMENT_PROPS,rightAddonAbsolute,minWidth=300,boxShadow,transitionClassName,transitionType,transitionDuration,showAnimation=true,hideAnimation=true,search,searchInputProps=DV.JSX_ELEMENT_PROPS}) => {
-    const {itemList,searchText,setSearchText} = useSelectMethods({size,sizeSm,sizeMd,sizeLg,sizeXl,box:true,placeholder,children,optionType,badgeType,fill,shape,hover,disabled:selectProps.disabled,active,setActive,closeBox:(() => setStatus(false)),search})
+const SelectBox: React.FC<Props> = ({size="default",sizeSm,sizeMd,sizeLg,sizeXl,containerProps=DV.JSX_ELEMENT_PROPS,selectProps=DV.JSX_ELEMENT_PROPS,boxProps=DV.JSX_ELEMENT_PROPS,labelProps=DV.JSX_ELEMENT_PROPS,label,children,placeholder,optionType="primary",badgeType="primary",arrow=true,active,setActive,type="gray",fill,border,shape="default",hover=true,error,leftAddon,leftAddonProps=DV.JSX_ELEMENT_PROPS,leftAddonAbsolute,rightAddon,rightAddonProps=DV.JSX_ELEMENT_PROPS,rightAddonAbsolute,minWidth=300,boxShadow,transitionClassName,transitionType,transitionDuration,showAnimation=true,hideAnimation=true,search,searchInputProps=DV.JSX_ELEMENT_PROPS}) => {
+    const {itemList,searchText,setSearchText} = useSelectMethods({size,sizeSm,sizeMd,sizeLg,sizeXl,box:true,placeholder,children,optionType,badgeType,arrow,fill,shape,hover,disabled:selectProps.disabled,active,setActive,closeBox:(() => setStatus(false)),search})
     const [status, setStatus] = React.useState<boolean>(false)
     const fixedBoxOnRef = React.useRef<FixedBoxOnRef>(null)
 

@@ -15,6 +15,7 @@ interface Props extends SizeProps {
     placeholder?: JSXChild
     optionType?: string
     badgeType?: string
+    arrow?: boolean
     children: JSX.Element|JSX.Element[]
     fill: boolean
     shape: string
@@ -38,7 +39,7 @@ interface Return {
     setSearchText: React.Dispatch<React.SetStateAction<string>>
 }
 
-export default ({size,sizeSm,sizeMd,sizeLg,sizeXl,box,placeholder,optionType,badgeType,children,fill,shape,hover,disabled,active,setActive,closeBox,search}:Props): Return => {
+export default ({size,sizeSm,sizeMd,sizeLg,sizeXl,box,placeholder,optionType,badgeType,arrow,children,fill,shape,hover,disabled,active,setActive,closeBox,search}:Props): Return => {
     const [searchText, setSearchText] = React.useState<string>("")
     const searchTextInit = React.useRef<boolean>(false)
     
@@ -159,7 +160,7 @@ export default ({size,sizeSm,sizeMd,sizeLg,sizeXl,box,placeholder,optionType,bad
             itemList.active = (
                 <Div display="flex" justifyContent="space-between" alignItems="center">
                     {<Div flex="1 1 auto">{base}</Div>}
-                    <ArrowDownIcon iconSize={size} iconSizeSm={sizeSm} iconSizeMd={sizeMd} iconSizeLg={sizeLg} iconSizeXl={sizeXl} flex="0 0 auto" ml={3} />
+                    {arrow && <ArrowDownIcon iconSize={size} iconSizeSm={sizeSm} iconSizeMd={sizeMd} iconSizeLg={sizeLg} iconSizeXl={sizeXl} flex="0 0 auto" ml={3} />}
                 </Div>
             )
         }
