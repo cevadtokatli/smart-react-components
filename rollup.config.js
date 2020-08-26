@@ -26,7 +26,7 @@ module.exports = {
         "dropdown/List": "./src/dropdown/List.tsx",
         "dropdown/Item": "./src/dropdown/Item.tsx",
         "dropdown/Category": "./src/dropdown/Category.tsx",
-        "dropdown/ArrowIcon": "./src/icon/ArrowDown.tsx",
+        "dropdown/ArrowIcon": "./src/dropdown/ArrowIcon.tsx",
         "element/A": "./src/element/A.tsx",
         "element/Abbr": "./src/element/Abbr.tsx",
         "element/Address": "./src/element/Address.tsx",
