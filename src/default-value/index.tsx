@@ -50,6 +50,9 @@ const DV : {
     // button
     BUTTON_BG_COLOR: "#fff",
 
+    // dropdown
+    DROPDOWN_BG_COLOR: "#fff",
+
     // form
     FORM_RADIO_COLOR: "#fff",
     FORM_RADIO_BORDER_COLOR: "#dbdbdb",
