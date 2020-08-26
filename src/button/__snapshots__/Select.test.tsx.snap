@@ -2,7 +2,7 @@
 
 exports[`<Select /> should match snapshot 1`] = `
 <div
-  class="sc-fzpans sc-fzplWN hthroe"
+  class="sc-fzpans sc-fzplWN cXylyC"
   data-src-active="false"
   data-src-placeholder-style="false"
   data-src-wave-effect="0"

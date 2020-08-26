@@ -5,7 +5,7 @@ exports[`<Buttons /> should match snapshot 1`] = `
   class="sc-Axmtr fFPKYE"
 >
   <a
-    class="sc-AxirZ sc-AxiKw bDuSTT"
+    class="sc-AxirZ sc-AxiKw bvfXbn"
     data-src-wave-effect="0"
     shape="default"
     tabindex="0"
@@ -25,7 +25,7 @@ exports[`<Buttons /> should match snapshot 1`] = `
     Save
   </a>
   <a
-    class="sc-AxirZ sc-AxiKw bDuSTT"
+    class="sc-AxirZ sc-AxiKw bvfXbn"
     data-src-wave-effect="0"
     shape="default"
     tabindex="0"

@@ -2,7 +2,7 @@
 
 exports[`<Dropdown /> should match snapshot 1`] = `
 <div
-  class="sc-AxjAm sc-AxirZ dpeJfe"
+  class="sc-AxjAm sc-AxirZ jQmmnN"
   shape="default"
 >
   Category
