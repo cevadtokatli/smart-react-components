@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dropdown /> should match snapshot 1`] = `
+<div
+  class="sc-AxjAm sc-AxirZ uXEyF"
+  shape="default"
+>
+  Item
+</div>
+`;

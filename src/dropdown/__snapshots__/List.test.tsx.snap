@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dropdown /> should match snapshot 1`] = `
+<div
+  class="sc-AxjAm sc-AxirZ cZgDXe"
+  shape="default"
+>
+  <div>
+    <div
+      class="sc-AxjAm sc-AxiKw imxLMn"
+      shape="default"
+    >
+      Item 1
+    </div>
+    <div
+      class="sc-AxjAm sc-AxiKw imxLMn"
+      shape="default"
+    >
+      Item 2
+    </div>
+    <div
+      class="sc-AxjAm sc-AxiKw imxLMn"
+      shape="default"
+    >
+      Item 3
+    </div>
+  </div>
+</div>
+`;
