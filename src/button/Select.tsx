@@ -18,6 +18,7 @@ export interface Props extends SizeProps {
     children: JSX.Element[]
     type?: string
     fill?: boolean
+    border?: boolean
     shape?: string
     block?: boolean
     waveEffect?: string
@@ -26,6 +27,7 @@ export interface Props extends SizeProps {
     placeholder?: JSXChild
     hover?: boolean
     optionType?: string
+    arrow?: boolean
     boxShadow?: boolean
     minWidth?: number
     transitionClassName?: string
@@ -44,8 +46,8 @@ export interface Props extends SizeProps {
     searchInputProps?: JSXElementProps
 }
 
-const ButtonSelect: React.FC<Props> = ({size="default",sizeSm,sizeMd,sizeLg,sizeXl,buttonProps=DV.JSX_ELEMENT_PROPS,boxProps=DV.JSX_ELEMENT_PROPS,children,type="primary",fill,shape="default",block,waveEffect="light",active,setActive,placeholder,hover=true,optionType="primary",boxShadow,minWidth=300,transitionClassName,transitionType,transitionDuration,showAnimation=true,hideAnimation=true,loading,loadingStatus,loadingTransitionClassName="src-button-loading",loadingTransitionType="ease-in-out",loadingTransitionDuration=300,loadingTransitionShowAnimation=true,loadingTransitionHideAnimation=true,search,searchInputProps=DV.JSX_ELEMENT_PROPS}) => {
-    const {itemList,searchText,setSearchText} = useSelectMethods({size,sizeSm,sizeMd,sizeLg,sizeXl,box:true,placeholder,optionType,children,fill,shape,hover,disabled:buttonProps.disabled,active,setActive,closeBox:(() => setStatus(false)),search})
+const ButtonSelect: React.FC<Props> = ({size="default",sizeSm,sizeMd,sizeLg,sizeXl,buttonProps=DV.JSX_ELEMENT_PROPS,boxProps=DV.JSX_ELEMENT_PROPS,children,type="primary",fill,border,shape="default",block,waveEffect="light",active,setActive,placeholder,hover=true,optionType="primary",arrow,boxShadow,minWidth=300,transitionClassName,transitionType,transitionDuration,showAnimation=true,hideAnimation=true,loading,loadingStatus,loadingTransitionClassName="src-button-loading",loadingTransitionType="ease-in-out",loadingTransitionDuration=300,loadingTransitionShowAnimation=true,loadingTransitionHideAnimation=true,search,searchInputProps=DV.JSX_ELEMENT_PROPS}) => {
+    const {itemList,searchText,setSearchText} = useSelectMethods({size,sizeSm,sizeMd,sizeLg,sizeXl,box:true,placeholder,optionType,arrow,children,fill,shape,hover,disabled:buttonProps.disabled,active,setActive,closeBox:(() => setStatus(false)),search})
     const [status, setStatus] = React.useState<boolean>(false)
     const fixedBoxOnRef = React.useRef<FixedBoxOnRef>(null)
 
@@ -55,7 +57,7 @@ const ButtonSelect: React.FC<Props> = ({size="default",sizeSm,sizeMd,sizeLg,size
     }, [itemList])
 
     const ButtonEl = (
-        <ButtonElement tabIndex={0} {...buttonProps} as="div" size$={size} size$Sm={sizeSm} size$Md={sizeMd} size$Lg={sizeLg} size$Xl={sizeXl} type$={type} fill$={fill} shape={shape} block={block} loading$={loading ? true : false} data-src-placeholder-style={itemList.isPlaceholder} data-src-active={status}>
+        <ButtonElement tabIndex={0} {...buttonProps} as="div" size$={size} size$Sm={sizeSm} size$Md={sizeMd} size$Lg={sizeLg} size$Xl={sizeXl} type$={type} fill$={fill} border$={border} shape={shape} block={block} loading$={loading ? true : false} data-src-placeholder-style={itemList.isPlaceholder} data-src-active={status}>
             {loading && <Loading element={loading} status={loadingStatus} transitionClassName={loadingTransitionClassName} transitionDuration={loadingTransitionDuration} transitionType={loadingTransitionType} transitionShowAnimation={loadingTransitionShowAnimation} transitionHideAnimation={loadingTransitionHideAnimation} />}
             {itemList.active}
         </ButtonElement>
