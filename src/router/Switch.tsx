@@ -15,7 +15,7 @@ const Switch: React.FC<Props> = ({children}) => {
         return children.map((item, index) => {
             let el = React.cloneElement(item, {key:(item.key || index),switchNotRendered})
 
-            if(!switchNotRendered && RouterHelper.matchPath(router.state.url.pathname, {path:item.props.path,exact:item.props.exact}))
+            if(!switchNotRendered && RouterHelper.matchPath(router.state.url.pathname, router.state.url.query, {path:item.props.path,exact:item.props.exact,searchKeys:item.props.searchKeys}))
                 switchNotRendered = true
 
             return el

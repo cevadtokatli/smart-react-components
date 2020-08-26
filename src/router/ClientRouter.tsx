@@ -28,6 +28,7 @@ const ClientRouter: React.FC<Props> = ({children,params={},progressBarProps=DV.J
     const setRouterUrl = React.useCallback((_url:string) => {
         const url = RouterHelper.setUrl(_url)
         const oldUrlPathname = state.url.pathname
+        const oldUrlQuery = state.url.query
         let loaderModules = []
         for(let path in state.loaderModules) {
             let item = state.loaderModules[path]
@@ -35,9 +36,9 @@ const ClientRouter: React.FC<Props> = ({children,params={},progressBarProps=DV.J
             let oldMatch
             if(
                 item.module && 
-                (match = RouterHelper.matchPath(url.pathname, {path,exact:item.exact})) && 
+                (match = RouterHelper.matchPath(url.pathname, url.query, {path,exact:item.exact,searchKeys:item.searchKeys})) && 
                 (
-                    !(oldMatch = RouterHelper.matchPath(oldUrlPathname, {path,exact:item.exact})) ||
+                    !(oldMatch = RouterHelper.matchPath(oldUrlPathname, oldUrlQuery, {path,exact:item.exact,searchKeys:item.searchKeys})) ||
                     (oldMatch && oldMatch.key != match.key)
                 )
             )
@@ -63,7 +64,7 @@ const ClientRouter: React.FC<Props> = ({children,params={},progressBarProps=DV.J
                 } catch(ignored) {}
             }())
         }
-    }, [state.loaderModules, state.url.pathname])
+    }, [state.loaderModules, state.url])
 
     const popstate = () => setRouterUrl(RouterHelper.getUrl())
 
@@ -78,7 +79,7 @@ const ClientRouter: React.FC<Props> = ({children,params={},progressBarProps=DV.J
         return () => {
             DOMHelper.removeEventListener(window, ["popstate"], popstate)
         }
-    }, [state.loaderModules, state.url.pathname])
+    }, [state.loaderModules, state.url])
 
     return (
         <RouterContext.Provider value={{state,dispatch}}>

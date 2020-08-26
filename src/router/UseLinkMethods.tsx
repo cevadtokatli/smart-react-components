@@ -19,7 +19,7 @@ interface Return {
 export default ({to,path,exact,checkActive=true}:Props): Return => {
     const router = React.useContext(RouterContext)
 
-    const isActive = (url:Url) => url && (RouterHelper.matchPath(url.pathname, {path:(path || to),exact}) ? true : false)
+    const isActive = (url:Url) => url && (RouterHelper.matchPath(url.pathname, url.query, {path:(path || to),exact,searchKeys:null}) ? true : false)
 
     const [active, setActive] = React.useState<boolean>(() => checkActive ? isActive(router.state.url) : false)
     const [activating, setActivating] = React.useState<boolean>(() => checkActive ? isActive(router.state.newUrl) : false)

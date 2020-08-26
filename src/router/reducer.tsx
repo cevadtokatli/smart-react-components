@@ -50,7 +50,8 @@ const reducer = (state:ReducerState, action): ReducerState => {
                     ...state.loaderModules,
                     [action.path]: {
                         module: action.module,
-                        exact: action.exact
+                        exact: action.exact,
+                        searchKeys: action.searchKeys
                     }
                 }
             }

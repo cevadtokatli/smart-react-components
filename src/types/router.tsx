@@ -36,6 +36,7 @@ export interface ReducerState {
         [key:string]: {
             module: LoaderModule
             exact: boolean
+            searchKeys: string[]
         }
     }
 }
@@ -52,6 +53,7 @@ export interface RouteProps {
     render?: (match:Match, url:Url) => JSX.Element|JSX.Element[]
     loaderModule?: LoaderModule
     children?: RouteProps[]
+    searchKeys?: string[]
 }
 
 export interface RouteMatch extends Match {

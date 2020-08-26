@@ -24,9 +24,10 @@ export const setPercentage = (percentage:number, key:string) => ({
     key
 })
 
-export const setLoaderModule = (loaderModule:LoaderModule, path:string, exact:boolean) => ({
+export const setLoaderModule = (loaderModule:LoaderModule, path:string, exact:boolean, searchKeys:string[]) => ({
     type: Action.SET_LOADER_MODULE,
     module: loaderModule || null,
     path,
-    exact
+    exact,
+    searchKeys
 })
