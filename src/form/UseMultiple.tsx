@@ -24,7 +24,7 @@ export default ({value,active,setActive,checked,setChecked,disabled,onChange}:Pr
         if(setChecked)
             return checked
         else if(setActive)
-            return active.find(v => v == value) ? true : false
+            return typeof active.find(v => v == value) !== "undefined"
         
         return false
     }
