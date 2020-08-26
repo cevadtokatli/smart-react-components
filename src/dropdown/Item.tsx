@@ -49,7 +49,7 @@ interface Props extends SizeProps {
     shape?: string
     hover?: boolean
     setStatus?: React.Dispatch<React.SetStateAction<boolean>>
-    callback?: () => void
+    callback: () => void
 }
 
 const Item: React.FC<Props> = ({size,sizeSm,sizeMd,sizeLg,sizeXl,elementProps=DV.JSX_ELEMENT_PROPS,children,type="primary",shape="default",hover,setStatus,callback}) => {
