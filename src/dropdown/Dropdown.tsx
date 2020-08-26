@@ -1,9 +1,7 @@
 import React from "react"
-import {JSXElementProps} from "../props"
 import FixedBox from "../fixed-box/FixedBox"
 
 interface Props {
-    elementProps?: JSXElementProps
     children: [JSX.Element, JSX.Element]
     minWidth?: number
     boxShadow?: boolean
