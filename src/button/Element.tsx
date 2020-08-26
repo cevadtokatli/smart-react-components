@@ -8,6 +8,7 @@ export interface Props extends ElementProps, Size$Props {
     type$?: string
     fill$?: boolean
     link?: boolean
+    border$?: boolean
     shape?: string
     block?: boolean
     fixedSize?: boolean
@@ -44,14 +45,14 @@ const getCustomKeys = fixedSize => ({
     `
 })
 
-export default styled(A).attrs<Props>(({size$="default",type$="primary",fill$=true,shape="default",fixedSize,tabIndex=0}) => ({customKeys:getCustomKeys(fixedSize),size$,type$,fill$,shape,tabIndex}))<Props>(({theme,type$,fill$,link,shape,block,fixedSize,disabled,loading$}) => `
+export default styled(A).attrs<Props>(({size$="default",type$="primary",fill$=true,border$=true,shape="default",fixedSize,tabIndex=0}) => ({customKeys:getCustomKeys(fixedSize),size$,type$,fill$,border$,shape,tabIndex}))<Props>(({theme,type$,fill$,link,border$,shape,block,fixedSize,disabled,loading$}) => `
     position: relative;
     overflow: hidden;
     display: inline-flex;
     align-items: center;
     box-sizing: border-box;
     border-radius: ${theme.src.button.radius[shape]};
-    border: solid 1px ${theme.src.type[type$].main};
+    ${border$ ? `border: solid 1px ${theme.src.type[type$].main};` : ""}
     cursor: default;
     user-select: none;
     word-wrap: break-word;
@@ -115,11 +116,13 @@ export default styled(A).attrs<Props>(({size$="default",type$="primary",fill$=tr
             }
         `}
     
-        &:focus,
-        &:active,
-        &[data-src-active="true"] {
-            box-shadow: 0 0 0 .15rem ${theme.src.type[type$].shadow};
-        }
+        ${border$ ? `
+            &:focus,
+            &:active,
+            &[data-src-active="true"] {
+                box-shadow: 0 0 0 .15rem ${theme.src.type[type$].shadow};
+            }
+        ` : ""}
     ` : `
         border-color: transparent;
         background: transparent;

@@ -7,6 +7,7 @@ export default interface Props extends SizeProps {
     type?: string
     fill?: boolean
     link?: boolean
+    border?: boolean
     shape?: string
     block?: boolean
     fixedSize?: boolean
