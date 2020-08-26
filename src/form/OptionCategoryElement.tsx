@@ -41,7 +41,7 @@ export default styled(Div).attrs<Props>(({box}) => ({
     word-wrap: break-word;
     word-break: break-word;
     font-family: ${theme.src.fontFamily.option};
-    font-weight: bold;
+    font-weight: ${theme.src.fontWeight.bold};
 
     ${(fill$ && !box)
     ? `

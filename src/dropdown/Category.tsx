@@ -28,7 +28,7 @@ const ItemElement = styled(Div).attrs<ItemElementProps>({customKeys})<ItemElemen
     word-wrap: break-word;
     word-break: break-word;
     font-family: ${theme.src.fontFamily.dropdown};
-    font-weight: bold;
+    font-weight: ${theme.src.fontWeight.bold};
 `)
 
 interface Props extends SizeProps {
