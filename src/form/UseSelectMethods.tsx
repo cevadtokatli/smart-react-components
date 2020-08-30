@@ -20,6 +20,7 @@ interface Props extends SizeProps {
     fill: boolean
     shape: string
     hover: boolean
+    waveEffect: string
     disabled: boolean
     active: ValueMix
     setActive: SetValue<ValueMix>
@@ -39,7 +40,7 @@ interface Return {
     setSearchText: React.Dispatch<React.SetStateAction<string>>
 }
 
-export default ({size,sizeSm,sizeMd,sizeLg,sizeXl,box,placeholder,optionType,badgeType,arrow,children,fill,shape,hover,disabled,active,setActive,closeBox,search}:Props): Return => {
+export default ({size,sizeSm,sizeMd,sizeLg,sizeXl,box,placeholder,optionType,badgeType,arrow,children,fill,shape,hover,waveEffect,disabled,active,setActive,closeBox,search}:Props): Return => {
     const [searchText, setSearchText] = React.useState<string>("")
     const searchTextInit = React.useRef<boolean>(false)
     
@@ -73,7 +74,7 @@ export default ({size,sizeSm,sizeMd,sizeLg,sizeXl,box,placeholder,optionType,bad
      * @param item
      * @param index
      */
-    const cloneElement = (item:JSX.Element, index:number) => React.cloneElement(item, {key:item.key || index,box,type:optionType,size,sizeSm,sizeMd,sizeLg,sizeXl,fill,shape,hover,active,setActive:setValue})
+    const cloneElement = (item:JSX.Element, index:number) => React.cloneElement(item, {key:item.key || index,box,type:optionType,size,sizeSm,sizeMd,sizeLg,sizeXl,fill,shape,hover,waveEffect,active,setActive:setValue})
 
     /**
      * Returns item list.

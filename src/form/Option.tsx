@@ -3,6 +3,7 @@ import {SizeProps} from "../props/size-props"
 import {JSXElementProps, JSXChild, Value, ValueMix, SetValue} from "../props"
 import DV from "../default-value"
 import OptionElement from "./OptionElement"
+import WaveEffect from "../wave-effect/WaveEffect"
 
 export interface Props extends SizeProps {
     elementProps?: JSXElementProps
@@ -15,12 +16,13 @@ export interface Props extends SizeProps {
     fill?: boolean
     shape?: string
     hover?: boolean
+    waveEffect?: string
     space?: boolean
     active?: ValueMix
     setActive?: SetValue<ValueMix>
 }
 
-const Option: React.FC<Props> = ({size="default",sizeSm,sizeMd,sizeLg,sizeXl,elementProps=DV.JSX_ELEMENT_PROPS,children,value,disabled,box,type="primary",fill,shape="default",hover,active,setActive}) => {
+const Option: React.FC<Props> = ({size="default",sizeSm,sizeMd,sizeLg,sizeXl,elementProps=DV.JSX_ELEMENT_PROPS,children,value,disabled,box,type="primary",fill,shape="default",hover,waveEffect,active,setActive}) => {
     /**
      * Returns active$ status of the element. 
      */
@@ -50,7 +52,9 @@ const Option: React.FC<Props> = ({size="default",sizeSm,sizeMd,sizeLg,sizeXl,ele
             setActive(value)
     }
 
-    return <OptionElement {...elementProps} className={`${active$ ? "src-option-active" : ""}`} size={size} sizeSm={sizeSm} sizeMd={sizeMd} sizeLg={sizeLg} sizeXl={sizeXl} box={box} type={type} fill$={fill} shape={shape} hover={hover} disabled={disabled} value={value} onClick={set}>{children}</OptionElement>
+    const El = <OptionElement {...elementProps} className={`${active$ ? "src-option-active" : ""}`} size={size} sizeSm={sizeSm} sizeMd={sizeMd} sizeLg={sizeLg} sizeXl={sizeXl} box={box} type={type} fill$={fill} shape={shape} hover={hover} disabled={disabled} value={value} onClick={set}>{children}</OptionElement>
+
+    return waveEffect ? <WaveEffect type={waveEffect}>{El}</WaveEffect> : El
 }
 
 export default Option

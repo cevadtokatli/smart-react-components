@@ -6,8 +6,8 @@ import UseInputOutput from "./UseInputOutput"
 import SelectElement from "./InputElement"
 import Input from "./Input"
 
-const Select: React.FC<Props> = ({size="default",sizeSm,sizeMd,sizeLg,sizeXl,containerProps=DV.JSX_ELEMENT_PROPS,selectProps=DV.JSX_ELEMENT_PROPS,labelProps=DV.JSX_ELEMENT_PROPS,label,children,optionType="primary",active,setActive,type,fill,border,shape="default",hover=true,error,leftAddon,leftAddonProps=DV.JSX_ELEMENT_PROPS,leftAddonAbsolute,rightAddon,rightAddonProps=DV.JSX_ELEMENT_PROPS,rightAddonAbsolute,search,searchInputProps=DV.JSX_ELEMENT_PROPS}) => {
-    const {itemList,searchText,setSearchText} = UseSelectMethods({children,optionType,size,sizeSm,sizeMd,sizeLg,sizeXl,fill,shape,hover,disabled:selectProps.disabled,active,setActive,search}) 
+const Select: React.FC<Props> = ({size="default",sizeSm,sizeMd,sizeLg,sizeXl,containerProps=DV.JSX_ELEMENT_PROPS,selectProps=DV.JSX_ELEMENT_PROPS,labelProps=DV.JSX_ELEMENT_PROPS,label,children,optionType="primary",active,setActive,type,fill,border,shape="default",hover=true,waveEffect="light",error,leftAddon,leftAddonProps=DV.JSX_ELEMENT_PROPS,leftAddonAbsolute,rightAddon,rightAddonProps=DV.JSX_ELEMENT_PROPS,rightAddonAbsolute,search,searchInputProps=DV.JSX_ELEMENT_PROPS}) => {
+    const {itemList,searchText,setSearchText} = UseSelectMethods({children,optionType,size,sizeSm,sizeMd,sizeLg,sizeXl,fill,shape,hover,waveEffect,disabled:selectProps.disabled,active,setActive,search}) 
        
     return UseInputOutput({
         element: (

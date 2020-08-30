@@ -15,6 +15,7 @@ export default interface SelectProps extends SizeProps {
     border?: boolean
     shape?: string
     hover?: boolean
+    waveEffect?: string
     error?: JSXChild
     leftAddon?: JSXChild
     leftAddonProps?: JSXElementProps
