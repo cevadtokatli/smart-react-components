@@ -11,6 +11,7 @@ interface ItemElementProps extends ElementProps, Size$Props {
     type$?: string
     shape?: string
     hover?: boolean
+    disabled?: boolean
 }
 
 const customKeys = {
@@ -21,7 +22,7 @@ const customKeys = {
     `
 }
 
-const ItemElement = styled(Div).attrs<ItemElementProps>({customKeys})<ItemElementProps>(({theme,type$,shape,hover}) => `
+const ItemElement = styled(Div).attrs<ItemElementProps>({customKeys})<ItemElementProps>(({theme,type$,shape,hover,disabled}) => `
     border-radius: ${theme.src.dropdown.radius[shape]};
     background: ${theme.src.type[type$].dropdown.background};
     color: ${theme.src.type[type$].dropdown.font};
@@ -40,6 +41,12 @@ const ItemElement = styled(Div).attrs<ItemElementProps>({customKeys})<ItemElemen
             }
         ` : ""
     }
+
+    ${disabled 
+    ? `
+        pointer-events: none;
+        opacity: ${theme.src.dropdown.disabledOpacity};
+    ` : ""}
 `)
 
 interface Props extends SizeProps {
@@ -49,16 +56,21 @@ interface Props extends SizeProps {
     shape?: string
     hover?: boolean
     setStatus?: React.Dispatch<React.SetStateAction<boolean>>
-    callback: () => void
+    callback?: () => void
+    disabled?: boolean
 }
 
-const Item: React.FC<Props> = ({size,sizeSm,sizeMd,sizeLg,sizeXl,elementProps=DV.JSX_ELEMENT_PROPS,children,type="primary",shape="default",hover,setStatus,callback}) => {
+const Item: React.FC<Props> = ({size,sizeSm,sizeMd,sizeLg,sizeXl,elementProps=DV.JSX_ELEMENT_PROPS,children,type="primary",shape="default",hover,setStatus,callback,disabled}) => {
     const onClick = () => {
+        if(disabled)
+            return
+
         setStatus(false)
-        callback()
+        if(callback)
+            callback()
     }
 
-    return <ItemElement {...elementProps} size$={size} size$Sm={sizeSm} size$Md={sizeMd} size$Lg={sizeLg} size$Xl={sizeXl} type$={type} shape={shape} hover={hover} onClick={onClick}>{children}</ItemElement>
+    return <ItemElement {...elementProps} size$={size} size$Sm={sizeSm} size$Md={sizeMd} size$Lg={sizeLg} size$Xl={sizeXl} type$={type} shape={shape} hover={hover} onClick={onClick} disabled={disabled}>{children}</ItemElement>
 }
 
 export default Item

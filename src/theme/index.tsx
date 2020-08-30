@@ -156,6 +156,7 @@ export interface Theme {
         margin: ThemeVariable<Coordinator<string>>
         radius: ThemeVariable<string>
         fontSize: ThemeVariable<string>
+        disabledOpacity: number
     }
     fixedBox: {
         boxShadow: string
@@ -641,7 +642,8 @@ const theme: Theme = {
             small: ".875rem",
             default: ".875rem",
             large: "1rem"
-        }
+        },
+        disabledOpacity: .7
     },
     fixedBox: {
         boxShadow: "0 0 35px 0 rgba(154,161,171,.15)"
