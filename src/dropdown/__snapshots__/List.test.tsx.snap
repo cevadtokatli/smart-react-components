@@ -7,19 +7,22 @@ exports[`<Dropdown /> should match snapshot 1`] = `
 >
   <div>
     <div
-      class="sc-AxjAm sc-AxiKw imxLMn"
+      class="sc-AxjAm sc-AxiKw bcfNif"
+      data-src-wave-effect="0"
       shape="default"
     >
       Item 1
     </div>
     <div
-      class="sc-AxjAm sc-AxiKw imxLMn"
+      class="sc-AxjAm sc-AxiKw bcfNif"
+      data-src-wave-effect="0"
       shape="default"
     >
       Item 2
     </div>
     <div
-      class="sc-AxjAm sc-AxiKw imxLMn"
+      class="sc-AxjAm sc-AxiKw bcfNif"
+      data-src-wave-effect="0"
       shape="default"
     >
       Item 3

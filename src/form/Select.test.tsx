@@ -22,7 +22,8 @@ describe("<Select />", () => {
     beforeEach(() => {
         props = {
             active: "value-2",
-            setActive: jest.fn()
+            setActive: jest.fn(),
+            waveEffect: null
         }
     })
 

@@ -27,6 +27,7 @@ describe("<SelectBox />", () => {
                 id: "selectbox",
                 onClick: e => e.target.click()
             },
+            waveEffect: null,
             showAnimation: false,
             hideAnimation: false
         }

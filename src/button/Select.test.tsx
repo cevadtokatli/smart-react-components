@@ -24,6 +24,7 @@ describe("<Select />", () => {
                 id: "button",
                 onClick: e => e.target.click()
             },
+            optionWaveEffect: null,
             showAnimation: false,
             hideAnimation: false
         }
