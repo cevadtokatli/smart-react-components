@@ -11,4 +11,6 @@ export default styled(Div)<Props>(({theme}) => `
     border: solid 1px ${theme.src.modal.borderColor};
     border-radius: ${theme.src.modal.borderRadius};
     background: ${theme.src.modal.backgroundColor};
+    color: ${theme.src.modal.fontColor};
+    font-family: ${theme.src.fontFamily.modal};
 `)

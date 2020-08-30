@@ -185,6 +185,7 @@ export interface Theme {
         borderColor: string
         borderRadius: string
         backgroundColor: string
+        fontColor: string
         modalContentPadding: Coordinator<string>
         modalContentBorderColor: string
         modalFooterPadding: Coordinator<string>
@@ -456,6 +457,7 @@ const theme: Theme = {
         radioSpan: "inherit",
         input: "inherit",
         option: "inherit",
+        modal: "inherit",
         popover: "inherit",
         tooltip: "inherit"
     },
@@ -733,6 +735,7 @@ const theme: Theme = {
         borderColor: "rgba(0,0,0,.2)",
         borderRadius: ".3rem",
         backgroundColor: "#fff",
+        fontColor: "#000",
         modalContentPadding: {
             x: "1rem",
             y: "1rem"
