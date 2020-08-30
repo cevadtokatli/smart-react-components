@@ -6,6 +6,7 @@ import Div from "../element/Div"
 import {SizeProps} from "../props/size-props"
 import {JSXElementProps, JSXChild} from "../props"
 import DV from "../default-value"
+import WaveEffect from "../wave-effect"
 
 interface ItemElementProps extends ElementProps, Size$Props {
     type$?: string
@@ -55,12 +56,13 @@ interface Props extends SizeProps {
     type?: string
     shape?: string
     hover?: boolean
+    waveEffect?: string
     setStatus?: React.Dispatch<React.SetStateAction<boolean>>
     callback?: () => void
     disabled?: boolean
 }
 
-const Item: React.FC<Props> = ({size,sizeSm,sizeMd,sizeLg,sizeXl,elementProps=DV.JSX_ELEMENT_PROPS,children,type="primary",shape="default",hover,setStatus,callback,disabled}) => {
+const Item: React.FC<Props> = ({size,sizeSm,sizeMd,sizeLg,sizeXl,elementProps=DV.JSX_ELEMENT_PROPS,children,type="primary",shape="default",hover,waveEffect,setStatus,callback,disabled}) => {
     const onClick = () => {
         if(disabled)
             return
@@ -70,7 +72,9 @@ const Item: React.FC<Props> = ({size,sizeSm,sizeMd,sizeLg,sizeXl,elementProps=DV
             callback()
     }
 
-    return <ItemElement {...elementProps} size$={size} size$Sm={sizeSm} size$Md={sizeMd} size$Lg={sizeLg} size$Xl={sizeXl} type$={type} shape={shape} hover={hover} onClick={onClick} disabled={disabled}>{children}</ItemElement>
+    const El = <ItemElement {...elementProps} size$={size} size$Sm={sizeSm} size$Md={sizeMd} size$Lg={sizeLg} size$Xl={sizeXl} type$={type} shape={shape} hover={hover} onClick={onClick} disabled={disabled}>{children}</ItemElement>
+
+    return waveEffect ? <WaveEffect type={waveEffect}>{El}</WaveEffect> : El
 }
 
 export default Item

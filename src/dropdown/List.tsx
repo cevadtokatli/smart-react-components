@@ -34,14 +34,15 @@ interface Props extends SizeProps {
     type?: string
     shape?: string
     hover?: boolean
+    waveEffect?: string
     setStatus?: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const List: React.FC<Props> = ({size="default",sizeSm,sizeMd,sizeLg,sizeXl,elementProps=DV.JSX_ELEMENT_PROPS,children,type="primary",shape="default",hover=true,setStatus}) => {
+const List: React.FC<Props> = ({size="default",sizeSm,sizeMd,sizeLg,sizeXl,elementProps=DV.JSX_ELEMENT_PROPS,children,type="primary",shape="default",hover=true,waveEffect="light",setStatus}) => {
     return (
         <ListElement {...elementProps} size$={size} size$Sm={sizeSm} size$Md={sizeMd} size$Lg={sizeLg} size$Xl={sizeXl} type$={type} shape={shape}>
             <div>
-                {children.map((item,index) => React.cloneElement(item, {key:(item.key || index),size,sizeSm,sizeMd,sizeLg,sizeXl,type,shape,hover,setStatus}))}
+                {children.map((item,index) => React.cloneElement(item, {key:(item.key || index),size,sizeSm,sizeMd,sizeLg,sizeXl,type,shape,hover,waveEffect,setStatus}))}
             </div>
         </ListElement>
     )
