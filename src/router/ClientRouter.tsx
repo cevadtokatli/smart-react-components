@@ -13,6 +13,7 @@ import ProgressBar from "./ProgressBar"
 declare global {
     interface History {
         push: (url:string) => void
+        replace: (url:string) => void
     }
 }
 
@@ -71,6 +72,11 @@ const ClientRouter: React.FC<Props> = ({children,params={},progressBarProps=DV.J
     React.useEffect(() => {
         history.push = (url:string) => {
             history.pushState({}, null, url)
+            setRouterUrl(RouterHelper.getUrl())
+        }
+
+        history.replace = (url:string) => {
+            history.replaceState({}, null, url)
             setRouterUrl(RouterHelper.getUrl())
         }
 
