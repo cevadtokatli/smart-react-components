@@ -13,7 +13,7 @@ export interface TextProps {
     textTransform?: EPV<string>
     textOverflow?: EPV<string>
     unicodeBidi?: EPV<string>
-    whiteSpacing?: EPV<Value>
+    whiteSpace?: EPV<Value>
     wordBreak?: EPV<string>
     wordSpacing?: EPV<Value>
     wordWrap?: EPV<string>
@@ -31,7 +31,7 @@ export default {
     textTransform: "text-transform",
     textOverflow: "text-overflow",
     unicodeBidi: "unicode-bidi",
-    whiteSpacing: v => `white-spacing:${CSSHelper.setValue(v)};`,
+    whiteSpace: v => `white-space:${CSSHelper.setValue(v)};`,
     wordBreak: "word-break",
     wordSpacing: v => `word-spacing:${CSSHelper.setValue(v)};`,
     wordWrap: "word-wrap",
