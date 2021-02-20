@@ -9,5 +9,5 @@ export {default as LinkProps} from "../router/LinkProps"
 export {default as Link} from "../router/Link"
 export * from "../router/NavLink"
 export {default as NavLink} from "../router/NavLink"
-export {RouteProps, RouteComponentProps} from "../types/router"
+export {RouteProps, RouteComponentProps, Url, RouteMatch} from "../types/router"
 export const runLoaders = RouterHelper.runLoaders.bind(RouterHelper)
