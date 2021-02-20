@@ -58,9 +58,9 @@ export interface RouteProps {
 
 export interface RouteMatch extends Match {
     key: string
-	params: {
-		[key:string]: string
-	}
+    params: {
+        [key:string]: string
+    }
 }
 
 export interface RouteComponentProps {
