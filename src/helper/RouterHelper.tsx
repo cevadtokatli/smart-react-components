@@ -76,7 +76,7 @@ export default class RouterHelper {
                 if(match) {
                     if(item.loaderModule) {
                         const _module = await item.loaderModule.preload()
-                        arr.push((_module as any as PreloadModule).default.get.bind({}, match, this.setUrl(url), (_ => {}), (() => {}), params))
+                        arr.push((_module as any as PreloadModule).default.get.bind({}, match, {...this.setUrl(url), query}, (_ => {}), (() => {}), params))
                     }
     
                     if(item.children)
