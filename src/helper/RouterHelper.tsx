@@ -81,6 +81,8 @@ export default class RouterHelper {
     
                     if(item.children)
                         await this.getLoaderMethods(item.children, url, query, arr, params)
+
+                    break
                 }
             }
 
