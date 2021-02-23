@@ -8,7 +8,6 @@ export const getInitialState = (url=RouterHelper.getUrl()): ReducerState => ({
     key: null,
     cancelCallback: null,
     percentage: 0,
-    loaderModules: {}
 })
 
 const reducer = (state:ReducerState, action): ReducerState => {
@@ -43,18 +42,6 @@ const reducer = (state:ReducerState, action): ReducerState => {
                 return action.payload == 100 ? reducer(state, {type:Action.SET_URL,payload:state.newUrl}) : {...state,percentage:action.payload}
             else
                 return state
-        case Action.SET_LOADER_MODULE:
-            return {
-                ...state,
-                loaderModules: {
-                    ...state.loaderModules,
-                    [action.path]: {
-                        module: action.module,
-                        exact: action.exact,
-                        searchKeys: action.searchKeys
-                    }
-                }
-            }
         default:
             throw new Error()
     }

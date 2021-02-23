@@ -2,7 +2,7 @@ import React from "react"
 import {JSXElementProps} from "../props"
 import DV from "../default-value"
 import reducer, {getInitialState} from "./reducer"
-import {PreloadModule, CancelCallback} from "../types/router"
+import {PreloadModule, CancelCallback, RouteProps} from "../types/router"
 import RouterContext from "./RouterContext"
 import RouterHelper from "../helper/RouterHelper"
 import {setUrl, setNewUrl} from "./actions" 
@@ -21,51 +21,36 @@ interface Props {
     children: JSX.Element|JSX.Element[]
     params?: any
     progressBarProps?: JSXElementProps
+    routes: RouteProps[]
 }
 
-const ClientRouter: React.FC<Props> = ({children,params={},progressBarProps=DV.JSX_ELEMENT_PROPS}) => {
+const ClientRouter: React.FC<Props> = ({children,params={},progressBarProps=DV.JSX_ELEMENT_PROPS,routes}) => {
     const [state, dispatch] = React.useReducer(reducer, getInitialState())
 
     const setRouterUrl = React.useCallback((_url:string) => {
-        const url = RouterHelper.setUrl(_url)
-        const oldUrlPathname = state.url.pathname
-        const oldUrlQuery = state.url.query
-        let loaderModules = []
-        for(let path in state.loaderModules) {
-            let item = state.loaderModules[path]
-            let match
-            let oldMatch
-            if(
-                item.module && 
-                (match = RouterHelper.matchPath(url.pathname, url.query, {path,exact:item.exact,searchKeys:item.searchKeys})) && 
-                (
-                    !(oldMatch = RouterHelper.matchPath(oldUrlPathname, oldUrlQuery, {path,exact:item.exact,searchKeys:item.searchKeys})) ||
-                    (oldMatch && oldMatch.key != match.key)
-                )
-            )
-                loaderModules.push({module:item.module,match})
-        }
-
-        if(loaderModules.length == 0)
-            dispatch(setUrl(url))
-        else {
+        (async function() {
+            const url = RouterHelper.setUrl(_url)
             let key = new Date().getTime().toString()
-            dispatch(setNewUrl(url, key));
+            const setPercentage$ = (payload:number) => dispatch(setPercentage(payload, key))
+            const setCancelCallback$ = (payload:CancelCallback) => dispatch(setCancelCallback(payload, key))
+            let loaderMethods = []
+            await RouterHelper.getLoaderMethods(routes, url.pathname, url.query, loaderMethods, params, state.url, setPercentage$, setCancelCallback$);
 
-            (async function() {
+            if(loaderMethods.length == 0)
+                dispatch(setUrl(url))
+            else {
+                dispatch(setNewUrl(url, key))
+
                 try {
-                    const setPercentage$ = (payload:number) => dispatch(setPercentage(payload, key))
-                    const setCancelCallback$ = (payload:CancelCallback) => dispatch(setCancelCallback(payload, key))
                     setPercentage$(10)
-                    for(let i in loaderModules) {
-                        const module$ = await loaderModules[i].module.preload()
-                        await (module$ as any as PreloadModule).default.get(loaderModules[i].match, url, setPercentage$, setCancelCallback$, params)
+                    for(let i in loaderMethods) {
+                        await loaderMethods[i]();
                     }
                     setPercentage$(100)
                 } catch(ignored) {}
-            }())
-        }
-    }, [state.loaderModules, state.url])
+            }
+        }())
+    }, [state.url])
 
     const popstate = () => setRouterUrl(RouterHelper.getUrl())
 
@@ -85,7 +70,7 @@ const ClientRouter: React.FC<Props> = ({children,params={},progressBarProps=DV.J
         return () => {
             DOMHelper.removeEventListener(window, ["popstate"], popstate)
         }
-    }, [state.loaderModules, state.url])
+    }, [state.url])
 
     return (
         <RouterContext.Provider value={{state,dispatch}}>
