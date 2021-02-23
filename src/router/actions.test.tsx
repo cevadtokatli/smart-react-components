@@ -50,15 +50,4 @@ describe("actions", () => {
             key: "1"
         })
     })
-
-    it("should handle setLoaderModule action", () => {
-        const loaderModule = null
-        expect(setLoaderModule(loaderModule, "/", false, null)).toEqual({
-            type: Action.SET_LOADER_MODULE,
-            module: loaderModule,
-            path: "/",
-            exact: false,
-            searchKeys: null
-        })
-    })
 })

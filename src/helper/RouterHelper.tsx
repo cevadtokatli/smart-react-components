@@ -68,19 +68,35 @@ export default class RouterHelper {
      * @param arr 
      * @param params
      */
-    private static getLoaderMethods(routes:RouteProps[], url:string, query:{[key:string]: string}, arr:LoaderMethod[], params:any): Promise<void> {
+    static getLoaderMethods(routes:RouteProps[], url:string, query:{[key:string]: string}, arr:LoaderMethod[], params:any, oldUrl?:Url, setPercentage:Function=(_ => {}), setCancelCallback:Function=(() => {})): Promise<void> {
         return new Promise(async resolve => {
             for(let i in routes) {
                 const item = routes[i]
                 const match = this.matchPath(url, query, {path:item.path,exact:item.exact,searchKeys:item.searchKeys})
+                let pass: boolean;
+
+                if(!oldUrl)
+                    pass = !!match;
+                else {
+                    const oldUrlPathname = oldUrl.pathname
+                    const oldUrlQuery = oldUrl.query
+                    let oldMatch
+                    pass =
+                        match &&
+                        (
+                            !(oldMatch = this.matchPath(oldUrlPathname, oldUrlQuery, {path:item.path,exact:item.exact,searchKeys:item.searchKeys})) ||
+                            (oldMatch && oldMatch.key != match.key)
+                        )
+                }
+
                 if(match) {
-                    if(item.loaderModule) {
+                    if(pass && item.loaderModule) {
                         const _module = await item.loaderModule.preload()
-                        arr.push((_module as any as PreloadModule).default.get.bind({}, match, {...this.setUrl(url), query}, (_ => {}), (() => {}), params))
+                        arr.push((_module as any as PreloadModule).default.get.bind({}, match, {...this.setUrl(url), query}, setPercentage, setCancelCallback, params))
                     }
     
                     if(item.children)
-                        await this.getLoaderMethods(item.children, url, query, arr, params)
+                        await this.getLoaderMethods(item.children, url, query, arr, params, oldUrl, setPercentage, setCancelCallback)
 
                     break
                 }

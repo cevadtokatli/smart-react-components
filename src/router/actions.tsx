@@ -23,11 +23,3 @@ export const setPercentage = (percentage:number, key:string) => ({
     payload: percentage,
     key
 })
-
-export const setLoaderModule = (loaderModule:LoaderModule, path:string, exact:boolean, searchKeys:string[]) => ({
-    type: Action.SET_LOADER_MODULE,
-    module: loaderModule || null,
-    path,
-    exact,
-    searchKeys
-})

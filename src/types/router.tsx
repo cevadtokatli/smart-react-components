@@ -32,13 +32,6 @@ export interface ReducerState {
     key: string
     cancelCallback: CancelCallback
     percentage: number
-    loaderModules: {
-        [key:string]: {
-            module: LoaderModule
-            exact: boolean
-            searchKeys: string[]
-        }
-    }
 }
 
 export interface RouterContextValue {

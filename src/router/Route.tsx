@@ -2,7 +2,6 @@ import React from "react"
 import {RouteProps, RouteMatch} from "../types/router"
 import RouterContext from "./RouterContext"
 import RouterHelper from "../helper/RouterHelper"
-import {setLoaderModule} from "../router/actions"
 
 export interface Props extends RouteProps {
     children?: never
@@ -16,11 +15,6 @@ const Route: React.FC<Props> = ({path,exact,Component,render,loaderModule,search
     React.useEffect(() => {
         setMatch(RouterHelper.matchPath(router.state.url.pathname, router.state.url.query, {path,exact,searchKeys}))
     }, [router.state.url])
-
-    React.useEffect(() => {
-        if(loaderModule || (!loaderModule && router.state.loaderModules[path as string]))
-            router.dispatch(setLoaderModule(loaderModule, path as string, exact, searchKeys))
-    }, [loaderModule])
 
     return (
         <React.Fragment key={match ? match.key : ""}>
