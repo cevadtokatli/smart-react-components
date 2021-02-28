@@ -47,6 +47,9 @@ export interface RouteProps {
     loaderModule?: LoaderModule
     children?: RouteProps[]
     searchKeys?: string[]
+    defaultSearchValues?: {
+        [key: string]: string
+    }
 }
 
 export interface RouteMatch extends Match {

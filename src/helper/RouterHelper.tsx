@@ -72,7 +72,7 @@ export default class RouterHelper {
         return new Promise(async resolve => {
             for(let i in routes) {
                 const item = routes[i]
-                const match = this.matchPath(url, query, {path:item.path,exact:item.exact,searchKeys:item.searchKeys})
+                const match = this.matchPath(url, query, {path:item.path,exact:item.exact,searchKeys:item.searchKeys,defaultSearchValues:item.defaultSearchValues})
                 let pass: boolean;
 
                 if(!oldUrl)
@@ -84,7 +84,7 @@ export default class RouterHelper {
                     pass =
                         match &&
                         (
-                            !(oldMatch = this.matchPath(oldUrlPathname, oldUrlQuery, {path:item.path,exact:item.exact,searchKeys:item.searchKeys})) ||
+                            !(oldMatch = this.matchPath(oldUrlPathname, oldUrlQuery, {path:item.path,exact:item.exact,searchKeys:item.searchKeys,defaultSearchValues:item.defaultSearchValues})) ||
                             (oldMatch && oldMatch.key != match.key)
                         )
                 }
@@ -112,7 +112,7 @@ export default class RouterHelper {
      * @param url 
      * @param param1 
      */
-    static matchPath(url:string, query:{[key:string]: string}, {path,exact,emptyQueryActive,searchKeys}:{path:Path,exact:boolean,emptyQueryActive?:boolean,searchKeys:string[]}): RouteMatch {
+    static matchPath(url:string, query:{[key:string]: string}, {path,exact,emptyQueryActive,searchKeys,defaultSearchValues}:{path:Path,exact:boolean,emptyQueryActive?:boolean,searchKeys:string[],defaultSearchValues?:{ [key:string]: string }}): RouteMatch {
         let match = matchPath(url, {path:(typeof path === "string" ? path.split("?")[0] : path) as any,exact})
         let key = ""
 
@@ -137,6 +137,8 @@ export default class RouterHelper {
                 searchKeys.forEach(item => {
                     if(query[item])
                         _key.searchKey[item] = query[item]
+                    else if(defaultSearchValues && defaultSearchValues[item])
+                        _key.searchKey[item] = defaultSearchValues[item]
                 })
             }
 

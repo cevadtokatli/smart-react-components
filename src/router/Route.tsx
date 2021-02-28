@@ -8,12 +8,12 @@ export interface Props extends RouteProps {
     switchNotRendered?: boolean
 }
 
-const Route: React.FC<Props> = ({path,exact,Component,render,loaderModule,searchKeys,switchNotRendered}) => {
+const Route: React.FC<Props> = ({path,exact,Component,render,searchKeys,switchNotRendered,defaultSearchValues}) => {
     const router = React.useContext(RouterContext)
-    const [match, setMatch] = React.useState<RouteMatch>(() => RouterHelper.matchPath(router.state.url.pathname, router.state.url.query, {path,exact,searchKeys}))
+    const [match, setMatch] = React.useState<RouteMatch>(() => RouterHelper.matchPath(router.state.url.pathname, router.state.url.query, {path,exact,searchKeys,defaultSearchValues}))
 
     React.useEffect(() => {
-        setMatch(RouterHelper.matchPath(router.state.url.pathname, router.state.url.query, {path,exact,searchKeys}))
+        setMatch(RouterHelper.matchPath(router.state.url.pathname, router.state.url.query, {path,exact,searchKeys,defaultSearchValues}))
     }, [router.state.url])
 
     return (
