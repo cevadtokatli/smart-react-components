@@ -7,4 +7,5 @@ export default interface Props {
     to: string
     path?: Path
     exact?: boolean
+    emptyQueryActive?: boolean
 }
