@@ -113,7 +113,7 @@ export default class RouterHelper {
      * @param param1 
      */
     static matchPath(url:string, query:{[key:string]: string}, {path,exact,emptyQueryActive,searchKeys}:{path:Path,exact:boolean,emptyQueryActive?:boolean,searchKeys:string[]}): RouteMatch {
-        let match = matchPath(url, {path:path as any,exact})
+        let match = matchPath(url, {path:(typeof path === "string" ? path.split("?")[0] : path) as any,exact})
         let key = ""
 
         if(match && typeof path === "string") {
