@@ -1,92 +1,14 @@
 {
-  "name": "smart-react-components",
-  "version": "1.12.11",
-  "license": "MIT",
-  "description": "React UI library, wide variety of editable ready to use Styled and React components.",
-  "keywords": [
-    "react-ui-library",
-    "javascript",
-    "typescript",
-    "react",
-    "styled-components",
-    "component",
-    "alert",
-    "badge",
-    "breadcrumb",
-    "button",
-    "color-picker",
-    "date-picker",
-    "dropdown",
-    "fixed-box",
-    "form",
-    "grid",
-    "loading",
-    "modal",
-    "overlay",
-    "pagination",
-    "pop-up",
-    "popover",
-    "progress-bar",
-    "router",
-    "table",
-    "tooltip",
-    "transition",
-    "wave-effect"
-  ],
-  "author": {
-    "name": "Cevad Tokatlı",
-    "email": "cevadtokatli@hotmail.com"
-  },
-  "contributors": [
-    {
-      "name": "Cemil Tokatlı",
-      "email": "cemiltokatli@yahoo.com"
-    }
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cevadtokatli/smart-react-components"
-  },
-  "homepage": "https://cevadtokatli.github.io/smart-react-components/",
-  "scripts": {
-    "dev": "rollup -c -w",
-    "build": "rollup -c --environment INCLUDE_DEPS,BUILD:production",
-    "release": "node release.js && yarn run build",
-    "test": "jest"
-  },
+  "name": "@smart-react-components/repo",
+  "private": true,
   "devDependencies": {
-    "@types/color": "^3.0.1",
-    "@types/enzyme": "^3.10.5",
-    "@types/jest": "^25.1.4",
-    "@types/react": "^16.9.19",
-    "@types/react-dom": "^16.9.5",
-    "@types/react-loadable": "^5.5.3",
-    "@types/react-router": "^5.1.7",
-    "@types/styled-components": "^4.4.2",
-    "color": "^3.1.2",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "enzyme-to-json": "^3.4.4",
-    "jest": "^25.2.6",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-is": "^16.13.1",
-    "react-loadable": "^5.5.0",
-    "react-router": "^5.2.0",
-    "rollup": "^1.29.1",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-typescript2": "^0.25.3",
-    "styled-components": "^5.0.0",
-    "ts-jest": "^25.3.0",
-    "tslib": "^1.10.0",
-    "typescript": "3.7.5"
-  },
-  "peerDependencies": {
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-loadable": "^5.5.0",
-    "react-router": "^5.2.0",
-    "styled-components": "^5.0.0"
+    "@typescript-eslint/eslint-plugin": "5.0.0",
+    "eslint": "8.0.1",
+    "eslint-config-standard-with-typescript": "22.0.0",
+    "eslint-plugin-import": "2.25.2",
+    "eslint-plugin-n": "15.0.0",
+    "eslint-plugin-promise": "6.0.0",
+    "eslint-plugin-react": "7.31.8",
+    "typescript": "4.8.3"
   }
 }

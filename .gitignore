@@ -1,5 +1,4 @@
-demo/
-dist/
 node_modules/
-util/
 yarn.lock
+lib/
+.DS_Store
