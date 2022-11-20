@@ -51,7 +51,7 @@ function release() {
     exit 1
   fi
 
-  git commit -A -m "Release module \"$module\""
+  git commit -a -m "Release module \"$module\""
   git push -u origin
 
   cd lib && yarn publish
