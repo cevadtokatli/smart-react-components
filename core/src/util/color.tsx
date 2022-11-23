@@ -14,9 +14,8 @@ export const getColor = (value: string): Color<string> => {
 
 /**
  * Gets font color by value.
- * If value is dark, returns the light font color or vice versa.
  */
-export const getFontColor = (value: string, theme: Theme): string => getColor(value).isDark() ? theme.$.color.light.font : theme.$.color.dark.font
+export const getFontColor = (value: string, theme: Theme): string => getColor(value).isDark() ? theme.$.color.dark.font : theme.$.color.light.font
 
 /**
  * Mixes two colors.

@@ -12,11 +12,11 @@ describe('color', () => {
     const theme = createTheme()
 
     it('should get light font color', () => {
-      expect(getFontColor('#000', theme)).toEqual(theme.$.color.light.font)
+      expect(getFontColor('#fff', theme)).toEqual(theme.$.color.light.font)
     })
 
     it('should get dark font color', () => {
-      expect(getFontColor('#FFF', theme)).toEqual(theme.$.color.dark.font)
+      expect(getFontColor('#000', theme)).toEqual(theme.$.color.dark.font)
     })
   })
 
