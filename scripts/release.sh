@@ -2,6 +2,8 @@
 
 # Color
 RED='\033[0;31m'
+YELLOW='\033[0;33m'
+GREEN='\033[0;32m'
 NC='\033[0m'
 
 # Returns the version value from the package.json increasing it by 1.
@@ -14,25 +16,40 @@ function getVersion() {
   echo $newVersion
 }
 
-# Updated the given version in the package.json
+# Updates the given version in the package.json
 function updateVersion() {
   # params
   local key=$1
   local value=$2
 
-  local currentAttr=$(grep -o "\"$key\": \"[^\"]*" package.json | grep -o '[^"]*$')
+  local currentAttr=$(grep -o "\"$key\": \"[^\"]*\"," package.json)
+  local currentValue=$(echo $currentAttr | grep -o '[^"]*",$' | grep -o '[^",]*')
+  local newAttr=${currentAttr/$currentValue/$value}
 
-  sed -i '' "s/$currentAttr/$value/g" package.json
+  sed -i '' "s#$currentAttr#$newAttr#g" package.json
+}
+
+# Updates the released module's dependant modules' package.json to use the current version.
+function updateModuleDependentsPackageJson() {
+  # params
+  local module=$1
+  local version=$2
+
+  cd ../playground
+  updateVersion "@smart-react-components/$module" $version
+
+  cd "../$module"
 }
 
 function release() {
   # params
   local module=$1
 
-  if local output="$(git status --porcelain)" && [ -n "$output" ]; then
-    echo -e "$RED***** Git has uncommited changes, please commit all your changes before release *****$NC"
-    exit 1
-  fi
+  echo -e "$YELLOW***** Releasing $module *****$NC"
+  cd $module
+
+  rm -rf node_modules yarn.lock
+  yarn install
 
   yarn lint
 
@@ -51,10 +68,33 @@ function release() {
     exit 1
   fi
 
-  git commit -a -m "Release module \"$module\""
+  updateModuleDependentsPackageJson $module $version
+
+  git commit -a -m "Release module \"$module\" to \"$version\""
   git push -u origin
 
   cd lib && yarn publish
+
+  cd ..
+  echo -e "$GREEN***** $module has been released *****$NC"
 }
 
-release $1
+function main() {
+  # params
+  local module=$1
+
+  cd ..
+
+  if local output="$(git status --porcelain)" && [ -n "$output" ]; then
+    echo -e "$RED***** Git has uncommited changes, please commit all your changes before release *****$NC"
+    exit 1
+  fi
+
+  release $1
+
+  cd ./playground
+  rm -rf node_modules yarn.lock
+  yarn install
+}
+
+main $1
