@@ -75,7 +75,7 @@ function release() {
 
   cd lib && yarn publish
 
-  cd ..
+  cd ../..
   echo -e "$GREEN***** $module has been released *****$NC"
 }
 
