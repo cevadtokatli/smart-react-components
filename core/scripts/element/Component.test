@@ -1,0 +1,10 @@
+import React from 'react'
+import { shallow } from 'enzyme'
+import {pascalCase} from './{pascalCase}'
+
+describe('<{pascalCase} />', () => {
+  it('should render {camelCase} element', () => {
+    const wrapper = shallow(<{pascalCase} />)
+    expect(wrapper.first().type()).toEqual('{camelCase}')
+  })
+})
