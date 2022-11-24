@@ -1,6 +1,6 @@
 {
   "name": "@smart-react-components/core",
-  "version": "2.0.0-alpha-1",
+  "version": "2.0.0-alpha-2",
   "license": "MIT",
   "main": "index.js",
   "description": "SRC core includes the theme, Styled properties, and Element components.",
