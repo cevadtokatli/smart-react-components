@@ -142,9 +142,9 @@ ELEMENTS = [
 
 def convertName(name):
   """
-    Converts the sentence case name to pascal and camel case.
+    Converts the title case name to pascal and camel case.
 
-    :param name: Sentence case name
+    :param name: Title case name
     :type name: str
     :returns: Converted pascal and camel case texts in a dict.
     :rtype: dict
