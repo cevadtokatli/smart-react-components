@@ -26,7 +26,7 @@ interface DefaultThemeAttributes<PaletteType> {
   zIndex: ZIndexAttributes
 }
 
-type ThemeAttributes<T> = DefaultThemeAttributes<T> & OptionalThemeAttributes
+type ThemeAttributes<PaletteType> = DefaultThemeAttributes<PaletteType> & OptionalThemeAttributes
 
 export interface InputTheme {
   $?: Partial<ThemeAttributes<InputPalette>>
