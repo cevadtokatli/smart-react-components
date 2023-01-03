@@ -11,7 +11,7 @@ describe('<Transition />', () => {
 
     it('should not render element when false', () => {
       const screen = render(<Transition status={false}><div data-testid="element" /></Transition>)
-      expect(screen.queryByTestId('#element')).toBeFalsy()
+      expect(screen.queryByTestId('element')).toBeFalsy()
     })
   })
 
