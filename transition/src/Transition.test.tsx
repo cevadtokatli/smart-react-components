@@ -1,34 +1,34 @@
-import { mount } from 'enzyme'
-import React from "react"
+import { act, waitFor, render } from '@testing-library/react'
+import React from 'react'
 import Transition from './Transition'
 
 describe('<Transition />', () => {
   describe('status', () => {
-    it('should render #element when true', () => {
-      const wrapper = mount(<Transition status><div id="element" /></Transition>)
-      expect(wrapper.find('#element').exists()).toBe(true)
+    it('should render element when true', () => {
+      const screen = render(<Transition status><div data-testid="element" /></Transition>)
+      expect(screen.queryByTestId('element')).toBeTruthy()
     })
 
-    it('should not render #element when false', () => {
-      const wrapper = mount(<Transition status={false}><div id="element" /></Transition>)
-      expect(wrapper.find('#element').exists()).toBe(false)
+    it('should not render element when false', () => {
+      const screen = render(<Transition status={false}><div data-testid="element" /></Transition>)
+      expect(screen.queryByTestId('#element')).toBeFalsy()
     })
   })
 
   describe('isPreserved', () => {
-    it('should render #element with display block when status true', () => {
-      const wrapper = mount(<Transition status isPreserved><div id="element" /></Transition>)
-      expect(wrapper.find('#element').exists()).toBe(true)
+    it('should render element with display block when status true', () => {
+      const screen = render(<Transition status data-isPreserved><div data-testid="element" /></Transition>)
+      expect(screen.queryByTestId('element')).toBeTruthy()
 
-      const style = getComputedStyle(wrapper.find('#element').getDOMNode())
+      const style = getComputedStyle(screen.getByTestId('element'))
       expect(style.display).toEqual('block')
     })
 
-    it('should render #element with display none when status false', () => {
-      const wrapper = mount(<Transition status={false} isPreserved><div id="element" /></Transition>)
-      expect(wrapper.find('#element').exists()).toBe(true)
+    it('should render element with display none when status false', () => {
+      const screen = render(<Transition status={false} isPreserved><div data-testid="element" /></Transition>)
+      expect(screen.queryByTestId('element')).toBeTruthy()
 
-      const style = getComputedStyle(wrapper.find('#element').getDOMNode())
+      const style = getComputedStyle(screen.getByTestId('element'))
       expect(style.display).toEqual('none')
     })
   })
@@ -45,26 +45,29 @@ describe('<Transition />', () => {
           afterShow: jest.fn(),
         }
 
-        const wrapper = mount(<Transition {...props}><div /></Transition>)
-        const instance = wrapper.instance()
-        const oldProps = instance.props
-        const oldState = instance.state
-        wrapper.setProps({
-          status: true
-        });
-        (wrapper.instance() as any).componentDidUpdate(oldProps, oldState)
+        act(() => {
+          const screen = render(<Transition {...props}><div /></Transition>)
+          props.status = true
+          screen.rerender(<Transition {...props}><div /></Transition>)
+        })
       })
 
       it('should call beforeShow method', () => {
-        expect(props.beforeShow).toHaveBeenCalled()
+        waitFor(() => {
+          expect(props.beforeShow).toHaveBeenCalled()
+        })
       })
 
       it('should call show method', () => {
-        expect(props.show).toHaveBeenCalled()
+        waitFor(() => {
+          expect(props.show).toHaveBeenCalled()
+        })
       })
 
       it('should call afterShow method', () => {
-        expect(props.afterShow).toHaveBeenCalled()
+        waitFor(() => {
+          expect(props.afterShow).toHaveBeenCalled()
+        })
       })
     })
 
@@ -79,26 +82,29 @@ describe('<Transition />', () => {
           afterHide: jest.fn(),
         }
 
-        const wrapper = mount(<Transition {...props}><div /></Transition>)
-        const instance = wrapper.instance()
-        const oldProps = instance.props
-        const oldState = instance.state
-        wrapper.setProps({
-            status: false
-        });
-        (wrapper.instance() as any).componentDidUpdate(oldProps, oldState)
+        act(() => {
+          const screen = render(<Transition {...props}><div /></Transition>)
+          props.status = false
+          screen.rerender(<Transition {...props}><div /></Transition>)
+        })
       })
 
       it('should call beforeHide method', () => {
-        expect(props.beforeHide).toHaveBeenCalled()
+        waitFor(() => {
+          expect(props.beforeHide).toHaveBeenCalled()
+        })
       })
 
       it('should call hide method', () => {
-        expect(props.hide).toHaveBeenCalled()
+        waitFor(() => {
+          expect(props.hide).toHaveBeenCalled()
+        })
       })
 
       it('should call afterHide method', () => {
-        expect(props.afterHide).toHaveBeenCalled()
+        waitFor(() => {
+          expect(props.afterHide).toHaveBeenCalled()
+        })
       })
     })
   })

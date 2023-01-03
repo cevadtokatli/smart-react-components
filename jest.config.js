@@ -1,6 +1,6 @@
 module.exports = {
   moduleFileExtensions: ['tsx', 'js', 'json'],
-  setupFiles: ['<rootDir>/src/test/setup.tsx'],
+  testEnvironment: 'jsdom',
   testRegex: '/src/.*.test.tsx',
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
