@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import Map from './Map'
 
 describe('<Map />', () => {
   it('should render map element', () => {
-    const wrapper = shallow(<Map />)
-    expect(wrapper.first().type()).toEqual('map')
+    const screen = render(<Map />)
+    expect(screen.container.querySelector('map')).toBeTruthy()
   })
 })

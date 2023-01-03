@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import Sup from './Sup'
 
 describe('<Sup />', () => {
   it('should render sup element', () => {
-    const wrapper = shallow(<Sup />)
-    expect(wrapper.first().type()).toEqual('sup')
+    const screen = render(<Sup />)
+    expect(screen.container.querySelector('sup')).toBeTruthy()
   })
 })

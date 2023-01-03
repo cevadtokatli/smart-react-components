@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import Button from './Button'
 
 describe('<Button />', () => {
   it('should render button element', () => {
-    const wrapper = shallow(<Button />)
-    expect(wrapper.first().type()).toEqual('button')
+    const screen = render(<Button />)
+    expect(screen.container.querySelector('button')).toBeTruthy()
   })
 })

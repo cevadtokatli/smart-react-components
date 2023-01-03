@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import Section from './Section'
 
 describe('<Section />', () => {
   it('should render section element', () => {
-    const wrapper = shallow(<Section />)
-    expect(wrapper.first().type()).toEqual('section')
+    const screen = render(<Section />)
+    expect(screen.container.querySelector('section')).toBeTruthy()
   })
 })

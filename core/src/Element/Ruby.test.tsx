@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import Ruby from './Ruby'
 
 describe('<Ruby />', () => {
   it('should render ruby element', () => {
-    const wrapper = shallow(<Ruby />)
-    expect(wrapper.first().type()).toEqual('ruby')
+    const screen = render(<Ruby />)
+    expect(screen.container.querySelector('ruby')).toBeTruthy()
   })
 })

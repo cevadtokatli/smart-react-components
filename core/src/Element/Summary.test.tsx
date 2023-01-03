@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import Summary from './Summary'
 
 describe('<Summary />', () => {
   it('should render summary element', () => {
-    const wrapper = shallow(<Summary />)
-    expect(wrapper.first().type()).toEqual('summary')
+    const screen = render(<Summary />)
+    expect(screen.container.querySelector('summary')).toBeTruthy()
   })
 })

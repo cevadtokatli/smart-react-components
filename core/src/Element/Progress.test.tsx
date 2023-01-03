@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import Progress from './Progress'
 
 describe('<Progress />', () => {
   it('should render progress element', () => {
-    const wrapper = shallow(<Progress />)
-    expect(wrapper.first().type()).toEqual('progress')
+    const screen = render(<Progress />)
+    expect(screen.container.querySelector('progress')).toBeTruthy()
   })
 })

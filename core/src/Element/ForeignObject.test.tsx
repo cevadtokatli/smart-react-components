@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import ForeignObject from './ForeignObject'
 
 describe('<ForeignObject />', () => {
   it('should render foreignObject element', () => {
-    const wrapper = shallow(<ForeignObject />)
-    expect(wrapper.first().type()).toEqual('foreignObject')
+    const screen = render(<svg><ForeignObject /></svg>)
+    expect(screen.container.querySelector('foreignObject')).toBeTruthy()
   })
 })

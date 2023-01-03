@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import Polyline from './Polyline'
 
 describe('<Polyline />', () => {
   it('should render polyline element', () => {
-    const wrapper = shallow(<Polyline />)
-    expect(wrapper.first().type()).toEqual('polyline')
+    const screen = render(<svg><Polyline /></svg>)
+    expect(screen.container.querySelector('polyline')).toBeTruthy()
   })
 })

@@ -1,5 +1,6 @@
 import shutil
 import os
+import re
 
 target = '../src/Element'
 
@@ -33,16 +34,16 @@ ELEMENTS = [
   'Br',
   'Button',
   'Canvas',
-  'Caption',
-  'Circle',
+  ('Caption', 'table'),
+  ('Circle', 'svg'),
   'Cite',
-  'Clip Path',
+  ('Clip Path', 'svg'),
   'Code',
-  'Col',
-  'Colgroup',
+  ('Col', 'table,colgroup'),
+  ('Colgroup', 'table'),
   'Data',
   'Datalist',
-  'Defs',
+  ('Defs', 'svg'),
   'Dd',
   'Del',
   'Details',
@@ -51,16 +52,16 @@ ELEMENTS = [
   'Div',
   'Dl',
   'Dt',
-  'Ellipse',
+  ('Ellipse', 'svg'),
   'Em',
   'Embed',
   'Fieldset',
   'Figcaption',
   'Figure',
   'Footer',
-  'Foreign Object',
+  ('Foreign Object', 'svg'),
   'Form',
-  'G',
+  ('G', 'svg'),
   'H1',
   'H2',
   'H3',
@@ -71,7 +72,7 @@ ELEMENTS = [
   'Hr',
   'I',
   'Iframe',
-  'Image',
+  ('Image', 'svg'),
   'Img',
   'Input',
   'Ins',
@@ -79,13 +80,13 @@ ELEMENTS = [
   'Label',
   'Legend',
   'Li',
-  'Line',
-  'Linear Gradient',
+  ('Line', 'svg'),
+  ('Linear Gradient', 'svg'),
   'Main',
   'Map',
   'Mark',
-  'Marker',
-  'Mask',
+  ('Marker', 'svg'),
+  ('Mask', 'svg'),
   'Meter',
   'Nav',
   'Object',
@@ -95,16 +96,16 @@ ELEMENTS = [
   'Output',
   'P',
   'Param',
-  'Path',
-  'Pattern',
+  ('Path', 'svg'),
+  ('Pattern', 'svg'),
   'Picture',
   'Pre',
   'Progress',
-  'Polygon',
-  'Polyline',
+  ('Polygon', 'svg'),
+  ('Polyline', 'svg'),
   'Q',
-  'Radial Gradient',
-  'Rect',
+  ('Radial Gradient', 'svg'),
+  ('Rect', 'svg'),
   'Rp',
   'Rt',
   'Ruby',
@@ -115,24 +116,24 @@ ELEMENTS = [
   'Small',
   'Source',
   'Span',
-  'Stop',
+  ('Stop', 'svg'),
   'Strong',
   'Sub',
   'Summary',
   'Sup',
   'Svg',
   'Table',
-  'Tbody',
-  'Td',
-  'Text',
+  ('Tbody', 'table'),
+  ('Td', 'table,tbody,tr'),
+  ('Text', 'svg'),
   'Textarea',
-  'Tfoot',
-  'Th',
-  'Thead',
+  ('Tfoot', 'table'),
+  ('Th', 'table,thead,tr'),
+  ('Thead', 'table'),
   'Time',
-  'Tr',
+  ('Tr', 'table,thead'),
   'Track',
-  'Tspan',
+  ('Tspan', 'svg'),
   'U',
   'Ul',
   'Var',
@@ -155,7 +156,7 @@ def convertName(name):
     'camelCase':  (name[0].lower() + name[1:]).replace(' ', ''),
   }
 
-def replaceVariablesInFile(content, convertedName):
+def replaceVariablesInFile(content, convertedName, parent):
   """
     Replaces {pascalCase} and {camelCase} variables.
 
@@ -165,18 +166,31 @@ def replaceVariablesInFile(content, convertedName):
     :rtype: str
   """
 
-  return content.replace('{pascalCase}', convertedName['pascalCase']).replace('{camelCase}', convertedName['camelCase'])
+  result = content.replace('{pascalCase}', convertedName['pascalCase'])
+  result = result.replace('{camelCase}', convertedName['camelCase'])
+
+  if parent is not None:
+    tags = ''.join(['<{0}>'.format(i) for i in parent.split(',')])
+    result = result.replace('{container}', tags)
+
+    closingTags = ''.join(['</{0}>'.format(i) for i in parent.split(',')][::-1])
+    result = result.replace('{/container}', closingTags)
+  else:
+    result = re.sub(r'{\/?container}', '', result)
+
+  return result
 
 indexFileContent = ''
 
 for item in ELEMENTS:
-  convertedName = convertName(item)
+  (name, parent) = (item, None) if isinstance(item, str) else item
+  convertedName = convertName(name)
 
   with open(target + '/' + convertedName['pascalCase'] + '.tsx', 'w') as file:
-    file.write(replaceVariablesInFile(componentFileContent, convertedName))
+    file.write(replaceVariablesInFile(componentFileContent, convertedName, parent))
 
   with open(target + '/' + convertedName['pascalCase'] + '.test.tsx', 'w') as file:
-    file.write(replaceVariablesInFile(componentTestFileContent, convertedName))
+    file.write(replaceVariablesInFile(componentTestFileContent, convertedName, parent))
 
   indexFileContent += 'export { default as ' + convertedName['pascalCase'] + ' } from \'./' + convertedName['pascalCase'] + '\'\n'
 

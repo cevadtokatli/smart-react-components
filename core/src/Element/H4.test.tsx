@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import H4 from './H4'
 
 describe('<H4 />', () => {
   it('should render h4 element', () => {
-    const wrapper = shallow(<H4 />)
-    expect(wrapper.first().type()).toEqual('h4')
+    const screen = render(<H4 />)
+    expect(screen.container.querySelector('h4')).toBeTruthy()
   })
 })

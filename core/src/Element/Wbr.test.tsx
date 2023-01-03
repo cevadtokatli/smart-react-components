@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import Wbr from './Wbr'
 
 describe('<Wbr />', () => {
   it('should render wbr element', () => {
-    const wrapper = shallow(<Wbr />)
-    expect(wrapper.first().type()).toEqual('wbr')
+    const screen = render(<Wbr />)
+    expect(screen.container.querySelector('wbr')).toBeTruthy()
   })
 })

@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import LinearGradient from './LinearGradient'
 
 describe('<LinearGradient />', () => {
   it('should render linearGradient element', () => {
-    const wrapper = shallow(<LinearGradient />)
-    expect(wrapper.first().type()).toEqual('linearGradient')
+    const screen = render(<svg><LinearGradient /></svg>)
+    expect(screen.container.querySelector('linearGradient')).toBeTruthy()
   })
 })

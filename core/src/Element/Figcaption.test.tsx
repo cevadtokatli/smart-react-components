@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import Figcaption from './Figcaption'
 
 describe('<Figcaption />', () => {
   it('should render figcaption element', () => {
-    const wrapper = shallow(<Figcaption />)
-    expect(wrapper.first().type()).toEqual('figcaption')
+    const screen = render(<Figcaption />)
+    expect(screen.container.querySelector('figcaption')).toBeTruthy()
   })
 })

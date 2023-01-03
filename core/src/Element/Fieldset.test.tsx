@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import Fieldset from './Fieldset'
 
 describe('<Fieldset />', () => {
   it('should render fieldset element', () => {
-    const wrapper = shallow(<Fieldset />)
-    expect(wrapper.first().type()).toEqual('fieldset')
+    const screen = render(<Fieldset />)
+    expect(screen.container.querySelector('fieldset')).toBeTruthy()
   })
 })

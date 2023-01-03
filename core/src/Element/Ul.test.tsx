@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import Ul from './Ul'
 
 describe('<Ul />', () => {
   it('should render ul element', () => {
-    const wrapper = shallow(<Ul />)
-    expect(wrapper.first().type()).toEqual('ul')
+    const screen = render(<Ul />)
+    expect(screen.container.querySelector('ul')).toBeTruthy()
   })
 })

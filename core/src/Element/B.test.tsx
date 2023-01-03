@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import B from './B'
 
 describe('<B />', () => {
   it('should render b element', () => {
-    const wrapper = shallow(<B />)
-    expect(wrapper.first().type()).toEqual('b')
+    const screen = render(<B />)
+    expect(screen.container.querySelector('b')).toBeTruthy()
   })
 })

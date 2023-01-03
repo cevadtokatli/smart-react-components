@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import Canvas from './Canvas'
 
 describe('<Canvas />', () => {
   it('should render canvas element', () => {
-    const wrapper = shallow(<Canvas />)
-    expect(wrapper.first().type()).toEqual('canvas')
+    const screen = render(<Canvas />)
+    expect(screen.container.querySelector('canvas')).toBeTruthy()
   })
 })

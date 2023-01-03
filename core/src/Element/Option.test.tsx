@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import Option from './Option'
 
 describe('<Option />', () => {
   it('should render option element', () => {
-    const wrapper = shallow(<Option />)
-    expect(wrapper.first().type()).toEqual('option')
+    const screen = render(<Option />)
+    expect(screen.container.querySelector('option')).toBeTruthy()
   })
 })

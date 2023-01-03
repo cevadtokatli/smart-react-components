@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import Mask from './Mask'
 
 describe('<Mask />', () => {
   it('should render mask element', () => {
-    const wrapper = shallow(<Mask />)
-    expect(wrapper.first().type()).toEqual('mask')
+    const screen = render(<svg><Mask /></svg>)
+    expect(screen.container.querySelector('mask')).toBeTruthy()
   })
 })

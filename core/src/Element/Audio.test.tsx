@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import Audio from './Audio'
 
 describe('<Audio />', () => {
   it('should render audio element', () => {
-    const wrapper = shallow(<Audio />)
-    expect(wrapper.first().type()).toEqual('audio')
+    const screen = render(<Audio />)
+    expect(screen.container.querySelector('audio')).toBeTruthy()
   })
 })

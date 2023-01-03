@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import Meter from './Meter'
 
 describe('<Meter />', () => {
   it('should render meter element', () => {
-    const wrapper = shallow(<Meter />)
-    expect(wrapper.first().type()).toEqual('meter')
+    const screen = render(<Meter />)
+    expect(screen.container.querySelector('meter')).toBeTruthy()
   })
 })

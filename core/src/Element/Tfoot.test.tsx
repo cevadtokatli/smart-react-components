@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import Tfoot from './Tfoot'
 
 describe('<Tfoot />', () => {
   it('should render tfoot element', () => {
-    const wrapper = shallow(<Tfoot />)
-    expect(wrapper.first().type()).toEqual('tfoot')
+    const screen = render(<table><Tfoot /></table>)
+    expect(screen.container.querySelector('tfoot')).toBeTruthy()
   })
 })

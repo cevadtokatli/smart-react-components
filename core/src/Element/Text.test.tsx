@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import Text from './Text'
 
 describe('<Text />', () => {
   it('should render text element', () => {
-    const wrapper = shallow(<Text />)
-    expect(wrapper.first().type()).toEqual('text')
+    const screen = render(<svg><Text /></svg>)
+    expect(screen.container.querySelector('text')).toBeTruthy()
   })
 })

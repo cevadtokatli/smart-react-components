@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import Path from './Path'
 
 describe('<Path />', () => {
   it('should render path element', () => {
-    const wrapper = shallow(<Path />)
-    expect(wrapper.first().type()).toEqual('path')
+    const screen = render(<svg><Path /></svg>)
+    expect(screen.container.querySelector('path')).toBeTruthy()
   })
 })

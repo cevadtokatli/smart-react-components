@@ -1,10 +1,10 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { shallow } from 'enzyme'
 import Select from './Select'
 
 describe('<Select />', () => {
   it('should render select element', () => {
-    const wrapper = shallow(<Select />)
-    expect(wrapper.first().type()).toEqual('select')
+    const screen = render(<Select />)
+    expect(screen.container.querySelector('select')).toBeTruthy()
   })
 })
