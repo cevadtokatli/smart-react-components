@@ -1,3 +1,10 @@
+export interface CSSTransitionProps extends TransitionCallbacks {
+  className: string
+  duration: number
+  hasHideAnimation?: boolean
+  hasShowAnimation?: boolean
+}
+
 type TransitionAfterCallback = (el: JSX.Element) => void
 
 type TransitionBeforeCallback = (el: JSX.Element) => (void | Promise<void>)
