@@ -1,3 +1,5 @@
+import { Value } from '@smart-react-components/core/types'
+
 export interface CSSTransitionProps extends TransitionCallbacks {
   className: string
   duration: number
@@ -25,4 +27,10 @@ export interface TransitionStandardProps {
   children: JSX.Element
   isPreserved?: boolean
   status: boolean
+}
+
+export interface TransitionSwitchProps {
+  active: Value
+  children: JSX.Element[]
+  isPreserved?: boolean
 }
