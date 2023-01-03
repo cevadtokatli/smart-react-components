@@ -9,6 +9,8 @@ describe('<TransitionSwitch />', () => {
   beforeAll(() => {
     props = {
       active: 'element-1',
+      hide: jest.fn(() => Promise.resolve()),
+      show: jest.fn(() => Promise.resolve()),
     }
     children = [<div key="element-1" data-testid="element-1" />, <div key="element-2" data-testid="element-2" />]
   })
