@@ -1,3 +1,11 @@
+export type ContentElement = string | JSXChildren
+
+export type JSXChildren = JSX.Element | JSX.Element[]
+
+export interface JSXElementProps {
+  [key: string]: any
+}
+
 export interface NestedObject<T> {
   [key: string]: T | NestedObject<T>
 }
