@@ -38,6 +38,11 @@ function updateModuleDependentsPackageJson() {
   cd ../playground
   updateVersion "@smart-react-components/$module" $version
 
+  if [ $module = "core" ] ; then
+    cd ../transition
+    updateVersion "@smart-react-components/$module" $version
+  fi
+
   cd "../$module"
 }
 
@@ -97,7 +102,11 @@ function main() {
     exit 1
   fi
 
-  release $1
+  release $module
+
+  if [ $module = "core" ] ; then
+    release "transition"
+  fi
 
   cd ./playground
   rm -rf node_modules yarn.lock
