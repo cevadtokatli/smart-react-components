@@ -22,11 +22,17 @@ function updateVersion() {
   local key=$1
   local value=$2
 
-  local currentAttr=$(grep -o "\"$key\": \"[^\"]*\"," package.json)
+  local currentAttr=$(grep -o "\"$key\": \"[^\"\^]*\"," package.json)
   local currentValue=$(echo $currentAttr | grep -o '[^"]*",$' | grep -o '[^",]*')
   local newAttr=${currentAttr/$currentValue/$value}
-
   sed -i '' "s#$currentAttr#$newAttr#g" package.json
+
+  if grep -q "\"$key\": \"\^[^\"]*\"," package.json ; then
+    local peerCurrentAttr=$(grep -o "\"$key\": \"\^[^\"]*\"," package.json)
+    local peerCurrentValue=$(echo $peerCurrentAttr | grep -o '[^"\^]*",$' | grep -o '[^",]*')
+    local peerNewAttr=${peerCurrentAttr/$peerCurrentValue/$value}
+    sed -i '' "s#$peerCurrentAttr#$peerNewAttr#g" package.json
+  fi
 }
 
 # Updates the released module's dependant modules' package.json to use the current version.
@@ -39,7 +45,6 @@ function updateModuleDependentsPackageJson() {
   updateVersion "@smart-react-components/$module" $version
 
   if [ $module = "core" ] ; then
-    echo "UPDATEDDDDDDDDDDDDDDDDDDDD"
     cd ../transition
     updateVersion "@smart-react-components/$module" $version
   fi
