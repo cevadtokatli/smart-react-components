@@ -1,7 +1,7 @@
 import React from 'react'
-import CSSTransition from './CSSTransition'
-import useTransitionGroup from './hooks/useTransitionGroup'
-import { CSSTransitionProps, TransitionGroupProps } from './types'
+import CSSTransition from '../CSSTransition'
+import useTransitionGroup from '../hooks/useTransitionGroup'
+import { CSSTransitionProps, TransitionGroupProps } from '../types'
 
 export interface Props extends CSSTransitionProps, TransitionGroupProps {}
 

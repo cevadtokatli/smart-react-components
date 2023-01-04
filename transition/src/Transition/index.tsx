@@ -1,6 +1,6 @@
 import React from 'react'
 import { findDOMNode } from 'react-dom'
-import { TransitionProps, TransitionStandardProps } from './types'
+import { TransitionProps, TransitionStandardProps } from '../types'
 
 export interface Props extends TransitionProps, TransitionStandardProps {}
 

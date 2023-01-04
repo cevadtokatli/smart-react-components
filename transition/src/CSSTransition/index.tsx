@@ -1,7 +1,7 @@
 import { requestAnimationFrame } from '@smart-react-components/core/util/dom'
 import React from 'react'
-import Transition from './Transition'
-import { CSSTransitionProps, TransitionStandardProps } from './types'
+import Transition from '../Transition'
+import { CSSTransitionProps, TransitionStandardProps } from '../types'
 
 export interface Props extends CSSTransitionProps, TransitionStandardProps {}
 

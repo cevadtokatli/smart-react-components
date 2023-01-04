@@ -1,6 +1,6 @@
 import { act, waitFor, render } from '@testing-library/react'
 import React from 'react'
-import CSSTransition from './CSSTransition'
+import CSSTransition from './'
 
 describe('<CSSTransition />', () => {
   let props

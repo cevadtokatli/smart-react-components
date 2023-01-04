@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 import React from 'react'
-import TransitionGroup from './TransitionGroup'
+import TransitionGroup from './'
 
 describe('<TransitionGroup />', () => {
   it('should render all children elements', () => {

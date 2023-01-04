@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 import React from 'react'
-import CSSTransitionSwitch from './CSSTransitionSwitch'
+import CSSTransitionSwitch from './'
 
 describe('<CSSTransitionSwitch />', () => {
   let props

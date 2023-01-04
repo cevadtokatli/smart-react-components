@@ -1,7 +1,7 @@
 import React from 'react'
-import CSSTransition from './CSSTransition'
-import useTransitionSwitch from './hooks/useTransitionSwitch'
-import { CSSTransitionProps, TransitionSwitchProps } from './types'
+import CSSTransition from '../CSSTransition'
+import useTransitionSwitch from '../hooks/useTransitionSwitch'
+import { CSSTransitionProps, TransitionSwitchProps } from '../types'
 
 export interface Props extends CSSTransitionProps, TransitionSwitchProps {}
 

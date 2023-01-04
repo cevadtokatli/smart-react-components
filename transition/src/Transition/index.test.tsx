@@ -1,6 +1,6 @@
 import { act, waitFor, render } from '@testing-library/react'
 import React from 'react'
-import Transition from './Transition'
+import Transition from './'
 
 describe('<Transition />', () => {
   describe('status', () => {
