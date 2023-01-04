@@ -39,6 +39,7 @@ function updateModuleDependentsPackageJson() {
   updateVersion "@smart-react-components/$module" $version
 
   if [ $module = "core" ] ; then
+    echo "UPDATEDDDDDDDDDDDDDDDDDDDD"
     cd ../transition
     updateVersion "@smart-react-components/$module" $version
   fi
