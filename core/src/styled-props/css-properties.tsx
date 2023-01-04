@@ -1,5 +1,5 @@
 type PropertyValue<T> = 'inherit' | 'initial' | 'revert' | 'unset' | T | (string & {})
-type Property<T = void> = PropertyValue<T> | [PropertyValue<T>, boolean]
+export type Property<T = void> = PropertyValue<T> | [PropertyValue<T>, boolean]
 
 namespace Props {
   type BasicColors = 'aqua' | 'black' | 'blue' | 'fuchsia' | 'gray' | 'green' | 'grey' | 'lime' | 'maroon' | 'navy' | 'olive' | 'purple' | 'red' | 'silver' | 'teal' | 'white' | 'yellow'
@@ -31,7 +31,7 @@ namespace Props {
 type AccentColor = Props.Color | 'auto'
 type AlignContent = Props.BaselinePosition | Props.ContentDistribution | Props.ContentPosition | 'normal'
 type AlignItems = Props.BaselinePosition | Props.SelfPosition | 'normal' | 'stretch'
-type AlignSelf = Props.BaselinePosition | Props.SelfPosition | 'auto' | 'normal' | 'stretch'
+export type AlignSelf = Props.BaselinePosition | Props.SelfPosition | 'auto' | 'normal' | 'stretch'
 type AlignmentBaseline = 'alphabetic' | 'baseline' | 'central' | 'ideographic' | 'mathematical' | 'middle' | 'text-bottom' | 'text-top'
 type Animation = number | 'auto' | 'none'
 type AnimationDelay = number
@@ -113,12 +113,12 @@ type Fill = Props.Url | Color
 type FillOpacity = number
 type FillRule = 'evenodd' | 'nonzero'
 type Filter = Props.Url | 'blur()' | 'brightness()' | 'contrast()' | 'drop-shadow()' | 'grayscale()' | 'hue-rotate()' | 'invert()' | 'none' | 'opacity()' | 'saturate()' | 'sepia()'
-type Flex = FlexBasis | FlexGrow | FlexShrink | 'none'
-type FlexBasis = number | 'auto'
+export type Flex = FlexBasis | FlexGrow | FlexShrink | 'none'
+export type FlexBasis = number | 'auto'
 type FlexDirection = 'column' | 'column-reverse' | 'row' | 'row-reverse'
 type FlexFlow = FlexDirection | FlexWrap
-type FlexGrow = number
-type FlexShrink = number
+export type FlexGrow = number
+export type FlexShrink = number
 type FlexWrap = 'nowrap' | 'wrap' | 'wrap-reverse'
 type Float = 'inline-end' | 'inline-start' | 'left' | 'right' | 'none'
 type FloodColor = Color
@@ -176,7 +176,7 @@ type ListStyle = ListStyleImage | ListStylePosition | ListStyleType
 type ListStyleImage = Props.Url | 'none'
 type ListStylePosition = 'inside' | 'outside'
 type ListStyleType = 'armenian' | 'circle' | 'decimal' | 'decimal-leading-zero' | 'disc' | 'georgian' | 'lower-alpha' | 'lower-greek' | 'lower-latin' | 'lower-roman' | 'none' | 'square' | 'upper-alpha' | 'upper-latin' | 'upper-roman'
-type Margin = number | 'auto'
+export type Margin = number | 'auto'
 type Marker = Props.Url | 'none'
 type Mask = MaskClip | MaskComposite | MaskReference | MaskMode | MaskOrigin | MaskPosition | MaskRepeat | MaskType
 type MaskBorder = MaskBorderMode | MaskBorderOutset | MaskBorderRepeat | MaskBorderSlice | MaskBorderSource | MaskBorderWidth
@@ -205,7 +205,7 @@ type OffsetPath = Props.BasicShape | Props.Url | 'path()' | 'ray()'
 type OffsetPosition = Props.Position | 'auto'
 type OffsetRotate = 'auto' | 'reverse'
 type Opacity = number
-type Order = number
+export type Order = number
 type Orphans = number
 type Outline = OutlineColor | OutlineStyle | OutlineWidth
 type OutlineColor = Props.Color | 'invert'
@@ -244,7 +244,7 @@ type ScrollbarWidth = 'auto' | 'none' | 'thin'
 type ShapeImageThreshold = number
 type ShapeMargin = number
 type ShapeOutside = Props.BasicShape | Props.ShapeBox | Props.Image | 'none'
-type Size = number | 'auto' | 'fit-content' | 'max-content' | 'min-content'
+export type Size = number | 'auto' | 'fit-content' | 'max-content' | 'min-content'
 type Speak = 'digits' | 'literal-punctuation' | 'no-punctuation' | 'none' | 'normal' | 'spell-out'
 type Stroke = Props.Url | Color
 type StrokeDasharray = number | 'none'
