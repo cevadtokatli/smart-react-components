@@ -23,6 +23,10 @@ export interface TransitionProps extends TransitionCallbacks {
   show?: (el: HTMLElement) => Promise<void>
 }
 
+export interface TransitionGroupProps {
+  children: JSX.Element[]
+}
+
 export interface TransitionStandardProps {
   children: JSX.Element
   isPreserved?: boolean
