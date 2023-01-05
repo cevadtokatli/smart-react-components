@@ -1,5 +1,5 @@
 /**
- * Extract the element props out of all props.
+ * Extracts the element props out of all props.
  */
 const extractElementProps = (props: object, elementProps: string[][]) => {
   const result = {}
@@ -11,6 +11,17 @@ const extractElementProps = (props: object, elementProps: string[][]) => {
       }
     })
   })
+
+  return result
+}
+
+/**
+ * Includes responsive props.
+ */
+export const includeResponsiveProps = (arr: string[]) => {
+  const result = []
+
+  arr.forEach(item => result.push(item, `${item}Sm`, `${item}Md`, `${item}Lg`, `${item}Xl`))
 
   return result
 }

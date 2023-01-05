@@ -1,4 +1,4 @@
-import extractElementProps from './'
+import extractElementProps, { includeResponsiveProps } from './'
 import intrinsicStyledFlexProps from './intrinsic-styled-flex-props'
 import intrinsicStyledSizeProps from './intrinsic-styled-size-props'
 
@@ -14,5 +14,13 @@ describe('element-props', () => {
       height: 100,
       width: 100,
     })
+  })
+
+  it('should include responsive props', () => {
+    expect(includeResponsiveProps(['alignSelf', 'flex', 'order'])).toEqual([
+      'alignSelf', 'alignSelfSm', 'alignSelfMd', 'alignSelfLg', 'alignSelfXl',
+      'flex', 'flexSm', 'flexMd', 'flexLg', 'flexXl',
+      'order', 'orderSm', 'orderMd', 'orderLg', 'orderXl',
+    ])
   })
 })

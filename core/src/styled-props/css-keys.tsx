@@ -1,4 +1,4 @@
-import { StandardProps } from './props'
+import { StandardProps } from './'
 
 export type CSSKeys = {
   [key in keyof StandardProps]: string

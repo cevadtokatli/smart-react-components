@@ -1,15 +1,14 @@
-import { ThemedStyledFunction } from 'styled-components'
+import { StyledComponent } from 'styled-components'
 import { Theme } from '../theme'
+import { ResponsiveProps } from '../types'
 import { convertStyledPropToCSS } from '../util/css'
-import { StandardProps, ResponsiveProps } from './props'
+import CSSProperties from './css-properties'
+import CSSSelectors from './css-selectors'
 
-export interface StyledProps extends
-  StandardProps,
-  ResponsiveProps<'Sm'>,
-  ResponsiveProps<'Md'>,
-  ResponsiveProps<'Lg'>,
-  ResponsiveProps<'Xl'> {
-  as?: string | ThemedStyledFunction<any, any, any, any>
+export interface StandardProps extends CSSProperties, CSSSelectors {}
+
+export interface StyledProps extends ResponsiveProps<StandardProps> {
+  as?: string | StyledComponent<any, any>
   theme?: Theme
 }
 
