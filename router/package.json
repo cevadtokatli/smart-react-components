@@ -43,21 +43,22 @@
     "@types/jest": "29.0.1",
     "@types/react": "18.0.19",
     "@types/react-dom": "18.0.6",
-    "@types/react-router": "5.1.20",
     "@types/styled-components": "5.1.26",
     "eslint": "8.0.1",
     "jest": "29.0.3",
     "jest-environment-jsdom": "29.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-router": "6.6.1",
     "styled-components": "5.3.5",
     "ts-jest": "29.0.0",
     "typescript": "4.8.3"
   },
+  "dependencies": {
+    "react-router": "5.2.0"
+  },
   "peerDependencies": {
     "@smart-react-components/core": "^2.0.0-alpha-6",
     "react": "^18.2.0",
-    "react-router": "^6.6.1"
+    "styled-components": "^5.3.5"
   }
 }
