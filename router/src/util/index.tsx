@@ -15,6 +15,7 @@ export const generateMatch = (pathname: string, path: Path, isExact: boolean): M
   if (match) {
     return {
       isExact: match.isExact,
+      key: JSON.stringify(match.params),
       params: match.params,
       path: match.path,
       url: pathname,

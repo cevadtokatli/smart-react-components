@@ -4,6 +4,7 @@ describe('util', () => {
   it('should generate match object', () => {
     expect(generateMatch('/home/5', '/home/:id(\\d+)', false)).toEqual({
       isExact: true,
+      key: '{"id":"5"}',
       params: {
         id: '5',
       },
@@ -13,6 +14,7 @@ describe('util', () => {
 
     expect(generateMatch('/home/5', '/home', false)).toEqual({
       isExact: false,
+      key: "{}",
       params: {},
       path: '/home',
       url: '/home/5',
