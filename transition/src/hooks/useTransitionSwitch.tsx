@@ -16,7 +16,7 @@ interface Return {
 }
 
 const useTransitionSwitch = ({ active, afterHide }: Props): Return => {
-  const [status, setStatus] = useState({ active, isProcessing: false })
+  const [status, setStatus] = useState(() => ({ active, isProcessing: false }))
 
   useChangeEffect(() => {
     if (!status.isProcessing) {

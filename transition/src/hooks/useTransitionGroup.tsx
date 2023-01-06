@@ -14,9 +14,9 @@ interface Return {
 }
 
 const useTransitionGroup = ({ afterHide, children }: Props): Return => {
-  const [elements, setElements] = useState<JSX.Element[]>(children)
-  const [addedKeys, setAddedKeys] = useState<Value[]>([])
-  const [removedKeys, setRemovedKeys] = useState<Value[]>([])
+  const [elements, setElements] = useState<JSX.Element[]>(() => children)
+  const [addedKeys, setAddedKeys] = useState<Value[]>(() => [])
+  const [removedKeys, setRemovedKeys] = useState<Value[]>(() => [])
 
   useChangeEffect(() => {
     const currentKeys = elements.map(i => i.key)
