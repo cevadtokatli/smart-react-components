@@ -3,6 +3,7 @@ import { RouterReducerState } from '../reducer'
 
 export interface RouterContextState {
   dispatch: Dispatch<any>
+  modules: object
   state: RouterReducerState
 }
 

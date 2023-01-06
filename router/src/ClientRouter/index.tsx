@@ -3,6 +3,7 @@ import { addEventListener, removeEventListener } from '@smart-react-components/c
 import React from 'react'
 import reducer, { generateInitialState, setActiveURL } from '../reducer'
 import RouterContext from '../RouterContext'
+import RoutesContext from '../RoutesContext'
 import { RouteModule } from '../types'
 import { getFullpath } from '../util'
 
@@ -16,13 +17,14 @@ declare global {
 
 export interface Props {
   children: JSXChildren
-  modules: RouteModule[]
   params?: any
   progressBar?: JSX.Element
+  routes: RouteModule[]
 }
 
-const ClientRouter: React.FC<Props> = ({ children, modules, params, progressBar }) => {
+const ClientRouter: React.FC<Props> = ({ children, params, routes, progressBar }) => {
   const [state, dispatch] = React.useReducer(reducer, generateInitialState())
+  const modules = React.useRef<object>({})
 
   const handlePopstate = () => dispatch(setActiveURL(getFullpath()))
 
@@ -55,9 +57,11 @@ const ClientRouter: React.FC<Props> = ({ children, modules, params, progressBar 
   }, [state.activeURL])
 
   return (
-    <RouterContext.Provider value={{ state, dispatch }}>
-      { progressBar && React.cloneElement(progressBar, { value: state.percentage }) }
-      { children }
+    <RouterContext.Provider value={{ state, dispatch, modules }}>
+      <RoutesContext.Provider value={routes}>
+        { progressBar && React.cloneElement(progressBar, { value: state.percentage }) }
+        { children }
+      </RoutesContext.Provider>
     </RouterContext.Provider>
   )
 }
