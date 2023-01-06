@@ -25,8 +25,8 @@ const Link: React.FC<Props> = props => {
 
   const isMatched = (url: URL | null) => url && generateMatch(url.pathname, props.path ?? props.to, props.isExact) !== null
 
-  const [isActive, setActive] = React.useState(isMatched(rctx.activeURL))
-  const [isActivating, setActivating] = React.useState(isMatched(rctx.activatingURL))
+  const [isActive, setActive] = React.useState(() => isMatched(rctx.activeURL))
+  const [isActivating, setActivating] = React.useState(() => isMatched(rctx.activatingURL))
 
   useChangeEffect(() => setActive(isMatched(rctx.activeURL)), [rctx.activeURL])
 
