@@ -11,21 +11,21 @@ export interface Props {
 }
 
 const Route: React.FC<Props> = ({ children, isExact, path }) => {
-  const rctx = React.useContext(RouterContext).state
-  const [match, setMatch] = React.useState(() => generateMatch(rctx.activeURL.pathname, path, isExact))
+  const router = React.useContext(RouterContext).state
+  const [match, setMatch] = React.useState(() => generateMatch(router.activeURL.pathname, path, isExact))
 
-  useChangeEffect(() => setMatch(generateMatch(rctx.activeURL.pathname, path, isExact)), [rctx.activeURL.fullpath])
+  useChangeEffect(() => setMatch(generateMatch(router.activeURL.pathname, path, isExact)), [router.activeURL.fullpath])
 
   if (typeof children !== 'function' && match) {
     return (
       <React.Fragment key={match.key}>
-        { React.cloneElement(children, { match, url: rctx.activeURL }) }
+        { React.cloneElement(children, { match, url: router.activeURL }) }
       </React.Fragment>
     )
   }
 
   if (typeof children === 'function') {
-    return children({ match, url: rctx.activeURL })
+    return children({ match, url: router.activeURL })
   }
 
   return null

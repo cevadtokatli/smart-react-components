@@ -9,7 +9,7 @@ import { generateURL } from '../util'
 describe('<Link />', () => {
   it('isActive should be true', () => {
     const screen = render(
-      <ClientRouter modules={[]}>
+      <ClientRouter routes={[]}>
         <Link to="/">{ ({ isActive }) => <span>{!!isActive}</span> }</Link>
       </ClientRouter>
     )
@@ -27,6 +27,7 @@ describe('<Link />', () => {
         cancelCallback: jest.fn(),
       },
       dispatch: jest.fn(),
+      modules: {},
     }
 
     const screen = render(
@@ -42,7 +43,7 @@ describe('<Link />', () => {
   it('should call onClick method', () => {
     const onClick = jest.fn()
     const screen = render(
-      <ClientRouter modules={[]}>
+      <ClientRouter routes={[]}>
         <Link to="/" onClick={onClick}>Label</Link>
       </ClientRouter>
     )
@@ -53,7 +54,7 @@ describe('<Link />', () => {
 
   it('should call push method', () => {
     const screen = render(
-      <ClientRouter modules={[]}>
+      <ClientRouter routes={[]}>
         <Link to="/">Label</Link>
       </ClientRouter>
     )
@@ -65,7 +66,7 @@ describe('<Link />', () => {
 
   it('should call redirect method', () => {
     const screen = render(
-      <ClientRouter modules={[]}>
+      <ClientRouter routes={[]}>
         <Link to="/">Label</Link>
       </ClientRouter>
     )
@@ -81,7 +82,7 @@ describe('<Link />', () => {
   it('should call onClick and not history methods when prevented', () => {
     const onClick = jest.fn()
     const screen = render(
-      <ClientRouter modules={[]}>
+      <ClientRouter routes={[]}>
         <Link to="/" onClick={onClick}>Label</Link>
       </ClientRouter>
     )
@@ -102,7 +103,7 @@ describe('<Link />', () => {
   it('should not call any of the methods when disabled', () => {
     const onClick = jest.fn()
     const screen = render(wrapTheme(
-      <ClientRouter modules={[]}>
+      <ClientRouter routes={[]}>
         <Link to="/" onClick={onClick} isDisabled={true}>Label</Link>
       </ClientRouter>
     ))

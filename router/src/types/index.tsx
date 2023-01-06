@@ -1,6 +1,4 @@
-import { ReactNode } from 'react'
-
-type Get = (
+export type Get = (
   match: Match,
   url: URL,
   setPercentage: (payload: number) => void,
@@ -17,16 +15,11 @@ export interface Match {
   url: string
 }
 
-type Module = () => Promise<{
-  default: ReactNode
-  get: Get
-}>
-
 export type Path = string | RegExp
 
 export interface RouteModule {
   children?: RouteModule[]
-  module: Module
+  module: () => Promise<any>
   path: Path
 }
 

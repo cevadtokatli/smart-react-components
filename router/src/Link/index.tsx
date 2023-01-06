@@ -21,16 +21,16 @@ export interface Props extends ClickEvents, IntrinsicStyledProps {
 }
 
 const Link: React.FC<Props> = props => {
-  const rctx = React.useContext(RouterContext).state
+  const router = React.useContext(RouterContext).state
 
   const isMatched = (url: URL | null) => url && generateMatch(url.pathname, props.path ?? props.to, props.isExact) !== null
 
-  const [isActive, setActive] = React.useState(() => isMatched(rctx.activeURL))
-  const [isActivating, setActivating] = React.useState(() => isMatched(rctx.activatingURL))
+  const [isActive, setActive] = React.useState(() => isMatched(router.activeURL))
+  const [isActivating, setActivating] = React.useState(() => isMatched(router.activatingURL))
 
-  useChangeEffect(() => setActive(isMatched(rctx.activeURL)), [rctx.activeURL.fullpath])
+  useChangeEffect(() => setActive(isMatched(router.activeURL)), [router.activeURL.fullpath])
 
-  useChangeEffect(() => setActivating(isMatched(rctx.activatingURL)), [rctx.activatingURL?.fullpath])
+  useChangeEffect(() => setActivating(isMatched(router.activatingURL)), [router.activatingURL?.fullpath])
 
   const handleOnClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (props.isDisabled) {

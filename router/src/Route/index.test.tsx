@@ -6,7 +6,7 @@ import ClientRouter from '../ClientRouter'
 describe('<Route />', () => {
   it('should render element when matched', () => {
     const screen = render(
-      <ClientRouter modules={[]}>
+      <ClientRouter routes={[]}>
         <Route path="/"><div data-testid="element" /></Route>
       </ClientRouter>
     )
@@ -15,7 +15,7 @@ describe('<Route />', () => {
 
   it('should not render element when not matched', () => {
     const screen = render(
-      <ClientRouter modules={[]}>
+      <ClientRouter routes={[]}>
         <Route path="/home" isExact><div data-testid="element" /></Route>
       </ClientRouter>
     )
@@ -24,7 +24,7 @@ describe('<Route />', () => {
 
   it('should render element when not matched', () => {
     const screen = render(
-      <ClientRouter modules={[]}>
+      <ClientRouter routes={[]}>
         <Route path="/home" isExact>
           { () => <div data-testid="element" /> }
         </Route>
