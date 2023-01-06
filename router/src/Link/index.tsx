@@ -28,9 +28,9 @@ const Link: React.FC<Props> = props => {
   const [isActive, setActive] = React.useState(() => isMatched(rctx.activeURL))
   const [isActivating, setActivating] = React.useState(() => isMatched(rctx.activatingURL))
 
-  useChangeEffect(() => setActive(isMatched(rctx.activeURL)), [rctx.activeURL])
+  useChangeEffect(() => setActive(isMatched(rctx.activeURL)), [rctx.activeURL.fullpath])
 
-  useChangeEffect(() => setActivating(isMatched(rctx.activatingURL)), [rctx.activatingURL])
+  useChangeEffect(() => setActivating(isMatched(rctx.activatingURL)), [rctx.activatingURL?.fullpath])
 
   const handleOnClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (props.isDisabled) {

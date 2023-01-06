@@ -14,7 +14,7 @@ const Route: React.FC<Props> = ({ children, isExact, path }) => {
   const rctx = React.useContext(RouterContext).state
   const [match, setMatch] = React.useState(() => generateMatch(rctx.activeURL.pathname, path, isExact))
 
-  useChangeEffect(() => setMatch(generateMatch(rctx.activeURL.pathname, path, isExact)), [rctx.activeURL])
+  useChangeEffect(() => setMatch(generateMatch(rctx.activeURL.pathname, path, isExact)), [rctx.activeURL.fullpath])
 
   if (typeof children !== 'function' && match) {
     return (
