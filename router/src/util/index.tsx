@@ -10,7 +10,7 @@ export const getFullpath = () => window.location.pathname + window.location.sear
  * Parses path and generates match object.
  */
 export const generateMatch = (pathname: string, path: Path, isExact: boolean): Match | null => {
-  const match = matchPath(pathname, { path: String(path), exact: isExact })
+  const match = matchPath(pathname, { path, exact: isExact })
 
   if (match) {
     return {
