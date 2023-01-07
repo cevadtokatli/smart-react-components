@@ -22,9 +22,10 @@ export interface Props {
   routes: RouteModule[]
 }
 
+export const modules: object = {}
+
 const ClientRouter: React.FC<Props> = ({ children, params, routes, progressBar }) => {
   const [state, dispatch] = React.useReducer(reducer, generateInitialState())
-  const modules = React.useRef<object>({}).current
 
   const handleURLChange = () => {
     const url = generateURL(getFullpath())

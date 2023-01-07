@@ -1,4 +1,5 @@
 import { matchPath } from 'react-router'
+import { modules } from '../ClientRouter'
 import { LazyModule, Match, Path, RouteModule, URL } from '../types'
 
 /**
@@ -129,8 +130,38 @@ export const generateURL = (fullpath: string): URL => {
 }
 
 /**
+ * Loads the modules of the active routes.
+ */
+export const loadModulesOnClient = (routes: RouteModule[]) => new Promise<void>(async resolve => {
+  let curRoutes = routes
+  const lazyModules: LazyModule[] = []
+
+  while (curRoutes) {
+    let route: RouteModule
+
+    for (const i in curRoutes) {
+      if (generateMatch(getFullpath(), curRoutes[i].path, false)) {
+        lazyModules.push(curRoutes[i].module)
+        route = curRoutes[i]
+        break
+      }
+    }
+
+    curRoutes = route?.children
+  }
+
+  await Promise.all(lazyModules.map(i => i()))
+    .then(list => {
+      for (const i in list) {
+        modules[lazyModules[i] as any] = list[i]
+      }
+    })
+
+  resolve()
+})
+
+/**
  * Loads the modules of the given routes.
- * Calls the method recursively for the routes children.
  */
 export const loadModulesOnServer = (routes: RouteModule[]) => new Promise<object>(async resolve => {
   let modules = {}

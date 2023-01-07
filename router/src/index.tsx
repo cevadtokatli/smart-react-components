@@ -9,5 +9,6 @@ export { default as Routes } from './Routes'
 export { default as ServerRouter } from './ServerRouter'
 export {
   callGetMethods,
+  loadModulesOnClient,
   loadModulesOnServer,
 } from './util'
