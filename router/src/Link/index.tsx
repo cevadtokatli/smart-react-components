@@ -59,7 +59,7 @@ const Link: React.FC<Props> = props => {
         {...(props.isDisabled && { pointerEvents: 'none' })}
         {...extractElementProps(props, [clickEvents, intrinsicStyledProps])}
         {...props.elementProps}
-        className={`${props.elementProps.className ?? ''} ${isActive ? 'is-active' : ''} ${isActivating ? 'is-activating' : ''}`}
+        className={`${props.elementProps.className ?? ''} ${isActive ? 'active' : ''} ${isActivating ? 'activating' : ''}`}
         href={props.to}
         onClick={handleOnClick}
       >

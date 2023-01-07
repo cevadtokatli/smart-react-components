@@ -14,7 +14,7 @@ describe('<Link />', () => {
       </ClientRouter>
     )
 
-    expect(screen.container.querySelector('.is-active')).toBeTruthy()
+    expect(screen.container.querySelector('.active')).toBeTruthy()
     expect(screen.findAllByText('true')).toBeTruthy()
   })
 
@@ -36,7 +36,7 @@ describe('<Link />', () => {
       </RouterContext.Provider>
     )
 
-    expect(screen.container.querySelector('.is-activating')).toBeTruthy()
+    expect(screen.container.querySelector('.activating')).toBeTruthy()
     expect(screen.findAllByText('true')).toBeTruthy()
   })
 
