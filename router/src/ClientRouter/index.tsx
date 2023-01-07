@@ -4,8 +4,8 @@ import React from 'react'
 import reducer, { generateInitialState, setActivatingURL, setActiveURL, setCancelCallback, setPercentage } from '../reducer'
 import RouterContext from '../RouterContext'
 import RoutesContext from '../RoutesContext'
-import { LazyModule, Match, RouteModule } from '../types'
-import { collectLazyModules, generateURL, getFullpath } from '../util'
+import { RouteModule } from '../types'
+import { generateURL, getFullpath, loadModules } from '../util'
 
 declare global {
   interface History {
@@ -38,18 +38,7 @@ const ClientRouter: React.FC<Props> = ({ children, params, routes, progressBar }
     }
 
     (async function () {
-      const lazyModules: LazyModule[] = []
-      const modulesToInvokeGetMethods: Array<{ match: Match, module: LazyModule }> = []
-      collectLazyModules(state.activeURL, url, routes, modules, lazyModules, modulesToInvokeGetMethods)
-
-      if (lazyModules.length > 0) {
-        await Promise.all(lazyModules.map(i => i()))
-          .then(list => {
-            for (const i in list) {
-              modules[lazyModules[i] as any] = list[i]
-            }
-          })
-      }
+      const modulesToInvokeGetMethods = await loadModules(state.activeURL, url, routes, modules)
 
       if (modulesToInvokeGetMethods.length === 0) {
         dispatch(setActiveURL(url))

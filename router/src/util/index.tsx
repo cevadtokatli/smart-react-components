@@ -44,42 +44,6 @@ export const callGetMethods = (url: string, routes: RouteModule[], modules: obje
 })
 
 /**
- * Checks the given routes and finds the active route.
- * Checks if the active route needs the loader get method to be run.
- * Calls the method recursively for the active method children.
- */
-export const collectLazyModules = (
-  activeURL: URL,
-  activatingURL: URL,
-  routes: RouteModule[],
-  modules: object,
-  lazyModules: LazyModule[],
-  modulesToInvokeGetMethods: Array<{ match: Match, module: LazyModule }>,
-) => {
-  for (const i in routes) {
-    const item = routes[i]
-    const activatingMatch = generateMatch(activatingURL.pathname, item.path, false)
-
-    if (activatingMatch) {
-      if (!modules[item.module as any]) {
-        lazyModules.push(item.module)
-      }
-
-      const activeMatch = generateMatch(activeURL.pathname, item.path, false)
-      if (activeMatch?.key !== activatingMatch.key) {
-        modulesToInvokeGetMethods.push({ match: activatingMatch, module: item.module })
-      }
-
-      if (item.children) {
-        collectLazyModules(activeURL, activatingURL, item.children, modules, lazyModules, modulesToInvokeGetMethods)
-      }
-
-      return
-    }
-  }
-}
-
-/**
  * Retuns the fullpath.
  */
 export const getFullpath = () => window.location.pathname + window.location.search
@@ -128,6 +92,57 @@ export const generateURL = (fullpath: string): URL => {
     query,
   }
 }
+
+/**
+ * Checks the given routes and finds the active routes.
+ * Checks if the active routes need the loader get methods to be run.
+ * Loads the modules of the active routes.
+ */
+export const loadModules = (
+  activeURL: URL,
+  activatingURL: URL,
+  routes: RouteModule[],
+  modules: object,
+) => new Promise<Array<{ match: Match, module: LazyModule }>>(async resolve => {
+  let curRoutes = routes
+  const lazyModules: LazyModule[] = []
+  const modulesToInvokeGetMethods: Array<{ match: Match, module: LazyModule }> = []
+
+  while (curRoutes) {
+    let route: RouteModule
+
+    for (const i in curRoutes) {
+      const item = curRoutes[i]
+      const activatingMatch = generateMatch(activatingURL.pathname, item.path, false)
+
+      if (activatingMatch) {
+        if (!modules[item.module as any]) {
+          lazyModules.push(item.module)
+        }
+
+        const activeMatch = generateMatch(activeURL.pathname, item.path, false)
+        if (activeMatch?.key !== activatingMatch.key) {
+          modulesToInvokeGetMethods.push({ match: activatingMatch, module: item.module })
+        }
+
+        route = item
+
+        break
+      }
+    }
+
+    curRoutes = route?.children
+  }
+
+  await Promise.all(lazyModules.map(i => i()))
+    .then(list => {
+      for (const i in list) {
+        modules[lazyModules[i] as any] = list[i]
+      }
+    })
+
+  resolve(modulesToInvokeGetMethods)
+})
 
 /**
  * Loads the modules of the active routes.
