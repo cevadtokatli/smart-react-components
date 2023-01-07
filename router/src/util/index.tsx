@@ -86,3 +86,26 @@ export const generateURL = (fullpath: string): URL => {
     query,
   }
 }
+
+/**
+ * Loads the modules of the given routes.
+ * Calls the method recursively for the routes children.
+ */
+export const loadModulesOnServer = (routes: RouteModule[]) => new Promise<object>(async resolve => {
+  let modules = {}
+
+  for (const i in routes) {
+    if (!modules[routes[i].module as any]) {
+      modules[routes[i].module as any] = await routes[i].module()
+    }
+
+    if (routes[i].children) {
+      modules = {
+        ...modules,
+        ...(await loadModulesOnServer(routes[i].children)),
+      }
+    }
+  }
+
+  resolve(modules)
+})
