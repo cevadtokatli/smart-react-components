@@ -19,16 +19,21 @@ export const callGetMethods = (url: string, routes: RouteModule[], modules: obje
     for (const i in curRoutes) {
       const match = generateMatch(url, curRoutes[i].path, false)
       if (match) {
-        getMethods.push(
-          modules[curRoutes[i].module as any].get.bind(
-            null,
-            match,
-            activeURL,
-            setPercentage,
-            setCancelCallback,
-          ),
-        )
+        const get = modules[curRoutes[i].module as any].get
+        if (get) {
+          getMethods.push(
+            modules[curRoutes[i].module as any].get.bind(
+              null,
+              match,
+              activeURL,
+              setPercentage,
+              setCancelCallback,
+            ),
+          )
+        }
+
         route = curRoutes[i]
+
         break
       }
     }

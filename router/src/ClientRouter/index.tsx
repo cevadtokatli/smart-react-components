@@ -51,7 +51,7 @@ const ClientRouter: React.FC<Props> = ({ children, params, routes, progressBar }
         _setPercentage(10)
 
         for (const i in modulesToInvokeGetMethods) {
-          await modules[modulesToInvokeGetMethods[i].module as any].get(
+          await modules[modulesToInvokeGetMethods[i].module as any].get?.(
             modulesToInvokeGetMethods[i].match,
             url,
             _setPercentage,
