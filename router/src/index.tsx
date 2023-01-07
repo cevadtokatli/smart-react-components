@@ -7,4 +7,7 @@ export { default as Replace } from './Replace'
 export { default as Route } from './Route'
 export { default as Routes } from './Routes'
 export { default as ServerRouter } from './ServerRouter'
-export { loadModulesOnServer } from './util'
+export {
+  callGetMethods,
+  loadModulesOnServer,
+} from './util'

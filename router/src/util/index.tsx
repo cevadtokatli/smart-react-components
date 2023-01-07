@@ -2,6 +2,47 @@ import { matchPath } from 'react-router'
 import { LazyModule, Match, Path, RouteModule, URL } from '../types'
 
 /**
+ * Checks and find the active routes.
+ * Calls get methods of the active routes.
+ */
+export const callGetMethods = (url: string, routes: RouteModule[], modules: object, params?: any) => new Promise<void>(async resolve => {
+  const getMethods = []
+  const activeURL = generateURL(url)
+  const setPercentage = (value: number) => {}
+  const setCancelCallback = (callback: () => void) => {}
+  let curRoutes = routes
+
+  while (curRoutes) {
+    let route: RouteModule
+
+    for (const i in curRoutes) {
+      const match = generateMatch(url, curRoutes[i].path, false)
+      if (match) {
+        getMethods.push(
+          modules[curRoutes[i].module as any].get.bind(
+            null,
+            match,
+            activeURL,
+            setPercentage,
+            setCancelCallback,
+          ),
+        )
+        route = curRoutes[i]
+        break
+      }
+    }
+
+    curRoutes = route?.children
+  }
+
+  for (const i in getMethods) {
+    await getMethods[i]()
+  }
+
+  resolve()
+})
+
+/**
  * Checks the given routes and finds the active route.
  * Checks if the active route needs the loader get method to be run.
  * Calls the method recursively for the active method children.
