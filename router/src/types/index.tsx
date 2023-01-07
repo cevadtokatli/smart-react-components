@@ -1,9 +1,4 @@
-export type Get = (
-  match: Match,
-  url: URL,
-  setPercentage: (payload: number) => void,
-  setCancelCallback: (payload: () => void) => void
-) => Promise<void>
+export type LazyModule = () => Promise<any>
 
 export interface Match {
   isExact: boolean
@@ -19,7 +14,7 @@ export type Path = string | RegExp
 
 export interface RouteModule {
   children?: RouteModule[]
-  module: () => Promise<any>
+  module: LazyModule
   path: Path
 }
 

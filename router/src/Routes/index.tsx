@@ -41,7 +41,7 @@ const Routes: React.FC<Props> = ({ children }) => {
         if (match) {
           item = (
             <RoutesContext.Provider key={String(routes[i].path)} value={routes[i].children}>
-              <RouteItem route={routes[i]} props={{ match, url: router.activeURL }} />
+              <RouteItem key={match.key} route={routes[i]} props={{ match, url: router.activeURL }} />
             </RoutesContext.Provider>
           )
           break

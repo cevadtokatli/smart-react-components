@@ -1,11 +1,11 @@
 import { JSXChildren } from '@smart-react-components/core/types'
 import { addEventListener, removeEventListener } from '@smart-react-components/core/util/dom'
 import React from 'react'
-import reducer, { generateInitialState, setActiveURL } from '../reducer'
+import reducer, { generateInitialState, setActivatingURL, setActiveURL, setCancelCallback, setPercentage } from '../reducer'
 import RouterContext from '../RouterContext'
 import RoutesContext from '../RoutesContext'
-import { RouteModule } from '../types'
-import { getFullpath } from '../util'
+import { LazyModule, Match, RouteModule } from '../types'
+import { collectLazyModules, generateURL, getFullpath } from '../util'
 
 declare global {
   interface History {
@@ -24,9 +24,56 @@ export interface Props {
 
 const ClientRouter: React.FC<Props> = ({ children, params, routes, progressBar }) => {
   const [state, dispatch] = React.useReducer(reducer, generateInitialState())
-  const modules = React.useRef<object>({})
+  const modules = React.useRef<object>({}).current
 
-  const handlePopstate = () => dispatch(setActiveURL(getFullpath()))
+  const handleURLChange = () => {
+    const url = generateURL(getFullpath())
+
+    if (
+      state.activatingURL?.fullpath === url.fullpath
+      || (!state.activatingURL && state.activeURL.fullpath === url.fullpath)
+    ) {
+      return
+    }
+
+    (async function () {
+      const lazyModules: LazyModule[] = []
+      const modulesToInvokeGetMethods: Array<{ match: Match, module: LazyModule }> = []
+      collectLazyModules(state.activeURL, url, routes, modules, lazyModules, modulesToInvokeGetMethods)
+
+      if (lazyModules.length > 0) {
+        await Promise.all(lazyModules.map(i => i()))
+          .then(list => {
+            for (const i in list) {
+              modules[lazyModules[i] as any] = list[i]
+            }
+          })
+      }
+
+      if (modulesToInvokeGetMethods.length === 0) {
+        dispatch(setActiveURL(url))
+      } else {
+        const key = new Date().getTime()
+        dispatch(setActivatingURL({ key, url }))
+        const _setPercentage = (value: number) => dispatch(setPercentage({ key, value }))
+        const _setCancelCallback = (callback: () => void) => dispatch(setCancelCallback({ callback, key }))
+
+        _setPercentage(10)
+
+        for (const i in modulesToInvokeGetMethods) {
+          await modules[modulesToInvokeGetMethods[i].module as any].get(
+            modulesToInvokeGetMethods[i].match,
+            url,
+            _setPercentage,
+            _setCancelCallback,
+            params,
+          )
+        }
+
+        _setPercentage(100)
+      }
+    }())
+  }
 
   React.useEffect(() => {
     history.redirect = (to, isNewPage) => {
@@ -36,25 +83,25 @@ const ClientRouter: React.FC<Props> = ({ children, params, routes, progressBar }
         window.location.href = to
       }
     }
-
-    addEventListener(window, ['popstate'], handlePopstate)
-
-    return () => {
-      removeEventListener(window, ['popstate'], handlePopstate)
-    }
   }, [])
 
   React.useEffect(() => {
     history.push = to => {
       history.pushState({}, null, to)
-      dispatch(setActiveURL(getFullpath()))
+      handleURLChange()
     }
 
     history.replace = to => {
       history.replaceState({}, null, to)
-      dispatch(setActiveURL(getFullpath()))
+      handleURLChange()
     }
-  }, [state.activeURL])
+
+    addEventListener(window, ['popstate'], handleURLChange)
+
+    return () => {
+      removeEventListener(window, ['popstate'], handleURLChange)
+    }
+  }, [state.activeURL.fullpath, state.activatingURL?.fullpath])
 
   return (
     <RouterContext.Provider value={{ state, dispatch, modules }}>

@@ -13,7 +13,7 @@ export interface Props {
 
 const ServerRouter: React.FC<Props> = ({ children, routes, url }) => {
   const [state, dispatch] = React.useReducer(reducer, generateInitialState(url))
-  const modules = React.useRef<object>({})
+  const modules = React.useRef<object>({}).current
 
   return (
     <RouterContext.Provider value={{ state, dispatch, modules }}>

@@ -1,10 +1,10 @@
 import { createContext, Dispatch } from 'react'
-import { RouterReducerState } from '../reducer'
+import { Action, State } from '../reducer'
 
 export interface RouterContextState {
-  dispatch: Dispatch<any>
+  dispatch: Dispatch<Action.All>
   modules: object
-  state: RouterReducerState
+  state: State
 }
 
 const RouterContext = createContext<RouterContextState>(null)

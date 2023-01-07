@@ -1,5 +1,41 @@
 import { matchPath } from 'react-router'
-import { Match, Path, URL } from '../types'
+import { LazyModule, Match, Path, RouteModule, URL } from '../types'
+
+/**
+ * Checks the given routes and finds the active route.
+ * Checks if the active route needs the loader get method to be run.
+ * Calls the method recursively for the active method children.
+ */
+export const collectLazyModules = (
+  activeURL: URL,
+  activatingURL: URL,
+  routes: RouteModule[],
+  modules: object,
+  lazyModules: LazyModule[],
+  modulesToInvokeGetMethods: Array<{ match: Match, module: LazyModule }>,
+) => {
+  for (const i in routes) {
+    const item = routes[i]
+    const activatingMatch = generateMatch(activatingURL.pathname, item.path, false)
+
+    if (activatingMatch) {
+      if (!modules[item.module as any]) {
+        lazyModules.push(item.module)
+      }
+
+      const activeMatch = generateMatch(activeURL.pathname, item.path, false)
+      if (activeMatch?.key !== activatingMatch.key) {
+        modulesToInvokeGetMethods.push({ match: activatingMatch, module: item.module })
+      }
+
+      if (item.children) {
+        collectLazyModules(activeURL, activatingURL, item.children, modules, lazyModules, modulesToInvokeGetMethods)
+      }
+
+      return
+    }
+  }
+}
 
 /**
  * Retuns the fullpath.
