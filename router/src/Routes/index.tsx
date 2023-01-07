@@ -23,13 +23,13 @@ const Routes: React.FC<Props> = ({ children }) => {
       return (
         <>
           { routes.map(i => (
-            <React.Fragment key={String(i.path)}>
+            <RoutesContext.Provider key={String(i.path)} value={i.children}>
               { children({
                 children: React.createElement(RouteItem, { route: i }),
                 match: generateMatch(router.activeURL.fullpath, i.path, false),
                 url: router.activeURL,
               })}
-            </React.Fragment>
+            </RoutesContext.Provider>
           )) }
         </>
       )
@@ -39,7 +39,11 @@ const Routes: React.FC<Props> = ({ children }) => {
       for (const i in routes) {
         const match = generateMatch(router.activeURL.fullpath, routes[i].path, false)
         if (match) {
-          item = <RouteItem key={String(routes[i].path)} route={routes[i]} props={{ match, url: router.activeURL }} />
+          item = (
+            <RoutesContext.Provider key={String(routes[i].path)} value={routes[i].children}>
+              <RouteItem route={routes[i]} props={{ match, url: router.activeURL }} />
+            </RoutesContext.Provider>
+          )
           break
         }
       }
