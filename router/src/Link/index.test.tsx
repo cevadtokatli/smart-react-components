@@ -23,6 +23,7 @@ describe('<Link />', () => {
       state: {
         activeURL: generateURL('/home'),
         activatingURL: generateURL('/'),
+        key: 1,
         percentage: 0,
         cancelCallback: jest.fn(),
       },
