@@ -4,7 +4,7 @@ import { CancelCallback, LazyModule, Match, Path, RouteModule, URL } from '../ty
 
 /**
  * Checks and find the active routes.
- * Calls get methods of the active routes.
+ * Calls the get methods of the active routes.
  */
 export const callGetMethods = (url: string, routes: RouteModule[], modules: object, params?: any) => new Promise<void>(async resolve => {
   const getMethods = []
@@ -22,7 +22,7 @@ export const callGetMethods = (url: string, routes: RouteModule[], modules: obje
         const get = modules[curRoutes[i].module as any].get
         if (get) {
           getMethods.push(
-            modules[curRoutes[i].module as any].get.bind(
+            get.bind(
               null,
               match,
               activeURL,
