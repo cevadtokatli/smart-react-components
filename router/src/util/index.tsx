@@ -1,6 +1,6 @@
 import { matchPath } from 'react-router'
 import { modules } from '../ClientRouter'
-import { LazyModule, Match, Path, RouteModule, URL } from '../types'
+import { CancelCallback, LazyModule, Match, Path, RouteModule, URL } from '../types'
 
 /**
  * Checks and find the active routes.
@@ -10,7 +10,7 @@ export const callGetMethods = (url: string, routes: RouteModule[], modules: obje
   const getMethods = []
   const activeURL = generateURL(url)
   const setPercentage = (value: number) => {}
-  const setCancelCallback = (callback: () => void) => {}
+  const setCancelCallback = (callback: CancelCallback) => {}
   let curRoutes = routes
 
   while (curRoutes) {

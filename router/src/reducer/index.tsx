@@ -1,4 +1,4 @@
-import { URL } from '../types'
+import { CancelCallback, URL } from '../types'
 import { generateURL, getFullpath } from '../util'
 
 export namespace Action {
@@ -23,7 +23,7 @@ export namespace Action {
   class SetCancelCallback {
     type: typeof SET_CANCEL_CALLBACK
     payload: {
-      callback: () => void
+      callback: CancelCallback
       key: number
     }
   }
@@ -49,7 +49,7 @@ export const setActivatingURL = (payload: { key: number, url: URL }) => ({
   payload,
 })
 
-export const setCancelCallback = (payload: { callback: () => void, key: number }) => ({
+export const setCancelCallback = (payload: { callback: CancelCallback, key: number }) => ({
   type: Action.SET_CANCEL_CALLBACK,
   payload,
 })
@@ -63,7 +63,7 @@ export interface State {
   activatingURL: URL | null
   activeURL: URL
   key: number | null
-  cancelCallback: () => void | null
+  cancelCallback: CancelCallback | null
   percentage: number
 }
 

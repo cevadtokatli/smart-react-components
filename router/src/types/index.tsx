@@ -1,3 +1,5 @@
+export type CancelCallback = () => void
+
 export type LazyModule = () => Promise<any>
 
 export interface Match {

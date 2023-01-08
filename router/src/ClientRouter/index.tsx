@@ -4,7 +4,7 @@ import React from 'react'
 import reducer, { generateInitialState, setActivatingURL, setActiveURL, setCancelCallback, setPercentage } from '../reducer'
 import RouterContext from '../RouterContext'
 import RoutesContext from '../RoutesContext'
-import { RouteModule } from '../types'
+import { CancelCallback, RouteModule } from '../types'
 import { generateURL, getFullpath, loadModules } from '../util'
 
 declare global {
@@ -46,7 +46,7 @@ const ClientRouter: React.FC<Props> = ({ children, params, routes, progressBar }
         const key = new Date().getTime()
         dispatch(setActivatingURL({ key, url }))
         const _setPercentage = (value: number) => dispatch(setPercentage({ key, value }))
-        const _setCancelCallback = (callback: () => void) => dispatch(setCancelCallback({ callback, key }))
+        const _setCancelCallback = (callback: CancelCallback) => dispatch(setCancelCallback({ callback, key }))
 
         _setPercentage(10)
 
