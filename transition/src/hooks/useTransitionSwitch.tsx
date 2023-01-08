@@ -1,14 +1,15 @@
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { Value } from '@smart-react-components/core/types'
 import { useCallback, useState } from 'react'
+import { TransitionAfterCallback } from '../types'
 
 interface Props {
   active: Value
-  afterHide: (child: JSX.Element) => void | null
+  afterHide: TransitionAfterCallback | null
 }
 
 interface Return {
-  handleAfterHide: (child: JSX.Element) => void
+  handleAfterHide: TransitionAfterCallback
   status: {
     active: Value
     isProcessing: boolean
