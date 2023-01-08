@@ -36,7 +36,7 @@ export default class Transition extends React.Component<Props, State> {
     }
   }
 
-  async componentDidUpdate (prevProps, prevState) {
+  componentDidUpdate (prevProps, prevState) {
     const { props, state } = this
 
     if (props.status !== prevProps.status) {
