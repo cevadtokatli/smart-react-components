@@ -6,7 +6,7 @@ export interface Match {
   isExact: boolean
   key: string
   params: {
-    [key: string]: string | number
+    [key: string]: string
   }
   path: string
   url: string
