@@ -19,7 +19,7 @@ export const callGetMethods = (url: string, routes: RouteModule[], modules: obje
     for (const i in curRoutes) {
       const match = generateMatch(url, curRoutes[i].path, false)
       if (match) {
-        const get = modules[curRoutes[i].module as any].get
+        const { get } = modules[curRoutes[i].module as any]
         if (get) {
           getMethods.push(
             get.bind(
