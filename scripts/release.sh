@@ -51,6 +51,11 @@ function updateModuleDependentsPackageJson() {
     updateVersion "@smart-react-components/$module" $version
   fi
 
+  if [ $module != "ui" ] ; then
+    cd ../ui
+    updateVersion "@smart-react-components/$module" $version
+  fi
+
   cd "../$module"
 }
 
@@ -115,6 +120,10 @@ function main() {
   if [ $module = "core" ] ; then
     release "transition"
     release "router"
+  fi
+
+  if [ $module != "ui" ] ; then
+    release "ui"
   fi
 
   cd ./playground
