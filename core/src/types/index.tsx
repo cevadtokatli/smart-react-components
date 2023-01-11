@@ -10,8 +10,16 @@ export interface NestedObject<T> {
   [key: string]: T | NestedObject<T>
 }
 
+export type PaletteProp = 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark' | (string & {})
+
 export type Partial<T> = {
   [key in keyof T]?: T[key] extends object ? Partial<T[key]> : T[key]
+}
+
+export type ResponsiveProp<K extends string, T> = {
+  [key in K as K]: T
+} & {
+  [key in K as `${K}Sm` | `${K}Md` | `${K}Lg` | `${K}Xl`]?: T
 }
 
 export type ResponsiveProps<T> =
