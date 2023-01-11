@@ -337,7 +337,7 @@ const cssKeys: CSSKeys = {
   paddingLeft: 'padding-left',
   paddingRight: 'padding-right',
   paddingTop: 'padding-top',
-  paddingVertical: 'padding-vertical',
+  paddingVertical: 'padding-top|padding-bottom',
   pageBreakAfter: 'page-break-after',
   pageBreakBefore: 'page-break-before',
   pageBreakInside: 'page-break-inside',
