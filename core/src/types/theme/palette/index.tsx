@@ -17,6 +17,7 @@ interface DefaultPaletteItemAttributes {
   softDark: string
   softDarker: string
   softDarkest: string
+  waveEffect: string
 }
 
 export type PaletteItem = DefaultPaletteItemAttributes & OptionalThemeAttributes

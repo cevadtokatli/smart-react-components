@@ -9,6 +9,7 @@ import OpacityAttributes from './opacity'
 import Palette, { InputPalette } from './palette'
 import RadiusAttributes from './radius'
 import SizeAttributes from './size'
+import TransitionAttributes from './transition'
 import { OptionalThemeAttributes } from './util'
 import ZIndexAttributes from './z-index'
 
@@ -23,6 +24,7 @@ interface DefaultThemeAttributes<PaletteType> {
   palette: PaletteType
   radius: RadiusAttributes
   size: SizeAttributes
+  transition: TransitionAttributes
   zIndex: ZIndexAttributes
 }
 

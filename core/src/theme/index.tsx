@@ -10,6 +10,7 @@ import opacity from './opacity'
 import createPaletteItem from './palette'
 import radius from './radius'
 import size from './size'
+import transition from './transition'
 import zIndex from './z-index'
 
 export { default as Theme } from '../types/theme'
@@ -26,6 +27,7 @@ const defaultTheme: Theme = {
     palette: {},
     radius,
     size,
+    transition,
     zIndex,
   },
 }

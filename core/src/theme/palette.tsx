@@ -38,6 +38,9 @@ const createPaletteItem = (paletteItem: InputPaletteItem, theme: Theme): Palette
   result.softDarker ||= mix(result.main, -.65)
   result.softDarkest ||= mix(result.main, -.55)
 
+  const waveEffect = getColor(result.waveEffect ?? result.main)
+  result.waveEffect = `radial-gradient(${waveEffect.alpha(.2).toString()} 0, ${waveEffect.alpha(.3).toString()} 40%, ${waveEffect.alpha(.4).toString()} 50%, ${waveEffect.alpha(.5).toString()} 60%, ${waveEffect.alpha(0).toString()} 70%)`
+
   return result as PaletteItem
 }
 
