@@ -14,6 +14,14 @@ const lengthAttributes: LengthAttributes = {
     large: 992,
     xlarge: 1200,
   },
+  grid: {
+    containerWidth: {
+      small: 540,
+      medium: 720,
+      large: 960,
+      xlarge: 1140,
+    },
+  },
 }
 
 export default lengthAttributes

@@ -10,6 +10,9 @@ interface DefaultLengthAttributes {
   4: Value
   5: Value
   breakpoint: Grid
+  grid: {
+    containerWidth: Grid
+  }
 }
 
 type LengthAttributes = DefaultLengthAttributes & OptionalThemeAttributes
