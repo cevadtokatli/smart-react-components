@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loading /> should render component 1`] = `
+<DocumentFragment>
+  .c2 {
+  stroke: #0665d0;
+  stroke-width: 4px;
+}
+
+.c0 {
+  height: 20px;
+  width: 20px;
+}
+
+.c1 {
+  -webkit-animation: src-loading-animation 2000ms linear infinite;
+  animation: src-loading-animation 2000ms linear infinite;
+}
+
+.c1 circle {
+  -webkit-animation: src-loading-circle-animation 2000ms linear infinite;
+  animation: src-loading-circle-animation 2000ms linear infinite;
+  fill: none;
+  stroke-dasharray: 1,150;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+}
+
+<svg
+    class="c0 c1"
+    viewBox="0 0 44 44"
+  >
+    <circle
+      class="c2"
+      cx="22"
+      cy="22"
+      r="20"
+      stroke="$color.blue"
+      stroke-width="4"
+    />
+  </svg>
+</DocumentFragment>
+`;
