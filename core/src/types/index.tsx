@@ -38,4 +38,6 @@ export interface Size<T> {
 
 export type SizeProp = 'small' | 'medium' | 'large' | (string & {})
 
+export type SizeProps = Partial<ResponsiveProp<'size', SizeProp>>
+
 export type Value = string | number
