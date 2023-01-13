@@ -87,6 +87,7 @@
     "@smart-react-components/router": "^2.0.0-alpha-3",
     "@smart-react-components/transition": "^2.0.0-alpha-4",
     "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "styled-components": "^5.3.5"
   }
 }
