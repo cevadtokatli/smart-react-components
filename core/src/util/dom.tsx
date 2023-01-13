@@ -35,6 +35,15 @@ export const addEventListenerOnce = (el: EventElement, events: string[], callbac
 }
 
 /**
+ * Displays the given message if it is not prod mode.
+ */
+export const displayWarning = (msg: string) => {
+  if (process.env.NODE_ENV !== 'production') {
+    console.warn(msg)
+  }
+}
+
+/**
  * Removes events from the given element.
  */
 export const removeEventListener = (el: EventElement, events: string[], callback: EventCallback, options: EventRemoveOptions = true) => {
