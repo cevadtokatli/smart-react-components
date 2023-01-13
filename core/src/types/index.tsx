@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from 'react'
+
 export type ContentElement = string | JSXChildren
 
 export type JSXChildren = JSX.Element | JSX.Element[]
@@ -29,6 +31,8 @@ export type ResponsiveProps<T> =
 & { [key in keyof T as key extends string ? `${key}Lg` : never]?: T[key] }
 & { [key in keyof T as key extends string ? `${key}Xl` : never]?: T[key] }
 
+export type SetValue<T> = ((value: T) => void) | Dispatch<SetStateAction<T>>
+
 export interface Size<T> {
   small: T
   medium: T
@@ -39,5 +43,7 @@ export interface Size<T> {
 export type SizeProp = 'small' | 'medium' | 'large' | (string & {})
 
 export type SizeProps = Partial<ResponsiveProp<'size', SizeProp>>
+
+export type TimingFunction = 'cubic-bezier()' | 'ease' | 'ease-in' | 'ease-in-out' | 'ease-out' | 'linear' | 'step-end' | 'step-start' | 'steps()' | (string & {})
 
 export type Value = string | number
