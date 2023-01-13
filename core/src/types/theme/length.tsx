@@ -13,6 +13,9 @@ interface DefaultLengthAttributes {
   grid: {
     containerWidth: Grid
   }
+  overlay: {
+    space: string
+  }
 }
 
 type LengthAttributes = DefaultLengthAttributes & OptionalThemeAttributes

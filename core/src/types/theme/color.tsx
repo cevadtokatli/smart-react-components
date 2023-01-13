@@ -36,6 +36,9 @@ interface DefaultColorAttributes {
   dark: DynamicAttributes
   dynamic?: DynamicAttributes
   '!dynamic'?: DynamicAttributes
+  overlay: {
+    background: string
+  }
 }
 
 type ColorAttributes = DefaultColorAttributes & OptionalThemeAttributes

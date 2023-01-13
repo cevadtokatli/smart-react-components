@@ -36,6 +36,9 @@ const colorAttributes: ColorAttributes = {
     gray: '#eee',
     shadow: 'rgba(154, 161, 171, .15)',
   },
+  overlay: {
+    background: 'rgba(0,0,0,.3)',
+  },
 }
 
 export default colorAttributes

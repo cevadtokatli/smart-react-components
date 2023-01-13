@@ -22,6 +22,9 @@ const lengthAttributes: LengthAttributes = {
       xlarge: 1140,
     },
   },
+  overlay: {
+    space: '1.75rem',
+  },
 }
 
 export default lengthAttributes
