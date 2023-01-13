@@ -7,6 +7,7 @@ interface DefaultFontSizeAttributes {
   3: Value
   4: Value
   5: Value
+  progressBar: string
 }
 
 type FontSizeAttributes = DefaultFontSizeAttributes & OptionalThemeAttributes

@@ -18,6 +18,13 @@ interface DefaultPaletteItemAttributes {
   softDarker: string
   softDarkest: string
   waveEffect: string
+
+  progressBar: {
+    active: string
+    filledBackground: string
+    font: string
+    nestedBackground: string
+  }
 }
 
 export type PaletteItem = DefaultPaletteItemAttributes & OptionalThemeAttributes

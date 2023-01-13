@@ -1,9 +1,12 @@
+import { Partial } from '../types'
 import Theme from '../types/theme'
 import { InputPaletteItem, PaletteItem } from '../types/theme/palette'
 import { getColor, getFontColor, mix } from '../util/color'
 
 const createPaletteItem = (paletteItem: InputPaletteItem, theme: Theme): PaletteItem => {
-  let result: Partial<PaletteItem> = {}
+  let result: Partial<PaletteItem> = {
+    progressBar: {},
+  }
 
   if (typeof paletteItem === 'string') {
     result.main = paletteItem
@@ -37,6 +40,11 @@ const createPaletteItem = (paletteItem: InputPaletteItem, theme: Theme): Palette
   result.softDark ||= mix(result.main, -.72)
   result.softDarker ||= mix(result.main, -.65)
   result.softDarkest ||= mix(result.main, -.55)
+
+  result.progressBar.active ||= result.main
+  result.progressBar.filledBackground ||= theme.$.color.dynamic.gray
+  result.progressBar.font ||= result.font
+  result.progressBar.nestedBackground ||= getColor(theme.$.color.light.background).alpha(.3).rgb().toString()
 
   const waveEffect = getColor(result.waveEffect ?? result.main)
   result.waveEffect = `radial-gradient(${waveEffect.alpha(.2).toString()} 0, ${waveEffect.alpha(.3).toString()} 40%, ${waveEffect.alpha(.4).toString()} 50%, ${waveEffect.alpha(.5).toString()} 60%, ${waveEffect.alpha(0).toString()} 70%)`

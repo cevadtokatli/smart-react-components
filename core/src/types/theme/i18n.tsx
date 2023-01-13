@@ -1,7 +1,11 @@
 import { OptionalThemeAttributes } from './util'
 
 interface DefaultI18NAttributes {
-
+  progressBar: {
+    prefix: string
+    suffix: string
+    separator: string
+  }
 }
 
 type I18NAttributes = DefaultI18NAttributes & OptionalThemeAttributes
