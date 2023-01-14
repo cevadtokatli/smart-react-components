@@ -65,10 +65,6 @@ export default class Transition extends React.Component<Props, State> {
       this.isProcessing = true
 
       if (props.status) {
-        try {
-          await props.beforeShow(props.children)
-        } catch (err) {}
-
         this.setState({ status: true })
       } else {
         this.hide()
@@ -79,8 +75,10 @@ export default class Transition extends React.Component<Props, State> {
   /**
    * Shows the element.
    */
-  show = () => {
+  show = async () => {
     const el = findDOMNode(this) as HTMLElement
+
+    await this.props.beforeShow(this.props.children)
 
     if (this.props.isPreserved) {
       const style = el.getAttribute('style') ?? ''
@@ -103,11 +101,8 @@ export default class Transition extends React.Component<Props, State> {
   */
   hide = async () => {
     const el = findDOMNode(this) as HTMLElement
-    const { props } = this
 
-    try {
-      await props.beforeHide(props.children)
-    } catch (err) {}
+    await this.props.beforeHide(this.props.children)
 
     this.props.hide(el)
       .finally(() => {
