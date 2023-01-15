@@ -174,6 +174,7 @@ const Overlay = React.forwardRef<HTMLDivElement, Props>((props, forwardRef) => {
 
   const Element = (
     <OverlayElement
+      isDisplayedWhenBreakpointNull
       {...props.elementProps}
       {...extractElementProps(props, [clickEvents])}
       breakpoint={props.breakpoint}

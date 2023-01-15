@@ -21,12 +21,13 @@ const overlayCSS = ({ theme, hasBackground }) => `
     : ''
   }
 `
-interface Props extends StyledProps {
+export interface Props extends StyledProps {
   breakpoint: Breakpoint | null
   hasBackground: boolean
+  isDisplayedWhenBreakpointNull: boolean
 }
 
-export default styled(Div)<Props>(({ theme, breakpoint, hasBackground }: Props) => `
+export default styled(Div)<Props>(({ theme, breakpoint, hasBackground, isDisplayedWhenBreakpointNull }: Props) => `
   position: fixed;
   z-index: ${theme.$.zIndex.overlay};
 
@@ -36,6 +37,6 @@ export default styled(Div)<Props>(({ theme, breakpoint, hasBackground }: Props) 
         ${overlayCSS({ theme, hasBackground })};
       }
     `
-    : overlayCSS({ theme, hasBackground })
+    : isDisplayedWhenBreakpointNull ? overlayCSS({ theme, hasBackground }) : ''
   }
 `)
