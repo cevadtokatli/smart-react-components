@@ -147,7 +147,12 @@ const Overlay = React.forwardRef<HTMLDivElement, Props>((props, forwardRef) => {
     if (isFront) {
       const list = document.querySelectorAll('body > *')
       list.forEach(item => {
-        if (item.nodeName !== 'SCRIPT' && item !== ref.current && !item.classList.contains('src-blur-effect')) {
+        if (
+          item.nodeName !== 'SCRIPT'
+          && item !== ref.current
+          && !item.classList.contains('src-blur-effect')
+          && !item.classList.contains('src-replica')
+        ) {
           applyBlurEffect(item as HTMLElement)
         }
       })
