@@ -1,6 +1,7 @@
 import { OptionalThemeAttributes } from './util'
 
 interface DefaultTransitionAttributes {
+  fixedBoxDuration: number
   waveEffectDuration: number
 }
 
