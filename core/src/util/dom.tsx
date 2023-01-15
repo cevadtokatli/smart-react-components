@@ -35,6 +35,23 @@ export const addEventListenerOnce = (el: EventElement, events: string[], callbac
 }
 
 /**
+ * Returns a function, that, as long as it continues to be invoked, will not be triggered.
+ */
+export const debounce = (func: Function, wait: number = 100) => {
+  let timeout: NodeJS.Timeout
+
+  return (...args: any[]) => {
+    const callback = () => {
+      timeout = null
+      func.apply(null, args)
+    }
+
+    clearTimeout(timeout)
+    timeout = setTimeout(callback, wait)
+  }
+}
+
+/**
  * Displays the given message if it is not prod mode.
  */
 export const displayWarning = (msg: string) => {
