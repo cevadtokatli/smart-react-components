@@ -31,7 +31,7 @@ export type ResponsiveProps<T> =
 & { [key in keyof T as key extends string ? `${key}Lg` : never]?: T[key] }
 & { [key in keyof T as key extends string ? `${key}Xl` : never]?: T[key] }
 
-export type SetValue<T> = ((value: T) => void) | Dispatch<SetStateAction<T>>
+export type SetState<T> = ((value: T) => void) | Dispatch<SetStateAction<T>>
 
 export interface Size<T> {
   small: T
