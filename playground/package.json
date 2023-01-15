@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@smart-react-components/core": "2.0.0-alpha-9",
-    "@smart-react-components/router": "2.0.0-alpha-3",
+    "@smart-react-components/router": "2.0.0-alpha-4",
     "@smart-react-components/transition": "2.0.0-alpha-5",
     "@smart-react-components/ui": "2.0.0-alpha-1",
     "react": "18.2.0",
