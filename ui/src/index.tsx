@@ -1,3 +1,4 @@
+export { default as FixedBox } from './FixedBox'
 export * from './Grid'
 export { default as Loading } from './Loading'
 export { default as Overlay } from './Overlay'

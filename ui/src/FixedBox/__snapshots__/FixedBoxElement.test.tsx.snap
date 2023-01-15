@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FixedBoxElement /> should add breakpoint 1`] = `
+<DocumentFragment>
+  .c0 {
+  width: 300px;
+}
+
+.c1 {
+  overflow: auto;
+  position: fixed;
+  z-index: 1000;
+}
+
+@media (max-width:767px) {
+  .c1 {
+    height: auto !important;
+    max-height: 100% !important;
+    position: static;
+  }
+}
+
+<div
+    class="c0 c1"
+    width="300"
+  />
+</DocumentFragment>
+`;
+
+exports[`<FixedBoxElement /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  overflow: auto;
+  position: fixed;
+  z-index: 1000;
+}
+
+<div
+    class=" c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`<FixedBoxElement /> should replace width 1`] = `
+<DocumentFragment>
+  .c0 {
+  width: 300px;
+}
+
+.c1 {
+  overflow: auto;
+  position: fixed;
+  z-index: 1000;
+}
+
+@media (max-width:767px) {
+  .c1 {
+    height: auto !important;
+    max-height: 100% !important;
+    position: static;
+  }
+}
+
+<div
+    class="c0 c1"
+    width="300"
+  />
+</DocumentFragment>
+`;
