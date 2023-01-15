@@ -23,3 +23,18 @@ export const getScrollParent = (el: HTMLElement): HTMLElement => {
 
   return null
 }
+
+/**
+ * Checks if target is a clickable element.
+ */
+export const isTargetClickable = (target: HTMLElement, container: HTMLElement): boolean => {
+  while (container.contains(target)) {
+    if (target.hasAttribute('data-src-not-clickable')) {
+      return false
+    }
+
+    target = target.parentNode as HTMLElement
+  }
+
+  return true
+}
