@@ -1,100 +1,103 @@
 import { Position } from '../types'
 
 /**
- * Calculates position of the fixed box based on X axis.
+ * Calculates left and width values.
  */
-export const calculateXAxisBasedPosition = (
+export const calculateXAxis = (
   triggerRect: DOMRect,
-  boxReplicaRect: DOMRect,
+  boxReplicaEl: HTMLElement,
   position: Position,
-  width: number,
+  maxWidth: number | undefined,
+  minWidth: number | undefined,
   space: number,
   windowWidth: number,
-  windowHeight: number,
 ): string => {
-  let style = `width: ${width}px;`
+  let left: number
+  let width = boxReplicaEl.offsetWidth
 
-  // left
-  const diffLeft = triggerRect.left - (space + width)
-  const diffRight = windowWidth - (triggerRect.left + triggerRect.width + space + width)
-
-  if (
-    (position === Position.LEFT && (diffLeft >= 0 || diffLeft >= diffRight))
-    || (position === Position.RIGHT && diffRight < 0 && diffLeft > diffRight)
-  ) {
-    style += `left: ${diffLeft}px;`
-  } else {
-    style += `left: ${triggerRect.left + triggerRect.width + space}px;`
+  if (minWidth && minWidth > width) {
+    width = minWidth
   }
 
-  // top
-  const triggerHeight = triggerRect.height + triggerRect.top <= windowHeight ? triggerRect.height : (windowHeight - triggerRect.top)
-
-  const diffBottom = windowHeight - (triggerRect.top + boxReplicaRect.height)
-  const diffTop = (triggerRect.top + triggerHeight) - boxReplicaRect.height
-
-  if (diffBottom >= 0 || diffBottom >= diffTop) {
-    const height = diffBottom > 0 ? boxReplicaRect.height : windowHeight - (triggerRect.top + boxReplicaRect.height)
-    style += `
-      height: ${height}px;
-      top: ${triggerRect.top}px;
-    `
-  } else {
-    const height = boxReplicaRect.height + Math.min(diffTop, 0)
-    const top = (height > triggerHeight) ? ((triggerRect.top + triggerHeight) - height) : triggerRect.top
-    style += `
-      height: ${height}px;
-      top: ${top}px;
-    `
+  if (maxWidth && maxWidth < width) {
+    width = maxWidth
   }
 
-  return style
+  if (position & (Position.LEFT | Position.RIGHT)) {
+    const diffLeft = triggerRect.left - (space + width)
+    const diffRight = windowWidth - (triggerRect.left + triggerRect.width + space + width)
+
+    if (
+      (position === Position.LEFT && (diffLeft >= 0 || diffLeft >= diffRight))
+      || (position === Position.RIGHT && diffRight < 0 && diffLeft > diffRight)
+    ) {
+      left = diffLeft
+    } else {
+      left = triggerRect.left + triggerRect.width + space
+    }
+  } else {
+    const diffLeft = windowWidth - (triggerRect.left + width)
+    const diffRight = triggerRect.left - width
+
+    if (diffLeft >= 0 || diffLeft >= diffRight) {
+      left = triggerRect.left
+    } else {
+      left = triggerRect.left + triggerRect.width - width
+    }
+  }
+
+  boxReplicaEl.style.width = `${width}px`
+
+  return `
+    left: ${left}px;
+    width: ${width}px;
+  `
 }
 
 /**
- * Calculates position of the fixed box based on Y axis.
+ * Calculates top and height values.
  */
-export const calculateYAxisBasedPosition = (
+export const calculateYAxis = (
   triggerRect: DOMRect,
-  boxReplicaRect: DOMRect,
+  boxReplicaEl: HTMLElement,
   position: Position,
-  width: number,
   space: number,
-  windowWidth: number,
   windowHeight: number,
 ): string => {
-  let style = `width: ${width}px;`
+  let top: number
+  let height = boxReplicaEl.offsetHeight
 
-  // left
-  const diffLeft = windowWidth - (triggerRect.left + width)
-  const diffRight = triggerRect.left - width
+  if (position & (Position.LEFT | Position.RIGHT)) {
+    const triggerHeight = triggerRect.height + triggerRect.top <= windowHeight ? triggerRect.height : (windowHeight - triggerRect.top)
 
-  if (diffLeft >= 0 || diffLeft >= diffRight) {
-    style += `left: ${triggerRect.left}px;`
+    const diffBottom = windowHeight - (triggerRect.top + height)
+    const diffTop = (triggerRect.top + triggerHeight) - height
+
+    if (diffBottom >= 0 || diffBottom >= diffTop) {
+      height = diffBottom > 0 ? height : windowHeight - (triggerRect.top + height)
+      top = triggerRect.top
+    } else {
+      height = height + Math.min(diffTop, 0)
+      top = (height > triggerHeight) ? ((triggerRect.top + triggerHeight) - height) : triggerRect.top
+    }
   } else {
-    style += `left: ${triggerRect.left + triggerRect.width - width}px;`
+    const diffBottom = windowHeight - (triggerRect.top + triggerRect.height + height + space)
+    const diffTop = (triggerRect.top + triggerRect.height) - (height + 1)
+
+    if (
+      (position === Position.BOTTOM && (diffBottom >= 0 || diffBottom >= diffTop))
+      || (position === Position.TOP && diffTop < 0 && diffBottom > diffTop)
+    ) {
+      height = diffBottom > 0 ? height : (windowHeight - (triggerRect.top + triggerRect.height + space))
+      top = triggerRect.top + triggerRect.height + space
+    } else {
+      height = diffTop > 0 ? height : triggerRect.top
+      top = (triggerRect.top + triggerRect.height) - (height + 1)
+    }
   }
 
-  // top
-  const diffBottom = windowHeight - (triggerRect.top + triggerRect.height + boxReplicaRect.height + space)
-  const diffTop = (triggerRect.top + triggerRect.height) - (boxReplicaRect.height + 1)
-
-  if (
-    (position === Position.BOTTOM && (diffBottom >= 0 || diffBottom >= diffTop))
-    || (position === Position.TOP && diffTop < 0 && diffBottom > diffTop)
-  ) {
-    const height = diffBottom > 0 ? boxReplicaRect.height : (windowHeight - (triggerRect.top + triggerRect.height + space))
-    style += `
-      height: ${height}px;
-      top: ${triggerRect.top + triggerRect.height + space}px;
-    `
-  } else {
-    const height = diffTop > 0 ? boxReplicaRect.height : triggerRect.top
-    style += `
-      height: ${height}px;
-      top: ${(triggerRect.top + triggerRect.height) - (height + 1)}px;
-    `
-  }
-
-  return style
+  return `
+    top: ${top}px;
+    height: ${height}px;
+  `
 }

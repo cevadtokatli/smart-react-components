@@ -10,7 +10,7 @@ import ReplicaDOMElement from '../components/ReplicaDOMElement'
 import Overlay from '../Overlay'
 import { Position, TriggerInteraction } from '../types'
 import { isTargetClickable } from '../util/dom'
-import { calculateXAxisBasedPosition, calculateYAxisBasedPosition } from '../util/fixed-box'
+import { calculateXAxis, calculateYAxis } from '../util/fixed-box'
 import FixedBoxElement from './FixedBoxElement'
 import OverlayElement from './OverlayElement'
 
@@ -115,30 +115,32 @@ const FixedBox: React.FC<Props> = ({
     }
 
     if (boxReplicaEl.current) {
+      boxReplicaEl.current.removeAttribute('style')
       boxReplicaEl.current.innerHTML = boxEl.current.innerHTML
     }
 
     const triggerRect = getTriggerEl().getBoundingClientRect()
-    const boxReplicaRect = boxReplicaEl.current?.getBoundingClientRect() ?? boxEl.current.getBoundingClientRect()
-
-    let width = boxReplicaRect.width
-
-    if (minWidth && minWidth > width) {
-      width = minWidth
-    }
-
-    if (maxWidth && maxWidth < width) {
-      width = maxWidth
-    }
-
     const windowWidth = window.innerWidth
     const windowHeight = window.innerHeight
 
-    const style = position & (Position.TOP | Position.BOTTOM)
-      ? calculateYAxisBasedPosition(triggerRect, boxReplicaRect, position, width, space, windowWidth, windowHeight)
-      : calculateXAxisBasedPosition(triggerRect, boxReplicaRect, position, width, space, windowWidth, windowHeight)
-
-    boxEl.current.setAttribute('style', style)
+    boxEl.current.setAttribute('style', `
+      ${calculateXAxis(
+        triggerRect,
+        boxReplicaEl.current ?? boxEl.current,
+        position,
+        maxWidth,
+        minWidth,
+        space,
+        windowWidth,
+      )}
+      ${calculateYAxis(
+        triggerRect,
+        boxReplicaEl.current ?? boxEl.current,
+        position,
+        space,
+        windowHeight,
+      )}
+    `)
   }
 
   const handleBeforeShow = el => new Promise<void>(async resolve => {
