@@ -11,6 +11,7 @@ import RadiusAttributes from './radius'
 import SizeAttributes from './size'
 import TransitionAttributes from './transition'
 import { OptionalThemeAttributes } from './util'
+import VarAttributes from './vars'
 import ZIndexAttributes from './z-index'
 
 interface DefaultThemeAttributes<PaletteType> {
@@ -25,6 +26,7 @@ interface DefaultThemeAttributes<PaletteType> {
   radius: RadiusAttributes
   size: SizeAttributes
   transition: TransitionAttributes
+  vars: VarAttributes
   zIndex: ZIndexAttributes
 }
 

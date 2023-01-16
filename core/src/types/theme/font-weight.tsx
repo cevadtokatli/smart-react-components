@@ -5,6 +5,7 @@ interface DefaultFontWeightAttributes {
   normal: string
   semibold: string
   bold: string
+  popoverHeader: string
 }
 
 type FontWeightAttributes = DefaultFontWeightAttributes & OptionalThemeAttributes

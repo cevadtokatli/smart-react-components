@@ -11,6 +11,7 @@ import createPaletteItem from './palette'
 import radius from './radius'
 import size from './size'
 import transition from './transition'
+import vars from './vars'
 import zIndex from './z-index'
 
 export { default as Theme } from '../types/theme'
@@ -28,12 +29,15 @@ const defaultTheme: Theme = {
     radius,
     size,
     transition,
+    vars,
     zIndex,
   },
 }
 
 const createTheme = (theme: InputTheme = {}, isDarkMode: boolean = false): Theme => {
   const result = merge<Theme>(defaultTheme, theme)
+
+  result.$.vars.isDarkMode = isDarkMode
 
   result.$.color.dynamic = isDarkMode ? result.$.color.dark : result.$.color.light
   result.$.color['!dynamic'] = isDarkMode ? result.$.color.light : result.$.color.dark

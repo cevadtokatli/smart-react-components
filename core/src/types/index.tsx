@@ -2,6 +2,11 @@ import { Dispatch, SetStateAction } from 'react'
 
 export type ContentElement = string | JSXChildren
 
+export interface Coordinator<T> {
+  x: T
+  y: T
+}
+
 export type JSXChildren = JSX.Element | JSX.Element[]
 
 export interface JSXElementProps {

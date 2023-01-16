@@ -19,6 +19,17 @@ interface DefaultPaletteItemAttributes {
   softDarkest: string
   waveEffect: string
 
+  popover: {
+    background: string
+    border: string
+    font: string
+    headerBackground: string
+    headerBorder: string
+    headerFont: string
+    softHeaderBackground: string
+    softHeaderBorder: string
+    softHeaderFont: string
+  }
   progressBar: {
     active: string
     filledBackground: string

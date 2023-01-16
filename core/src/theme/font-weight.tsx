@@ -5,6 +5,7 @@ const fontWeightAttributes: FontWeightAttributes = {
   normal: '400',
   semibold: '500',
   bold: '600',
+  popoverHeader: '500',
 }
 
 export default fontWeightAttributes

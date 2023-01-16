@@ -1,7 +1,7 @@
 import RadiusAttributes from '../types/theme/radius'
 
-const radiusAtrributes: RadiusAttributes = {
-
+const radiusAttributes: RadiusAttributes = {
+  popover: '.25rem',
 }
 
-export default radiusAtrributes
+export default radiusAttributes

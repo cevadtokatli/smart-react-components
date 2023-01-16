@@ -5,6 +5,7 @@ import { getColor, getFontColor, mix } from '../util/color'
 
 const createPaletteItem = (paletteItem: InputPaletteItem, theme: Theme): PaletteItem => {
   let result: Partial<PaletteItem> = {
+    popover: {},
     progressBar: {},
   }
 
@@ -40,6 +41,16 @@ const createPaletteItem = (paletteItem: InputPaletteItem, theme: Theme): Palette
   result.softDark ||= mix(result.main, -.72)
   result.softDarker ||= mix(result.main, -.65)
   result.softDarkest ||= mix(result.main, -.55)
+
+  result.popover.background ||= theme.$.color.dynamic.background
+  result.popover.border ||= theme.$.color.dynamic.accent
+  result.popover.font ||= theme.$.color.dynamic.font
+  result.popover.headerBackground ||= result.main
+  result.popover.headerBorder ||= theme.$.vars.isDarkMode ? result.darker : result.lighter
+  result.popover.headerFont ||= result.font
+  result.popover.softHeaderBackground ||= result.soft
+  result.popover.softHeaderBorder ||= result.softDarker
+  result.popover.softHeaderFont ||= result.softFont
 
   result.progressBar.active ||= result.main
   result.progressBar.filledBackground ||= theme.$.color.dynamic.gray
