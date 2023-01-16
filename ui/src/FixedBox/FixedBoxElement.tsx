@@ -7,18 +7,6 @@ interface Props extends StyledProps {
   breakpoint: Breakpoint | null
 }
 
-export const FixedBoxReplicaElement = styled.div.attrs({
-  className: 'src-replica',
-})`
-  left: -999px;
-  opacity: 0;
-  pointer-events: none;
-  position: fixed;
-  top: -999px;
-  visibility: hidden;
-  z-index: -999;
-`
-
 export default styled(Div)<Props>(({ theme, breakpoint, width }: Props) => `
   overflow: auto;
   position: fixed;

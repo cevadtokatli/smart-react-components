@@ -5,13 +5,13 @@ import { addEventListener, debounce, isMobile, removeEventListener } from '@smar
 import CSSTransition from '@smart-react-components/transition/CSSTransition'
 import { TransitionAfterCallback, TransitionBeforeCallback } from '@smart-react-components/transition/types'
 import React from 'react'
-import { createPortal } from 'react-dom'
 import { ThemeContext } from 'styled-components'
+import ReplicaDOMElement from '../components/ReplicaDOMElement'
 import Overlay from '../Overlay'
 import { Position, TriggerInteraction } from '../types'
-import { canBeRenderedInPortal, isTargetClickable } from '../util/dom'
+import { isTargetClickable } from '../util/dom'
 import { calculateXAxisBasedPosition, calculateYAxisBasedPosition } from '../util/fixed-box'
-import FixedBoxElement, { FixedBoxReplicaElement } from './FixedBoxElement'
+import FixedBoxElement from './FixedBoxElement'
 import OverlayElement from './OverlayElement'
 
 export { Position, TriggerInteraction } from '../types'
@@ -231,7 +231,7 @@ const FixedBox: React.FC<Props> = ({
           <FixedBoxElement breakpoint={breakpoint} ref={boxEl}>{children[1]}</FixedBoxElement>
         </Overlay>
       </CSSTransition>
-      { canBeRenderedInPortal() && createPortal(<FixedBoxReplicaElement ref={boxReplicaEl} />, document.body) }
+      <ReplicaDOMElement ref={boxReplicaEl} />
     </>
   )
 }
