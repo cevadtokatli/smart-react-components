@@ -38,6 +38,14 @@ export type ResponsiveProps<T> =
 
 export type SetState<T> = ((value: T) => void) | Dispatch<SetStateAction<T>>
 
+export interface Shape<T> {
+  rectangle: T
+  rounded: T
+  [key: string]: T
+}
+
+export type ShapeProp = 'rectangle' | 'rounded' | (string & {})
+
 export interface Size<T> {
   small: T
   medium: T
