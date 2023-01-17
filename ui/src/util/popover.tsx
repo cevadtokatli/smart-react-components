@@ -13,7 +13,7 @@ const calculatePositionBasedOnXAxis = (
   windowWidth: number,
   windowHeight: number,
 ): PopoverCalculationResult => {
-  const [arrowWidth, arrowHeight] = getPopArrowSize(pos)
+  const [arrowWidth, arrowHeight] = getArrowSize(pos)
   let left: number
   let arrowLeft: number
   let overflow: number
@@ -67,7 +67,7 @@ const calculatePositionBasedOnYAxis = (
   windowWidth: number,
   windowHeight: number,
 ): PopoverCalculationResult => {
-  const [arrowWidth, arrowHeight] = getPopArrowSize(pos)
+  const [arrowWidth, arrowHeight] = getArrowSize(pos)
   let arrowTop: number
   let top: number
   let overflow: number
@@ -218,9 +218,9 @@ export const generateCSSTransitionClasses = (key: string, duration: number) => `
 /**
  * Returns width and height attributes depending on position
  */
-export const getPopArrowSize = (position: Position) => position & (Position.LEFT | Position.RIGHT) ? [10, 15] : [15, 10]
+export const getArrowSize = (position: Position) => position & (Position.LEFT | Position.RIGHT) ? [10, 15] : [15, 10]
 
 /**
  * Returns viewBox attribute depending on position
  */
-export const getPopArrowViewBox = (position: Position) => position & (Position.LEFT | Position.RIGHT) ? '0 0 252.8 378.5' : '0 0 377.3 251.9'
+export const getArrowViewBox = (position: Position) => position & (Position.LEFT | Position.RIGHT) ? '0 0 252.8 378.5' : '0 0 377.3 251.9'

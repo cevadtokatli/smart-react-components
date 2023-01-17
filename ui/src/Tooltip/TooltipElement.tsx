@@ -2,7 +2,7 @@ import Div from '@smart-react-components/core/Element/Div'
 import { StyledProps } from '@smart-react-components/core/styled-props'
 import { PaletteProp, ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
 import styled from 'styled-components'
-import PopArrow from '../components/PopArrow'
+import PopoverArrow from '../Popover/PopoverArrow'
 import { generateCSSTransitionClasses } from '../util/popover'
 
 interface Props extends
@@ -33,7 +33,7 @@ export default styled(Div).attrs({
       color: ${theme.$.palette[palette].tooltip.softFont};
       fill: ${theme.$.palette[palette].tooltip.softFont};
 
-      ${PopArrow} {
+      ${PopoverArrow} {
         fill: ${theme.$.palette[palette].tooltip.softBackground};
         stroke: ${theme.$.palette[palette].tooltip.softBackground};
       }
@@ -43,7 +43,7 @@ export default styled(Div).attrs({
       color: ${theme.$.palette[palette].font};
       fill: ${theme.$.palette[palette].font};
 
-      ${PopArrow} {
+      ${PopoverArrow} {
         fill: ${theme.$.palette[palette].background};
         stroke: ${theme.$.palette[palette].background};
       }

@@ -1,7 +1,7 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { render } from '@testing-library/react' 
 import React from 'react'
-import PopArrow from '../components/PopArrow'
+import PopoverArrow from '../components/PopoverArrow'
 import TooltipElement from './TooltipElement'
 
 describe('<TooltipElement />', () => {
@@ -12,7 +12,7 @@ describe('<TooltipElement />', () => {
     children = (
       <>
         <span>Tooltip</span>
-        <PopArrow />
+        <PopoverArrow />
       </>
     )
 

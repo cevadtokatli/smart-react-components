@@ -1,7 +1,7 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { render } from '@testing-library/react' 
 import React from 'react'
-import PopArrow from '../components/PopArrow'
+import PopoverArrow from '../components/PopoverArrow'
 import PopoverElement, { PopoverHeader, PopoverContent} from './PopoverElement'
 
 describe('<PopoverElement />', () => {
@@ -12,7 +12,7 @@ describe('<PopoverElement />', () => {
     children = [
       <PopoverHeader key="header">Header</PopoverHeader>,
       <PopoverContent key="content">Content</PopoverContent>,
-      <PopArrow key="arrow" />,
+      <PopoverArrow key="arrow" />,
     ]
 
     props = {

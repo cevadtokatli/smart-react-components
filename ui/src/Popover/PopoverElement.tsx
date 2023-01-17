@@ -2,7 +2,7 @@ import { StyledProps } from '@smart-react-components/core/styled-props'
 import Div from '@smart-react-components/core/Element/Div'
 import styled from 'styled-components'
 import { PaletteProp, ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
-import PopArrow from '../components/PopArrow'
+import PopoverArrow from './PopoverArrow'
 import { generateCSSTransitionClasses } from '../util/popover'
 
 export const PopoverHeader = styled.h4`
@@ -56,7 +56,7 @@ export default styled(Div).attrs({
         color: ${theme.$.palette[palette].popover.softHeaderFont};
         fill: ${theme.$.palette[palette].popover.softHeaderFont};
 
-        ~ ${PopArrow}[data-arrow-header="true"] {
+        ~ ${PopoverArrow}[data-arrow-header="true"] {
           fill: ${theme.$.palette[palette].popover.softHeaderBackground};
           stroke: ${theme.$.palette[palette].popover.softHeaderBorder};
         }
@@ -67,7 +67,7 @@ export default styled(Div).attrs({
         color: ${theme.$.palette[palette].popover.headerFont};
         fill: ${theme.$.palette[palette].popover.headerFont};
 
-        ~ ${PopArrow}[data-arrow-header="true"] {
+        ~ ${PopoverArrow}[data-arrow-header="true"] {
           fill: ${theme.$.palette[palette].popover.headerBackground};
           stroke: ${theme.$.palette[palette].popover.headerBorder};
         }
@@ -79,7 +79,7 @@ export default styled(Div).attrs({
     }
   }
 
-  ${PopArrow}[data-arrow-header="false"] {
+  ${PopoverArrow}[data-arrow-header="false"] {
     fill: ${theme.$.palette[palette].popover.background};
     stroke: ${theme.$.palette[palette].popover.border};
   }

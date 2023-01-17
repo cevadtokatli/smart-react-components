@@ -5,11 +5,11 @@ import { TransitionAfterCallback, TransitionBeforeCallback } from '@smart-react-
 import React from 'react'
 import { createPortal } from 'react-dom'
 import { ThemeContext } from 'styled-components'
-import PopArrow from '../components/PopArrow'
+import PopoverArrow from '../Popover/PopoverArrow'
 import useFixedBoxMethods from '../hooks/useFixedBoxMethods'
 import { Position, TriggerInteraction } from '../types'
 import { canBeRenderedInPortal } from '../util/dom'
-import { calculatePosition, getPopArrowViewBox } from '../util/popover'
+import { calculatePosition, getArrowViewBox } from '../util/popover'
 import TooltipElement from './TooltipElement'
 
 export { Position, TriggerInteraction } from '../types'
@@ -48,7 +48,7 @@ const Tooltip: React.FC<Props> = ({ afterHide, afterShow, beforeHide, beforeShow
     boxEl.current.setAttribute('style', style)
     boxEl.current.setAttribute('data-src-position', String(pos))
     arrowEl.current.setAttribute('style', arrowStyle)
-    arrowEl.current.setAttribute('viewBox', getPopArrowViewBox(pos))
+    arrowEl.current.setAttribute('viewBox', getArrowViewBox(pos))
     arrowEl.current.setAttribute('data-src-position', String(pos))
   }
 
@@ -82,7 +82,7 @@ const Tooltip: React.FC<Props> = ({ afterHide, afterShow, beforeHide, beforeShow
         ref={boxEl}
       >
         {children[1]}
-        <PopArrow ref={arrowEl} />
+        <PopoverArrow ref={arrowEl} />
       </TooltipElement>
     </CSSTransition>
   )
