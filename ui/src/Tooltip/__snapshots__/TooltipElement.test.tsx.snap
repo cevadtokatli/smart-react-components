@@ -1,0 +1,428 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TooltipElement /> should render component 1`] = `
+<DocumentFragment>
+  .c3 {
+  position: absolute;
+  stroke-width: 20px;
+}
+
+.c3[data-src-position="1"],
+.c3[data-src-position="2"] {
+  height: 15px;
+  width: 10px;
+}
+
+.c3[data-src-position="1"] path:last-child,
+.c3[data-src-position="2"] path:last-child {
+  display: none;
+}
+
+.c3[data-src-position="4"],
+.c3[data-src-position="8"] {
+  height: 10px;
+  width: 15px;
+}
+
+.c3[data-src-position="4"] path:first-child,
+.c3[data-src-position="8"] path:first-child {
+  display: none;
+}
+
+.c3[data-src-position="1"],
+.c3[data-src-position="8"] {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.c0 {
+  font-size: .875rem;
+  padding: .3rem .6rem;
+}
+
+.c1 {
+  border-radius: .25rem;
+  box-shadow: 0 0 10px 1px rgba(6,101,208,0.5);
+  box-sizing: border-box;
+  font-family: inherit;
+  position: fixed;
+  z-index: 1000;
+  background: #0665d0;
+  color: #fff;
+  fill: #fff;
+}
+
+.c1 .c2 {
+  fill: #0665d0;
+  stroke: #0665d0;
+}
+
+<div
+    class="c0 c1"
+  >
+    <span>
+      Tooltip
+    </span>
+    <svg
+      class="c2 c3"
+    >
+      <path
+        d="M251.8,371.6c-17.4,5.9-37.2,2.6-50.4-8L16.3,215.3v-0.1c-18.1-14.5-18.1-38.1,0-52.6L201.4,14.2 c13.3-10.7,33.1-13.8,50.4-8"
+      />
+      <path
+        d="M371,0c5.9,17.4,2.6,37.2-8,50.4L214.7,235.5h-0.1c-14.5,18.1-38.1,18.1-52.6,0L13.6,50.4 C2.9,37.1-0.2,17.3,5.6,0"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<TooltipElement /> should render component with responsive size props 1`] = `
+<DocumentFragment>
+  .c3 {
+  position: absolute;
+  stroke-width: 20px;
+}
+
+.c3[data-src-position="1"],
+.c3[data-src-position="2"] {
+  height: 15px;
+  width: 10px;
+}
+
+.c3[data-src-position="1"] path:last-child,
+.c3[data-src-position="2"] path:last-child {
+  display: none;
+}
+
+.c3[data-src-position="4"],
+.c3[data-src-position="8"] {
+  height: 10px;
+  width: 15px;
+}
+
+.c3[data-src-position="4"] path:first-child,
+.c3[data-src-position="8"] path:first-child {
+  display: none;
+}
+
+.c3[data-src-position="1"],
+.c3[data-src-position="8"] {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.c0 {
+  font-size: .75rem;
+  padding: .15rem .4rem;
+}
+
+.c1 {
+  border-radius: .25rem;
+  box-shadow: 0 0 10px 1px rgba(6,101,208,0.5);
+  box-sizing: border-box;
+  font-family: inherit;
+  position: fixed;
+  z-index: 1000;
+  background: #0665d0;
+  color: #fff;
+  fill: #fff;
+}
+
+.c1 .c2 {
+  fill: #0665d0;
+  stroke: #0665d0;
+}
+
+@media (min-width:768px) {
+  .c0 {
+    font-size: .875rem;
+    padding: .3rem .6rem;
+  }
+}
+
+@media (min-width:1200px) {
+  .c0 {
+    font-size: 1rem;
+    padding: .45rem .8rem;
+  }
+}
+
+<div
+    class="c0 c1"
+  >
+    <span>
+      Tooltip
+    </span>
+    <svg
+      class="c2 c3"
+    >
+      <path
+        d="M251.8,371.6c-17.4,5.9-37.2,2.6-50.4-8L16.3,215.3v-0.1c-18.1-14.5-18.1-38.1,0-52.6L201.4,14.2 c13.3-10.7,33.1-13.8,50.4-8"
+      />
+      <path
+        d="M371,0c5.9,17.4,2.6,37.2-8,50.4L214.7,235.5h-0.1c-14.5,18.1-38.1,18.1-52.6,0L13.6,50.4 C2.9,37.1-0.2,17.3,5.6,0"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<TooltipElement /> should render component with soft colors 1`] = `
+<DocumentFragment>
+  .c3 {
+  position: absolute;
+  stroke-width: 20px;
+}
+
+.c3[data-src-position="1"],
+.c3[data-src-position="2"] {
+  height: 15px;
+  width: 10px;
+}
+
+.c3[data-src-position="1"] path:last-child,
+.c3[data-src-position="2"] path:last-child {
+  display: none;
+}
+
+.c3[data-src-position="4"],
+.c3[data-src-position="8"] {
+  height: 10px;
+  width: 15px;
+}
+
+.c3[data-src-position="4"] path:first-child,
+.c3[data-src-position="8"] path:first-child {
+  display: none;
+}
+
+.c3[data-src-position="1"],
+.c3[data-src-position="8"] {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.c0 {
+  font-size: .875rem;
+  padding: .3rem .6rem;
+}
+
+.c1 {
+  border-radius: .25rem;
+  box-shadow: 0 0 10px 1px rgba(6,101,208,0.5);
+  box-sizing: border-box;
+  font-family: inherit;
+  position: fixed;
+  z-index: 1000;
+  background: #cde0f5;
+  color: #033c7c;
+  fill: #033c7c;
+}
+
+.c1 .c2 {
+  fill: #cde0f5;
+  stroke: #cde0f5;
+}
+
+<div
+    class="c0 c1"
+  >
+    <span>
+      Tooltip
+    </span>
+    <svg
+      class="c2 c3"
+    >
+      <path
+        d="M251.8,371.6c-17.4,5.9-37.2,2.6-50.4-8L16.3,215.3v-0.1c-18.1-14.5-18.1-38.1,0-52.6L201.4,14.2 c13.3-10.7,33.1-13.8,50.4-8"
+      />
+      <path
+        d="M371,0c5.9,17.4,2.6,37.2-8,50.4L214.7,235.5h-0.1c-14.5,18.1-38.1,18.1-52.6,0L13.6,50.4 C2.9,37.1-0.2,17.3,5.6,0"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<TooltipElement /> should render component with transition 1`] = `
+<DocumentFragment>
+  .c3 {
+  position: absolute;
+  stroke-width: 20px;
+}
+
+.c3[data-src-position="1"],
+.c3[data-src-position="2"] {
+  height: 15px;
+  width: 10px;
+}
+
+.c3[data-src-position="1"] path:last-child,
+.c3[data-src-position="2"] path:last-child {
+  display: none;
+}
+
+.c3[data-src-position="4"],
+.c3[data-src-position="8"] {
+  height: 10px;
+  width: 15px;
+}
+
+.c3[data-src-position="4"] path:first-child,
+.c3[data-src-position="8"] path:first-child {
+  display: none;
+}
+
+.c3[data-src-position="1"],
+.c3[data-src-position="8"] {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.c0 {
+  font-size: .875rem;
+  padding: .3rem .6rem;
+}
+
+.c1 {
+  border-radius: .25rem;
+  box-shadow: 0 0 10px 1px rgba(6,101,208,0.5);
+  box-sizing: border-box;
+  font-family: inherit;
+  position: fixed;
+  z-index: 1000;
+  background: #0665d0;
+  color: #fff;
+  fill: #fff;
+}
+
+.c1 .c2 {
+  fill: #0665d0;
+  stroke: #0665d0;
+}
+
+.c1.src-tooltip-show-active,
+.c1.src-tooltip-hide-active {
+  -webkit-transition: undefinedms 0s ease-in-out;
+  transition: undefinedms 0s ease-in-out;
+  -webkit-transition-property: -webkit-transform,opacity;
+  -webkit-transition-property: transform,opacity;
+  transition-property: transform,opacity;
+}
+
+.c1.src-tooltip-show {
+  opacity: 0;
+}
+
+.c1.src-tooltip-show[data-src-position="1"] {
+  -webkit-transform: translateX(-30px);
+  -ms-transform: translateX(-30px);
+  transform: translateX(-30px);
+}
+
+.c1.src-tooltip-show[data-src-position="2"] {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+}
+
+.c1.src-tooltip-show[data-src-position="4"] {
+  -webkit-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px);
+}
+
+.c1.src-tooltip-show[data-src-position="8"] {
+  -webkit-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px);
+}
+
+.c1.src-tooltip-show-active {
+  opacity: 1;
+}
+
+.c1.src-tooltip-show-active[data-src-position="1"],
+.c1.src-tooltip-show-active[data-src-position="2"] {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.c1.src-tooltip-show-active[data-src-position="4"],
+.c1.src-tooltip-show-active[data-src-position="8"] {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.c1.src-tooltip-hide {
+  opacity: 1;
+}
+
+.c1.src-tooltip-hide[data-src-position="1"],
+.c1.src-tooltip-hide[data-src-position="2"] {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.c1.src-tooltip-hide[data-src-position="4"],
+.c1.src-tooltip-hide[data-src-position="8"] {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.c1.src-tooltip-hide-active {
+  opacity: 0;
+}
+
+.c1.src-tooltip-hide-active[data-src-position="1"] {
+  -webkit-transform: translateX(-30px);
+  -ms-transform: translateX(-30px);
+  transform: translateX(-30px);
+}
+
+.c1.src-tooltip-hide-active[data-src-position="2"] {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+}
+
+.c1.src-tooltip-hide-active[data-src-position="4"] {
+  -webkit-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px);
+}
+
+.c1.src-tooltip-hide-active[data-src-position="8"] {
+  -webkit-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px);
+}
+
+<div
+    class="c0 c1"
+  >
+    <span>
+      Tooltip
+    </span>
+    <svg
+      class="c2 c3"
+    >
+      <path
+        d="M251.8,371.6c-17.4,5.9-37.2,2.6-50.4-8L16.3,215.3v-0.1c-18.1-14.5-18.1-38.1,0-52.6L201.4,14.2 c13.3-10.7,33.1-13.8,50.4-8"
+      />
+      <path
+        d="M371,0c5.9,17.4,2.6,37.2-8,50.4L214.7,235.5h-0.1c-14.5,18.1-38.1,18.1-52.6,0L13.6,50.4 C2.9,37.1-0.2,17.3,5.6,0"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
