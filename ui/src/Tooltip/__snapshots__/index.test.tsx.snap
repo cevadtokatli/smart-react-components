@@ -172,23 +172,13 @@ exports[`<Tooltip /> should render component when status true 1`] = `
 
 <div
     class="c0 c1"
-    data-src-position="8"
-    style="
-      left: 0px;
-      top: 10px;
-    "
+    style="pointer-events: none; visibility: hidden;"
   >
     <div>
       Tooltip
     </div>
     <svg
       class="c2 c3"
-      data-src-position="8"
-      style="
-      left: -7.5px;
-      top: -9px;
-    "
-      viewBox="0 0 377.3 251.9"
     >
       <path
         d="M251.8,371.6c-17.4,5.9-37.2,2.6-50.4-8L16.3,215.3v-0.1c-18.1-14.5-18.1-38.1,0-52.6L201.4,14.2 c13.3-10.7,33.1-13.8,50.4-8"

@@ -150,12 +150,7 @@ exports[`<FixedBox /> should render component when status true 1`] = `
   >
     <div
       class=" c2"
-      style="
-    left: 0px;
-    top: 0px;
-    width: 0px;
-    height: 0px;
-  "
+      style="pointer-events: none; visibility: hidden;"
     >
       <div>
         Box
