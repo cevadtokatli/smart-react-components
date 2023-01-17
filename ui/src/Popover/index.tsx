@@ -9,7 +9,7 @@ import PopoverArrow from './PopoverArrow'
 import useFixedBoxMethods from '../hooks/useFixedBoxMethods'
 import { Position, TriggerInteraction } from '../types'
 import { canBeRenderedInPortal } from '../util/dom'
-import { calculatePosition, getArrowViewBox } from '../util/popover'
+import { calculatePosition } from '../util/popover'
 import PopoverElement, { PopoverHeader, PopoverContent } from './PopoverElement'
 
 export { Position, TriggerInteraction } from '../types'
@@ -67,15 +67,7 @@ const Popover: React.FC<Props> = ({
   const getTriggerEl = () => ((children[0] as any).ref ?? triggerEl).current as HTMLElement
   const getTransitionDuration = () => transitionDuration ?? theme.$.transition.popoverDuration
 
-  const handlePosition = () => {
-    const { arrowStyle, isArrowInHeader, pos, style } = calculatePosition(triggerEl.current.getBoundingClientRect(), boxEl.current.getBoundingClientRect(), headerEl.current?.getBoundingClientRect(), position, space)
-    boxEl.current.setAttribute('style', style)
-    boxEl.current.setAttribute('data-src-position', String(pos))
-    arrowEl.current.setAttribute('style', arrowStyle)
-    arrowEl.current.setAttribute('viewBox', getArrowViewBox(pos))
-    arrowEl.current.setAttribute('data-src-position', String(pos))
-    arrowEl.current.setAttribute('data-arrow-header', String(isArrowInHeader))
-  }
+  const handlePosition = () => calculatePosition(triggerEl.current, boxEl.current, headerEl.current, arrowEl.current, position, space)
 
   const {
     getStatus,

@@ -109,12 +109,20 @@ const calculatePositionBasedOnYAxis = (
  * Calculates the box and arrow position.
  */
 export const calculatePosition = (
-  triggerRect: DOMRect,
-  boxRect: DOMRect,
-  headerRect: DOMRect | null,
+  triggerEl: HTMLElement,
+  boxEl: HTMLDivElement | null,
+  headerEl: HTMLHeadingElement | null,
+  arrowEl: SVGSVGElement,
   position: Position,
   space: number,
-): PopoverCalculationResult => {
+) => {
+  if (!boxEl) {
+    return
+  }
+
+  const triggerRect = triggerEl.getBoundingClientRect()
+  const boxRect = boxEl.getBoundingClientRect()
+  const headerRect = headerEl?.getBoundingClientRect()
   const windowWidth = window.innerWidth
   const windowHeight = window.innerHeight
 
@@ -155,7 +163,12 @@ export const calculatePosition = (
     }
   }
 
-  return result
+  boxEl.setAttribute('style', result.style)
+  boxEl.setAttribute('data-src-position', String(result.pos))
+  arrowEl.setAttribute('style', result.arrowStyle)
+  arrowEl.setAttribute('viewBox', getArrowViewBox(result.pos))
+  arrowEl.setAttribute('data-src-position', String(result.pos))
+  arrowEl.setAttribute('data-arrow-header', String(result.isArrowInHeader))
 }
 
 /**
@@ -218,9 +231,9 @@ export const generateCSSTransitionClasses = (key: string, duration: number) => `
 /**
  * Returns width and height attributes depending on position
  */
-export const getArrowSize = (position: Position) => position & (Position.LEFT | Position.RIGHT) ? [10, 15] : [15, 10]
+const getArrowSize = (position: Position) => position & (Position.LEFT | Position.RIGHT) ? [10, 15] : [15, 10]
 
 /**
  * Returns viewBox attribute depending on position
  */
-export const getArrowViewBox = (position: Position) => position & (Position.LEFT | Position.RIGHT) ? '0 0 252.8 378.5' : '0 0 377.3 251.9'
+const getArrowViewBox = (position: Position) => position & (Position.LEFT | Position.RIGHT) ? '0 0 252.8 378.5' : '0 0 377.3 251.9'

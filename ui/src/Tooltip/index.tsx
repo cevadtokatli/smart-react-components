@@ -9,7 +9,7 @@ import PopoverArrow from '../Popover/PopoverArrow'
 import useFixedBoxMethods from '../hooks/useFixedBoxMethods'
 import { Position, TriggerInteraction } from '../types'
 import { canBeRenderedInPortal } from '../util/dom'
-import { calculatePosition, getArrowViewBox } from '../util/popover'
+import { calculatePosition } from '../util/popover'
 import TooltipElement from './TooltipElement'
 
 export { Position, TriggerInteraction } from '../types'
@@ -43,14 +43,7 @@ const Tooltip: React.FC<Props> = ({ afterHide, afterShow, beforeHide, beforeShow
   const getTriggerEl = () => ((children[0] as any).ref ?? triggerEl).current as HTMLElement
   const getTransitionDuration = () => transitionDuration ?? theme.$.transition.tooltipDuration
 
-  const handlePosition = () => {
-    const { arrowStyle, pos, style } = calculatePosition(triggerEl.current.getBoundingClientRect(), boxEl.current.getBoundingClientRect(), null, position, space)
-    boxEl.current.setAttribute('style', style)
-    boxEl.current.setAttribute('data-src-position', String(pos))
-    arrowEl.current.setAttribute('style', arrowStyle)
-    arrowEl.current.setAttribute('viewBox', getArrowViewBox(pos))
-    arrowEl.current.setAttribute('data-src-position', String(pos))
-  }
+  const handlePosition = () => calculatePosition(triggerEl.current, boxEl.current, null, arrowEl.current, position, space)
 
   const {
     getStatus,
