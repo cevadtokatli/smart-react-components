@@ -5,11 +5,10 @@ import CSSTransition from '@smart-react-components/transition/CSSTransition'
 import { TransitionAfterCallback, TransitionBeforeCallback } from '@smart-react-components/transition/types'
 import React from 'react'
 import { ThemeContext } from 'styled-components'
-import ReplicaDOMElement from '../components/ReplicaDOMElement'
 import useFixedBoxMethods from '../hooks/useFixedBoxMethods'
 import Overlay from '../Overlay'
 import { Position, TriggerInteraction } from '../types'
-import { calculateXAxis, calculateYAxis } from '../util/fixed-box'
+import { calculatePosition } from '../util/fixed-box'
 import FixedBoxElement from './FixedBoxElement'
 import OverlayElement from './OverlayElement'
 
@@ -59,43 +58,10 @@ const FixedBox: React.FC<Props> = ({
   const theme = React.useContext<Theme>(ThemeContext)
   const triggerEl = React.useRef<HTMLElement>(null)
   const boxEl = React.useRef<HTMLDivElement>(null)
-  const boxReplicaEl = React.useRef<HTMLDivElement>(null)
 
   const getTriggerEl = () => ((children[0] as any).ref ?? triggerEl).current as HTMLElement
 
-  const handlePosition = () => {
-    if (!boxEl.current) {
-      return
-    }
-
-    if (boxReplicaEl.current) {
-      boxReplicaEl.current.removeAttribute('style')
-      boxReplicaEl.current.innerHTML = boxEl.current.innerHTML
-    }
-
-    const triggerRect = getTriggerEl().getBoundingClientRect()
-    const windowWidth = window.innerWidth
-    const windowHeight = window.innerHeight
-
-    boxEl.current.setAttribute('style', `
-      ${calculateXAxis(
-        triggerRect,
-        boxReplicaEl.current ?? boxEl.current,
-        position,
-        maxWidth,
-        minWidth,
-        space,
-        windowWidth,
-      )}
-      ${calculateYAxis(
-        triggerRect,
-        boxReplicaEl.current ?? boxEl.current,
-        position,
-        space,
-        windowHeight,
-      )}
-    `)
-  }
+  const handlePosition = () => calculatePosition(getTriggerEl(), boxEl.current, position, maxWidth, minWidth, space)
 
   const {
     getStatus,
@@ -127,7 +93,6 @@ const FixedBox: React.FC<Props> = ({
           <FixedBoxElement breakpoint={breakpoint} ref={boxEl}>{children[1]}</FixedBoxElement>
         </Overlay>
       </CSSTransition>
-      <ReplicaDOMElement ref={boxReplicaEl} />
     </>
   )
 }
