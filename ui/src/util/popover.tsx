@@ -31,7 +31,7 @@ const calculatePositionBasedOnXAxis = (
   const top = headerRect
     ? (triggerRect.top + (triggerRect.height / 2) - (headerRect.height + (arrowHeight / 2)))
     : (triggerRect.top + (triggerRect.height / 2) - (boxRect.height / 2))
-  const arrowTop = headerRect?.height ?? ((boxRect.height - (arrowHeight * 2)) / 2)
+  const arrowTop = headerRect?.height ?? ((boxRect.height - arrowHeight) / 2)
   const isArrowInHeader = headerRect && arrowTop + (arrowHeight * 2) < headerRect.height
 
   if (top < 0) {
@@ -83,7 +83,7 @@ const calculatePositionBasedOnYAxis = (
   }
 
   const left = (triggerRect.left) + (triggerRect.width / 2) - (boxRect.width / 2)
-  const arrowLeft = (boxRect.height / 2) - (arrowWidth / 2)
+  const arrowLeft = (boxRect.width / 2) - (arrowWidth / 2)
   if (left < 0) {
     overflow += Math.abs(left)
   } else {
