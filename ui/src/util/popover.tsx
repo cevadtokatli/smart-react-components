@@ -1,5 +1,6 @@
 import { Position } from '../types'
 import { PopoverCalculationResult } from '../types/popover'
+import { calculateShownPart } from './dom'
 
 /**
  * Calculates the box and arrow position based on X axis.
@@ -120,11 +121,22 @@ export const calculatePosition = (
     return
   }
 
-  const triggerRect = triggerEl.getBoundingClientRect()
-  const boxRect = boxEl.getBoundingClientRect()
-  const headerRect = headerEl?.getBoundingClientRect()
   const windowWidth = window.innerWidth
   const windowHeight = window.innerHeight
+  const triggerRect = {
+    ...triggerEl.getBoundingClientRect(),
+    ...calculateShownPart(triggerEl),
+  }
+
+  if (triggerRect.width <= 0 || triggerRect.height <= 0) {
+    boxEl.setAttribute('style', 'pointer-events: none; visibility: hidden;')
+    return
+  }
+
+  boxEl.removeAttribute('style')
+
+  const boxRect = boxEl.getBoundingClientRect()
+  const headerRect = headerEl?.getBoundingClientRect()
 
   let result: PopoverCalculationResult
 

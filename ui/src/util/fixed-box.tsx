@@ -1,4 +1,5 @@
 import { Position } from '../types'
+import { calculateShownPart } from './dom'
 
 /**
  * Calculated fixed box position and size.
@@ -15,11 +16,20 @@ export const calculatePosition = (
     return
   }
 
-  boxEl.removeAttribute('style')
-
-  const triggerRect = triggerEl.getBoundingClientRect()
   const windowWidth = window.innerWidth
   const windowHeight = window.innerHeight
+  const triggerRect = {
+    ...triggerEl.getBoundingClientRect(),
+    ...calculateShownPart(triggerEl),
+  }
+
+  if (triggerRect.width <= 0 || triggerRect.height <= 0) {
+    boxEl.setAttribute('style', 'pointer-events: none; visibility: hidden;')
+    return
+  }
+
+  boxEl.removeAttribute('style')
+
   let width = boxEl.offsetWidth
 
   if (minWidth && minWidth > width) {
@@ -65,7 +75,7 @@ const calculatePositionBasedOnXAxis = (
 
   // top & height
   let top: number
-  let height: number
+  let height = boxEl.offsetHeight
   const triggerHeight = triggerRect.height + triggerRect.top <= windowHeight ? triggerRect.height : (windowHeight - triggerRect.top)
   const diffBottom = windowHeight - (triggerRect.top + height)
   const diffTop = (triggerRect.top + triggerHeight) - height
