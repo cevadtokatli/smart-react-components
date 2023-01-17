@@ -7,6 +7,7 @@ const createPaletteItem = (paletteItem: InputPaletteItem, theme: Theme): Palette
   let result: Partial<PaletteItem> = {
     popover: {},
     progressBar: {},
+    tooltip: {},
   }
 
   if (typeof paletteItem === 'string') {
@@ -56,6 +57,12 @@ const createPaletteItem = (paletteItem: InputPaletteItem, theme: Theme): Palette
   result.progressBar.filledBackground ||= theme.$.color.dynamic.gray
   result.progressBar.font ||= result.font
   result.progressBar.nestedBackground ||= getColor(theme.$.color.light.background).alpha(.3).rgb().toString()
+
+  result.tooltip.background ||= result.background
+  result.tooltip.font ||= result.font
+  result.tooltip.softBackground ||= result.soft
+  result.tooltip.softFont ||= result.softFont
+  result.tooltip.shadow ||= theme.$.color.dynamic.shadow
 
   const waveEffect = getColor(result.waveEffect ?? result.main)
   result.waveEffect = `radial-gradient(${waveEffect.alpha(.2).toString()} 0, ${waveEffect.alpha(.3).toString()} 40%, ${waveEffect.alpha(.4).toString()} 50%, ${waveEffect.alpha(.5).toString()} 60%, ${waveEffect.alpha(0).toString()} 70%)`

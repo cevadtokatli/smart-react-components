@@ -6,6 +6,7 @@ interface DefaultFontFamilyAttributes {
   popover: string
   popoverHeader: string
   progressBar: string
+  tooltip: string
 }
 
 type FontFamilyAttributes = DefaultFontFamilyAttributes & OptionalThemeAttributes

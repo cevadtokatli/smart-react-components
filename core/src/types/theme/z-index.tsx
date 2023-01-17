@@ -4,6 +4,7 @@ interface DefaultZIndexAttributes {
   fixedBox: number
   overlay: number
   popover: number
+  tooltip: number
 }
 
 type ZIndexAttributes = DefaultZIndexAttributes & OptionalThemeAttributes

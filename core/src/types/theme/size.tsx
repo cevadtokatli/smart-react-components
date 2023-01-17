@@ -9,6 +9,10 @@ interface DefaultSizeAttributes {
     headerPadding: Coordinator<string>
     padding: Coordinator<string>
   }>
+  tooltip: Size<{
+    fontSize: string
+    padding: Coordinator<string>
+  }>
 }
 
 interface OptionalSizeAttributes {

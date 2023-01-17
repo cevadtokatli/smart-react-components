@@ -6,6 +6,7 @@ const fontFamilyAttributes: FontFamilyAttributes = {
   popover: 'inherit',
   popoverHeader: 'inherit',
   progressBar: 'inherit',
+  tooltip: 'inherit',
 }
 
 export default fontFamilyAttributes

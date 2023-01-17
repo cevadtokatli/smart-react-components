@@ -44,6 +44,29 @@ const sizeAttributes: SizeAttributes = {
       },
     },
   },
+  tooltip: {
+    small: {
+      fontSize: '.75rem',
+      padding: {
+        x: '.4rem',
+        y: '.15rem',
+      },
+    },
+    medium: {
+      fontSize: '.875rem',
+      padding: {
+        x: '.6rem',
+        y: '.3rem',
+      },
+    },
+    large: {
+      fontSize: '1rem',
+      padding: {
+        x: '.8rem',
+        y: '.45rem',
+      },
+    },
+  },
 }
 
 export default sizeAttributes

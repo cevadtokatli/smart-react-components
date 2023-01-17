@@ -36,6 +36,13 @@ interface DefaultPaletteItemAttributes {
     font: string
     nestedBackground: string
   }
+  tooltip: {
+    background: string
+    font: string
+    softBackground: string
+    softFont: string
+    shadow: string
+  }
 }
 
 export type PaletteItem = DefaultPaletteItemAttributes & OptionalThemeAttributes
