@@ -37,6 +37,10 @@ const createPaletteItem = (paletteItem: InputPaletteItem, theme: Theme): Palette
   result.lighter ||= mainColor.lighten(.175).hex().toString()
   result.lightest ||= getColor(result.lighter).lighten(.075).hex().toString()
 
+  result.dynamic = theme.$.vars.isDarkMode ? result.light : result.dark
+  result.dynamicer = theme.$.vars.isDarkMode ? result.lighter : result.darker
+  result.dynamicest = theme.$.vars.isDarkMode ? result.lightest : result.darkest
+
   result.soft ||= mix(result.main, -.8)
   result.softFont ||= mix(result.main, .4)
   result.softDark ||= mix(result.main, -.72)

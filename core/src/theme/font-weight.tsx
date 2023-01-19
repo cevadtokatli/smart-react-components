@@ -5,6 +5,7 @@ const fontWeightAttributes: FontWeightAttributes = {
   normal: '400',
   semibold: '500',
   bold: '600',
+  dropdownCategory: '500',
   popoverHeader: '500',
 }
 

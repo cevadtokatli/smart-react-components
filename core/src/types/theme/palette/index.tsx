@@ -12,6 +12,9 @@ interface DefaultPaletteItemAttributes {
   light: string
   lighter: string
   lightest: string
+  dynamic: string
+  dynamicer: string
+  dynamicest: string
   soft: string
   softFont: string
   softDark: string

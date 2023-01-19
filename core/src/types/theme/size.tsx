@@ -2,6 +2,11 @@ import { Coordinator, Size } from '../'
 import { OptionalThemeAttribute } from './util'
 
 interface DefaultSizeAttributes {
+  dropdown: Size<{
+    fontSize: string
+    margin: Coordinator<string>
+    padding: Coordinator<string>
+  }>
   loading: Size<string>
   popover: Size<{
     fontSize: string

@@ -1,6 +1,41 @@
 import SizeAttributes from '../types/theme/size'
 
 const sizeAttributes: SizeAttributes = {
+  dropdown: {
+    small: {
+      fontSize: '.875rem',
+      margin: {
+        x: '.28rem',
+        y: '.06rem',
+      },
+      padding: {
+        x: '.15625rem',
+        y: '.15625rem',
+      },
+    },
+    medium: {
+      fontSize: '.875rem',
+      margin: {
+        x: '.45rem',
+        y: '.125rem',
+      },
+      padding: {
+        x: '.3125rem',
+        y: '.3125rem',
+      },
+    },
+    large: {
+      fontSize: '1rem',
+      margin: {
+        x: '.5rem',
+        y: '.175rem',
+      },
+      padding: {
+        x: '.625rem',
+        y: '.625rem',
+      },
+    },
+  },
   loading: {
     small: '10px',
     medium: '20px',

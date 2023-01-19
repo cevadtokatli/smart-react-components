@@ -1,4 +1,5 @@
 import Theme, { InputTheme } from '../types/theme'
+import { isMobile } from '../util/dom'
 import { merge } from '../util/object'
 import color from './color'
 import fontFamily from './font-family'
@@ -38,6 +39,7 @@ const createTheme = (theme: InputTheme = {}, isDarkMode: boolean = false): Theme
   const result = merge<Theme>(defaultTheme, theme)
 
   result.$.vars.isDarkMode = isDarkMode
+  result.$.vars.isMobile = isMobile
 
   result.$.color.dynamic = isDarkMode ? result.$.color.dark : result.$.color.light
   result.$.color['!dynamic'] = isDarkMode ? result.$.color.light : result.$.color.dark
