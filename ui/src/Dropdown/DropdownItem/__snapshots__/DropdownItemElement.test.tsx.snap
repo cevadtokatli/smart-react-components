@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownItemElement /> isActive should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  border-radius: .2rem;
+  cursor: default;
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
+  background: #0553AC;
+  color: #fff;
+}
+
+<div
+    class=" c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`<DropdownItemElement /> isActive should render component filled 1`] = `
+<DocumentFragment>
+  .c0 {
+  border-radius: .2rem;
+  cursor: default;
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
+  background: #054D9F;
+  color: #fff;
+}
+
+<div
+    class=" c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`<DropdownItemElement /> isActive should render component filled with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  border-radius: .2rem;
+  cursor: default;
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
+  background: #8eb9e9;
+  color: #033c7c;
+}
+
+<div
+    class=" c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`<DropdownItemElement /> isActive should render component with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  border-radius: .2rem;
+  cursor: default;
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
+  background: #a7c9ee;
+  color: #033c7c;
+}
+
+<div
+    class=" c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`<DropdownItemElement /> should be disabled 1`] = `
+<DocumentFragment>
+  .c0 {
+  border-radius: .2rem;
+  cursor: default;
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.c0:hover {
+  background: #0665d0;
+  color: #fff;
+}
+
+<div
+    class=" c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`<DropdownItemElement /> should not have hover 1`] = `
+<DocumentFragment>
+  .c0 {
+  border-radius: .2rem;
+  cursor: default;
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
+}
+
+<div
+    class=" c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`<DropdownItemElement /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  border-radius: .2rem;
+  cursor: default;
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
+}
+
+.c0:hover {
+  background: #0665d0;
+  color: #fff;
+}
+
+<div
+    class=" c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`<DropdownItemElement /> should render component filled 1`] = `
+<DocumentFragment>
+  .c0 {
+  border-radius: .2rem;
+  cursor: default;
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
+}
+
+.c0:hover {
+  background: #065DC0;
+  color: #fff;
+}
+
+<div
+    class=" c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`<DropdownItemElement /> should render component filled with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  border-radius: .2rem;
+  cursor: default;
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
+}
+
+.c0:hover {
+  background: #b9d3f1;
+  color: #033c7c;
+}
+
+<div
+    class=" c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`<DropdownItemElement /> should render component with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  border-radius: .2rem;
+  cursor: default;
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
+}
+
+.c0:hover {
+  background: #cde0f5;
+  color: #033c7c;
+}
+
+<div
+    class=" c0"
+  />
+</DocumentFragment>
+`;

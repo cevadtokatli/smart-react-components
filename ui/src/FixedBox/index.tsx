@@ -1,5 +1,5 @@
 import { Theme } from '@smart-react-components/core/theme'
-import { SetState } from '@smart-react-components/core/types'
+import { JSXElementProps, SetState } from '@smart-react-components/core/types'
 import { Breakpoint } from '@smart-react-components/core/types/grid'
 import CSSTransition from '@smart-react-components/transition/CSSTransition'
 import { TransitionAfterCallback, TransitionBeforeCallback } from '@smart-react-components/transition/types'
@@ -21,6 +21,7 @@ export interface Props {
   beforeShow?: TransitionBeforeCallback
   breakpoint?: Breakpoint
   children: [JSX.Element, JSX.Element]
+  elementProps?: JSXElementProps
   hasHideAnimation?: boolean
   hasShowAnimation?: boolean
   isDismissible?: boolean
@@ -42,6 +43,7 @@ const FixedBox: React.FC<Props> = ({
   beforeShow,
   breakpoint = 'medium',
   children,
+  elementProps = {},
   hasHideAnimation = true,
   hasShowAnimation = true,
   isDismissible = true,
@@ -90,7 +92,11 @@ const FixedBox: React.FC<Props> = ({
             isDisplayedWhenBreakpointNull: false,
           }}
         >
-          <FixedBoxElement breakpoint={breakpoint} ref={boxEl}>{children[1]}</FixedBoxElement>
+          <FixedBoxElement
+            {...elementProps}
+            breakpoint={breakpoint}
+            ref={boxEl}
+          >{children[1]}</FixedBoxElement>
         </Overlay>
       </CSSTransition>
     </>

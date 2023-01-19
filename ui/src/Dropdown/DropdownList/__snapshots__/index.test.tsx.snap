@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownList /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  padding: .3125rem 0;
+}
+
+.c0 > div {
+  font-size: .875rem;
+  margin: .125rem .45rem;
+  padding: .3125rem .3125rem;
+}
+
+.c2 {
+  font-weight: 500;
+}
+
+.c3 {
+  overflow: hidden;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c1 {
+  border-radius: .2rem;
+  box-shadow: 0 0 10px 1px rgba(154,161,171,.15);
+  font-family: inherit;
+  height: inherit;
+  overflow: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: inherit;
+  -webkit-overflow-scrolling: touch;
+  background: #fff;
+  color: #323a46;
+  fill: #323a46;
+}
+
+.c1 > div {
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+.c4 {
+  border-radius: .2rem;
+  cursor: default;
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
+}
+
+.c4:hover {
+  background: #0665d0;
+  color: #fff;
+}
+
+<div
+    class="c0 c1"
+  >
+    <div
+      class="c2"
+      font-weight="$fontWeight.dropdownCategory"
+    >
+      Category
+    </div>
+    <div
+      class="c3 c4"
+      overflow="hidden"
+    >
+      Item 1
+    </div>
+    <div
+      class="c3 c4"
+      overflow="hidden"
+    >
+      Item 2
+    </div>
+    <div
+      class="c3 c4"
+      overflow="hidden"
+    >
+      Item 3
+    </div>
+  </div>
+</DocumentFragment>
+`;
