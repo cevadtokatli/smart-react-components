@@ -3,6 +3,16 @@
 exports[`<DropdownListElement /> should render component 1`] = `
 <DocumentFragment>
   .c0 {
+  padding: .3125rem 0;
+}
+
+.c0 > div {
+  font-size: .875rem;
+  margin: .125rem .45rem;
+  padding: .3125rem .3125rem;
+}
+
+.c1 {
   border-radius: .2rem;
   box-shadow: 0 0 10px 1px rgba(154,161,171,.15);
   font-family: inherit;
@@ -19,13 +29,13 @@ exports[`<DropdownListElement /> should render component 1`] = `
   fill: #323a46;
 }
 
-.c0 > div {
+.c1 > div {
   word-break: break-word;
   word-wrap: break-word;
 }
 
 <div
-    class=" c0"
+    class="c0 c1"
   />
 </DocumentFragment>
 `;
@@ -33,6 +43,16 @@ exports[`<DropdownListElement /> should render component 1`] = `
 exports[`<DropdownListElement /> should render component filled 1`] = `
 <DocumentFragment>
   .c0 {
+  padding: .3125rem 0;
+}
+
+.c0 > div {
+  font-size: .875rem;
+  margin: .125rem .45rem;
+  padding: .3125rem .3125rem;
+}
+
+.c1 {
   border-radius: .2rem;
   box-shadow: 0 0 10px 1px rgba(154,161,171,.15);
   font-family: inherit;
@@ -49,13 +69,13 @@ exports[`<DropdownListElement /> should render component filled 1`] = `
   fill: #fff;
 }
 
-.c0 > div {
+.c1 > div {
   word-break: break-word;
   word-wrap: break-word;
 }
 
 <div
-    class=" c0"
+    class="c0 c1"
   />
 </DocumentFragment>
 `;
@@ -63,6 +83,16 @@ exports[`<DropdownListElement /> should render component filled 1`] = `
 exports[`<DropdownListElement /> should render component filled with soft colors 1`] = `
 <DocumentFragment>
   .c0 {
+  padding: .3125rem 0;
+}
+
+.c0 > div {
+  font-size: .875rem;
+  margin: .125rem .45rem;
+  padding: .3125rem .3125rem;
+}
+
+.c1 {
   border-radius: .2rem;
   box-shadow: 0 0 10px 1px rgba(154,161,171,.15);
   font-family: inherit;
@@ -79,13 +109,13 @@ exports[`<DropdownListElement /> should render component filled with soft colors
   fill: #033c7c;
 }
 
-.c0 > div {
+.c1 > div {
   word-break: break-word;
   word-wrap: break-word;
 }
 
 <div
-    class=" c0"
+    class="c0 c1"
   />
 </DocumentFragment>
 `;
@@ -93,6 +123,16 @@ exports[`<DropdownListElement /> should render component filled with soft colors
 exports[`<DropdownListElement /> should render component with soft colors 1`] = `
 <DocumentFragment>
   .c0 {
+  padding: .3125rem 0;
+}
+
+.c0 > div {
+  font-size: .875rem;
+  margin: .125rem .45rem;
+  padding: .3125rem .3125rem;
+}
+
+.c1 {
   border-radius: .2rem;
   box-shadow: 0 0 10px 1px rgba(154,161,171,.15);
   font-family: inherit;
@@ -109,13 +149,13 @@ exports[`<DropdownListElement /> should render component with soft colors 1`] = 
   fill: #323a46;
 }
 
-.c0 > div {
+.c1 > div {
   word-break: break-word;
   word-wrap: break-word;
 }
 
 <div
-    class=" c0"
+    class="c0 c1"
   />
 </DocumentFragment>
 `;

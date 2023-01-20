@@ -8,6 +8,7 @@ describe('<DropdownListElement />', () => {
 
   beforeAll(() => {
     props = {
+      dropdownListSize: 'medium',
       isFilled: false,
       isSoft: false,
       palette: 'primary',
