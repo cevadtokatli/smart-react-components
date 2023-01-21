@@ -1,6 +1,32 @@
 import SizeAttributes from '../types/theme/size'
 
 const sizeAttributes: SizeAttributes = {
+  alert: {
+    small: {
+      fontSize: '.875rem',
+      iconSize: '.875rem',
+      padding: {
+        x: '1.25rem',
+        y: '.375rem',
+      },
+    },
+    medium: {
+      fontSize: '1rem',
+      iconSize: '1rem',
+      padding: {
+        x: '1.25rem',
+        y: '.75rem',
+      },
+    },
+    large: {
+      fontSize: '1rem',
+      iconSize: '1rem',
+      padding: {
+        x: '1.25rem',
+        y: '1rem',
+      },
+    },
+  },
   dropdown: {
     small: {
       fontSize: '.875rem',

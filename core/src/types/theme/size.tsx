@@ -2,6 +2,11 @@ import { Coordinator, Size } from '../'
 import { OptionalThemeAttribute } from './util'
 
 interface DefaultSizeAttributes {
+  alert: Size<{
+    fontSize: string
+    iconSize: string
+    padding: Coordinator<string>
+  }>
   dropdown: Size<{
     fontSize: string
     margin: Coordinator<string>

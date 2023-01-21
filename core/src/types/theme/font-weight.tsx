@@ -5,6 +5,7 @@ interface DefaultFontWeightAttributes {
   normal: string
   semibold: string
   bold: string
+  alertLink: string
   dropdownCategory: string
   popoverHeader: string
 }

@@ -4,6 +4,7 @@ interface DefaultFontFamilyAttributes {
   primary: string
   secondary: string
   dropdown: string
+  alert: string
   popover: string
   popoverHeader: string
   progressBar: string
