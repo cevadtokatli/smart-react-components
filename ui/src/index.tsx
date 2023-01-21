@@ -1,3 +1,6 @@
+export { default as Alert } from './Alert'
+export { default as AlertCloseIcon } from './Alert/AlertCloseIcon'
+export { default as AlertIcon } from './Alert/AlertIcon'
 export { default as Dropdown } from './Dropdown'
 export { default as DropdownArrowIcon } from './Dropdown/DropdownArrowIcon'
 export { default as DropdownCategory } from './Dropdown/DropdownCategory'

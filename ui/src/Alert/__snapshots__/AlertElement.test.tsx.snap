@@ -1,0 +1,572 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AlertElement /> should have icons 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+}
+
+.c0 .c3 {
+  padding: .75rem 1.25rem;
+}
+
+.c4 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c1 {
+  border: solid 1px;
+  border-left-width: 10px;
+  border-radius: .25rem;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  background: #0665d0;
+  border-color: #054D9F;
+  color: #fff;
+}
+
+.c1 > .c3 {
+  padding-left: 0;
+}
+
+.c1 > .c3 {
+  padding-right: 0;
+}
+
+.c1 .c3 > header,
+.c1 .c3 > h1,
+.c1 .c3 > h2,
+.c1 .c3 > h3,
+.c1 .c3 > h4,
+.c1 .c3 > h5,
+.c1 .c3 > h6,
+.c1 .c3 > p,
+.c1 .c3 > hr {
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.c1 .c3 > header:last-child,
+.c1 .c3 > h1:last-child,
+.c1 .c3 > h2:last-child,
+.c1 .c3 > h3:last-child,
+.c1 .c3 > h4:last-child,
+.c1 .c3 > h5:last-child,
+.c1 .c3 > h6:last-child,
+.c1 .c3 > p:last-child,
+.c1 .c3 > hr:last-child {
+  margin-bottom: 0;
+}
+
+.c1 a {
+  font-weight: 500;
+}
+
+.c1 a:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1 hr {
+  background: #054D9F;
+  border: 0;
+  height: 1px;
+  width: 100%;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #fff;
+  fill: #fff;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  >
+    <div
+      class=" c2"
+    >
+      <svg />
+    </div>
+    <div
+      class="c3 c4"
+    >
+      Content
+    </div>
+    <div
+      class=" c2"
+    >
+      <svg />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<AlertElement /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+}
+
+.c0 .c2 {
+  padding: .75rem 1.25rem;
+}
+
+.c3 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c1 {
+  border: solid 1px;
+  border-left-width: 10px;
+  border-radius: .25rem;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  background: #0665d0;
+  border-color: #054D9F;
+  color: #fff;
+}
+
+.c1 .c2 > header,
+.c1 .c2 > h1,
+.c1 .c2 > h2,
+.c1 .c2 > h3,
+.c1 .c2 > h4,
+.c1 .c2 > h5,
+.c1 .c2 > h6,
+.c1 .c2 > p,
+.c1 .c2 > hr {
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.c1 .c2 > header:last-child,
+.c1 .c2 > h1:last-child,
+.c1 .c2 > h2:last-child,
+.c1 .c2 > h3:last-child,
+.c1 .c2 > h4:last-child,
+.c1 .c2 > h5:last-child,
+.c1 .c2 > h6:last-child,
+.c1 .c2 > p:last-child,
+.c1 .c2 > hr:last-child {
+  margin-bottom: 0;
+}
+
+.c1 a {
+  font-weight: 500;
+}
+
+.c1 a:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1 hr {
+  background: #054D9F;
+  border: 0;
+  height: 1px;
+  width: 100%;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  >
+    <div
+      class="c2 c3"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<AlertElement /> should render component outline 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+}
+
+.c0 .c2 {
+  padding: .75rem 1.25rem;
+}
+
+.c3 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c1 {
+  border: solid 1px;
+  border-left-width: 10px;
+  border-radius: .25rem;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  border-color: #0665d0;
+  color: #0665d0;
+}
+
+.c1 .c2 > header,
+.c1 .c2 > h1,
+.c1 .c2 > h2,
+.c1 .c2 > h3,
+.c1 .c2 > h4,
+.c1 .c2 > h5,
+.c1 .c2 > h6,
+.c1 .c2 > p,
+.c1 .c2 > hr {
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.c1 .c2 > header:last-child,
+.c1 .c2 > h1:last-child,
+.c1 .c2 > h2:last-child,
+.c1 .c2 > h3:last-child,
+.c1 .c2 > h4:last-child,
+.c1 .c2 > h5:last-child,
+.c1 .c2 > h6:last-child,
+.c1 .c2 > p:last-child,
+.c1 .c2 > hr:last-child {
+  margin-bottom: 0;
+}
+
+.c1 a {
+  font-weight: 500;
+}
+
+.c1 a:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1 hr {
+  background: #054D9F;
+  border: 0;
+  height: 1px;
+  width: 100%;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  >
+    <div
+      class="c2 c3"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<AlertElement /> should render component outline with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+}
+
+.c0 .c2 {
+  padding: .75rem 1.25rem;
+}
+
+.c3 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c1 {
+  border: solid 1px;
+  border-left-width: 10px;
+  border-radius: .25rem;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  border-color: #cde0f5;
+  color: #cde0f5;
+}
+
+.c1 .c2 > header,
+.c1 .c2 > h1,
+.c1 .c2 > h2,
+.c1 .c2 > h3,
+.c1 .c2 > h4,
+.c1 .c2 > h5,
+.c1 .c2 > h6,
+.c1 .c2 > p,
+.c1 .c2 > hr {
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.c1 .c2 > header:last-child,
+.c1 .c2 > h1:last-child,
+.c1 .c2 > h2:last-child,
+.c1 .c2 > h3:last-child,
+.c1 .c2 > h4:last-child,
+.c1 .c2 > h5:last-child,
+.c1 .c2 > h6:last-child,
+.c1 .c2 > p:last-child,
+.c1 .c2 > hr:last-child {
+  margin-bottom: 0;
+}
+
+.c1 a {
+  font-weight: 500;
+}
+
+.c1 a:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1 hr {
+  background: #8eb9e9;
+  border: 0;
+  height: 1px;
+  width: 100%;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  >
+    <div
+      class="c2 c3"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<AlertElement /> should render component with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+}
+
+.c0 .c2 {
+  padding: .75rem 1.25rem;
+}
+
+.c3 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c1 {
+  border: solid 1px;
+  border-left-width: 10px;
+  border-radius: .25rem;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  background: #cde0f5;
+  border-color: #8eb9e9;
+  color: #033c7c;
+}
+
+.c1 .c2 > header,
+.c1 .c2 > h1,
+.c1 .c2 > h2,
+.c1 .c2 > h3,
+.c1 .c2 > h4,
+.c1 .c2 > h5,
+.c1 .c2 > h6,
+.c1 .c2 > p,
+.c1 .c2 > hr {
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.c1 .c2 > header:last-child,
+.c1 .c2 > h1:last-child,
+.c1 .c2 > h2:last-child,
+.c1 .c2 > h3:last-child,
+.c1 .c2 > h4:last-child,
+.c1 .c2 > h5:last-child,
+.c1 .c2 > h6:last-child,
+.c1 .c2 > p:last-child,
+.c1 .c2 > hr:last-child {
+  margin-bottom: 0;
+}
+
+.c1 a {
+  font-weight: 500;
+}
+
+.c1 a:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1 hr {
+  background: #8eb9e9;
+  border: 0;
+  height: 1px;
+  width: 100%;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  >
+    <div
+      class="c2 c3"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<AlertElement /> should resize component responsively 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: .875rem;
+}
+
+.c0 .c2 {
+  padding: .375rem 1.25rem;
+}
+
+.c3 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c1 {
+  border: solid 1px;
+  border-left-width: 10px;
+  border-radius: .25rem;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  background: #0665d0;
+  border-color: #054D9F;
+  color: #fff;
+}
+
+.c1 .c2 > header,
+.c1 .c2 > h1,
+.c1 .c2 > h2,
+.c1 .c2 > h3,
+.c1 .c2 > h4,
+.c1 .c2 > h5,
+.c1 .c2 > h6,
+.c1 .c2 > p,
+.c1 .c2 > hr {
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.c1 .c2 > header:last-child,
+.c1 .c2 > h1:last-child,
+.c1 .c2 > h2:last-child,
+.c1 .c2 > h3:last-child,
+.c1 .c2 > h4:last-child,
+.c1 .c2 > h5:last-child,
+.c1 .c2 > h6:last-child,
+.c1 .c2 > p:last-child,
+.c1 .c2 > hr:last-child {
+  margin-bottom: 0;
+}
+
+.c1 a {
+  font-weight: 500;
+}
+
+.c1 a:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1 hr {
+  background: #054D9F;
+  border: 0;
+  height: 1px;
+  width: 100%;
+}
+
+@media (min-width:768px) {
+  .c0 {
+    font-size: 1rem;
+  }
+
+  .c0 .c2 {
+    padding: .75rem 1.25rem;
+  }
+}
+
+@media (min-width:992px) {
+  .c0 {
+    font-size: 1rem;
+  }
+
+  .c0 .c2 {
+    padding: 1rem 1.25rem;
+  }
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  >
+    <div
+      class="c2 c3"
+    />
+  </div>
+</DocumentFragment>
+`;
