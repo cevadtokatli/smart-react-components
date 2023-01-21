@@ -4,6 +4,7 @@ import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-compone
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { ContentElement, JSXElementProps, PaletteProp, Partial, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
+import { extractIconsOutOfChildren } from '../util/props'
 import AlertElement, { Content } from './AlertElement'
 
 export interface Props extends
@@ -19,7 +20,7 @@ export interface Props extends
 }
 
 const Alert: React.FC<Props> = props => {
-  const cloneIcon = item => React.cloneElement(item, {
+  const getContent = () => extractIconsOutOfChildren(props.children, Content, {
     alertPalette: props.palette,
     isSoft: props.isSoft,
     size: props.size,
@@ -28,44 +29,6 @@ const Alert: React.FC<Props> = props => {
     sizeLg: props.sizeLg,
     sizeXl: props.sizeXl,
   })
-
-  const getContent = () => {
-    if (!Array.isArray(props.children)) {
-      return {
-        children: <Content>{props.children}</Content>,
-        hasIconLeft: false,
-        hasIconRight: false,
-      }
-    }
-
-    let iconLeft = null
-    let iconRight = null
-    const children = props.children.filter((item, idx) => {
-      if (idx === 0 && item.type?.displayName === 'SRCAlertIcon') {
-        iconLeft = cloneIcon(item)
-        return false
-      }
-
-      if (idx === (props.children as JSX.Element[]).length - 1 && item.type?.displayName === 'SRCAlertIcon') {
-        iconRight = cloneIcon(item)
-        return false
-      }
-
-      return React.cloneElement(item, { key: item.key ?? idx })
-    })
-
-    return {
-      children: (
-        <>
-          { iconLeft && iconLeft }
-          <Content>{children}</Content>
-          { iconRight && iconRight }
-        </>
-      ),
-      hasIconLeft: !!iconLeft,
-      hasIconRight: !!iconRight,
-    }
-  }
 
   const [{ children, hasIconLeft, hasIconRight }, setContent] = React.useState(() => getContent())
 
