@@ -3,6 +3,7 @@ import { OptionalThemeAttributes } from './util'
 
 interface DefaultRadiusAttributes {
   alert: Shape<string>
+  badge: Shape<string>
   dropdown: string
   popover: string
   tooltip: string

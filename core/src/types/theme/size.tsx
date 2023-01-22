@@ -7,6 +7,13 @@ interface DefaultSizeAttributes {
     iconSize: string
     padding: Coordinator<string>
   }>
+  badge: Size<{
+    fixedSize: string
+    fontSize: string
+    iconSize: string
+    margin: Coordinator<string>
+    padding: Coordinator<string>
+  }>
   dropdown: Size<{
     fontSize: string
     margin: Coordinator<string>

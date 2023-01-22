@@ -27,6 +27,47 @@ const sizeAttributes: SizeAttributes = {
       },
     },
   },
+  badge: {
+    small: {
+      fixedSize: '18px',
+      fontSize: '.75rem',
+      iconSize: '.75rem',
+      margin: {
+        x: '.3125rem',
+        y: '.3125rem',
+      },
+      padding: {
+        x: '.1875rem',
+        y: '.09375rem',
+      },
+    },
+    medium: {
+      fixedSize: '20px',
+      fontSize: '.75rem',
+      iconSize: '.75rem',
+      margin: {
+        x: '.3125rem',
+        y: '.3125rem',
+      },
+      padding: {
+        x: '.375rem',
+        y: '.1875rem',
+      },
+    },
+    large: {
+      fixedSize: '22px',
+      fontSize: '.875rem',
+      iconSize: '.875rem',
+      margin: {
+        x: '.3125rem',
+        y: '.3125rem',
+      },
+      padding: {
+        x: '.65rem',
+        y: '.3rem',
+      },
+    },
+  },
   dropdown: {
     small: {
       fontSize: '.875rem',

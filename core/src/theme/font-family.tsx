@@ -4,6 +4,7 @@ const fontFamilyAttributes: FontFamilyAttributes = {
   primary: 'Nunito',
   secondary: '"Open Sans"',
   alert: 'inherit',
+  badge: 'inherit',
   dropdown: 'inherit',
   popover: 'inherit',
   popoverHeader: 'inherit',
