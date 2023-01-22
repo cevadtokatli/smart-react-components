@@ -1,6 +1,7 @@
 import Div from '@smart-react-components/core/Element/Div'
 import React from 'react'
-import { extractIconsOutOfChildren } from './props'
+import { OrderPosition } from '../types'
+import { extractIconsOutOfChildren, getReverseOrderPosition } from './props'
 
 describe('props', () => {
   it('should extract icons out of children', () => {
@@ -22,5 +23,10 @@ describe('props', () => {
     expect(hasIconLeft).toBeTruthy()
     expect(children.props.children[2]).toBeFalsy()
     expect(hasIconRight).toBeFalsy()
+  })
+
+  it('should get reverse value of the order position', () => {
+    expect(getReverseOrderPosition(OrderPosition.LEFT)).toEqual(OrderPosition.RIGHT)
+    expect(getReverseOrderPosition(OrderPosition.RIGHT)).toEqual(OrderPosition.LEFT)
   })
 })

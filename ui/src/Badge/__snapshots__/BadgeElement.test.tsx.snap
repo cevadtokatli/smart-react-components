@@ -1,0 +1,672 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BadgeElement /> should be absolute 1`] = `
+<DocumentFragment>
+  .c0 {
+  offset: 10px;
+}
+
+.c0 .c2 {
+  font-size: .75rem;
+  padding: .1875rem .375rem;
+}
+
+.c0 svg {
+  height: .75rem;
+  width: .75rem;
+}
+
+.c0 i {
+  font-size: .75rem;
+}
+
+.c3 {
+  border: solid 1px;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  right: 10px;
+}
+
+.c1 .c2 {
+  border-color: #0665d0;
+  border-radius: .15rem;
+}
+
+.c1 .c2 {
+  background: #0665d0;
+  color: #fff;
+  fill: #fff;
+}
+
+.c1:active .c2 {
+  background: #0553AC;
+  border-color: #0553AC;
+}
+
+<div
+    class="c0 c1"
+    offset="10"
+    shape="rectangle"
+  >
+    <div
+      class="c2 c3"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<BadgeElement /> should be fixed size 1`] = `
+<DocumentFragment>
+  .c0 {
+  offset: 10px;
+}
+
+.c0 .c2 {
+  font-size: .75rem;
+  height: 20px;
+  width: 20px;
+}
+
+.c0 svg {
+  height: .75rem;
+  width: .75rem;
+}
+
+.c0 i {
+  font-size: .75rem;
+}
+
+.c3 {
+  border: solid 1px;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c1 .c2 {
+  border-color: #0665d0;
+  border-radius: .15rem;
+}
+
+.c1 .c2 {
+  background: #0665d0;
+  color: #fff;
+  fill: #fff;
+}
+
+.c1:active .c2 {
+  background: #0553AC;
+  border-color: #0553AC;
+}
+
+.c1 .c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
+    class="c0 c1"
+    offset="10"
+    shape="rectangle"
+  >
+    <div
+      class="c2 c3"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<BadgeElement /> should have space 1`] = `
+<DocumentFragment>
+  .c0 {
+  offset: 10px;
+  margin: .3125rem .3125rem;
+}
+
+.c0 .c2 {
+  font-size: .75rem;
+  padding: .1875rem .375rem;
+}
+
+.c0 svg {
+  height: .75rem;
+  width: .75rem;
+}
+
+.c0 i {
+  font-size: .75rem;
+}
+
+.c3 {
+  border: solid 1px;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c1 .c2 {
+  border-color: #0665d0;
+  border-radius: .15rem;
+}
+
+.c1 .c2 {
+  background: #0665d0;
+  color: #fff;
+  fill: #fff;
+}
+
+.c1:active .c2 {
+  background: #0553AC;
+  border-color: #0553AC;
+}
+
+<div
+    class="c0 c1"
+    offset="10"
+    shape="rectangle"
+  >
+    <div
+      class="c2 c3"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<BadgeElement /> should not be clickable 1`] = `
+<DocumentFragment>
+  .c0 {
+  offset: 10px;
+}
+
+.c0 .c2 {
+  font-size: .75rem;
+  padding: .1875rem .375rem;
+}
+
+.c0 svg {
+  height: .75rem;
+  width: .75rem;
+}
+
+.c0 i {
+  font-size: .75rem;
+}
+
+.c3 {
+  border: solid 1px;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+.c1 .c2 {
+  border-color: #0665d0;
+  border-radius: .15rem;
+}
+
+.c1 .c2 {
+  background: #0665d0;
+  color: #fff;
+  fill: #fff;
+}
+
+<div
+    class="c0 c1"
+    offset="10"
+    shape="rectangle"
+  >
+    <div
+      class="c2 c3"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<BadgeElement /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  offset: 10px;
+}
+
+.c0 .c2 {
+  font-size: .75rem;
+  padding: .1875rem .375rem;
+}
+
+.c0 svg {
+  height: .75rem;
+  width: .75rem;
+}
+
+.c0 i {
+  font-size: .75rem;
+}
+
+.c3 {
+  border: solid 1px;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c1 .c2 {
+  border-color: #0665d0;
+  border-radius: .15rem;
+}
+
+.c1 .c2 {
+  background: #0665d0;
+  color: #fff;
+  fill: #fff;
+}
+
+.c1:active .c2 {
+  background: #0553AC;
+  border-color: #0553AC;
+}
+
+<div
+    class="c0 c1"
+    offset="10"
+    shape="rectangle"
+  >
+    <div
+      class="c2 c3"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<BadgeElement /> should render component outline 1`] = `
+<DocumentFragment>
+  .c0 {
+  offset: 10px;
+}
+
+.c0 .c2 {
+  font-size: .75rem;
+  padding: .1875rem .375rem;
+}
+
+.c0 svg {
+  height: .75rem;
+  width: .75rem;
+}
+
+.c0 i {
+  font-size: .75rem;
+}
+
+.c3 {
+  border: solid 1px;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c1 .c2 {
+  border-color: #0665d0;
+  border-radius: .15rem;
+}
+
+.c1 .c2 {
+  color: #0665d0;
+  fill: #0665d0;
+}
+
+.c1:active .c2 {
+  background: #0665d0;
+  color: #fff;
+  fill: #fff;
+}
+
+<div
+    class="c0 c1"
+    offset="10"
+    shape="rectangle"
+  >
+    <div
+      class="c2 c3"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<BadgeElement /> should render component outline with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  offset: 10px;
+}
+
+.c0 .c2 {
+  font-size: .75rem;
+  padding: .1875rem .375rem;
+}
+
+.c0 svg {
+  height: .75rem;
+  width: .75rem;
+}
+
+.c0 i {
+  font-size: .75rem;
+}
+
+.c3 {
+  border: solid 1px;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c1 .c2 {
+  border-color: #cde0f5;
+  border-radius: .15rem;
+}
+
+.c1 .c2 {
+  color: #cde0f5;
+  fill: #cde0f5;
+}
+
+.c1:active .c2 {
+  background: #cde0f5;
+  color: #033c7c;
+  fill: #033c7c;
+}
+
+<div
+    class="c0 c1"
+    offset="10"
+    shape="rectangle"
+  >
+    <div
+      class="c2 c3"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<BadgeElement /> should render component with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  offset: 10px;
+}
+
+.c0 .c2 {
+  font-size: .75rem;
+  padding: .1875rem .375rem;
+}
+
+.c0 svg {
+  height: .75rem;
+  width: .75rem;
+}
+
+.c0 i {
+  font-size: .75rem;
+}
+
+.c3 {
+  border: solid 1px;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c1 .c2 {
+  border-color: #cde0f5;
+  border-radius: .15rem;
+}
+
+.c1 .c2 {
+  background: #cde0f5;
+  color: #033c7c;
+  fill: #033c7c;
+}
+
+.c1:active .c2 {
+  background: #a7c9ee;
+  border-color: #a7c9ee;
+}
+
+<div
+    class="c0 c1"
+    offset="10"
+    shape="rectangle"
+  >
+    <div
+      class="c2 c3"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<BadgeElement /> should resize component responsively 1`] = `
+<DocumentFragment>
+  .c0 {
+  offset: 10px;
+}
+
+.c0 .c2 {
+  font-size: .75rem;
+  padding: .09375rem .1875rem;
+}
+
+.c0 svg {
+  height: .75rem;
+  width: .75rem;
+}
+
+.c0 i {
+  font-size: .75rem;
+}
+
+.c3 {
+  border: solid 1px;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c1 .c2 {
+  border-color: #0665d0;
+  border-radius: .15rem;
+}
+
+.c1 .c2 {
+  background: #0665d0;
+  color: #fff;
+  fill: #fff;
+}
+
+.c1:active .c2 {
+  background: #0553AC;
+  border-color: #0553AC;
+}
+
+@media (min-width:768px) {
+  .c0 .c2 {
+    font-size: .75rem;
+    padding: .1875rem .375rem;
+  }
+
+  .c0 svg {
+    height: .75rem;
+    width: .75rem;
+  }
+
+  .c0 i {
+    font-size: .75rem;
+  }
+}
+
+@media (min-width:992px) {
+  .c0 .c2 {
+    font-size: .875rem;
+    padding: .3rem .65rem;
+  }
+
+  .c0 svg {
+    height: .875rem;
+    width: .875rem;
+  }
+
+  .c0 i {
+    font-size: .875rem;
+  }
+}
+
+<div
+    class="c0 c1"
+    offset="10"
+    shape="rectangle"
+  >
+    <div
+      class="c2 c3"
+    />
+  </div>
+</DocumentFragment>
+`;

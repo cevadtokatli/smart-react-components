@@ -1,6 +1,7 @@
 import { ContentElement } from '@smart-react-components/core/types'
 import React from 'react'
 import { StyledComponent } from 'styled-components'
+import { OrderPosition } from '../types'
 
 /**
  * Extracts icon elements out of children.
@@ -26,12 +27,18 @@ export const extractIconsOutOfChildren = (children: ContentElement, Content: Sty
     const item = children[idx]
 
     if (idx === 0 && item.type?.displayName === 'SRCIcon') {
-      iconLeft = React.cloneElement(item, props)
+      iconLeft = React.cloneElement(item, {
+        ...props,
+        iconPosition: OrderPosition.LEFT,
+      })
       continue
     }
 
     if (idx === children.length - 1 && item.type?.displayName === 'SRCIcon') {
-      iconRight = React.cloneElement(item, props)
+      iconRight = React.cloneElement(item, {
+        ...props,
+        iconPosition: OrderPosition.RIGHT,
+      })
       continue
     }
 
@@ -50,3 +57,10 @@ export const extractIconsOutOfChildren = (children: ContentElement, Content: Sty
     hasIconRight: !!iconRight,
   }
 }
+
+/**
+ * Returns reverse value of the order position.
+ * If value is left, returns right.
+ * If value is right, returns left.
+ */
+export const getReverseOrderPosition = (value: OrderPosition) => value ^ (OrderPosition.LEFT | OrderPosition.RIGHT)

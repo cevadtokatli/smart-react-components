@@ -1,3 +1,8 @@
+export enum OrderPosition {
+  LEFT = 1,
+  RIGHT = 2,
+}
+
 export enum Position {
   LEFT = 1,
   RIGHT = 2,
