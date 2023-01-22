@@ -3,7 +3,7 @@ import { StyledProps } from '@smart-react-components/core/styled-props'
 import { PaletteProp, ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
 import styled from 'styled-components'
 
-interface IconProps extends
+interface Props extends
   StyledProps,
   ResponsiveProp<'alertIconSize', SizeProp> {
   alertPalette: PaletteProp
@@ -26,7 +26,7 @@ export default styled(Div).attrs({
       font-size: ${t.$.size.alert[v].iconSize};
     }
   `,
-})<IconProps>(({ theme, alertPalette, hasBackground, hasHover, isSoft, palette }: IconProps) => `
+})<Props>(({ theme, alertPalette, hasBackground, hasHover, isSoft, palette }: Props) => `
   align-items: center;
   align-self: stretch;
   display: flex;
