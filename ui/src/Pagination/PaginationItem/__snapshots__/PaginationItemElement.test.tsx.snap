@@ -1,0 +1,347 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PaginationItemElement /> should be active 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin: .2525rem .2525rem;
+}
+
+.c0 > a {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  border-radius: .125rem;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  padding: .4rem .65rem;
+  color: #fff;
+  fill: #fff;
+  background: #0553AC;
+  border-color: #054D9F;
+}
+
+<li
+    class=" c0"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<PaginationItemElement /> should be circle 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin: .2525rem .2525rem;
+}
+
+.c0 > a {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  border-radius: 100%;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  height: 32px;
+  min-width: 32px;
+  padding: 0 3px;
+  color: #fff;
+  fill: #fff;
+  background: #0665d0;
+  border-color: #065DC0;
+}
+
+.c0 > a:hover {
+  background: #0553AC;
+  border-color: #054D9F;
+}
+
+<li
+    class=" c0"
+    shape="rounded"
+  />
+</DocumentFragment>
+`;
+
+exports[`<PaginationItemElement /> should be disabled 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin: .2525rem .2525rem;
+}
+
+.c0 > a {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  border-radius: .125rem;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  padding: .4rem .65rem;
+  opacity: 0.7;
+  pointer-events: none;
+  color: #fff;
+  fill: #fff;
+  background: #0665d0;
+  border-color: #065DC0;
+}
+
+<li
+    class=" c0"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<PaginationItemElement /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin: .2525rem .2525rem;
+}
+
+.c0 > a {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  border-radius: .125rem;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  padding: .4rem .65rem;
+  color: #fff;
+  fill: #fff;
+  background: #0665d0;
+  border-color: #065DC0;
+}
+
+.c0 > a:hover {
+  background: #0553AC;
+  border-color: #054D9F;
+}
+
+<li
+    class=" c0"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<PaginationItemElement /> should render component outline 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin: .2525rem .2525rem;
+}
+
+.c0 > a {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  border-radius: .125rem;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  padding: .4rem .65rem;
+  border-color: #dbdbdb;
+  color: #323a46;
+  fill: #323a46;
+}
+
+.c0 > a:hover {
+  background: #0665d0;
+  border-color: #0665d0;
+  color: #fff;
+  fill: #fff;
+}
+
+<li
+    class=" c0"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<PaginationItemElement /> should render component outline with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin: .2525rem .2525rem;
+}
+
+.c0 > a {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  border-radius: .125rem;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  padding: .4rem .65rem;
+  border-color: #dbdbdb;
+  color: #323a46;
+  fill: #323a46;
+}
+
+.c0 > a:hover {
+  background: #cde0f5;
+  border-color: #cde0f5;
+  color: #033c7c;
+  fill: #033c7c;
+}
+
+<li
+    class=" c0"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<PaginationItemElement /> should render component with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin: .2525rem .2525rem;
+}
+
+.c0 > a {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  border-radius: .125rem;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  padding: .4rem .65rem;
+  color: #033c7c;
+  fill: #033c7c;
+  background: #cde0f5;
+  border-color: #b9d3f1;
+}
+
+.c0 > a:hover {
+  background: #a7c9ee;
+  border-color: #8eb9e9;
+}
+
+<li
+    class=" c0"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;

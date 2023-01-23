@@ -1,0 +1,5 @@
+export { default as PaginationItem } from './PaginationItem'
+export { default as PaginationLink } from './PaginationLink'
+export { default as PaginationList } from './PaginationList'
+export { default as PaginationNextIcon } from './PaginationNextIcon'
+export { default as PaginationPrevIcon } from './PaginationPrevIcon'

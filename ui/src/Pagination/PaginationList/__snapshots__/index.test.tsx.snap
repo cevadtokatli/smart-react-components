@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PaginationList /> should render component 1`] = `
+<DocumentFragment>
+  .c2 {
+  overflow: hidden;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c1 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin: .2525rem .2525rem;
+}
+
+.c1 > a {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  border-radius: .125rem;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  padding: .4rem .65rem;
+  color: #fff;
+  fill: #fff;
+  background: #0665d0;
+  border-color: #065DC0;
+}
+
+.c1 > a:hover {
+  background: #0553AC;
+  border-color: #054D9F;
+}
+
+.c3 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin: .2525rem .2525rem;
+}
+
+.c3 > a {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  border-radius: .125rem;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  padding: .4rem .65rem;
+  opacity: 0.7;
+  pointer-events: none;
+  color: #fff;
+  fill: #fff;
+  background: #0665d0;
+  border-color: #065DC0;
+}
+
+.c4 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin: .2525rem .2525rem;
+}
+
+.c4 > a {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  border-radius: .125rem;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  padding: .4rem .65rem;
+  color: #fff;
+  fill: #fff;
+  background: #0553AC;
+  border-color: #054D9F;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font-family: inherit;
+  font-size: 1rem;
+  list-style: none;
+  margin: -.2525rem -.2525rem;
+}
+
+<ul
+    class=" c0"
+  >
+    <li
+      class=" c1"
+      shape="rectangle"
+    >
+      <a
+        class="c2"
+        overflow="hidden"
+      >
+        1
+      </a>
+    </li>
+    <li
+      class=" c3"
+      shape="rectangle"
+    >
+      <a
+        class="c2"
+        overflow="hidden"
+      >
+        2
+      </a>
+    </li>
+    <li
+      class=" c4"
+      shape="rectangle"
+    >
+      <a
+        class="c2"
+        overflow="hidden"
+      >
+        3
+      </a>
+    </li>
+  </ul>
+</DocumentFragment>
+`;

@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PaginationLink /> should render component 1`] = `
+<DocumentFragment>
+  .c1 {
+  overflow: hidden;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c0 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin: .2525rem .2525rem;
+}
+
+.c0 > a {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  border-radius: .125rem;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  padding: .4rem .65rem;
+  color: #fff;
+  fill: #fff;
+  background: #0553AC;
+  border-color: #054D9F;
+}
+
+<li
+    class=" c0"
+    shape="rectangle"
+  >
+    <a
+      class="c1"
+      href="/"
+      overflow="hidden"
+    >
+      1
+    </a>
+  </li>
+</DocumentFragment>
+`;
