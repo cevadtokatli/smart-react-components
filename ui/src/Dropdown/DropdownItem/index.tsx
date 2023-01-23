@@ -1,5 +1,4 @@
-import { SetState } from '@smart-react-components/core/types'
-import { ContentElement, PaletteProp } from '@smart-react-components/core/types'
+import { ContentElement, PaletteProp, SetState } from '@smart-react-components/core/types'
 import React from 'react'
 import WaveEffect from '../../WaveEffect'
 import DropdownItemElement from './DropdownItemElement'
