@@ -1,5 +1,3 @@
-import extractElementProps from '@smart-react-components/core/element-props'
-import clickEvents from '@smart-react-components/core/element-props/click-events'
 import A from '@smart-react-components/core/Element/A'
 import useLink, { LinkProps } from '@smart-react-components/router/hooks/useLink'
 import React from 'react'
@@ -14,14 +12,13 @@ const BreadcrumbLink: React.FC<Props> = (props: Props & BreadcrumbItemPrivatePro
     children: props.children,
     isDisabled: props.isDisabled,
     isExact: props.isExact,
-    onClick: props.onClick,
+    onClick: null,
     path: props.path,
     to: props.to,
   })
 
   const AnchorEl = (
     <A
-      {...extractElementProps(props, [clickEvents])}
       {...props.elementProps}
       href={props.to}
       onClick={handleOnClick}
