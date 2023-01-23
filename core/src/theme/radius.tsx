@@ -9,6 +9,10 @@ const radiusAttributes: RadiusAttributes = {
     rectangle: '.15rem',
     rounded: '.875rem',
   },
+  breadcrumb: {
+    rectangle: '.125rem',
+    rounded: '.775rem',
+  },
   dropdown: '.2rem',
   popover: '.25rem',
   tooltip: '.25rem',

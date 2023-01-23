@@ -8,6 +8,12 @@ const lengthAttributes: LengthAttributes = {
   4: '2rem',
   5: '3rem',
 
+  breadcrumb: {
+    padding: {
+      x: '.6rem',
+      y: '.475rem',
+    },
+  },
   breakpoint: {
     small: 576,
     medium: 768,

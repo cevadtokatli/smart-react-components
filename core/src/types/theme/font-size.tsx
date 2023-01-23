@@ -7,6 +7,7 @@ interface DefaultFontSizeAttributes {
   3: Value
   4: Value
   5: Value
+  breadcrumb: string
   progressBar: string
 }
 

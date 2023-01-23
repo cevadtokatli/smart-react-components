@@ -5,6 +5,7 @@ const fontFamilyAttributes: FontFamilyAttributes = {
   secondary: '"Open Sans"',
   alert: 'inherit',
   badge: 'inherit',
+  breadcrumb: 'inherit',
   dropdown: 'inherit',
   popover: 'inherit',
   popoverHeader: 'inherit',

@@ -6,6 +6,7 @@ interface DefaultFontFamilyAttributes {
   dropdown: string
   alert: string
   badge: string
+  breadcrumb: string
   popover: string
   popoverHeader: string
   progressBar: string

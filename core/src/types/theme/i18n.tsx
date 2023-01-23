@@ -1,6 +1,9 @@
 import { OptionalThemeAttributes } from './util'
 
 interface DefaultI18NAttributes {
+  breadcrumb: {
+    separator: string
+  }
   progressBar: {
     prefix: string
     suffix: string

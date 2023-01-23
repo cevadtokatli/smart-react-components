@@ -6,6 +6,7 @@ const fontSizeAttributes: FontSizeAttributes = {
   3: '.875rem',
   4: '1rem',
   5: '1.15rem',
+  breadcrumb: '1rem',
   progressBar: '1rem',
 }
 

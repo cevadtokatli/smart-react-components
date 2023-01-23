@@ -1,4 +1,4 @@
-import { Value } from '../'
+import { Coordinator, Value } from '../'
 import { Grid } from '../grid'
 import { OptionalThemeAttributes } from './util'
 
@@ -9,6 +9,9 @@ interface DefaultLengthAttributes {
   3: Value
   4: Value
   5: Value
+  breadcrumb: {
+    padding: Coordinator<string>
+  }
   breakpoint: Grid
   grid: {
     containerWidth: Grid
