@@ -1,4 +1,3 @@
-import { ClickEvents } from '@smart-react-components/core/element-props/click-events'
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { ContentElement, JSXElementProps } from '@smart-react-components/core/types'
 import { MouseEvent, useContext, useState } from 'react'
@@ -6,7 +5,7 @@ import RouterContext from '../RouterContext'
 import { Path, URL } from '../types'
 import { generateMatch } from '../util'
 
-export interface LinkProps extends ClickEvents {
+export interface LinkProps {
   children: ContentElement | ((props: { isActivating: boolean, isActive: boolean }) => ContentElement)
   elementProps?: JSXElementProps
   isDisabled?: boolean

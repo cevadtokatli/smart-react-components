@@ -1,12 +1,12 @@
 import A from '@smart-react-components/core/Element/A'
 import extractElementProps from '@smart-react-components/core/element-props'
-import clickEvents from '@smart-react-components/core/element-props/click-events'
+import clickEvents, { ClickEvents } from '@smart-react-components/core/element-props/click-events'
 import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
 import React from 'react'
 import { StyledComponent } from 'styled-components'
 import useLink, { LinkProps } from '../hooks/useLink'
 
-export interface Props extends LinkProps, IntrinsicStyledProps {
+export interface Props extends LinkProps, ClickEvents, IntrinsicStyledProps {
   as?: StyledComponent<typeof A, {}>
 }
 
