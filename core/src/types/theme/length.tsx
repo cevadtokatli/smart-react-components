@@ -19,6 +19,11 @@ interface DefaultLengthAttributes {
   overlay: {
     space: string
   }
+  pagination: {
+    fixedSize: string
+    margin: Coordinator<string>
+    padding: Coordinator<string>
+  }
 }
 
 type LengthAttributes = DefaultLengthAttributes & OptionalThemeAttributes

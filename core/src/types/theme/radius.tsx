@@ -6,6 +6,7 @@ interface DefaultRadiusAttributes {
   badge: Shape<string>
   breadcrumb: Shape<string>
   dropdown: string
+  pagination: Shape<string>
   popover: string
   tooltip: string
 }

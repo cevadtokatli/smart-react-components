@@ -31,6 +31,17 @@ const lengthAttributes: LengthAttributes = {
   overlay: {
     space: '1.75rem',
   },
+  pagination: {
+    fixedSize: '32px',
+    margin: {
+      x: '.2525rem',
+      y: '.2525rem',
+    },
+    padding: {
+      x: '.65rem',
+      y: '.4rem',
+    },
+  },
 }
 
 export default lengthAttributes

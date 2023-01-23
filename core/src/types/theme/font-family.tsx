@@ -7,6 +7,7 @@ interface DefaultFontFamilyAttributes {
   alert: string
   badge: string
   breadcrumb: string
+  pagination: string
   popover: string
   popoverHeader: string
   progressBar: string

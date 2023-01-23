@@ -14,6 +14,10 @@ const radiusAttributes: RadiusAttributes = {
     rounded: '.775rem',
   },
   dropdown: '.2rem',
+  pagination: {
+    rectangle: '.125rem',
+    rounded: '.5rem',
+  },
   popover: '.25rem',
   tooltip: '.25rem',
 }
