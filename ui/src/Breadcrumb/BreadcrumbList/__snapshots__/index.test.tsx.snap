@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BreadcrumbList /> should render component 1`] = `
+<DocumentFragment>
+  .c2 {
+  overflow: hidden;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c1 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 0;
+}
+
+.c1 > a {
+  border-radius: .125rem;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: .475rem .6rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  color: #fff;
+  fill: #fff;
+}
+
+.c1 > a:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:not(:last-child)::after {
+  content: "/";
+  display: inline-block;
+  padding: 0 1px;
+  color: #fff;
+}
+
+.c3 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 0;
+}
+
+.c3 > a {
+  border-radius: .125rem;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: .475rem .6rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  pointer-events: none;
+  opacity: 0.7;
+  color: #fff;
+  fill: #fff;
+}
+
+.c3:not(:last-child)::after {
+  content: "/";
+  display: inline-block;
+  padding: 0 1px;
+  color: #fff;
+}
+
+.c4 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 0;
+}
+
+.c4 > a {
+  border-radius: .125rem;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: .475rem .6rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  pointer-events: none;
+  color: #054D9F;
+  fill: #054D9F;
+}
+
+.c4:not(:last-child)::after {
+  content: "/";
+  display: inline-block;
+  padding: 0 1px;
+  color: #fff;
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: .125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: inherit;
+  font-size: 1rem;
+  list-style: none;
+  padding: 1px;
+  background: #0665d0;
+}
+
+<ul
+    class=" c0"
+    shape="rectangle"
+  >
+    <li
+      class=" c1"
+      shape="rectangle"
+    >
+      <a
+        class="c2"
+        overflow="hidden"
+      >
+        Home
+      </a>
+    </li>
+    <li
+      class=" c3"
+      shape="rectangle"
+    >
+      <a
+        class="c2"
+        overflow="hidden"
+      >
+        Section
+      </a>
+    </li>
+    <li
+      class=" c4"
+      shape="rectangle"
+    >
+      <a
+        class="c2"
+        overflow="hidden"
+      >
+        Item
+      </a>
+    </li>
+  </ul>
+</DocumentFragment>
+`;

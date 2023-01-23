@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BradcrumbListElement /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: .125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: inherit;
+  font-size: 1rem;
+  list-style: none;
+  padding: 1px;
+  background: #0665d0;
+}
+
+<ul
+    class=" c0"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<BradcrumbListElement /> should render component outline 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: .125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: inherit;
+  font-size: 1rem;
+  list-style: none;
+  padding: 1px;
+}
+
+<ul
+    class=" c0"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<BradcrumbListElement /> should render component with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: .125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: inherit;
+  font-size: 1rem;
+  list-style: none;
+  padding: 1px;
+  background: #cde0f5;
+}
+
+<ul
+    class=" c0"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
