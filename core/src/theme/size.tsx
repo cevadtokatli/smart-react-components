@@ -103,6 +103,45 @@ const sizeAttributes: SizeAttributes = {
       },
     },
   },
+  form: {
+    inlineLabel: {
+      small: {
+        fontSize: '.875rem',
+        margin: {
+          x: '.5rem',
+          y: '1rem',
+        },
+      },
+      medium: {
+        fontSize: '1rem',
+        margin: {
+          x: '.5rem',
+          y: '1rem',
+        },
+      },
+      large: {
+        fontSize: '1rem',
+        margin: {
+          x: '.5rem',
+          y: '1rem',
+        },
+      },
+    },
+    radio: {
+      small: {
+        circle: '2px',
+        container: '12px',
+      },
+      medium: {
+        circle: '4px',
+        container: '16px',
+      },
+      large: {
+        circle: '4px',
+        container: '20px',
+      },
+    },
+  },
   loading: {
     small: '10px',
     medium: '20px',

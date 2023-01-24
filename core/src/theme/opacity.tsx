@@ -3,6 +3,7 @@ import OpacityAttributes from '../types/theme/opacity'
 const opacityAttributes: OpacityAttributes = {
   breadcrumbDisabled: .7,
   dropdownDisabled: .7,
+  formDisabled: .7,
   paginationDisabled: .7,
 }
 

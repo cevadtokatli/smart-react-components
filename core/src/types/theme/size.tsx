@@ -19,6 +19,16 @@ interface DefaultSizeAttributes {
     margin: Coordinator<string>
     padding: Coordinator<string>
   }>
+  form: {
+    inlineLabel: Size<{
+      fontSize: string
+      margin: Coordinator<string>
+    }>
+    radio: Size<{
+      circle: string
+      container: string
+    }>
+  }
   loading: Size<string>
   popover: Size<{
     fontSize: string
@@ -33,7 +43,7 @@ interface DefaultSizeAttributes {
 }
 
 interface OptionalSizeAttributes {
-  [key: string]: Size<OptionalThemeAttribute>
+  [key: string]: OptionalThemeAttribute
 }
 
 type SizeAttributes = DefaultSizeAttributes & OptionalSizeAttributes
