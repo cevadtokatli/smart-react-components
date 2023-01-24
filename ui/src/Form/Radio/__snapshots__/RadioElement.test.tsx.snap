@@ -1,0 +1,301 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioElement /> should not be checked 1`] = `
+<DocumentFragment>
+  .c0 {
+  height: 16px;
+  width: 16px;
+}
+
+.c0 .c3 {
+  height: 4px;
+  width: 4px;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #dbdbdb;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(100% + 2px);
+  margin: -1px 0 0 -1px;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,-webkit-transform;
+  -webkit-transition-property: background,transform;
+  transition-property: background,transform;
+  width: calc(100% + 2px);
+}
+
+.c4 {
+  border-radius: 100%;
+  background: #fff;
+}
+
+.c1 {
+  border-radius: 100%;
+  box-sizing: border-box;
+  position: relative;
+  background: #dbdbdb;
+}
+
+<div
+    class="c0 c1"
+  >
+    <div
+      class="c2"
+    >
+      <div
+        class="c3 c4"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<RadioElement /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  height: 16px;
+  width: 16px;
+}
+
+.c0 .c4 {
+  height: 4px;
+  width: 4px;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #dbdbdb;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(100% + 2px);
+  margin: -1px 0 0 -1px;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,-webkit-transform;
+  -webkit-transition-property: background,transform;
+  transition-property: background,transform;
+  width: calc(100% + 2px);
+}
+
+.c5 {
+  border-radius: 100%;
+  background: #fff;
+}
+
+.c1 {
+  border-radius: 100%;
+  box-sizing: border-box;
+  position: relative;
+  background: #dbdbdb;
+}
+
+.c1 .c2 {
+  background: #0665d0;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+<div
+    class="c0 c1"
+  >
+    <div
+      class="c2 c3"
+    >
+      <div
+        class="c4 c5"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<RadioElement /> should render component outline 1`] = `
+<DocumentFragment>
+  .c0 {
+  height: 16px;
+  width: 16px;
+}
+
+.c0 .c4 {
+  height: 4px;
+  width: 4px;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #dbdbdb;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(100% + 2px);
+  margin: -1px 0 0 -1px;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,-webkit-transform;
+  -webkit-transition-property: background,transform;
+  transition-property: background,transform;
+  width: calc(100% + 2px);
+}
+
+.c5 {
+  border-radius: 100%;
+  background: #fff;
+}
+
+.c1 {
+  border-radius: 100%;
+  box-sizing: border-box;
+  position: relative;
+  border: solid 2px #dbdbdb;
+  -webkit-transition: border 200ms 0s ease-in-out;
+  transition: border 200ms 0s ease-in-out;
+  border-color: #0665d0;
+}
+
+.c1 .c2 {
+  background: #0665d0;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+<div
+    class="c0 c1"
+  >
+    <div
+      class="c2 c3"
+    >
+      <div
+        class="c4 c5"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<RadioElement /> should render component with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  height: 16px;
+  width: 16px;
+}
+
+.c0 .c4 {
+  height: 4px;
+  width: 4px;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #dbdbdb;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(100% + 2px);
+  margin: -1px 0 0 -1px;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,-webkit-transform;
+  -webkit-transition-property: background,transform;
+  transition-property: background,transform;
+  width: calc(100% + 2px);
+}
+
+.c5 {
+  border-radius: 100%;
+  background: #fff;
+}
+
+.c1 {
+  border-radius: 100%;
+  box-sizing: border-box;
+  position: relative;
+  background: #dbdbdb;
+}
+
+.c1 .c2 {
+  background: #cde0f5;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+<div
+    class="c0 c1"
+  >
+    <div
+      class="c2 c3"
+    >
+      <div
+        class="c4 c5"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

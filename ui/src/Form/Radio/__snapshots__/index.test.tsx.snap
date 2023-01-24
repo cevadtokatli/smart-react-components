@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Radio /> should render component 1`] = `
+<DocumentFragment>
+  .c4 {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.c0 {
+  margin: 1rem .5rem;
+}
+
+.c0 > :last-child {
+  font-size: 1rem;
+  margin-left: 0.46874rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+}
+
+.c1 > :first-child {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c1 > :last-child {
+  color: #323a46;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c2 {
+  height: 16px;
+  width: 16px;
+}
+
+.c2 .c7 {
+  height: 4px;
+  width: 4px;
+}
+
+.c6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #dbdbdb;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(100% + 2px);
+  margin: -1px 0 0 -1px;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,-webkit-transform;
+  -webkit-transition-property: background,transform;
+  transition-property: background,transform;
+  width: calc(100% + 2px);
+}
+
+.c8 {
+  border-radius: 100%;
+  background: #fff;
+}
+
+.c3 {
+  border-radius: 100%;
+  box-sizing: border-box;
+  position: relative;
+  background: #dbdbdb;
+}
+
+.c3 .c5 {
+  background: #0665d0;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+<label
+    class="c0 c1"
+  >
+    <div
+      class="c2 c3"
+    >
+      <input
+        checked=""
+        class="c4"
+        type="radio"
+      />
+      <div
+        class="c5 c6"
+      >
+        <div
+          class="c7 c8"
+        />
+      </div>
+    </div>
+    <span>
+      Label
+    </span>
+  </label>
+</DocumentFragment>
+`;

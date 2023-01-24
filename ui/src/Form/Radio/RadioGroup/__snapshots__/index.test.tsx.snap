@@ -1,0 +1,219 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Radio /> should render component 1`] = `
+<DocumentFragment>
+  .c3 {
+  height: 16px;
+  width: 16px;
+}
+
+.c3 .c8 {
+  height: 4px;
+  width: 4px;
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c5 {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.c1 {
+  margin: 1rem .5rem;
+}
+
+.c1 > :last-child {
+  font-size: 1rem;
+  margin-left: 0.46874rem;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+}
+
+.c2 > :first-child {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c2 > :last-child {
+  color: #323a46;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #dbdbdb;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(100% + 2px);
+  margin: -1px 0 0 -1px;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,-webkit-transform;
+  -webkit-transition-property: background,transform;
+  transition-property: background,transform;
+  width: calc(100% + 2px);
+}
+
+.c9 {
+  border-radius: 100%;
+  background: #fff;
+}
+
+.c4 {
+  border-radius: 100%;
+  box-sizing: border-box;
+  position: relative;
+  background: #dbdbdb;
+}
+
+.c4 .c6 {
+  background: #0665d0;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c10 {
+  border-radius: 100%;
+  box-sizing: border-box;
+  position: relative;
+  background: #dbdbdb;
+}
+
+<div
+    class=" c0"
+  >
+    <label
+      class="c1 c2"
+    >
+      <div
+        class="c3 c4"
+      >
+        <input
+          checked=""
+          class="c5"
+          type="radio"
+        />
+        <div
+          class="c6 c7"
+        >
+          <div
+            class="c8 c9"
+          />
+        </div>
+      </div>
+      <span>
+        Item 1
+      </span>
+    </label>
+    <label
+      class="c1 c2"
+    >
+      <div
+        class="c3 c10"
+      >
+        <input
+          class="c5"
+          type="radio"
+        />
+        <div
+          class="c6 c7"
+        >
+          <div
+            class="c8 c9"
+          />
+        </div>
+      </div>
+      <span>
+        Item 2
+      </span>
+    </label>
+    <label
+      class="c1 c2"
+    >
+      <div
+        class="c3 c10"
+      >
+        <input
+          class="c5"
+          type="radio"
+        />
+        <div
+          class="c6 c7"
+        >
+          <div
+            class="c8 c9"
+          />
+        </div>
+      </div>
+      <span>
+        Item 3
+      </span>
+    </label>
+  </div>
+</DocumentFragment>
+`;
