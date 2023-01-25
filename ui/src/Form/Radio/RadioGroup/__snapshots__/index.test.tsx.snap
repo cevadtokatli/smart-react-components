@@ -2,40 +2,14 @@
 
 exports[`<Radio /> should render component 1`] = `
 <DocumentFragment>
-  .c3 > svg {
+  .c3 {
   height: 16px;
   width: 16px;
 }
 
-.c3 > svg circle {
-  cx: 8px;
-  cy: 8px;
-}
-
-.c3 > svg .c6 {
-  r: 7px;
-}
-
-.c3 > svg .c8 {
-  r: 8px;
-}
-
-.c3 > svg .c10 {
-  r: 1.6px;
-}
-
-.c12 > svg {
-  height: 16px;
-  width: 16px;
-}
-
-.c12 > svg circle {
-  cx: 8px;
-  cy: 8px;
-}
-
-.c12 > svg .c6 {
-  r: 7px;
+.c3 .c10 {
+  height: 4px;
+  width: 4px;
 }
 
 .c0 {
@@ -114,30 +88,82 @@ exports[`<Radio /> should render component 1`] = `
 }
 
 .c7 {
-  fill: #dbdbdb;
-  stroke: #dbdbdb;
-  stroke-width: 2px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 2px #dbdbdb;
+  border-radius: 100%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .c9 {
-  fill: #0665d0;
-  r: 0;
-  -webkit-transition: r 200ms 0s ease-in-out;
-  transition: r 200ms 0s ease-in-out;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: height,width;
+  transition-property: height,width;
 }
 
 .c11 {
-  fill: #fff;
-  -webkit-transition: r 200ms 0s ease-in-out;
-  transition: r 200ms 0s ease-in-out;
+  background: #fff;
+  border-radius: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   position: relative;
+}
+
+.c4 .c6 {
+  background: #dbdbdb;
+}
+
+.c4 .c8 {
+  background: #0665d0;
+  height: calc(100% + 4px);
+  width: calc(100% + 4px);
+}
+
+.c12 {
+  position: relative;
+}
+
+.c12 .c6 {
+  background: #dbdbdb;
+}
+
+.c12 .c8 {
+  background: #0665d0;
+  height: 0;
+  width: 0;
 }
 
 <div
@@ -154,17 +180,17 @@ exports[`<Radio /> should render component 1`] = `
           class="c5"
           type="radio"
         />
-        <svg>
-          <circle
-            class="c6 c7"
-          />
-          <circle
+        <div
+          class="c6 c7"
+        >
+          <div
             class="c8 c9"
-          />
-          <circle
-            class="c10 c11"
-          />
-        </svg>
+          >
+            <div
+              class="c10 c11"
+            />
+          </div>
+        </div>
       </div>
       <span>
         Item 1
@@ -174,23 +200,23 @@ exports[`<Radio /> should render component 1`] = `
       class="c1 c2"
     >
       <div
-        class="c12 c4"
+        class="c3 c12"
       >
         <input
           class="c5"
           type="radio"
         />
-        <svg>
-          <circle
-            class="c6 c7"
-          />
-          <circle
+        <div
+          class="c6 c7"
+        >
+          <div
             class="c8 c9"
-          />
-          <circle
-            class="c10 c11"
-          />
-        </svg>
+          >
+            <div
+              class="c10 c11"
+            />
+          </div>
+        </div>
       </div>
       <span>
         Item 2
@@ -200,23 +226,23 @@ exports[`<Radio /> should render component 1`] = `
       class="c1 c2"
     >
       <div
-        class="c12 c4"
+        class="c3 c12"
       >
         <input
           class="c5"
           type="radio"
         />
-        <svg>
-          <circle
-            class="c6 c7"
-          />
-          <circle
+        <div
+          class="c6 c7"
+        >
+          <div
             class="c8 c9"
-          />
-          <circle
-            class="c10 c11"
-          />
-        </svg>
+          >
+            <div
+              class="c10 c11"
+            />
+          </div>
+        </div>
       </div>
       <span>
         Item 3

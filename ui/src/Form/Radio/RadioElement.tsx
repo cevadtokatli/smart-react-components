@@ -4,22 +4,33 @@ import { PaletteProp, ResponsiveProp, SizeProp } from '@smart-react-components/c
 import React from 'react'
 import styled from 'styled-components'
 import { toCSSValue } from '../../util/css'
+import { calculateRadioInnerCircleSize } from '../../util/form'
 
-export const OuterCircle = styled.circle<{ isOutline: boolean }>(({ theme, isOutline }) => `
-  fill: ${!isOutline ? theme.$.color.dynamic.accent : 'transparent'};
-  stroke: ${theme.$.color.dynamic.accent};
-  stroke-width: 2px;
+const Container = styled.div(({ theme }) => `
+  align-items: center;
+  border: solid 2px ${theme.$.color.dynamic.accent};
+  border-radius: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  height: 100%;
 `)
 
-export const ActiveCircle = styled.circle<{ isSoft: boolean, palette: PaletteProp }>(({ theme, isSoft, palette }) => `
-  fill: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};
-  r: 0;
-  transition: r 200ms 0s ease-in-out;
-`)
+const OuterCircle = styled.div`
+  align-items: center;
+  border-radius: 100%;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  overflow: hidden;
+  transition: 200ms 0s ease-in-out;
+  transition-property: height, width;
+`
 
-export const InnerCircle = styled.circle(({ theme }) => `
-  fill: ${theme.$.color.dynamic.background};
-  transition: r 200ms 0s ease-in-out;
+const InnerCircle = styled.div(({ theme }) => `
+  background: ${theme.$.color.dynamic.background};
+  border-radius: 100%;
+  flex: 0 0 auto;
 `)
 
 interface Props extends
@@ -31,46 +42,50 @@ interface Props extends
   palette: PaletteProp
 }
 
-export default styled(Div).attrs<Props>(({ children, isChecked, isOutline, isSoft, palette }) => ({
+export default styled(Div).attrs<Props>(({ children }) => ({
   children: (
     <>
       { children && children }
-      <svg>
-        <OuterCircle isOutline={isOutline} />
-        <ActiveCircle isSoft={isSoft} palette={palette} />
-        <InnerCircle />
-      </svg>
+      <Container>
+        <OuterCircle>
+          <InnerCircle />
+        </OuterCircle>
+      </Container>
     </>
   ),
   getRadioSize: (v, t) => `
-    > svg {
-      height: ${t.$.size.form.radio[v]};
-      width: ${t.$.size.form.radio[v]};
+    height: ${t.$.size.form.radio[v]};
+    width: ${t.$.size.form.radio[v]};
 
-      circle {
-        cx: ${toCSSValue(t.$.size.form.radio[v])(v => (v / 2))};
-        cy: ${toCSSValue(t.$.size.form.radio[v])(v => (v / 2))};
-      }
-
-      ${OuterCircle} {
-        r: ${toCSSValue(t.$.size.form.radio[v])(v => (v / 2) - 1)};
-      }
-
-      ${isChecked
-        ? `
-          ${ActiveCircle} {
-            r: ${toCSSValue(t.$.size.form.radio[v])(v => (v / 2))};
-          }
-
-          ${InnerCircle} {
-            r: ${toCSSValue(t.$.size.form.radio[v])(v => v / 10)};
-          }
-        `
-      : ''
-      }
+    ${InnerCircle} {
+      height: ${toCSSValue(t.$.size.form.radio[v])(v => calculateRadioInnerCircleSize(v))};
+      width: ${toCSSValue(t.$.size.form.radio[v])(v => calculateRadioInnerCircleSize(v))};
     }
   `,
-}))<Props>`
-  display: inline-flex;
+}))<Props>(({ theme, isChecked, isOutline, isSoft, palette }: Props) => `
   position: relative;
-`
+
+  ${!isOutline
+    ? `
+      ${Container} {
+        background: ${theme.$.color.dynamic.accent};
+      }
+    `
+    : ''
+  }
+
+  ${OuterCircle} {
+    background: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};
+
+    ${!isChecked
+      ? `
+        height: 0;
+        width: 0;
+      `
+      : `
+        height: calc(100% + 4px);
+        width: calc(100% + 4px);
+      `
+    }
+  }
+`)

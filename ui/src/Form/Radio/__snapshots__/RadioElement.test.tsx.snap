@@ -2,268 +2,376 @@
 
 exports[`<RadioElement /> should not be checked 1`] = `
 <DocumentFragment>
-  .c0 > svg {
+  .c0 {
   height: 16px;
   width: 16px;
 }
 
-.c0 > svg circle {
-  cx: 8px;
-  cy: 8px;
-}
-
-.c0 > svg .c2 {
-  r: 7px;
+.c0 .c6 {
+  height: 4px;
+  width: 4px;
 }
 
 .c3 {
-  fill: #dbdbdb;
-  stroke: #dbdbdb;
-  stroke-width: 2px;
-}
-
-.c4 {
-  fill: #0665d0;
-  r: 0;
-  -webkit-transition: r 200ms 0s ease-in-out;
-  transition: r 200ms 0s ease-in-out;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 2px #dbdbdb;
+  border-radius: 100%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .c5 {
-  fill: #fff;
-  -webkit-transition: r 200ms 0s ease-in-out;
-  transition: r 200ms 0s ease-in-out;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: height,width;
+  transition-property: height,width;
+}
+
+.c7 {
+  background: #fff;
+  border-radius: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   position: relative;
+}
+
+.c1 .c2 {
+  background: #dbdbdb;
+}
+
+.c1 .c4 {
+  background: #0665d0;
+  height: 0;
+  width: 0;
 }
 
 <div
     class="c0 c1"
   >
-    <svg>
-      <circle
-        class="c2 c3"
-      />
-      <circle
-        class="c4"
-      />
-      <circle
-        class="c5"
-      />
-    </svg>
+    <div
+      class="c2 c3"
+    >
+      <div
+        class="c4 c5"
+      >
+        <div
+          class="c6 c7"
+        />
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`<RadioElement /> should render component 1`] = `
 <DocumentFragment>
-  .c0 > svg {
+  .c0 {
   height: 16px;
   width: 16px;
 }
 
-.c0 > svg circle {
-  cx: 8px;
-  cy: 8px;
-}
-
-.c0 > svg .c2 {
-  r: 7px;
-}
-
-.c0 > svg .c4 {
-  r: 8px;
-}
-
-.c0 > svg .c6 {
-  r: 1.6px;
+.c0 .c6 {
+  height: 4px;
+  width: 4px;
 }
 
 .c3 {
-  fill: #dbdbdb;
-  stroke: #dbdbdb;
-  stroke-width: 2px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 2px #dbdbdb;
+  border-radius: 100%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .c5 {
-  fill: #0665d0;
-  r: 0;
-  -webkit-transition: r 200ms 0s ease-in-out;
-  transition: r 200ms 0s ease-in-out;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: height,width;
+  transition-property: height,width;
 }
 
 .c7 {
-  fill: #fff;
-  -webkit-transition: r 200ms 0s ease-in-out;
-  transition: r 200ms 0s ease-in-out;
+  background: #fff;
+  border-radius: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   position: relative;
+}
+
+.c1 .c2 {
+  background: #dbdbdb;
+}
+
+.c1 .c4 {
+  background: #0665d0;
+  height: calc(100% + 4px);
+  width: calc(100% + 4px);
 }
 
 <div
     class="c0 c1"
   >
-    <svg>
-      <circle
-        class="c2 c3"
-      />
-      <circle
+    <div
+      class="c2 c3"
+    >
+      <div
         class="c4 c5"
-      />
-      <circle
-        class="c6 c7"
-      />
-    </svg>
+      >
+        <div
+          class="c6 c7"
+        />
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`<RadioElement /> should render component outline 1`] = `
 <DocumentFragment>
-  .c0 > svg {
+  .c0 {
   height: 16px;
   width: 16px;
 }
 
-.c0 > svg circle {
-  cx: 8px;
-  cy: 8px;
+.c0 .c5 {
+  height: 4px;
+  width: 4px;
 }
 
-.c0 > svg .c2 {
-  r: 7px;
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 2px #dbdbdb;
+  border-radius: 100%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
 }
 
-.c0 > svg .c4 {
-  r: 8px;
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: height,width;
+  transition-property: height,width;
 }
 
-.c0 > svg .c6 {
-  r: 1.6px;
-}
-
-.c3 {
-  fill: transparent;
-  stroke: #dbdbdb;
-  stroke-width: 2px;
-}
-
-.c5 {
-  fill: #0665d0;
-  r: 0;
-  -webkit-transition: r 200ms 0s ease-in-out;
-  transition: r 200ms 0s ease-in-out;
-}
-
-.c7 {
-  fill: #fff;
-  -webkit-transition: r 200ms 0s ease-in-out;
-  transition: r 200ms 0s ease-in-out;
+.c6 {
+  background: #fff;
+  border-radius: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   position: relative;
+}
+
+.c1 .c3 {
+  background: #0665d0;
+  height: calc(100% + 4px);
+  width: calc(100% + 4px);
 }
 
 <div
     class="c0 c1"
   >
-    <svg>
-      <circle
-        class="c2 c3"
-      />
-      <circle
-        class="c4 c5"
-      />
-      <circle
-        class="c6 c7"
-      />
-    </svg>
+    <div
+      class="c2"
+    >
+      <div
+        class="c3 c4"
+      >
+        <div
+          class="c5 c6"
+        />
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`<RadioElement /> should render component with soft colors 1`] = `
 <DocumentFragment>
-  .c0 > svg {
+  .c0 {
   height: 16px;
   width: 16px;
 }
 
-.c0 > svg circle {
-  cx: 8px;
-  cy: 8px;
-}
-
-.c0 > svg .c2 {
-  r: 7px;
-}
-
-.c0 > svg .c4 {
-  r: 8px;
-}
-
-.c0 > svg .c6 {
-  r: 1.6px;
+.c0 .c6 {
+  height: 4px;
+  width: 4px;
 }
 
 .c3 {
-  fill: #dbdbdb;
-  stroke: #dbdbdb;
-  stroke-width: 2px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 2px #dbdbdb;
+  border-radius: 100%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .c5 {
-  fill: #cde0f5;
-  r: 0;
-  -webkit-transition: r 200ms 0s ease-in-out;
-  transition: r 200ms 0s ease-in-out;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: height,width;
+  transition-property: height,width;
 }
 
 .c7 {
-  fill: #fff;
-  -webkit-transition: r 200ms 0s ease-in-out;
-  transition: r 200ms 0s ease-in-out;
+  background: #fff;
+  border-radius: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   position: relative;
+}
+
+.c1 .c2 {
+  background: #dbdbdb;
+}
+
+.c1 .c4 {
+  background: #cde0f5;
+  height: calc(100% + 4px);
+  width: calc(100% + 4px);
 }
 
 <div
     class="c0 c1"
   >
-    <svg>
-      <circle
-        class="c2 c3"
-      />
-      <circle
+    <div
+      class="c2 c3"
+    >
+      <div
         class="c4 c5"
-      />
-      <circle
-        class="c6 c7"
-      />
-    </svg>
+      >
+        <div
+          class="c6 c7"
+        />
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
