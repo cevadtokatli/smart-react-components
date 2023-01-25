@@ -128,18 +128,9 @@ const sizeAttributes: SizeAttributes = {
       },
     },
     radio: {
-      small: {
-        circle: '2px',
-        container: '12px',
-      },
-      medium: {
-        circle: '4px',
-        container: '16px',
-      },
-      large: {
-        circle: '4px',
-        container: '20px',
-      },
+      small: '12px',
+      medium: '16px',
+      large: '20px',
     },
   },
   loading: {

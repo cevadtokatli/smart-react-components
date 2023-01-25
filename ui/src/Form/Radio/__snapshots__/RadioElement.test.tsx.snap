@@ -2,300 +2,268 @@
 
 exports[`<RadioElement /> should not be checked 1`] = `
 <DocumentFragment>
-  .c0 {
+  .c0 > svg {
   height: 16px;
   width: 16px;
 }
 
-.c0 .c3 {
-  height: 4px;
-  width: 4px;
+.c0 > svg circle {
+  cx: 8px;
+  cy: 8px;
 }
 
-.c2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #dbdbdb;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: calc(100% + 2px);
-  margin: -1px 0 0 -1px;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-transition: 200ms 0s ease-in-out;
-  transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,-webkit-transform;
-  -webkit-transition-property: background,transform;
-  transition-property: background,transform;
-  width: calc(100% + 2px);
+.c0 > svg .c2 {
+  r: 7px;
+}
+
+.c3 {
+  fill: #dbdbdb;
+  stroke: #dbdbdb;
+  stroke-width: 2px;
 }
 
 .c4 {
-  border-radius: 100%;
-  background: #fff;
+  fill: #0665d0;
+  r: 0;
+  -webkit-transition: r 200ms 0s ease-in-out;
+  transition: r 200ms 0s ease-in-out;
+}
+
+.c5 {
+  fill: #fff;
+  -webkit-transition: r 200ms 0s ease-in-out;
+  transition: r 200ms 0s ease-in-out;
 }
 
 .c1 {
-  border-radius: 100%;
-  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   position: relative;
-  background: #dbdbdb;
 }
 
 <div
     class="c0 c1"
   >
-    <div
-      class="c2"
-    >
-      <div
-        class="c3 c4"
+    <svg>
+      <circle
+        class="c2 c3"
       />
-    </div>
+      <circle
+        class="c4"
+      />
+      <circle
+        class="c5"
+      />
+    </svg>
   </div>
 </DocumentFragment>
 `;
 
 exports[`<RadioElement /> should render component 1`] = `
 <DocumentFragment>
-  .c0 {
+  .c0 > svg {
   height: 16px;
   width: 16px;
 }
 
-.c0 .c4 {
-  height: 4px;
-  width: 4px;
+.c0 > svg circle {
+  cx: 8px;
+  cy: 8px;
+}
+
+.c0 > svg .c2 {
+  r: 7px;
+}
+
+.c0 > svg .c4 {
+  r: 8px;
+}
+
+.c0 > svg .c6 {
+  r: 1.6px;
 }
 
 .c3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #dbdbdb;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: calc(100% + 2px);
-  margin: -1px 0 0 -1px;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-transition: 200ms 0s ease-in-out;
-  transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,-webkit-transform;
-  -webkit-transition-property: background,transform;
-  transition-property: background,transform;
-  width: calc(100% + 2px);
+  fill: #dbdbdb;
+  stroke: #dbdbdb;
+  stroke-width: 2px;
 }
 
 .c5 {
-  border-radius: 100%;
-  background: #fff;
+  fill: #0665d0;
+  r: 0;
+  -webkit-transition: r 200ms 0s ease-in-out;
+  transition: r 200ms 0s ease-in-out;
+}
+
+.c7 {
+  fill: #fff;
+  -webkit-transition: r 200ms 0s ease-in-out;
+  transition: r 200ms 0s ease-in-out;
 }
 
 .c1 {
-  border-radius: 100%;
-  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   position: relative;
-  background: #dbdbdb;
-}
-
-.c1 .c2 {
-  background: #0665d0;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
 }
 
 <div
     class="c0 c1"
   >
-    <div
-      class="c2 c3"
-    >
-      <div
+    <svg>
+      <circle
+        class="c2 c3"
+      />
+      <circle
         class="c4 c5"
       />
-    </div>
+      <circle
+        class="c6 c7"
+      />
+    </svg>
   </div>
 </DocumentFragment>
 `;
 
 exports[`<RadioElement /> should render component outline 1`] = `
 <DocumentFragment>
-  .c0 {
+  .c0 > svg {
   height: 16px;
   width: 16px;
 }
 
-.c0 .c4 {
-  height: 4px;
-  width: 4px;
+.c0 > svg circle {
+  cx: 8px;
+  cy: 8px;
+}
+
+.c0 > svg .c2 {
+  r: 7px;
+}
+
+.c0 > svg .c4 {
+  r: 8px;
+}
+
+.c0 > svg .c6 {
+  r: 1.6px;
 }
 
 .c3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #dbdbdb;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: calc(100% + 2px);
-  margin: -1px 0 0 -1px;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-transition: 200ms 0s ease-in-out;
-  transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,-webkit-transform;
-  -webkit-transition-property: background,transform;
-  transition-property: background,transform;
-  width: calc(100% + 2px);
+  fill: transparent;
+  stroke: #dbdbdb;
+  stroke-width: 2px;
 }
 
 .c5 {
-  border-radius: 100%;
-  background: #fff;
+  fill: #0665d0;
+  r: 0;
+  -webkit-transition: r 200ms 0s ease-in-out;
+  transition: r 200ms 0s ease-in-out;
+}
+
+.c7 {
+  fill: #fff;
+  -webkit-transition: r 200ms 0s ease-in-out;
+  transition: r 200ms 0s ease-in-out;
 }
 
 .c1 {
-  border-radius: 100%;
-  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   position: relative;
-  border: solid 2px #dbdbdb;
-  -webkit-transition: border 200ms 0s ease-in-out;
-  transition: border 200ms 0s ease-in-out;
-  border-color: #0665d0;
-}
-
-.c1 .c2 {
-  background: #0665d0;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
 }
 
 <div
     class="c0 c1"
   >
-    <div
-      class="c2 c3"
-    >
-      <div
+    <svg>
+      <circle
+        class="c2 c3"
+      />
+      <circle
         class="c4 c5"
       />
-    </div>
+      <circle
+        class="c6 c7"
+      />
+    </svg>
   </div>
 </DocumentFragment>
 `;
 
 exports[`<RadioElement /> should render component with soft colors 1`] = `
 <DocumentFragment>
-  .c0 {
+  .c0 > svg {
   height: 16px;
   width: 16px;
 }
 
-.c0 .c4 {
-  height: 4px;
-  width: 4px;
+.c0 > svg circle {
+  cx: 8px;
+  cy: 8px;
+}
+
+.c0 > svg .c2 {
+  r: 7px;
+}
+
+.c0 > svg .c4 {
+  r: 8px;
+}
+
+.c0 > svg .c6 {
+  r: 1.6px;
 }
 
 .c3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #dbdbdb;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: calc(100% + 2px);
-  margin: -1px 0 0 -1px;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-transition: 200ms 0s ease-in-out;
-  transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,-webkit-transform;
-  -webkit-transition-property: background,transform;
-  transition-property: background,transform;
-  width: calc(100% + 2px);
+  fill: #dbdbdb;
+  stroke: #dbdbdb;
+  stroke-width: 2px;
 }
 
 .c5 {
-  border-radius: 100%;
-  background: #fff;
+  fill: #cde0f5;
+  r: 0;
+  -webkit-transition: r 200ms 0s ease-in-out;
+  transition: r 200ms 0s ease-in-out;
+}
+
+.c7 {
+  fill: #fff;
+  -webkit-transition: r 200ms 0s ease-in-out;
+  transition: r 200ms 0s ease-in-out;
 }
 
 .c1 {
-  border-radius: 100%;
-  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   position: relative;
-  background: #dbdbdb;
-}
-
-.c1 .c2 {
-  background: #cde0f5;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
 }
 
 <div
     class="c0 c1"
   >
-    <div
-      class="c2 c3"
-    >
-      <div
+    <svg>
+      <circle
+        class="c2 c3"
+      />
+      <circle
         class="c4 c5"
       />
-    </div>
+      <circle
+        class="c6 c7"
+      />
+    </svg>
   </div>
 </DocumentFragment>
 `;

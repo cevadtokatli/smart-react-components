@@ -24,10 +24,7 @@ interface DefaultSizeAttributes {
       fontSize: string
       margin: Coordinator<string>
     }>
-    radio: Size<{
-      circle: string
-      container: string
-    }>
+    radio: Size<string>
   }
   loading: Size<string>
   popover: Size<{

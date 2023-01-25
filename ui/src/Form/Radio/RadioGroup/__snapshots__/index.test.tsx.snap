@@ -2,14 +2,40 @@
 
 exports[`<Radio /> should render component 1`] = `
 <DocumentFragment>
-  .c3 {
+  .c3 > svg {
   height: 16px;
   width: 16px;
 }
 
-.c3 .c8 {
-  height: 4px;
-  width: 4px;
+.c3 > svg circle {
+  cx: 8px;
+  cy: 8px;
+}
+
+.c3 > svg .c6 {
+  r: 7px;
+}
+
+.c3 > svg .c8 {
+  r: 8px;
+}
+
+.c3 > svg .c10 {
+  r: 1.6px;
+}
+
+.c12 > svg {
+  height: 16px;
+  width: 16px;
+}
+
+.c12 > svg circle {
+  cx: 8px;
+  cy: 8px;
+}
+
+.c12 > svg .c6 {
+  r: 7px;
 }
 
 .c0 {
@@ -88,60 +114,30 @@ exports[`<Radio /> should render component 1`] = `
 }
 
 .c7 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #dbdbdb;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: calc(100% + 2px);
-  margin: -1px 0 0 -1px;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-transition: 200ms 0s ease-in-out;
-  transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,-webkit-transform;
-  -webkit-transition-property: background,transform;
-  transition-property: background,transform;
-  width: calc(100% + 2px);
+  fill: #dbdbdb;
+  stroke: #dbdbdb;
+  stroke-width: 2px;
 }
 
 .c9 {
-  border-radius: 100%;
-  background: #fff;
+  fill: #0665d0;
+  r: 0;
+  -webkit-transition: r 200ms 0s ease-in-out;
+  transition: r 200ms 0s ease-in-out;
+}
+
+.c11 {
+  fill: #fff;
+  -webkit-transition: r 200ms 0s ease-in-out;
+  transition: r 200ms 0s ease-in-out;
 }
 
 .c4 {
-  border-radius: 100%;
-  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   position: relative;
-  background: #dbdbdb;
-}
-
-.c4 .c6 {
-  background: #0665d0;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.c10 {
-  border-radius: 100%;
-  box-sizing: border-box;
-  position: relative;
-  background: #dbdbdb;
 }
 
 <div
@@ -158,13 +154,17 @@ exports[`<Radio /> should render component 1`] = `
           class="c5"
           type="radio"
         />
-        <div
-          class="c6 c7"
-        >
-          <div
+        <svg>
+          <circle
+            class="c6 c7"
+          />
+          <circle
             class="c8 c9"
           />
-        </div>
+          <circle
+            class="c10 c11"
+          />
+        </svg>
       </div>
       <span>
         Item 1
@@ -174,19 +174,23 @@ exports[`<Radio /> should render component 1`] = `
       class="c1 c2"
     >
       <div
-        class="c3 c10"
+        class="c12 c4"
       >
         <input
           class="c5"
           type="radio"
         />
-        <div
-          class="c6 c7"
-        >
-          <div
+        <svg>
+          <circle
+            class="c6 c7"
+          />
+          <circle
             class="c8 c9"
           />
-        </div>
+          <circle
+            class="c10 c11"
+          />
+        </svg>
       </div>
       <span>
         Item 2
@@ -196,19 +200,23 @@ exports[`<Radio /> should render component 1`] = `
       class="c1 c2"
     >
       <div
-        class="c3 c10"
+        class="c12 c4"
       >
         <input
           class="c5"
           type="radio"
         />
-        <div
-          class="c6 c7"
-        >
-          <div
+        <svg>
+          <circle
+            class="c6 c7"
+          />
+          <circle
             class="c8 c9"
           />
-        </div>
+          <circle
+            class="c10 c11"
+          />
+        </svg>
       </div>
       <span>
         Item 3

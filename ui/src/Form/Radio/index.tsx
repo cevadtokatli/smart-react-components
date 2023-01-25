@@ -5,7 +5,7 @@ import React from 'react'
 import { FormValue, OrderPosition } from '../../types'
 import FormHiddenInput from '../FormHiddenInput'
 import FormInlineLabel from '../FormInlineLabel'
-import RadioElement, { Circle, ScaleArea } from './RadioElement'
+import RadioElement from './RadioElement'
 
 export { OrderPosition as Position } from '../../types'
 
@@ -78,9 +78,6 @@ const Radio = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
             radioSizeXl={props.sizeXl}
           >
             { input }
-            <ScaleArea>
-              <Circle />
-            </ScaleArea>
           </RadioElement>
           )
       }
