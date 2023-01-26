@@ -68,6 +68,11 @@ const sizeAttributes: SizeAttributes = {
       },
     },
   },
+  checkbox: {
+    small: '12px',
+    medium: '16px',
+    large: '20px',
+  },
   dropdown: {
     small: {
       fontSize: '.875rem',
@@ -104,11 +109,6 @@ const sizeAttributes: SizeAttributes = {
     },
   },
   form: {
-    checkbox: {
-      small: '12px',
-      medium: '16px',
-      large: '20px',
-    },
     inlineLabel: {
       small: {
         fontSize: '.875rem',
@@ -130,28 +130,6 @@ const sizeAttributes: SizeAttributes = {
           x: '.5rem',
           y: '1rem',
         },
-      },
-    },
-    radio: {
-      small: '12px',
-      medium: '16px',
-      large: '20px',
-    },
-    switch: {
-      small: {
-        height: '12px',
-        slider: '10px',
-        width: '22px',
-      },
-      medium: {
-        height: '16px',
-        slider: '14px',
-        width: '28px',
-      },
-      large: {
-        height: '20px',
-        slider: '18px',
-        width: '34px',
       },
     },
   },
@@ -196,6 +174,28 @@ const sizeAttributes: SizeAttributes = {
         x: '1rem',
         y: '.75rem',
       },
+    },
+  },
+  radio: {
+    small: '12px',
+    medium: '16px',
+    large: '20px',
+  },
+  switch: {
+    small: {
+      height: '12px',
+      slider: '10px',
+      width: '22px',
+    },
+    medium: {
+      height: '16px',
+      slider: '14px',
+      width: '28px',
+    },
+    large: {
+      height: '20px',
+      slider: '18px',
+      width: '34px',
     },
   },
   tooltip: {

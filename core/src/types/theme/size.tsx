@@ -14,22 +14,16 @@ interface DefaultSizeAttributes {
     margin: Coordinator<string>
     padding: Coordinator<string>
   }>
+  checkbox: Size<string>
   dropdown: Size<{
     fontSize: string
     margin: Coordinator<string>
     padding: Coordinator<string>
   }>
   form: {
-    checkbox: Size<string>
     inlineLabel: Size<{
       fontSize: string
       margin: Coordinator<string>
-    }>
-    radio: Size<string>
-    switch: Size<{
-      height: string
-      slider: string
-      width: string
     }>
   }
   loading: Size<string>
@@ -38,6 +32,12 @@ interface DefaultSizeAttributes {
     headerFontSize: string
     headerPadding: Coordinator<string>
     padding: Coordinator<string>
+  }>
+  radio: Size<string>
+  switch: Size<{
+    height: string
+    slider: string
+    width: string
   }>
   tooltip: Size<{
     fontSize: string
