@@ -111,12 +111,12 @@ exports[`<Checkbox /> should render component 1`] = `
 }
 
 .c3 .c5 {
-  border-radius: 2px;
+  border-radius: .125rem;
   background: #dbdbdb;
 }
 
 .c3 .c7 {
-  border-radius: 2px;
+  border-radius: .125rem;
 }
 
 .c3 .c7 {

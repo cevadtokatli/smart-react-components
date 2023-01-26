@@ -54,12 +54,12 @@ exports[`<CheckboxElement /> should not be checked 1`] = `
 }
 
 .c1 .c2 {
-  border-radius: 2px;
+  border-radius: .125rem;
   background: #dbdbdb;
 }
 
 .c1 .c4 {
-  border-radius: 2px;
+  border-radius: .125rem;
 }
 
 <div
@@ -139,12 +139,12 @@ exports[`<CheckboxElement /> should render component 1`] = `
 }
 
 .c1 .c2 {
-  border-radius: 2px;
+  border-radius: .125rem;
   background: #dbdbdb;
 }
 
 .c1 .c4 {
-  border-radius: 2px;
+  border-radius: .125rem;
 }
 
 .c1 .c4 {
@@ -232,11 +232,11 @@ exports[`<CheckboxElement /> should render component outline 1`] = `
 }
 
 .c1 .c2 {
-  border-radius: 2px;
+  border-radius: .125rem;
 }
 
 .c1 .c4 {
-  border-radius: 2px;
+  border-radius: .125rem;
 }
 
 .c1 .c4 {
@@ -324,12 +324,12 @@ exports[`<CheckboxElement /> should render component with soft colors 1`] = `
 }
 
 .c1 .c2 {
-  border-radius: 2px;
+  border-radius: .125rem;
   background: #dbdbdb;
 }
 
 .c1 .c4 {
-  border-radius: 2px;
+  border-radius: .125rem;
 }
 
 .c1 .c4 {

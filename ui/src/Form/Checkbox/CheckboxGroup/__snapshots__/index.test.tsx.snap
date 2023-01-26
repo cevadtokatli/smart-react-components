@@ -129,12 +129,12 @@ exports[`<CheckboxGroup /> should render component 1`] = `
 }
 
 .c4 .c6 {
-  border-radius: 2px;
+  border-radius: .125rem;
   background: #dbdbdb;
 }
 
 .c4 .c8 {
-  border-radius: 2px;
+  border-radius: .125rem;
 }
 
 .c4 .c8 {
@@ -150,12 +150,12 @@ exports[`<CheckboxGroup /> should render component 1`] = `
 }
 
 .c12 .c6 {
-  border-radius: 2px;
+  border-radius: .125rem;
   background: #dbdbdb;
 }
 
 .c12 .c8 {
-  border-radius: 2px;
+  border-radius: .125rem;
 }
 
 <div
