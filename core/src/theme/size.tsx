@@ -137,6 +137,23 @@ const sizeAttributes: SizeAttributes = {
       medium: '16px',
       large: '20px',
     },
+    switch: {
+      small: {
+        height: '12px',
+        slider: '10px',
+        width: '22px',
+      },
+      medium: {
+        height: '16px',
+        slider: '14px',
+        width: '28px',
+      },
+      large: {
+        height: '20px',
+        slider: '18px',
+        width: '34px',
+      },
+    },
   },
   loading: {
     small: '10px',

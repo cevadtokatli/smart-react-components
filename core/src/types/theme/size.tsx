@@ -26,6 +26,11 @@ interface DefaultSizeAttributes {
       margin: Coordinator<string>
     }>
     radio: Size<string>
+    switch: Size<{
+      height: string
+      slider: string
+      width: string
+    }>
   }
   loading: Size<string>
   popover: Size<{
