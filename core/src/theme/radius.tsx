@@ -18,6 +18,12 @@ const radiusAttributes: RadiusAttributes = {
     rectangle: '.125rem',
     rounded: '.5rem',
   },
+  form: {
+    checkbox: {
+      rectangle: '.125rem',
+      rounded: '100%',
+    },
+  },
   popover: '.25rem',
   tooltip: '.25rem',
 }

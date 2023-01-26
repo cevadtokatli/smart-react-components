@@ -20,6 +20,7 @@ interface DefaultSizeAttributes {
     padding: Coordinator<string>
   }>
   form: {
+    checkbox: Size<string>
     inlineLabel: Size<{
       fontSize: string
       margin: Coordinator<string>

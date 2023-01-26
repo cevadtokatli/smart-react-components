@@ -104,6 +104,11 @@ const sizeAttributes: SizeAttributes = {
     },
   },
   form: {
+    checkbox: {
+      small: '12px',
+      medium: '16px',
+      large: '20px',
+    },
     inlineLabel: {
       small: {
         fontSize: '.875rem',
