@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CheckboxGroup /> should render component 1`] = `
+<DocumentFragment>
+  .c3 {
+  height: 16px;
+  width: 16px;
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c5 {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.c1 {
+  margin: 1rem .5rem;
+}
+
+.c1 > :last-child {
+  font-size: 1rem;
+  margin-left: 0.46874rem;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+}
+
+.c2 > :first-child {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c2 > :last-child {
+  color: #323a46;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c7 {
+  border: solid 2px #dbdbdb;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+}
+
+.c9 {
+  position: absolute;
+  left: -2px;
+  height: calc(100% + 4px);
+  top: -2px;
+  -webkit-transition: background 200ms 0s ease-in-out;
+  transition: background 200ms 0s ease-in-out;
+  width: calc(100% + 4px);
+}
+
+.c11 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.c11 > path {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-dasharray: 36px;
+  stroke-dashoffset: 36px;
+  -webkit-transition: stroke-dashoffset 200ms 0s ease-in-out;
+  transition: stroke-dashoffset 200ms 0s ease-in-out;
+}
+
+.c4 {
+  position: relative;
+}
+
+.c4 .c6 {
+  border-radius: 2px;
+  background: #dbdbdb;
+}
+
+.c4 .c8 {
+  border-radius: 2px;
+}
+
+.c4 .c8 {
+  background: #0665d0;
+}
+
+.c4 .c10 > path {
+  stroke-dashoffset: 0;
+}
+
+.c12 {
+  position: relative;
+}
+
+.c12 .c6 {
+  border-radius: 2px;
+  background: #dbdbdb;
+}
+
+.c12 .c8 {
+  border-radius: 2px;
+}
+
+<div
+    class=" c0"
+  >
+    <label
+      class="c1 c2"
+    >
+      <div
+        class="c3 c4"
+        shape="rectangle"
+      >
+        <input
+          checked=""
+          class="c5"
+          type="checkbox"
+        />
+        <div
+          class="c6 c7"
+        >
+          <div
+            class="c8 c9"
+          />
+          <svg
+            class="c10 c11"
+            viewBox="0 0 32 32"
+          >
+            <path
+              d="M3.5,17.2l7.6,7.6L28.5,7.3"
+            />
+          </svg>
+        </div>
+      </div>
+      <span>
+        Item 1
+      </span>
+    </label>
+    <label
+      class="c1 c2"
+    >
+      <div
+        class="c3 c12"
+        shape="rectangle"
+      >
+        <input
+          class="c5"
+          type="checkbox"
+        />
+        <div
+          class="c6 c7"
+        >
+          <div
+            class="c8 c9"
+          />
+          <svg
+            class="c10 c11"
+            viewBox="0 0 32 32"
+          >
+            <path
+              d="M3.5,17.2l7.6,7.6L28.5,7.3"
+            />
+          </svg>
+        </div>
+      </div>
+      <span>
+        Item 2
+      </span>
+    </label>
+    <label
+      class="c1 c2"
+    >
+      <div
+        class="c3 c12"
+        shape="rectangle"
+      >
+        <input
+          class="c5"
+          type="checkbox"
+        />
+        <div
+          class="c6 c7"
+        >
+          <div
+            class="c8 c9"
+          />
+          <svg
+            class="c10 c11"
+            viewBox="0 0 32 32"
+          >
+            <path
+              d="M3.5,17.2l7.6,7.6L28.5,7.3"
+            />
+          </svg>
+        </div>
+      </div>
+      <span>
+        Item 3
+      </span>
+    </label>
+  </div>
+</DocumentFragment>
+`;
