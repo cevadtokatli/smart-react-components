@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Switch /> should render component 1`] = `
+<DocumentFragment>
+  .c6 {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.c0 {
+  margin: 1rem .5rem;
+}
+
+.c0 > :last-child {
+  font-size: 1rem;
+  margin-left: 0.46874rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+}
+
+.c1 > :first-child {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c1 > :last-child {
+  color: #323a46;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c2,
+.c2 + input {
+  height: 16px;
+  width: 28px;
+}
+
+.c2 + input {
+  top: calc(50% - 8px);
+}
+
+.c2 .c4 {
+  height: 14px;
+  width: 14px;
+  left: 12px;
+}
+
+.c5 {
+  background: #fff;
+  border-radius: 100%;
+  box-shadow: 0 1px 3px rgba(0,0,0,.4);
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: left,right;
+  transition-property: left,right;
+}
+
+.c3 {
+  border: solid 1px #dbdbdb;
+  border-radius: 20px;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-transition: 400ms 0s ease-in-out;
+  transition: 400ms 0s ease-in-out;
+  -webkit-transition-property: border,box-shadow;
+  transition-property: border,box-shadow;
+  background: #dbdbdb;
+  box-shadow: #dbdbdb 0 0 0 0 inset;
+  -webkit-transition: border 400ms 0s ease-in-out,box-shadow 400ms 0s ease-in-out,background 0s 400ms ease-in-out;
+  transition: border 400ms 0s ease-in-out,box-shadow 400ms 0s ease-in-out,background 0s 400ms ease-in-out;
+  background: #0665d0;
+  border-color: #0665d0;
+  box-shadow: #0665d0 0 0 0 11px inset;
+}
+
+<label
+    class="c0 c1"
+  >
+    <div
+      class="c2 c3"
+    >
+      <div
+        class="c4 c5"
+      />
+    </div>
+    <input
+      checked=""
+      class="c6"
+      type="checkbox"
+    />
+    <span>
+      Label
+    </span>
+  </label>
+</DocumentFragment>
+`;

@@ -1,6 +1,12 @@
 import { Value } from '@smart-react-components/core/types'
 
 /**
+ * Takes a CSS number value as JavaScript string or number.
+ * Extracts the unit and returns the number part of the value.
+ */
+export const extractNumberUnit = (input: Value) => typeof input === 'number' ? input : Number(input.replace(/[A-z|%]+/, ''))
+
+/**
  * Takes a CSS number as JavaScript string or number.
  * Splits the given input in two as value and unit parts.
  * Provides a callback with value of the input.
