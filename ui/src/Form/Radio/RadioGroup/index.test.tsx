@@ -4,7 +4,7 @@ import React from 'react'
 import RadioGroup from './'
 import Radio from '../'
 
-describe('<Radio />', () => {
+describe('<RadioGroup />', () => {
   it('should render component', () => {
     const { asFragment } = render(wrapTheme(
       <RadioGroup active="item-1" setActive={jest.fn()}>

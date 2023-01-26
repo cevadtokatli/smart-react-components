@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Radio /> should render component 1`] = `
+exports[`<RadioGroup /> should render component 1`] = `
 <DocumentFragment>
   .c3 {
   height: 16px;
