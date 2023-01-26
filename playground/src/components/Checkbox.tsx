@@ -1,5 +1,4 @@
 import { Checkbox, CheckboxGroup } from '@smart-react-components/ui'
-import { Position } from '@smart-react-components/ui/Form/Checkbox'
 import React from 'react'
 
 export const Palette = () => {
