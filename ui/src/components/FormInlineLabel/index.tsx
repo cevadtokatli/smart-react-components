@@ -4,6 +4,7 @@ import { ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
 import styled from 'styled-components'
 import { OrderPosition } from '../../types'
 import { toCSSValue } from '../../util/css'
+import { calculateFormLabelMarginX } from '../../util/form'
 import { getReverseOrderPosition } from '../../util/props'
 
 interface Props extends
@@ -27,7 +28,7 @@ export default styled(Label).attrs<Props>(({ isBlock, labelPosition }: Props) =>
 
     > span {
       font-size: ${t.$.size.form.inlineLabel[v].fontSize};
-      margin-${OrderPosition[getReverseOrderPosition(labelPosition)].toLowerCase()}: ${toCSSValue(t.$.size.form.inlineLabel[v].margin.x)(v => (v / 1.0667).toFixed(5))};
+      margin-${OrderPosition[getReverseOrderPosition(labelPosition)].toLowerCase()}: ${toCSSValue(t.$.size.form.inlineLabel[v].margin.x)(calculateFormLabelMarginX)};
     }
   `,
 }))<Props>(({ theme, isBlock, isDisabled, labelPosition }: Props) => `
