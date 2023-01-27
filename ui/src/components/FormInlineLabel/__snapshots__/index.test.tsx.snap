@@ -6,7 +6,7 @@ exports[`<FormInlineLabel /> label should be at left 1`] = `
   margin: 1rem .5rem;
 }
 
-.c0 > :last-child {
+.c0 > span {
   font-size: 1rem;
   margin-right: 0.46874rem;
 }
@@ -28,13 +28,13 @@ exports[`<FormInlineLabel /> label should be at left 1`] = `
   position: relative;
 }
 
-.c1 > :first-child {
+.c1 > div {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c1 > :last-child {
+.c1 > span {
   color: #323a46;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -49,13 +49,13 @@ exports[`<FormInlineLabel /> label should be at left 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
-.c1 > :last-child {
+.c1 > span {
   -webkit-order: 1;
   -ms-flex-order: 1;
   order: 1;
 }
 
-.c1 > :first-child {
+.c1 > div {
   -webkit-order: 2;
   -ms-flex-order: 2;
   order: 2;
@@ -79,7 +79,7 @@ exports[`<FormInlineLabel /> should be block 1`] = `
   margin-bottom: .5rem;
 }
 
-.c0 > :last-child {
+.c0 > span {
   font-size: 1rem;
   margin-left: 0.46874rem;
 }
@@ -101,13 +101,13 @@ exports[`<FormInlineLabel /> should be block 1`] = `
   position: relative;
 }
 
-.c1 > :first-child {
+.c1 > div {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c1 > :last-child {
+.c1 > span {
   color: #323a46;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -140,7 +140,7 @@ exports[`<FormInlineLabel /> should be disabled 1`] = `
   margin: 1rem .5rem;
 }
 
-.c0 > :last-child {
+.c0 > span {
   font-size: 1rem;
   margin-left: 0.46874rem;
 }
@@ -164,13 +164,13 @@ exports[`<FormInlineLabel /> should be disabled 1`] = `
   pointer-events: none;
 }
 
-.c1 > :first-child {
+.c1 > div {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c1 > :last-child {
+.c1 > span {
   color: #323a46;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -203,7 +203,7 @@ exports[`<FormInlineLabel /> should render component 1`] = `
   margin: 1rem .5rem;
 }
 
-.c0 > :last-child {
+.c0 > span {
   font-size: 1rem;
   margin-left: 0.46874rem;
 }
@@ -225,13 +225,13 @@ exports[`<FormInlineLabel /> should render component 1`] = `
   position: relative;
 }
 
-.c1 > :first-child {
+.c1 > div {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c1 > :last-child {
+.c1 > span {
   color: #323a46;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;

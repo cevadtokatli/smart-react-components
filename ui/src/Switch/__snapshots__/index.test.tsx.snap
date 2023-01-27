@@ -6,7 +6,7 @@ exports[`<Switch /> should render component 1`] = `
   margin: 1rem .5rem;
 }
 
-.c0 > :last-child {
+.c0 > span {
   font-size: 1rem;
   margin-left: 0.46874rem;
 }
@@ -28,13 +28,13 @@ exports[`<Switch /> should render component 1`] = `
   position: relative;
 }
 
-.c1 > :first-child {
+.c1 > div {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c1 > :last-child {
+.c1 > span {
   color: #323a46;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;

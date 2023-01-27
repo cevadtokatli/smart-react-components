@@ -25,7 +25,7 @@ export default styled(Label).attrs<Props>(({ isBlock, labelPosition }: Props) =>
       `
     }
 
-    > :last-child {
+    > span {
       font-size: ${t.$.size.form.inlineLabel[v].fontSize};
       margin-${OrderPosition[getReverseOrderPosition(labelPosition)].toLowerCase()}: ${toCSSValue(t.$.size.form.inlineLabel[v].margin.x)(v => (v / 1.0667).toFixed(5))};
     }
@@ -37,11 +37,11 @@ export default styled(Label).attrs<Props>(({ isBlock, labelPosition }: Props) =>
   justify-content: space-between;
   position: relative;
 
-  > :first-child {
+  > div {
     flex: 0 0 auto;
   }
 
-  > :last-child {
+  > span {
     color: ${theme.$.color.dynamic.font};
     display: inline-flex;
     flex: 1 1 auto;
@@ -61,11 +61,11 @@ export default styled(Label).attrs<Props>(({ isBlock, labelPosition }: Props) =>
 
   ${labelPosition === OrderPosition.LEFT
     ? `
-      > :last-child {
+      > span {
         order: 1;
       }
 
-      > :first-child {
+      > div {
         order: 2;
       }
     `
