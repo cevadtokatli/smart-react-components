@@ -4,6 +4,7 @@ const opacityAttributes: OpacityAttributes = {
   breadcrumbDisabled: .7,
   dropdownDisabled: .7,
   formDisabled: .7,
+  inputPlaceholder: .3,
   paginationDisabled: .7,
 }
 

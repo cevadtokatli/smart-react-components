@@ -7,6 +7,7 @@ interface DefaultRadiusAttributes {
   breadcrumb: Shape<string>
   dropdown: string
   checkbox: Shape<string>
+  input: Shape<string>
   pagination: Shape<string>
   popover: string
   tooltip: string

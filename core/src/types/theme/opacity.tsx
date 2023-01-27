@@ -4,6 +4,7 @@ interface DefaultOpacityAttributes {
   breadcrumbDisabled: number
   dropdownDisabled: number
   formDisabled: number
+  inputPlaceholder: number
   paginationDisabled: number
 }
 

@@ -21,11 +21,19 @@ interface DefaultSizeAttributes {
     padding: Coordinator<string>
   }>
   form: {
+    blockLabel: Size<{
+      fontSize: string
+      margin: string
+    }>
     inlineLabel: Size<{
       fontSize: string
       margin: Coordinator<string>
     }>
   }
+  input: Size<{
+    fontSize: string
+    padding: Coordinator<string>
+  }>
   loading: Size<string>
   popover: Size<{
     fontSize: string

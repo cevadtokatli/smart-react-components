@@ -109,6 +109,20 @@ const sizeAttributes: SizeAttributes = {
     },
   },
   form: {
+    blockLabel: {
+      small: {
+        fontSize: '.875rem',
+        margin: '.5rem',
+      },
+      medium: {
+        fontSize: '1rem',
+        margin: '.5rem',
+      },
+      large: {
+        fontSize: '1rem',
+        margin: '.5rem',
+      },
+    },
     inlineLabel: {
       small: {
         fontSize: '.875rem',
@@ -130,6 +144,29 @@ const sizeAttributes: SizeAttributes = {
           x: '.5rem',
           y: '1rem',
         },
+      },
+    },
+  },
+  input: {
+    small: {
+      fontSize: '.875rem',
+      padding: {
+        x: '.8rem',
+        y: '.28rem',
+      },
+    },
+    medium: {
+      fontSize: '1rem',
+      padding: {
+        x: '.9rem',
+        y: '.45rem',
+      },
+    },
+    large: {
+      fontSize: '1rem',
+      padding: {
+        x: '1rem',
+        y: '.5rem',
       },
     },
   },

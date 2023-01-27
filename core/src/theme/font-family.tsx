@@ -8,6 +8,7 @@ const fontFamilyAttributes: FontFamilyAttributes = {
   breadcrumb: 'inherit',
   dropdown: 'inherit',
   form: 'inherit',
+  input: 'inherit',
   pagination: 'inherit',
   popover: 'inherit',
   popoverHeader: 'inherit',

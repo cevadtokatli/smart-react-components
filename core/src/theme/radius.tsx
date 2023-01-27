@@ -22,6 +22,10 @@ const radiusAttributes: RadiusAttributes = {
     rectangle: '.125rem',
     rounded: '100%',
   },
+  input: {
+    rectangle: '.2rem',
+    rounded: '2rem',
+  },
   popover: '.25rem',
   tooltip: '.25rem',
 }
