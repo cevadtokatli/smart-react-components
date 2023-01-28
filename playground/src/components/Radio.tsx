@@ -6,14 +6,14 @@ export const Palette = () => {
 
   return (
     <RadioGroup active={active} setActive={setActive}>
-      <Radio value="primary">Primary</Radio>
-      <Radio value="secondary" palette="secondary">Secondary</Radio>
-      <Radio value="success" palette="success">Success</Radio>
-      <Radio value="danger" palette="danger">Danger</Radio>
-      <Radio value="warning" palette="warning">Warning</Radio>
-      <Radio value="info" palette="info">Info</Radio>
-      <Radio value="dynamic" palette="dynamic">Dynamic</Radio>
-      <Radio value="!dynamic" palette="!dynamic">!Dynamic</Radio>
+      <Radio value="primary" label="Primary" />
+      <Radio value="secondary" palette="secondary" label="Secondary" />
+      <Radio value="success" palette="success" label="Success" />
+      <Radio value="danger" palette="danger" label="Danger" />
+      <Radio value="warning" palette="warning" label="Warning" />
+      <Radio value="info" palette="info" label="Info" />
+      <Radio value="dynamic" palette="dynamic" label="Dynamic" />
+      <Radio value="!dynamic" palette="!dynamic" label="!Dynamic" />
     </RadioGroup>
   )
 }
@@ -23,14 +23,14 @@ export const Soft = () => {
 
   return (
     <RadioGroup active={active} setActive={setActive}>
-      <Radio value="primary" isSoft>Primary</Radio>
-      <Radio value="secondary" palette="secondary" isSoft>Secondary</Radio>
-      <Radio value="success" palette="success" isSoft>Success</Radio>
-      <Radio value="danger" palette="danger" isSoft>Danger</Radio>
-      <Radio value="warning" palette="warning" isSoft>Warning</Radio>
-      <Radio value="info" palette="info" isSoft>Info</Radio>
-      <Radio value="dynamic" palette="dynamic" isSoft>Dynamic</Radio>
-      <Radio value="!dynamic" palette="!dynamic" isSoft>!Dynamic</Radio>
+      <Radio value="primary" label="Primary" isSoft />
+      <Radio value="secondary" palette="secondary" label="Secondary" isSoft />
+      <Radio value="success" palette="success" label="Success" isSoft />
+      <Radio value="danger" palette="danger" label="Danger" isSoft />
+      <Radio value="warning" palette="warning" label="Warning" isSoft />
+      <Radio value="info" palette="info" label="Info" isSoft />
+      <Radio value="dynamic" palette="dynamic" label="Dynamic" isSoft />
+      <Radio value="!dynamic" palette="!dynamic" label="!Dynamic" isSoft />
     </RadioGroup>
   )
 }
@@ -40,14 +40,14 @@ export const Outline = () => {
 
   return (
     <RadioGroup active={active} setActive={setActive}>
-      <Radio value="primary" isOutline>Primary</Radio>
-      <Radio value="secondary" palette="secondary" isOutline>Secondary</Radio>
-      <Radio value="success" palette="success" isOutline>Success</Radio>
-      <Radio value="danger" palette="danger" isOutline>Danger</Radio>
-      <Radio value="warning" palette="warning" isOutline>Warning</Radio>
-      <Radio value="info" palette="info" isOutline>Info</Radio>
-      <Radio value="dynamic" palette="dynamic" isOutline>Dynamic</Radio>
-      <Radio value="!dynamic" palette="!dynamic" isOutline>!Dynamic</Radio>
+      <Radio value="primary" label="Primary" isOutline />
+      <Radio value="secondary" palette="secondary" label="Secondary" isOutline />
+      <Radio value="success" palette="success" label="Success" isOutline />
+      <Radio value="danger" palette="danger" label="Danger" isOutline />
+      <Radio value="warning" palette="warning" label="Warning" isOutline />
+      <Radio value="info" palette="info" label="Info" isOutline />
+      <Radio value="dynamic" palette="dynamic" label="Dynamic" isOutline />
+      <Radio value="!dynamic" palette="!dynamic" label="!Dynamic" isOutline />
     </RadioGroup>
   )
 }
@@ -57,14 +57,14 @@ export const OutlineSoft = () => {
 
   return (
     <RadioGroup active={active} setActive={setActive}>
-      <Radio value="primary" isOutline isSoft>Primary</Radio>
-      <Radio value="secondary" palette="secondary" isOutline isSoft>Secondary</Radio>
-      <Radio value="success" palette="success" isOutline isSoft>Success</Radio>
-      <Radio value="danger" palette="danger" isOutline isSoft>Danger</Radio>
-      <Radio value="warning" palette="warning" isOutline isSoft>Warning</Radio>
-      <Radio value="info" palette="info" isOutline isSoft>Info</Radio>
-      <Radio value="dynamic" palette="dynamic" isOutline isSoft>Dynamic</Radio>
-      <Radio value="!dynamic" palette="!dynamic" isOutline isSoft>!Dynamic</Radio>
+      <Radio value="primary" label="Primary" isOutline isSoft />
+      <Radio value="secondary" palette="secondary" label="Secondary" isOutline isSoft />
+      <Radio value="success" palette="success" label="Success" isOutline isSoft />
+      <Radio value="danger" palette="danger" label="Danger" isOutline isSoft />
+      <Radio value="warning" palette="warning" label="Warning" isOutline isSoft />
+      <Radio value="info" palette="info" label="Info" isOutline isSoft />
+      <Radio value="dynamic" palette="dynamic" label="Dynamic" isOutline isSoft />
+      <Radio value="!dynamic" palette="!dynamic" label="!Dynamic" isOutline isSoft />
     </RadioGroup>
   )
 }
@@ -74,9 +74,9 @@ export const Size = () => {
 
   return (
     <RadioGroup active={active} setActive={setActive}>
-      <Radio value="small" size="small">Small</Radio>
-      <Radio value="medium">Medium</Radio>
-      <Radio value="large" size="large">Large</Radio>
+      <Radio value="small" size="small" label="Small" />
+      <Radio value="medium" label="Medium" />
+      <Radio value="large" size="large" label="Large" />
     </RadioGroup>
   )
 }
@@ -86,9 +86,9 @@ export const Block = () => {
 
   return (
     <RadioGroup active={active} setActive={setActive} isBlock>
-      <Radio value="item-1">Item 1</Radio>
-      <Radio value="item-2">Item 2</Radio>
-      <Radio value="item-3">Item 3</Radio>
+      <Radio value="item-1" label="Item 1" />
+      <Radio value="item-2" label="Item 2" />
+      <Radio value="item-3" label="Item 3" />
     </RadioGroup>
   )
 }
