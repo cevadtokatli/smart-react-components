@@ -6,14 +6,14 @@ export const Palette = () => {
 
   return (
     <CheckboxGroup active={active} setActive={setActive}>
-      <Checkbox value="primary">Primary</Checkbox>
-      <Checkbox value="secondary" palette="secondary">Secondary</Checkbox>
-      <Checkbox value="success" palette="success">Success</Checkbox>
-      <Checkbox value="danger" palette="danger">Danger</Checkbox>
-      <Checkbox value="warning" palette="warning">Warning</Checkbox>
-      <Checkbox value="info" palette="info">Info</Checkbox>
-      <Checkbox value="dynamic" palette="dynamic">Dynamic</Checkbox>
-      <Checkbox value="!dynamic" palette="!dynamic">!Dynamic</Checkbox>
+      <Checkbox value="primary" label="Primary" />
+      <Checkbox value="secondary" palette="secondary" label="Secondary" />
+      <Checkbox value="success" palette="success" label="Success" />
+      <Checkbox value="danger" palette="danger" label="Danger" />
+      <Checkbox value="warning" palette="warning" label="Warning" />
+      <Checkbox value="info" palette="info" label="Info" />
+      <Checkbox value="dynamic" palette="dynamic" label="Dynamic" />
+      <Checkbox value="!dynamic" palette="!dynamic" label="!Dynamic" />
     </CheckboxGroup>
   )
 }
@@ -23,14 +23,14 @@ export const Soft = () => {
 
   return (
     <CheckboxGroup active={active} setActive={setActive}>
-      <Checkbox value="primary" isSoft>Primary</Checkbox>
-      <Checkbox value="secondary" palette="secondary" isSoft>Secondary</Checkbox>
-      <Checkbox value="success" palette="success" isSoft>Success</Checkbox>
-      <Checkbox value="danger" palette="danger" isSoft>Danger</Checkbox>
-      <Checkbox value="warning" palette="warning" isSoft>Warning</Checkbox>
-      <Checkbox value="info" palette="info" isSoft>Info</Checkbox>
-      <Checkbox value="dynamic" palette="dynamic" isSoft>Dynamic</Checkbox>
-      <Checkbox value="!dynamic" palette="!dynamic" isSoft>!Dynamic</Checkbox>
+      <Checkbox value="primary" label="Primary" isSoft />
+      <Checkbox value="secondary" palette="secondary" label="Secondary" isSoft />
+      <Checkbox value="success" palette="success" label="Success" isSoft />
+      <Checkbox value="danger" palette="danger" label="Danger" isSoft />
+      <Checkbox value="warning" palette="warning" label="Warning" isSoft />
+      <Checkbox value="info" palette="info" label="Info" isSoft />
+      <Checkbox value="dynamic" palette="dynamic" label="Dynamic" isSoft />
+      <Checkbox value="!dynamic" palette="!dynamic" label="!Dynamic" isSoft />
     </CheckboxGroup>
   )
 }
@@ -40,14 +40,14 @@ export const Outline = () => {
 
   return (
     <CheckboxGroup active={active} setActive={setActive}>
-      <Checkbox value="primary" isOutline>Primary</Checkbox>
-      <Checkbox value="secondary" palette="secondary" isOutline>Secondary</Checkbox>
-      <Checkbox value="success" palette="success" isOutline>Success</Checkbox>
-      <Checkbox value="danger" palette="danger" isOutline>Danger</Checkbox>
-      <Checkbox value="warning" palette="warning" isOutline>Warning</Checkbox>
-      <Checkbox value="info" palette="info" isOutline>Info</Checkbox>
-      <Checkbox value="dynamic" palette="dynamic" isOutline>Dynamic</Checkbox>
-      <Checkbox value="!dynamic" palette="!dynamic" isOutline>!Dynamic</Checkbox>
+      <Checkbox value="primary" label="Primary" isOutline />
+      <Checkbox value="secondary" palette="secondary" label="Secondary" isOutline />
+      <Checkbox value="success" palette="success" label="Success" isOutline />
+      <Checkbox value="danger" palette="danger" label="Danger" isOutline />
+      <Checkbox value="warning" palette="warning" label="Warning" isOutline />
+      <Checkbox value="info" palette="info" label="Info" isOutline />
+      <Checkbox value="dynamic" palette="dynamic" label="Dynamic" isOutline />
+      <Checkbox value="!dynamic" palette="!dynamic" label="!Dynamic" isOutline />
     </CheckboxGroup>
   )
 }
@@ -57,14 +57,14 @@ export const OutlineSoft = () => {
 
   return (
     <CheckboxGroup active={active} setActive={setActive}>
-      <Checkbox value="primary" isOutline isSoft>Primary</Checkbox>
-      <Checkbox value="secondary" palette="secondary" isOutline isSoft>Secondary</Checkbox>
-      <Checkbox value="success" palette="success" isOutline isSoft>Success</Checkbox>
-      <Checkbox value="danger" palette="danger" isOutline isSoft>Danger</Checkbox>
-      <Checkbox value="warning" palette="warning" isOutline isSoft>Warning</Checkbox>
-      <Checkbox value="info" palette="info" isOutline isSoft>Info</Checkbox>
-      <Checkbox value="dynamic" palette="dynamic" isOutline isSoft>Dynamic</Checkbox>
-      <Checkbox value="!dynamic" palette="!dynamic" isOutline isSoft>!Dynamic</Checkbox>
+      <Checkbox value="primary" label="Primary" isOutline isSoft />
+      <Checkbox value="secondary" palette="secondary" label="Secondary" isOutline isSoft />
+      <Checkbox value="success" palette="success" label="Success" isOutline isSoft />
+      <Checkbox value="danger" palette="danger" label="Danger" isOutline isSoft />
+      <Checkbox value="warning" palette="warning" label="Warning" isOutline isSoft />
+      <Checkbox value="info" palette="info" label="Info" isOutline isSoft />
+      <Checkbox value="dynamic" palette="dynamic" label="Dynamic" isOutline isSoft />
+      <Checkbox value="!dynamic" palette="!dynamic" label="!Dynamic" isOutline isSoft />
     </CheckboxGroup>
   )
 }
@@ -74,9 +74,9 @@ export const Size = () => {
 
   return (
     <CheckboxGroup active={active} setActive={setActive}>
-      <Checkbox value="small" size="small">Small</Checkbox>
-      <Checkbox value="medium">Medium</Checkbox>
-      <Checkbox value="large" size="large">Large</Checkbox>
+      <Checkbox value="small" size="small" label="Small" />
+      <Checkbox value="medium" label="Medium" />
+      <Checkbox value="large" size="large" label="Large" />
     </CheckboxGroup>
   )
 }
@@ -86,8 +86,8 @@ export const Shape = () => {
 
   return (
     <CheckboxGroup active={active} setActive={setActive}>
-      <Checkbox value="rectangle">Rectangle</Checkbox>
-      <Checkbox value="rounded" shape="rounded">Rounded</Checkbox>
+      <Checkbox value="rectangle" label="Rectangle" />
+      <Checkbox value="rounded" shape="rounded" label="Rounded" />
     </CheckboxGroup>
   )
 }
@@ -97,9 +97,9 @@ export const Block = () => {
 
   return (
     <CheckboxGroup active={active} setActive={setActive} isBlock isRequired>
-      <Checkbox value="item-1">Item 1</Checkbox>
-      <Checkbox value="item-2" isOutline>Item 2</Checkbox>
-      <Checkbox value="item-3" isSoft>Item 3</Checkbox>
+      <Checkbox value="item-1" label="Item 1" />
+      <Checkbox value="item-2" label="Item 2" />
+      <Checkbox value="item-3" label="Item 3" />
     </CheckboxGroup>
   )
 }

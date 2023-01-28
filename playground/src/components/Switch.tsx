@@ -6,14 +6,14 @@ export const Palette = () => {
 
   return (
     <SwitchGroup active={active} setActive={setActive}>
-      <Switch value="primary">Primary</Switch>
-      <Switch value="secondary" palette="secondary">Secondary</Switch>
-      <Switch value="success" palette="success">Success</Switch>
-      <Switch value="danger" palette="danger">Danger</Switch>
-      <Switch value="warning" palette="warning">Warning</Switch>
-      <Switch value="info" palette="info">Info</Switch>
-      <Switch value="dynamic" palette="dynamic">Dynamic</Switch>
-      <Switch value="!dynamic" palette="!dynamic">!Dynamic</Switch>
+      <Switch value="primary" label="Primary" />
+      <Switch value="secondary" palette="secondary" label="Secondary" />
+      <Switch value="success" palette="success" label="Success" />
+      <Switch value="danger" palette="danger" label="Danger" />
+      <Switch value="warning" palette="warning" label="Warning" />
+      <Switch value="info" palette="info" label="Info" />
+      <Switch value="dynamic" palette="dynamic" label="Dynamic" />
+      <Switch value="!dynamic" palette="!dynamic" label="!Dynamic" />
     </SwitchGroup>
   )
 }
@@ -23,14 +23,14 @@ export const Soft = () => {
 
   return (
     <SwitchGroup active={active} setActive={setActive}>
-      <Switch value="primary" isSoft>Primary</Switch>
-      <Switch value="secondary" palette="secondary" isSoft>Secondary</Switch>
-      <Switch value="success" palette="success" isSoft>Success</Switch>
-      <Switch value="danger" palette="danger" isSoft>Danger</Switch>
-      <Switch value="warning" palette="warning" isSoft>Warning</Switch>
-      <Switch value="info" palette="info" isSoft>Info</Switch>
-      <Switch value="dynamic" palette="dynamic" isSoft>Dynamic</Switch>
-      <Switch value="!dynamic" palette="!dynamic" isSoft>!Dynamic</Switch>
+      <Switch value="primary" label="Primary" isOutline />
+      <Switch value="secondary" palette="secondary" label="Secondary" isOutline />
+      <Switch value="success" palette="success" label="Success" isOutline />
+      <Switch value="danger" palette="danger" label="Danger" isOutline />
+      <Switch value="warning" palette="warning" label="Warning" isOutline />
+      <Switch value="info" palette="info" label="Info" isOutline />
+      <Switch value="dynamic" palette="dynamic" label="Dynamic" isOutline />
+      <Switch value="!dynamic" palette="!dynamic" label="!Dynamic" isOutline />
     </SwitchGroup>
   )
 }
@@ -40,14 +40,14 @@ export const Outline = () => {
 
   return (
     <SwitchGroup active={active} setActive={setActive}>
-      <Switch value="primary" isOutline>Primary</Switch>
-      <Switch value="secondary" palette="secondary" isOutline>Secondary</Switch>
-      <Switch value="success" palette="success" isOutline>Success</Switch>
-      <Switch value="danger" palette="danger" isOutline>Danger</Switch>
-      <Switch value="warning" palette="warning" isOutline>Warning</Switch>
-      <Switch value="info" palette="info" isOutline>Info</Switch>
-      <Switch value="dynamic" palette="dynamic" isOutline>Dynamic</Switch>
-      <Switch value="!dynamic" palette="!dynamic" isOutline>!Dynamic</Switch>
+      <Switch value="primary" label="Primary" isOutline />
+      <Switch value="secondary" palette="secondary" label="Secondary" isOutline />
+      <Switch value="success" palette="success" label="Success" isOutline />
+      <Switch value="danger" palette="danger" label="Danger" isOutline />
+      <Switch value="warning" palette="warning" label="Warning" isOutline />
+      <Switch value="info" palette="info" label="Info" isOutline />
+      <Switch value="dynamic" palette="dynamic" label="Dynamic" isOutline />
+      <Switch value="!dynamic" palette="!dynamic" label="!Dynamic" isOutline />
     </SwitchGroup>
   )
 }
@@ -57,14 +57,14 @@ export const OutlineSoft = () => {
 
   return (
     <SwitchGroup active={active} setActive={setActive}>
-      <Switch value="primary" isOutline isSoft>Primary</Switch>
-      <Switch value="secondary" palette="secondary" isOutline isSoft>Secondary</Switch>
-      <Switch value="success" palette="success" isOutline isSoft>Success</Switch>
-      <Switch value="danger" palette="danger" isOutline isSoft>Danger</Switch>
-      <Switch value="warning" palette="warning" isOutline isSoft>Warning</Switch>
-      <Switch value="info" palette="info" isOutline isSoft>Info</Switch>
-      <Switch value="dynamic" palette="dynamic" isOutline isSoft>Dynamic</Switch>
-      <Switch value="!dynamic" palette="!dynamic" isOutline isSoft>!Dynamic</Switch>
+      <Switch value="primary" label="Primary" isOutline isSoft />
+      <Switch value="secondary" palette="secondary" label="Secondary" isOutline isSoft />
+      <Switch value="success" palette="success" label="Success" isOutline isSoft />
+      <Switch value="danger" palette="danger" label="Danger" isOutline isSoft />
+      <Switch value="warning" palette="warning" label="Warning" isOutline isSoft />
+      <Switch value="info" palette="info" label="Info" isOutline isSoft />
+      <Switch value="dynamic" palette="dynamic" label="Dynamic" isOutline isSoft />
+      <Switch value="!dynamic" palette="!dynamic" label="!Dynamic" isOutline isSoft />
     </SwitchGroup>
   )
 }
@@ -74,9 +74,9 @@ export const Size = () => {
 
   return (
     <SwitchGroup active={active} setActive={setActive}>
-      <Switch value="small" size="small">Small</Switch>
-      <Switch value="medium">Medium</Switch>
-      <Switch value="large" size="large">Large</Switch>
+      <Switch value="small" size="small" label="Small" />
+      <Switch value="medium" label="Medium" />
+      <Switch value="large" size="large" label="Large" />
     </SwitchGroup>
   )
 }
@@ -86,9 +86,9 @@ export const Block = () => {
 
   return (
     <SwitchGroup active={active} setActive={setActive} isBlock isRequired>
-      <Switch value="item-1">Item 1</Switch>
-      <Switch value="item-2" isOutline>Item 2</Switch>
-      <Switch value="item-3" isSoft>Item 3</Switch>
+      <Switch value="item-1" label="Item 1" />
+      <Switch value="item-2" label="Item 2" />
+      <Switch value="item-3" label="Item 3" />
     </SwitchGroup>
   )
 }
