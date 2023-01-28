@@ -1,6 +1,6 @@
 import Div from '@smart-react-components/core/Element/Div'
 import { StyledProps } from '@smart-react-components/core/styled-props'
-import { PaletteProp, ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
+import { PaletteProp, Partial, ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import styled from 'styled-components'
 import { toCSSValue } from '../util/css'
@@ -35,11 +35,11 @@ const InnerCircle = styled.div(({ theme }) => `
 
 interface Props extends
   StyledProps,
-  ResponsiveProp<'radioSize', SizeProp> {
-  isChecked: boolean
-  isOutline: boolean
-  isSoft: boolean
-  palette: PaletteProp
+  Partial<ResponsiveProp<'radioSize', SizeProp>> {
+  isChecked?: boolean
+  isOutline?: boolean
+  isSoft?: boolean
+  palette?: PaletteProp
 }
 
 export default styled(Div).attrs<Props>(({ children }) => ({

@@ -1,6 +1,6 @@
 import extractElementProps from '@smart-react-components/core/element-props'
 import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
-import { JSXElementProps, PaletteProp, Partial, ResponsiveProp, SetState, SizeProp } from '@smart-react-components/core/types'
+import { PaletteProp, Partial, ResponsiveProp, SetState, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import FormGroup from '../../components/FormGroup'
 import { FormValue, OrderPosition } from '../../types'
@@ -12,16 +12,15 @@ export interface Props extends
   IntrinsicStyledProps {
   active: FormValue
   children: JSX.Element[]
-  elementProps?: JSXElementProps
   isBlock?: boolean
-  isOutline?: boolean
   isRequired?: boolean
+  isOutline?: boolean
   isSoft?: boolean
   name?: string
   palette?: PaletteProp
   position?: OrderPosition
-  render?: (props: { isChecked: boolean }) => JSX.Element
   setActive: SetState<FormValue>
+  template?: JSX.Element
 }
 
 const RadioGroup: React.FC<Props> = props => (
@@ -39,15 +38,11 @@ const RadioGroup: React.FC<Props> = props => (
       name: props.name,
       palette: props.palette,
       position: props.position,
-      render: props.render,
       setActive: props.setActive,
+      template: props.template,
       ...item.props,
     })) }
   </FormGroup>
 )
-
-RadioGroup.defaultProps = {
-  elementProps: {},
-}
 
 export default RadioGroup

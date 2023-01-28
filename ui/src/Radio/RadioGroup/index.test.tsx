@@ -8,9 +8,9 @@ describe('<RadioGroup />', () => {
   it('should render component', () => {
     const { asFragment } = render(wrapTheme(
       <RadioGroup active="item-1" setActive={jest.fn()}>
-        <Radio value="item-1">Item 1</Radio>
-        <Radio value="item-2">Item 2</Radio>
-        <Radio value="item-3">Item 3</Radio>
+        <Radio value="item-1" label="Item 1" />
+        <Radio value="item-2" label="Item 2" />
+        <Radio value="item-3" label="Item 3" />
       </RadioGroup>
     ))
     expect(asFragment()).toMatchSnapshot()

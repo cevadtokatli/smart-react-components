@@ -13,17 +13,17 @@ export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,
   IntrinsicStyledProps {
   active?: FormValue
-  children?: ContentElement
   isBlock?: boolean
   isDisabled?: boolean
   isOutline?: boolean
   isRequired?: boolean
   isSoft?: boolean
+  label?: ContentElement
   name?: string
   palette?: PaletteProp
   position?: OrderPosition
-  render?: (props: { isChecked: boolean }) => JSX.Element
   setActive?: SetState<FormValue>
+  template?: JSX.Element
   value: FormValue
 }
 
@@ -58,30 +58,24 @@ const Radio = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
       labelPosition={props.position}
       {...extractElementProps(props, [intrinsicStyledProps])}
     >
-      { props.render
-        ? (
+      { React.cloneElement(props.template, {
+        children: (
           <>
-            { props.render({ isChecked: props.value === props.active }) }
-            { input }
+            {input}
+            {props.template.props.children}
           </>
-          )
-        : (
-          <RadioElement
-            isChecked={props.value === props.active}
-            isOutline={props.isOutline}
-            isSoft={props.isSoft}
-            palette={props.palette}
-            radioSize={props.size}
-            radioSizeSm={props.sizeSm}
-            radioSizeMd={props.sizeMd}
-            radioSizeLg={props.sizeLg}
-            radioSizeXl={props.sizeXl}
-          >
-            { input }
-          </RadioElement>
-          )
-      }
-      { props.children && <span>{props.children}</span> }
+        ),
+        isChecked: props.value === props.active,
+        isOutline: props.isOutline,
+        isSoft: props.isSoft,
+        palette: props.palette,
+        radioSize: props.size,
+        radioSizeSm: props.sizeSm,
+        radioSizeMd: props.sizeMd,
+        radioSizeLg: props.sizeLg,
+        radioSizeXl: props.sizeXl,
+      }) }
+      { props.label && <span>{props.label}</span> }
     </FormInlineLabel>
   )
 })
@@ -90,6 +84,7 @@ Radio.defaultProps = {
   palette: 'primary',
   position: OrderPosition.RIGHT,
   size: 'medium',
+  template: <RadioElement />,
 }
 
 export default Radio
