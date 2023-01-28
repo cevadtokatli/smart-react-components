@@ -13,8 +13,8 @@ export interface Props extends
   active: FormValue
   children: JSX.Element[]
   isBlock?: boolean
-  isRequired?: boolean
   isOutline?: boolean
+  isRequired?: boolean
   isSoft?: boolean
   name?: string
   palette?: PaletteProp
