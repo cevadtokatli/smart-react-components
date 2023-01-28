@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> should render component 1`] = `
+<DocumentFragment>
+  .c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c0 > span {
+  margin-bottom: .5rem;
+}
+
+.c1 > span {
+  display: block;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c3 {
+  font-size: 1rem;
+  padding: .45rem .9rem;
+}
+
+.c4 {
+  border: solid 1px;
+  border-radius: .2rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  background: #fff;
+  border-color: #dbdbdb;
+  color: #323a46;
+}
+
+.c4::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c4::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c4:-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c4:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c4::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c4::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c4:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c4::placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c4:active,
+.c4:focus {
+  outline: 0;
+}
+
+<label
+    class="c0 c1"
+  >
+    <span>
+      Label
+    </span>
+    <div
+      class="c2"
+      display="flex"
+    >
+      <input
+        class="c3 c4"
+        shape="rectangle"
+        type="text"
+      />
+    </div>
+  </label>
+</DocumentFragment>
+`;

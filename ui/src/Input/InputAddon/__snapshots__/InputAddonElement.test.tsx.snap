@@ -1,0 +1,479 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputAddonElement /> should be disabled 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+  padding: 0 0.45rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom-left-radius: .2rem;
+  border-top-left-radius: .2rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  border: solid 1px;
+  border-right: 0;
+  background: #fff;
+  border-color: #dbdbdb;
+  color: #323a46;
+  fill: #323a46;
+  opacity: 0.7;
+  background: #dbdbdb;
+  color: #eee;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<InputAddonElement /> should be focused 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+  padding: 0 0.45rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom-left-radius: .2rem;
+  border-top-left-radius: .2rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  border: solid 1px;
+  border-right: 0;
+  background: #fff;
+  border-color: #0665d0;
+  color: #323a46;
+  fill: #323a46;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<InputAddonElement /> should be separated 1`] = `
+<DocumentFragment>
+  .c1 {
+  font-size: 1rem;
+  padding: .45rem 0.45rem;
+}
+
+.c0 {
+  font-size: 1rem;
+  padding: .45rem 0.45rem;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom-left-radius: .2rem;
+  border-top-left-radius: .2rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  border: solid 1px;
+  border-right: 0;
+  background: #fff;
+  border-color: #dbdbdb;
+  color: #323a46;
+  fill: #323a46;
+}
+
+<label
+    class="c0 c1 c2"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<InputAddonElement /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+  padding: 0 0.45rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom-left-radius: .2rem;
+  border-top-left-radius: .2rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  border: solid 1px;
+  border-right: 0;
+  background: #fff;
+  border-color: #dbdbdb;
+  color: #323a46;
+  fill: #323a46;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<InputAddonElement /> should render component at right 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+  padding: 0 0.45rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom-right-radius: .2rem;
+  border-top-right-radius: .2rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  border: solid 1px;
+  border-left: 0;
+  background: #fff;
+  border-color: #dbdbdb;
+  color: #323a46;
+  fill: #323a46;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<InputAddonElement /> should render component disabled 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+  padding: 0 0.45rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom-left-radius: .2rem;
+  border-top-left-radius: .2rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  border: solid 1px;
+  border-right: 0;
+  background: #fff;
+  border-color: #dbdbdb;
+  color: #323a46;
+  fill: #323a46;
+  opacity: 0.7;
+  background: #dbdbdb;
+  color: #eee;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<InputAddonElement /> should render component focused 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+  padding: 0 0.45rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom-left-radius: .2rem;
+  border-top-left-radius: .2rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  border: solid 1px;
+  border-right: 0;
+  background: #fff;
+  border-color: #0665d0;
+  color: #323a46;
+  fill: #323a46;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<InputAddonElement /> should render component not outline 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+  padding: 0 0.45rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom-left-radius: .2rem;
+  border-top-left-radius: .2rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  border: solid 1px;
+  border-right: 0;
+  color: #fff;
+  fill: #fff;
+  background: #0665d0;
+  border-color: #065DC0;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<InputAddonElement /> should render component with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+  padding: 0 0.45rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom-left-radius: .2rem;
+  border-top-left-radius: .2rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  border: solid 1px;
+  border-right: 0;
+  color: #033c7c;
+  fill: #033c7c;
+  background: #cde0f5;
+  border-color: #b9d3f1;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<InputAddonElement /> should resize component responsively 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: .875rem;
+  padding: 0 0.4rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom-left-radius: .2rem;
+  border-top-left-radius: .2rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  border: solid 1px;
+  border-right: 0;
+  background: #fff;
+  border-color: #dbdbdb;
+  color: #323a46;
+  fill: #323a46;
+}
+
+@media (min-width:768px) {
+  .c0 {
+    font-size: 1rem;
+    padding: 0 0.45rem;
+  }
+}
+
+@media (min-width:992px) {
+  .c0 {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;

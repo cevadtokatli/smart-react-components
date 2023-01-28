@@ -1,6 +1,7 @@
 import { isServer } from '@smart-react-components/core/util/dom'
 
 export const mouseWheel = ['wheel', 'mousewheel', 'DOMMouseScroll']
+export const placeholder = ['::-webkit-input-placeholder', '::-moz-placeholder', ':-moz-placeholder', ':-ms-input-placeholder', '::placeholder']
 
 /**
  * Calculates the left, top, width and height of the element shown on the screen.

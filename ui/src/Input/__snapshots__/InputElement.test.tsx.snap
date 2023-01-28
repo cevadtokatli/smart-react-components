@@ -1,0 +1,796 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputElement /> should have left addon 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+  padding: .45rem .9rem;
+  padding-left: 0;
+}
+
+.c1 {
+  border: solid 1px;
+  border-radius: .2rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  background: #fff;
+  border-color: #dbdbdb;
+  color: #323a46;
+  border-left: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.c1::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:active,
+.c1:focus {
+  outline: 0;
+}
+
+<input
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<InputElement /> should have right addon 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+  padding: .45rem .9rem;
+  padding-right: 0;
+}
+
+.c1 {
+  border: solid 1px;
+  border-radius: .2rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  background: #fff;
+  border-color: #dbdbdb;
+  color: #323a46;
+  border-right: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c1::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:active,
+.c1:focus {
+  outline: 0;
+}
+
+<input
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<InputElement /> should have separated left addon 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+  padding: .45rem .9rem;
+  padding-left: 0.45rem;
+}
+
+.c1 {
+  border: solid 1px;
+  border-radius: .2rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  background: #fff;
+  border-color: #dbdbdb;
+  color: #323a46;
+  border-left: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.c1::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:active,
+.c1:focus {
+  outline: 0;
+}
+
+<input
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<InputElement /> should have separated right addon 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+  padding: .45rem .9rem;
+  padding-right: 0.45rem;
+}
+
+.c1 {
+  border: solid 1px;
+  border-radius: .2rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  background: #fff;
+  border-color: #dbdbdb;
+  color: #323a46;
+  border-right: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c1::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:active,
+.c1:focus {
+  outline: 0;
+}
+
+<input
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<InputElement /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+  padding: .45rem .9rem;
+}
+
+.c1 {
+  border: solid 1px;
+  border-radius: .2rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  background: #fff;
+  border-color: #dbdbdb;
+  color: #323a46;
+}
+
+.c1::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:active,
+.c1:focus {
+  outline: 0;
+}
+
+<input
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<InputElement /> should render component disabled 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+  padding: .45rem .9rem;
+}
+
+.c1 {
+  border: solid 1px;
+  border-radius: .2rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  background: #fff;
+  border-color: #dbdbdb;
+  color: #323a46;
+  opacity: 0.7;
+  background: #dbdbdb;
+  color: #eee;
+}
+
+.c1::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.c1::-moz-placeholder {
+  opacity: 1;
+}
+
+.c1:-moz-placeholder {
+  opacity: 1;
+}
+
+.c1:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.c1::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.c1::-moz-placeholder {
+  opacity: 1;
+}
+
+.c1:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.c1::placeholder {
+  opacity: 1;
+}
+
+.c1:active,
+.c1:focus {
+  outline: 0;
+}
+
+<input
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<InputElement /> should render component focused 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+  padding: .45rem .9rem;
+}
+
+.c1 {
+  border: solid 1px;
+  border-radius: .2rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  background: #fff;
+  border-color: #0665d0;
+  color: #323a46;
+}
+
+.c1::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:active,
+.c1:focus {
+  outline: 0;
+}
+
+<input
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<InputElement /> should render not outline 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+  padding: .45rem .9rem;
+}
+
+.c1 {
+  border: solid 1px;
+  border-radius: .2rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  color: #fff;
+  background: #0665d0;
+  border-color: #065DC0;
+}
+
+.c1::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.3);
+  opacity: 1;
+}
+
+.c1::-moz-placeholder {
+  color: rgba(255,255,255,0.3);
+  opacity: 1;
+}
+
+.c1:-moz-placeholder {
+  color: rgba(255,255,255,0.3);
+  opacity: 1;
+}
+
+.c1:-ms-input-placeholder {
+  color: rgba(255,255,255,0.3);
+  opacity: 1;
+}
+
+.c1::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.3);
+  opacity: 1;
+}
+
+.c1::-moz-placeholder {
+  color: rgba(255,255,255,0.3);
+  opacity: 1;
+}
+
+.c1:-ms-input-placeholder {
+  color: rgba(255,255,255,0.3);
+  opacity: 1;
+}
+
+.c1::placeholder {
+  color: rgba(255,255,255,0.3);
+  opacity: 1;
+}
+
+.c1:active,
+.c1:focus {
+  outline: 0;
+}
+
+<input
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<InputElement /> should render with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1rem;
+  padding: .45rem .9rem;
+}
+
+.c1 {
+  border: solid 1px;
+  border-radius: .2rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  color: #033c7c;
+  background: #cde0f5;
+  border-color: #b9d3f1;
+}
+
+.c1::-webkit-input-placeholder {
+  color: rgba(3,60,124,0.3);
+  opacity: 1;
+}
+
+.c1::-moz-placeholder {
+  color: rgba(3,60,124,0.3);
+  opacity: 1;
+}
+
+.c1:-moz-placeholder {
+  color: rgba(3,60,124,0.3);
+  opacity: 1;
+}
+
+.c1:-ms-input-placeholder {
+  color: rgba(3,60,124,0.3);
+  opacity: 1;
+}
+
+.c1::-webkit-input-placeholder {
+  color: rgba(3,60,124,0.3);
+  opacity: 1;
+}
+
+.c1::-moz-placeholder {
+  color: rgba(3,60,124,0.3);
+  opacity: 1;
+}
+
+.c1:-ms-input-placeholder {
+  color: rgba(3,60,124,0.3);
+  opacity: 1;
+}
+
+.c1::placeholder {
+  color: rgba(3,60,124,0.3);
+  opacity: 1;
+}
+
+.c1:active,
+.c1:focus {
+  outline: 0;
+}
+
+<input
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<InputElement /> should resize component responsively 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: .875rem;
+  padding: .28rem .8rem;
+}
+
+.c1 {
+  border: solid 1px;
+  border-radius: .2rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  background: #fff;
+  border-color: #dbdbdb;
+  color: #323a46;
+}
+
+.c1::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1::placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c1:active,
+.c1:focus {
+  outline: 0;
+}
+
+@media (min-width:768px) {
+  .c0 {
+    font-size: 1rem;
+    padding: .45rem .9rem;
+  }
+}
+
+@media (min-width:992px) {
+  .c0 {
+    font-size: 1rem;
+    padding: .5rem 1rem;
+  }
+}
+
+<input
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
