@@ -14,20 +14,20 @@ export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,
   IntrinsicStyledProps {
   active?: FormValue[]
-  children?: ContentElement
   isBlock?: boolean
   isChecked?: boolean
   isDisabled?: boolean
   isOutline?: boolean
   isRequired?: boolean
   isSoft?: boolean
+  label?: ContentElement
   name?: string
   palette?: PaletteProp
   position?: OrderPosition
-  render?: (props: { isChecked: boolean }) => JSX.Element
   setActive?: SetState<FormValue[]>
   setChecked?: SetState<boolean>
   shape?: ShapeProp
+  template?: JSX.Element
   value?: FormValue
 }
 
@@ -88,31 +88,25 @@ const Checkbox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) =
       labelPosition={props.position}
       {...extractElementProps(props, [intrinsicStyledProps])}
     >
-      { props.render
-        ? (
+      { React.cloneElement(props.template, {
+        checkboxSize: props.size,
+        checkboxSizeSm: props.sizeSm,
+        checkboxSizeMd: props.sizeMd,
+        checkboxSizeLg: props.sizeLg,
+        checkboxSizeXl: props.sizeXl,
+        children: (
           <>
-            { props.render({ isChecked }) }
-            { input }
+            {input}
+            {props.template.props.children}
           </>
-          )
-        : (
-          <CheckboxElement
-            checkboxSize={props.size}
-            checkboxSizeSm={props.sizeSm}
-            checkboxSizeMd={props.sizeMd}
-            checkboxSizeLg={props.sizeLg}
-            checkboxSizeXl={props.sizeXl}
-            isChecked={isChecked}
-            isOutline={props.isOutline}
-            isSoft={props.isSoft}
-            palette={props.palette}
-            shape={props.shape}
-          >
-            { input }
-          </CheckboxElement>
-          )
-      }
-      { props.children && <span>{props.children}</span> }
+        ),
+        isChecked,
+        isOutline: props.isOutline,
+        isSoft: props.isSoft,
+        palette: props.palette,
+        shape: props.shape,
+      }) }
+      { props.label && <span>{props.label}</span> }
     </FormInlineLabel>
   )
 })
@@ -122,6 +116,7 @@ Checkbox.defaultProps = {
   position: OrderPosition.RIGHT,
   shape: 'rectangle',
   size: 'medium',
+  template: <CheckboxElement />,
 }
 
 export default Checkbox

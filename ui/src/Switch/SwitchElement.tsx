@@ -1,8 +1,7 @@
 import Div from '@smart-react-components/core/Element/Div'
-import { StyledProps } from '@smart-react-components/core/styled-props'
-import { PaletteProp, ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import styled from 'styled-components'
+import { Props } from '../Checkbox/CheckboxElement'
 import { extractNumberUnit, toCSSValue } from '../util/css'
 
 const Slider = styled.div(({ theme }) => `
@@ -16,27 +15,16 @@ const Slider = styled.div(({ theme }) => `
   transition-property: left, right;
 `)
 
-interface Props extends
-  StyledProps,
-  ResponsiveProp<'switchSize', SizeProp> {
-  isChecked: boolean
-  isOutline: boolean
-  isSoft: boolean
-  palette: PaletteProp
-}
-
-export default styled(Div).attrs<Props>(({ isChecked }) => ({
-  children: <Slider />,
-  getSwitchSize: (v, t) => `
-    &,
-    + input {
-      height: ${t.$.size.switch[v].height};
-      width: ${t.$.size.switch[v].width};
-    }
-
-    + input {
-      top: calc(50% - ${toCSSValue(t.$.size.switch[v].height)(v => v / 2)});
-    }
+export default styled(Div).attrs<Props>(({ children, isChecked }) => ({
+  children: (
+    <>
+      {children}
+      <Slider />
+    </>
+  ),
+  getCheckboxSize: (v, t) => `
+    height: ${t.$.size.switch[v].height};
+    width: ${t.$.size.switch[v].width};
 
     ${Slider} {
       height: ${t.$.size.switch[v].slider};

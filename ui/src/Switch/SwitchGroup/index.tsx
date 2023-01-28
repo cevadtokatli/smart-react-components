@@ -5,6 +5,6 @@ export { OrderPosition as Position } from '../../types'
 
 export type Props = Omit<CheckboxGroupProps, 'shape'>
 
-const SwitchGroup: React.FC<Props> = props => <CheckboxGroup {...props} />
+const SwitchGroup: React.FC<Props> = CheckboxGroup
 
 export default SwitchGroup

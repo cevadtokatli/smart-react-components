@@ -2,14 +2,9 @@
 
 exports[`<SwitchElement /> should not be checked 1`] = `
 <DocumentFragment>
-  .c0,
-.c0 + input {
+  .c0 {
   height: 16px;
   width: 28px;
-}
-
-.c0 + input {
-  top: calc(50% - 8px);
 }
 
 .c0 .c2 {
@@ -55,14 +50,9 @@ exports[`<SwitchElement /> should not be checked 1`] = `
 
 exports[`<SwitchElement /> should render component 1`] = `
 <DocumentFragment>
-  .c0,
-.c0 + input {
+  .c0 {
   height: 16px;
   width: 28px;
-}
-
-.c0 + input {
-  top: calc(50% - 8px);
 }
 
 .c0 .c2 {
@@ -114,14 +104,9 @@ exports[`<SwitchElement /> should render component 1`] = `
 
 exports[`<SwitchElement /> should render component outline 1`] = `
 <DocumentFragment>
-  .c0,
-.c0 + input {
+  .c0 {
   height: 16px;
   width: 28px;
-}
-
-.c0 + input {
-  top: calc(50% - 8px);
 }
 
 .c0 .c2 {
@@ -171,14 +156,9 @@ exports[`<SwitchElement /> should render component outline 1`] = `
 
 exports[`<SwitchElement /> should render component with soft colors 1`] = `
 <DocumentFragment>
-  .c0,
-.c0 + input {
+  .c0 {
   height: 16px;
   width: 28px;
-}
-
-.c0 + input {
-  top: calc(50% - 8px);
 }
 
 .c0 .c2 {

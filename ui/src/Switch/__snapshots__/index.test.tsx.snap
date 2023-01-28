@@ -49,7 +49,7 @@ exports[`<Switch /> should render component 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
-.c6 {
+.c4 {
   height: 100%;
   left: 0;
   opacity: 0;
@@ -59,23 +59,18 @@ exports[`<Switch /> should render component 1`] = `
   width: 100%;
 }
 
-.c2,
-.c2 + input {
+.c2 {
   height: 16px;
   width: 28px;
 }
 
-.c2 + input {
-  top: calc(50% - 8px);
-}
-
-.c2 .c4 {
+.c2 .c5 {
   height: 14px;
   width: 14px;
   left: 12px;
 }
 
-.c5 {
+.c6 {
   background: #fff;
   border-radius: 100%;
   box-shadow: 0 1px 3px rgba(0,0,0,.4);
@@ -111,16 +106,17 @@ exports[`<Switch /> should render component 1`] = `
   >
     <div
       class="c2 c3"
+      shape="rectangle"
     >
+      <input
+        checked=""
+        class="c4"
+        type="checkbox"
+      />
       <div
-        class="c4 c5"
+        class="c5 c6"
       />
     </div>
-    <input
-      checked=""
-      class="c6"
-      type="checkbox"
-    />
     <span>
       Label
     </span>

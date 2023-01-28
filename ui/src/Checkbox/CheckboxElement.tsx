@@ -1,6 +1,6 @@
 import Div from '@smart-react-components/core/Element/Div'
 import { StyledProps } from '@smart-react-components/core/styled-props'
-import { PaletteProp, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
+import { PaletteProp, Partial, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -39,14 +39,14 @@ const Svg = styled.svg.attrs({
   }
 `)
 
-interface Props extends
+export interface Props extends
   StyledProps,
-  ResponsiveProp<'checkboxSize', SizeProp> {
-  isChecked: boolean
-  isOutline: boolean
-  isSoft: boolean
-  palette: PaletteProp
-  shape: ShapeProp
+  Partial<ResponsiveProp<'checkboxSize', SizeProp>> {
+  isChecked?: boolean
+  isOutline?: boolean
+  isSoft?: boolean
+  palette?: PaletteProp
+  shape?: ShapeProp
 }
 
 export default styled(Div).attrs<Props>(({ children }) => ({

@@ -8,11 +8,11 @@ describe('<SwitchElement />', () => {
 
   beforeAll(() => {
     props = {
+      checkboxSize: 'medium',
       isChecked: true,
       isOutline: false,
       isSoft: false,
       palette: 'primary',
-      switchSize: 'medium',
     }
   })
 

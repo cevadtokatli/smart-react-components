@@ -8,9 +8,9 @@ describe('<CheckboxGroup />', () => {
   it('should render component', () => {
     const { asFragment } = render(wrapTheme(
       <CheckboxGroup active={['item-1']} setActive={jest.fn()}>
-        <Checkbox value="item-1">Item 1</Checkbox>
-        <Checkbox value="item-2">Item 2</Checkbox>
-        <Checkbox value="item-3">Item 3</Checkbox>
+        <Checkbox value="item-1" label="Item 1" />
+        <Checkbox value="item-2" label="Item 2" />
+        <Checkbox value="item-3" label="Item 3" />
       </CheckboxGroup>
     ))
     expect(asFragment()).toMatchSnapshot()

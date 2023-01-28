@@ -6,7 +6,7 @@ import Switch from './'
 describe('<Switch />', () => {
   it('should render component', () => {
     const { asFragment } = render(wrapTheme(
-      <Switch value="value" active={['value']} setActive={jest.fn()}>Label</Switch>
+      <Switch value="value" active={['value']} setActive={jest.fn()} label="Label" />
     ))
     expect(asFragment()).toMatchSnapshot()
   })

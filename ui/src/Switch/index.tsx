@@ -1,36 +1,16 @@
 import React from 'react'
 import Checkbox, { Props as CheckboxProps } from '../Checkbox'
-import { OrderPosition } from '../types'
 import SwitchElement from './SwitchElement'
 
 export { OrderPosition as Position } from '../types'
 
 export type Props = Omit<CheckboxProps, 'shape'>
 
-const Switch = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => (
-  <Checkbox
-    {...props}
-    render={props.render ?? (({ isChecked }) => (
-      <SwitchElement
-        isChecked={isChecked}
-        isOutline={props.isOutline}
-        isSoft={props.isSoft}
-        palette={props.palette}
-        switchSize={props.size}
-        switchSizeSm={props.sizeSm}
-        switchSizeMd={props.sizeMd}
-        switchSizeLg={props.sizeLg}
-        switchSizeXl={props.sizeXl}
-      />)
-    )}
-    ref={forwardRef}
-  />
-))
+const Switch = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => <Checkbox {...props} ref={forwardRef} />)
 
 Switch.defaultProps = {
-  palette: 'primary',
-  position: OrderPosition.RIGHT,
-  size: 'medium',
+  ...Checkbox.defaultProps,
+  template: <SwitchElement />,
 }
 
 export default Switch

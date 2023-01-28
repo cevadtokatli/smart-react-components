@@ -2,35 +2,15 @@
 
 exports[`<SwitchGroup /> should render component 1`] = `
 <DocumentFragment>
-  .c3,
-.c3 + input {
+  .c3 {
   height: 16px;
   width: 28px;
 }
 
-.c3 + input {
-  top: calc(50% - 8px);
-}
-
-.c3 .c5 {
+.c3 .c6 {
   height: 14px;
   width: 14px;
   left: 12px;
-}
-
-.c8,
-.c8 + input {
-  height: 16px;
-  width: 28px;
-}
-
-.c8 + input {
-  top: calc(50% - 8px);
-}
-
-.c8 .c5 {
-  height: 14px;
-  width: 14px;
 }
 
 .c0 {
@@ -98,7 +78,7 @@ exports[`<SwitchGroup /> should render component 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
-.c7 {
+.c5 {
   height: 100%;
   left: 0;
   opacity: 0;
@@ -108,7 +88,7 @@ exports[`<SwitchGroup /> should render component 1`] = `
   width: 100%;
 }
 
-.c6 {
+.c7 {
   background: #fff;
   border-radius: 100%;
   box-shadow: 0 1px 3px rgba(0,0,0,.4);
@@ -139,19 +119,6 @@ exports[`<SwitchGroup /> should render component 1`] = `
   box-shadow: #0665d0 0 0 0 11px inset;
 }
 
-.c9 {
-  border: solid 1px #dbdbdb;
-  border-radius: 20px;
-  box-sizing: border-box;
-  position: relative;
-  -webkit-transition: 400ms 0s ease-in-out;
-  transition: 400ms 0s ease-in-out;
-  -webkit-transition-property: border,box-shadow;
-  transition-property: border,box-shadow;
-  background: #dbdbdb;
-  box-shadow: #dbdbdb 0 0 0 0 inset;
-}
-
 <div
     class=" c0"
   >
@@ -160,16 +127,17 @@ exports[`<SwitchGroup /> should render component 1`] = `
     >
       <div
         class="c3 c4"
+        shape="rectangle"
       >
+        <input
+          checked=""
+          class="c5"
+          type="checkbox"
+        />
         <div
-          class="c5 c6"
+          class="c6 c7"
         />
       </div>
-      <input
-        checked=""
-        class="c7"
-        type="checkbox"
-      />
       <span>
         Item 1
       </span>
@@ -178,16 +146,18 @@ exports[`<SwitchGroup /> should render component 1`] = `
       class="c1 c2"
     >
       <div
-        class="c8 c9"
+        class="c3 c4"
+        shape="rectangle"
       >
+        <input
+          checked=""
+          class="c5"
+          type="checkbox"
+        />
         <div
-          class="c5 c6"
+          class="c6 c7"
         />
       </div>
-      <input
-        class="c7"
-        type="checkbox"
-      />
       <span>
         Item 2
       </span>
@@ -196,16 +166,18 @@ exports[`<SwitchGroup /> should render component 1`] = `
       class="c1 c2"
     >
       <div
-        class="c8 c9"
+        class="c3 c4"
+        shape="rectangle"
       >
+        <input
+          checked=""
+          class="c5"
+          type="checkbox"
+        />
         <div
-          class="c5 c6"
+          class="c6 c7"
         />
       </div>
-      <input
-        class="c7"
-        type="checkbox"
-      />
       <span>
         Item 3
       </span>

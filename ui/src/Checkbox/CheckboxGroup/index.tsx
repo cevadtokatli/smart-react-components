@@ -1,6 +1,6 @@
 import extractElementProps from '@smart-react-components/core/element-props'
 import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
-import { JSXElementProps, PaletteProp, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
+import { PaletteProp, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import FormGroup from '../../components/FormGroup'
 import { FormValue, OrderPosition } from '../../types'
@@ -12,7 +12,6 @@ export interface Props extends
   IntrinsicStyledProps {
   active?: FormValue[]
   children: JSX.Element[]
-  elementProps?: JSXElementProps
   isBlock?: boolean
   isOutline?: boolean
   isRequired?: boolean
@@ -20,9 +19,9 @@ export interface Props extends
   name?: string
   palette?: PaletteProp
   position?: OrderPosition
-  render?: (props: { isChecked: boolean }) => JSX.Element
   setActive?: SetState<FormValue[]>
   shape?: ShapeProp
+  template?: JSX.Element
 }
 
 const CheckboxGroup: React.FC<Props> = props => (
@@ -40,16 +39,12 @@ const CheckboxGroup: React.FC<Props> = props => (
       name: props.name,
       palette: props.palette,
       position: props.position,
-      render: props.render,
       setActive: props.setActive,
       shape: props.shape,
+      template: props.template,
       ...item.props,
     })) }
   </FormGroup>
 )
-
-CheckboxGroup.defaultProps = {
-  elementProps: {},
-}
 
 export default CheckboxGroup

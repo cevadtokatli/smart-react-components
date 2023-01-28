@@ -4,25 +4,24 @@ import React from 'react'
 import Checkbox from './'
 
 describe('<Checkbox />', () => {
-  let children
   let props
 
   beforeAll(() => {
-    children = 'Label'
     props = {
       active: [],
+      label: 'Label',
       value: 'value',
     }
   })
 
   it('should render component', () => {
-    const { asFragment } = render(wrapTheme(<Checkbox {...props} active={['value']} setActive={jest.fn()}>{children}</Checkbox>))
+    const { asFragment } = render(wrapTheme(<Checkbox {...props} active={['value']} setActive={jest.fn()} />))
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should call setActive', () => {
     const setActive = jest.fn()
-    const { container } = render(wrapTheme(<Checkbox {...props} setActive={setActive}>{children}</Checkbox>))
+    const { container } = render(wrapTheme(<Checkbox {...props} setActive={setActive} />))
     const node = container.querySelector('input')!
     fireEvent.click(node)
     expect(setActive).toHaveBeenCalled()
@@ -30,7 +29,7 @@ describe('<Checkbox />', () => {
 
   it('should not call setActive when disabled', () => {
     const setActive = jest.fn()
-    const { container } = render(wrapTheme(<Checkbox {...props} isDisabled setActive={setActive}>{children}</Checkbox>))
+    const { container } = render(wrapTheme(<Checkbox {...props} isDisabled setActive={setActive} />))
     const node = container.querySelector('input')!
     fireEvent.click(node)
     expect(setActive).not.toHaveBeenCalled()
@@ -38,7 +37,7 @@ describe('<Checkbox />', () => {
 
   it('should call setChecked', () => {
     const setChecked = jest.fn()
-    const { container } = render(wrapTheme(<Checkbox {...props} setChecked={setChecked}>{children}</Checkbox>))
+    const { container } = render(wrapTheme(<Checkbox {...props} setChecked={setChecked} />))
     const node = container.querySelector('input')!
     fireEvent.click(node)
     expect(setChecked).toHaveBeenCalled()
@@ -46,19 +45,20 @@ describe('<Checkbox />', () => {
 
   it('should not call setChecked when disabled', () => {
     const setChecked = jest.fn()
-    const { container } = render(wrapTheme(<Checkbox {...props} isDisabled setChecked={setChecked}>{children}</Checkbox>))
+    const { container } = render(wrapTheme(<Checkbox {...props} isDisabled setChecked={setChecked} />))
     const node = container.querySelector('input')!
     fireEvent.click(node)
     expect(setChecked).not.toHaveBeenCalled()
   })
 
   it('should not render label', () => {
-    const { container } = render(wrapTheme(<Checkbox {...props} />))
-    expect(container.querySelector('span')).toBeFalsy()
+    const { asFragment } = render(wrapTheme(<Checkbox {...props} label={null} />))
+    expect(asFragment()).toMatchSnapshot()
   })
 
   it('should render custom component', () => {
-    const { container } = render(wrapTheme(<Checkbox {...props} render={() => <svg />}>{children}</Checkbox>))
-    expect(container.querySelector('svg')).toBeTruthy()
+    const Template = props => <div>{props.children}<svg /></div>
+    const { asFragment } = render(wrapTheme(<Checkbox {...props} template={<Template />} />))
+    expect(asFragment()).toMatchSnapshot()
   })
 })
