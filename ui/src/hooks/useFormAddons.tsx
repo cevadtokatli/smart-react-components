@@ -1,7 +1,7 @@
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { ContentElement, PaletteProp, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
-import FormAddon from '../components/FormAddon'
+import FormAddon from '../Form/FormAddon'
 import { OrderPosition } from '../types'
 
 interface Props extends ResponsiveProp<'size', SizeProp> {

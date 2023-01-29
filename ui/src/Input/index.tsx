@@ -6,7 +6,7 @@ import { IntrinsicStyledProps } from '@smart-react-components/core/element-props
 import keyboardEvents, { KeyboardEvents } from '@smart-react-components/core/element-props/keyboard-events'
 import { ContentElement, PaletteProp, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
-import FormBlockLabel from '../components/FormBlockLabel'
+import FormBlockLabel from '../Form/FormBlockLabel'
 import useFormAddons from '../hooks/useFormAddons'
 import useInputMethods from '../hooks/useInputMethods'
 import { InputType } from '../types'
