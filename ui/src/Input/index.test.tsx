@@ -29,4 +29,10 @@ describe('<Input />', () => {
     fireEvent.change(container.querySelector('input')!, { target: { value: '.' } })
     expect(setValue).not.toHaveBeenCalled()
   })
+
+  it('should render custom component', () => {
+    const Template = props => <div contentEditable />
+    const { asFragment } = render(wrapTheme(<Input template={<Template />} />))
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

@@ -110,3 +110,41 @@ exports[`<Input /> should render component 1`] = `
   </label>
 </DocumentFragment>
 `;
+
+exports[`<Input /> should render custom component 1`] = `
+<DocumentFragment>
+  .c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c0 > span {
+  margin-bottom: .5rem;
+}
+
+.c1 > span {
+  display: block;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
+}
+
+<label
+    class="c0 c1"
+  >
+    <div
+      class="c2"
+      display="flex"
+    >
+      <div
+        contenteditable="true"
+      />
+    </div>
+  </label>
+</DocumentFragment>
+`;

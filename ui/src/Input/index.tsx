@@ -33,6 +33,7 @@ export interface Props extends
   rightAddon?: ContentElement
   setValue?: SetState<string>
   shape?: ShapeProp
+  template?: JSX.Element
   type?: InputType
   value?: string
 }
@@ -80,36 +81,36 @@ const Input = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
         flex="1 1 auto"
       >
         { leftAddon && leftAddon }
-        <InputElement
-          {...extractElementProps(props, [changeEvents, focusEvents, keyboardEvents])}
-          {...(typeof props.defaultValue !== 'undefined' && { defaultValue: props.defaultValue })}
-          {...(props.isDisabled && { disabled: true })}
-          {...(props.isReadOnly && { readOnly: true })}
-          {...(props.isRequired && { required: true })}
-          {...(typeof props.placeholder !== 'undefined' && { placeholder: props.placeholder })}
-          {...(typeof props.value !== 'undefined' && { value: props.value })}
-          hasBorder={props.hasBorder}
-          hasLeftAddon={!!leftAddon}
-          hasRightAddon={!!rightAddon}
-          hasSeparatedLeftAddon={leftAddon?.props?.isSeparated}
-          hasSeparatedRightAddon={rightAddon?.props?.isSeparated}
-          inputSize={props.size}
-          inputSizeSm={props.sizeSm}
-          inputSizeMd={props.sizeMd}
-          inputSizeLg={props.sizeLg}
-          inputSizeXl={props.sizeXl}
-          isDisabled={props.isDisabled}
-          isFocused={isFocused}
-          isOutline={props.isOutline}
-          isSoft={props.isSoft}
-          onBlur={handleOnBlur}
-          onChange={handleOnChange}
-          onFocus={handleOnFocus}
-          palette={props.palette}
-          ref={forwardRef}
-          shape={props.shape}
-          type={props.type}
-        />
+        { React.cloneElement(props.template, {
+          ...extractElementProps(props, [changeEvents, focusEvents, keyboardEvents]),
+          ...(typeof props.defaultValue !== 'undefined' && { defaultValue: props.defaultValue }),
+          ...(props.isDisabled && { disabled: true }),
+          ...(props.isReadOnly && { readOnly: true }),
+          ...(props.isRequired && { required: true }),
+          ...(typeof props.placeholder !== 'undefined' && { placeholder: props.placeholder }),
+          ...(typeof props.value !== 'undefined' && { value: props.value }),
+          hasBorder: props.hasBorder,
+          hasLeftAddon: !!leftAddon,
+          hasRightAddon: !!rightAddon,
+          hasSeparatedLeftAddon: leftAddon?.props?.isSeparated,
+          hasSeparatedRightAddon: rightAddon?.props?.isSeparated,
+          inputSize: props.size,
+          inputSizeSm: props.sizeSm,
+          inputSizeMd: props.sizeMd,
+          inputSizeLg: props.sizeLg,
+          inputSizeXl: props.sizeXl,
+          isDisabled: props.isDisabled,
+          isFocused,
+          isOutline: props.isOutline,
+          isSoft: props.isSoft,
+          onBlur: handleOnBlur,
+          onChange: handleOnChange,
+          onFocus: handleOnFocus,
+          palette: props.palette,
+          ref: forwardRef,
+          shape: props.shape,
+          type: props.type,
+        }) }
         { rightAddon && rightAddon }
       </Div>
     </FormBlockLabel>
@@ -123,6 +124,7 @@ Input.defaultProps = {
   palette: 'primary',
   shape: 'rectangle',
   size: 'medium',
+  template: <InputElement />,
   type: InputType.TEXT,
 }
 

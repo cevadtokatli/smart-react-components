@@ -1,6 +1,6 @@
 import Input from '@smart-react-components/core/Element/Input'
 import { StyledProps } from '@smart-react-components/core/styled-props'
-import { PaletteProp, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
+import { PaletteProp, Partial, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import { getColor } from '@smart-react-components/core/util/color'
 import styled from 'styled-components'
 import { toCSSValue } from '../util/css'
@@ -8,18 +8,18 @@ import { placeholder } from '../util/dom'
 
 interface Props extends
   StyledProps,
-  ResponsiveProp<'inputSize', SizeProp> {
-  hasBorder: boolean
-  hasLeftAddon: boolean
-  hasRightAddon: boolean
-  hasSeparatedLeftAddon: boolean
-  hasSeparatedRightAddon: boolean
-  isDisabled: boolean
-  isFocused: boolean
-  isOutline: boolean
-  isSoft: boolean
-  palette: PaletteProp
-  shape: ShapeProp
+  Partial<ResponsiveProp<'inputSize', SizeProp>> {
+  hasBorder?: boolean
+  hasLeftAddon?: boolean
+  hasRightAddon?: boolean
+  hasSeparatedLeftAddon?: boolean
+  hasSeparatedRightAddon?: boolean
+  isDisabled?: boolean
+  isFocused?: boolean
+  isOutline?: boolean
+  isSoft?: boolean
+  palette?: PaletteProp
+  shape?: ShapeProp
 }
 
 export default styled(Input).attrs<Props>(({ hasLeftAddon, hasRightAddon, hasSeparatedLeftAddon, hasSeparatedRightAddon }) => ({
