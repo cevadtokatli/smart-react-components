@@ -12,11 +12,6 @@ exports[`<Input /> should render component 1`] = `
   flex: 1 1 auto;
 }
 
-.c3 {
-  font-size: 1rem;
-  padding: 0 0.45rem;
-}
-
 .c0 > span {
   margin-bottom: .5rem;
 }
@@ -28,76 +23,12 @@ exports[`<Input /> should render component 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
-.c4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-bottom-left-radius: .2rem;
-  border-top-left-radius: .2rem;
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-transition: 200ms 0s ease-in-out;
-  transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
-  border: solid 1px;
-  border-right: 0;
-  background: #fff;
-  border-color: #dbdbdb;
-  color: #323a46;
-  fill: #323a46;
-}
-
-.c7 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-bottom-right-radius: .2rem;
-  border-top-right-radius: .2rem;
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-transition: 200ms 0s ease-in-out;
-  transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
-  border: solid 1px;
-  border-left: 0;
-  background: #fff;
-  border-color: #dbdbdb;
-  color: #323a46;
-  fill: #323a46;
-}
-
-.c5 {
+.c3 {
   font-size: 1rem;
   padding: .45rem .9rem;
-  padding-left: 0;
-  padding-right: 0;
 }
 
-.c6 {
+.c4 {
   border: solid 1px;
   border-radius: .2rem;
   -webkit-flex: 1 1 auto;
@@ -113,56 +44,50 @@ exports[`<Input /> should render component 1`] = `
   background: #fff;
   border-color: #dbdbdb;
   color: #323a46;
-  border-left: 0;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  border-right: 0;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
 }
 
-.c6::-webkit-input-placeholder {
+.c4::-webkit-input-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c6::-moz-placeholder {
+.c4::-moz-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c6:-moz-placeholder {
+.c4:-moz-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c6:-ms-input-placeholder {
+.c4:-ms-input-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c6::-webkit-input-placeholder {
+.c4::-webkit-input-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c6::-moz-placeholder {
+.c4::-moz-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c6:-ms-input-placeholder {
+.c4:-ms-input-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c6::placeholder {
+.c4::placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c6:active,
-.c6:focus {
+.c4:active,
+.c4:focus {
   outline: 0;
 }
 
@@ -176,18 +101,10 @@ exports[`<Input /> should render component 1`] = `
       class="c2"
       display="flex"
     >
-      <div
+      <input
         class="c3 c4"
         shape="rectangle"
-      />
-      <input
-        class="c5 c6"
-        shape="rectangle"
         type="text"
-      />
-      <div
-        class="c3 c7"
-        shape="rectangle"
       />
     </div>
   </label>

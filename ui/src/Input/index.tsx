@@ -7,7 +7,7 @@ import keyboardEvents, { KeyboardEvents } from '@smart-react-components/core/ele
 import { ContentElement, PaletteProp, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import FormBlockLabel from '../components/FormBlockLabel'
-import useInputContent from '../hooks/useInputAddons'
+import useFormAddons from '../hooks/useFormAddons'
 import useInputMethods from '../hooks/useInputMethods'
 import { InputType } from '../types'
 import InputElement from './InputElement'
@@ -47,7 +47,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
     setValue: props.setValue,
   })
 
-  const { leftAddon, rightAddon } = useInputContent({
+  const { leftAddon, rightAddon } = useFormAddons({
     hasBorder: props.hasBorder,
     isDisabled: props.isDisabled,
     isFocused,
