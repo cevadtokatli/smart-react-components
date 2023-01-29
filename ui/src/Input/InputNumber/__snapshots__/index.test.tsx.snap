@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputNumber /> should render component 1`] = `
+<DocumentFragment>
+  .c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c3 .c8 {
+  padding: 0;
+}
+
+.c3 .c8 > div {
+  padding: 0 0.45rem;
+}
+
+.c9 {
+  font-size: 1rem;
+  padding: 0 0.45rem;
+}
+
+.c11 {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c12 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c0 > span {
+  margin-bottom: .5rem;
+}
+
+.c1 > span {
+  display: block;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c10 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom-right-radius: .2rem;
+  border-top-right-radius: .2rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  border: solid 1px;
+  border-left: 0;
+  background: #fff;
+  border-color: #dbdbdb;
+  color: #323a46;
+  fill: #323a46;
+}
+
+.c6 {
+  font-size: 1rem;
+  padding: .45rem .9rem;
+  padding-right: 0.45rem;
+}
+
+.c7 {
+  border: solid 1px;
+  border-radius: .2rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  background: #fff;
+  border-color: #dbdbdb;
+  color: #323a46;
+  border-right: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c7::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c7::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c7:-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c7:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c7::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c7::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c7:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c7::placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c7:active,
+.c7:focus {
+  outline: 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c4 .c5 {
+  -moz-appearance: textfield;
+}
+
+.c4 .c5::-webkit-inner-spin-button,
+.c4 .c5::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.c4 .c8 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c4 .c8 > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50%;
+  visibility: hidden;
+}
+
+.c4 .c8 > div > svg {
+  height: .65rem;
+  width: .65rem;
+}
+
+.c4 .c8 > div:active {
+  opacity: .3;
+}
+
+.c4:hover .c8 > div {
+  visibility: visible;
+}
+
+<label
+    class="c0 c1"
+  >
+    <span>
+      Label
+    </span>
+    <div
+      class="c2"
+      display="flex"
+    >
+      <div
+        class="c3 c4"
+      >
+        <input
+          class="c5 c6 c7"
+          shape="rectangle"
+          type="number"
+          value="1"
+        />
+        <div
+          class="c8 c9 c10"
+          shape="rectangle"
+        >
+          <div
+            class="c11"
+          >
+            <svg
+              class=""
+              viewBox="0 0 320 512"
+            >
+              <path
+                d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"
+              />
+            </svg>
+          </div>
+          <div
+            class="c12"
+          >
+            <svg
+              class=""
+              viewBox="0 0 320 512"
+            >
+              <path
+                d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </label>
+</DocumentFragment>
+`;

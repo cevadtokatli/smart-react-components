@@ -6,11 +6,10 @@ import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-compone
 import keyboardEvents, { KeyboardEvents } from '@smart-react-components/core/element-props/keyboard-events'
 import { ContentElement, PaletteProp, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
-import FormBlockLabel from '../components/FormBlockLabel'
-import useInputAddons from '../hooks/useInputAddons'
-import useInputMethods from '../hooks/useInputMethods'
-import { InputType } from '../types'
-import InputElement from './InputElement'
+import FormBlockLabel from '../../components/FormBlockLabel'
+import useInputAddons from '../../hooks/useInputAddons'
+import useInputMethods from '../../hooks/useInputMethods'
+import InputNumberContainer from './InputNumberContainer'
 
 export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,
@@ -18,7 +17,7 @@ export interface Props extends
   ChangeEvents,
   FocusEvents,
   KeyboardEvents {
-  defaultValue?: string
+  defaultValue?: number
   hasBorder?: boolean
   isBlock?: boolean
   isDisabled?: boolean
@@ -28,24 +27,52 @@ export interface Props extends
   isSoft?: boolean
   label?: ContentElement
   leftAddon?: ContentElement
+  max?: number
+  min?: number
   palette?: PaletteProp
   placeholder?: string
   rightAddon?: ContentElement
-  setValue?: SetState<string>
+  setValue?: SetState<number>
   shape?: ShapeProp
+  step?: number
   template?: JSX.Element
-  type?: InputType
-  value?: string
+  value?: number
 }
 
-const Input = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
+const InputNumber = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
+  /**
+   * Converts the input string value to number.
+   * If value cannot be number, returns the current value.
+   */
+  const applyNumberFormat = (value: string): number => {
+    if (!value.trim()) {
+      return null
+    }
+
+    if (isNaN(Number(value))) {
+      return props.value
+    }
+
+    const i = parseInt(value)
+
+    if (typeof props.min !== 'undefined' && i < props.min) {
+      return props.value
+    }
+
+    if (typeof props.max !== 'undefined' && i > props.max) {
+      return props.value
+    }
+
+    return i
+  }
+
   const { handleOnBlur, handleOnChange, handleOnFocus, isFocused } = useInputMethods({
     isDisabled: props.isDisabled,
     isReadOnly: props.isReadOnly,
     onBlur: props.onBlur,
     onChange: props.onChange,
     onFocus: props.onFocus,
-    setValue: props.setValue,
+    setValue: value => props.setValue?.(applyNumberFormat(value)),
   })
 
   const { leftAddon, rightAddon } = useInputAddons({
@@ -84,12 +111,14 @@ const Input = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
         { leftAddon && leftAddon }
         { React.cloneElement(props.template, {
           ...extractElementProps(props, [changeEvents, focusEvents, keyboardEvents]),
-          ...(typeof props.defaultValue !== 'undefined' && { defaultValue: props.defaultValue }),
+          ...(typeof props.defaultValue !== 'undefined' && { defaultValue: (props.defaultValue ?? '') }),
           ...(props.isDisabled && { disabled: true }),
           ...(props.isReadOnly && { readOnly: true }),
           ...(props.isRequired && { required: true }),
-          ...(typeof props.placeholder !== 'undefined' && { placeholder: props.placeholder }),
-          ...(typeof props.value !== 'undefined' && { value: props.value }),
+          ...(typeof props.max !== 'undefined' && { max: props.max }),
+          ...(typeof props.min !== 'undefined' && { min: props.min }),
+          ...(typeof props.step !== 'undefined' && { step: props.step }),
+          ...(typeof props.value !== 'undefined' && { value: (props.value ?? '') }),
           hasBorder: props.hasBorder,
           hasLeftAddon: !!leftAddon,
           hasRightAddon: !!rightAddon,
@@ -110,7 +139,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
           palette: props.palette,
           ref: forwardRef,
           shape: props.shape,
-          type: props.type,
+          type: 'number',
         }) }
         { rightAddon && rightAddon }
       </Div>
@@ -118,15 +147,14 @@ const Input = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
   )
 })
 
-Input.defaultProps = {
+InputNumber.defaultProps = {
   hasBorder: true,
   isBlock: true,
   isOutline: true,
   palette: 'primary',
   shape: 'rectangle',
   size: 'medium',
-  template: <InputElement />,
-  type: InputType.TEXT,
+  template: <InputNumberContainer />,
 }
 
-export default Input
+export default InputNumber
