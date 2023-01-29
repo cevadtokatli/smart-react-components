@@ -5,8 +5,6 @@ import React from 'react'
 import { OrderPosition } from '../../types'
 import InputAddonElement from './InputAddonElement'
 
-export { OrderPosition as Position } from '../../types'
-
 export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,
   ClickEvents {
@@ -15,13 +13,13 @@ export interface Props extends
   isSeparated?: boolean
   isSoft?: boolean
   palette?: PaletteProp
-  position?: OrderPosition
 }
 
 interface PrivateProps {
   hasBorder: boolean
   isDisabled: boolean
   isFocused: boolean
+  position: OrderPosition
   shape: ShapeProp
 }
 
@@ -46,10 +44,6 @@ const InputAddon: React.FC<Props> = (props: Props & PrivateProps) => (
     {props.children}
   </InputAddonElement>
 )
-
-InputAddon.defaultProps = {
-  position: OrderPosition.LEFT,
-}
 
 InputAddon.displayName = 'SRCAddon'
 

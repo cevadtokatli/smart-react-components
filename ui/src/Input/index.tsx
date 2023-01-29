@@ -7,7 +7,7 @@ import keyboardEvents, { KeyboardEvents } from '@smart-react-components/core/ele
 import { ContentElement, PaletteProp, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import FormBlockLabel from '../components/FormBlockLabel'
-import useInputContent from '../hooks/useInputContent'
+import useInputContent from '../hooks/useInputAddons'
 import useInputMethods from '../hooks/useInputMethods'
 import { InputType } from '../types'
 import InputElement from './InputElement'
@@ -18,7 +18,6 @@ export interface Props extends
   ChangeEvents,
   FocusEvents,
   KeyboardEvents {
-  children?: ContentElement | ContentElement[]
   defaultValue?: string
   hasBorder?: boolean
   isBlock?: boolean
@@ -27,8 +26,11 @@ export interface Props extends
   isReadOnly?: boolean
   isRequired?: boolean
   isSoft?: boolean
+  label?: ContentElement
+  leftAddon?: ContentElement
   palette?: PaletteProp
   placeholder?: string
+  rightAddon?: ContentElement
   setValue?: SetState<string>
   shape?: ShapeProp
   type?: InputType
@@ -45,14 +47,15 @@ const Input = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
     setValue: props.setValue,
   })
 
-  const { hasSeparatedLeftAddon, hasSeparatedRightAddon, labelContent, leftAddon, rightAddon } = useInputContent({
-    children: props.children,
+  const { leftAddon, rightAddon } = useInputContent({
     hasBorder: props.hasBorder,
     isDisabled: props.isDisabled,
     isFocused,
     isOutline: props.isOutline,
     isSoft: props.isSoft,
+    leftAddon: props.leftAddon,
     palette: props.palette,
+    rightAddon: props.rightAddon,
     shape: props.shape,
     size: props.size,
     sizeSm: props.sizeSm,
@@ -71,7 +74,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
       isBlock={props.isBlock}
       isDisabled={props.isDisabled}
     >
-      { labelContent && labelContent}
+      { props.label && <span>{props.label}</span> }
       <Div
         display="flex"
         flex="1 1 auto"
@@ -88,8 +91,8 @@ const Input = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
           hasBorder={props.hasBorder}
           hasLeftAddon={!!leftAddon}
           hasRightAddon={!!rightAddon}
-          hasSeparatedLeftAddon={hasSeparatedLeftAddon}
-          hasSeparatedRightAddon={hasSeparatedRightAddon}
+          hasSeparatedLeftAddon={leftAddon?.props?.isSeparated}
+          hasSeparatedRightAddon={rightAddon?.props?.isSeparated}
           inputSize={props.size}
           inputSizeSm={props.sizeSm}
           inputSizeMd={props.sizeMd}
