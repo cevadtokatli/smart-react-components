@@ -1,7 +1,7 @@
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { ContentElement, PaletteProp, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
-import FormAddon from '../Form/FormAddon'
+import InputAddon from '../Input/InputAddon'
 import { OrderPosition } from '../types'
 
 interface Props extends ResponsiveProp<'size', SizeProp> {
@@ -21,7 +21,7 @@ interface Return {
   rightAddon: JSX.Element | null
 }
 
-const useFormAddons = ({ hasBorder, isDisabled, isFocused, isOutline, isSoft, leftAddon, rightAddon, palette, shape, size, sizeSm, sizeMd, sizeLg, sizeXl }: Props): Return => {
+const useInputAddons = ({ hasBorder, isDisabled, isFocused, isOutline, isSoft, leftAddon, rightAddon, palette, shape, size, sizeSm, sizeMd, sizeLg, sizeXl }: Props): Return => {
   const generateAddonEl = (item, position) => {
     if (!item) {
       return null
@@ -42,7 +42,7 @@ const useFormAddons = ({ hasBorder, isDisabled, isFocused, isOutline, isSoft, le
       sizeXl,
     }
 
-    if (item?.displayName === 'SRCFormAddon') {
+    if (item?.displayName === 'SRCInputAddon') {
       return React.cloneElement(item, {
         ...props,
         ...(item as JSX.Element).props,
@@ -50,9 +50,9 @@ const useFormAddons = ({ hasBorder, isDisabled, isFocused, isOutline, isSoft, le
     }
 
     return (
-      <FormAddon {...props}>
+      <InputAddon {...props}>
         {item}
-      </FormAddon>
+      </InputAddon>
     )
   }
 
@@ -73,4 +73,4 @@ const useFormAddons = ({ hasBorder, isDisabled, isFocused, isOutline, isSoft, le
   }
 }
 
-export default useFormAddons
+export default useInputAddons

@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 import React from 'react'
-import useInputAddons from './useFormAddons'
+import useInputAddons from './useInputAddons'
 
 describe('useInputAddons', () => {
   let Component

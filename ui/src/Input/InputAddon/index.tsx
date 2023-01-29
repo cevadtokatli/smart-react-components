@@ -3,7 +3,7 @@ import clickEvents, { ClickEvents } from '@smart-react-components/core/element-p
 import { ContentElement, PaletteProp, Partial, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import { OrderPosition } from '../../types'
-import InputAddonElement from './FormAddonElement'
+import InputAddonElement from './InputAddonElement'
 
 export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,
@@ -45,6 +45,6 @@ const InputAddon: React.FC<Props> = (props: Props & PrivateProps) => (
   </InputAddonElement>
 )
 
-InputAddon.displayName = 'SRCFormAddon'
+InputAddon.displayName = 'SRCInputAddon'
 
 export default InputAddon
