@@ -12,14 +12,14 @@ export interface Props {
 interface PrivateProps {
   hasHover: boolean
   hasWaveEffect: boolean
-  isFilled: boolean
+  isOutline: boolean
   isSoft: boolean
   palette: PaletteProp
   setStatus: SetState<boolean>
   waveEffectPalette: PaletteProp
 }
 
-const DropdownItem: React.FC<Props> = ({ children, hasHover, hasWaveEffect, isDisabled, isFilled, isSoft, onClick, palette, setStatus, waveEffectPalette }: (Props & PrivateProps)) => {
+const DropdownItem: React.FC<Props> = ({ children, hasHover, hasWaveEffect, isDisabled, isOutline, isSoft, onClick, palette, setStatus, waveEffectPalette }: (Props & PrivateProps)) => {
   const handleOnClick = async (e: React.MouseEvent<HTMLElement>) => {
     if (isDisabled) {
       return
@@ -36,8 +36,8 @@ const DropdownItem: React.FC<Props> = ({ children, hasHover, hasWaveEffect, isDi
     <DropdownItemElement
       hasHover={hasHover}
       isActive={false}
-      isFilled={isFilled}
       isDisabled={isDisabled}
+      isOutline={isOutline}
       isSoft={isSoft}
       palette={palette}
       onClick={handleOnClick}

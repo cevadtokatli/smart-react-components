@@ -9,7 +9,7 @@ describe('<DropdownListElement />', () => {
   beforeAll(() => {
     props = {
       dropdownListSize: 'medium',
-      isFilled: false,
+      isOutline: true,
       isSoft: false,
       palette: 'primary',
     }
@@ -20,8 +20,8 @@ describe('<DropdownListElement />', () => {
     expect(asFragment()).toMatchSnapshot()
   })
   
-  it('should render component filled', () => {
-    const { asFragment } = render(wrapTheme(<DropdownListElement {...props} isFilled />))
+  it('should render component not outline', () => {
+    const { asFragment } = render(wrapTheme(<DropdownListElement {...props} isOutline={false} />))
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -30,8 +30,8 @@ describe('<DropdownListElement />', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('should render component filled with soft colors', () => {
-    const { asFragment } = render(wrapTheme(<DropdownListElement {...props} isFilled isSoft />))
+  it('should render component not outline with soft colors', () => {
+    const { asFragment } = render(wrapTheme(<DropdownListElement {...props} isOutline={false} isSoft />))
     expect(asFragment()).toMatchSnapshot()
   })
 

@@ -40,7 +40,7 @@ exports[`<DropdownListElement /> should render component 1`] = `
 </DocumentFragment>
 `;
 
-exports[`<DropdownListElement /> should render component filled 1`] = `
+exports[`<DropdownListElement /> should render component not outline 1`] = `
 <DocumentFragment>
   .c0 {
   padding: .3125rem 0;
@@ -80,7 +80,7 @@ exports[`<DropdownListElement /> should render component filled 1`] = `
 </DocumentFragment>
 `;
 
-exports[`<DropdownListElement /> should render component filled with soft colors 1`] = `
+exports[`<DropdownListElement /> should render component not outline with soft colors 1`] = `
 <DocumentFragment>
   .c0 {
   padding: .3125rem 0;

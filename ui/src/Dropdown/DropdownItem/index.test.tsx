@@ -13,7 +13,7 @@ describe('<DropdownItem />', () => {
     props = {
       hasHover: false,
       hasWaveEffect: false,
-      isFilled: false,
+      isOutline: true,
       isSoft: false,
       palette: 'primary',
       waveEffectPalette: 'light',

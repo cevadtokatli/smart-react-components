@@ -11,7 +11,7 @@ describe('<DropdownItemElement />', () => {
       hasHover: true,
       isActive: false,
       isDisabled: false,
-      isFilled: false,
+      isOutline: true,
       isSoft: false,
       palette: 'primary',
     }
@@ -32,8 +32,8 @@ describe('<DropdownItemElement />', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('should render component filled', () => {
-    const { asFragment } = render(wrapTheme(<DropdownItemElement {...props} isFilled />))
+  it('should render component not outline', () => {
+    const { asFragment } = render(wrapTheme(<DropdownItemElement {...props} isOutline={false} />))
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -42,8 +42,8 @@ describe('<DropdownItemElement />', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('should render component filled with soft colors', () => {
-    const { asFragment } = render(wrapTheme(<DropdownItemElement {...props} isFilled isSoft />))
+  it('should render component not outline with soft colors', () => {
+    const { asFragment } = render(wrapTheme(<DropdownItemElement {...props} isOutline={false} isSoft />))
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -61,8 +61,8 @@ describe('<DropdownItemElement />', () => {
       expect(asFragment()).toMatchSnapshot()
     })
 
-    it('should render component filled', () => {
-      const { asFragment } = render(wrapTheme(<DropdownItemElement {...props} isFilled />))
+    it('should render component not outline', () => {
+      const { asFragment } = render(wrapTheme(<DropdownItemElement {...props} isOutline={false} />))
       expect(asFragment()).toMatchSnapshot()
     })
   
@@ -71,8 +71,8 @@ describe('<DropdownItemElement />', () => {
       expect(asFragment()).toMatchSnapshot()
     })
   
-    it('should render component filled with soft colors', () => {
-      const { asFragment } = render(wrapTheme(<DropdownItemElement {...props} isFilled isSoft />))
+    it('should render component not outline with soft colors', () => {
+      const { asFragment } = render(wrapTheme(<DropdownItemElement {...props} isOutline={false} isSoft />))
       expect(asFragment()).toMatchSnapshot()
     })
   })

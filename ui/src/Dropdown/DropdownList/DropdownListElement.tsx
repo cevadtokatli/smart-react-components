@@ -6,7 +6,7 @@ import styled from 'styled-components'
 interface Props extends
   StyledProps,
   ResponsiveProp<'dropdownListSize', SizeProp> {
-  isFilled: boolean
+  isOutline: boolean
   isSoft: boolean
   palette: PaletteProp
 }
@@ -21,7 +21,7 @@ export default styled(Div).attrs({
       padding: ${t.$.size.dropdown[v].padding.y} ${t.$.size.dropdown[v].padding.x};
     }
   `,
-})<Props>(({ theme, isFilled, isSoft, palette }: Props) => `
+})<Props>(({ theme, isOutline, isSoft, palette }: Props) => `
   border-radius: ${theme.$.radius.dropdown};
   box-shadow: 0 0 10px 1px ${theme.$.color.dynamic.shadow};
   font-family: ${theme.$.fontFamily.dropdown};
@@ -36,16 +36,16 @@ export default styled(Div).attrs({
     word-wrap: break-word;
   }
 
-  ${!isFilled
+  ${!isOutline
     ? `
-      background: ${theme.$.color.dynamic.background};
-      color: ${theme.$.color.dynamic.font};
-      fill: ${theme.$.color.dynamic.font};
-    `
-    : `
       background: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};
       color: ${!isSoft ? theme.$.palette[palette].font : theme.$.palette[palette].softFont};
       fill:  ${!isSoft ? theme.$.palette[palette].font : theme.$.palette[palette].softFont};
+    `
+    : `
+      background: ${theme.$.color.dynamic.background};
+      color: ${theme.$.color.dynamic.font};
+      fill: ${theme.$.color.dynamic.font};
     `
   }
 `)
