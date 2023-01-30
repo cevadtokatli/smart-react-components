@@ -9,10 +9,10 @@ describe('<BadgeIcon />', () => {
 
   beforeAll(() => {
     props = {
-      iconPosition: OrderPosition.LEFT,
       isOutline: false,
       isSoft: false,
       palette: 'primary',
+      position: OrderPosition.LEFT,
       shape: 'rectangle',
     }
   })

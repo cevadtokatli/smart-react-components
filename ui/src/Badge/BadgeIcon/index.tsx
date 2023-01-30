@@ -11,16 +11,17 @@ export interface Props extends ClickEvents {
 }
 
 interface PrivateProps {
-  iconPosition: OrderPosition
   isOutline: boolean
   isSoft: boolean
   palette: PaletteProp
+  position: OrderPosition
   shape: ShapeProp
 }
+
 const BadgeIcon: React.FC<Props> = (props: Props & PrivateProps) => (
   <BadgeIconElement
     {...extractElementProps(props, [clickEvents])}
-    iconPosition={props.iconPosition}
+    iconPosition={props.position}
     isClickable={!!mouseClickEvents.find(i => props[i])}
     isOutline={props.isOutline}
     isSoft={props.isSoft}
@@ -29,6 +30,6 @@ const BadgeIcon: React.FC<Props> = (props: Props & PrivateProps) => (
   >{props.children}</BadgeIconElement>
 )
 
-BadgeIcon.displayName = 'SRCIcon'
+BadgeIcon.displayName = 'SRCBadgeIcon'
 
 export default BadgeIcon
