@@ -1,7 +1,7 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { render } from '@testing-library/react'
 import React from 'react'
-import InputElement from './InputElement'
+import InputElement, { InputPlaceholder } from './InputElement'
 
 describe('<InputElement />', () => {
   let props
@@ -70,6 +70,11 @@ describe('<InputElement />', () => {
 
   it('should have separated right addon', () => {
     const { asFragment } = render(wrapTheme(<InputElement {...props} hasRightAddon hasSeparatedRightAddon />))
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should be rendered as div', () => {
+    const { asFragment } = render(wrapTheme(<InputElement {...props} isInput={false}><InputPlaceholder /></InputElement>))
     expect(asFragment()).toMatchSnapshot()
   })
 })
