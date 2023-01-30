@@ -41,6 +41,7 @@ const Badge: React.FC<Props> = props => {
 
   return (
     <BadgeElement
+      badgeOffset={props.offset}
       badgePosition={props.position}
       badgeSize={props.size}
       badgeSizeSm={props.sizeSm}
@@ -55,7 +56,6 @@ const Badge: React.FC<Props> = props => {
       isFixedSize={props.isFixedSize}
       isOutline={props.isOutline}
       isSoft={props.isSoft}
-      offset={props.offset}
       palette={props.palette}
       shape={props.shape}
       {...extractElementProps(props, [clickEvents, intrinsicStyledProps])}

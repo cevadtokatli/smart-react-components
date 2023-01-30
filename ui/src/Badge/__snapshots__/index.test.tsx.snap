@@ -3,7 +3,6 @@
 exports[`<Badge /> should render component 1`] = `
 <DocumentFragment>
   .c0 {
-  offset: 10px;
   margin: .3125rem .3125rem;
 }
 
@@ -126,7 +125,6 @@ exports[`<Badge /> should render component 1`] = `
 
 <div
     class="c0 c1"
-    offset="10"
     shape="rectangle"
   >
     <div

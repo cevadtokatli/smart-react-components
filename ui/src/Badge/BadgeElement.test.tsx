@@ -9,6 +9,7 @@ describe('<BadgeElement />', () => {
 
   beforeAll(() => {
     props = {
+      badgeOffset: 10,
       badgePosition: Position.RIGHT,
       badgeSize: 'medium',
       hasIconLeft: false,
@@ -19,7 +20,6 @@ describe('<BadgeElement />', () => {
       isFixedSize: false,
       isOutline: false,
       isSoft: false,
-      offset: 10,
       palette: 'primary',
       shape: 'rectangle',
     }

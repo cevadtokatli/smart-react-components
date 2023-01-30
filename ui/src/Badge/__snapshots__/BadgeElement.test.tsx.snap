@@ -2,11 +2,7 @@
 
 exports[`<BadgeElement /> should be absolute 1`] = `
 <DocumentFragment>
-  .c0 {
-  offset: 10px;
-}
-
-.c0 .c2 {
+  .c0 .c2 {
   font-size: .75rem;
   padding: .1875rem .375rem;
 }
@@ -62,7 +58,6 @@ exports[`<BadgeElement /> should be absolute 1`] = `
 
 <div
     class="c0 c1"
-    offset="10"
     shape="rectangle"
   >
     <div
@@ -74,11 +69,7 @@ exports[`<BadgeElement /> should be absolute 1`] = `
 
 exports[`<BadgeElement /> should be fixed size 1`] = `
 <DocumentFragment>
-  .c0 {
-  offset: 10px;
-}
-
-.c0 .c2 {
+  .c0 .c2 {
   font-size: .75rem;
   height: 20px;
   width: 20px;
@@ -148,7 +139,6 @@ exports[`<BadgeElement /> should be fixed size 1`] = `
 
 <div
     class="c0 c1"
-    offset="10"
     shape="rectangle"
   >
     <div
@@ -161,7 +151,6 @@ exports[`<BadgeElement /> should be fixed size 1`] = `
 exports[`<BadgeElement /> should have space 1`] = `
 <DocumentFragment>
   .c0 {
-  offset: 10px;
   margin: .3125rem .3125rem;
 }
 
@@ -219,7 +208,6 @@ exports[`<BadgeElement /> should have space 1`] = `
 
 <div
     class="c0 c1"
-    offset="10"
     shape="rectangle"
   >
     <div
@@ -231,11 +219,7 @@ exports[`<BadgeElement /> should have space 1`] = `
 
 exports[`<BadgeElement /> should not be clickable 1`] = `
 <DocumentFragment>
-  .c0 {
-  offset: 10px;
-}
-
-.c0 .c2 {
+  .c0 .c2 {
   font-size: .75rem;
   padding: .1875rem .375rem;
 }
@@ -279,7 +263,6 @@ exports[`<BadgeElement /> should not be clickable 1`] = `
 
 <div
     class="c0 c1"
-    offset="10"
     shape="rectangle"
   >
     <div
@@ -291,11 +274,7 @@ exports[`<BadgeElement /> should not be clickable 1`] = `
 
 exports[`<BadgeElement /> should render component 1`] = `
 <DocumentFragment>
-  .c0 {
-  offset: 10px;
-}
-
-.c0 .c2 {
+  .c0 .c2 {
   font-size: .75rem;
   padding: .1875rem .375rem;
 }
@@ -349,7 +328,6 @@ exports[`<BadgeElement /> should render component 1`] = `
 
 <div
     class="c0 c1"
-    offset="10"
     shape="rectangle"
   >
     <div
@@ -361,11 +339,7 @@ exports[`<BadgeElement /> should render component 1`] = `
 
 exports[`<BadgeElement /> should render component outline 1`] = `
 <DocumentFragment>
-  .c0 {
-  offset: 10px;
-}
-
-.c0 .c2 {
+  .c0 .c2 {
   font-size: .75rem;
   padding: .1875rem .375rem;
 }
@@ -419,7 +393,6 @@ exports[`<BadgeElement /> should render component outline 1`] = `
 
 <div
     class="c0 c1"
-    offset="10"
     shape="rectangle"
   >
     <div
@@ -431,11 +404,7 @@ exports[`<BadgeElement /> should render component outline 1`] = `
 
 exports[`<BadgeElement /> should render component outline with soft colors 1`] = `
 <DocumentFragment>
-  .c0 {
-  offset: 10px;
-}
-
-.c0 .c2 {
+  .c0 .c2 {
   font-size: .75rem;
   padding: .1875rem .375rem;
 }
@@ -489,7 +458,6 @@ exports[`<BadgeElement /> should render component outline with soft colors 1`] =
 
 <div
     class="c0 c1"
-    offset="10"
     shape="rectangle"
   >
     <div
@@ -501,11 +469,7 @@ exports[`<BadgeElement /> should render component outline with soft colors 1`] =
 
 exports[`<BadgeElement /> should render component with soft colors 1`] = `
 <DocumentFragment>
-  .c0 {
-  offset: 10px;
-}
-
-.c0 .c2 {
+  .c0 .c2 {
   font-size: .75rem;
   padding: .1875rem .375rem;
 }
@@ -559,7 +523,6 @@ exports[`<BadgeElement /> should render component with soft colors 1`] = `
 
 <div
     class="c0 c1"
-    offset="10"
     shape="rectangle"
   >
     <div
@@ -571,11 +534,7 @@ exports[`<BadgeElement /> should render component with soft colors 1`] = `
 
 exports[`<BadgeElement /> should resize component responsively 1`] = `
 <DocumentFragment>
-  .c0 {
-  offset: 10px;
-}
-
-.c0 .c2 {
+  .c0 .c2 {
   font-size: .75rem;
   padding: .09375rem .1875rem;
 }
@@ -661,7 +620,6 @@ exports[`<BadgeElement /> should resize component responsively 1`] = `
 
 <div
     class="c0 c1"
-    offset="10"
     shape="rectangle"
   >
     <div

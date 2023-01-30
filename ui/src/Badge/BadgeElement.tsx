@@ -14,6 +14,7 @@ export const Content = styled.div`
 interface Props extends
   StyledProps,
   ResponsiveProp<'badgeSize', SizeProp> {
+  badgeOffset: number
   badgePosition: Position
   hasIconLeft: boolean
   hasIconRight: boolean
@@ -23,7 +24,6 @@ interface Props extends
   isFixedSize: boolean
   isOutline: boolean
   isSoft: boolean
-  offset: number
   palette: PaletteProp
   shape: ShapeProp
 }
@@ -78,7 +78,7 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
       font-size: ${t.$.size.badge[v].iconSize};
     }
   `,
-}))<Props>(({ theme, badgePosition, hasIconLeft, hasIconRight, isAbsolute, isClickable, isFixedSize, isOutline, isSoft, offset, palette, shape }: Props) => `
+}))<Props>(({ theme, badgeOffset, badgePosition, hasIconLeft, hasIconRight, isAbsolute, isClickable, isFixedSize, isOutline, isSoft, palette, shape }: Props) => `
   display: inline-flex;
   font-family: ${theme.$.fontFamily.badge};
   word-break: break-word;
@@ -230,7 +230,7 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
   ${isAbsolute
     ? `
       position: absolute;
-      ${Position[badgePosition].toLowerCase()}: ${offset}px;
+      ${Position[badgePosition].toLowerCase()}: ${badgeOffset}px;
     `
     : ''
   }

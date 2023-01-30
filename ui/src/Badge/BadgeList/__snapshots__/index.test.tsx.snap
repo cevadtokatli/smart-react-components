@@ -7,7 +7,6 @@ exports[`<BadgeList /> should render component 1`] = `
 }
 
 .c2 {
-  offset: 10px;
   margin: .3125rem .3125rem;
 }
 
@@ -72,7 +71,6 @@ exports[`<BadgeList /> should render component 1`] = `
   >
     <div
       class="c2 c3"
-      offset="10"
       shape="rectangle"
     >
       <div
@@ -83,7 +81,6 @@ exports[`<BadgeList /> should render component 1`] = `
     </div>
     <div
       class="c2 c3"
-      offset="10"
       shape="rectangle"
     >
       <div
@@ -94,7 +91,6 @@ exports[`<BadgeList /> should render component 1`] = `
     </div>
     <div
       class="c2 c3"
-      offset="10"
       shape="rectangle"
     >
       <div
