@@ -19,18 +19,18 @@ export interface Props extends
 
 const BadgeList: React.FC<Props> = props => (
   <BadgeListElement
-    badgeListSize={props.size}
+    badgeListSize={props.size ?? 'medium'}
     badgeListSizeSm={props.sizeSm}
     badgeListSizeMd={props.sizeMd}
     badgeListSizeLg={props.sizeLg}
     badgeListSizeXl={props.sizeXl}
-    hasSpace={props.hasSpace}
+    hasSpace={props.hasSpace ?? true}
     {...extractElementProps(props, [intrinsicStyledProps])}
     {...props.elementProps}
   >
     { props.children.map((item, index) => React.cloneElement(item, {
       key: item.key ?? index,
-      hasSpace: props.hasSpace ?? item.props.hasSpace,
+      hasSpace: props.hasSpace ?? item.props.hasSpace ?? true,
       isFixedSize: props.isFixedSize ?? item.props.isFixedSize,
       isOutline: props.isOutline ?? item.props.isOutline,
       isSoft: props.isSoft ?? item.props.isSoft,
@@ -44,10 +44,5 @@ const BadgeList: React.FC<Props> = props => (
     })) }
   </BadgeListElement>
 )
-
-BadgeList.defaultProps = {
-  hasSpace: true,
-  size: 'medium',
-}
 
 export default BadgeList
