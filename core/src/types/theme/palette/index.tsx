@@ -21,31 +21,6 @@ interface DefaultPaletteItemAttributes {
   softDarker: string
   softDarkest: string
   waveEffect: string
-
-  popover: {
-    background: string
-    border: string
-    font: string
-    headerBackground: string
-    headerBorder: string
-    headerFont: string
-    softHeaderBackground: string
-    softHeaderBorder: string
-    softHeaderFont: string
-  }
-  progressBar: {
-    active: string
-    filledBackground: string
-    font: string
-    nestedBackground: string
-  }
-  tooltip: {
-    background: string
-    font: string
-    softBackground: string
-    softFont: string
-    shadow: string
-  }
 }
 
 export type PaletteItem = DefaultPaletteItemAttributes & OptionalThemeAttributes

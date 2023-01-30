@@ -29,13 +29,13 @@ export default styled(Div).attrs({
 
   ${isSoft
     ? `
-      background: ${theme.$.palette[palette].tooltip.softBackground};
-      color: ${theme.$.palette[palette].tooltip.softFont};
-      fill: ${theme.$.palette[palette].tooltip.softFont};
+      background: ${theme.$.palette[palette].soft};
+      color: ${theme.$.palette[palette].softFont};
+      fill: ${theme.$.palette[palette].softFont};
 
       ${PopoverArrow} {
-        fill: ${theme.$.palette[palette].tooltip.softBackground};
-        stroke: ${theme.$.palette[palette].tooltip.softBackground};
+        fill: ${theme.$.palette[palette].soft};
+        stroke: ${theme.$.palette[palette].soft};
       }
     `
     : `

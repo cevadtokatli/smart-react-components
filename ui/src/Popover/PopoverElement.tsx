@@ -37,39 +37,39 @@ export default styled(Div).attrs({
   `,
 })<Props>(({ theme, palette, duration, hasTransition, isSoft }: Props) => `
   box-sizing: border-box;
-  color: ${theme.$.palette[palette].popover.font};
-  fill: ${theme.$.palette[palette].popover.font};
+  color: ${theme.$.color.dynamic.font};
+  fill: ${theme.$.color.dynamic.font};
   font-family: ${theme.$.fontFamily.popover};
   position: fixed;
   z-index: ${theme.$.zIndex.popover};
 
   ${PopoverContent} {
-    background: ${theme.$.palette[palette].popover.background};
-    border: solid 1px ${theme.$.palette[palette].popover.border};
+    background: ${theme.$.color.dynamic.background};
+    border: solid 1px ${theme.$.color.dynamic.accent};
   }
 
   ${PopoverHeader} {
     ${isSoft
       ? `
-        background: ${theme.$.palette[palette].popover.softHeaderBackground};
-        border: solid 1px ${theme.$.palette[palette].popover.softHeaderBorder};
-        color: ${theme.$.palette[palette].popover.softHeaderFont};
-        fill: ${theme.$.palette[palette].popover.softHeaderFont};
+        background: ${theme.$.palette[palette].soft};
+        border: solid 1px ${theme.$.palette[palette].softDarker};
+        color: ${theme.$.palette[palette].softFont};
+        fill: ${theme.$.palette[palette].softFont};
 
         ~ ${PopoverArrow}[data-arrow-header="true"] {
-          fill: ${theme.$.palette[palette].popover.softHeaderBackground};
-          stroke: ${theme.$.palette[palette].popover.softHeaderBorder};
+          fill: ${theme.$.palette[palette].soft};
+          stroke: ${theme.$.palette[palette].softDarker};
         }
       `
       : `
-        background: ${theme.$.palette[palette].popover.headerBackground};
-        border: solid 1px ${theme.$.palette[palette].popover.headerBorder};
-        color: ${theme.$.palette[palette].popover.headerFont};
-        fill: ${theme.$.palette[palette].popover.headerFont};
+        background: ${theme.$.palette[palette].main};
+        border: solid 1px ${theme.$.palette[palette].dynamicer};
+        color: ${theme.$.palette[palette].font};
+        fill: ${theme.$.palette[palette].font};
 
         ~ ${PopoverArrow}[data-arrow-header="true"] {
-          fill: ${theme.$.palette[palette].popover.headerBackground};
-          stroke: ${theme.$.palette[palette].popover.headerBorder};
+          fill: ${theme.$.palette[palette].main};
+          stroke: ${theme.$.palette[palette].dynamicer};
         }
       `
     }
@@ -80,8 +80,8 @@ export default styled(Div).attrs({
   }
 
   ${PopoverArrow}[data-arrow-header="false"] {
-    fill: ${theme.$.palette[palette].popover.background};
-    stroke: ${theme.$.palette[palette].popover.border};
+    fill: ${theme.$.color.dynamic.background};
+    stroke: ${theme.$.color.dynamic.accent};
   }
 
   ${hasTransition ? generateCSSTransitionClasses('popover', duration) : ''}

@@ -1,6 +1,7 @@
 import Div from '@smart-react-components/core/Element/Div'
 import { StyledProps } from '@smart-react-components/core/styled-props'
 import { PaletteProp, TimingFunction } from '@smart-react-components/core/types'
+import { getColor } from '@smart-react-components/core/util/color'
 import styled from 'styled-components'
 
 export const Bar = styled.div`
@@ -30,21 +31,21 @@ interface Props extends StyledProps {
 
 export default styled(Div)<Props>(({ theme, hasStripedAnimation, height, isFilled, isNested, isStriped, palette, stripedAnimationDuration, transitionDuration, transitionTimingFunction }: Props) => `
   align-items: center;
-  color: ${theme.$.palette[palette].progressBar.active};
+  color: ${theme.$.palette[palette].main};
   display: flex;
-  fill: ${theme.$.palette[palette].progressBar.active};
+  fill: ${theme.$.palette[palette].main};
   overflow: hidden;
   position: relative;
 
   ${Bar} {
-    background: ${theme.$.palette[palette].progressBar.active};
-    color: ${theme.$.palette[palette].progressBar.font};
-    fill: ${theme.$.palette[palette].progressBar.font};
+    background: ${theme.$.palette[palette].main};
+    color: ${theme.$.palette[palette].font};
+    fill: ${theme.$.palette[palette].font};
     transition: width ${transitionDuration}ms 0s ${transitionTimingFunction};
 
     ${isNested
       ? `
-        background: ${theme.$.palette[palette].progressBar.nestedBackground};
+        background: ${getColor(theme.$.color.light.background).alpha(.3).rgb().toString()};
       `
       : `
         border-radius: .125rem;
@@ -54,7 +55,7 @@ export default styled(Div)<Props>(({ theme, hasStripedAnimation, height, isFille
 
   ${isFilled
     ? `
-      background: ${theme.$.palette[palette].progressBar.filledBackground};
+      background: ${theme.$.color.dynamic.gray};
     `
     : ''
   }

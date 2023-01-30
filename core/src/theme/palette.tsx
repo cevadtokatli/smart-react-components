@@ -4,17 +4,12 @@ import { InputPaletteItem, PaletteItem } from '../types/theme/palette'
 import { getColor, getFontColor, mix } from '../util/color'
 
 const createPaletteItem = (paletteItem: InputPaletteItem, theme: Theme): PaletteItem => {
-  let result: Partial<PaletteItem> = {
-    popover: {},
-    progressBar: {},
-    tooltip: {},
-  }
+  let result: Partial<PaletteItem> = {}
 
   if (typeof paletteItem === 'string') {
     result.main = paletteItem
   } else {
     result = {
-      ...result,
       ...paletteItem,
     }
 
@@ -46,27 +41,6 @@ const createPaletteItem = (paletteItem: InputPaletteItem, theme: Theme): Palette
   result.softDark ||= mix(result.main, -.72)
   result.softDarker ||= mix(result.main, -.65)
   result.softDarkest ||= mix(result.main, -.55)
-
-  result.popover.background ||= theme.$.color.dynamic.background
-  result.popover.border ||= theme.$.color.dynamic.accent
-  result.popover.font ||= theme.$.color.dynamic.font
-  result.popover.headerBackground ||= result.main
-  result.popover.headerBorder ||= theme.$.vars.isDarkMode ? result.lighter : result.darker
-  result.popover.headerFont ||= result.font
-  result.popover.softHeaderBackground ||= result.soft
-  result.popover.softHeaderBorder ||= result.softDarker
-  result.popover.softHeaderFont ||= result.softFont
-
-  result.progressBar.active ||= result.main
-  result.progressBar.filledBackground ||= theme.$.color.dynamic.gray
-  result.progressBar.font ||= result.font
-  result.progressBar.nestedBackground ||= getColor(theme.$.color.light.background).alpha(.3).rgb().toString()
-
-  result.tooltip.background ||= result.background
-  result.tooltip.font ||= result.font
-  result.tooltip.softBackground ||= result.soft
-  result.tooltip.softFont ||= result.softFont
-  result.tooltip.shadow ||= theme.$.color.dynamic.shadow
 
   const waveEffect = getColor(result.waveEffect ?? result.main)
   result.waveEffect = `radial-gradient(${waveEffect.alpha(.2).toString()} 0, ${waveEffect.alpha(.3).toString()} 40%, ${waveEffect.alpha(.4).toString()} 50%, ${waveEffect.alpha(.5).toString()} 60%, ${waveEffect.alpha(0).toString()} 70%)`
