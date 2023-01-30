@@ -30,18 +30,17 @@ const BadgeList: React.FC<Props> = props => (
   >
     { props.children.map((item, index) => React.cloneElement(item, {
       key: item.key ?? index,
-      hasSpace: props.hasSpace,
-      isFixedSizze: props.isFixedSize,
-      isOutline: props.isOutline,
-      isSoft: props.isSoft,
-      palette: props.palette,
-      shape: props.shape,
-      size: props.size,
-      sizeSm: props.sizeSm,
-      sizeMd: props.sizeMd,
-      sizeLg: props.sizeLg,
-      sizeXl: props.sizeXl,
-      ...item.props,
+      hasSpace: props.hasSpace ?? item.props.hasSpace,
+      isFixedSize: props.isFixedSize ?? item.props.isFixedSize,
+      isOutline: props.isOutline ?? item.props.isOutline,
+      isSoft: props.isSoft ?? item.props.isSoft,
+      palette: props.palette ?? item.props.palette,
+      shape: props.shape ?? item.props.shape,
+      size: props.size ?? item.props.size,
+      sizeSm: props.sizeSm ?? item.props.sizeSm,
+      sizeMd: props.sizeMd ?? item.props.sizeMd,
+      sizeLg: props.sizeLg ?? item.props.sizeLg,
+      sizeXl: props.sizeXl ?? item.props.sizeXl,
     })) }
   </BadgeListElement>
 )
