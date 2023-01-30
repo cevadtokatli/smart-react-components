@@ -11,7 +11,7 @@ export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,
   ClickEvents,
   IntrinsicStyledProps {
-  children: ContentElement
+  children: ContentElement | ContentElement[]
   elementProps?: JSXElementProps
   isOutline?: boolean
   isSoft?: boolean

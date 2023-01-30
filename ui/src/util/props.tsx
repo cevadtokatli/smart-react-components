@@ -10,7 +10,7 @@ import { OrderPosition } from '../types'
  * @params Content - The component that wraps all children except for icons.
  * @params props - props given to the icon component.
  */
-export const extractIconsOutOfChildren = (children: ContentElement, Content: StyledComponent<'div', any>, props: object) => {
+export const extractIconsOutOfChildren = (children: ContentElement | ContentElement[], Content: StyledComponent<'div', any>, props: object) => {
   if (!Array.isArray(children)) {
     return {
       children: <Content>{children}</Content>,
@@ -25,24 +25,25 @@ export const extractIconsOutOfChildren = (children: ContentElement, Content: Sty
 
   for (let idx = 0; idx < children.length; idx++) {
     const item = children[idx]
+    const itemJSX = item as JSX.Element
 
-    if (idx === 0 && item.type?.displayName === 'SRCIcon') {
-      iconLeft = React.cloneElement(item, {
+    if (idx === 0 && itemJSX.type?.displayName === 'SRCIcon') {
+      iconLeft = React.cloneElement(itemJSX, {
         ...props,
         iconPosition: OrderPosition.LEFT,
       })
       continue
     }
 
-    if (idx === children.length - 1 && item.type?.displayName === 'SRCIcon') {
-      iconRight = React.cloneElement(item, {
+    if (idx === children.length - 1 && itemJSX.type?.displayName === 'SRCIcon') {
+      iconRight = React.cloneElement(itemJSX, {
         ...props,
         iconPosition: OrderPosition.RIGHT,
       })
       continue
     }
 
-    content.push(React.cloneElement(item, { key: item.key ?? idx }))
+    content.push(typeof item === 'string' ? item : React.cloneElement(itemJSX, { key: itemJSX.key ?? idx }))
   }
 
   return {
