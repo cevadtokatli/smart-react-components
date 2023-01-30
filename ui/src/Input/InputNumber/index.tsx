@@ -9,7 +9,7 @@ import React from 'react'
 import FormBlockLabel from '../../components/FormBlockLabel'
 import useInputAddons from '../../hooks/useInputAddons'
 import useInputMethods from '../../hooks/useInputMethods'
-import InputNumberContainer from './InputNumberContainer'
+import InputNumberTemplate from './InputNumberTemplate'
 
 export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,
@@ -139,7 +139,6 @@ const InputNumber = React.forwardRef<HTMLInputElement, Props>((props, forwardRef
           palette: props.palette,
           ref: forwardRef,
           shape: props.shape,
-          type: 'number',
         }) }
         { rightAddon && rightAddon }
       </Div>
@@ -154,7 +153,7 @@ InputNumber.defaultProps = {
   palette: 'primary',
   shape: 'rectangle',
   size: 'medium',
-  template: <InputNumberContainer />,
+  template: <InputNumberTemplate />,
 }
 
 export default InputNumber

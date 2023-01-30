@@ -1,9 +1,9 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { fireEvent, render } from '@testing-library/react'
 import React from 'react'
-import InputNumberContainer from './InputNumberContainer'
+import InputNumberTemplate from './InputNumberTemplate'
 
-describe('<InputNumberContainer />', () => {
+describe('<InputNumberTemplate />', () => {
   let props
 
   beforeEach(() => {
@@ -21,12 +21,12 @@ describe('<InputNumberContainer />', () => {
   })
 
   it('should render component', () => {
-    const { asFragment } = render(wrapTheme(<InputNumberContainer {...props} />))
+    const { asFragment } = render(wrapTheme(<InputNumberTemplate {...props} />))
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should increase value by one', () => {
-    const { container } = render(wrapTheme(<InputNumberContainer {...props} />))
+    const { container } = render(wrapTheme(<InputNumberTemplate {...props} />))
     const node = container.querySelector('input + * > :first-child')!
     fireEvent.click(node)
     expect(props.onChange).toHaveBeenCalled()
@@ -34,7 +34,7 @@ describe('<InputNumberContainer />', () => {
   })
 
   it('should decrease value by one', () => {
-    const { container } = render(wrapTheme(<InputNumberContainer {...props} />))
+    const { container } = render(wrapTheme(<InputNumberTemplate {...props} />))
     const node = container.querySelector('input + * > :last-child')!
     fireEvent.click(node)
     expect(props.onChange).toHaveBeenCalled()

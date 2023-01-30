@@ -6,7 +6,7 @@ import CaretUp from '../../icons/CaretUp'
 import { OrderPosition } from '../../types'
 import InputAddon from '../InputAddon'
 import InputElement from '../InputElement'
-import InputNumberContainerElement from './InputNumberContainerElement'
+import InputNumberTemplateElement from './InputNumberTemplateElement'
 
 interface Props extends Partial<ResponsiveProp<'inputSize', SizeProp>> {
   hasBorder?: boolean
@@ -21,7 +21,7 @@ interface Props extends Partial<ResponsiveProp<'inputSize', SizeProp>> {
   value?: number
 }
 
-const InputNumberContainer: React.FC<Props> = props => {
+const InputNumberTemplate: React.FC<Props> = props => {
   const el = React.useRef<HTMLDivElement>(null)
 
   const toggleValue = (isInc: boolean) => {
@@ -67,7 +67,7 @@ const InputNumberContainer: React.FC<Props> = props => {
   }
 
   return (
-    <InputNumberContainerElement
+    <InputNumberTemplateElement
       inputSize={props.inputSize}
       inputSizeSm={props.inputSizeSm}
       inputSizeMd={props.inputSizeMd}
@@ -79,6 +79,7 @@ const InputNumberContainer: React.FC<Props> = props => {
         {...props}
         hasRightAddon
         hasSeparatedRightAddon
+        type="number"
       />
       <InputAddon {...addonProps}>
         <Div alignItems="flex-end" onClick={() => toggleValue(true)}>
@@ -88,8 +89,8 @@ const InputNumberContainer: React.FC<Props> = props => {
           <CaretDown />
         </Div>
       </InputAddon>
-    </InputNumberContainerElement>
+    </InputNumberTemplateElement>
   )
 }
 
-export default InputNumberContainer
+export default InputNumberTemplate

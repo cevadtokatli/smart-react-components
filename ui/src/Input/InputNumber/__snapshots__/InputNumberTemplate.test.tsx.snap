@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<InputNumberContainer /> should render component 1`] = `
+exports[`<InputNumberTemplate /> should render component 1`] = `
 <DocumentFragment>
   .c5 {
   -webkit-align-items: flex-end;
@@ -171,6 +171,7 @@ exports[`<InputNumberContainer /> should render component 1`] = `
     <input
       class="c1  c2"
       shape="rectangle"
+      type="number"
       value="1"
     />
     <div
