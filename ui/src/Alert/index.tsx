@@ -4,7 +4,6 @@ import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-compone
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { ContentElement, JSXElementProps, PaletteProp, Partial, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
-import { extractIconsOutOfChildren } from '../util/props'
 import AlertElement, { Content } from './AlertElement'
 
 export interface Props extends
@@ -20,21 +19,55 @@ export interface Props extends
 }
 
 const Alert: React.FC<Props> = props => {
-  const getContent = () => extractIconsOutOfChildren(props.children, Content, {
-    alertPalette: props.palette,
-    isSoft: props.isSoft,
-    size: props.size,
-    sizeSm: props.sizeSm,
-    sizeMd: props.sizeMd,
-    sizeLg: props.sizeLg,
-    sizeXl: props.sizeXl,
-  })
+  const getContent = () => {
+    const children = !Array.isArray(props.children) ? [props.children] : props.children
+    const content = []
+    let iconLeft = null
+    let iconRight = null
+
+    for (let i = 0; i < children.length; i++) {
+      const item = children[i] as JSX.Element
+      if (item.type?.displayName === 'SRCAlertIcon') {
+        const iconEl = React.cloneElement(item, {
+          alertPalette: props.palette,
+          isSoft: props.isSoft,
+          size: props.size,
+          sizeSm: props.sizeSm,
+          sizeMd: props.sizeMd,
+          sizeLg: props.sizeLg,
+          sizeXl: props.sizeXl,
+        })
+
+        if (i === 0) {
+          iconLeft = iconEl
+        } else if (i === children.length - 1) {
+          iconRight = iconEl
+        }
+
+        continue
+      }
+
+      content.push(typeof children[i] === 'string' ? children[i] : React.cloneElement(item, { key: item.key ?? i }))
+    }
+
+    return {
+      children: (
+        <>
+          { iconLeft && iconLeft }
+          <Content>{content}</Content>
+          { iconRight && iconRight }
+        </>
+      ),
+      hasIconLeft: !!iconLeft,
+      hasIconRight: !!iconRight,
+    }
+  }
 
   const [{ children, hasIconLeft, hasIconRight }, setContent] = React.useState(() => getContent())
 
   useChangeEffect(() => {
     setContent(getContent())
-  }, [props.children, props.isSoft, props.palette, props.size, props.sizeSm, props.sizeMd, props.sizeLg, props.sizeXl])
+  }, [props.children])
 
   return (
     <AlertElement

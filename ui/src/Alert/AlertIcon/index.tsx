@@ -32,6 +32,6 @@ const AlertIcon: React.FC<Props> = (props: Props & PrivateProps) => (
   >{props.children}</AlertIconElement>
 )
 
-AlertIcon.displayName = 'SRCIcon'
+AlertIcon.displayName = 'SRCAlertIcon'
 
 export default AlertIcon
