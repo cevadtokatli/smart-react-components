@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Option /> should be active 1`] = `
+<DocumentFragment>
+  .c0 {
+  border-radius: .2rem;
+  cursor: default;
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
+  background: #0553AC;
+  color: #fff;
+}
+
+<div
+    class=" c0"
+  >
+    Content
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Option /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  border-radius: .2rem;
+  cursor: default;
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
+}
+
+<div
+    class=" c0"
+  >
+    Content
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Option /> should render waveEffect 1`] = `
+<DocumentFragment>
+  .c0 {
+  overflow: hidden;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c1 {
+  border-radius: .2rem;
+  cursor: default;
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
+}
+
+<div
+    class="c0 c1"
+    overflow="hidden"
+  >
+    Content
+  </div>
+</DocumentFragment>
+`;

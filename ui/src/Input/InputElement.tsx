@@ -12,7 +12,7 @@ export const InputPlaceholder = styled(Div).attrs<{ children?: string }>(({ chil
   ...(!children && { children: <>&nbsp;</>, userSelect: 'none' }),
 }))``
 
-interface Props extends
+export interface Props extends
   StyledProps,
   Partial<ResponsiveProp<'inputSize', SizeProp>> {
   hasBorder?: boolean
