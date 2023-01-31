@@ -5,12 +5,13 @@ import DropdownItem from '@smart-react-components/ui/Dropdown/DropdownItem'
 import DropdownCategory from '@smart-react-components/ui/Dropdown/DropdownCategory'
 import { DropdownArrowIcon } from '@smart-react-components/ui'
 
-export const children = [
-  <DropdownCategory key="cat">Category</DropdownCategory>,
-  <DropdownItem key="item-1">Item 1</DropdownItem>,
-  <DropdownItem key="item-2">Item 2</DropdownItem>,
-  <DropdownItem key="item-3">Item 3</DropdownItem>,
-]
+export const children = (
+  <DropdownCategory label="Category">
+    <DropdownItem key="item-1">Item 1</DropdownItem>
+    <DropdownItem key="item-2">Item 2</DropdownItem>
+    <DropdownItem key="item-3">Item 3</DropdownItem>
+  </DropdownCategory>
+)
 
 export const Palette = () => (
   <>
@@ -49,39 +50,39 @@ export const Palette = () => (
   </>
 )
 
-export const Filled = () => (
+export const Outline = () => (
   <>
     <Dropdown>
       <button>Primary</button>
-      <DropdownList isFilled>{children}</DropdownList>
+      <DropdownList isOutline={false}>{children}</DropdownList>
     </Dropdown>
     <Dropdown>
       <button>Secondary</button>
-      <DropdownList palette="secondary" isFilled>{children}</DropdownList>
+      <DropdownList palette="secondary" isOutline={false}>{children}</DropdownList>
     </Dropdown>
     <Dropdown>
       <button>Success</button>
-      <DropdownList palette="success" isFilled>{children}</DropdownList>
+      <DropdownList palette="success" isOutline={false}>{children}</DropdownList>
     </Dropdown>
     <Dropdown>
       <button>Danger</button>
-      <DropdownList palette="danger" isFilled>{children}</DropdownList>
+      <DropdownList palette="danger" isOutline={false}>{children}</DropdownList>
     </Dropdown>
     <Dropdown>
       <button>Warning</button>
-      <DropdownList palette="warning" isFilled>{children}</DropdownList>
+      <DropdownList palette="warning" isOutline={false}>{children}</DropdownList>
     </Dropdown>
     <Dropdown>
       <button>Info</button>
-      <DropdownList palette="info" isFilled>{children}</DropdownList>
+      <DropdownList palette="info" isOutline={false}>{children}</DropdownList>
     </Dropdown>
     <Dropdown>
       <button>Dynamic</button>
-      <DropdownList palette="dynamic" isFilled>{children}</DropdownList>
+      <DropdownList palette="dynamic" isOutline={false}>{children}</DropdownList>
     </Dropdown>
     <Dropdown>
       <button>!Dynamic</button>
-      <DropdownList palette="!dynamic" isFilled>{children}</DropdownList>
+      <DropdownList palette="!dynamic" isOutline={false}>{children}</DropdownList>
     </Dropdown>
   </>
 )
@@ -123,39 +124,39 @@ export const Soft = () => (
   </>
 )
 
-export const SoftFilled = () => (
+export const SoftOutline = () => (
   <>
     <Dropdown>
       <button>Primary</button>
-      <DropdownList isFilled isSoft>{children}</DropdownList>
+      <DropdownList isOutline={false} isSoft>{children}</DropdownList>
     </Dropdown>
     <Dropdown>
       <button>Secondary</button>
-      <DropdownList palette="secondary" isFilled isSoft>{children}</DropdownList>
+      <DropdownList palette="secondary" isOutline={false} isSoft>{children}</DropdownList>
     </Dropdown>
     <Dropdown>
       <button>Success</button>
-      <DropdownList palette="success" isFilled isSoft>{children}</DropdownList>
+      <DropdownList palette="success" isOutline={false} isSoft>{children}</DropdownList>
     </Dropdown>
     <Dropdown>
       <button>Danger</button>
-      <DropdownList palette="danger" isFilled isSoft>{children}</DropdownList>
+      <DropdownList palette="danger" isOutline={false} isSoft>{children}</DropdownList>
     </Dropdown>
     <Dropdown>
       <button>Warning</button>
-      <DropdownList palette="warning" isFilled isSoft>{children}</DropdownList>
+      <DropdownList palette="warning" isOutline={false} isSoft>{children}</DropdownList>
     </Dropdown>
     <Dropdown>
       <button>Info</button>
-      <DropdownList palette="info" isFilled isSoft>{children}</DropdownList>
+      <DropdownList palette="info" isOutline={false} isSoft>{children}</DropdownList>
     </Dropdown>
     <Dropdown>
       <button>Dynamic</button>
-      <DropdownList palette="dynamic" isFilled isSoft>{children}</DropdownList>
+      <DropdownList palette="dynamic" isOutline={false} isSoft>{children}</DropdownList>
     </Dropdown>
     <Dropdown>
       <button>!Dynamic</button>
-      <DropdownList palette="!dynamic" isFilled isSoft>{children}</DropdownList>
+      <DropdownList palette="!dynamic" isOutline={false} isSoft>{children}</DropdownList>
     </Dropdown>
   </>
 )
