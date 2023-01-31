@@ -91,6 +91,7 @@ const Select = React.forwardRef<HTMLElement, Props>((props, forwardRef) => {
         >
           <HiddenInput
             onChange={() => {}}
+            ref={forwardRef}
             value={getInputValue()}
             {...(props.isDisabled && { disabled: true })}
             {...(props.isRequired && { required: true })}
