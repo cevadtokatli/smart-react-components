@@ -9,7 +9,7 @@ export interface Props {
   onClick?: (e: React.MouseEvent<HTMLElement>) => void | Promise<void>
 }
 
-interface PrivateProps {
+export interface PrivateProps {
   hasHover: boolean
   hasWaveEffect: boolean
   isOutline: boolean

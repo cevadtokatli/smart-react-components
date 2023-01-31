@@ -3,7 +3,7 @@ import React from 'react'
 import DropdownListElement from './DropdownListElement'
 
 export interface Props extends Partial<ResponsiveProp<'size', SizeProp>> {
-  children: JSX.Element[]
+  children: JSX.Element | JSX.Element[]
   hasHover?: boolean
   hasWaveEffect?: boolean
   isOutline?: boolean
@@ -27,7 +27,7 @@ const Dropdown: React.FC<Props> = ({ children, hasHover = true, hasWaveEffect = 
     isSoft={isSoft}
     palette={palette}
   >
-    { children.map((item, index) => React.cloneElement(item, { key: item.key ?? index, hasHover, hasWaveEffect, isOutline, isSoft, palette, setStatus, waveEffectPalette })) }
+    { (Array.isArray(children) ? children : [children]).map((item, idx) => React.cloneElement(item, { key: item.key ?? idx, hasHover, hasWaveEffect, isOutline, isSoft, palette, setStatus, waveEffectPalette })) }
   </DropdownListElement>
 )
 

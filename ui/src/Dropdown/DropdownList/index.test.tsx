@@ -9,10 +9,11 @@ describe('<DropdownList />', () => {
   it('should render component', () => {
     const { asFragment } = render(wrapTheme(
       <DropdownList>
-        <DropdownCategory key="cat">Category</DropdownCategory>
-        <DropdownItem key="item-1">Item 1</DropdownItem>
-        <DropdownItem key="item-2">Item 2</DropdownItem>
-        <DropdownItem key="item-3">Item 3</DropdownItem>
+        <DropdownCategory label="Category">
+          <DropdownItem key="item-1">Item 1</DropdownItem>
+          <DropdownItem key="item-2">Item 2</DropdownItem>
+          <DropdownItem key="item-3">Item 3</DropdownItem>
+        </DropdownCategory>
       </DropdownList>
     ))
     expect(asFragment()).toMatchSnapshot()

@@ -26,7 +26,7 @@ describe('<DropdownListElement />', () => {
   })
 
   it('should render component with soft colors', () => {
-    const { asFragment } = render(wrapTheme(<DropdownListElement {...props}  isSoft />))
+    const { asFragment } = render(wrapTheme(<DropdownListElement {...props} isSoft />))
     expect(asFragment()).toMatchSnapshot()
   })
 

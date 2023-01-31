@@ -12,10 +12,11 @@ describe('<Dropdown />', () => {
       <Dropdown status>
         <button>Button</button>
         <DropdownList>
-          <DropdownCategory>Category</DropdownCategory>
-          <DropdownItem>Item 1</DropdownItem>
-          <DropdownItem>Item 2</DropdownItem>
-          <DropdownItem>Item 3</DropdownItem>
+          <DropdownCategory label="Category">
+            <DropdownItem>Item 1</DropdownItem>
+            <DropdownItem>Item 2</DropdownItem>
+            <DropdownItem>Item 3</DropdownItem>
+          </DropdownCategory>
         </DropdownList>
       </Dropdown>
     ))
