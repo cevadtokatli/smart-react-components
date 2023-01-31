@@ -16,7 +16,7 @@ interface PrivateProps {
   setStatus: SetState<boolean>
 }
 
-const Dropdown: React.FC<Props> = ({ children, hasHover = true, hasWaveEffect = true, isOutline = true, isSoft, palette = 'primary', setStatus, size = 'medium', sizeSm, sizeMd, sizeLg, sizeXl, waveEffectPalette = 'light' }: Props & PrivateProps) => (
+const DropdownList: React.FC<Props> = ({ children, hasHover = true, hasWaveEffect = true, isOutline = true, isSoft, palette = 'primary', setStatus, size = 'medium', sizeSm, sizeMd, sizeLg, sizeXl, waveEffectPalette = 'light' }: Props & PrivateProps) => (
   <DropdownListElement
     dropdownListSize={size}
     dropdownListSizeSm={sizeSm}
@@ -31,4 +31,4 @@ const Dropdown: React.FC<Props> = ({ children, hasHover = true, hasWaveEffect = 
   </DropdownListElement>
 )
 
-export default Dropdown
+export default DropdownList
