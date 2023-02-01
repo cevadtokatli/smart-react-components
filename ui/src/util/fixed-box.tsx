@@ -30,7 +30,7 @@ export const calculatePosition = (
 
   boxEl.removeAttribute('style')
 
-  let width = boxEl.offsetWidth
+  let width = Math.max(boxEl.offsetWidth, position & (Position.TOP | Position.BOTTOM) ? triggerEl.offsetWidth : 0)
 
   if (minWidth && minWidth > width) {
     width = minWidth

@@ -3,7 +3,7 @@ import clickEvents, { ClickEvents } from '@smart-react-components/core/element-p
 import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
 import mouseClickEvents from '@smart-react-components/core/element-props/mouse-click-events'
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
-import { ContentElement, PaletteProp, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
+import { ContentElement, JSXElementProps, PaletteProp, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import { OrderPosition, Position } from '../types'
 import BadgeElement, { Content } from './BadgeElement'
@@ -13,6 +13,7 @@ export interface Props extends
   ClickEvents,
   IntrinsicStyledProps {
   children: ContentElement | ContentElement[]
+  elementProps?: JSXElementProps
   hasSpace?: boolean
   isAbsolute?: boolean
   isFixedSize?: boolean
@@ -93,6 +94,7 @@ const Badge: React.FC<Props> = props => {
       palette={props.palette}
       shape={props.shape}
       {...extractElementProps(props, [clickEvents, intrinsicStyledProps])}
+      {...props.elementProps}
     >
       {children}
     </BadgeElement>
@@ -100,6 +102,7 @@ const Badge: React.FC<Props> = props => {
 }
 
 Badge.defaultProps = {
+  elementProps: {},
   offset: 10,
   palette: 'primary',
   position: Position.RIGHT,

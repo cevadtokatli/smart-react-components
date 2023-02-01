@@ -44,6 +44,18 @@ exports[`<InputFile /> should render component 1`] = `
   background: #fff;
   border-color: #dbdbdb;
   color: #323a46;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   position: relative;
 }
 

@@ -183,6 +183,9 @@ export default styled(Input).attrs<Props>(({ hasLeftAddon, hasRightAddon, hasSep
 
   ${!isInput
     ? `
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
       position: relative;
     `
     : ''

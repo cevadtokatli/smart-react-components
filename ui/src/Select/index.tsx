@@ -1,36 +1,17 @@
 import Div from '@smart-react-components/core/Element/Div'
-import { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
-import { ContentElement, PaletteProp, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
+import extractElementProps from '@smart-react-components/core/element-props'
+import intrinsicStyledProps from '@smart-react-components/core/element-props/intrinsic-styled-props'
 import React from 'react'
 import FormBlockLabel from '../components/FormBlockLabel'
 import useInputAddons from '../hooks/useInputAddons'
-import { FormValue } from '../types'
 import SelectElement from './SelectElement'
 import HiddenInput from '../components/HiddenInput'
+import { GenericProps } from '../types/form'
+import { getInputValue } from '../util/form'
 
-export interface Props extends
-  Partial<ResponsiveProp<'size', SizeProp>>,
-  IntrinsicStyledProps {
-  active: FormValue | FormValue[]
-  children: JSX.Element | JSX.Element[]
-  hasBorder?: boolean
-  hasHover?: boolean
-  hasWaveEffect?: boolean
-  isBlock?: boolean
-  isDisabled?: boolean
-  isRequired?: boolean
-  isOutline?: boolean
-  isSoft?: boolean
-  label?: ContentElement
-  leftAddon?: ContentElement
-  palette?: PaletteProp
-  rightAddon?: ContentElement
-  shape?: ShapeProp
-  setActive: SetState<FormValue | FormValue[]>
-  waveEffectPalette?: PaletteProp
-}
+export type Props = GenericProps
 
-const Select = React.forwardRef<HTMLElement, Props>((props, forwardRef) => {
+const Select = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
   const { leftAddon, rightAddon } = useInputAddons({
     hasBorder: props.hasBorder,
     isDisabled: props.isDisabled,
@@ -48,15 +29,10 @@ const Select = React.forwardRef<HTMLElement, Props>((props, forwardRef) => {
     sizeXl: props.sizeXl,
   })
 
-  const getInputValue = () => (
-    (!Array.isArray(props.active) && typeof props.active !== 'undefined' && props.active !== null)
-    || (Array.isArray(props.active) && props.active.length > 0)
-  )
-    ? String(props.active)
-    : ''
-
   return (
     <FormBlockLabel
+      {...extractElementProps(props, [intrinsicStyledProps])}
+      as="div"
       formSize={props.size}
       formSizeSm={props.sizeSm}
       formSizeMd={props.sizeMd}
@@ -92,7 +68,7 @@ const Select = React.forwardRef<HTMLElement, Props>((props, forwardRef) => {
           <HiddenInput
             onChange={() => {}}
             ref={forwardRef}
-            value={getInputValue()}
+            value={getInputValue(props.active)}
             {...(props.isDisabled && { disabled: true })}
             {...(props.isRequired && { required: true })}
           />
