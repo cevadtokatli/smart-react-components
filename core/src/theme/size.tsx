@@ -147,6 +147,11 @@ const sizeAttributes: SizeAttributes = {
       },
     },
   },
+  icon: {
+    small: '.85rem',
+    medium: '1rem',
+    large: '1.15rem',
+  },
   input: {
     small: {
       fontSize: '.875rem',

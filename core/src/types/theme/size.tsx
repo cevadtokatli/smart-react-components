@@ -30,6 +30,7 @@ interface DefaultSizeAttributes {
       margin: Coordinator<string>
     }>
   }
+  icon: Size<string>
   input: Size<{
     fontSize: string
     padding: Coordinator<string>
