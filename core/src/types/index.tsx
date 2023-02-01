@@ -13,6 +13,8 @@ export interface JSXElementProps {
   [key: string]: any
 }
 
+export type Nullable<T> = T | null
+
 export interface NestedObject<T> {
   [key: string]: T | NestedObject<T>
 }
