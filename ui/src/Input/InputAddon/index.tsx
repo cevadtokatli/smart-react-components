@@ -45,6 +45,6 @@ const InputAddon: React.FC<Props> = (props: Props & PrivateProps) => (
   </InputAddonElement>
 )
 
-InputAddon.displayName = 'SRCInputAddon'
+InputAddon.displayName = 'SRCAddon'
 
 export default InputAddon

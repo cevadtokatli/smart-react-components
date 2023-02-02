@@ -13,12 +13,13 @@ import HiddenInput from '../../components/HiddenInput'
 import Dropdown from '../../Dropdown'
 import DropdownArrowIcon from '../../Dropdown/DropdownArrowIcon'
 import DropdownListElement from '../../Dropdown/DropdownList/DropdownListElement'
-import useInputAddons from '../../hooks/useInputAddons'
+import useAddons from '../../hooks/useAddons'
 import CloseIcon from '../../icons/Close'
 import InputElement, { InputPlaceholder } from '../../Input/InputElement'
 import { FormValue } from '../../types'
 import { getInputValue } from '../../util/form'
 import { getIconSizeProps } from '../../util/props'
+import InputAddon from '../SelectAddon'
 
 export interface Props extends GenericProps {
   placeholder?: string
@@ -115,21 +116,24 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
     formEl.current.dispatchEvent(event)
   }, [content])
 
-  const { leftAddon, rightAddon } = useInputAddons({
-    hasBorder: props.hasBorder,
-    isDisabled: props.isDisabled,
-    isFocused: false,
-    isOutline: props.isOutline,
-    isSoft: props.isSoft,
+  const { leftAddon, rightAddon } = useAddons({
+    Component: InputAddon,
     leftAddon: props.leftAddon,
-    palette: props.palette,
     rightAddon: props.rightAddon,
-    shape: props.shape,
-    size: props.size,
-    sizeSm: props.sizeSm,
-    sizeMd: props.sizeMd,
-    sizeLg: props.sizeLg,
-    sizeXl: props.sizeXl,
+    props: {
+      hasBorder: props.hasBorder,
+      isDisabled: props.isDisabled,
+      isFocused: false,
+      isOutline: props.isOutline,
+      isSoft: props.isSoft,
+      palette: props.palette,
+      shape: props.shape,
+      size: props.size,
+      sizeSm: props.sizeSm,
+      sizeMd: props.sizeMd,
+      sizeLg: props.sizeLg,
+      sizeXl: props.sizeXl,
+    },
   })
 
   const handleOptionClick = active => {

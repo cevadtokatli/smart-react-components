@@ -7,9 +7,10 @@ import keyboardEvents, { KeyboardEvents } from '@smart-react-components/core/ele
 import { ContentElement, PaletteProp, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import FormBlockLabel from '../../components/FormBlockLabel'
-import useInputAddons from '../../hooks/useInputAddons'
+import useAddons from '../../hooks/useAddons'
 import useInputMethods from '../../hooks/useInputMethods'
 import InputNumberTemplate from './InputNumberTemplate'
+import InputAddon from '../InputAddon'
 
 export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,
@@ -75,21 +76,24 @@ const InputNumber = React.forwardRef<HTMLInputElement, Props>((props, forwardRef
     setValue: value => props.setValue?.(applyNumberFormat(value)),
   })
 
-  const { leftAddon, rightAddon } = useInputAddons({
-    hasBorder: props.hasBorder,
-    isDisabled: props.isDisabled,
-    isFocused,
-    isOutline: props.isOutline,
-    isSoft: props.isSoft,
+  const { leftAddon, rightAddon } = useAddons({
+    Component: InputAddon,
     leftAddon: props.leftAddon,
-    palette: props.palette,
     rightAddon: props.rightAddon,
-    shape: props.shape,
-    size: props.size,
-    sizeSm: props.sizeSm,
-    sizeMd: props.sizeMd,
-    sizeLg: props.sizeLg,
-    sizeXl: props.sizeXl,
+    props: {
+      hasBorder: props.hasBorder,
+      isDisabled: props.isDisabled,
+      isFocused,
+      isOutline: props.isOutline,
+      isSoft: props.isSoft,
+      palette: props.palette,
+      shape: props.shape,
+      size: props.size,
+      sizeSm: props.sizeSm,
+      sizeMd: props.sizeMd,
+      sizeLg: props.sizeLg,
+      sizeXl: props.sizeXl,
+    },
   })
 
   return (

@@ -1,28 +1,23 @@
 import { render } from '@testing-library/react'
 import React from 'react'
-import useInputAddons from './useInputAddons'
+import useAddons from './useAddons'
 
-describe('useInputAddons', () => {
+describe('useAddons', () => {
   let Component
   let hook
   let props
 
   beforeAll(() => {
     Component = props => {
-      hook = useInputAddons(props)
+      hook = useAddons(props)
       return null
     }
 
     props = {
-      hasBorder: true,
-      isDisabled: false,
-      isFocused: false,
-      isOutline: true,
-      isSoft: false,
+      Component: () => <div />,
       leftAddon: null,
-      palette: 'primary',
       rightAddon: null,
-      shape: 'rectangle',
+      props: {},
     }
   })
 

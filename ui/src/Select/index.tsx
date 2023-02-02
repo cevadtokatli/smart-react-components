@@ -3,30 +3,34 @@ import extractElementProps from '@smart-react-components/core/element-props'
 import intrinsicStyledProps from '@smart-react-components/core/element-props/intrinsic-styled-props'
 import React from 'react'
 import FormBlockLabel from '../components/FormBlockLabel'
-import useInputAddons from '../hooks/useInputAddons'
+import useAddons from '../hooks/useAddons'
 import SelectElement from './SelectElement'
 import HiddenInput from '../components/HiddenInput'
 import { GenericProps } from '../types/form'
 import { getInputValue } from '../util/form'
+import InputAddon from './SelectAddon'
 
 export type Props = GenericProps
 
 const Select = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
-  const { leftAddon, rightAddon } = useInputAddons({
-    hasBorder: props.hasBorder,
-    isDisabled: props.isDisabled,
-    isFocused: false,
-    isOutline: props.isOutline,
-    isSoft: props.isSoft,
+  const { leftAddon, rightAddon } = useAddons({
+    Component: InputAddon,
     leftAddon: props.leftAddon,
-    palette: props.palette,
     rightAddon: props.rightAddon,
-    shape: props.shape,
-    size: props.size,
-    sizeSm: props.sizeSm,
-    sizeMd: props.sizeMd,
-    sizeLg: props.sizeLg,
-    sizeXl: props.sizeXl,
+    props: {
+      hasBorder: props.hasBorder,
+      isDisabled: props.isDisabled,
+      isFocused: false,
+      isOutline: props.isOutline,
+      isSoft: props.isSoft,
+      palette: props.palette,
+      shape: props.shape,
+      size: props.size,
+      sizeSm: props.sizeSm,
+      sizeMd: props.sizeMd,
+      sizeLg: props.sizeLg,
+      sizeXl: props.sizeXl,
+    },
   })
 
   return (

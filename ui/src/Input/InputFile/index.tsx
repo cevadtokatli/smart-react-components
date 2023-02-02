@@ -4,10 +4,11 @@ import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-compone
 import { ContentElement, PaletteProp, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import FormBlockLabel from '../../components/FormBlockLabel'
-import useInputAddons from '../../hooks/useInputAddons'
+import useAddons from '../../hooks/useAddons'
 import InputFileTemplate from './InputFileTemplate'
 import HiddenInput from '../../components/HiddenInput'
 import useInputMethods from '../../hooks/useInputMethods'
+import InputAddon from '../InputAddon'
 
 export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,
@@ -38,21 +39,24 @@ const InputFile = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
     isReadOnly: false,
   })
 
-  const { leftAddon, rightAddon } = useInputAddons({
-    hasBorder: props.hasBorder,
-    isDisabled: props.isDisabled,
-    isFocused,
-    isOutline: props.isOutline,
-    isSoft: props.isSoft,
+  const { leftAddon, rightAddon } = useAddons({
+    Component: InputAddon,
     leftAddon: props.leftAddon,
-    palette: props.palette,
     rightAddon: props.rightAddon,
-    shape: props.shape,
-    size: props.size,
-    sizeSm: props.sizeSm,
-    sizeMd: props.sizeMd,
-    sizeLg: props.sizeLg,
-    sizeXl: props.sizeXl,
+    props: {
+      hasBorder: props.hasBorder,
+      isDisabled: props.isDisabled,
+      isFocused,
+      isOutline: props.isOutline,
+      isSoft: props.isSoft,
+      palette: props.palette,
+      shape: props.shape,
+      size: props.size,
+      sizeSm: props.sizeSm,
+      sizeMd: props.sizeMd,
+      sizeLg: props.sizeLg,
+      sizeXl: props.sizeXl,
+    },
   })
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
