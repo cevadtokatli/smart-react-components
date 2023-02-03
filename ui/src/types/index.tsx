@@ -1,11 +1,5 @@
 import { Value } from '@smart-react-components/core/types'
 
-export enum ButtonType {
-  BUTTON = 'button',
-  RESET = 'reset',
-  SUBMIT = 'submit',
-}
-
 export type FormValue = Value | boolean
 
 export enum InputType {

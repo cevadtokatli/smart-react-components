@@ -1,45 +1,30 @@
 import Div from '@smart-react-components/core/Element/Div'
 import extractElementProps from '@smart-react-components/core/element-props'
 import clickEvents, { ClickEvents } from '@smart-react-components/core/element-props/click-events'
-import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
-import { ContentElement, Nullable, PaletteProp, Partial, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
+import intrinsicStyledProps from '@smart-react-components/core/element-props/intrinsic-styled-props'
+import { Nullable } from '@smart-react-components/core/types'
 import React from 'react'
-import { StyledComponent } from 'styled-components'
+import { StyledComponent, ThemeContext } from 'styled-components'
 import ButtonAddon from './ButtonAddon'
 import ButtonElement from '../components/Button'
 import ButtonContent from '../components/Button/ButtonContent'
 import useAddons from '../hooks/useAddons'
-import { ButtonType } from '../types'
 import { getWaveEffectPalette } from '../util/wave-effect'
 import WaveEffect from '../WaveEffect'
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import ButtonLoading from './ButtonLoading'
+import { ButtonGenericProps, ButtonType } from '../types/button'
 
 export interface Props extends
-  Partial<ResponsiveProp<'size', SizeProp>>,
-  IntrinsicStyledProps,
+  ButtonGenericProps,
   ClickEvents {
-  as?: StyledComponent<any, any>
-  children: ContentElement | ContentElement[]
-  hasHover?: boolean
-  hasWaveEffect?: boolean
-  isBlock?: boolean
-  isDisabled?: boolean
-  isFixedSize?: boolean
-  isLink?: boolean
-  isLoading?: boolean
-  isSoft?: boolean
-  isOutline?: boolean
-  leftAddon?: JSX.Element
-  loading?: JSX.Element
-  palette?: PaletteProp
-  rightAddon?: JSX.Element
-  shape?: ShapeProp
+  as?: string | StyledComponent<any, any>
   type?: ButtonType
-  waveEffectPalette?: PaletteProp
 }
 
 const Button = React.forwardRef<HTMLElement, Props>((props, forwardRef) => {
+  const theme = React.useContext(ThemeContext)
+
   const { leftAddon, rightAddon } = useAddons({
     Component: ButtonAddon,
     leftAddon: props.leftAddon,
@@ -89,6 +74,7 @@ const Button = React.forwardRef<HTMLElement, Props>((props, forwardRef) => {
 
   let Element = (
     <ButtonElement
+      {...props.elementProps}
       {...((!props.isDisabled && !props.isLoading) && extractElementProps(props, [clickEvents]))}
       {...(!hasButtonContainer && extractElementProps(props, [intrinsicStyledProps]))}
       {...(props.as && { as: props.as })}
@@ -122,7 +108,7 @@ const Button = React.forwardRef<HTMLElement, Props>((props, forwardRef) => {
   )
 
   if (props.hasWaveEffect) {
-    Element = <WaveEffect palette={getWaveEffectPalette(props.waveEffectPalette, props.palette, props.isSoft || props.isLink)}>{Element}</WaveEffect>
+    Element = <WaveEffect palette={getWaveEffectPalette(props.waveEffectPalette, props.palette, props.isSoft, props.isLink, theme.$.vars.isDarkMode)}>{Element}</WaveEffect>
   }
 
   if (hasButtonContainer) {
@@ -142,6 +128,7 @@ const Button = React.forwardRef<HTMLElement, Props>((props, forwardRef) => {
 })
 
 Button.defaultProps = {
+  elementProps: {},
   hasHover: true,
   hasWaveEffect: true,
   palette: 'primary',

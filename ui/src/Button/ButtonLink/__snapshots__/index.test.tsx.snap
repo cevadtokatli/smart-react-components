@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonLink /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c0 .c2 {
+  font-size: .875rem;
+  padding: .45rem .9rem;
+}
+
+.c0 .c2 > :not(:last-child) {
+  margin-right: 0.225rem;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  box-sizing: border-box;
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: currentcolor;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+.c1 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  position: relative;
+  -webkit-transition: box-shadow 300ms 0s ease-in-out;
+  transition: box-shadow 300ms 0s ease-in-out;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c1,
+.c1 .c2 {
+  border-radius: .125rem;
+}
+
+.c1:active {
+  outline: 0;
+}
+
+.c1 .c2 {
+  border-color: transparent;
+  color: #0665d0;
+  fill: #0665d0;
+}
+
+.c1:hover .c2 {
+  color: #054D9F;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus {
+  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
+}
+
+<a
+    class="c0 c1"
+    href="/link"
+    overflow="hidden"
+    shape="rectangle"
+    text-decoration="none"
+  >
+    <span
+      class="c2 c3"
+    >
+      Link
+    </span>
+  </a>
+</DocumentFragment>
+`;
