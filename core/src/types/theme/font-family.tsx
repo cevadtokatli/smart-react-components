@@ -7,6 +7,7 @@ interface DefaultFontFamilyAttributes {
   alert: string
   badge: string
   breadcrumb: string
+  button: string
   form: string
   input: string
   pagination: string

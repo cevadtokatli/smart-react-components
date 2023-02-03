@@ -14,6 +14,12 @@ interface DefaultSizeAttributes {
     margin: Coordinator<string>
     padding: Coordinator<string>
   }>
+  button: Size<{
+    fixedSize: string
+    fontSize: string
+    iconSize: string
+    padding: Coordinator<string>
+  }>
   checkbox: Size<string>
   dropdown: Size<{
     fontSize: string

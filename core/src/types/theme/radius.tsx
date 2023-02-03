@@ -5,6 +5,7 @@ interface DefaultRadiusAttributes {
   alert: Shape<string>
   badge: Shape<string>
   breadcrumb: Shape<string>
+  button: Shape<string>
   dropdown: string
   checkbox: Shape<string>
   input: Shape<string>

@@ -6,6 +6,7 @@ const fontFamilyAttributes: FontFamilyAttributes = {
   alert: 'inherit',
   badge: 'inherit',
   breadcrumb: 'inherit',
+  button: 'inherit',
   dropdown: 'inherit',
   form: 'inherit',
   input: 'inherit',

@@ -68,6 +68,35 @@ const sizeAttributes: SizeAttributes = {
       },
     },
   },
+  button: {
+    small: {
+      fixedSize: '28px',
+      fontSize: '.75rem',
+      iconSize: '.75rem',
+      padding: {
+        x: '.8rem',
+        y: '.28rem',
+      },
+    },
+    medium: {
+      fixedSize: '32px',
+      fontSize: '.875rem',
+      iconSize: '.875rem',
+      padding: {
+        x: '.9rem',
+        y: '.45rem',
+      },
+    },
+    large: {
+      fixedSize: '36px',
+      fontSize: '1rem',
+      iconSize: '1rem',
+      padding: {
+        x: '1rem',
+        y: '.5rem',
+      },
+    },
+  },
   checkbox: {
     small: '12px',
     medium: '16px',
