@@ -2,6 +2,7 @@ import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { ContentElement, SetState } from '@smart-react-components/core/types'
 import React from 'react'
 import Button from '../'
+import { DropdownArrowIcon } from '../..'
 import Dropdown from '../../Dropdown'
 import DropdownListElement from '../../Dropdown/DropdownList/DropdownListElement'
 import useSelectBoxItemList from '../../hooks/useSelectBoxItemList'
@@ -78,7 +79,8 @@ const ButtonSelect = React.forwardRef<HTMLDivElement, Props>((props, forwardRef)
         as="div"
         ref={forwardRef ?? ref}
       >
-        {content}
+        <span>{content}</span>
+        <DropdownArrowIcon />
       </Button>
       <DropdownListElement
         dropdownListSize={props.size}
