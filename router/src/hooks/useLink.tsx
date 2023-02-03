@@ -6,7 +6,7 @@ import { Path, URL } from '../types'
 import { generateMatch } from '../util'
 
 export interface LinkProps {
-  children: ContentElement | ((props: { isActivating: boolean, isActive: boolean }) => ContentElement)
+  children: ContentElement | ContentElement[] | ((props: { isActivating: boolean, isActive: boolean }) => ContentElement | ContentElement[])
   elementProps?: JSXElementProps
   isDisabled?: boolean
   isExact?: boolean
@@ -15,16 +15,16 @@ export interface LinkProps {
 }
 
 interface Props {
-  children: ContentElement | ((props: { isActivating: boolean, isActive: boolean }) => ContentElement)
+  children: ContentElement | ContentElement[] | ((props: { isActivating: boolean, isActive: boolean }) => ContentElement | ContentElement[])
   isDisabled: boolean
-  isExact: boolean
-  onClick: (e: MouseEvent<HTMLElement>) => void | null
-  path: Path | null
+  isExact?: boolean
+  onClick?: (e: MouseEvent<HTMLElement>) => void
+  path?: Path
   to: string
 }
 
 interface Return {
-  children: ContentElement
+  children: ContentElement | ContentElement[]
   handleOnClick: (e: MouseEvent<HTMLAnchorElement>) => void
   isActivating: boolean
   isActive: boolean
