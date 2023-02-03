@@ -23,10 +23,11 @@ const useAddons = ({ Component, leftAddon, rightAddon, props }: Props): Return =
       return null
     }
 
-    if (item?.displayName === 'SRCAddon') {
+    if (item?.type?.displayName === 'SRCAddon') {
       return React.cloneElement(item, {
         ...props,
         ...(item as JSX.Element).props,
+        position,
       })
     }
 
