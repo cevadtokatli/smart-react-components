@@ -2,7 +2,7 @@ import Div from '@smart-react-components/core/Element/Div'
 import extractElementProps from '@smart-react-components/core/element-props'
 import clickEvents, { ClickEvents } from '@smart-react-components/core/element-props/click-events'
 import intrinsicStyledProps from '@smart-react-components/core/element-props/intrinsic-styled-props'
-import { Nullable } from '@smart-react-components/core/types'
+import { ContentElement, Nullable } from '@smart-react-components/core/types'
 import React from 'react'
 import { StyledComponent, ThemeContext } from 'styled-components'
 import ButtonAddon from './ButtonAddon'
@@ -16,7 +16,7 @@ import ButtonLoading from './ButtonLoading'
 import { ButtonGenericProps, ButtonType } from '../types/button'
 
 export interface Props extends
-  ButtonGenericProps,
+  ButtonGenericProps<ContentElement>,
   ClickEvents {
   as?: string | StyledComponent<any, any>
   type?: ButtonType

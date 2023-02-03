@@ -20,6 +20,7 @@ import { FormValue } from '../../types'
 import { getInputValue } from '../../util/form'
 import { getIconSizeProps } from '../../util/props'
 import InputAddon from '../SelectAddon'
+import useSelectBoxItemList from '../../hooks/useSelectBoxItemList'
 
 export interface Props extends GenericProps {
   placeholder?: string
@@ -28,34 +29,7 @@ export interface Props extends GenericProps {
 const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
   const formEl = React.useRef<HTMLDivElement>(null)
 
-  const getItemList = () => {
-    const arr = []
-
-    const collectItems = (children: JSX.Element | JSX.Element[]) => {
-      (!Array.isArray(children) ? [children] : children).forEach(item => {
-        if (typeof item !== 'undefined') {
-          if (typeof item.props.value !== 'undefined' && item.props.value !== null) {
-            arr.push(item.props)
-          } else if (typeof item.props.children !== 'undefined') {
-            collectItems(item.props.children)
-          }
-        }
-      })
-    }
-
-    collectItems(props.children)
-
-    const itemList = {}
-
-    arr.forEach((item, idx) => {
-      itemList[String(item.value)] = {
-        children: item.children,
-        idx,
-      }
-    })
-
-    return itemList
-  }
+  const { itemList } = useSelectBoxItemList({ children: props.children })
 
   const handleBadgeClick = value => props.setActive((props.active as FormValue[]).filter(i => i !== value))
 
@@ -99,13 +73,8 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
     )
   }
 
-  const [itemList, setItemList] = React.useState<{ [key: string]: { children: ContentElement, idx: number } }>(() => getItemList())
   const [content, setContent] = React.useState<ContentElement>(() => getContent())
   const [dropdownStatus, setDropdownStatus] = React.useState(false)
-
-  useChangeEffect(() => {
-    setItemList(getItemList())
-  }, [props.children])
 
   useChangeEffect(() => {
     setContent(getContent())

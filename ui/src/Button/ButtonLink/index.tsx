@@ -1,9 +1,10 @@
+import { ContentElement } from '@smart-react-components/core/types'
 import useLink from '@smart-react-components/router/hooks/useLink'
 import React from 'react'
 import Button from '../'
 import { ButtonGenericProps } from '../../types/button'
 
-export interface Props extends ButtonGenericProps {
+export interface Props extends ButtonGenericProps<ContentElement> {
   to: string
 }
 
