@@ -174,6 +174,7 @@ const cssKeys: CSSKeys = {
   floodColor: 'flood-color',
   floodOpacity: 'flood-opacity',
   focus: '&:focus{|}',
+  focusWithin: '&:focus-within{|}',
   font: 'font',
   fontFamily: 'font-family',
   fontFeatureSettings: 'font-feature-settings',

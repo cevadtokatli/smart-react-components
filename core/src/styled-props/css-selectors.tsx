@@ -12,6 +12,7 @@ export default interface CSSSelectors {
   empty?: Selector
   enabled?: Selector
   focus?: Selector
+  focusWithin?: Selector
   fullscreen?: Selector
   hover?: Selector
   indeterminate?: Selector
