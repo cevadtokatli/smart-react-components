@@ -1,8 +1,10 @@
 //import { ButtonIcon, ButtonList } from '@smart-react-components/ui'
 import { Div } from '@smart-react-components/core'
+import { Option, OptionGroup } from '@smart-react-components/ui'
 import CloseIcon from '@smart-react-components/ui/Alert/AlertCloseIcon'
 import Button from '@smart-react-components/ui/Button'
 import ButtonLink from '@smart-react-components/ui/Button/ButtonLink'
+import ButtonSelect from '@smart-react-components/ui/Button/ButtonSelect'
 import React from 'react'
 
 export const Palette = () => (
@@ -104,3 +106,68 @@ export const ButtonLinkC = () => (
     <ButtonLink to="/!dynamic" palette="!dynamic" marginRight="$length.3" marginBottom="$length.3">!Dynamic</ButtonLink>
   </Div>
 )
+
+export const ButtonSelectC = () => {
+  const [active, setActive] = React.useState(() => [])
+
+  return (
+    <>
+      <ButtonSelect active={active} setActive={setActive} placeholder="Primary">
+        <OptionGroup label="Category">
+          <Option value="item-1">Item 1</Option>
+          <Option value="item-2">Item 2</Option>
+          <Option value="item-3">Item 3</Option>
+        </OptionGroup>
+      </ButtonSelect>
+      <ButtonSelect palette="secondary" active={active} setActive={setActive} placeholder="Secondary">
+        <OptionGroup label="Category">
+          <Option value="item-1">Item 1</Option>
+          <Option value="item-2">Item 2</Option>
+          <Option value="item-3">Item 3</Option>
+        </OptionGroup>
+      </ButtonSelect>
+      <ButtonSelect palette="success" active={active} setActive={setActive} placeholder="Success">
+        <OptionGroup label="Category">
+          <Option value="item-1">Item 1</Option>
+          <Option value="item-2">Item 2</Option>
+          <Option value="item-3">Item 3</Option>
+        </OptionGroup>
+      </ButtonSelect>
+      <ButtonSelect palette="danger" active={active} setActive={setActive} placeholder="Danger">
+        <OptionGroup label="Category">
+          <Option value="item-1">Item 1</Option>
+          <Option value="item-2">Item 2</Option>
+          <Option value="item-3">Item 3</Option>
+        </OptionGroup>
+      </ButtonSelect>
+      <ButtonSelect palette="warning" active={active} setActive={setActive} placeholder="Warning">
+        <OptionGroup label="Category">
+          <Option value="item-1">Item 1</Option>
+          <Option value="item-2">Item 2</Option>
+          <Option value="item-3">Item 3</Option>
+        </OptionGroup>
+      </ButtonSelect>
+      <ButtonSelect palette="info" active={active} setActive={setActive} placeholder="Info">
+        <OptionGroup label="Category">
+          <Option value="item-1">Item 1</Option>
+          <Option value="item-2">Item 2</Option>
+          <Option value="item-3">Item 3</Option>
+        </OptionGroup>
+      </ButtonSelect>
+      <ButtonSelect palette="dynamic" active={active} setActive={setActive} placeholder="Dynamic">
+        <OptionGroup label="Category">
+          <Option value="item-1">Item 1</Option>
+          <Option value="item-2">Item 2</Option>
+          <Option value="item-3">Item 3</Option>
+        </OptionGroup>
+      </ButtonSelect>
+      <ButtonSelect palette="!dynamic" active={active} setActive={setActive} placeholder="!Dynamic">
+        <OptionGroup label="Category">
+          <Option value="item-1">Item 1</Option>
+          <Option value="item-2">Item 2</Option>
+          <Option value="item-3">Item 3</Option>
+        </OptionGroup>
+      </ButtonSelect>
+    </>
+  )
+}
