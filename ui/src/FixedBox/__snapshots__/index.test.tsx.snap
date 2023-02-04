@@ -29,12 +29,20 @@ exports[`<FixedBox /> should render component when status true 1`] = `
 <button>
     Button
   </button>
-  .c0 {
+  .c2 {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.c0 {
   position: fixed;
   z-index: 2000;
 }
 
-.c2 {
+.c3 {
   overflow: auto;
   position: fixed;
   z-index: 1000;
@@ -62,7 +70,7 @@ exports[`<FixedBox /> should render component when status true 1`] = `
 }
 
 @media (max-width:767px) {
-  .c2 {
+  .c3 {
     height: auto !important;
     max-height: 100% !important;
     position: static;
@@ -146,10 +154,15 @@ exports[`<FixedBox /> should render component when status true 1`] = `
 }
 
 <div
-    class=" c0 c1 sc-gsnTZi  c0"
+    class=" c0 c1 sc-bczRLJ sc-gsnTZi  c0"
   >
     <div
-      class=" c2"
+      class="c2"
+      height="100%"
+      width="100%"
+    />
+    <div
+      class=" c3"
       style="pointer-events: none; visibility: hidden;"
     >
       <div>

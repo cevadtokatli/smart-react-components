@@ -2,7 +2,15 @@
 
 exports[`<Overlay /> should render component 1`] = `
 <DocumentFragment>
-  .c0 {
+  .c1 {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.c0 {
   position: fixed;
   z-index: 2000;
   box-sizing: border-box;
@@ -26,6 +34,11 @@ exports[`<Overlay /> should render component 1`] = `
 <div
     class=" c0"
   >
+    <div
+      class="c1"
+      height="100%"
+      width="100%"
+    />
     <div>
       Overlay
     </div>
