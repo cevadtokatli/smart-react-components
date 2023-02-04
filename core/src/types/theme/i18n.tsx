@@ -1,6 +1,8 @@
 import { OptionalThemeAttributes } from './util'
 
 interface DefaultI18NAttributes {
+  cancel: string
+  ok: string
   breadcrumb: {
     separator: string
   }

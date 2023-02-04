@@ -1,0 +1,390 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Confirm /> should render component 1`] = `
+<DocumentFragment>
+  .c2 {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.c4 {
+  width: 500px;
+}
+
+.c4 > * {
+  padding: 1rem 1rem;
+}
+
+.c4 .c6 .c8 {
+  font-size: 1.1rem;
+}
+
+.c13 {
+  margin: -.5rem -.5rem;
+}
+
+.c15 {
+  margin: .5rem .5rem;
+  overflow: hidden;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c15 .c17 {
+  font-size: .875rem;
+  padding: .45rem .9rem;
+}
+
+.c15 .c17 > :not(:last-child) {
+  margin-right: 0.225rem;
+}
+
+.c18 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  box-sizing: border-box;
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: currentcolor;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+.c16 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  position: relative;
+  -webkit-transition: box-shadow 300ms 0s ease-in-out;
+  transition: box-shadow 300ms 0s ease-in-out;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c16,
+.c16 .c17 {
+  border-radius: .125rem;
+}
+
+.c16:active {
+  outline: 0;
+}
+
+.c16 .c17 {
+  border-color: #0665d0;
+  color: #0665d0;
+}
+
+.c16:hover .c17 {
+  background: #0665d0;
+  color: #fff;
+}
+
+.c16:focus {
+  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
+}
+
+.c19 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  position: relative;
+  -webkit-transition: box-shadow 300ms 0s ease-in-out;
+  transition: box-shadow 300ms 0s ease-in-out;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c19,
+.c19 .c17 {
+  border-radius: .125rem;
+}
+
+.c19:active {
+  outline: 0;
+}
+
+.c19 .c17 {
+  background: #0665d0;
+  border-color: #0665d0;
+  color: #fff;
+}
+
+.c19:hover .c17 {
+  background: #065DC0;
+  border-color: #065DC0;
+}
+
+.c19:focus {
+  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
+}
+
+.c14 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-bottom: solid 1px #dbdbdb;
+}
+
+.c9 {
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  margin: 0;
+}
+
+.c5 {
+  background: #fff;
+  box-sizing: border-box;
+  color: #323a46;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: currentcolor;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: 100%;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  border: solid 1px #dbdbdb;
+  border-radius: .3rem;
+}
+
+.c0 {
+  position: fixed;
+  z-index: 2000;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+  left: 0;
+  padding: 1.75rem;
+  top: 0;
+  touch-action: none;
+  width: 100%;
+  background: rgba(0,0,0,.3);
+}
+
+.c1 {
+  will-change: opacity;
+}
+
+.c1 > .c3 {
+  will-change: transform;
+}
+
+.c1.src-modal-show {
+  opacity: 0;
+}
+
+.c1.src-modal-show > .c3 {
+  -webkit-transform: translateY(-1.75rem);
+  -ms-transform: translateY(-1.75rem);
+  transform: translateY(-1.75rem);
+}
+
+.c1.src-modal-show-active {
+  opacity: 1;
+}
+
+.c1.src-modal-show-active > .c3 {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.c1.src-modal-hide {
+  opacity: 1;
+}
+
+.c1.src-modal-hide > .c3 {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.c1.src-modal-hide-active {
+  opacity: 0;
+}
+
+.c1.src-modal-hide-active > .c3 {
+  -webkit-transform: translateY(-1.75rem);
+  -ms-transform: translateY(-1.75rem);
+  transform: translateY(-1.75rem);
+}
+
+.c1.src-modal-show-active,
+.c1.src-modal-hide-active {
+  -webkit-transition: opacity 300ms 0s ease-in-out;
+  transition: opacity 300ms 0s ease-in-out;
+}
+
+.c1.src-modal-show-active > .c3,
+.c1.src-modal-hide-active > .c3 {
+  -webkit-transition: -webkit-transform 300ms 0s ease-in-out;
+  -webkit-transition: transform 300ms 0s ease-in-out;
+  transition: transform 300ms 0s ease-in-out;
+}
+
+.c10 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  overflow: auto;
+}
+
+.c10 > :last-child {
+  margin-bottom: 0;
+}
+
+.c11 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c11 .c12 {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+<div
+    class=" c0 c1"
+  >
+    <div
+      class="c2"
+      height="100%"
+      width="100%"
+    />
+    <div
+      class="c3 c4 c5"
+      shape="rectangle"
+    >
+      <header
+        class="c6  c7"
+      >
+        <h3
+          class="c8  c9"
+        >
+          Title
+        </h3>
+      </header>
+      <section
+        class=" c10"
+      >
+        Message
+      </section>
+      <footer
+        class=" c11"
+      >
+        <div
+          class="c12 c13 c14"
+        >
+          <button
+            class="c15 c16"
+            overflow="hidden"
+            shape="rectangle"
+          >
+            <span
+              class="c17 c18"
+            >
+              Cancel
+            </span>
+          </button>
+          <button
+            class="c15 c19"
+            overflow="hidden"
+            shape="rectangle"
+          >
+            <span
+              class="c17 c18"
+            >
+              OK
+            </span>
+          </button>
+        </div>
+      </footer>
+    </div>
+  </div>
+</DocumentFragment>
+`;
