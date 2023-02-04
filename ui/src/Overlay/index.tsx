@@ -1,3 +1,4 @@
+import Div from '@smart-react-components/core/Element/Div'
 import extractElementProps from '@smart-react-components/core/element-props'
 import clickEvents, { ClickEvents } from '@smart-react-components/core/element-props/click-events'
 import { Theme } from '@smart-react-components/core/theme'
@@ -17,6 +18,7 @@ export interface Props extends ClickEvents {
   hasBackground?: boolean
   hasBlurEffect?: boolean
   isInBody?: boolean
+  template?: React.ReactElement
 }
 
 const Overlay = React.forwardRef<HTMLDivElement, Props>((props, forwardRef) => {
@@ -177,19 +179,28 @@ const Overlay = React.forwardRef<HTMLDivElement, Props>((props, forwardRef) => {
     }
   }, [isFront])
 
-  const Element = (
-    <OverlayElement
-      isDisplayedWhenBreakpointNull
-      {...props.elementProps}
-      {...extractElementProps(props, [clickEvents])}
-      breakpoint={props.breakpoint}
-      hasBackground={props.hasBackground}
-      ref={ref}
-      {...(isInBody && { 'data-src-overlay': isActive ? 'visible' : 'hidden' })}
-    >
-      {props.children}
-    </OverlayElement>
-  )
+  const Element = React.cloneElement(props.template, {
+    isDisplayedWhenBreakpointNull: true,
+    ...props.elementProps,
+    breakpoint: props.breakpoint,
+    hasBackground: props.hasBackground,
+    ref,
+    ...props.template.props,
+    ...(isInBody && { 'data-src-overlay': isActive ? 'visible' : 'hidden' }),
+    children: (
+      <>
+        <Div
+          height="100%"
+          left={0}
+          position="absolute"
+          top={0}
+          width="100%"
+          {...extractElementProps(props, [clickEvents])}
+        />
+        { props.children }
+      </>
+    ),
+  })
 
   return isInBody ? createPortal(Element, document.body) : Element
 })
@@ -197,6 +208,7 @@ const Overlay = React.forwardRef<HTMLDivElement, Props>((props, forwardRef) => {
 Overlay.defaultProps = {
   hasBackground: true,
   isInBody: true,
+  template: <OverlayElement />,
 }
 
 export default Overlay

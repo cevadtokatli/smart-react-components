@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Modal /> should be block 1`] = `
+<DocumentFragment>
+  .c0 > * {
+  padding: 1rem 1rem;
+}
+
+.c1 {
+  background: #fff;
+  box-sizing: border-box;
+  color: #323a46;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: currentcolor;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: 100%;
+  width: 100%;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  border: solid 1px #dbdbdb;
+  border-radius: .3rem;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<Modal /> should be centered 1`] = `
+<DocumentFragment>
+  .c0 {
+  width: 500px;
+}
+
+.c0 > * {
+  padding: 1rem 1rem;
+}
+
+.c1 {
+  background: #fff;
+  box-sizing: border-box;
+  color: #323a46;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: currentcolor;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: 100%;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  border: solid 1px #dbdbdb;
+  border-radius: .3rem;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<Modal /> should be full screen 1`] = `
+<DocumentFragment>
+  .c0 > * {
+  padding: 1rem 1rem;
+}
+
+.c1 {
+  background: #fff;
+  box-sizing: border-box;
+  color: #323a46;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: currentcolor;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: 100%;
+  width: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<Modal /> should be stretched 1`] = `
+<DocumentFragment>
+  .c0 {
+  width: 500px;
+}
+
+.c0 > * {
+  padding: 1rem 1rem;
+}
+
+.c1 {
+  background: #fff;
+  box-sizing: border-box;
+  color: #323a46;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: currentcolor;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  border: solid 1px #dbdbdb;
+  border-radius: .3rem;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<Modal /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  width: 500px;
+}
+
+.c0 > * {
+  padding: 1rem 1rem;
+}
+
+.c1 {
+  background: #fff;
+  box-sizing: border-box;
+  color: #323a46;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: currentcolor;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: 100%;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  border: solid 1px #dbdbdb;
+  border-radius: .3rem;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;

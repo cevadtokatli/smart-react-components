@@ -1,5 +1,6 @@
 import Div from '@smart-react-components/core/Element/Div'
 import { StyledProps } from '@smart-react-components/core/styled-props'
+import { Nullable } from '@smart-react-components/core/types'
 import { Breakpoint } from '@smart-react-components/core/types/grid'
 import styled from 'styled-components'
 
@@ -22,9 +23,9 @@ const overlayCSS = ({ theme, hasBackground }) => `
   }
 `
 export interface Props extends StyledProps {
-  breakpoint: Breakpoint | null
-  hasBackground: boolean
-  isDisplayedWhenBreakpointNull: boolean
+  breakpoint?: Nullable<Breakpoint>
+  hasBackground?: boolean
+  isDisplayedWhenBreakpointNull?: boolean
 }
 
 export default styled(Div)<Props>(({ theme, breakpoint, hasBackground, isDisplayedWhenBreakpointNull }: Props) => `
