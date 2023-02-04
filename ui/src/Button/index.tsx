@@ -70,13 +70,24 @@ const Button = React.forwardRef<HTMLElement, Props>((props, forwardRef) => {
     setLoadingEl(getLoadingEl())
   }, [props.loading, props.isLoading])
 
+  const applyIntrinsicStyledProps = () => ({
+    ...extractElementProps(props, [intrinsicStyledProps]),
+    ...(props.hasSpace && {
+      margin: `$size.button.${props.size}.margin.y $size.button.${props.size}.margin.x`,
+      ...(props.sizeSm && { marginSm: `$size.button.${props.sizeSm}.margin.y $size.button.${props.sizeSm}.margin.x` }),
+      ...(props.sizeMd && { marginMd: `$size.button.${props.sizeMd}.margin.y $size.button.${props.sizeMd}.margin.x` }),
+      ...(props.sizeLg && { marginLg: `$size.button.${props.sizeLg}.margin.y $size.button.${props.sizeLg}.margin.x` }),
+      ...(props.sizeXl && { marginXl: `$size.button.${props.sizeXl}.margin.y $size.button.${props.sizeXl}.margin.x` }),
+    }),
+  })
+
   const hasButtonContainer = leftAddon?.props?.isSeparated || rightAddon?.props?.isSeparated
 
   let Element = (
     <ButtonElement
       {...props.elementProps}
       {...((!props.isDisabled && !props.isLoading) && extractElementProps(props, [clickEvents]))}
-      {...(!hasButtonContainer && extractElementProps(props, [intrinsicStyledProps]))}
+      {...(!hasButtonContainer && applyIntrinsicStyledProps())}
       {...(props.as && { as: props.as })}
       buttonSize={props.size}
       buttonSizeSm={props.sizeSm}
@@ -114,7 +125,7 @@ const Button = React.forwardRef<HTMLElement, Props>((props, forwardRef) => {
   if (hasButtonContainer) {
     Element = (
       <Div
-        {...(extractElementProps(props, [intrinsicStyledProps]))}
+        {...applyIntrinsicStyledProps()}
         display={props.isBlock ? 'flex' : 'inline-flex'}
       >
         { leftAddon?.props?.isSeparated && leftAddon }

@@ -73,6 +73,10 @@ const sizeAttributes: SizeAttributes = {
       fixedSize: '28px',
       fontSize: '.75rem',
       iconSize: '.75rem',
+      margin: {
+        x: '.25rem',
+        y: '.25rem',
+      },
       padding: {
         x: '.8rem',
         y: '.28rem',
@@ -82,6 +86,10 @@ const sizeAttributes: SizeAttributes = {
       fixedSize: '32px',
       fontSize: '.875rem',
       iconSize: '.875rem',
+      margin: {
+        x: '.5rem',
+        y: '.5rem',
+      },
       padding: {
         x: '.9rem',
         y: '.45rem',
@@ -91,6 +99,10 @@ const sizeAttributes: SizeAttributes = {
       fixedSize: '36px',
       fontSize: '1rem',
       iconSize: '1rem',
+      margin: {
+        x: '.75rem',
+        y: '.75rem',
+      },
       padding: {
         x: '1rem',
         y: '.5rem',

@@ -18,6 +18,7 @@ interface DefaultSizeAttributes {
     fixedSize: string
     fontSize: string
     iconSize: string
+    margin: Coordinator<string>
     padding: Coordinator<string>
   }>
   checkbox: Size<string>
