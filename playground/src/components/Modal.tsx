@@ -1,6 +1,7 @@
 import React from 'react'
 import Modal from '@smart-react-components/ui/Modal'
-import { Button, ButtonList, ModalBody, ModalCloseIcon, ModalFooter, ModalHeader, ModalTitle } from '@smart-react-components/ui'
+import { Button, ButtonList, Confirm, ModalBody, ModalCloseIcon, ModalFooter, ModalHeader, ModalTitle, Prompt } from '@smart-react-components/ui'
+import Alert from '@smart-react-components/ui/PopUp/Alert'
 
 export const ModalC = () => {
   const [status, setStatus] = React.useState(false)
@@ -24,6 +25,23 @@ export const ModalC = () => {
           </ButtonList>
         </ModalFooter>
       </Modal>
+    </>
+  )
+}
+
+export const PopUp = () => {
+  const [status, setStatus] = React.useState(false)
+  const [status2, setStatus2] = React.useState(false)
+  const [status3, setStatus3] = React.useState(false)
+
+  return (
+    <>
+      <Button onClick={() => setStatus(true)}>Alert</Button>
+      <Alert setStatus={setStatus} status={status} message="Message" action={() => console.log('Alert')} />
+      <Button onClick={() => setStatus2(true)}>Confirm</Button>
+      <Confirm setStatus={setStatus2} status={status2} message="Message" action={isConfirmed => console.log('Confirm', isConfirmed)} />
+      <Button onClick={() => setStatus3(true)}>Prompt</Button>
+      <Prompt setStatus={setStatus3} status={status3} placeholder="Placeholder" message="Message" action={(text, isConfirmed) => console.log('Prompt', text, isConfirmed)} />
     </>
   )
 }
