@@ -6,6 +6,8 @@ import Button from '@smart-react-components/ui/Button'
 import ButtonLink from '@smart-react-components/ui/Button/ButtonLink'
 import ButtonSelect from '@smart-react-components/ui/Button/ButtonSelect'
 import ButtonList from '@smart-react-components/ui/Button/ButtonList'
+import ButtonGroup from '@smart-react-components/ui/Button/ButtonGroup'
+import ButtonAddon from '@smart-react-components/ui/Button/ButtonAddon'
 
 import React from 'react'
 
@@ -173,3 +175,11 @@ export const ButtonSelectC = () => {
     </>
   )
 }
+
+export const Group = () => (
+  <ButtonGroup>
+    <Button>Button-1</Button>
+    <Button>Button-2</Button>
+    <Button>Button-3</Button>
+  </ButtonGroup>
+)
