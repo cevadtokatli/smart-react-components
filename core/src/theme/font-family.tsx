@@ -10,6 +10,7 @@ const fontFamilyAttributes: FontFamilyAttributes = {
   dropdown: 'inherit',
   form: 'inherit',
   input: 'inherit',
+  modalTitle: 'inherit',
   pagination: 'inherit',
   popover: 'inherit',
   popoverHeader: 'inherit',

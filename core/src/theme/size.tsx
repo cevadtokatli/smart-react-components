@@ -221,6 +221,32 @@ const sizeAttributes: SizeAttributes = {
     medium: '20px',
     large: '30px',
   },
+  modal: {
+    small: {
+      padding: {
+        x: '.75rem',
+        y: '.75rem',
+      },
+      titleFontSize: '1rem',
+      width: '300px',
+    },
+    medium: {
+      padding: {
+        x: '1rem',
+        y: '1rem',
+      },
+      titleFontSize: '1.1rem',
+      width: '500px',
+    },
+    large: {
+      padding: {
+        x: '1.15rem',
+        y: '1.15rem',
+      },
+      titleFontSize: '1.2rem',
+      width: '800px',
+    },
+  },
   popover: {
     small: {
       fontSize: '.875rem',

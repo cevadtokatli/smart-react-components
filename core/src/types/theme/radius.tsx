@@ -9,6 +9,7 @@ interface DefaultRadiusAttributes {
   dropdown: string
   checkbox: Shape<string>
   input: Shape<string>
+  modal: Shape<string>
   pagination: Shape<string>
   popover: string
   tooltip: string

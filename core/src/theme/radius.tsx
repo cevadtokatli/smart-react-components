@@ -18,6 +18,10 @@ const radiusAttributes: RadiusAttributes = {
     rounded: '1.8rem',
   },
   dropdown: '.2rem',
+  modal: {
+    rectangle: '.3rem',
+    rounded: '.6rem',
+  },
   pagination: {
     rectangle: '.125rem',
     rounded: '.5rem',

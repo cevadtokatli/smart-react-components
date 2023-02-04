@@ -10,6 +10,7 @@ interface DefaultFontFamilyAttributes {
   button: string
   form: string
   input: string
+  modalTitle: string
   pagination: string
   popover: string
   popoverHeader: string

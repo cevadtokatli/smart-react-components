@@ -42,6 +42,11 @@ interface DefaultSizeAttributes {
     fontSize: string
     padding: Coordinator<string>
   }>
+  modal: Size<{
+    padding: Coordinator<string>
+    titleFontSize: string
+    width: string
+  }>
   loading: Size<string>
   popover: Size<{
     fontSize: string

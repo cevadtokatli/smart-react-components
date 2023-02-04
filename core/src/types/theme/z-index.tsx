@@ -3,6 +3,7 @@ import { OptionalThemeAttributes } from './util'
 interface DefaultZIndexAttributes {
   buttonLoading: number
   fixedBox: number
+  modal: number
   overlay: number
   popover: number
   tooltip: number
