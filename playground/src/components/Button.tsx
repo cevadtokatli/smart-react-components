@@ -5,19 +5,21 @@ import CloseIcon from '@smart-react-components/ui/Alert/AlertCloseIcon'
 import Button from '@smart-react-components/ui/Button'
 import ButtonLink from '@smart-react-components/ui/Button/ButtonLink'
 import ButtonSelect from '@smart-react-components/ui/Button/ButtonSelect'
+import ButtonList from '@smart-react-components/ui/Button/ButtonList'
+
 import React from 'react'
 
 export const Palette = () => (
-  <Div display="flex">
-    <Button marginRight="$length.3" marginBottom="$length.3">Primary</Button>
-    <Button palette="secondary" marginRight="$length.3" marginBottom="$length.3">Secondary</Button>
-    <Button palette="success" marginRight="$length.3" marginBottom="$length.3">Success</Button>
-    <Button palette="danger" marginRight="$length.3" marginBottom="$length.3">Danger</Button>
-    <Button palette="warning" marginRight="$length.3" marginBottom="$length.3">Warning</Button>
-    <Button palette="info" marginRight="$length.3" marginBottom="$length.3">Info</Button>
-    <Button palette="dynamic" marginRight="$length.3" marginBottom="$length.3">Dynamic</Button>
-    <Button palette="!dynamic" marginRight="$length.3" marginBottom="$length.3">!Dynamic</Button>
-  </Div>
+  <ButtonList>
+    <Button>Primary</Button>
+    <Button palette="secondary">Secondary</Button>
+    <Button palette="success">Success</Button>
+    <Button palette="danger">Danger</Button>
+    <Button palette="warning">Warning</Button>
+    <Button palette="info">Info</Button>
+    <Button palette="dynamic">Dynamic</Button>
+    <Button palette="!dynamic">!Dynamic</Button>
+  </ButtonList>
 )
 
 export const Soft = () => (
