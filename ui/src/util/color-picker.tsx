@@ -1,5 +1,5 @@
 import { Color, Nullable } from '@smart-react-components/core/types'
-import { ColorPickerFormat } from '../ColorPicker'
+import { ColorPickerFormat } from '../types/color-picker'
 
 /**
  * Calculates new position of the dragger.
