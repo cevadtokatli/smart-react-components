@@ -1,9 +1,9 @@
 import A from '@smart-react-components/core/Element/A'
 import useLink, { LinkProps } from '@smart-react-components/router/hooks/useLink'
 import React from 'react'
-import WaveEffect from '../../WaveEffect'
-import { PrivateProps as BreadcrumbItemPrivateProps } from '../BreadcrumbItem'
-import BreadcrumbItemElement from '../BreadcrumbItem/BreadcrumbItemElement'
+import WaveEffect from '../WaveEffect'
+import { PrivateProps as BreadcrumbItemPrivateProps } from './BreadcrumbItem'
+import BreadcrumbItemElement from '../components/Breadcrumb/BreadcrumbItemElement'
 
 export interface Props extends LinkProps {}
 

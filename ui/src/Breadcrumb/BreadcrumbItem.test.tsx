@@ -1,13 +1,12 @@
 import { wrapTheme } from '@smart-react-components/core/test'
-import ClientRouter from '@smart-react-components/router/ClientRouter'
 import { render } from '@testing-library/react'
 import React from 'react'
-import BreadcrumbLink from './'
+import BreadcrumbItem from './BreadcrumbItem'
 
-describe('<BreadcrumbLink />', () => {
+describe('<BreadcrumbItem />', () => {
   let props
 
-  beforeAll(() => {
+  beforeAll(() => [
     props = {
       hasWaveEffect: true,
       isOutline: false,
@@ -15,16 +14,13 @@ describe('<BreadcrumbLink />', () => {
       palette: 'primary',
       separator: null,
       shape: 'rectangle',
-      to: '/',
       waveEffectPalette: 'light',
     }
-  })
+  ])
 
   it('should render component', () => {
     const { asFragment } = render(wrapTheme(
-      <ClientRouter routes={[]}>
-        <BreadcrumbLink {...props}>Home</BreadcrumbLink>
-      </ClientRouter>
+      <BreadcrumbItem {...props}>Breadcrumb Item</BreadcrumbItem>
     ))
     expect(asFragment()).toMatchSnapshot()
   })

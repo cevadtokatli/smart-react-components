@@ -1,8 +1,8 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { render } from '@testing-library/react'
 import React from 'react'
-import BreadcrumbItem from '../BreadcrumbItem'
-import BreadcrumbList from './'
+import BreadcrumbItem from './BreadcrumbItem'
+import BreadcrumbList from './BreadcrumbList'
 
 describe('<BreadcrumbList />', () => {
   it('should render component', () => {
