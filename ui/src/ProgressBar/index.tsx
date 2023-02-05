@@ -4,7 +4,7 @@ import { JSXElementProps, PaletteProp, TimingFunction } from '@smart-react-compo
 import { addEventListener, removeEventListener } from '@smart-react-components/core/util/dom'
 import React from 'react'
 import { ThemeContext } from 'styled-components'
-import ProgressBarElement, { Bar, Percentage } from './ProgressBarElement'
+import ProgressBarElement, { Bar, Percentage } from '../components/ProgressBar/ProgressBarElement'
 
 export interface Props {
   displayValue?: boolean
