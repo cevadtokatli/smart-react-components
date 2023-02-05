@@ -1,7 +1,7 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { fireEvent, render } from '@testing-library/react'
 import React from 'react'
-import BadgeIconElement from '../../Badge/BadgeIcon/BadgeIconElement'
+import BadgeIconElement from '../Badge/BadgeIconElement'
 import InputFileTemplate from './InputFileTemplate'
 
 describe('<InputFileTemplate />', () => {

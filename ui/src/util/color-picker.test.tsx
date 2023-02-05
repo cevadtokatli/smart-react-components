@@ -1,5 +1,5 @@
 import { getColor } from '@smart-react-components/core/util/color'
-import { ColorPickerFormat } from '../ColorPicker'
+import { ColorPickerFormat } from '../types/color-picker'
 import { convertColor, isEqual, isLight } from './color-picker'
 
 describe('color', () => {
