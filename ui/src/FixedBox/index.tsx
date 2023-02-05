@@ -9,8 +9,8 @@ import useFixedBoxMethods from '../hooks/useFixedBoxMethods'
 import Overlay from '../Overlay'
 import { Position, TriggerInteraction } from '../types'
 import { calculatePosition } from '../util/fixed-box'
-import FixedBoxElement from './FixedBoxElement'
-import OverlayElement from './OverlayElement'
+import FixedBoxElement from '../components/FixedBox/FixedBoxElement'
+import OverlayElement from '../components/FixedBox/OverlayElement'
 
 export { Position, TriggerInteraction } from '../types'
 
