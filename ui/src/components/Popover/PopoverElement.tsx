@@ -3,7 +3,7 @@ import Div from '@smart-react-components/core/Element/Div'
 import styled from 'styled-components'
 import { PaletteProp, ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
 import PopoverArrow from './PopoverArrow'
-import { generateCSSTransitionClasses } from '../util/popover'
+import { generateCSSTransitionClasses } from '../../util/popover'
 
 export const PopoverHeader = styled.h4`
   box-sizing: border-box;

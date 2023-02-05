@@ -5,12 +5,12 @@ import { TransitionAfterCallback, TransitionBeforeCallback } from '@smart-react-
 import React from 'react'
 import { createPortal } from 'react-dom'
 import { ThemeContext } from 'styled-components'
-import PopoverArrow from './PopoverArrow'
+import PopoverArrow from '../components/Popover/PopoverArrow'
 import useFixedBoxMethods from '../hooks/useFixedBoxMethods'
 import { Position, TriggerInteraction } from '../types'
 import { canBeRenderedInPortal } from '../util/dom'
 import { calculatePosition } from '../util/popover'
-import PopoverElement, { PopoverHeader, PopoverContent } from './PopoverElement'
+import PopoverElement, { PopoverHeader, PopoverContent } from '../components/Popover/PopoverElement'
 
 export { Position, TriggerInteraction } from '../types'
 

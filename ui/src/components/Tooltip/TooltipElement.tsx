@@ -2,7 +2,7 @@ import Div from '@smart-react-components/core/Element/Div'
 import { StyledProps } from '@smart-react-components/core/styled-props'
 import { PaletteProp, ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
 import styled from 'styled-components'
-import PopoverArrow from '../../Popover/PopoverArrow'
+import PopoverArrow from '../Popover/PopoverArrow'
 import { generateCSSTransitionClasses } from '../../util/popover'
 
 interface Props extends
