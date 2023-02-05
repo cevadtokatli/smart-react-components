@@ -1,9 +1,9 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { fireEvent, render, waitFor } from '@testing-library/react' 
 import React from 'react'
-import SelectBox from './'
-import Option from '../Option'
-import OptionGroup from '../OptionGroup'
+import SelectBox from './SelectBox'
+import Option from './Option'
+import OptionGroup from './OptionGroup'
 
 describe('<SelectBox />', () => {
   it('should render component', async () => {

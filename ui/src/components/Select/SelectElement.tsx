@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import InputElement, { Props } from '../Input/InputElement'
-import { toCSSValue } from '../util/css'
+import InputElement, { Props } from '../../Input/InputElement'
+import { toCSSValue } from '../../util/css'
 
 export default styled(InputElement).attrs<Props>({
   as: 'div',

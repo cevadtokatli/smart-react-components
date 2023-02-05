@@ -4,7 +4,7 @@ import intrinsicStyledProps from '@smart-react-components/core/element-props/int
 import React from 'react'
 import FormBlockLabel from '../components/FormBlockLabel'
 import useAddons from '../hooks/useAddons'
-import SelectElement from './SelectElement'
+import SelectElement from '../components/Select/SelectElement'
 import HiddenInput from '../components/HiddenInput'
 import { GenericProps } from '../types/form'
 import { getInputValue } from '../util/form'
