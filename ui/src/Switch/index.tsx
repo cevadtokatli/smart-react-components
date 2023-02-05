@@ -1,6 +1,6 @@
 import React from 'react'
 import Checkbox, { Props as CheckboxProps } from '../Checkbox'
-import SwitchElement from './SwitchElement'
+import SwitchElement from '../components/Switch/SwitchElement'
 
 export { OrderPosition as Position } from '../types'
 

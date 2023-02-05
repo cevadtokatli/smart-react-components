@@ -1,7 +1,7 @@
 import React from 'react'
-import CheckboxGroup, { Props as CheckboxGroupProps } from '../../Checkbox/CheckboxGroup'
+import CheckboxGroup, { Props as CheckboxGroupProps } from '../Checkbox/CheckboxGroup'
 
-export { OrderPosition as Position } from '../../types'
+export { OrderPosition as Position } from '../types'
 
 export type Props = Omit<CheckboxGroupProps, 'shape'>
 

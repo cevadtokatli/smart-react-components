@@ -1,8 +1,8 @@
 import Div from '@smart-react-components/core/Element/Div'
 import React from 'react'
 import styled from 'styled-components'
-import { Props } from '../Checkbox/CheckboxElement'
-import { extractNumberUnit, toCSSValue } from '../util/css'
+import { Props } from '../../Checkbox/CheckboxElement'
+import { extractNumberUnit, toCSSValue } from '../../util/css'
 
 const Slider = styled.div(({ theme }) => `
   background: ${theme.$.color.dynamic.background};

@@ -1,8 +1,8 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { render } from '@testing-library/react'
 import React from 'react'
-import SwitchGroup from './'
-import Switch from '../'
+import SwitchGroup from './SwitchGroup'
+import Switch from '.'
 
 describe('<SwitchGroup />', () => {
   it('should render component', () => {
