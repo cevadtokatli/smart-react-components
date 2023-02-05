@@ -9,7 +9,7 @@ import React from 'react'
 import { createPortal } from 'react-dom'
 import { ThemeContext } from 'styled-components'
 import { canBeRenderedInPortal, getScrollParent, mouseWheel } from '../util/dom'
-import OverlayElement from './OverlayElement'
+import OverlayElement from '../components/Overlay/OverlayElement'
 
 export interface Props extends ClickEvents {
   breakpoint?: Breakpoint
