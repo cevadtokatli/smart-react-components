@@ -6,7 +6,7 @@ import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { ContentElement, JSXElementProps, PaletteProp, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import { OrderPosition, Position } from '../types'
-import BadgeElement, { Content } from './BadgeElement'
+import BadgeElement, { Content } from '../components/Badge/BadgeElement'
 
 export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,

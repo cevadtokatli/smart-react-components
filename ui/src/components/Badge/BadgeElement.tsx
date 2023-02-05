@@ -2,9 +2,9 @@ import Div from '@smart-react-components/core/Element/Div'
 import { StyledProps } from '@smart-react-components/core/styled-props'
 import { PaletteProp, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import styled from 'styled-components'
-import { Position } from '../types'
-import { toCSSValue } from '../util/css'
-import BadgeIconElement from './BadgeIcon/BadgeIconElement'
+import { Position } from '../../types'
+import { toCSSValue } from '../../util/css'
+import BadgeIconElement from './BadgeIconElement'
 
 export const Content = styled.div`
   border: solid 1px;

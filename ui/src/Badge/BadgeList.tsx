@@ -2,7 +2,7 @@ import extractElementProps from '@smart-react-components/core/element-props'
 import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
 import { JSXElementProps, PaletteProp, Partial, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
-import BadgeListElement from './BadgeListElement'
+import BadgeListElement from '../components/Badge/BadgeListElement'
 
 export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,

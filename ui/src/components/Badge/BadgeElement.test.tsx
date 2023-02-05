@@ -1,7 +1,7 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { render } from '@testing-library/react'
 import React from 'react'
-import { Position } from '../types'
+import { Position } from '../../types'
 import BadgeElement, { Content } from './BadgeElement'
 
 describe('<BadgeElement />', () => {

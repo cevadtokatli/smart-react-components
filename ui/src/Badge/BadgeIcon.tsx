@@ -3,8 +3,8 @@ import clickEvents, { ClickEvents } from '@smart-react-components/core/element-p
 import mouseClickEvents from '@smart-react-components/core/element-props/mouse-click-events'
 import { PaletteProp, ShapeProp } from '@smart-react-components/core/types'
 import React from 'react'
-import { OrderPosition } from '../../types'
-import BadgeIconElement from './BadgeIconElement'
+import { OrderPosition } from '../types'
+import BadgeIconElement from '../components/Badge/BadgeIconElement'
 
 export interface Props extends ClickEvents {
   children: JSX.Element

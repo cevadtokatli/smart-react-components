@@ -1,8 +1,8 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { render } from '@testing-library/react' 
 import React from 'react'
-import BadgeList from './'
-import Badge from '../'
+import BadgeList from './BadgeList'
+import Badge from './'
 
 describe('<BadgeList />', () => {
   it('should render component', () => {
