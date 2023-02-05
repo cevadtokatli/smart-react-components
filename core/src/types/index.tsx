@@ -1,5 +1,7 @@
 import { Dispatch, SetStateAction } from 'react'
 
+export { default as Color } from 'color'
+
 export type ContentElement = string | JSXChildren
 
 export interface Coordinator<T> {
