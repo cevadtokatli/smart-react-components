@@ -1,13 +1,13 @@
 import styled from 'styled-components'
-import Modal from '../'
-import Overlay, { Props as OverlayProps } from '../../../Overlay/OverlayElement'
+import ModalElement from './ModalElement'
+import OverlayElement, { Props as OverlayElementProps } from '../Overlay/OverlayElement'
 
-interface Props extends OverlayProps {
+interface Props extends OverlayElementProps {
   duration: number
   isFullScreen: boolean
 }
 
-export default styled(Overlay)<Props>(({ theme, duration, isFullScreen }: Props) => `
+export default styled(OverlayElement)<Props>(({ theme, duration, isFullScreen }: Props) => `
   ${isFullScreen
     ? `
       padding: 0;  
@@ -17,14 +17,14 @@ export default styled(Overlay)<Props>(({ theme, duration, isFullScreen }: Props)
 
   will-change: opacity;
 
-  > ${Modal} {
+  > ${ModalElement} {
     will-change: transform;
   }
 
   &.src-modal-show {
     opacity: 0;
 
-    > ${Modal} {
+    > ${ModalElement} {
       transform: translateY(-${theme.$.length.overlay.space});
     }
   }
@@ -32,7 +32,7 @@ export default styled(Overlay)<Props>(({ theme, duration, isFullScreen }: Props)
   &.src-modal-show-active {
     opacity: 1;
 
-    > ${Modal} {
+    > ${ModalElement} {
       transform: translateY(0);
     }
   }
@@ -40,7 +40,7 @@ export default styled(Overlay)<Props>(({ theme, duration, isFullScreen }: Props)
   &.src-modal-hide {
     opacity: 1;
 
-    > ${Modal} {
+    > ${ModalElement} {
       transform: translateY(0);
     }
   }
@@ -48,7 +48,7 @@ export default styled(Overlay)<Props>(({ theme, duration, isFullScreen }: Props)
   &.src-modal-hide-active {
     opacity: 0;
 
-    > ${Modal} {
+    > ${ModalElement} {
       transform: translateY(-${theme.$.length.overlay.space});
     }
   }
@@ -57,7 +57,7 @@ export default styled(Overlay)<Props>(({ theme, duration, isFullScreen }: Props)
   &.src-modal-hide-active {
     transition: opacity ${duration}ms 0s ease-in-out;
 
-    > ${Modal} {
+    > ${ModalElement} {
       transition: transform ${duration}ms 0s ease-in-out;
     }
   }

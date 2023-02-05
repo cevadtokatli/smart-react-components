@@ -1,10 +1,10 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { render } from '@testing-library/react'
 import React from 'react'
-import Modal from '../'
-import Overlay from './'
+import ModalElement from './ModalElement'
+import OverlayElement from './OverlayElement'
 
-describe('<Overlay />', () => {
+describe('<OverlayElement />', () => {
   let props
   let modalProps
 
@@ -27,12 +27,12 @@ describe('<Overlay />', () => {
   })
 
   it('should render component', () => {
-    const { asFragment } = render(wrapTheme(<Overlay {...props}><Modal {...modalProps} /></Overlay>))
+    const { asFragment } = render(wrapTheme(<OverlayElement {...props}><ModalElement {...modalProps} /></OverlayElement>))
     expect(asFragment()).toMatchSnapshot()
   })
 
     it('should be full screen', () => {
-    const { asFragment } = render(wrapTheme(<Overlay {...props} isFullScreen><Modal {...modalProps} isFullScreen /></Overlay>))
+    const { asFragment } = render(wrapTheme(<OverlayElement {...props} isFullScreen><ModalElement {...modalProps} isFullScreen /></OverlayElement>))
     expect(asFragment()).toMatchSnapshot()
   })
 })

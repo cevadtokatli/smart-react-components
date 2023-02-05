@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Modal /> should be block 1`] = `
+exports[`<ModalElement /> should be block 1`] = `
 <DocumentFragment>
   .c0 > * {
   padding: 1rem 1rem;
@@ -34,7 +34,7 @@ exports[`<Modal /> should be block 1`] = `
 </DocumentFragment>
 `;
 
-exports[`<Modal /> should be centered 1`] = `
+exports[`<ModalElement /> should be centered 1`] = `
 <DocumentFragment>
   .c0 {
   width: 500px;
@@ -71,7 +71,7 @@ exports[`<Modal /> should be centered 1`] = `
 </DocumentFragment>
 `;
 
-exports[`<Modal /> should be full screen 1`] = `
+exports[`<ModalElement /> should be full screen 1`] = `
 <DocumentFragment>
   .c0 > * {
   padding: 1rem 1rem;
@@ -103,7 +103,7 @@ exports[`<Modal /> should be full screen 1`] = `
 </DocumentFragment>
 `;
 
-exports[`<Modal /> should be stretched 1`] = `
+exports[`<ModalElement /> should be stretched 1`] = `
 <DocumentFragment>
   .c0 {
   width: 500px;
@@ -140,7 +140,7 @@ exports[`<Modal /> should be stretched 1`] = `
 </DocumentFragment>
 `;
 
-exports[`<Modal /> should render component 1`] = `
+exports[`<ModalElement /> should render component 1`] = `
 <DocumentFragment>
   .c0 {
   width: 500px;

@@ -1,7 +1,7 @@
 import Footer from '@smart-react-components/core/Element/Footer'
 import { StyledProps } from '@smart-react-components/core/styled-props'
 import styled from 'styled-components'
-import ButtonList from '../../components/Button/ButtonList'
+import ButtonList from '../components/Button/ButtonList'
 
 interface Props extends StyledProps {
   hasBorder?: boolean

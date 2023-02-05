@@ -5,8 +5,8 @@ import CSSTransition from '@smart-react-components/transition/CSSTransition'
 import { TransitionAfterCallback, TransitionBeforeCallback } from '@smart-react-components/transition/types'
 import React from 'react'
 import { ThemeContext } from 'styled-components'
-import ModalElement from '../components/Modal'
-import OverlayElement from '../components/Modal/Overlay'
+import ModalElement from '../components/Modal/ModalElement'
+import OverlayElement from '../components/Modal/OverlayElement'
 import Overlay from '../Overlay'
 
 export interface Props extends
