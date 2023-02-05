@@ -2,7 +2,7 @@ import extractElementProps from '@smart-react-components/core/element-props'
 import clickEvents, { ClickEvents } from '@smart-react-components/core/element-props/click-events'
 import { PaletteProp, ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
-import AlertIconElement from './AlertIconElement'
+import AlertIconElement from '../components/Alert/AlertIconElement'
 
 export interface Props extends ClickEvents {
   children: JSX.Element

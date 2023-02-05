@@ -4,7 +4,7 @@ import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-compone
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { ContentElement, JSXElementProps, PaletteProp, Partial, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
-import AlertElement, { Content } from './AlertElement'
+import AlertElement, { Content } from '../components/Alert/AlertElement'
 
 export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,

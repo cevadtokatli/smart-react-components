@@ -2,7 +2,7 @@ import { wrapTheme } from '@smart-react-components/core/test'
 import { render } from '@testing-library/react'
 import React from 'react'
 import AlertElement, { Content } from './AlertElement'
-import AlertIcon from './AlertIcon'
+import AlertIcon from '../../Alert/AlertIcon'
 
 describe('<AlertElement />', () => {
   let props
