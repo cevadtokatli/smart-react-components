@@ -4,16 +4,17 @@ import { ContentElement, PaletteProp, SetState } from '@smart-react-components/c
 import { TransitionAfterCallback, TransitionBeforeCallback } from '@smart-react-components/transition/types'
 import React from 'react'
 import { ThemeContext } from 'styled-components'
-import Button from '../../Button'
-import ButtonList from '../../Button/ButtonList'
-import Modal from '../../Modal'
-import ModalBody from '../../Modal/ModalBody'
-import ModalFooter from '../../Modal/ModalFooter'
-import ModalHeader from '../../Modal/ModalHeader'
-import ModalTitle from '../../Modal/ModalTitle'
+import Button from '../Button'
+import ButtonList from '../Button/ButtonList'
+import Input from '../Input'
+import Modal from '../Modal'
+import ModalBody from '../Modal/ModalBody'
+import ModalFooter from '../Modal/ModalFooter'
+import ModalHeader from '../Modal/ModalHeader'
+import ModalTitle from '../Modal/ModalTitle'
 
 export interface Props {
-  action?: (isConfirmed: boolean) => (void | Promise<void>)
+  action?: (text: string, isConfirmed: boolean) => (void | Promise<void>)
   afterHide?: TransitionAfterCallback
   afterShow?: TransitionAfterCallback
   beforeHide?: TransitionBeforeCallback
@@ -22,11 +23,13 @@ export interface Props {
   cancelButtonPalette?: PaletteProp
   confirmButtonLabel?: string
   confirmButtonPalette?: PaletteProp
+  defaultValue?: string
+  message: string
+  placeholder?: string
   hasHideAnimation?: boolean
   hasShowAnimation?: boolean
   hasOverlayBackground?: boolean
   hasOverlayBlurEffect?: boolean
-  message: ContentElement
   setStatus?: SetState<boolean>
   status?: boolean
   title?: ContentElement
@@ -34,15 +37,26 @@ export interface Props {
   transitionDuration?: number
 }
 
-const Confirm: React.FC<Props> = ({ action, afterHide, afterShow, beforeHide, beforeShow, cancelButtonLabel, cancelButtonPalette, confirmButtonLabel, confirmButtonPalette, hasHideAnimation, hasShowAnimation, hasOverlayBackground, hasOverlayBlurEffect, message, setStatus, status, transitionClassName, transitionDuration, title }) => {
+const Prompt: React.FC<Props> = ({ action, afterHide, afterShow, beforeHide, beforeShow, cancelButtonLabel, cancelButtonPalette, confirmButtonLabel, confirmButtonPalette, defaultValue = '', hasHideAnimation, hasShowAnimation, hasOverlayBackground, hasOverlayBlurEffect, message, placeholder, setStatus, status, transitionClassName, transitionDuration, title }) => {
   const theme = React.useContext<Theme>(ThemeContext)
   const [isClicked, setClicked] = React.useState(false)
+  const [text, setText] = React.useState(() => defaultValue)
 
   useChangeEffect(() => {
     if (status) {
       setClicked(false)
     }
   }, [status])
+
+  useChangeEffect(() => {
+    if (status) {
+      setText(defaultValue)
+    }
+  }, [status])
+
+  useChangeEffect(() => {
+    setText(defaultValue)
+  }, [defaultValue])
 
   const handleClick = async (isConfirmed) => {
     if (isClicked) {
@@ -51,7 +65,7 @@ const Confirm: React.FC<Props> = ({ action, afterHide, afterShow, beforeHide, be
 
     setClicked(true)
 
-    const result = action?.(isConfirmed)
+    const result = action?.(text, isConfirmed)
 
     if (result instanceof Promise) {
       await result
@@ -81,7 +95,14 @@ const Confirm: React.FC<Props> = ({ action, afterHide, afterShow, beforeHide, be
           <ModalTitle>{title}</ModalTitle>
         </ModalHeader>
       ) }
-      <ModalBody>{message}</ModalBody>
+      <ModalBody>
+        <Input
+          label={message}
+          placeholder={placeholder}
+          setValue={setText}
+          value={text}
+        />
+      </ModalBody>
       <ModalFooter hasBorder={false}>
         <ButtonList>
           <Button
@@ -103,4 +124,4 @@ const Confirm: React.FC<Props> = ({ action, afterHide, afterShow, beforeHide, be
   )
 }
 
-export default Confirm
+export default Prompt

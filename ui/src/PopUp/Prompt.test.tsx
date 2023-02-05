@@ -1,7 +1,7 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { fireEvent, render } from '@testing-library/react'
 import React from 'react'
-import Prompt from './'
+import Prompt from './Prompt'
 
 describe('<Prompt />', () => {
   it('should render component', () => {

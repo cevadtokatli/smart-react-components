@@ -1,7 +1,7 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { fireEvent, render } from '@testing-library/react'
 import React from 'react'
-import Confirm from './'
+import Confirm from './Confirm'
 
 describe('<Confirm />', () => {
   it('should render component', () => {

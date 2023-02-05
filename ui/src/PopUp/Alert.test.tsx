@@ -1,7 +1,7 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { fireEvent, render } from '@testing-library/react'
 import React from 'react'
-import Alert from './'
+import Alert from './Alert'
 
 describe('<Alert />', () => {
   it('should render component', () => {
