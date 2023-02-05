@@ -1,0 +1,428 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonAddonElement /> should be disabled 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: .875rem;
+  padding: 0 0.45rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  border-right: 0;
+  border-bottom-left-radius: .125rem;
+  border-top-left-radius: .125rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: currentcolor;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color;
+  transition-property: background,border,color;
+  background: #0553AC;
+  border-color: #0553AC;
+  color: #fff;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<ButtonAddonElement /> should be separated 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: .875rem;
+  padding: 0 0.45rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  border-right: 0;
+  border-bottom-left-radius: .125rem;
+  border-top-left-radius: .125rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: currentcolor;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color;
+  transition-property: background,border,color;
+  background: #0553AC;
+  border-color: #0553AC;
+  color: #fff;
+  cursor: default;
+}
+
+.c1:hover {
+  background: #054D9F;
+  border-color: #054D9F;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<ButtonAddonElement /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: .875rem;
+  padding: 0 0.45rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  border-right: 0;
+  border-bottom-left-radius: .125rem;
+  border-top-left-radius: .125rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: currentcolor;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color;
+  transition-property: background,border,color;
+  background: #0553AC;
+  border-color: #0553AC;
+  color: #fff;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<ButtonAddonElement /> should render component at right 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: .875rem;
+  padding: 0 0.45rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  border-left: 0;
+  border-bottom-right-radius: .125rem;
+  border-top-right-radius: .125rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: currentcolor;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color;
+  transition-property: background,border,color;
+  background: #0553AC;
+  border-color: #0553AC;
+  color: #fff;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<ButtonAddonElement /> should render component disabled 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: .875rem;
+  padding: 0 0.45rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  border-right: 0;
+  border-bottom-left-radius: .125rem;
+  border-top-left-radius: .125rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: currentcolor;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color;
+  transition-property: background,border,color;
+  background: #0553AC;
+  border-color: #0553AC;
+  color: #fff;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<ButtonAddonElement /> should render component outline 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: .875rem;
+  padding: 0 0.45rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  border-right: 0;
+  border-bottom-left-radius: .125rem;
+  border-top-left-radius: .125rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: currentcolor;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color;
+  transition-property: background,border,color;
+  border-color: #0553AC;
+  color: #0553AC;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<ButtonAddonElement /> should render component outline with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: .875rem;
+  padding: 0 0.45rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  border-right: 0;
+  border-bottom-left-radius: .125rem;
+  border-top-left-radius: .125rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: currentcolor;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color;
+  transition-property: background,border,color;
+  border-color: #a7c9ee;
+  color: #a7c9ee;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<ButtonAddonElement /> should render component with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: .875rem;
+  padding: 0 0.45rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  border-right: 0;
+  border-bottom-left-radius: .125rem;
+  border-top-left-radius: .125rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: currentcolor;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color;
+  transition-property: background,border,color;
+  background: #a7c9ee;
+  border-color: #a7c9ee;
+  color: #033c7c;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<ButtonAddonElement /> should resize component responsively 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: .75rem;
+  padding: 0 0.4rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  border-right: 0;
+  border-bottom-left-radius: .125rem;
+  border-top-left-radius: .125rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: currentcolor;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color;
+  transition-property: background,border,color;
+  background: #0553AC;
+  border-color: #0553AC;
+  color: #fff;
+}
+
+@media (min-width:768px) {
+  .c0 {
+    font-size: .875rem;
+    padding: 0 0.45rem;
+  }
+}
+
+@media (min-width:992px) {
+  .c0 {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
