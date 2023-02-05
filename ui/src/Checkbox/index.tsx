@@ -6,7 +6,7 @@ import React from 'react'
 import FormInlineLabel from '../components/Form/FormInlineLabel'
 import HiddenInput from '../components/Form/HiddenInput'
 import { FormValue, OrderPosition } from '../types'
-import CheckboxElement from './CheckboxElement'
+import CheckboxElement from '../components/Checkbox/CheckboxElement'
 
 export { OrderPosition as Position } from '../types'
 

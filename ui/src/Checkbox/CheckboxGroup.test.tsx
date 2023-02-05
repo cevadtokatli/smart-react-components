@@ -1,8 +1,8 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { render } from '@testing-library/react'
 import React from 'react'
-import CheckboxGroup from './'
-import Checkbox from '../'
+import CheckboxGroup from './CheckboxGroup'
+import Checkbox from './'
 
 describe('<CheckboxGroup />', () => {
   it('should render component', () => {
