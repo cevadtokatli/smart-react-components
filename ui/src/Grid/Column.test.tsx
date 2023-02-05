@@ -1,7 +1,7 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { render } from '@testing-library/react'
 import React from 'react'
-import Column from './'
+import Column from './Column'
 
 describe('<Column />', () => {
   it('should render component with default props', () => {

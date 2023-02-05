@@ -2,7 +2,7 @@ import Div from '@smart-react-components/core/Element/Div'
 import { StyledProps } from '@smart-react-components/core/styled-props'
 import { Partial, ResponsiveProp } from '@smart-react-components/core/types'
 import styled from 'styled-components'
-import { columns } from '../../constants/grid'
+import { columns } from '../constants/grid'
 
 export interface Props extends
   StyledProps,

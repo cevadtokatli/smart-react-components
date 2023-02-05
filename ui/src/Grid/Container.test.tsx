@@ -1,7 +1,7 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { render } from '@testing-library/react'
 import React from 'react'
-import Container from './'
+import Container from './Container'
 
 describe('<Container />', () => {
   it('should render component with default props', () => {
