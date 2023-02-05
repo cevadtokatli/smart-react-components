@@ -4,8 +4,8 @@ import React from 'react'
 import CaretDown from '../../icons/CaretDown'
 import CaretUp from '../../icons/CaretUp'
 import { OrderPosition } from '../../types'
-import InputAddon from '../InputAddon'
-import InputElement from '../InputElement'
+import InputAddon from '../../Input/InputAddon'
+import InputElement from './InputElement'
 import InputNumberTemplateElement from './InputNumberTemplateElement'
 
 interface Props extends Partial<ResponsiveProp<'inputSize', SizeProp>> {

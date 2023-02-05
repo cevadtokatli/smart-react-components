@@ -4,7 +4,7 @@ import Badge from '../../Badge'
 import BadgeIcon from '../../Badge/BadgeIcon'
 import BadgeList from '../../Badge/BadgeList'
 import CloseIcon from '../../icons/Close'
-import InputElement, { InputPlaceholder } from '../InputElement'
+import InputElement, { InputPlaceholder } from './InputElement'
 
 interface Props extends Partial<ResponsiveProp<'inputSize', SizeProp>> {
   children?: JSX.Element

@@ -2,8 +2,8 @@ import extractElementProps from '@smart-react-components/core/element-props'
 import clickEvents, { ClickEvents } from '@smart-react-components/core/element-props/click-events'
 import { ContentElement, PaletteProp, Partial, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
-import { OrderPosition } from '../../types'
-import InputAddonElement from './InputAddonElement'
+import { OrderPosition } from '../types'
+import InputAddonElement from '../components/Input/InputAddonElement'
 
 export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,

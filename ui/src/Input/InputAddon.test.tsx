@@ -1,8 +1,8 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { render } from '@testing-library/react'
 import React from 'react'
-import { OrderPosition } from '../../types'
-import InputAddon from '.'
+import { OrderPosition } from '../types'
+import InputAddon from './InputAddon'
 
 describe('<InputAddon />', () => {
   let props

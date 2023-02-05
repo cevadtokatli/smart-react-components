@@ -5,8 +5,8 @@ import { PaletteProp, Partial, ResponsiveProp, ShapeProp, SizeProp } from '@smar
 import { getColor } from '@smart-react-components/core/util/color'
 import React from 'react'
 import styled from 'styled-components'
-import { toCSSValue } from '../util/css'
-import { placeholder } from '../util/dom'
+import { toCSSValue } from '../../util/css'
+import { placeholder } from '../../util/dom'
 
 export const InputPlaceholder = styled(Div).attrs<{ children?: string }>(({ children }) => ({
   ...(!children && { children: <>&nbsp;</>, userSelect: 'none' }),

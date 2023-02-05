@@ -3,8 +3,8 @@ import { StyledProps } from '@smart-react-components/core/styled-props'
 import { ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
 import styled from 'styled-components'
 import { toCSSValue } from '../../util/css'
-import InputAddonElement from '../InputAddon/InputAddonElement'
-import InputElement from '../InputElement'
+import InputAddonElement from './InputAddonElement'
+import InputElement from './InputElement'
 
 interface Props extends
   StyledProps,

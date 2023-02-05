@@ -10,7 +10,7 @@ import FormBlockLabel from '../components/FormBlockLabel'
 import useAddons from '../hooks/useAddons'
 import useInputMethods from '../hooks/useInputMethods'
 import { InputType } from '../types'
-import InputElement from './InputElement'
+import InputElement from '../components/Input/InputElement'
 import InputAddon from './InputAddon'
 
 export interface Props extends
