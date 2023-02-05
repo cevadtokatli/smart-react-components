@@ -13,7 +13,12 @@ exports[`<Tooltip /> should render component when status true 1`] = `
   <button>
     Button
   </button>
-  .c3 {
+  .c0 {
+  font-size: .875rem;
+  padding: .3rem .6rem;
+}
+
+.c3 {
   position: absolute;
   stroke-width: 20px;
 }
@@ -45,11 +50,6 @@ exports[`<Tooltip /> should render component when status true 1`] = `
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
-}
-
-.c0 {
-  font-size: .875rem;
-  padding: .3rem .6rem;
 }
 
 .c1 {
