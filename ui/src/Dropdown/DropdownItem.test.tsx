@@ -1,7 +1,7 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { createEvent, fireEvent, render, waitFor } from '@testing-library/react' 
 import React from 'react'
-import DropdownItem from './'
+import DropdownItem from './DropdownItem'
 
 describe('<DropdownItem />', () => {
   let children

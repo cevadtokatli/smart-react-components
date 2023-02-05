@@ -1,9 +1,9 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { render } from '@testing-library/react' 
 import React from 'react'
-import DropdownList from './'
-import DropdownCategory from '../DropdownCategory'
-import DropdownItem from '../DropdownItem'
+import DropdownList from './DropdownList'
+import DropdownCategory from './DropdownCategory'
+import DropdownItem from './DropdownItem'
 
 describe('<DropdownList />', () => {
   it('should render component', () => {

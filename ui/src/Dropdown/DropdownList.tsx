@@ -1,6 +1,6 @@
 import { PaletteProp, Partial, ResponsiveProp, SetState, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
-import DropdownListElement from './DropdownListElement'
+import DropdownListElement from '../components/Dropdown/DropdownListElement'
 
 export interface Props extends Partial<ResponsiveProp<'size', SizeProp>> {
   children: JSX.Element | JSX.Element[]

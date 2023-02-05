@@ -1,7 +1,7 @@
 import { ContentElement, PaletteProp, SetState } from '@smart-react-components/core/types'
 import React from 'react'
-import WaveEffect from '../../WaveEffect'
-import DropdownItemElement from './DropdownItemElement'
+import WaveEffect from '../WaveEffect'
+import DropdownItemElement from '../components/Dropdown/DropdownItemElement'
 
 export interface Props {
   children: ContentElement
