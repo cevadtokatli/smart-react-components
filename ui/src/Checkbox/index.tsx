@@ -3,8 +3,8 @@ import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-compone
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { ContentElement, PaletteProp, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
-import FormInlineLabel from '../components/FormInlineLabel'
-import HiddenInput from '../components/HiddenInput'
+import FormInlineLabel from '../components/Form/FormInlineLabel'
+import HiddenInput from '../components/Form/HiddenInput'
 import { FormValue, OrderPosition } from '../types'
 import CheckboxElement from './CheckboxElement'
 

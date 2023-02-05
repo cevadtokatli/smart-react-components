@@ -2,7 +2,7 @@ import { Property, Resize } from '@smart-react-components/core/styled-props/css-
 import { addEventListener, debounce, removeEventListener } from '@smart-react-components/core/util/dom'
 import React from 'react'
 import Input, { Props as InputProps } from '../Input'
-import InputElement from '../Input/InputElement'
+import InputElement from '../components/Input/InputElement'
 
 export interface Props extends Omit<InputProps, 'type'> {
   areaMaxHeight?: number
