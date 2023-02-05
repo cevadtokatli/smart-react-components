@@ -1,15 +1,11 @@
-import { Theme } from '@smart-react-components/core'
+import { Theme } from '@smart-react-components/core/theme'
 import { PaletteProp } from '@smart-react-components/core/types'
 import { addEventListener, isMobile, removeEventListener } from '@smart-react-components/core/util/dom'
 import CSSTransitionGroup from '@smart-react-components/transition/CSSTransitionGroup'
 import React from 'react'
 import { ThemeContext } from 'styled-components'
-import WaveEffectElement from './WaveEffectElement'
-
-interface EffectItem {
-  element: JSX.Element
-  endTime: number
-}
+import WaveEffectElement from '../components/WaveEffect/WaveEffectElement'
+import { EffectItem } from '../types/wave-effect'
 
 export interface Props {
   children: JSX.Element
