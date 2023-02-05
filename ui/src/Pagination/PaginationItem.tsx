@@ -3,8 +3,8 @@ import extractElementProps from '@smart-react-components/core/element-props'
 import clickEvents, { ClickEvents } from '@smart-react-components/core/element-props/click-events'
 import { ContentElement, JSXElementProps, PaletteProp, ShapeProp } from '@smart-react-components/core/types'
 import React from 'react'
-import PaginationItemElement from './PaginationItemElement'
-import WaveEffect from '../../WaveEffect'
+import PaginationItemElement from '../components/Pagination/PaginationItemElement'
+import WaveEffect from '../WaveEffect'
 
 export interface Props extends ClickEvents {
   children: ContentElement

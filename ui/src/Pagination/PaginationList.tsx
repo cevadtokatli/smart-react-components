@@ -2,7 +2,7 @@ import extractElementProps from '@smart-react-components/core/element-props'
 import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
 import { JSXElementProps, PaletteProp, ShapeProp } from '@smart-react-components/core/types'
 import React from 'react'
-import PaginationListElement from './PaginationListElement'
+import PaginationListElement from '../components/Pagination/PaginationListElement'
 
 export interface Props extends IntrinsicStyledProps {
   children: JSX.Element[]

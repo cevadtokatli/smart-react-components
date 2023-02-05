@@ -1,9 +1,9 @@
 import A from '@smart-react-components/core/Element/A'
 import useLink, { LinkProps } from '@smart-react-components/router/hooks/useLink'
 import React from 'react'
-import WaveEffect from '../../WaveEffect'
-import { PrivateProps as PaginationItemPrivateProps } from '../PaginationItem'
-import PaginationItemElement from '../PaginationItem/PaginationItemElement'
+import WaveEffect from '../WaveEffect'
+import { PrivateProps as PaginationItemPrivateProps } from './PaginationItem'
+import PaginationItemElement from '../components/Pagination/PaginationItemElement'
 
 export interface Props extends LinkProps {}
 
