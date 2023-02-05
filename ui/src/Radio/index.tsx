@@ -4,8 +4,8 @@ import { ContentElement, PaletteProp, Partial, ResponsiveProp, SetState, SizePro
 import React from 'react'
 import FormInlineLabel from '../components/FormInlineLabel'
 import HiddenInput from '../components/HiddenInput'
+import RadioElement from '../components/Radio/RadioElement'
 import { FormValue, OrderPosition } from '../types'
-import RadioElement from './RadioElement'
 
 export { OrderPosition as Position } from '../types'
 

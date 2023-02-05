@@ -3,8 +3,8 @@ import { StyledProps } from '@smart-react-components/core/styled-props'
 import { PaletteProp, Partial, ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import styled from 'styled-components'
-import { toCSSValue } from '../util/css'
-import { calculateRadioInnerCircleSize } from '../util/radio'
+import { toCSSValue } from '../../util/css'
+import { calculateRadioInnerCircleSize } from '../../util/radio'
 
 const Container = styled.div(({ theme }) => `
   align-items: center;

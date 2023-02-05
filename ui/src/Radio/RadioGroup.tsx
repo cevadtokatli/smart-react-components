@@ -2,10 +2,10 @@ import extractElementProps from '@smart-react-components/core/element-props'
 import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
 import { PaletteProp, Partial, ResponsiveProp, SetState, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
-import FormGroup from '../../components/FormGroup'
-import { FormValue, OrderPosition } from '../../types'
+import FormGroup from '../components/FormGroup'
+import { FormValue, OrderPosition } from '../types'
 
-export { OrderPosition as Position } from '../../types'
+export { OrderPosition as Position } from '../types'
 
 export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,

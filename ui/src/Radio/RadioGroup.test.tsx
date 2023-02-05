@@ -1,8 +1,8 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { render } from '@testing-library/react'
 import React from 'react'
-import RadioGroup from './'
-import Radio from '../'
+import RadioGroup from './RadioGroup'
+import Radio from './'
 
 describe('<RadioGroup />', () => {
   it('should render component', () => {
