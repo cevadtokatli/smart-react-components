@@ -1,8 +1,18 @@
 import { getColor } from '@smart-react-components/core/util/color'
 import { ColorPickerFormat } from '../types/color-picker'
-import { convertColor, isEqual, isLight } from './color-picker'
+import { colorToString, convertColor, isEqual, isLight } from './color-picker'
 
 describe('color', () => {
+  it('should convert color to string by given format', () => {
+    expect(colorToString(getColor('#FFF'), ColorPickerFormat.HEX)).toEqual('#FFFFFF')
+    expect(colorToString(getColor('rgba(255, 255, 255, .5)'), ColorPickerFormat.HEX)).toEqual('rgba(255, 255, 255, 0.5)')
+    expect(colorToString(getColor('#FFF'), ColorPickerFormat.RGB)).toEqual('rgb(255, 255, 255)')
+    expect(colorToString(getColor('rgba(255, 255, 255, .5)'), ColorPickerFormat.RGB)).toEqual('rgba(255, 255, 255, 0.5)')
+    expect(colorToString(getColor('#FFF'), ColorPickerFormat.HSL)).toEqual('hsl(0, 0%, 100%)')
+    expect(colorToString(getColor('rgba(255, 255, 255, .5)'), ColorPickerFormat.HSL)).toEqual('hsla(0, 0%, 100%, 0.5)')
+    expect(colorToString(null, ColorPickerFormat.HEX)).toBeFalsy()
+  })
+
   it('should convert color by format', () => {
     expect(convertColor(getColor('#0000FF'), ColorPickerFormat.HEX)).toEqual('#0000FF')
     expect(convertColor(getColor('#0000FF'), ColorPickerFormat.RGB)).toEqual('rgb(0, 0, 255)')

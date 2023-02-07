@@ -2,6 +2,25 @@ import { Color, Nullable } from '@smart-react-components/core/types'
 import { ColorPickerFormat } from '../types/color-picker'
 
 /**
+ * Converts color to string by given format.
+ */
+export const colorToString = (color: Nullable<Color>, format: ColorPickerFormat): Nullable<string> => {
+  if (!color) {
+    return null
+  }
+
+  if (format === ColorPickerFormat.HSL) {
+    return color.hsl().toString()
+  }
+
+  if (format === ColorPickerFormat.RGB || color.valpha < 1) {
+    return color.rgb().toString()
+  }
+
+  return color.hex().toString()
+}
+
+/**
  * Calculates new position of the dragger.
  */
 export const calculateDraggerPosition = (e: MouseEvent, pickerEl: HTMLDivElement, draggerSize: number): { left: number, top: number, x: number, y: number } => {

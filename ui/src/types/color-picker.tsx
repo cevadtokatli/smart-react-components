@@ -1,10 +1,14 @@
-import { Color } from '@smart-react-components/core/types'
+import { Color, Nullable } from '@smart-react-components/core/types'
 import { MutableRefObject } from 'react'
 
 export enum ColorPickerFormat {
   HEX,
   RGB,
   HSL,
+}
+
+export interface ConsoleRef {
+  onDrag: (value: Nullable<Color>) => void
 }
 
 export interface PickerProps {
