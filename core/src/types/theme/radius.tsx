@@ -8,6 +8,7 @@ interface DefaultRadiusAttributes {
   button: Shape<string>
   dropdown: string
   checkbox: Shape<string>
+  colorPicker: string
   input: Shape<string>
   modal: Shape<string>
   pagination: Shape<string>

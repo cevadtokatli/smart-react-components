@@ -7,6 +7,7 @@ import fontSize from './font-size'
 import fontWeight from './font-weight'
 import i18n from './i18n'
 import length from './length'
+import media from './media'
 import opacity from './opacity'
 import createPaletteItem from './palette'
 import radius from './radius'
@@ -25,6 +26,7 @@ const defaultTheme: Theme = {
     fontWeight,
     i18n,
     length,
+    media,
     opacity,
     palette: {},
     radius,

@@ -22,6 +22,15 @@ interface DefaultSizeAttributes {
     padding: Coordinator<string>
   }>
   checkbox: Size<string>
+  colorPicker: Size<{
+    majorDraggerSize: string
+    majorPickerSize: string
+    minorDraggerSize: string
+    minorPickerWidth: string
+    paletteItemSize: string
+    space: string
+    width: string
+  }>
   dropdown: Size<{
     fontSize: string
     margin: Coordinator<string>

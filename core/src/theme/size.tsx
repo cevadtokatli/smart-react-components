@@ -114,6 +114,35 @@ const sizeAttributes: SizeAttributes = {
     medium: '16px',
     large: '20px',
   },
+  colorPicker: {
+    small: {
+      majorDraggerSize: '1.1rem',
+      majorPickerSize: '125px',
+      minorDraggerSize: '.875rem',
+      minorPickerWidth: '20px',
+      paletteItemSize: '28px',
+      space: '.6rem',
+      width: '200px',
+    },
+    medium: {
+      majorDraggerSize: '1.1rem',
+      majorPickerSize: '175px',
+      minorDraggerSize: '.875rem',
+      minorPickerWidth: '30px',
+      paletteItemSize: '23px',
+      space: '.6rem',
+      width: '275px',
+    },
+    large: {
+      majorDraggerSize: '1.1rem',
+      majorPickerSize: '250px',
+      minorDraggerSize: '.875rem',
+      minorPickerWidth: '30px',
+      paletteItemSize: '32px',
+      space: '.6rem',
+      width: '350px',
+    },
+  },
   dropdown: {
     small: {
       fontSize: '.875rem',

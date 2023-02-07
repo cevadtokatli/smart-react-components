@@ -17,6 +17,7 @@ const radiusAttributes: RadiusAttributes = {
     rectangle: '.125rem',
     rounded: '1.8rem',
   },
+  colorPicker: '.25rem',
   dropdown: '.2rem',
   modal: {
     rectangle: '.3rem',

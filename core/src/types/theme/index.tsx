@@ -5,6 +5,7 @@ import FontSizeAttributes from './font-size'
 import FontWeightAttributes from './font-weight'
 import I18NAttributes from './i18n'
 import LengthAttributes from './length'
+import MediaAttributes from './media'
 import OpacityAttributes from './opacity'
 import Palette, { InputPalette } from './palette'
 import RadiusAttributes from './radius'
@@ -21,6 +22,7 @@ interface DefaultThemeAttributes<PaletteType> {
   fontWeight: FontWeightAttributes
   i18n: I18NAttributes
   length: LengthAttributes
+  media: MediaAttributes
   opacity: OpacityAttributes
   palette: PaletteType
   radius: RadiusAttributes
