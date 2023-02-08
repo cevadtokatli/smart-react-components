@@ -55,6 +55,7 @@ export default styled(Input).attrs<Props>(({ hasLeftAddon, hasRightAddon, hasSep
   border-radius: ${theme.$.radius.input[shape]};
   flex: 1 1 auto;
   font-family: ${theme.$.fontFamily.input};
+  min-width: 1px;
   transition: 200ms 0s ease-in-out;
   transition-property: background, border, color, fill;
   -webkit-appearance: none;

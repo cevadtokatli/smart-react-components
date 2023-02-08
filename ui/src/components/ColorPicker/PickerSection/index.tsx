@@ -64,7 +64,7 @@ const PickerSection: React.FC<Props> = ({ hasOpacityPicker, onDrag }) => {
       color.current = value
       majorPicker.current.onChange()
       minorPicker.current.onChange()
-      opacityPicker.current.onChange()
+      opacityPicker.current?.onChange()
     }
   }, [value])
 

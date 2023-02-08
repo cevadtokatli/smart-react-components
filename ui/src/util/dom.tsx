@@ -1,5 +1,3 @@
-import { Theme } from '@smart-react-components/core/theme'
-import { Partial, ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
 import { isServer } from '@smart-react-components/core/util/dom'
 
 export const mouseWheel = ['wheel', 'mousewheel', 'DOMMouseScroll']
@@ -63,31 +61,6 @@ export const calculateShownPart = (el: HTMLElement | null): { left: number, top:
  * Checks if an element can be rendered in the React portal.
  */
 export const canBeRenderedInPortal = () => !isServer && process.env.NODE_ENV !== 'test'
-
-/**
- * Gets breakpoint key by window size.
- */
-export const getBreakpointKey = ({ size, sizeSm, sizeMd, sizeLg, sizeXl }: Partial<ResponsiveProp<'size', SizeProp>>, theme: Theme): string => {
-  const width = window.innerWidth
-
-  if (sizeXl && width > theme.$.length.breakpoint.xlarge) {
-    return sizeXl
-  }
-
-  if (sizeLg && width > theme.$.length.breakpoint.large) {
-    return sizeLg
-  }
-
-  if (sizeMd && width > theme.$.length.breakpoint.medium) {
-    return sizeMd
-  }
-
-  if (sizeSm && width > theme.$.length.breakpoint.small) {
-    return sizeSm
-  }
-
-  return size
-}
 
 /**
  * Gets scroll parent of the given element.
