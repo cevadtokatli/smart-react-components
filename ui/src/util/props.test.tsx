@@ -1,5 +1,5 @@
 import { OrderPosition } from '../types'
-import { applyResponsiveStyledProp, getReverseOrderPosition } from './props'
+import { applyResponsiveStyledProp, applyResponsiveStyledProps, getReverseOrderPosition } from './props'
 
 describe('props', () => {
   it('should apply the given responsive prop', () => {
@@ -7,6 +7,20 @@ describe('props', () => {
       iconSize: '$size.icon.small',
       iconSizeMd: '$size.icon.medium',
       iconSizeLg: '$size.icon.large',
+    })
+  })
+
+  it('should apply the given responsive props', () => {
+    expect(applyResponsiveStyledProps({ size: 'small', sizeMd: 'medium', sizeLg: 'large' }, 'size', {
+      height: v => `$size.icon.${v}`,
+      width: v => `$size.icon.${v}`,
+    })).toEqual({
+      height: '$size.icon.small',
+      width: '$size.icon.small',
+      heightMd: '$size.icon.medium',
+      widthMd: '$size.icon.medium',
+      heightLg: '$size.icon.large',
+      widthLg: '$size.icon.large',
     })
   })
 

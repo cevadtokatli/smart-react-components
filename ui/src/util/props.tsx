@@ -18,6 +18,26 @@ export const applyResponsiveStyledProp = (sizeProps: JSXElementProps, sizePropKe
 })
 
 /**
+ * Apply the given props to each breakpoint which has a corresponding size prop.
+ *
+ * @param sizeProps - Object that holds size props.
+ * @param sizePropKey - Name of the size prop.
+ * @param responsiveProps - Object key indicates name of the applied prop, and its value is invoked with the given size prop value to return the responsive prop value.
+ */
+export const applyResponsiveStyledProps = (sizeProps: JSXElementProps, sizePropKey: string, responsiveProps: { [key: string]: (size: SizeProp) => Value }): JSXElementProps => {
+  let result = {}
+
+  Object.keys(responsiveProps).forEach(key => {
+    result = {
+      ...result,
+      ...applyResponsiveStyledProp(sizeProps, sizePropKey, key, responsiveProps[key]),
+    }
+  })
+
+  return result
+}
+
+/**
  * Returns reverse value of the order position.
  * If value is left, returns right.
  * If value is right, returns left.
