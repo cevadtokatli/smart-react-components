@@ -34,7 +34,7 @@ exports[`<Select /> should render component 1`] = `
 }
 
 .c3 {
-  font-size: 1rem;
+  font-size: .875rem;
 }
 
 .c3 > div {
@@ -49,6 +49,7 @@ exports[`<Select /> should render component 1`] = `
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   font-family: inherit;
+  min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;

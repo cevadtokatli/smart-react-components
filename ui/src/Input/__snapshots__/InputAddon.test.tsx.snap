@@ -14,6 +14,7 @@ exports[`<InputAddon /> should render component 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: currentcolor;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -30,7 +31,6 @@ exports[`<InputAddon /> should render component 1`] = `
   background: #fff;
   border-color: #dbdbdb;
   color: #323a46;
-  fill: #323a46;
 }
 
 <div

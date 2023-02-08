@@ -28,6 +28,7 @@ exports[`<InputNumberTemplate /> should render component 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: currentcolor;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -44,7 +45,6 @@ exports[`<InputNumberTemplate /> should render component 1`] = `
   background: #fff;
   border-color: #0665d0;
   color: #323a46;
-  fill: #323a46;
 }
 
 .c2 {
@@ -54,6 +54,7 @@ exports[`<InputNumberTemplate /> should render component 1`] = `
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   font-family: inherit;
+  min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;

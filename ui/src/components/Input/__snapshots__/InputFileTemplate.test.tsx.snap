@@ -113,7 +113,7 @@ exports[`<InputFileTemplate /> should render multiple values 1`] = `
 }
 
 .c0 {
-  font-size: 1rem;
+  font-size: .875rem;
   padding: .45rem .9rem;
 }
 
@@ -124,6 +124,7 @@ exports[`<InputFileTemplate /> should render multiple values 1`] = `
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   font-family: inherit;
+  min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
@@ -215,7 +216,7 @@ exports[`<InputFileTemplate /> should render multiple values 1`] = `
 exports[`<InputFileTemplate /> should render placeholder 1`] = `
 <DocumentFragment>
   .c0 {
-  font-size: 1rem;
+  font-size: .875rem;
   padding: .45rem .9rem;
 }
 
@@ -226,6 +227,7 @@ exports[`<InputFileTemplate /> should render placeholder 1`] = `
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   font-family: inherit;
+  min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
@@ -272,7 +274,7 @@ exports[`<InputFileTemplate /> should render placeholder 1`] = `
 exports[`<InputFileTemplate /> should render single value 1`] = `
 <DocumentFragment>
   .c0 {
-  font-size: 1rem;
+  font-size: .875rem;
   padding: .45rem .9rem;
 }
 
@@ -283,6 +285,7 @@ exports[`<InputFileTemplate /> should render single value 1`] = `
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   font-family: inherit;
+  min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
