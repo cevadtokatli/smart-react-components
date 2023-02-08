@@ -5,6 +5,7 @@ import InputAddonElement from '../../Input/InputAddonElement'
 import InputElement from '../../Input/InputElement'
 
 export default styled(Section)<StyledProps>(({ theme }: StyledProps) => `
+  background-clip: content-box;
   background-image: url('${theme.$.media.opacityBackground}');
   border-radius: ${theme.$.radius.input.rectangle};
 
