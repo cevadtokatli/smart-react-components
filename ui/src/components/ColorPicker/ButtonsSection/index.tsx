@@ -8,6 +8,7 @@ import ButtonList from '../../../Button/ButtonList'
 import ColorPickerProps from '../../../context/ColorPickerProps'
 import SaveIcon from '../../../icons/Save'
 import CancelIcon from '../../../icons/Cancel'
+import { applyResponsiveStyledProp } from '../../../util/props'
 
 interface Props {
   isSoft: boolean
@@ -36,11 +37,7 @@ const ButtonsSection: React.FC<Props> = ({ cancelLabel, saveLabel, isSoft, onCan
         sizeXl={colorPickerSizeXl}
       >
         <Button
-          marginRight={`$size.colorPicker.${colorPickerSize}.space`}
-          {...(colorPickerSizeSm && { marginRightSm: `$size.colorPicker.${colorPickerSizeSm}.space` })}
-          {...(colorPickerSizeMd && { marginRightMd: `$size.colorPicker.${colorPickerSizeMd}.space` })}
-          {...(colorPickerSizeLg && { marginRightLg: `$size.colorPicker.${colorPickerSizeLg}.space` })}
-          {...(colorPickerSizeXl && { marginRightXl: `$size.colorPicker.${colorPickerSizeXl}.space` })}
+          {...applyResponsiveStyledProp({ colorPickerSize, colorPickerSizeSm, colorPickerSizeMd, colorPickerSizeLg, colorPickerSizeXl }, 'colorPickerSize', 'marginRight', v => `$size.colorPicker.${v}.space`)}
           onClick={e => onSave(e as any)}
         >
           <SaveIcon />

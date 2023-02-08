@@ -1,16 +1,20 @@
-import { Nullable, SizeProp } from '@smart-react-components/core/types'
+import { JSXElementProps, SizeProp, Value } from '@smart-react-components/core/types'
 import { OrderPosition } from '../types'
 
 /**
- * Gets icon size based on the given generic size props
+ * Apply the given prop to each breakpoint which has a corresponding size prop.
+ *
+ * @param sizeProps - Object that holds size props.
+ * @param sizePropKey - Name of the size prop.
+ * @param responsivePropKey - Name of the applied prop.
+ * @param valueCallback - It is invoked with the given size prop value to return the responsive prop value.
  */
-export const getIconSizeProps = (size: SizeProp, sizeSm?: Nullable<SizeProp>, sizeMd?: Nullable<SizeProp>, sizeLg?: Nullable<SizeProp>, sizeXl?: Nullable<SizeProp>) => ({
-  height: `$size.icon.${size}`,
-  width: `$size.icon.${size}`,
-  ...(sizeSm && { heightSm: `$size.icon.${sizeSm}`, widthSm: `$size.icon.${sizeSm}` }),
-  ...(sizeMd && { heightMd: `$size.icon.${sizeMd}`, widthMd: `$size.icon.${sizeMd}` }),
-  ...(sizeLg && { heightLg: `$size.icon.${sizeLg}`, widthLg: `$size.icon.${sizeLg}` }),
-  ...(sizeXl && { heightXl: `$size.icon.${sizeXl}`, widthXl: `$size.icon.${sizeXl}` }),
+export const applyResponsiveStyledProp = (sizeProps: JSXElementProps, sizePropKey: string, responsivePropKey: string, valueCallback: (size: SizeProp) => Value): JSXElementProps => ({
+  [responsivePropKey]: valueCallback(sizeProps[sizePropKey]),
+  ...(sizeProps[`${sizePropKey}Sm`] && { [`${responsivePropKey}Sm`]: valueCallback(sizeProps[`${sizePropKey}Sm`]) }),
+  ...(sizeProps[`${sizePropKey}Md`] && { [`${responsivePropKey}Md`]: valueCallback(sizeProps[`${sizePropKey}Md`]) }),
+  ...(sizeProps[`${sizePropKey}Lg`] && { [`${responsivePropKey}Lg`]: valueCallback(sizeProps[`${sizePropKey}Lg`]) }),
+  ...(sizeProps[`${sizePropKey}Xl`] && { [`${responsivePropKey}Xl`]: valueCallback(sizeProps[`${sizePropKey}Xl`]) }),
 })
 
 /**

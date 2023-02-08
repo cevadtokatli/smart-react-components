@@ -18,7 +18,7 @@ import CloseIcon from '../icons/Close'
 import InputElement, { InputPlaceholder } from '../components/Input/InputElement'
 import { FormValue } from '../types'
 import { getInputValue } from '../util/form'
-import { getIconSizeProps } from '../util/props'
+import { applyResponsiveStyledProp } from '../util/props'
 import InputAddon from './SelectAddon'
 import useSelectBoxItemList from '../hooks/useSelectBoxItemList'
 
@@ -165,7 +165,7 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
             { content }
             <DropdownArrowIcon
               fill="currentcolor"
-              {...getIconSizeProps(props.size, props.sizeSm, props.sizeMd, props.sizeLg, props.sizeXl)}
+              {...applyResponsiveStyledProp(props, 'size', 'iconSize', v => `$size.icon.${v}`)}
             />
           </InputElement>
           { rightAddon && rightAddon }
