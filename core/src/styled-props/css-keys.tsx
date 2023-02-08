@@ -220,6 +220,7 @@ const cssKeys: CSSKeys = {
   height: 'height',
   hover: '&:hover{|}',
   hyphens: 'hyphens',
+  iconSize: 'height|width',
   imageOrientation: 'image-orientation',
   imageRendering: 'image-rendering',
   imageResolution: 'image-resolution',

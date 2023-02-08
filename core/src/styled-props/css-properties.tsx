@@ -503,6 +503,7 @@ export default interface CSSProperties {
   hangingPunctuation?: Property<HangingPunctuation>
   height?: Property<Size>
   hyphens?: Property<Hyphens>
+  iconSize?: Property<Size>
   imageOrientation?: Property<ImageOrientation>
   imageRendering?: Property<ImageRendering>
   imageResolution?: Property<ImageResolution>

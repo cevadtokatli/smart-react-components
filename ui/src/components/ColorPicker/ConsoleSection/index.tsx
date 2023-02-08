@@ -53,13 +53,7 @@ const ConsoleSection: React.FC<Props> = ({ format, initialValue, onRef }) => {
   }, [value])
 
   return (
-    <ConsoleSectionElement
-      colorPickerSize={colorPickerSize}
-      colorPickerSizeSm={colorPickerSizeSm}
-      colorPickerSizeMd={colorPickerSizeMd}
-      colorPickerSizeLg={colorPickerSizeLg}
-      colorPickerSizeXl={colorPickerSizeXl}
-    >
+    <ConsoleSectionElement>
       <Input
         hasBorder={false}
         leftAddon={(
