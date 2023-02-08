@@ -72,7 +72,7 @@ const sizeAttributes: SizeAttributes = {
     small: {
       fixedSize: '28px',
       fontSize: '.75rem',
-      iconSize: '.75rem',
+      iconSize: '1rem',
       margin: {
         x: '.25rem',
         y: '.25rem',
@@ -85,7 +85,7 @@ const sizeAttributes: SizeAttributes = {
     medium: {
       fixedSize: '32px',
       fontSize: '.875rem',
-      iconSize: '.875rem',
+      iconSize: '1.1rem',
       margin: {
         x: '.5rem',
         y: '.5rem',
@@ -98,7 +98,7 @@ const sizeAttributes: SizeAttributes = {
     large: {
       fixedSize: '36px',
       fontSize: '1rem',
-      iconSize: '1rem',
+      iconSize: '1.25rem',
       margin: {
         x: '.75rem',
         y: '.75rem',
@@ -116,30 +116,30 @@ const sizeAttributes: SizeAttributes = {
   },
   colorPicker: {
     small: {
-      majorDraggerSize: '1.1rem',
+      majorDraggerSize: '18px',
       majorPickerSize: '125px',
-      minorDraggerSize: '.875rem',
+      minorDraggerSize: '14px',
       minorPickerWidth: '20px',
       paletteItemSize: '28px',
-      space: '.6rem',
+      space: '10px',
       width: '200px',
     },
     medium: {
-      majorDraggerSize: '1.1rem',
+      majorDraggerSize: '18px',
       majorPickerSize: '175px',
-      minorDraggerSize: '.875rem',
+      minorDraggerSize: '14px',
       minorPickerWidth: '30px',
       paletteItemSize: '23px',
-      space: '.6rem',
+      space: '10px',
       width: '275px',
     },
     large: {
-      majorDraggerSize: '1.1rem',
+      majorDraggerSize: '18px',
       majorPickerSize: '250px',
-      minorDraggerSize: '.875rem',
+      minorDraggerSize: '14px',
       minorPickerWidth: '30px',
       paletteItemSize: '32px',
-      space: '.6rem',
+      space: '10px',
       width: '350px',
     },
   },
@@ -218,9 +218,9 @@ const sizeAttributes: SizeAttributes = {
     },
   },
   icon: {
-    small: '.85rem',
-    medium: '1rem',
-    large: '1.15rem',
+    small: '1rem',
+    medium: '1.1rem',
+    large: '1.25rem',
   },
   input: {
     small: {
