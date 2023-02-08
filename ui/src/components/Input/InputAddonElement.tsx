@@ -1,5 +1,5 @@
 import Div from '@smart-react-components/core/Element/Div'
-import Label from '@smart-react-components/core/Element/Label'
+import Svg from '@smart-react-components/core/Element/Svg'
 import { StyledProps } from '@smart-react-components/core/styled-props'
 import { PaletteProp, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import styled from 'styled-components'
@@ -22,10 +22,15 @@ interface Props extends
 }
 
 export default styled(Div).attrs<Props>(({ isSeparated }: Props) => ({
-  ...(isSeparated && { as: Label }),
+  ...(isSeparated && { as: 'label' }),
   getInputSize: (v, t) => `
     font-size: ${t.$.size.form.blockLabel[v].fontSize};
     padding: ${isSeparated ? t.$.size.input[v].padding.y : 0} ${toCSSValue(t.$.size.input[v].padding.x)(v => v / 2)};
+
+    ${Svg} {
+      height: ${t.$.size.icon[v]};
+      width: ${t.$.size.icon[v]};
+    }
   `,
 }))<Props>(({ theme, addonPosition, hasBorder, isDisabled, isFocused, isOutline, isSeparated, isSoft, palette, shape }: Props) => `
   align-items: center;
@@ -33,17 +38,11 @@ export default styled(Div).attrs<Props>(({ isSeparated }: Props) => ({
   border-top-${OrderPosition[addonPosition].toLowerCase()}-radius: ${theme.$.radius.input[shape]};
   box-sizing: border-box;
   display: inline-flex;
+  fill: currentcolor;
   flex: 0 0 auto;
   justify-content: center;
   transition: 200ms 0s ease-in-out;
   transition-property: background, border, color, fill;
-
-  ${isSeparated
-    ? `
-      align-self: flex-start;
-    `
-    : ''
-  }
 
   ${hasBorder
     ? `
@@ -58,7 +57,6 @@ export default styled(Div).attrs<Props>(({ isSeparated }: Props) => ({
       ${!isSoft
         ? `
           color: ${theme.$.palette[palette].font};
-          fill: ${theme.$.palette[palette].font};
 
           ${(isSeparated || !isFocused)
             ? `
@@ -73,7 +71,6 @@ export default styled(Div).attrs<Props>(({ isSeparated }: Props) => ({
         `
         : `
           color: ${theme.$.palette[palette].softFont};
-          fill: ${theme.$.palette[palette].softFont};
 
           ${(isSeparated || !isFocused)
             ? `
@@ -92,7 +89,6 @@ export default styled(Div).attrs<Props>(({ isSeparated }: Props) => ({
       background: ${theme.$.color.dynamic.background};
       border-color ${(isSeparated || !isFocused) ? theme.$.color.dynamic.accent : theme.$.palette[palette].main};
       color: ${theme.$.color.dynamic.font};
-      fill: ${theme.$.color.dynamic.font};
     `
   }
 
