@@ -16,7 +16,7 @@ interface Props {
 }
 
 const ConsoleSection: React.FC<Props> = ({ format, initialValue, onRef }) => {
-  const { colorPickerSize, colorPickerSizeSm, colorPickerSizeMd, colorPickerSizeLg, colorPickerSizeXl, updateValue, value } = React.useContext(ColorPickerProps)
+  const { colorPickerSize, colorPickerSizeSm, colorPickerSizeMd, colorPickerSizeLg, colorPickerSizeXl, isDisabled, updateValue, value } = React.useContext(ColorPickerProps)
 
   const clearButtonEl = React.useRef<HTMLDivElement>(null)
   const initialButtonEl = React.useRef<HTMLDivElement>(null)
@@ -53,7 +53,9 @@ const ConsoleSection: React.FC<Props> = ({ format, initialValue, onRef }) => {
   }, [value])
 
   return (
-    <ConsoleSectionElement>
+    <ConsoleSectionElement
+      isDisabled={isDisabled}
+    >
       <Input
         hasBorder={false}
         leftAddon={(
@@ -65,21 +67,19 @@ const ConsoleSection: React.FC<Props> = ({ format, initialValue, onRef }) => {
               },
             }}
             isSeparated
-            onClick={() => updateValue(initialValue)}
             ref={initialButtonEl}
+            {...(!isDisabled && { onClick: () => updateValue(initialValue) })}
           >
             <Palette
             />
           </InputAddon>
         )}
-        onBlur={e => updateValue((e.target as HTMLInputElement).value)}
-        onKeyDown={handleInputKeyDown}
         ref={inputEl}
         rightAddon={(
           <InputAddon
             isSeparated
-            onClick={() => updateValue(null)}
             ref={clearButtonEl}
+            {...(!isDisabled && { onClick: () => updateValue(null) })}
           >
             <Eraser />
           </InputAddon>
@@ -89,6 +89,10 @@ const ConsoleSection: React.FC<Props> = ({ format, initialValue, onRef }) => {
         sizeMd={colorPickerSizeMd}
         sizeLg={colorPickerSizeLg}
         sizeXl={colorPickerSizeXl}
+        {...!isDisabled && {
+          onBlur: e => updateValue((e.target as HTMLInputElement).value),
+          onKeyDown: handleInputKeyDown,
+        }}
       />
     </ConsoleSectionElement>
   )

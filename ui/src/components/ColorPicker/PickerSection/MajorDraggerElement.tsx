@@ -1,9 +1,5 @@
-import { StyledProps } from '@smart-react-components/core/styled-props'
 import styled from 'styled-components'
-import { Props as ColorPickerProps } from '../../../context/ColorPickerProps'
-import DraggerElement from './DraggerElement'
-
-interface Props extends StyledProps, ColorPickerProps {}
+import DraggerElement, { Props } from './DraggerElement'
 
 export default styled(DraggerElement).attrs<Props>({
   getColorPickerSize: (v, t) => `

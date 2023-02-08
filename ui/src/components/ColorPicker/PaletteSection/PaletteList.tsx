@@ -19,7 +19,7 @@ interface Props {
 }
 
 const PaletteList: React.FC<Props> = ({ canAddColorToPalette, format, paletteColors, setPaletteColors }) => {
-  const { colorPickerSize, colorPickerSizeSm, colorPickerSizeMd, colorPickerSizeLg, colorPickerSizeXl, updateValue, value } = React.useContext(ColorPickerProps)
+  const { colorPickerSize, colorPickerSizeSm, colorPickerSizeMd, colorPickerSizeLg, colorPickerSizeXl, isDisabled, updateValue, value } = React.useContext(ColorPickerProps)
 
   const handleAddItemClick = () => {
     if (value && !paletteColors.find(item => isEqual(getColor(item), value))) {
@@ -58,7 +58,8 @@ const PaletteList: React.FC<Props> = ({ canAddColorToPalette, format, paletteCol
             colorPickerSizeMd={colorPickerSizeMd}
             colorPickerSizeLg={colorPickerSizeLg}
             colorPickerSizeXl={colorPickerSizeXl}
-            onClick={handleAddItemClick}
+            isDisabled={isDisabled}
+            {...(!isDisabled && { onClick: handleAddItemClick })}
           >
             <Add />
           </PaletteItemElement>
@@ -72,7 +73,8 @@ const PaletteList: React.FC<Props> = ({ canAddColorToPalette, format, paletteCol
             colorPickerSizeLg={colorPickerSizeLg}
             colorPickerSizeXl={colorPickerSizeXl}
             key={item}
-            onClick={() => updateValue(item)}
+            isDisabled={isDisabled}
+            {...(!isDisabled && { onClick: () => updateValue(item) })}
           >
             <div
               style={{ background: item }}

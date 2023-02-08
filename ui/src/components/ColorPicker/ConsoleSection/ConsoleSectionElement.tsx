@@ -4,7 +4,11 @@ import styled from 'styled-components'
 import InputAddonElement from '../../Input/InputAddonElement'
 import InputElement from '../../Input/InputElement'
 
-export default styled(Section)<StyledProps>(({ theme }: StyledProps) => `
+interface Props extends StyledProps {
+  isDisabled: boolean
+}
+
+export default styled(Section)<Props>(({ theme, isDisabled }: Props) => `
   background-clip: content-box;
   background-image: url('${theme.$.media.opacityBackground}');
   border-radius: ${theme.$.radius.input.rectangle};
@@ -18,4 +22,12 @@ export default styled(Section)<StyledProps>(({ theme }: StyledProps) => `
       color: ${theme.$.color.dark.background};
     }
   }
+
+  ${isDisabled
+   ? `
+    opacity: ${theme.$.opacity.buttonDisabled};
+    pointer-events: none;
+   `
+    : ''
+  } 
 `)

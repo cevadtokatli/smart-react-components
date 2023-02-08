@@ -1,8 +1,7 @@
 import styled from 'styled-components'
-import { Props as ColorPickerProps } from '../../../context/ColorPickerProps'
-import PickerElement from './PickerElement'
+import PickerElement, { Props } from './PickerElement'
 
-export default styled(PickerElement).attrs<ColorPickerProps>({
+export default styled(PickerElement).attrs<Props>({
   getColorPickerSize: (v, t) => `
     height: ${t.$.size.colorPicker[v].majorPickerSize};
     width: ${t.$.size.colorPicker[v].minorPickerWidth};

@@ -90,9 +90,11 @@ const OpacityPicker: React.FC<PickerProps> = ({ color, onDrag, onEnd, onRef, onS
     <OpacityPickerElement
       {...props}
       bgElRef={bgEl}
-      onMouseDown={handleStart}
-      onTouchStart={handleStart}
       ref={pickerEl}
+      {...(!props.isDisabled && {
+        onMouseDown: handleStart,
+        onTouchStart: handleStart,
+      })}
     >
       <MinorDraggerElement
         {...props}

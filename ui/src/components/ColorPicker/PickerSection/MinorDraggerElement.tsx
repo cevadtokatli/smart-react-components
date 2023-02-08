@@ -1,10 +1,9 @@
 import styled from 'styled-components'
-import { Props as ColorPickerProps } from '../../../context/ColorPickerProps'
-import DraggerElement from './DraggerElement'
+import DraggerElement, { Props } from './DraggerElement'
 
-export default styled(DraggerElement).attrs<ColorPickerProps>({
+export default styled(DraggerElement).attrs<Props>({
   getColorPickerSize: (v, t) => `
     height: ${t.$.size.colorPicker[v].minorDraggerSize};
     width: ${t.$.size.colorPicker[v].minorDraggerSize};
   `,
-})<ColorPickerProps>``
+})<Props>``

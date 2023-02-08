@@ -1,11 +1,9 @@
 import Div from '@smart-react-components/core/Element/Div'
-import { StyledProps } from '@smart-react-components/core/styled-props'
 import React from 'react'
 import styled from 'styled-components'
-import { Props as ColorPickerProps } from '../../../context/ColorPickerProps'
-import PickerElement from './PickerElement'
+import PickerElement, { Props as PickerElementProps } from './PickerElement'
 
-interface Props extends StyledProps, ColorPickerProps {
+interface Props extends PickerElementProps {
   bgElRef: React.MutableRefObject<HTMLDivElement>
   children: JSX.Element
 }

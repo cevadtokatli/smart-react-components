@@ -130,9 +130,11 @@ const MajorPicker: React.FC<PickerProps> = ({ color, onDrag, onEnd, onRef, onSta
     <MajorPickerElement
       {...props}
       bgElRef={bgEl}
-      onMouseDown={handleStart}
-      onTouchStart={handleStart}
       ref={pickerEl}
+      {...(!props.isDisabled && {
+        onMouseDown: handleStart,
+        onTouchStart: handleStart,
+      })}
     >
       <MajorDraggerElement
         {...props}

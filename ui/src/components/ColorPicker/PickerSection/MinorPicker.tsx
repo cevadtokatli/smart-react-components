@@ -69,9 +69,11 @@ const MinorPicker: React.FC<PickerProps> = ({ color, onDrag, onEnd, onRef, onSta
   return (
     <MinorPickerElement
       {...props}
-      onMouseDown={handleStart}
-      onTouchStart={handleStart}
       ref={pickerEl}
+      {...(!props.isDisabled && {
+        onMouseDown: handleStart,
+        onTouchStart: handleStart,
+      })}
     >
       <MinorDraggerElement
         {...props}

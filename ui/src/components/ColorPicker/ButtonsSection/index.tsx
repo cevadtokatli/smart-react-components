@@ -20,7 +20,7 @@ interface Props {
 }
 
 const ButtonsSection: React.FC<Props> = ({ cancelLabel, saveLabel, isSoft, onCancel, onSave, palette }) => {
-  const { colorPickerSize, colorPickerSizeSm, colorPickerSizeMd, colorPickerSizeLg, colorPickerSizeXl } = React.useContext(ColorPickerProps)
+  const { colorPickerSize, colorPickerSizeSm, colorPickerSizeMd, colorPickerSizeLg, colorPickerSizeXl, isDisabled } = React.useContext(ColorPickerProps)
   const theme = React.useContext<Theme>(ThemeContext)
 
   return (
@@ -38,12 +38,16 @@ const ButtonsSection: React.FC<Props> = ({ cancelLabel, saveLabel, isSoft, onCan
       >
         <Button
           {...applyResponsiveStyledProp({ colorPickerSize, colorPickerSizeSm, colorPickerSizeMd, colorPickerSizeLg, colorPickerSizeXl }, 'colorPickerSize', 'marginRight', v => `$size.colorPicker.${v}.space`)}
+          isDisabled={isDisabled}
           onClick={e => onSave(e as any)}
         >
           <SaveIcon />
           <span>{saveLabel ?? theme.$.i18n.save}</span>
         </Button>
-        <Button onClick={e => onCancel(e as any)}>
+        <Button
+          isDisabled={isDisabled}
+          onClick={e => onCancel(e as any)}
+        >
           <CancelIcon />
           <span>{cancelLabel ?? theme.$.i18n.cancel}</span>
         </Button>

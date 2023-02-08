@@ -17,7 +17,7 @@ interface Props {
 }
 
 const PaletteSection: React.FC<Props> = ({ canAddColorToPalette, format, paletteColors, setPaletteColors }) => {
-  const { colorPickerSize, colorPickerSizeSm, colorPickerSizeMd, colorPickerSizeLg, colorPickerSizeXl } = React.useContext(ColorPickerProps)
+  const { colorPickerSize, colorPickerSizeSm, colorPickerSizeMd, colorPickerSizeLg, colorPickerSizeXl, isDisabled } = React.useContext(ColorPickerProps)
   const [localPaletteColors, setLocalPaletteColors] = React.useState<string[]>(() => defaultPaletteColors)
   const [status, setStatus] = React.useState<boolean>(() => false)
 
@@ -29,7 +29,7 @@ const PaletteSection: React.FC<Props> = ({ canAddColorToPalette, format, palette
           display="block"
           fill="$color.gray500"
           margin="auto"
-          onClick={() => setStatus(!status)}
+          {...(!isDisabled && { onClick: () => setStatus(!status) })}
         />
       </Section>
       <CSSTransition className="src-fade" duration={150} status={status}>

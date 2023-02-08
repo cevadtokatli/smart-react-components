@@ -6,7 +6,9 @@ import styled from 'styled-components'
 
 interface Props extends
   StyledProps,
-  ResponsiveProp<'colorPickerSize', SizeProp> {}
+  ResponsiveProp<'colorPickerSize', SizeProp> {
+  isDisabled: boolean
+}
 
 export default styled(Li).attrs<Props>(({
   getColorPickerSize: (v, t) => `
@@ -20,7 +22,7 @@ export default styled(Li).attrs<Props>(({
       width: ${t.$.size.icon[v]};
     }
   `,
-}))<Props>(({ theme }: Props) => `
+}))<Props>(({ theme, isDisabled }: Props) => `
   align-items: center;
   border-color: ${theme.$.color.gray400};
   border-radius: ${theme.$.radius.colorPicker};
@@ -35,5 +37,12 @@ export default styled(Li).attrs<Props>(({
 
   ${Svg} {
     fill: ${theme.$.color.gray500};
+  }
+
+  ${isDisabled
+   ? `
+    opacity: ${theme.$.opacity.buttonDisabled};
+   `
+    : ''
   }
 `)
