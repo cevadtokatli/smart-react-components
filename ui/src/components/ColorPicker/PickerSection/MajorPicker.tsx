@@ -67,8 +67,8 @@ const MajorPicker: React.FC<PickerProps> = ({ color, onDrag, onEnd, onRef, onSta
       draggerEl.current.style.top = `${top}px`
     } else {
       const draggerHalfSize = draggerEl.current.offsetWidth / 2
-      x = draggerEl.current.offsetLeft - draggerHalfSize
-      y = draggerEl.current.offsetTop - draggerHalfSize
+      x = draggerEl.current.offsetLeft + draggerHalfSize
+      y = draggerEl.current.offsetTop + draggerHalfSize
     }
 
     const currentColor = color.current ?? getColor('#FFF')
