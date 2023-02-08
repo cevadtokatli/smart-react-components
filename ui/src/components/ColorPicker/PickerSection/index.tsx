@@ -45,6 +45,20 @@ const PickerSection: React.FC<Props> = ({ hasOpacityPicker, onDrag }) => {
 
   const handleDrag = () => onDrag(color.current)
 
+  const handleResize = () => {
+    majorPicker.current.onChange()
+    minorPicker.current.onChange()
+    opacityPicker.current?.onChange()
+  }
+
+  React.useEffect(() => {
+    addEventListener(window, ['resize'], handleResize)
+
+    return () => {
+      removeEventListener(window, ['resize'], handleResize)
+    }
+  }, [])
+
   React.useEffect(() => {
     if (typeof color.current === 'undefined' || !isEqual(color.current, value)) {
       color.current = value
