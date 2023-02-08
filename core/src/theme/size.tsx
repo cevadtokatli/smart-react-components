@@ -231,7 +231,7 @@ const sizeAttributes: SizeAttributes = {
       },
     },
     medium: {
-      fontSize: '1rem',
+      fontSize: '.875rem',
       padding: {
         x: '.9rem',
         y: '.45rem',
