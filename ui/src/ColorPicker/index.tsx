@@ -54,6 +54,8 @@ const ColorPicker: React.FC<Props> = props => {
   )
 
   const handleDrag = (value: Color) => {
+    props.onDrag?.(value)
+
     consoleSection.current?.onDrag(value)
   }
 
