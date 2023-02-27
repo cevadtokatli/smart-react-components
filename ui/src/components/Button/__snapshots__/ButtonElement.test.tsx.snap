@@ -57,6 +57,7 @@ exports[`<Button /> should be block 1`] = `
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  width: 100%;
 }
 
 .c1,
@@ -160,6 +161,7 @@ exports[`<Button /> should be disabled 1`] = `
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  width: 100%;
   opacity: 0.7;
   pointer-events: none;
 }
@@ -362,6 +364,7 @@ exports[`<Button /> should be loading 1`] = `
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  width: 100%;
   pointer-events: none;
 }
 
@@ -466,6 +469,7 @@ exports[`<Button /> should be under the button container 1`] = `
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  width: 100%;
 }
 
 .c1,
@@ -597,6 +601,7 @@ exports[`<Button /> should have addon 1`] = `
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  width: 100%;
 }
 
 .c1,
@@ -717,6 +722,7 @@ exports[`<Button /> should have separated addon 1`] = `
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  width: 100%;
 }
 
 .c1,
@@ -822,6 +828,7 @@ exports[`<Button /> should render component 1`] = `
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  width: 100%;
 }
 
 .c1,
@@ -925,6 +932,7 @@ exports[`<Button /> should render component as link 1`] = `
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  width: 100%;
 }
 
 .c1,
@@ -1029,6 +1037,7 @@ exports[`<Button /> should render component outline 1`] = `
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  width: 100%;
 }
 
 .c1,
@@ -1131,6 +1140,7 @@ exports[`<Button /> should render component outline with soft colors 1`] = `
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  width: 100%;
 }
 
 .c1,
@@ -1233,6 +1243,7 @@ exports[`<Button /> should render component with soft colors 1`] = `
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  width: 100%;
 }
 
 .c1,
@@ -1336,6 +1347,7 @@ exports[`<Button /> should resize component responsively 1`] = `
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  width: 100%;
 }
 
 .c1,
