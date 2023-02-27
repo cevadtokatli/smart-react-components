@@ -5,11 +5,11 @@ exports[`<Container /> should render component with custom props 1`] = `
   .c0 {
   margin-right: 15px;
   margin-left: 15px;
+  max-width: 100%;
 }
 
 .c1 {
   box-sizing: border-box;
-  max-width: 100%;
 }
 
 @media (min-width:576px) {
@@ -47,11 +47,11 @@ exports[`<Container /> should render component with default props 1`] = `
   .c0 {
   margin-right: auto;
   margin-left: auto;
+  max-width: 100%;
 }
 
 .c1 {
   box-sizing: border-box;
-  max-width: 100%;
 }
 
 @media (min-width:576px) {
