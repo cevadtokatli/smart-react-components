@@ -24,6 +24,10 @@ interface DefaultLengthAttributes {
     margin: Coordinator<string>
     padding: Coordinator<string>
   }
+  table: {
+    border: string
+    headBorder: string
+  }
 }
 
 type LengthAttributes = DefaultLengthAttributes & OptionalThemeAttributes

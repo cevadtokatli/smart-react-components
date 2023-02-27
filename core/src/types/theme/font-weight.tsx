@@ -8,6 +8,7 @@ interface DefaultFontWeightAttributes {
   alertLink: string
   dropdownCategory: string
   popoverHeader: string
+  tableHead: string
 }
 
 type FontWeightAttributes = DefaultFontWeightAttributes & OptionalThemeAttributes

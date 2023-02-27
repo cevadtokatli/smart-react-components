@@ -13,6 +13,7 @@ interface DefaultRadiusAttributes {
   modal: Shape<string>
   pagination: Shape<string>
   popover: string
+  table: Shape<string>
   tooltip: string
 }
 

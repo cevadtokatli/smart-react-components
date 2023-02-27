@@ -61,6 +61,8 @@ export type SizeProp = 'small' | 'medium' | 'large' | (string & {})
 
 export type SizeProps = Partial<ResponsiveProp<'size', SizeProp>>
 
+export type TableStripedOrientation = 'odd' | 'even'
+
 export type TimingFunction = 'cubic-bezier()' | 'ease' | 'ease-in' | 'ease-in-out' | 'ease-out' | 'linear' | 'step-end' | 'step-start' | 'steps()' | (string & {})
 
 export type Value = string | number

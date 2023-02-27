@@ -42,6 +42,10 @@ const lengthAttributes: LengthAttributes = {
       y: '.4rem',
     },
   },
+  table: {
+    border: '1px',
+    headBorder: '2px',
+  },
 }
 
 export default lengthAttributes

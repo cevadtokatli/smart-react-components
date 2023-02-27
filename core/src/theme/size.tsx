@@ -336,6 +336,32 @@ const sizeAttributes: SizeAttributes = {
       width: '34px',
     },
   },
+  table: {
+    small: {
+      fontSize: '.875rem',
+      headFontSize: '.875rem',
+      padding: {
+        x: '.3rem',
+        y: '.3rem',
+      },
+    },
+    medium: {
+      fontSize: '1rem',
+      headFontSize: '1rem',
+      padding: {
+        x: '.75rem',
+        y: '.75rem',
+      },
+    },
+    large: {
+      fontSize: '1rem',
+      headFontSize: '1rem',
+      padding: {
+        x: '1rem',
+        y: '1rem',
+      },
+    },
+  },
   tooltip: {
     small: {
       fontSize: '.75rem',

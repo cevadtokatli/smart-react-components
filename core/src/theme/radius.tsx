@@ -36,6 +36,10 @@ const radiusAttributes: RadiusAttributes = {
     rounded: '2rem',
   },
   popover: '.25rem',
+  table: {
+    rectangle: '0',
+    rounded: '.25rem',
+  },
   tooltip: '.25rem',
 }
 

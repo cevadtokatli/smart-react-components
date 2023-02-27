@@ -15,6 +15,8 @@ const fontFamilyAttributes: FontFamilyAttributes = {
   popover: 'inherit',
   popoverHeader: 'inherit',
   progressBar: 'inherit',
+  table: 'inherit',
+  tableHead: 'inherit',
   tooltip: 'inherit',
 }
 

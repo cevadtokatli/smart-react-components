@@ -69,6 +69,11 @@ interface DefaultSizeAttributes {
     slider: string
     width: string
   }>
+  table: Size<{
+    fontSize: string
+    headFontSize: string
+    padding: Coordinator<string>
+  }>
   tooltip: Size<{
     fontSize: string
     padding: Coordinator<string>

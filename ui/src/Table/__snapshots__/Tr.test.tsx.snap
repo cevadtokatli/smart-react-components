@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tr /> should render component 1`] = `
+<DocumentFragment>
+  .c0 > *:nth-child(n+0) {
+  background: #fff;
+  border-color: #A8C0CD;
+  color: #323a46;
+}
+
+.c0:hover > *:nth-child(n+0) {
+  background: #BBCED8;
+}
+
+<table>
+    <tbody>
+      <tr
+        class=" c0"
+      />
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`<Tr /> should render component with soft colors 1`] = `
+<DocumentFragment>
+  .c0 > *:nth-child(n+0) {
+  background: undefined;
+  border-color: #f8fafb;
+  color: #909394;
+}
+
+.c0:hover > *:nth-child(n+0) {
+  background: #fafbfc;
+}
+
+<table>
+    <tbody>
+      <tr
+        class=" c0"
+      />
+    </tbody>
+  </table>
+</DocumentFragment>
+`;

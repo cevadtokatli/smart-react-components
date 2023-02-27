@@ -8,6 +8,7 @@ const fontWeightAttributes: FontWeightAttributes = {
   alertLink: '500',
   dropdownCategory: '500',
   popoverHeader: '500',
+  tableHead: '500',
 }
 
 export default fontWeightAttributes

@@ -15,6 +15,8 @@ interface DefaultFontFamilyAttributes {
   popover: string
   popoverHeader: string
   progressBar: string
+  table: string
+  tableHead: string
   tooltip: string
 }
 
