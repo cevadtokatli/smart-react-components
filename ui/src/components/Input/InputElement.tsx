@@ -29,7 +29,7 @@ export interface Props extends
   shape?: ShapeProp
 }
 
-export default styled(Input).attrs<Props>(({ hasLeftAddon, hasRightAddon, hasSeparatedLeftAddon, hasSeparatedRightAddon, isInput = true }) => ({
+export default styled(Input).attrs<Props>(({ hasLeftAddon, hasRightAddon, isInput = true }) => ({
   ...(!isInput && { as: 'div' }),
   getInputSize: (v, t) => `
     font-size: ${t.$.size.input[v].fontSize};
@@ -37,14 +37,14 @@ export default styled(Input).attrs<Props>(({ hasLeftAddon, hasRightAddon, hasSep
 
     ${hasLeftAddon
       ? `
-        padding-left: ${hasSeparatedLeftAddon ? toCSSValue(t.$.size.input[v].padding.x)(v => v / 2) : 0};
+        padding-left: ${toCSSValue(t.$.size.input[v].padding.x)(v => v / 2)};
       `
       : ''
     }
 
     ${hasRightAddon
       ? `
-        padding-right: ${hasSeparatedRightAddon ? toCSSValue(t.$.size.input[v].padding.x)(v => v / 2) : 0};
+        padding-right: ${toCSSValue(t.$.size.input[v].padding.x)(v => v / 2)};
       `
       : ''
     }
