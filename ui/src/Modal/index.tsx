@@ -17,6 +17,7 @@ export interface Props extends
   beforeHide?: TransitionBeforeCallback
   beforeShow?: TransitionBeforeCallback
   children: ContentElement | ContentElement[]
+  hasBorder?: boolean
   hasHideAnimation?: boolean
   hasShowAnimation?: boolean
   hasOverlayBackground?: boolean
@@ -33,7 +34,7 @@ export interface Props extends
   transitionDuration?: number
 }
 
-const Modal: React.FC<Props> = ({ afterHide, afterShow, beforeHide, beforeShow, children, hasHideAnimation = true, hasShowAnimation = true, hasOverlayBackground = true, hasOverlayBlurEffect, isBlock, isCentered, isDismissible = true, isStretched, isFullScreen, setStatus, size = 'medium', sizeSm, sizeMd, sizeLg, sizeXl, shape = 'rectangle', status = true, transitionClassName, transitionDuration }) => {
+const Modal: React.FC<Props> = ({ afterHide, afterShow, beforeHide, beforeShow, children, hasBorder = true, hasHideAnimation = true, hasShowAnimation = true, hasOverlayBackground = true, hasOverlayBlurEffect, isBlock, isCentered, isDismissible = true, isStretched, isFullScreen, setStatus, size = 'medium', sizeSm, sizeMd, sizeLg, sizeXl, shape = 'rectangle', status = true, transitionClassName, transitionDuration }) => {
   const theme = React.useContext<Theme>(ThemeContext)
 
   return (
@@ -64,6 +65,7 @@ const Modal: React.FC<Props> = ({ afterHide, afterShow, beforeHide, beforeShow, 
           isCentered={isCentered}
           isStretched={isStretched}
           isFullScreen={isFullScreen}
+          hasBorder={hasBorder}
           modalSize={size}
           modalSizeSm={sizeSm}
           modalSizeMd={sizeMd}

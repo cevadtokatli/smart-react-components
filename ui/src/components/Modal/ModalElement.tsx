@@ -9,6 +9,7 @@ import ModalTitle from '../../Modal/ModalTitle'
 interface Props extends
   StyledProps,
   ResponsiveProp<'modalSize', SizeProp> {
+  hasBorder: boolean
   isBlock: boolean
   isCentered: boolean
   isFullScreen: boolean
@@ -42,7 +43,7 @@ export default styled(Div).attrs<Props>(({ isBlock, isFullScreen }: Props) => ({
       }
     }
   `,
-}))<Props>(({ theme, isBlock, isCentered, isFullScreen, isStretched, shape }: Props) => `
+}))<Props>(({ theme, hasBorder, isBlock, isCentered, isFullScreen, isStretched, shape }: Props) => `
   background: ${theme.$.color.dynamic.background};
   box-sizing: border-box;
   color: ${theme.$.color.dynamic.font};
@@ -69,8 +70,24 @@ export default styled(Div).attrs<Props>(({ isBlock, isFullScreen }: Props) => ({
 
   ${!isFullScreen
     ? `
-      border: solid 1px ${theme.$.color.dynamic.accent};
       border-radius: ${theme.$.radius.modal[shape]};
+
+      ${hasBorder
+        ? `
+          border: solid 1px ${theme.$.color.dynamic.accent};
+        `
+        : ''
+      }
+
+      > *:first-child {
+        border-top-left-radius: ${theme.$.radius.modal[shape]};
+        border-top-right-radius: ${theme.$.radius.modal[shape]};
+      }
+
+      > *:last-child {
+        border-bottom-left-radius: ${theme.$.radius.modal[shape]};
+        border-bottom-right-radius: ${theme.$.radius.modal[shape]};
+      }
     `
     : ''
   }
