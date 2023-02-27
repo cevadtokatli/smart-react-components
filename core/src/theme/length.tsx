@@ -27,6 +27,7 @@ const lengthAttributes: LengthAttributes = {
       large: 960,
       xlarge: 1140,
     },
+    padding: '16px',
   },
   overlay: {
     space: '1.75rem',
