@@ -5,6 +5,7 @@ import styled from 'styled-components'
 export default styled(Div).attrs<StyledProps>(
   ({ marginHorizontal = 'auto' }) => ({
     marginHorizontal,
+    maxWidth: '100%',
     maxWidthSm: '{length.grid.containerWidth.small}px',
     maxWidthMd: '{length.grid.containerWidth.medium}px',
     maxWidthLg: '{length.grid.containerWidth.large}px',
@@ -12,5 +13,4 @@ export default styled(Div).attrs<StyledProps>(
   }),
 )<StyledProps>`
   box-sizing: border-box;
-  max-width: 100%;
 `
