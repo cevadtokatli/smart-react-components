@@ -129,6 +129,7 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
         : `
           display: flex;
           flex: 1 1 auto;
+          width: 100%;
         `
       }   
     `
