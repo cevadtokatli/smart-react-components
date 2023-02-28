@@ -3,6 +3,11 @@
 exports[`<Row /> should render component with default props 1`] = `
 <DocumentFragment>
   .c0 {
+  padding-right: -16px;
+  padding-left: -16px;
+}
+
+.c1 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -14,7 +19,7 @@ exports[`<Row /> should render component with default props 1`] = `
 }
 
 <div
-    class=" c0"
+    class="c0 c1"
   />
 </DocumentFragment>
 `;
