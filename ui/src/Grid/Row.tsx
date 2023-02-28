@@ -3,8 +3,8 @@ import { StyledProps } from '@smart-react-components/core/styled-props'
 import styled from 'styled-components'
 
 export default styled(Div).attrs<StyledProps>(
-  ({ paddingHorizontal = '-{length.grid.padding}' }) => ({
-    paddingHorizontal,
+  ({ marginHorizontal = '-{length.grid.space}' }) => ({
+    marginHorizontal,
   }),
 )<StyledProps>`
   box-sizing: border-box;

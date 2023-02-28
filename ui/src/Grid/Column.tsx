@@ -9,7 +9,7 @@ export interface Props extends
   Partial<ResponsiveProp<'col', number>>,
   Partial<ResponsiveProp<'pos', number>> {}
 
-export default styled(Div).attrs<Props>(({ paddingHorizontal = '$length.grid.padding' }) => ({
+export default styled(Div).attrs<Props>(({ paddingHorizontal = '$length.grid.space' }) => ({
   getCol: v => `
     flex: 0 0 ${columns[v]}%;
     max-width: ${columns[v]}%;

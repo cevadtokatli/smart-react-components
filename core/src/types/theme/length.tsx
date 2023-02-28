@@ -15,7 +15,7 @@ interface DefaultLengthAttributes {
   breakpoint: Grid
   grid: {
     containerWidth: Grid
-    padding: string
+    space: string
   }
   overlay: {
     space: string
