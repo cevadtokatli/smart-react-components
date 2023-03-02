@@ -63,7 +63,7 @@ const FixedBox: React.FC<Props> = ({
 
   const getTriggerEl = () => ((children[0] as any).ref ?? triggerEl).current as HTMLElement
 
-  const handlePosition = () => calculatePosition(getTriggerEl(), boxEl.current, position, maxWidth, minWidth, space)
+  const handlePosition = e => calculatePosition(getTriggerEl(), boxEl.current, e, position, maxWidth, minWidth, space)
 
   const {
     getStatus,
@@ -85,12 +85,13 @@ const FixedBox: React.FC<Props> = ({
         status={getStatus()}
       >
         <Overlay
-          breakpoint={breakpoint}
+          breakpoint={triggerInteraction & TriggerInteraction.RIGHT_CLICK ? null : breakpoint}
           elementProps={{
             as: OverlayElement,
             duration: transitionDuration ?? theme.$.transition.fixedBoxDuration,
-            isDisplayedWhenBreakpointNull: false,
+            isDisplayedWhenBreakpointNull: triggerInteraction & TriggerInteraction.RIGHT_CLICK,
           }}
+          hasBackground={!(triggerInteraction & TriggerInteraction.RIGHT_CLICK)}
         >
           <FixedBoxElement
             {...elementProps}

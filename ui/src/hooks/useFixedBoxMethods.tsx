@@ -9,7 +9,7 @@ interface Props {
   beforeShow?: TransitionBeforeCallback
   boxEl: React.MutableRefObject<HTMLDivElement>
   getTriggerEl: () => HTMLElement
-  handlePosition: () => void
+  handlePosition: (e: MouseEvent) => void
   isDismissible: boolean
   key: string
   setStatus?: SetState<boolean>
@@ -24,12 +24,15 @@ interface Return {
 
 const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, isDismissible, key, setStatus, status, triggerInteraction }: Props): Return => {
   const leaveTimeout = useRef<NodeJS.Timeout>(null)
+  const mouseEvent = useRef<MouseEvent>(null)
   const [localStatus, setLocalStatus] = useState(() => false)
 
   const getStatus = () => status ?? localStatus
   const getSetStatus = () => setStatus ?? setLocalStatus
 
   const handleTriggerClick = (e: Event) => {
+    mouseEvent.current = null
+
     const triggerEl = getTriggerEl()
 
     if (isTargetClickable(e.target as HTMLElement, triggerEl)) {
@@ -37,13 +40,31 @@ const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, i
     }
   }
 
+  const handleTriggerRightClick = e => {
+    e.preventDefault()
+
+    mouseEvent.current = e
+
+    const triggerEl = getTriggerEl()
+
+    if (isTargetClickable(e.target as HTMLElement, triggerEl)) {
+      getSetStatus()(true)
+    }
+  }
+
   const handleTriggerMouseEnter = e => {
+    mouseEvent.current = null
+
     if (e.target === getTriggerEl()) {
       getSetStatus()(true)
     }
   }
 
   const handleWindowClick = (e: Event) => {
+    e.preventDefault()
+
+    mouseEvent.current = null
+
     const target = e.target as HTMLElement
     const triggerEl = getTriggerEl()
 
@@ -72,13 +93,13 @@ const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, i
 
   const handleBeforeShow = el => new Promise<void>(async resolve => {
     await beforeShow?.(el)
-    handlePosition()
+    handlePosition(mouseEvent.current)
     resolve()
   })
 
   useEffect(() => {
     if (getStatus()) {
-      handlePosition()
+      handlePosition(null)
     }
   }, [])
 
@@ -86,7 +107,8 @@ const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, i
     const triggerEl = getTriggerEl()
 
     const debounceWindowMouseMove = debounce(handleWindowMouseMove)
-    const debouncePosition = debounce(handlePosition)
+    const debouncePosition = debounce(() => handlePosition(null))
+    const handlePositionBind = () => handlePosition(null)
 
     if (triggerInteraction & TriggerInteraction.CLICK) {
       addEventListener(triggerEl, ['click'], handleTriggerClick)
@@ -104,11 +126,20 @@ const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, i
       }
     }
 
+    if (triggerInteraction & TriggerInteraction.RIGHT_CLICK) {
+      addEventListener(triggerEl, ['contextmenu'], handleTriggerRightClick)
+
+      if (getStatus()) {
+        addEventListener(triggerEl, ['click'], handleTriggerClick)
+        addEventListener(window, ['click', 'contextmenu'], handleWindowClick)
+      }
+    }
+
     if (getStatus()) {
       addEventListener(window, ['resize', 'scroll'], debouncePosition)
     }
 
-    addEventListener(triggerEl, ['src.fixedBox.setPosition'], handlePosition)
+    addEventListener(triggerEl, ['src.fixedBox.setPosition'], handlePositionBind)
 
     return () => {
       if (triggerInteraction & TriggerInteraction.CLICK) {
@@ -127,11 +158,20 @@ const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, i
         }
       }
 
+      if (triggerInteraction & TriggerInteraction.RIGHT_CLICK) {
+        removeEventListener(triggerEl, ['contextmenu'], handleTriggerRightClick)
+
+        if (getStatus()) {
+          removeEventListener(triggerEl, ['click'], handleTriggerClick)
+          removeEventListener(window, ['click', 'contextmenu'], handleWindowClick)
+        }
+      }
+
       if (getStatus()) {
         removeEventListener(window, ['resize', 'scroll'], debouncePosition)
       }
 
-      removeEventListener(triggerEl, [`src.${key}.setPosition`], handlePosition)
+      removeEventListener(triggerEl, [`src.${key}.setPosition`], handlePositionBind)
     }
   }, [status, setStatus, localStatus, setLocalStatus, triggerInteraction])
 

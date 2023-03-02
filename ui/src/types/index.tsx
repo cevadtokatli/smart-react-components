@@ -27,4 +27,5 @@ export enum TriggerInteraction {
   NONE = 0,
   CLICK = 1,
   HOVER = 2,
+  RIGHT_CLICK = 4,
 }
