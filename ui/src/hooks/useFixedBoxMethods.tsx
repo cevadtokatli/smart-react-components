@@ -107,8 +107,8 @@ const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, i
     const triggerEl = getTriggerEl()
 
     const debounceWindowMouseMove = debounce(handleWindowMouseMove)
-    const debouncePosition = debounce(() => handlePosition(null))
-    const handlePositionBind = () => handlePosition(null)
+    const debouncePosition = debounce(() => handlePosition(mouseEvent.current))
+    const handlePositionBind = () => handlePosition(mouseEvent.current)
 
     if (triggerInteraction & TriggerInteraction.CLICK) {
       addEventListener(triggerEl, ['click'], handleTriggerClick)
