@@ -48,6 +48,7 @@ exports[`<Dropdown /> should render component 1`] = `
 }
 
 .c8 {
+  isolation: isolate;
   overflow: hidden;
   position: relative;
   -webkit-tap-highlight-color: transparent;

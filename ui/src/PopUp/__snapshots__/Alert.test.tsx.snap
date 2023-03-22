@@ -23,6 +23,7 @@ exports[`<Alert /> should render component 1`] = `
 }
 
 .c13 {
+  isolation: isolate;
   overflow: hidden;
   position: relative;
   -webkit-tap-highlight-color: transparent;

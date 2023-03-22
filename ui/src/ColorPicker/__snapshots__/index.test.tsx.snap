@@ -4,6 +4,7 @@ exports[`<ColorPicker /> should match snapshot 1`] = `
 <DocumentFragment>
   .c29 {
   margin-right: 10px;
+  isolation: isolate;
   overflow: hidden;
   position: relative;
   -webkit-tap-highlight-color: transparent;
@@ -24,6 +25,7 @@ exports[`<ColorPicker /> should match snapshot 1`] = `
 }
 
 .c33 {
+  isolation: isolate;
   overflow: hidden;
   position: relative;
   -webkit-tap-highlight-color: transparent;

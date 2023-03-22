@@ -43,6 +43,7 @@ exports[`<Option /> should render component 1`] = `
 exports[`<Option /> should render waveEffect 1`] = `
 <DocumentFragment>
   .c0 {
+  isolation: isolate;
   overflow: hidden;
   position: relative;
   -webkit-tap-highlight-color: transparent;

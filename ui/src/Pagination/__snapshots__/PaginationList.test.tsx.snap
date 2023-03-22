@@ -3,6 +3,7 @@
 exports[`<PaginationList /> should render component 1`] = `
 <DocumentFragment>
   .c2 {
+  isolation: isolate;
   overflow: hidden;
   position: relative;
   -webkit-tap-highlight-color: transparent;

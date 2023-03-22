@@ -5,6 +5,7 @@ exports[`<ButtonLink /> should render component 1`] = `
   .c0 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  isolation: isolate;
   overflow: hidden;
   position: relative;
   -webkit-tap-highlight-color: transparent;

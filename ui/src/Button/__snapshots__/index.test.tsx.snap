@@ -39,6 +39,7 @@ exports[`<Button /> should have addon 1`] = `
 }
 
 .c0 {
+  isolation: isolate;
   overflow: hidden;
   position: relative;
   -webkit-tap-highlight-color: transparent;
@@ -169,6 +170,7 @@ exports[`<Button /> should have separated addon 1`] = `
 }
 
 .c6 {
+  isolation: isolate;
   overflow: hidden;
   position: relative;
   -webkit-tap-highlight-color: transparent;
@@ -214,6 +216,7 @@ exports[`<Button /> should have separated addon 1`] = `
 }
 
 .c1 {
+  isolation: isolate;
   overflow: hidden;
   position: relative;
   -webkit-tap-highlight-color: transparent;
@@ -339,6 +342,7 @@ exports[`<Button /> should have separated addon 1`] = `
 exports[`<Button /> should render component 1`] = `
 <DocumentFragment>
   .c0 {
+  isolation: isolate;
   overflow: hidden;
   position: relative;
   -webkit-tap-highlight-color: transparent;

@@ -17,6 +17,7 @@ exports[`<Select /> should render component 1`] = `
 }
 
 .c7 {
+  isolation: isolate;
   overflow: hidden;
   position: relative;
   -webkit-tap-highlight-color: transparent;

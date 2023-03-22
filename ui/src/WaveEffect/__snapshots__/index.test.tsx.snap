@@ -3,6 +3,7 @@
 exports[`<WaveEffect /> should not render wave effect 1`] = `
 <DocumentFragment>
   <div
+    isolation="isolate"
     overflow="hidden"
     position="relative"
     webkittaphighlightcolor="transparent"
@@ -63,6 +64,7 @@ exports[`<WaveEffect /> should render wave effect 1`] = `
 }
 
 <div
+    isolation="isolate"
     overflow="hidden"
     position="relative"
     webkittaphighlightcolor="transparent"

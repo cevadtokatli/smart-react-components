@@ -26,6 +26,7 @@ exports[`<ButtonList /> should render component 1`] = `
 
 .c2 {
   margin: .5rem .5rem;
+  isolation: isolate;
   overflow: hidden;
   position: relative;
   -webkit-tap-highlight-color: transparent;
