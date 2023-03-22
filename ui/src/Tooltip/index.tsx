@@ -22,6 +22,7 @@ export interface Props extends Partial<ResponsiveProp<'size', SizeProp>> {
   children: [JSX.Element, JSX.Element]
   hasHideAnimation?: boolean
   hasShowAnimation?: boolean
+  hoverDelay?: number
   isDismissible?: boolean
   isSoft?: boolean
   palette?: PaletteProp
@@ -34,7 +35,7 @@ export interface Props extends Partial<ResponsiveProp<'size', SizeProp>> {
   triggerInteraction?: TriggerInteraction
 }
 
-const Tooltip: React.FC<Props> = ({ afterHide, afterShow, beforeHide, beforeShow, children, hasHideAnimation = true, hasShowAnimation = true, isDismissible, isSoft, palette = '!dynamic', position = Position.TOP, setStatus, size = 'medium', sizeSm, sizeMd, sizeLg, sizeXl, space = 0, status, transitionClassName, transitionDuration, triggerInteraction = TriggerInteraction.CLICK | TriggerInteraction.HOVER }) => {
+const Tooltip: React.FC<Props> = ({ afterHide, afterShow, beforeHide, beforeShow, children, hasHideAnimation = true, hasShowAnimation = true, hoverDelay, isDismissible, isSoft, palette = '!dynamic', position = Position.TOP, setStatus, size = 'medium', sizeSm, sizeMd, sizeLg, sizeXl, space = 0, status, transitionClassName, transitionDuration, triggerInteraction = TriggerInteraction.CLICK | TriggerInteraction.HOVER }) => {
   const theme = React.useContext<Theme>(ThemeContext)
   const triggerEl = React.useRef<HTMLElement>(null)
   const boxEl = React.useRef<HTMLDivElement>(null)
@@ -48,7 +49,7 @@ const Tooltip: React.FC<Props> = ({ afterHide, afterShow, beforeHide, beforeShow
   const {
     getStatus,
     handleBeforeShow,
-  } = useFixedBoxMethods({ beforeShow, boxEl, getTriggerEl, handlePosition, isDismissible, key: 'tooltip', setStatus, status, triggerInteraction })
+  } = useFixedBoxMethods({ beforeShow, boxEl, getTriggerEl, handlePosition, hoverDelay, isDismissible, key: 'tooltip', setStatus, status, triggerInteraction })
 
   const content = (
     <CSSTransition

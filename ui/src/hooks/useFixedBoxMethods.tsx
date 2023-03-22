@@ -10,6 +10,7 @@ interface Props {
   boxEl: React.MutableRefObject<HTMLDivElement>
   getTriggerEl: () => HTMLElement
   handlePosition: (e: MouseEvent) => void
+  hoverDelay?: number
   isDismissible: boolean
   key: string
   setStatus?: SetState<boolean>
@@ -22,7 +23,9 @@ interface Return {
   getStatus: () => boolean
 }
 
-const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, isDismissible, key, setStatus, status, triggerInteraction }: Props): Return => {
+const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, hoverDelay, isDismissible, key, setStatus, status, triggerInteraction }: Props): Return => {
+  const enterTimeout = useRef<NodeJS.Timeout>(null)
+  const enterTimeoutMouseMove = useRef<(e: Event) => void>(null)
   const leaveTimeout = useRef<NodeJS.Timeout>(null)
   const mouseEvent = useRef<MouseEvent>(null)
   const [localStatus, setLocalStatus] = useState(() => false)
@@ -56,7 +59,15 @@ const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, i
     mouseEvent.current = null
 
     if (e.target === getTriggerEl()) {
-      getSetStatus()(true)
+      if (hoverDelay) {
+        if (!enterTimeout.current) {
+          enterTimeout.current = setTimeout(() => getSetStatus()(true), hoverDelay)
+          enterTimeoutMouseMove.current = handleWindowMouseMove
+          addEventListener(window, ['mousemove'], enterTimeoutMouseMove.current)
+        }
+      } else {
+        getSetStatus()(true)
+      }
     }
   }
 
@@ -77,7 +88,14 @@ const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, i
     const target = e.target as HTMLElement
     const triggerEl = getTriggerEl()
 
-    if (!triggerEl.contains(target) && !boxEl.current.contains(target)) {
+    if (!triggerEl.contains(target) && !boxEl.current?.contains(target)) {
+      if (enterTimeout.current) {
+        removeEventListener(window, ['mousemove'], enterTimeoutMouseMove.current)
+        enterTimeoutMouseMove.current = null
+        clearTimeout(enterTimeout.current)
+        enterTimeout.current = null
+      }
+
       if (!leaveTimeout.current) {
         leaveTimeout.current = setTimeout(() => {
           clearTimeout(leaveTimeout.current)
