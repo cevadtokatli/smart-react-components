@@ -50,7 +50,7 @@ const createTheme = (theme: InputTheme = {}, isDarkMode: boolean = false): Theme
   result.$.palette.secondary = createPaletteItem(theme?.$?.palette?.secondary ?? result.$.color.gray700, result)
   result.$.palette.success = createPaletteItem(theme?.$?.palette?.success ?? {
     main: result.$.color.green,
-    font: result.$.color.light.font,
+    font: result.$.color.dark.font,
   }, result)
   result.$.palette.danger = createPaletteItem(theme?.$?.palette?.danger ?? result.$.color.red, result)
   result.$.palette.warning = createPaletteItem(theme?.$?.palette?.warning ?? result.$.color.yellow, result)
