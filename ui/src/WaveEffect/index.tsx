@@ -118,6 +118,7 @@ const WaveEffect = React.forwardRef<HTMLDivElement, Props>(({ children, duration
         </CSSTransitionGroup>
       </>
     ),
+    isolation: 'isolate',
     onMouseDown: handleMouseDown,
     onTouchStart: handleTouchStart,
     overflow: 'hidden',
