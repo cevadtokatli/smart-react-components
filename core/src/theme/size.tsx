@@ -148,11 +148,11 @@ const sizeAttributes: SizeAttributes = {
       fontSize: '.875rem',
       margin: {
         x: '.28rem',
-        y: '.06rem',
+        y: '.15rem',
       },
       padding: {
-        x: '.15625rem',
-        y: '.15625rem',
+        x: '.45rem',
+        y: '.3rem',
       },
     },
     medium: {
@@ -218,8 +218,8 @@ const sizeAttributes: SizeAttributes = {
     },
   },
   icon: {
-    small: '1rem',
-    medium: '1.1rem',
+    small: '.875rem',
+    medium: '1rem',
     large: '1.25rem',
   },
   input: {
