@@ -16,6 +16,10 @@ exports[`<SelectBox /> should render component 1`] = `
   margin-bottom: .5rem;
 }
 
+.c0 > span {
+  font-size: 1rem;
+}
+
 .c1 > span {
   cursor: default;
   display: block;

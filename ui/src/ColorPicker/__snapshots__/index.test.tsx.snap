@@ -118,6 +118,10 @@ exports[`<ColorPicker /> should match snapshot 1`] = `
   margin-bottom: .5rem;
 }
 
+.c17 > span {
+  font-size: 1rem;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;

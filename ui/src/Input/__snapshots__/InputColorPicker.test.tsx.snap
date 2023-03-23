@@ -143,8 +143,16 @@ exports[`<InputColorPicker /> should render component 1`] = `
   margin-right: 0.46874rem;
 }
 
+.c0 > span {
+  font-size: 1rem;
+}
+
 .c28 > span {
   margin-bottom: .5rem;
+}
+
+.c28 > span {
+  font-size: 1rem;
 }
 
 .c13 {
