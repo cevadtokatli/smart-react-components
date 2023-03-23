@@ -44,7 +44,7 @@ const Tooltip: React.FC<Props> = ({ afterHide, afterShow, beforeHide, beforeShow
   const getTriggerEl = () => ((children[0] as any).ref ?? triggerEl).current as HTMLElement
   const getTransitionDuration = () => transitionDuration ?? theme.$.transition.tooltipDuration
 
-  const handlePosition = () => calculatePosition(triggerEl.current, boxEl.current, null, arrowEl.current, position, space)
+  const handlePosition = () => calculatePosition(getTriggerEl(), boxEl.current, null, arrowEl.current, position, space)
 
   const {
     getStatus,
