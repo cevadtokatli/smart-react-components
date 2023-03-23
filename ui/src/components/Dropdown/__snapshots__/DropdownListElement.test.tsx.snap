@@ -163,13 +163,13 @@ exports[`<DropdownListElement /> should render component with soft colors 1`] = 
 exports[`<DropdownListElement /> should resize component responsively 1`] = `
 <DocumentFragment>
   .c0 {
-  padding: .15625rem 0;
+  padding: .3rem 0;
 }
 
 .c0 > div {
   font-size: .875rem;
-  margin: .06rem .28rem;
-  padding: .15625rem .15625rem;
+  margin: .15rem .28rem;
+  padding: .3rem .45rem;
 }
 
 .c1 {
