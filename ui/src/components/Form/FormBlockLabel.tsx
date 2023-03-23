@@ -31,6 +31,7 @@ export default styled(Label).attrs<Props>(({ isBlock }) => ({
   `,
 }))<Props>(({ theme, isBlock, isDisabled }: Props) => `
   > span {
+    cursor: default;
     display: block;
     word-break: break-word;
     word-wrap: break-word;
