@@ -28,6 +28,10 @@ export default styled(Label).attrs<Props>(({ isBlock }) => ({
         }
       `
     }
+
+    > span {
+      font-size: ${t.$.size.form.blockLabel[v].fontSize};
+    }
   `,
 }))<Props>(({ theme, isBlock, isDisabled }: Props) => `
   > span {
