@@ -17,6 +17,7 @@ exports[`<InputFile /> should render component 1`] = `
 }
 
 .c1 > span {
+  cursor: default;
   display: block;
   word-break: break-word;
   word-wrap: break-word;

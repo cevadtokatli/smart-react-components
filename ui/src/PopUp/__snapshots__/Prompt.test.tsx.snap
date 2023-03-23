@@ -191,6 +191,7 @@ exports[`<Prompt /> should render component 1`] = `
 }
 
 .c12 > span {
+  cursor: default;
   display: block;
   word-break: break-word;
   word-wrap: break-word;

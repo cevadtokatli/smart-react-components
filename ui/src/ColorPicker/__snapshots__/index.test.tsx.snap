@@ -256,6 +256,7 @@ exports[`<ColorPicker /> should match snapshot 1`] = `
 }
 
 .c18 > span {
+  cursor: default;
   display: block;
   word-break: break-word;
   word-wrap: break-word;
