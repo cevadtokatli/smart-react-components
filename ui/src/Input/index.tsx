@@ -90,7 +90,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
         { React.cloneElement(props.template, {
           ...extractElementProps(props, [changeEvents, focusEvents, keyboardEvents]),
           ...(typeof props.defaultValue !== 'undefined' && { defaultValue: props.defaultValue }),
-          ...(props.hasSpellCheck && { spellCheck: true }),
+          ...(props.hasSpellCheck && { spellCheck: props.hasSpellCheck }),
           ...(props.isDisabled && { disabled: true }),
           ...(props.isReadOnly && { readOnly: true }),
           ...(props.isRequired && { required: true }),
