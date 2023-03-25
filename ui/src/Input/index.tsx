@@ -21,6 +21,7 @@ export interface Props extends
   KeyboardEvents {
   defaultValue?: string
   hasBorder?: boolean
+  hasSpellCheck?: boolean
   isBlock?: boolean
   isDisabled?: boolean
   isOutline?: boolean
@@ -89,6 +90,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
         { React.cloneElement(props.template, {
           ...extractElementProps(props, [changeEvents, focusEvents, keyboardEvents]),
           ...(typeof props.defaultValue !== 'undefined' && { defaultValue: props.defaultValue }),
+          ...(props.hasSpellCheck && { spellCheck: true }),
           ...(props.isDisabled && { disabled: true }),
           ...(props.isReadOnly && { readOnly: true }),
           ...(props.isRequired && { required: true }),
