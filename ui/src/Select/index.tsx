@@ -6,6 +6,7 @@ import FormBlockLabel from '../components/Form/FormBlockLabel'
 import useAddons from '../hooks/useAddons'
 import SelectElement from '../components/Select/SelectElement'
 import HiddenInput from '../components/Form/HiddenInput'
+import InputWrapper from '../components/Input/InputWrapper'
 import { GenericProps } from '../types/form'
 import { getInputValue } from '../util/form'
 import InputAddon from './SelectAddon'
@@ -50,18 +51,11 @@ const Select = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => 
         display="flex"
         flex="1 1 auto"
       >
-        { leftAddon && leftAddon }
-        <SelectElement
+        { leftAddon?.props?.isExcluded && leftAddon }
+        <InputWrapper
           hasBorder={props.hasBorder}
-          hasLeftAddon={!!leftAddon}
-          hasRightAddon={!!rightAddon}
-          hasSeparatedLeftAddon={leftAddon?.props?.isSeparated}
-          hasSeparatedRightAddon={rightAddon?.props?.isSeparated}
-          inputSize={props.size}
-          inputSizeSm={props.sizeSm}
-          inputSizeMd={props.sizeMd}
-          inputSizeLg={props.sizeLg}
-          inputSizeXl={props.sizeXl}
+          hasExcludedLeftAddon={leftAddon?.props?.isExcluded}
+          hasExcludedRightAddon={rightAddon?.props?.isExcluded}
           isDisabled={props.isDisabled}
           isFocused={false}
           isOutline={props.isOutline}
@@ -69,28 +63,45 @@ const Select = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => 
           palette={props.palette}
           shape={props.shape}
         >
-          <HiddenInput
-            onChange={() => {}}
-            ref={forwardRef}
-            value={getInputValue(props.active)}
-            {...(props.isDisabled && { disabled: true })}
-            {...(props.isRequired && { required: true })}
-          />
-          { (Array.isArray(props.children) ? props.children : [props.children]).map((item, idx) => React.cloneElement(item, {
-            key: item.key ?? idx,
-            active: props.active,
-            hasHover: props.hasHover,
-            hasWaveEffect: props.hasWaveEffect,
-            isEmbedded: true,
-            isOutline: props.isOutline,
-            isSoft: props.isSoft,
-            palette: props.palette,
-            setActive: props.setActive,
-            waveEffectPalette: props.waveEffectPalette,
-            ...(props.isDisabled && { isDisabled: true }),
-          })) }
-        </SelectElement>
-        { rightAddon && rightAddon }
+          { (leftAddon && !leftAddon?.props?.isExcluded) && leftAddon }
+          <SelectElement
+            hasLeftAddon={!!leftAddon}
+            hasRightAddon={!!rightAddon}
+            inputSize={props.size}
+            inputSizeSm={props.sizeSm}
+            inputSizeMd={props.sizeMd}
+            inputSizeLg={props.sizeLg}
+            inputSizeXl={props.sizeXl}
+            isDisabled={props.isDisabled}
+            isFocused={false}
+            isOutline={props.isOutline}
+            isSoft={props.isSoft}
+            palette={props.palette}
+          >
+            <HiddenInput
+              onChange={() => {}}
+              ref={forwardRef}
+              value={getInputValue(props.active)}
+              {...(props.isDisabled && { disabled: true })}
+              {...(props.isRequired && { required: true })}
+            />
+            { (Array.isArray(props.children) ? props.children : [props.children]).map((item, idx) => React.cloneElement(item, {
+              key: item.key ?? idx,
+              active: props.active,
+              hasHover: props.hasHover,
+              hasWaveEffect: props.hasWaveEffect,
+              isEmbedded: true,
+              isOutline: props.isOutline,
+              isSoft: props.isSoft,
+              palette: props.palette,
+              setActive: props.setActive,
+              waveEffectPalette: props.waveEffectPalette,
+              ...(props.isDisabled && { isDisabled: true }),
+            })) }
+          </SelectElement>
+          { (rightAddon && !rightAddon?.props?.isExcluded) && rightAddon }
+        </InputWrapper>
+        { rightAddon?.props?.isExcluded && rightAddon }
       </Div>
     </FormBlockLabel>
   )

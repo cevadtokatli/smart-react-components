@@ -4,7 +4,8 @@ import Badge from '../../Badge'
 import BadgeIcon from '../../Badge/BadgeIcon'
 import BadgeList from '../../Badge/BadgeList'
 import CloseIcon from '../../icons/Close'
-import InputElement, { InputPlaceholder } from './InputElement'
+import InputElement from './InputElement'
+import InputPlaceholder from './InputPlaceholder'
 
 interface Props extends Partial<ResponsiveProp<'inputSize', SizeProp>> {
   children?: JSX.Element
@@ -32,11 +33,8 @@ const InputFileTemplate: React.FC<Props> = ({ children, hasBorder, hasLeftAddon,
 
   return (
     <InputElement
-      hasBorder={hasBorder}
       hasLeftAddon={hasLeftAddon}
       hasRightAddon={hasRightAddon}
-      hasSeparatedLeftAddon={hasSeparatedLeftAddon}
-      hasSeparatedRightAddon={hasSeparatedRightAddon}
       inputSize={inputSize}
       inputSizeSm={inputSizeSm}
       inputSizeMd={inputSizeMd}
@@ -48,7 +46,6 @@ const InputFileTemplate: React.FC<Props> = ({ children, hasBorder, hasLeftAddon,
       isOutline={isOutline}
       isSoft={isSoft}
       palette={palette}
-      shape={shape}
     >
       {children}
       { !value || (value as File[]).length === 0

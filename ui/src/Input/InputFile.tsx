@@ -7,6 +7,7 @@ import FormBlockLabel from '../components/Form/FormBlockLabel'
 import useAddons from '../hooks/useAddons'
 import InputFileTemplate from '../components/Input/InputFileTemplate'
 import HiddenInput from '../components/Form/HiddenInput'
+import InputWrapper from '../components/Input/InputWrapper'
 import useInputMethods from '../hooks/useInputMethods'
 import InputAddon from './InputAddon'
 
@@ -96,45 +97,57 @@ const InputFile = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
         display="flex"
         flex="1 1 auto"
       >
-        { leftAddon && leftAddon }
-        { React.cloneElement(props.template, {
-          children: (
-            <>
-              <HiddenInput
-                {...(props.accept && { accept: props.accept })}
-                {...(props.isDisabled && { disabled: true })}
-                {...(props.isRequired && { required: true })}
-                multiple={Array.isArray(props.value)}
-                onBlur={handleOnBlur}
-                onChange={handleOnChange}
-                onFocus={handleOnFocus}
-                ref={forwardRef ?? ref}
-                type="file"
-              />
-              {props.template.props.children}
-            </>
-          ),
-          hasBorder: props.hasBorder,
-          hasLeftAddon: !!leftAddon,
-          hasRightAddon: !!rightAddon,
-          hasSeparatedLeftAddon: leftAddon?.props?.isSeparated,
-          hasSeparatedRightAddon: rightAddon?.props?.isSeparated,
-          inputSize: props.size,
-          inputSizeSm: props.sizeSm,
-          inputSizeMd: props.sizeMd,
-          inputSizeLg: props.sizeLg,
-          inputSizeXl: props.sizeXl,
-          isDisabled: props.isDisabled,
-          isFocused,
-          isOutline: props.isOutline,
-          isSoft: props.isSoft,
-          palette: props.palette,
-          placeholder: props.placeholder,
-          setValue,
-          shape: props.shape,
-          value: props.value,
-        }) }
-        { rightAddon && rightAddon }
+        { leftAddon?.props?.isExcluded && leftAddon }
+        <InputWrapper
+          hasBorder={props.hasBorder}
+          hasExcludedLeftAddon={leftAddon?.props?.isExcluded}
+          hasExcludedRightAddon={rightAddon?.props?.isExcluded}
+          isDisabled={props.isDisabled}
+          isFocused={isFocused}
+          isOutline={props.isOutline}
+          isSoft={props.isSoft}
+          palette={props.palette}
+          shape={props.shape}
+        >
+          { (leftAddon && !leftAddon?.props?.isExcluded) && leftAddon }
+          { React.cloneElement(props.template, {
+            children: (
+              <>
+                <HiddenInput
+                  {...(props.accept && { accept: props.accept })}
+                  {...(props.isDisabled && { disabled: true })}
+                  {...(props.isRequired && { required: true })}
+                  multiple={Array.isArray(props.value)}
+                  onBlur={handleOnBlur}
+                  onChange={handleOnChange}
+                  onFocus={handleOnFocus}
+                  ref={forwardRef ?? ref}
+                  type="file"
+                />
+                {props.template.props.children}
+              </>
+            ),
+            hasBorder: props.hasBorder,
+            hasLeftAddon: !!leftAddon,
+            hasRightAddon: !!rightAddon,
+            inputSize: props.size,
+            inputSizeSm: props.sizeSm,
+            inputSizeMd: props.sizeMd,
+            inputSizeLg: props.sizeLg,
+            inputSizeXl: props.sizeXl,
+            isDisabled: props.isDisabled,
+            isFocused,
+            isOutline: props.isOutline,
+            isSoft: props.isSoft,
+            palette: props.palette,
+            placeholder: props.placeholder,
+            setValue,
+            shape: props.shape,
+            value: props.value,
+          }) }
+          { (rightAddon && !rightAddon?.props?.isExcluded) && rightAddon }
+        </InputWrapper>
+        { rightAddon?.props?.isExcluded && rightAddon }
       </Div>
     </FormBlockLabel>
   )

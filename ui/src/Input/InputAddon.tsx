@@ -11,6 +11,7 @@ export interface Props extends
   children: ContentElement
   elementProps?: JSXElementProps
   isOutline?: boolean
+  isExcluded?: boolean
   isSeparated?: boolean
   isSoft?: boolean
   palette?: PaletteProp
@@ -34,6 +35,7 @@ const InputAddon = React.forwardRef<HTMLDivElement, Props>((props: Props & Priva
     inputSizeLg={props.sizeLg}
     inputSizeXl={props.sizeXl}
     isDisabled={props.isDisabled}
+    isExcluded={props.isExcluded}
     isFocused={props.isFocused}
     isOutline={props.isOutline}
     isSeparated={props.isSeparated}

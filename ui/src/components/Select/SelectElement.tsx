@@ -13,4 +13,6 @@ export default styled(InputElement).attrs<Props>({
     }
   `,
   isInput: false,
-})<Props>``
+})<Props>`
+  display: block;
+`

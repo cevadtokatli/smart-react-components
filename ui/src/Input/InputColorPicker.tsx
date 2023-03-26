@@ -16,6 +16,7 @@ import { colorToString, convertColor } from '../util/color-picker'
 import InputAddon from './InputAddon'
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { applyResponsiveStyledProp } from '../util/props'
+import InputWrapper from '../components/Input/InputWrapper'
 
 export { ColorPickerFormat } from '../ColorPicker'
 
@@ -126,72 +127,82 @@ const InputColorPicker = React.forwardRef<HTMLInputElement, Props>((props, forwa
         display="flex"
         flex="1 1 auto"
       >
-        { leftAddon && leftAddon }
-        <FixedBox
-          elementProps={{
-            ...applyResponsiveStyledProp(props, 'size', 'width', v => `$size.colorPicker.${v}.width`),
-            background: '$color.dynamic.background',
-            borderRadius: '$radius.colorPicker',
-            boxShadow: '0 0 10px 1px {color.dynamic.shadow}',
-            height: ['auto', true],
-          }}
-          maxWidth={-1}
-          minWidth={-1}
-          setStatus={setStatus}
-          status={status}
+        { leftAddon?.props?.isExcluded && leftAddon }
+        <InputWrapper
+          hasBorder={props.hasBorder}
+          hasExcludedLeftAddon={leftAddon?.props?.isExcluded}
+          hasExcludedRightAddon={rightAddon?.props?.isExcluded}
+          isDisabled={props.isDisabled}
+          isFocused={false}
+          isOutline={props.isOutline}
+          isSoft={props.isSoft}
+          palette={props.palette}
+          shape={props.shape}
         >
-          <InputElement
-            {...(!props.isDisabled && extractElementProps(props, [changeEvents, focusEvents, keyboardEvents]))}
-            {...(!props.isDisabled && {
-              onChange: handleChange,
-              onKeyDown: handleKeyDown,
-            })}
-            {...(props.isDisabled && { disabled: true })}
-            {...(props.isReadOnly && { readOnly: true })}
-            {...(props.isRequired && { required: true })}
-            {...(typeof props.placeholder !== 'undefined' && { placeholder: props.placeholder })}
-            defaultValue={props.value ? convertColor(getColor(props.value), props.format) : ''}
-            hasBorder={props.hasBorder}
-            hasLeftAddon={!!leftAddon}
-            hasRightAddon={!!rightAddon}
-            hasSeparatedLeftAddon={leftAddon?.props?.isSeparated}
-            hasSeparatedRightAddon={rightAddon?.props?.isSeparated}
-            inputSize={props.size}
-            inputSizeSm={props.sizeSm}
-            inputSizeMd={props.sizeMd}
-            inputSizeLg={props.sizeLg}
-            inputSizeXl={props.sizeXl}
-            isDisabled={props.isDisabled}
-            isFocused={status}
-            isOutline={props.isOutline}
-            isSoft={props.isSoft}
-            palette={props.palette}
-            ref={forwardRef ?? ref}
-            shape={props.shape}
-          />
-          <ColorPicker
-            canAddColorToPalette={props.canAddColorToPalette}
-            cancelLabel={props.cancelLabel}
-            format={props.format}
-            hasButtons={props.hasButtons}
-            hasConsole={props.hasConsole}
-            hasPalette={props.hasPalette}
-            hasOpacityPicker={props.hasOpacityPicker}
-            isDisabled={props.isDisabled}
-            isOutline={props.isOutline}
-            isSoft={props.isSoft}
-            palette={props.palette}
-            paletteColors={props.paletteColors}
-            onCancel={handleCancel}
-            onDrag={handleDrag}
-            onSave={handleSave}
-            saveLabel={props.saveLabel}
-            setPaletteColors={props.setPaletteColors}
-            setValue={props.setValue}
-            value={props.value}
-          />
-        </FixedBox>
-        { rightAddon && rightAddon }
+          { (leftAddon && !leftAddon?.props?.isExcluded) && leftAddon }
+          <FixedBox
+            elementProps={{
+              ...applyResponsiveStyledProp(props, 'size', 'width', v => `$size.colorPicker.${v}.width`),
+              background: '$color.dynamic.background',
+              borderRadius: '$radius.colorPicker',
+              boxShadow: '0 0 10px 1px {color.dynamic.shadow}',
+              height: ['auto', true],
+            }}
+            maxWidth={-1}
+            minWidth={-1}
+            setStatus={setStatus}
+            status={status}
+          >
+            <InputElement
+              {...(!props.isDisabled && extractElementProps(props, [changeEvents, focusEvents, keyboardEvents]))}
+              {...(!props.isDisabled && {
+                onChange: handleChange,
+                onKeyDown: handleKeyDown,
+              })}
+              {...(props.isDisabled && { disabled: true })}
+              {...(props.isReadOnly && { readOnly: true })}
+              {...(props.isRequired && { required: true })}
+              {...(typeof props.placeholder !== 'undefined' && { placeholder: props.placeholder })}
+              defaultValue={props.value ? convertColor(getColor(props.value), props.format) : ''}
+              hasLeftAddon={!!leftAddon}
+              hasRightAddon={!!rightAddon}
+              inputSize={props.size}
+              inputSizeSm={props.sizeSm}
+              inputSizeMd={props.sizeMd}
+              inputSizeLg={props.sizeLg}
+              inputSizeXl={props.sizeXl}
+              isDisabled={props.isDisabled}
+              isFocused={status}
+              isOutline={props.isOutline}
+              isSoft={props.isSoft}
+              palette={props.palette}
+              ref={forwardRef ?? ref}
+            />
+            <ColorPicker
+              canAddColorToPalette={props.canAddColorToPalette}
+              cancelLabel={props.cancelLabel}
+              format={props.format}
+              hasButtons={props.hasButtons}
+              hasConsole={props.hasConsole}
+              hasPalette={props.hasPalette}
+              hasOpacityPicker={props.hasOpacityPicker}
+              isDisabled={props.isDisabled}
+              isOutline={props.isOutline}
+              isSoft={props.isSoft}
+              palette={props.palette}
+              paletteColors={props.paletteColors}
+              onCancel={handleCancel}
+              onDrag={handleDrag}
+              onSave={handleSave}
+              saveLabel={props.saveLabel}
+              setPaletteColors={props.setPaletteColors}
+              setValue={props.setValue}
+              value={props.value}
+            />
+          </FixedBox>
+          { (rightAddon && !rightAddon?.props?.isExcluded) && rightAddon }
+        </InputWrapper>
+        { rightAddon?.props?.isExcluded && rightAddon }
       </Div>
     </FormBlockLabel>
   )

@@ -78,7 +78,6 @@ const InputNumberTemplate: React.FC<Props> = props => {
       <InputElement
         {...props}
         hasRightAddon
-        hasSeparatedRightAddon
         type="number"
       />
       <InputAddon {...addonProps}>

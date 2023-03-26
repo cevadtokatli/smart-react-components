@@ -10,6 +10,7 @@ import FormBlockLabel from '../components/Form/FormBlockLabel'
 import useAddons from '../hooks/useAddons'
 import useInputMethods from '../hooks/useInputMethods'
 import InputNumberTemplate from '../components/Input/InputNumberTemplate'
+import InputWrapper from '../components/Input/InputWrapper'
 import InputAddon from './InputAddon'
 
 export interface Props extends
@@ -112,39 +113,51 @@ const InputNumber = React.forwardRef<HTMLInputElement, Props>((props, forwardRef
         display="flex"
         flex="1 1 auto"
       >
-        { leftAddon && leftAddon }
-        { React.cloneElement(props.template, {
-          ...extractElementProps(props, [changeEvents, focusEvents, keyboardEvents]),
-          ...(typeof props.defaultValue !== 'undefined' && { defaultValue: (props.defaultValue ?? '') }),
-          ...(props.isDisabled && { disabled: true }),
-          ...(props.isReadOnly && { readOnly: true }),
-          ...(props.isRequired && { required: true }),
-          ...(typeof props.max !== 'undefined' && { max: props.max }),
-          ...(typeof props.min !== 'undefined' && { min: props.min }),
-          ...(typeof props.step !== 'undefined' && { step: props.step }),
-          ...(typeof props.value !== 'undefined' && { value: (props.value ?? '') }),
-          hasBorder: props.hasBorder,
-          hasLeftAddon: !!leftAddon,
-          hasRightAddon: !!rightAddon,
-          hasSeparatedLeftAddon: leftAddon?.props?.isSeparated,
-          hasSeparatedRightAddon: rightAddon?.props?.isSeparated,
-          inputSize: props.size,
-          inputSizeSm: props.sizeSm,
-          inputSizeMd: props.sizeMd,
-          inputSizeLg: props.sizeLg,
-          inputSizeXl: props.sizeXl,
-          isDisabled: props.isDisabled,
-          isFocused,
-          isOutline: props.isOutline,
-          isSoft: props.isSoft,
-          onBlur: handleOnBlur,
-          onChange: handleOnChange,
-          onFocus: handleOnFocus,
-          palette: props.palette,
-          ref: forwardRef,
-          shape: props.shape,
-        }) }
-        { rightAddon && rightAddon }
+        { leftAddon?.props?.isExcluded && leftAddon }
+        <InputWrapper
+          hasBorder={props.hasBorder}
+          hasExcludedLeftAddon={leftAddon?.props?.isExcluded}
+          hasExcludedRightAddon={rightAddon?.props?.isExcluded}
+          isDisabled={props.isDisabled}
+          isFocused={isFocused}
+          isOutline={props.isOutline}
+          isSoft={props.isSoft}
+          palette={props.palette}
+          shape={props.shape}
+        >
+          { (leftAddon && !leftAddon?.props?.isExcluded) && leftAddon }
+          { React.cloneElement(props.template, {
+            ...extractElementProps(props, [changeEvents, focusEvents, keyboardEvents]),
+            ...(typeof props.defaultValue !== 'undefined' && { defaultValue: (props.defaultValue ?? '') }),
+            ...(props.isDisabled && { disabled: true }),
+            ...(props.isReadOnly && { readOnly: true }),
+            ...(props.isRequired && { required: true }),
+            ...(typeof props.max !== 'undefined' && { max: props.max }),
+            ...(typeof props.min !== 'undefined' && { min: props.min }),
+            ...(typeof props.step !== 'undefined' && { step: props.step }),
+            ...(typeof props.value !== 'undefined' && { value: (props.value ?? '') }),
+            hasBorder: props.hasBorder,
+            hasLeftAddon: !!leftAddon,
+            hasRightAddon: !!rightAddon,
+            inputSize: props.size,
+            inputSizeSm: props.sizeSm,
+            inputSizeMd: props.sizeMd,
+            inputSizeLg: props.sizeLg,
+            inputSizeXl: props.sizeXl,
+            isDisabled: props.isDisabled,
+            isFocused,
+            isOutline: props.isOutline,
+            isSoft: props.isSoft,
+            onBlur: handleOnBlur,
+            onChange: handleOnChange,
+            onFocus: handleOnFocus,
+            palette: props.palette,
+            ref: forwardRef,
+            shape: props.shape,
+          }) }
+          { (rightAddon && !rightAddon?.props?.isExcluded) && rightAddon }
+        </InputWrapper>
+        { rightAddon?.props?.isExcluded && rightAddon }
       </Div>
     </FormBlockLabel>
   )

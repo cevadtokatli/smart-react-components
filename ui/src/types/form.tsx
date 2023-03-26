@@ -17,8 +17,10 @@ export interface GenericProps extends
   isSoft?: boolean
   label?: ContentElement
   leftAddon?: ContentElement
+  leftIcon?: ContentElement
   palette?: PaletteProp
   rightAddon?: ContentElement
+  rightIcon?: ContentElement
   shape?: ShapeProp
   setActive: SetState<FormValue | FormValue[]>
   waveEffectPalette?: PaletteProp

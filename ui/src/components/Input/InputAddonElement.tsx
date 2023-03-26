@@ -13,6 +13,7 @@ interface Props extends
   addonPosition: OrderPosition
   hasBorder: boolean
   isDisabled: boolean
+  isExcluded: boolean
   isFocused: boolean
   isOutline: boolean
   isSeparated: boolean
@@ -25,17 +26,15 @@ export default styled(Div).attrs<Props>(({ isSeparated }: Props) => ({
   ...(isSeparated && { as: 'label' }),
   getInputSize: (v, t) => `
     font-size: ${t.$.size.form.blockLabel[v].fontSize};
-    padding: ${isSeparated ? t.$.size.input[v].padding.y : 0} ${toCSSValue(t.$.size.input[v].padding.x)(v => v / 2)};
+    padding: ${toCSSValue(t.$.size.input[v].padding.x)(v => v / 2)};
 
     ${Svg} {
       height: ${t.$.size.icon[v]};
       width: ${t.$.size.icon[v]};
     }
   `,
-}))<Props>(({ theme, addonPosition, hasBorder, isDisabled, isFocused, isOutline, isSeparated, isSoft, palette, shape }: Props) => `
+}))<Props>(({ theme, addonPosition, hasBorder, isDisabled, isExcluded, isFocused, isOutline, isSeparated, isSoft, palette, shape }: Props) => `
   align-items: center;
-  border-bottom-${OrderPosition[addonPosition].toLowerCase()}-radius: ${theme.$.radius.input[shape]};
-  border-top-${OrderPosition[addonPosition].toLowerCase()}-radius: ${theme.$.radius.input[shape]};
   box-sizing: border-box;
   display: inline-flex;
   fill: currentcolor;
@@ -44,10 +43,18 @@ export default styled(Div).attrs<Props>(({ isSeparated }: Props) => ({
   transition: 200ms 0s ease-in-out;
   transition-property: background, border, color, fill;
 
-  ${hasBorder
+  ${isExcluded
     ? `
-      border: solid 1px;
-      border-${OrderPosition[getReverseOrderPosition(addonPosition)].toLowerCase()}: 0;
+      border-bottom-${OrderPosition[addonPosition].toLowerCase()}-radius: ${theme.$.radius.input[shape]};
+      border-top-${OrderPosition[addonPosition].toLowerCase()}-radius: ${theme.$.radius.input[shape]};
+
+      ${hasBorder
+        ? `
+          border: solid 1px;
+          border-${OrderPosition[getReverseOrderPosition(addonPosition)].toLowerCase()}: 0;
+        `
+        : ''
+      }
     `
     : ''
   }
@@ -58,7 +65,7 @@ export default styled(Div).attrs<Props>(({ isSeparated }: Props) => ({
         ? `
           color: ${theme.$.palette[palette].font};
 
-          ${(isSeparated || !isFocused)
+          ${!isFocused
             ? `
               background: ${theme.$.palette[palette].main};
               border-color: ${theme.$.palette[palette].dark};
@@ -72,7 +79,7 @@ export default styled(Div).attrs<Props>(({ isSeparated }: Props) => ({
         : `
           color: ${theme.$.palette[palette].softFont};
 
-          ${(isSeparated || !isFocused)
+          ${!isFocused
             ? `
               background: ${theme.$.palette[palette].soft};
               border-color: ${theme.$.palette[palette].softDark};
@@ -87,7 +94,7 @@ export default styled(Div).attrs<Props>(({ isSeparated }: Props) => ({
     `
     : `
       background: ${theme.$.color.dynamic.background};
-      border-color ${(isSeparated || !isFocused) ? theme.$.color.dynamic.accent : theme.$.palette[palette].main};
+      border-color ${!isFocused ? theme.$.color.dynamic.accent : theme.$.palette[palette].main};
       color: ${theme.$.color.dynamic.font};
     `
   }
