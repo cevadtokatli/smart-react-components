@@ -28,14 +28,13 @@ exports[`<Input /> should render component 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
-.c3 {
+.c4 {
   font-size: .875rem;
   padding: .45rem .9rem;
 }
 
-.c4 {
-  border: solid 1px;
-  border-radius: .2rem;
+.c5 {
+  border: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -43,58 +42,75 @@ exports[`<Input /> should render component 1`] = `
   min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   background: #fff;
-  border-color: #dbdbdb;
   color: #323a46;
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c4:-moz-placeholder {
+.c5:-moz-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c4::placeholder {
+.c5::placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c4:active,
-.c4:focus {
+.c5:active,
+.c5:focus {
   outline: 0;
+}
+
+.c3 {
+  border: solid 1px;
+  border-radius: .2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 1px;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: border;
+  transition-property: border;
+  border-color: #dbdbdb;
 }
 
 <label
@@ -107,11 +123,16 @@ exports[`<Input /> should render component 1`] = `
       class="c2"
       display="flex"
     >
-      <input
-        class="c3 c4"
+      <div
+        class=" c3"
         shape="rectangle"
-        type="text"
-      />
+      >
+        <input
+          class="c4 c5"
+          shape="rectangle"
+          type="text"
+        />
+      </div>
     </div>
   </label>
 </DocumentFragment>
@@ -145,6 +166,24 @@ exports[`<Input /> should render custom component 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
+.c3 {
+  border: solid 1px;
+  border-radius: .2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 1px;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: border;
+  transition-property: border;
+  border-color: #dbdbdb;
+}
+
 <label
     class="c0 c1"
   >
@@ -153,8 +192,13 @@ exports[`<Input /> should render custom component 1`] = `
       display="flex"
     >
       <div
-        contenteditable="true"
-      />
+        class=" c3"
+        shape="rectangle"
+      >
+        <div
+          contenteditable="true"
+        />
+      </div>
     </div>
   </label>
 </DocumentFragment>

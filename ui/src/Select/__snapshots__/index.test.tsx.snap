@@ -12,11 +12,11 @@ exports[`<Select /> should render component 1`] = `
   flex: 1 1 auto;
 }
 
-.c6 {
+.c8 {
   font-weight: 500;
 }
 
-.c7 {
+.c9 {
   isolation: isolate;
   overflow: hidden;
   position: relative;
@@ -39,18 +39,17 @@ exports[`<Select /> should render component 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
-.c3 {
+.c4 {
   font-size: .875rem;
 }
 
-.c3 > div {
+.c4 > div {
   margin: 0.225rem 0.45rem;
   padding: 0.225rem 0.45rem;
 }
 
-.c4 {
-  border: solid 1px;
-  border-radius: .2rem;
+.c5 {
+  border: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -58,12 +57,11 @@ exports[`<Select /> should render component 1`] = `
   min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   background: #fff;
-  border-color: #dbdbdb;
   color: #323a46;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -80,12 +78,16 @@ exports[`<Select /> should render component 1`] = `
   position: relative;
 }
 
-.c4:active,
-.c4:focus {
+.c5:active,
+.c5:focus {
   outline: 0;
 }
 
-.c5 {
+.c6 {
+  display: block;
+}
+
+.c7 {
   height: 100%;
   left: 0;
   opacity: 0;
@@ -95,7 +97,25 @@ exports[`<Select /> should render component 1`] = `
   width: 100%;
 }
 
-.c8 {
+.c3 {
+  border: solid 1px;
+  border-radius: .2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 1px;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: border;
+  transition-property: border;
+  border-color: #dbdbdb;
+}
+
+.c10 {
   border-radius: .2rem;
   cursor: default;
   -webkit-transition: 100ms 0s ease-in-out;
@@ -106,7 +126,7 @@ exports[`<Select /> should render component 1`] = `
   color: #fff;
 }
 
-.c9 {
+.c11 {
   border-radius: .2rem;
   cursor: default;
   -webkit-transition: 100ms 0s ease-in-out;
@@ -115,7 +135,7 @@ exports[`<Select /> should render component 1`] = `
   transition-property: background,color,fill;
 }
 
-.c9:hover {
+.c11:hover {
   background: #0665d0;
   color: #fff;
 }
@@ -128,36 +148,40 @@ exports[`<Select /> should render component 1`] = `
       display="flex"
     >
       <div
-        class="c3 c4"
+        class=" c3"
         shape="rectangle"
       >
-        <input
-          class="c5"
-          value="item-1"
-        />
         <div
-          class="c6"
-          font-weight="$fontWeight.semibold"
+          class="c4 c5 c6"
         >
-          Category
-        </div>
-        <div
-          class="c7 c8"
-          overflow="hidden"
-        >
-          Item 1
-        </div>
-        <div
-          class="c7 c9"
-          overflow="hidden"
-        >
-          Item 2
-        </div>
-        <div
-          class="c7 c9"
-          overflow="hidden"
-        >
-          Item 3
+          <input
+            class="c7"
+            value="item-1"
+          />
+          <div
+            class="c8"
+            font-weight="$fontWeight.semibold"
+          >
+            Category
+          </div>
+          <div
+            class="c9 c10"
+            overflow="hidden"
+          >
+            Item 1
+          </div>
+          <div
+            class="c9 c11"
+            overflow="hidden"
+          >
+            Item 2
+          </div>
+          <div
+            class="c9 c11"
+            overflow="hidden"
+          >
+            Item 3
+          </div>
         </div>
       </div>
     </div>

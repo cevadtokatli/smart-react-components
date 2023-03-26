@@ -7,8 +7,6 @@ exports[`<InputAddon /> should render component 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-bottom-left-radius: .2rem;
-  border-top-left-radius: .2rem;
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -26,8 +24,6 @@ exports[`<InputAddon /> should render component 1`] = `
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  border: solid 1px;
-  border-right: 0;
   background: #fff;
   border-color: #dbdbdb;
   color: #323a46;

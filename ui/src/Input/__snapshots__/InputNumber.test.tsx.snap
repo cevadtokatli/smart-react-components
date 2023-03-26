@@ -12,27 +12,27 @@ exports[`<InputNumber /> should render component 1`] = `
   flex: 1 1 auto;
 }
 
-.c3 .c8 {
+.c4 .c9 {
   padding: 0;
 }
 
-.c3 .c8 > div {
+.c4 .c9 > div {
   padding: 0 0.45rem;
 }
 
-.c9 {
+.c10 {
   font-size: 1rem;
-  padding: 0 0.45rem;
+  padding: 0.45rem;
 }
 
-.c11 {
+.c12 {
   -webkit-align-items: flex-end;
   -webkit-box-align: flex-end;
   -ms-flex-align: flex-end;
   align-items: flex-end;
 }
 
-.c12 {
+.c13 {
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
@@ -55,13 +55,11 @@ exports[`<InputNumber /> should render component 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
-.c10 {
+.c11 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-bottom-right-radius: .2rem;
-  border-top-right-radius: .2rem;
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -79,22 +77,19 @@ exports[`<InputNumber /> should render component 1`] = `
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  border: solid 1px;
-  border-left: 0;
   background: #fff;
   border-color: #dbdbdb;
   color: #323a46;
 }
 
-.c6 {
+.c7 {
   font-size: .875rem;
   padding: .45rem .9rem;
   padding-right: 0.45rem;
 }
 
-.c7 {
-  border: solid 1px;
-  border-radius: .2rem;
+.c8 {
+  border: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -102,64 +97,60 @@ exports[`<InputNumber /> should render component 1`] = `
   min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   background: #fff;
-  border-color: #dbdbdb;
   color: #323a46;
-  border-right: 0;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
 }
 
-.c7::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c7::-moz-placeholder {
+.c8::-moz-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c7:-moz-placeholder {
+.c8:-moz-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c7:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c7::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c7::-moz-placeholder {
+.c8::-moz-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c7:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c7::placeholder {
+.c8::placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c7:active,
-.c7:focus {
+.c8:active,
+.c8:focus {
   outline: 0;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -169,17 +160,17 @@ exports[`<InputNumber /> should render component 1`] = `
   flex: 1 1 auto;
 }
 
-.c4 .c5 {
+.c5 .c6 {
   -moz-appearance: textfield;
 }
 
-.c4 .c5::-webkit-inner-spin-button,
-.c4 .c5::-webkit-outer-spin-button {
+.c5 .c6::-webkit-inner-spin-button,
+.c5 .c6::-webkit-outer-spin-button {
   margin: 0;
   -webkit-appearance: none;
 }
 
-.c4 .c8 {
+.c5 .c9 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -189,7 +180,7 @@ exports[`<InputNumber /> should render component 1`] = `
   user-select: none;
 }
 
-.c4 .c8 > div {
+.c5 .c9 > div {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -198,17 +189,35 @@ exports[`<InputNumber /> should render component 1`] = `
   visibility: hidden;
 }
 
-.c4 .c8 > div > svg {
+.c5 .c9 > div > svg {
   height: .65rem;
   width: .65rem;
 }
 
-.c4 .c8 > div:active {
+.c5 .c9 > div:active {
   opacity: .3;
 }
 
-.c4:hover .c8 > div {
+.c5:hover .c9 > div {
   visibility: visible;
+}
+
+.c3 {
+  border: solid 1px;
+  border-radius: .2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 1px;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: border;
+  transition-property: border;
+  border-color: #dbdbdb;
 }
 
 <label
@@ -222,41 +231,46 @@ exports[`<InputNumber /> should render component 1`] = `
       display="flex"
     >
       <div
-        class="c3 c4"
+        class=" c3"
+        shape="rectangle"
       >
-        <input
-          class="c5 c6 c7"
-          shape="rectangle"
-          type="number"
-          value="1"
-        />
         <div
-          class="c8 c9 c10"
-          shape="rectangle"
+          class="c4 c5"
         >
+          <input
+            class="c6 c7 c8"
+            shape="rectangle"
+            type="number"
+            value="1"
+          />
           <div
-            class="c11"
+            class="c9 c10 c11"
+            shape="rectangle"
           >
-            <svg
-              class=""
-              viewBox="0 0 320 512"
+            <div
+              class="c12"
             >
-              <path
-                d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"
-              />
-            </svg>
-          </div>
-          <div
-            class="c12"
-          >
-            <svg
-              class=""
-              viewBox="0 0 320 512"
+              <svg
+                class=""
+                viewBox="0 0 320 512"
+              >
+                <path
+                  d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"
+                />
+              </svg>
+            </div>
+            <div
+              class="c13"
             >
-              <path
-                d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
-              />
-            </svg>
+              <svg
+                class=""
+                viewBox="0 0 320 512"
+              >
+                <path
+                  d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>

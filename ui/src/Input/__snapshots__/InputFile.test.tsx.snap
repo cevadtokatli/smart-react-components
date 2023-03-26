@@ -28,14 +28,13 @@ exports[`<InputFile /> should render component 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
-.c3 {
+.c4 {
   font-size: .875rem;
   padding: .45rem .9rem;
 }
 
-.c4 {
-  border: solid 1px;
-  border-radius: .2rem;
+.c5 {
+  border: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -43,12 +42,11 @@ exports[`<InputFile /> should render component 1`] = `
   min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   background: #fff;
-  border-color: #dbdbdb;
   color: #323a46;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -65,12 +63,12 @@ exports[`<InputFile /> should render component 1`] = `
   position: relative;
 }
 
-.c4:active,
-.c4:focus {
+.c5:active,
+.c5:focus {
   outline: 0;
 }
 
-.c5 {
+.c6 {
   height: 100%;
   left: 0;
   opacity: 0;
@@ -78,6 +76,24 @@ exports[`<InputFile /> should render component 1`] = `
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+.c3 {
+  border: solid 1px;
+  border-radius: .2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 1px;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: border;
+  transition-property: border;
+  border-color: #dbdbdb;
 }
 
 <label
@@ -91,14 +107,18 @@ exports[`<InputFile /> should render component 1`] = `
       display="flex"
     >
       <div
-        class="c3 c4"
+        class=" c3"
         shape="rectangle"
       >
-        <input
-          class="c5"
-          type="file"
-        />
-        file.jpg
+        <div
+          class="c4 c5"
+        >
+          <input
+            class="c6"
+            type="file"
+          />
+          file.jpg
+        </div>
       </div>
     </div>
   </label>

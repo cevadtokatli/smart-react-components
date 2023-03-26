@@ -1,7 +1,8 @@
 import { wrapTheme } from '@smart-react-components/core/test'
 import { render } from '@testing-library/react'
 import React from 'react'
-import InputElement, { InputPlaceholder } from './InputElement'
+import InputElement from './InputElement'
+import InputPlaceholder from './InputPlaceholder'
 
 describe('<InputElement />', () => {
   let props

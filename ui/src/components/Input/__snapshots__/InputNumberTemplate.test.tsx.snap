@@ -21,8 +21,6 @@ exports[`<InputNumberTemplate /> should render component 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-bottom-right-radius: .2rem;
-  border-top-right-radius: .2rem;
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -40,16 +38,13 @@ exports[`<InputNumberTemplate /> should render component 1`] = `
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  border: solid 1px;
-  border-left: 0;
   background: #fff;
   border-color: #0665d0;
   color: #323a46;
 }
 
 .c2 {
-  border: solid 1px;
-  border-radius: .2rem;
+  border: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -57,16 +52,12 @@ exports[`<InputNumberTemplate /> should render component 1`] = `
   min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   background: #fff;
-  border-color: #0665d0;
   color: #323a46;
-  border-right: 0;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
 }
 
 .c2::-webkit-input-placeholder {

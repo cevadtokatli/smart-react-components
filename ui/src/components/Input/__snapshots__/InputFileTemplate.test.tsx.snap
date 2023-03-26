@@ -118,8 +118,7 @@ exports[`<InputFileTemplate /> should render multiple values 1`] = `
 }
 
 .c1 {
-  border: solid 1px;
-  border-radius: .2rem;
+  border: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -127,12 +126,11 @@ exports[`<InputFileTemplate /> should render multiple values 1`] = `
   min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   background: #fff;
-  border-color: #dbdbdb;
   color: #323a46;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -156,7 +154,6 @@ exports[`<InputFileTemplate /> should render multiple values 1`] = `
 
 <div
     class="c0 c1"
-    shape="rectangle"
   >
     <input />
     <div
@@ -221,8 +218,7 @@ exports[`<InputFileTemplate /> should render placeholder 1`] = `
 }
 
 .c1 {
-  border: solid 1px;
-  border-radius: .2rem;
+  border: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -230,12 +226,11 @@ exports[`<InputFileTemplate /> should render placeholder 1`] = `
   min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   background: #fff;
-  border-color: #dbdbdb;
   color: #323a46;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -259,7 +254,6 @@ exports[`<InputFileTemplate /> should render placeholder 1`] = `
 
 <div
     class="c0 c1"
-    shape="rectangle"
   >
     <input />
     <div
@@ -279,8 +273,7 @@ exports[`<InputFileTemplate /> should render single value 1`] = `
 }
 
 .c1 {
-  border: solid 1px;
-  border-radius: .2rem;
+  border: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -288,12 +281,11 @@ exports[`<InputFileTemplate /> should render single value 1`] = `
   min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   background: #fff;
-  border-color: #dbdbdb;
   color: #323a46;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -317,7 +309,6 @@ exports[`<InputFileTemplate /> should render single value 1`] = `
 
 <div
     class="c0 c1"
-    shape="rectangle"
   >
     <input />
     file.jpg

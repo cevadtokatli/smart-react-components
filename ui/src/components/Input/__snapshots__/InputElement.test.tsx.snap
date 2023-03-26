@@ -2,21 +2,20 @@
 
 exports[`<InputElement /> should be rendered as div 1`] = `
 <DocumentFragment>
-  .c2 {
+  .c0 {
+  font-size: .875rem;
+  padding: .45rem .9rem;
+}
+
+.c2 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
 
-.c0 {
-  font-size: .875rem;
-  padding: .45rem .9rem;
-}
-
 .c1 {
-  border: solid 1px;
-  border-radius: .2rem;
+  border: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -24,12 +23,11 @@ exports[`<InputElement /> should be rendered as div 1`] = `
   min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   background: #fff;
-  border-color: #dbdbdb;
   color: #323a46;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -73,8 +71,7 @@ exports[`<InputElement /> should have left addon 1`] = `
 }
 
 .c1 {
-  border: solid 1px;
-  border-radius: .2rem;
+  border: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -82,16 +79,12 @@ exports[`<InputElement /> should have left addon 1`] = `
   min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   background: #fff;
-  border-color: #dbdbdb;
   color: #323a46;
-  border-left: 0;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
 }
 
 .c1::-webkit-input-placeholder {
@@ -155,8 +148,7 @@ exports[`<InputElement /> should have right addon 1`] = `
 }
 
 .c1 {
-  border: solid 1px;
-  border-radius: .2rem;
+  border: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -164,16 +156,12 @@ exports[`<InputElement /> should have right addon 1`] = `
   min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   background: #fff;
-  border-color: #dbdbdb;
   color: #323a46;
-  border-right: 0;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
 }
 
 .c1::-webkit-input-placeholder {
@@ -237,8 +225,7 @@ exports[`<InputElement /> should have separated left addon 1`] = `
 }
 
 .c1 {
-  border: solid 1px;
-  border-radius: .2rem;
+  border: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -246,16 +233,12 @@ exports[`<InputElement /> should have separated left addon 1`] = `
   min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   background: #fff;
-  border-color: #dbdbdb;
   color: #323a46;
-  border-left: 0;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
 }
 
 .c1::-webkit-input-placeholder {
@@ -319,8 +302,7 @@ exports[`<InputElement /> should have separated right addon 1`] = `
 }
 
 .c1 {
-  border: solid 1px;
-  border-radius: .2rem;
+  border: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -328,16 +310,12 @@ exports[`<InputElement /> should have separated right addon 1`] = `
   min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   background: #fff;
-  border-color: #dbdbdb;
   color: #323a46;
-  border-right: 0;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
 }
 
 .c1::-webkit-input-placeholder {
@@ -400,8 +378,7 @@ exports[`<InputElement /> should render component 1`] = `
 }
 
 .c1 {
-  border: solid 1px;
-  border-radius: .2rem;
+  border: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -409,12 +386,11 @@ exports[`<InputElement /> should render component 1`] = `
   min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   background: #fff;
-  border-color: #dbdbdb;
   color: #323a46;
 }
 
@@ -478,8 +454,7 @@ exports[`<InputElement /> should render component disabled 1`] = `
 }
 
 .c1 {
-  border: solid 1px;
-  border-radius: .2rem;
+  border: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -487,14 +462,12 @@ exports[`<InputElement /> should render component disabled 1`] = `
   min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   background: #fff;
-  border-color: #dbdbdb;
   color: #323a46;
-  opacity: 0.7;
   background: #dbdbdb;
   color: #eee;
 }
@@ -551,8 +524,7 @@ exports[`<InputElement /> should render component focused 1`] = `
 }
 
 .c1 {
-  border: solid 1px;
-  border-radius: .2rem;
+  border: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -560,12 +532,11 @@ exports[`<InputElement /> should render component focused 1`] = `
   min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   background: #fff;
-  border-color: #0665d0;
   color: #323a46;
 }
 
@@ -629,8 +600,7 @@ exports[`<InputElement /> should render not outline 1`] = `
 }
 
 .c1 {
-  border: solid 1px;
-  border-radius: .2rem;
+  border: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -638,13 +608,12 @@ exports[`<InputElement /> should render not outline 1`] = `
   min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
-  color: #fff;
   background: #0665d0;
-  border-color: #065DC0;
+  color: #fff;
 }
 
 .c1::-webkit-input-placeholder {
@@ -707,8 +676,7 @@ exports[`<InputElement /> should render with soft colors 1`] = `
 }
 
 .c1 {
-  border: solid 1px;
-  border-radius: .2rem;
+  border: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -716,13 +684,12 @@ exports[`<InputElement /> should render with soft colors 1`] = `
   min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
-  color: #033c7c;
   background: #cde0f5;
-  border-color: #b9d3f1;
+  color: #033c7c;
 }
 
 .c1::-webkit-input-placeholder {
@@ -785,8 +752,7 @@ exports[`<InputElement /> should resize component responsively 1`] = `
 }
 
 .c1 {
-  border: solid 1px;
-  border-radius: .2rem;
+  border: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -794,12 +760,11 @@ exports[`<InputElement /> should resize component responsively 1`] = `
   min-width: 1px;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   background: #fff;
-  border-color: #dbdbdb;
   color: #323a46;
 }
 
