@@ -27,7 +27,7 @@ const DropdownList: React.FC<Props> = ({ children, hasHover = true, hasWaveEffec
     isSoft={isSoft}
     palette={palette}
   >
-    { (Array.isArray(children) ? children : [children]).map((item, idx) => React.cloneElement(item, { key: item.key ?? idx, hasHover, hasWaveEffect, isOutline, isSoft, palette, setStatus, waveEffectPalette })) }
+    { (Array.isArray(children) ? children : [children]).map((item, idx) => item && React.cloneElement(item, { key: item.key ?? idx, hasHover, hasWaveEffect, isOutline, isSoft, palette, setStatus, waveEffectPalette })) }
   </DropdownListElement>
 )
 
