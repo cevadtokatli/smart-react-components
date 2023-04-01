@@ -57,8 +57,6 @@ const TableContainer: React.FC<Props> = props => {
 
     const yEls = el.current.querySelectorAll('table > thead > tr')
 
-    console.log(x, y, yEls)
-
     if (y > 0 && yEls.length > 0) {
       if (props.hasInternalScroll) {
         styled += 'overflow-y: auto;'
@@ -81,8 +79,6 @@ const TableContainer: React.FC<Props> = props => {
         `
       }
     }
-
-    console.log(styled)
 
     setStyled(styled)
   }

@@ -72,8 +72,6 @@ const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, h
   }
 
   const handleWindowClick = (e: Event) => {
-    e.preventDefault()
-
     mouseEvent.current = null
 
     const target = e.target as HTMLElement
