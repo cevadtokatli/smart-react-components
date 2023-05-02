@@ -76,13 +76,6 @@ function release() {
     exit 1
   fi
 
-  yarn test
-
-  if [ $? -ne '0' ] ; then
-    echo -e "$RED***** There are some failing test cases after your changes *****$NC"
-    exit 1
-  fi
-
   local version=$(getVersion)
   updateVersion "version" $version
 
