@@ -32,7 +32,7 @@ export const calculatePosition = (
 
   boxEl.removeAttribute('style')
 
-  let width = Math.max(boxEl.offsetWidth, position & (Position.TOP | Position.BOTTOM) ? triggerEl.offsetWidth : 0)
+  let width = Math.max(boxEl.offsetWidth + .5, position & (Position.TOP | Position.BOTTOM) ? triggerEl.offsetWidth : 0)
 
   if (minWidth && minWidth > width) {
     width = minWidth
@@ -63,7 +63,7 @@ const calculatePositionBasedOnXAxis = (
 ): string => {
   // left & width
   let left: number
-  const width = boxEl.offsetWidth
+  const width = boxEl.offsetWidth + .5
   const triggerLeft = e?.clientX ?? triggerRect.left
   const triggerWidth = e ? 0 : triggerRect.width
   const diffLeft = triggerRect.left - (space + width)
@@ -116,7 +116,7 @@ const calculatePositionBasedOnYAxis = (
 ): string => {
   // left & width
   let left: number
-  const width = boxEl.offsetWidth
+  const width = boxEl.offsetWidth + .5
   const triggerLeft = e?.clientX ?? triggerRect.left
   const triggerWidth = e ? 0 : triggerRect.width
   const diffLeft = windowWidth - (triggerLeft + width)
