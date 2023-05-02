@@ -6,7 +6,7 @@ import DropdownItemElement from '../components/Dropdown/DropdownItemElement'
 export interface Props {
   children: ContentElement
   isDisabled?: boolean
-  onClick?: (e: React.MouseEvent<HTMLElement>) => void | Promise<void>
+  onClick?: (e: React.MouseEvent<HTMLElement>) => void
 }
 
 export interface PrivateProps {
@@ -20,12 +20,12 @@ export interface PrivateProps {
 }
 
 const DropdownItem: React.FC<Props> = ({ children, hasHover, hasWaveEffect, isDisabled, isOutline, isSoft, onClick, palette, setStatus, waveEffectPalette }: (Props & PrivateProps)) => {
-  const handleOnClick = async (e: React.MouseEvent<HTMLElement>) => {
+  const handleOnClick = (e: React.MouseEvent<HTMLElement>) => {
     if (isDisabled) {
       return
     }
 
-    await onClick?.(e)
+    onClick?.(e)
 
     if (!e.defaultPrevented) {
       setStatus(false)
