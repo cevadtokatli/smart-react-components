@@ -61,7 +61,7 @@ const Alert: React.FC<Props> = props => {
       ),
       hasIconLeft: !!iconLeft,
       hasIconRight: !!iconRight,
-      hasThickBorder: !(iconLeft && (iconLeft.props.hasBackground || (iconLeft.props.palette && iconLeft.props.palette !== props.palette))),
+      hasThickBorder: !(iconLeft && (iconLeft.props.hasBackground !== false || (iconLeft.props.palette && iconLeft.props.palette !== props.palette))),
     }
   }
 
