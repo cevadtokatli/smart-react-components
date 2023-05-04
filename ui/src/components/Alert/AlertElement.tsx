@@ -6,6 +6,7 @@ import { toCSSValue } from '../../util/css'
 
 export const Content = styled.div`
   flex: 1 1 auto;
+  min-width: 1px;
 `
 
 interface Props extends
