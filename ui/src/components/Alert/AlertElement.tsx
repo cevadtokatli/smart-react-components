@@ -2,6 +2,7 @@ import Div from '@smart-react-components/core/Element/Div'
 import { StyledProps } from '@smart-react-components/core/styled-props'
 import { PaletteProp, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import styled from 'styled-components'
+import { toCSSValue } from '../../util/css'
 
 export const Content = styled.div`
   flex: 1 1 auto;
@@ -12,23 +13,38 @@ interface Props extends
   ResponsiveProp<'alertSize', SizeProp> {
   hasIconLeft: boolean
   hasIconRight: boolean
+  hasThickBorder: boolean
   isOutline: boolean
   isSoft: boolean
   palette: PaletteProp
   shape: ShapeProp
 }
 
-export default styled(Div).attrs<Props>({
+export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight }) => ({
   getAlertSize: (v, t) => `
     font-size: ${t.$.size.alert[v].fontSize};
 
     ${Content} {
       padding: ${t.$.size.alert[v].padding.y} ${t.$.size.alert[v].padding.x};
+
+      ${hasIconLeft
+        ? `
+          padding-left: ${toCSSValue(t.$.size.alert[v].padding.x)(v => v / 2)};
+        `
+        : ''
+      }
+
+      ${hasIconRight
+        ? `
+          padding-right: ${toCSSValue(t.$.size.alert[v].padding.x)(v => v / 2)};
+        `
+        : ''
+      }
+
     }
   `,
-})<Props>(({ theme, hasIconLeft, hasIconRight, isOutline, isSoft, palette, shape }: Props) => `
+}))<Props>(({ theme, hasThickBorder, isOutline, isSoft, palette, shape }: Props) => `
   border: solid 1px;
-  border-left-width: 10px;
   border-radius: ${theme.$.radius.alert[shape]};
   box-sizing: border-box;
   display: flex;
@@ -66,23 +82,9 @@ export default styled(Div).attrs<Props>({
     `
   }
 
-  ${hasIconLeft
-    ? `
-      > ${Content} {
-        padding-left: 0;
-      }
-    `
-    : ''
-  }
-
-  ${hasIconRight
-    ? `
-      > ${Content} {
-        padding-right: 0;
-      }
-    `
-    : ''
-  }
+  ${hasThickBorder && `
+    border-left-width: 10px;
+  `}
 
   ${Content} > {
     header, h1, h2, h3, h4, h5, h6, p, hr {

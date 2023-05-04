@@ -60,10 +60,11 @@ const Alert: React.FC<Props> = props => {
       ),
       hasIconLeft: !!iconLeft,
       hasIconRight: !!iconRight,
+      hasThickBorder: !(iconLeft && (iconLeft.props.hasBackground || (iconLeft.props.palette && iconLeft.props.palette !== props.palette))),
     }
   }
 
-  const [{ children, hasIconLeft, hasIconRight }, setContent] = React.useState(() => getContent())
+  const [{ children, hasIconLeft, hasIconRight, hasThickBorder }, setContent] = React.useState(() => getContent())
 
   useChangeEffect(() => {
     setContent(getContent())
@@ -78,6 +79,7 @@ const Alert: React.FC<Props> = props => {
       alertSizeXl={props.sizeXl}
       hasIconLeft={hasIconLeft}
       hasIconRight={hasIconRight}
+      hasThickBorder={hasThickBorder}
       isOutline={props.isOutline}
       isSoft={props.isSoft}
       palette={props.palette}

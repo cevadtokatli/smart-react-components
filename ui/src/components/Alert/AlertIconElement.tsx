@@ -2,6 +2,7 @@ import Div from '@smart-react-components/core/Element/Div'
 import { StyledProps } from '@smart-react-components/core/styled-props'
 import { PaletteProp, ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
 import styled from 'styled-components'
+import { toCSSValue } from '../../util/css'
 
 interface Props extends
   StyledProps,
@@ -15,7 +16,7 @@ interface Props extends
 
 export default styled(Div).attrs({
   getAlertIconSize: (v, t) => `
-    padding: 0 ${t.$.size.alert[v].padding.x};
+    padding: 0 ${toCSSValue(t.$.size.alert[v].padding.x)(v => v / 2)};
 
     > svg {
       height: ${t.$.size.alert[v].iconSize};
@@ -42,7 +43,9 @@ export default styled(Div).attrs({
         ? `
           background: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};
         `
-        : ''
+        : `
+          background: ${!isSoft ? theme.$.palette[palette].darkest : theme.$.palette[palette].softDarkest};
+        `
       }
     `
     : `
