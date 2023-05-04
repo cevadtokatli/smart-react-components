@@ -5,6 +5,7 @@ import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { ContentElement, JSXElementProps, PaletteProp, Partial, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import AlertElement, { Content } from '../components/Alert/AlertElement'
+import { OrderPosition } from '../types'
 
 export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,
@@ -32,6 +33,7 @@ const Alert: React.FC<Props> = props => {
           alertPalette: props.palette,
           isOutline: props.isOutline,
           isSoft: props.isSoft,
+          position: i === 0 ? OrderPosition.LEFT : OrderPosition.RIGHT,
           size: props.size,
           sizeSm: props.sizeSm,
           sizeMd: props.sizeMd,
