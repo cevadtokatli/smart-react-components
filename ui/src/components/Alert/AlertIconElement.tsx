@@ -10,6 +10,7 @@ interface Props extends
   alertPalette: PaletteProp
   hasBackground: boolean
   hasHover: boolean
+  isOutline: boolean
   isSoft: boolean
   palette: PaletteProp
 }
@@ -27,30 +28,29 @@ export default styled(Div).attrs({
       font-size: ${t.$.size.alert[v].iconSize};
     }
   `,
-})<Props>(({ theme, alertPalette, hasBackground, hasHover, isSoft, palette }: Props) => `
+})<Props>(({ theme, alertPalette, hasBackground, hasHover, isOutline, isSoft, palette }: Props) => `
   align-items: center;
   align-self: stretch;
   display: flex;
+  fill: currentcolor;
   flex: 0 0 auto;
   justify-content: center;
 
   ${(palette === alertPalette || hasBackground)
     ? `
-      color: ${!isSoft ? theme.$.palette[palette].font : theme.$.palette[palette].softFont};
-      fill: ${!isSoft ? theme.$.palette[palette].font : theme.$.palette[palette].softFont};
-
-      ${palette !== alertPalette
+      ${!isSoft
         ? `
-          background: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};
+          background: ${(palette !== alertPalette || isOutline) ? theme.$.palette[palette].main : theme.$.palette[palette].darkest};
+          color: ${theme.$.palette[palette].font};
         `
         : `
-          background: ${!isSoft ? theme.$.palette[palette].darkest : theme.$.palette[palette].softDarkest};
+          background: ${(palette !== alertPalette || isOutline) ? theme.$.palette[palette].soft : theme.$.palette[palette].softDarkest};
+          color: ${theme.$.palette[palette].softFont};
         `
       }
     `
     : `
       color: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};
-      fill: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};
     `
   }
 
