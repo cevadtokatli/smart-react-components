@@ -30,6 +30,7 @@ const Alert: React.FC<Props> = props => {
       if (item.type?.displayName === 'SRCAlertIcon') {
         const iconEl = React.cloneElement(item, {
           alertPalette: props.palette,
+          isOutline: props.isOutline,
           isSoft: props.isSoft,
           size: props.size,
           sizeSm: props.sizeSm,

@@ -13,6 +13,7 @@ export interface Props extends ClickEvents {
 
 interface PrivateProps extends ResponsiveProp<'size', SizeProp> {
   alertPalette: PaletteProp
+  isOutline: boolean
   isSoft: boolean
 }
 
@@ -26,6 +27,7 @@ const AlertIcon: React.FC<Props> = (props: Props & PrivateProps) => (
     alertIconSizeXl={props.sizeXl}
     hasBackground={props.hasBackground}
     hasHover={props.hasHover}
+    isOutline={props.isOutline}
     isSoft={props.isSoft}
     palette={props.palette ?? props.alertPalette}
     {...extractElementProps(props, [clickEvents])}
