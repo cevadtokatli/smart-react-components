@@ -37,7 +37,7 @@ const TableContainer: React.FC<Props> = props => {
 
     let left = 0
     let leftZIndex = x + 1
-    const xEls = el.current.querySelectorAll('table > * > tr > *')
+    const xEls = el.current.querySelectorAll('table:first-child > * > tr > *')
 
     if (x > 0 && xEls.length > 0) {
       if (props.hasInternalScroll) {
@@ -55,19 +55,12 @@ const TableContainer: React.FC<Props> = props => {
       }
     }
 
-    const yEls = el.current.querySelectorAll('table > thead > tr')
+    const yEls = el.current.querySelectorAll('table:first-child > thead > tr')
 
     if (y > 0 && yEls.length > 0) {
       if (props.hasInternalScroll) {
         styled += 'overflow-y: auto;'
       }
-
-      styled += `
-        > table > thead {
-          position: relative;
-          z-index: ${(x ?? 0) + 1 + 1};
-        }
-      `
 
       for (let i = yEls.length - 1; i > yEls.length - 1 - y; i--) {
         const top = (yEls[i] as HTMLElement).offsetTop
@@ -75,6 +68,7 @@ const TableContainer: React.FC<Props> = props => {
         styled += `
           > table > thead > tr:nth-of-type(${i + 1}) > * {
             top: ${top}px;
+            ${(!x || xEls.length === 0) ? `z-index: ${i};` : ''}
           }
         `
       }
