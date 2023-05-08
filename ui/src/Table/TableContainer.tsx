@@ -68,7 +68,7 @@ const TableContainer: React.FC<Props> = props => {
         styled += `
           > table > thead > tr:nth-of-type(${i + 1}) > * {
             top: ${top}px;
-            ${(!x || xEls.length === 0) ? `z-index: ${i};` : ''}
+            ${(!x || xEls.length === 0) ? `z-index: ${i + 1};` : ''}
           }
         `
       }
