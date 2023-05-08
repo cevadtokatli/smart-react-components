@@ -106,7 +106,9 @@ const TableContainer: React.FC<Props> = props => {
 
 TableContainer.defaultProps = {
   elementProps: {},
+  flex: '1 1 auto',
   hasInternalScroll: true,
+  minHeight: 1,
 }
 
 export default TableContainer
