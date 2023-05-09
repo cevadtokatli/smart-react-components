@@ -53,8 +53,6 @@ export default styled(Table).attrs<Props>({
     box-sizing: border-box;
     fill: currentcolor;
     transition: background 150ms 0s ease-in-out;
-    word-break: break-word;
-    word-wrap: break-word;
 
     ${hasBorderX
       ? `
