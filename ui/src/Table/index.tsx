@@ -21,8 +21,6 @@ export interface Props extends
   isStriped?: boolean
   palette?: PaletteProp
   shape?: ShapeProp
-  stickyX?: number
-  stickyY?: number
   stripedOrientation?: TableStripedOrientation
 }
 
@@ -61,8 +59,6 @@ Table.defaultProps = {
   palette: 'dynamic',
   shape: 'rectangle',
   size: 'medium',
-  stickyX: 1,
-  stickyY: 1,
 }
 
 export default Table

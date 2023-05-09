@@ -1,4 +1,5 @@
 import extractElementProps from '@smart-react-components/core/element-props'
+import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
 import { Theme } from '@smart-react-components/core/theme'
 import { JSXElementProps, Partial, ResponsiveProp } from '@smart-react-components/core/types'
@@ -38,6 +39,7 @@ const TableContainer: React.FC<Props> = props => {
     let left = 0
     let leftZIndex = x + 1
     const xEls = el.current.querySelectorAll('table:first-child > * > tr > *')
+    const yEls = el.current.querySelectorAll('table:first-child > thead > tr')
 
     if (x > 0 && xEls.length > 0) {
       if (props.hasInternalScroll) {
@@ -48,14 +50,12 @@ const TableContainer: React.FC<Props> = props => {
         styled += `
           > table > * > tr > *:nth-child(${i + 1}) {
             left: ${left}px;
-            z-index: ${leftZIndex--};
+            ${(!y || yEls.length === 0) ? `z-index: ${leftZIndex--};` : ''}
           }
         `
         left += (xEls[i] as HTMLElement).offsetWidth
       }
     }
-
-    const yEls = el.current.querySelectorAll('table:first-child > thead > tr')
 
     if (y > 0 && yEls.length > 0) {
       if (props.hasInternalScroll) {
@@ -74,6 +74,30 @@ const TableContainer: React.FC<Props> = props => {
       }
     }
 
+    if (
+      (x > 0 && xEls.length > 0)
+      && (y > 0 && yEls.length > 0)
+    ) {
+      for (let i = 1; i <= x; i++) {
+        styled += `
+          > table > tbody > tr > *:nth-child(${i}) {
+            z-index: ${i};
+          }
+        `
+      }
+
+      const headEls = el.current.querySelectorAll('table:first-child > thead > tr > *')
+      let zIndex = x + 1
+
+      for (let i = headEls.length; i > 0; i--) {
+        styled += `
+          > table > thead > tr > *:nth-child(${i}) {
+            z-index: ${zIndex++};
+          }
+        `
+      }
+    }
+
     setStyled(styled)
   }
 
@@ -85,6 +109,10 @@ const TableContainer: React.FC<Props> = props => {
       removeEventListener(window, ['resize'], handleResize)
     }
   }, [])
+
+  useChangeEffect(() => {
+    handleResize()
+  }, [props.children])
 
   return (
     <TableContainerElement
@@ -103,6 +131,8 @@ TableContainer.defaultProps = {
   flex: '1 1 auto',
   hasInternalScroll: true,
   minHeight: 1,
+  stickyX: 1,
+  stickyY: 1,
 }
 
 export default TableContainer
