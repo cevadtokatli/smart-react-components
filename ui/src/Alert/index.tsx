@@ -88,6 +88,7 @@ const Alert: React.FC<Props> = props => {
       palette={props.palette}
       shape={props.shape}
       {...extractElementProps(props, [clickEvents, intrinsicStyledProps])}
+      {...props.elementProps}
     >
       {children}
     </AlertElement>
@@ -95,6 +96,7 @@ const Alert: React.FC<Props> = props => {
 }
 
 Alert.defaultProps = {
+  elementProps: {},
   palette: 'primary',
   shape: 'rectangle',
   size: 'medium',
