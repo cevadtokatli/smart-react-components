@@ -100,6 +100,7 @@ const Button = React.forwardRef<HTMLElement, Props>((props, forwardRef) => {
       hasRightAddon={!!rightAddon}
       hasSeparatedLeftAddon={!!leftAddon?.props?.isSeparated}
       hasSeparatedRightAddon={!!rightAddon?.props?.isSeparated}
+      isActive={props.isActive}
       isBlock={props.isBlock}
       isDisabled={props.isDisabled}
       isFixedSize={props.isFixedSize}

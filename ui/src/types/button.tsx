@@ -9,6 +9,7 @@ export interface ButtonGenericProps<T extends ContentElement> extends
   hasHover?: boolean
   hasSpace?: boolean
   hasWaveEffect?: boolean
+  isActive?: boolean
   isBlock?: boolean
   isDisabled?: boolean
   isFixedSize?: boolean

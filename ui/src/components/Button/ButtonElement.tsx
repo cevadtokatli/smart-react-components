@@ -16,6 +16,7 @@ interface Props extends
   hasRightAddon: boolean
   hasSeparatedLeftAddon: boolean
   hasSeparatedRightAddon: boolean
+  isActive: boolean
   isBlock: boolean
   isDisabled: boolean
   isFixedSize: boolean
@@ -66,7 +67,7 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
       }
     }
   `,
-}))<Props>(({ theme, hasButtonContainer, hasHover, hasLeftAddon, hasRightAddon, hasSeparatedLeftAddon, hasSeparatedRightAddon, isBlock, isDisabled, isFixedSize, isLink, isLoading, isSoft, isOutline, palette, shape }: Props) => `
+}))<Props>(({ theme, hasButtonContainer, hasHover, hasLeftAddon, hasRightAddon, hasSeparatedLeftAddon, hasSeparatedRightAddon, isActive, isBlock, isDisabled, isFixedSize, isLink, isLoading, isSoft, isOutline, palette, shape }: Props) => `
   align-items: stretch;
   background: transparent;
   border: 0;
@@ -152,12 +153,21 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
           ${!isSoft
             ? `
               ${ButtonContent} {
-                background: ${theme.$.palette[palette].main};
-                border-color: ${theme.$.palette[palette].main};
                 color: ${theme.$.palette[palette].font};
+
+                ${!isActive
+                  ? `
+                    background: ${theme.$.palette[palette].main};
+                    border-color: ${theme.$.palette[palette].main};
+                  `
+                  : `
+                    background: ${theme.$.palette[palette].dynamicer};
+                    border-color: ${theme.$.palette[palette].dynamicer};
+                  `
+                }
               }
 
-              ${hasHover
+              ${(!isActive && hasHover)
                 ? `
                   &:hover {
                     ${ButtonContent} {
@@ -176,13 +186,21 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
             `
             : `
               ${ButtonContent} {
-                background: ${theme.$.palette[palette].soft};
-                border-color: ${theme.$.palette[palette].soft};
                 color: ${theme.$.palette[palette].softFont};
+
+                ${!isActive
+                  ? `
+                    background: ${theme.$.palette[palette].soft};
+                    border-color: ${theme.$.palette[palette].soft};
+                  `
+                  : `
+                    background: ${theme.$.palette[palette].softDarker};
+                    border-color: ${theme.$.palette[palette].softDarker};
+                  `
+                }
               }
 
-
-              ${hasHover
+              ${(!isActive && hasHover)
                 ? `
                   &:hover {
                     ${ButtonContent} {
