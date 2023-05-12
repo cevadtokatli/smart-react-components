@@ -1,6 +1,6 @@
 import Div from '@smart-react-components/core/Element/Div'
 import { StyledProps } from '@smart-react-components/core/styled-props'
-import { Partial, ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
+import { Partial, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import styled from 'styled-components'
 
 export interface Props extends
@@ -8,7 +8,9 @@ export interface Props extends
   Partial<ResponsiveProp<'buttonSize', SizeProp>> {
   hasSpace?: boolean
   isBlock?: boolean
+  isFixedSize?: boolean
   length?: number
+  shape?: ShapeProp
 }
 
 export default styled(Div).attrs<Props>(({ hasSpace }: Props) => ({

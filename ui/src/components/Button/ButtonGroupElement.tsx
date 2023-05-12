@@ -4,34 +4,22 @@ import ButtonAddonElement from './ButtonAddonElement'
 import ButtonContent from './ButtonContent'
 import ButtonListElement, { Props } from './ButtonListElement'
 
-export default styled(ButtonListElement)<Props>`
+export default styled(ButtonListElement)<Props>(({ theme, shape }: Props) => `
   align-items: stretch;
+  border-radius: ${theme.$.radius.button[shape]};
   flex-wrap: nowrap;
+  overflow: hidden;
 
   > * {
-    :not(:first-child) {
-      &,
-      ${ButtonElement},
-      ${ButtonAddonElement},
-      ${ButtonContent} {
-        border-left: 0;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-      }
-    }
-
-    :not(:last-child) {
-      &,
-      ${ButtonElement},
-      ${ButtonAddonElement},
-      ${ButtonContent} {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-      }
+    &,
+    ${ButtonElement},
+    ${ButtonAddonElement},
+    ${ButtonContent} {
+      border-radius: 0;
     }
 
     &:focus {
       box-shadow: none;
     }
   }
-`
+`)
