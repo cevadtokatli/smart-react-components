@@ -21,6 +21,7 @@ export default styled(Div)<Props>(({ theme, hasBorder, hasExcludedLeftAddon, has
   display: flex;
   flex: 1 1 auto;
   min-width: 1px;
+  overflow: hidden;
   transition: 200ms 0s ease-in-out;
   transition-property: border;
 
