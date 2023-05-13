@@ -18,10 +18,12 @@ export interface Props extends
   hasInternalScroll?: boolean
 }
 
-const TableContainer: React.FC<Props> = props => {
+const TableContainer = React.forwardRef<HTMLElement, Props>((props, forwardRef) => {
   const theme = React.useContext<Theme>(ThemeContext)
-  const el = React.useRef<HTMLDivElement>(null)
+  const ref = React.useRef<HTMLDivElement>(null)
   const [styled, setStyled] = React.useState(() => '')
+
+  const getRef = () => (forwardRef ?? ref) as React.MutableRefObject<HTMLDivElement>
 
   const handleResize = () => {
     const { x, y } = getBreakpointValue(
@@ -38,6 +40,7 @@ const TableContainer: React.FC<Props> = props => {
 
     let left = 0
     let leftZIndex = x + 1
+    const el = getRef()
     const xEls = el.current.querySelectorAll('table:first-child > * > tr > *')
     const yEls = el.current.querySelectorAll('table:first-child > thead > tr')
 
@@ -118,13 +121,13 @@ const TableContainer: React.FC<Props> = props => {
     <TableContainerElement
       {...extractElementProps(props, [intrinsicStyledProps])}
       {...props.elementProps}
-      ref={el}
+      ref={getRef()}
       styled={styled}
     >
       {props.children}
     </TableContainerElement>
   )
-}
+})
 
 TableContainer.defaultProps = {
   elementProps: {},
