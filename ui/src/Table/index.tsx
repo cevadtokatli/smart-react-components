@@ -46,6 +46,7 @@ const Table = React.forwardRef<HTMLTableElement, Props>((props, forwardRef) => {
       tableSizeMd={props.sizeMd}
       tableSizeLg={props.sizeLg}
       tableSizeXl={props.sizeXl}
+      {...props.elementProps}
     >
       {props.children}
     </TableElement>
@@ -53,6 +54,7 @@ const Table = React.forwardRef<HTMLTableElement, Props>((props, forwardRef) => {
 })
 
 Table.defaultProps = {
+  elementProps: {},
   hasBorderY: true,
   hasInternalScroll: true,
   isBlock: true,
