@@ -35,13 +35,13 @@ export interface Props extends Partial<ResponsiveProp<'size', SizeProp>> {
   triggerInteraction?: TriggerInteraction
 }
 
-const Tooltip: React.FC<Props> = ({ afterHide, afterShow, beforeHide, beforeShow, children, hasHideAnimation = true, hasShowAnimation = true, hoverDelay, isDismissible, isSoft, palette = '!dynamic', position = Position.TOP, setStatus, size = 'medium', sizeSm, sizeMd, sizeLg, sizeXl, space = 0, status, transitionClassName, transitionDuration, triggerInteraction = TriggerInteraction.CLICK | TriggerInteraction.HOVER }) => {
+const Tooltip = React.forwardRef<HTMLElement, Props>(({ afterHide, afterShow, beforeHide, beforeShow, children, hasHideAnimation = true, hasShowAnimation = true, hoverDelay, isDismissible, isSoft, palette = '!dynamic', position = Position.TOP, setStatus, size = 'medium', sizeSm, sizeMd, sizeLg, sizeXl, space = 0, status, transitionClassName, transitionDuration, triggerInteraction = TriggerInteraction.CLICK | TriggerInteraction.HOVER }, forwardRef) => {
   const theme = React.useContext<Theme>(ThemeContext)
   const triggerEl = React.useRef<HTMLElement>(null)
   const boxEl = React.useRef<HTMLDivElement>(null)
   const arrowEl = React.useRef<SVGSVGElement>(null)
 
-  const getTriggerEl = () => ((children[0] as any).ref ?? triggerEl).current as HTMLElement
+  const getTriggerEl = () => (forwardRef ?? (children[0] as any).ref ?? triggerEl).current as HTMLElement
   const getTransitionDuration = () => transitionDuration ?? theme.$.transition.tooltipDuration
 
   const handlePosition = () => calculatePosition(getTriggerEl(), boxEl.current, null, arrowEl.current, position, space)
@@ -83,10 +83,10 @@ const Tooltip: React.FC<Props> = ({ afterHide, afterShow, beforeHide, beforeShow
 
   return (
     <>
-      { React.cloneElement(children[0], { ref: (children[0] as any).ref ?? triggerEl }) }
+      { React.cloneElement(children[0], { ref: forwardRef ?? (children[0] as any).ref ?? triggerEl }) }
       { canBeRenderedInPortal() ? createPortal(content, document.body) : content }
     </>
   )
-}
+})
 
 export default Tooltip
