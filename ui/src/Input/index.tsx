@@ -4,7 +4,7 @@ import changeEvents, { ChangeEvents } from '@smart-react-components/core/element
 import focusEvents, { FocusEvents } from '@smart-react-components/core/element-props/focus-events'
 import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
 import keyboardEvents, { KeyboardEvents } from '@smart-react-components/core/element-props/keyboard-events'
-import { ContentElement, PaletteProp, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
+import { ContentElement, JSXElementProps, PaletteProp, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import FormBlockLabel from '../components/Form/FormBlockLabel'
 import InputElement from '../components/Input/InputElement'
@@ -23,6 +23,7 @@ export interface Props extends
   defaultValue?: string
   hasBorder?: boolean
   hasSpellCheck?: boolean
+  inputProps?: JSXElementProps
   isBlock?: boolean
   isDisabled?: boolean
   isOutline?: boolean
@@ -109,6 +110,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
             ...(props.isRequired && { required: true }),
             ...(typeof props.placeholder !== 'undefined' && { placeholder: props.placeholder }),
             ...(typeof props.value !== 'undefined' && { value: props.value }),
+            ...props.inputProps,
             hasBorder: props.hasBorder,
             hasLeftAddon: !!leftAddon,
             hasRightAddon: !!rightAddon,
@@ -139,6 +141,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
 
 Input.defaultProps = {
   hasBorder: true,
+  inputProps: {},
   isBlock: true,
   isOutline: true,
   palette: 'primary',
