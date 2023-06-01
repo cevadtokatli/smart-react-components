@@ -117,6 +117,7 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
 
   return (
     <Dropdown
+      elementProps={props.elementProps}
       status={dropdownStatus}
       setStatus={setDropdownStatus}
     >
@@ -212,6 +213,7 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
 })
 
 SelectBox.defaultProps = {
+  elementProps: {},
   hasBorder: true,
   hasHover: true,
   hasWaveEffect: true,

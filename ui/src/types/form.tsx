@@ -1,5 +1,5 @@
 import { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
-import { ContentElement, PaletteProp, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
+import { ContentElement, JSXElementProps, PaletteProp, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import { FormValue } from '../types'
 
 export interface GenericProps extends
@@ -7,6 +7,7 @@ export interface GenericProps extends
   IntrinsicStyledProps {
   active: FormValue | FormValue[]
   children: JSX.Element | JSX.Element[]
+  elementProps?: JSXElementProps
   hasBorder?: boolean
   hasHover?: boolean
   hasWaveEffect?: boolean
