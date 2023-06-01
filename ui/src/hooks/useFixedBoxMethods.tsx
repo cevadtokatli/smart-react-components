@@ -77,7 +77,7 @@ const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, h
     const target = e.target as HTMLElement
     const triggerEl = getTriggerEl()
 
-    if (!triggerEl.contains(target) && !boxEl.current.contains(target)) {
+    if (!triggerEl.contains(target) && !boxEl.current.contains(target) && !target.closest('data-src-not-clickable')) {
       getSetStatus()(false)
     }
   }
