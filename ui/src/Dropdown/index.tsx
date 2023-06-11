@@ -5,7 +5,15 @@ import FixedBox, { Props } from '../FixedBox'
 export * from '../FixedBox'
 
 const Dropdown: React.FC<Props> = ({ afterHide, afterShow, beforeHide, beforeShow, breakpoint, children, elementProps = {}, hasHideAnimation, hasShowAnimation, isDismissible, maxWidth, minWidth, position, setStatus, space, status, transitionClassName, transitionDuration, triggerInteraction }) => {
+  const triggerEl = React.useRef<HTMLElement>(null)
+
   const [localStatus, setLocalStatus] = React.useState(() => false)
+
+  const getTriggerEl = () => ((children[0] as any).ref ?? triggerEl).current as HTMLElement
+
+  React.useEffect(() => {
+    getTriggerEl().dispatchEvent(new Event('src.fixedBox.setPosition'))
+  }, [children?.[1]?.props?.children?.length])
 
   return (
     <FixedBox
@@ -31,7 +39,7 @@ const Dropdown: React.FC<Props> = ({ afterHide, afterShow, beforeHide, beforeSho
       transitionDuration={transitionDuration}
       triggerInteraction={triggerInteraction}
     >
-      { children[0] }
+      { React.cloneElement(children[0], { ref: (children[0] as any).ref ?? triggerEl }) }
       { React.cloneElement(children[1], { setStatus: setStatus ?? setLocalStatus }) }
     </FixedBox>
   )
