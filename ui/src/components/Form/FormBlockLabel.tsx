@@ -12,7 +12,8 @@ interface Props extends
   isDisabled: boolean
 }
 
-export default styled(Label).attrs<Props>(({ isBlock }) => ({
+export default styled(Label).attrs<Props>(({ display = 'block', isBlock }) => ({
+  display,
   getFormSize: (v, t) => `
     ${isBlock
       ? `
