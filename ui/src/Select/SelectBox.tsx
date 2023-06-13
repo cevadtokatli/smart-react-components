@@ -35,11 +35,12 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
 
   const handleBadgeClick = value => props.setActive((props.active as FormValue[]).filter(i => i !== value))
 
-  const getContent = () => {
+  const content = React.useMemo<ContentElement>(() => {
     if (
       typeof props.active === 'undefined'
       || props.active === null
-      || (props.active as FormValue[]).length === 0
+      || (Array.isArray(props.active) && props.active.length === 0)
+      || (props.active === '' && !itemList[''])
     ) {
       return <InputPlaceholder>{props.placeholder}</InputPlaceholder>
     }
@@ -73,14 +74,9 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
         }
       </BadgeList>
     )
-  }
-
-  const [content, setContent] = React.useState<ContentElement>(() => getContent())
-  const [dropdownStatus, setDropdownStatus] = React.useState(false)
-
-  useChangeEffect(() => {
-    setContent(getContent())
   }, [props.active, props.placeholder, itemList])
+
+  const [dropdownStatus, setDropdownStatus] = React.useState(false)
 
   useChangeEffect(() => {
     const event = new Event('src.fixedBox.setPosition')

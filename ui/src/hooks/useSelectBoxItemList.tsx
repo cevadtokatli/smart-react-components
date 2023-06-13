@@ -1,6 +1,5 @@
-import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { ContentElement } from '@smart-react-components/core/types'
-import { useState } from 'react'
+import { useMemo } from 'react'
 import { FormValue } from '../types'
 
 interface Props {
@@ -29,7 +28,7 @@ const useSelectBoxItemList = ({ children }: Props): Return => {
     })
   }
 
-  const getItemList = () => {
+  const itemList = useMemo<{ [key: string]: { children: ContentElement, idx: number } }>(() => {
     const arr = []
 
     collectItems(arr, children)
@@ -44,12 +43,6 @@ const useSelectBoxItemList = ({ children }: Props): Return => {
     })
 
     return itemList
-  }
-
-  const [itemList, setItemList] = useState<{ [key: string]: { children: ContentElement, idx: number } }>(() => getItemList())
-
-  useChangeEffect(() => {
-    setItemList(getItemList())
   }, [children])
 
   return {
