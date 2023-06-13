@@ -52,7 +52,6 @@ export default styled(Table).attrs<Props>({
     border: solid 0;
     box-sizing: border-box;
     fill: currentcolor;
-    transition: background 150ms 0s ease-in-out;
 
     ${hasBorderX
       ? `
