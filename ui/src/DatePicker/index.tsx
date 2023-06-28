@@ -11,6 +11,7 @@ import DatePickerDatePicker from '../components/DatePicker/DatePicker'
 import TimePicker from '../components/DatePicker/TimePicker'
 import { DatePickerSelectedDatePicker, DatePickerSelectedPicker, DatePickerTimeType, DatePickerType } from '../constants/date-picker'
 import { applyResponsiveStyledProp, applyResponsiveStyledProps } from '../util/props'
+import { Div } from '@smart-react-components/core'
 
 export { DatePickerType, DatePickerTimeType } from '../constants/date-picker'
 
@@ -53,38 +54,43 @@ const DatePicker: React.FC<Props> = props => {
       />
       <Section
         {...applyResponsiveStyledProps(props, 'size', {
-          paddingHorizontal: v => `$size.datePicker.${v}.space.y`,
+          paddingHorizontal: v => `$size.datePicker.${v}.space.x`,
+          paddingVertical: v => `$size.datePicker.${v}.space.y`,
         })}
         background="$color.dynamic.background"
         borderBottomRadius="$radius.datePicker"
       >
-        <CSSTransitionSwitch
-          active={selectedPicker}
-          className="src-in"
-          duration={150}
+        <Div
+          {...applyResponsiveStyledProp(props, 'size', 'height', v => `$size.datePicker.${v}.bodyHeight`)}
         >
-          <DatePickerDatePicker
-            key={DatePickerSelectedPicker.DATE}
-            {...applyResponsiveStyledProp(props, 'size', 'size', v => v) as SizeProps}
-            isSoft={props.isSoft}
-            palette={props.palette}
-            selectedDate={selectedDate}
-            selectedPicker={selectedDatePicker}
-            setSelectedDate={setSelectedDate}
-            setSelectedPicker={setSelectedDatePicker}
-            setValue={props.setValue}
-            value={props.value}
-          />
-          <TimePicker
-            key={DatePickerSelectedPicker.TIME}
-            {...applyResponsiveStyledProp(props, 'size', 'size', v => v) as SizeProps}
-            isSoft={props.isSoft}
-            palette={props.palette}
-            setValue={props.setValue}
-            timeType={props.timeType}
-            value={props.value}
-          />
-        </CSSTransitionSwitch>
+          <CSSTransitionSwitch
+            active={selectedPicker}
+            className={selectedPicker === DatePickerSelectedPicker.DATE ? 'src-out-in' : 'src-in-out'}
+            duration={150}
+          >
+            <DatePickerDatePicker
+              key={DatePickerSelectedPicker.DATE}
+              {...applyResponsiveStyledProp(props, 'size', 'size', v => v) as SizeProps}
+              isSoft={props.isSoft}
+              palette={props.palette}
+              selectedDate={selectedDate}
+              selectedPicker={selectedDatePicker}
+              setSelectedDate={setSelectedDate}
+              setSelectedPicker={setSelectedDatePicker}
+              setValue={props.setValue}
+              value={props.value}
+            />
+            <TimePicker
+              key={DatePickerSelectedPicker.TIME}
+              {...applyResponsiveStyledProp(props, 'size', 'size', v => v) as SizeProps}
+              isSoft={props.isSoft}
+              palette={props.palette}
+              setValue={props.setValue}
+              timeType={props.timeType}
+              value={props.value}
+            />
+          </CSSTransitionSwitch>
+        </Div>
         { props.hasButtons && (
           <DatePickerButtons
             isSoft={props.isSoft}

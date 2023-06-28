@@ -10,10 +10,10 @@ export interface Props extends StyledProps, ResponsiveProp<'datePickerSize', Siz
 
 export default styled(Header).attrs<Props>({
   getDatePickerSize: (v, t) => `
-    padding: ${t.$.size.datePicker[v].space.x} ${t.$.size.datePicker[v].space.y};
+    padding: ${t.$.size.datePicker[v].headerSpace.y} ${t.$.size.datePicker[v].space.x};
 
     > span {
-      padding-left: ${t.$.size.datePicker[v].headerSpace};
+      padding-left: ${t.$.size.datePicker[v].headerSpace.x};
     }
 
     > div {
@@ -49,6 +49,7 @@ export default styled(Header).attrs<Props>({
   > div {
     align-items: center;
     display: flex;
+    justify-content: flex-end;
 
     > div {
       display: flex;

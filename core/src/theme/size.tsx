@@ -147,7 +147,10 @@ const sizeAttributes: SizeAttributes = {
     small: {
       bodyHeight: '215px',
       fontSize: '.875rem',
-      headerSpace: '0',
+      headerSpace: {
+        x: '0',
+        y: '.625rem',
+      },
       iconSize: '1rem',
       itemSize: '2.734rem',
       itemSpace: '0',
@@ -169,7 +172,10 @@ const sizeAttributes: SizeAttributes = {
     medium: {
       bodyHeight: '305px',
       fontSize: '.875rem',
-      headerSpace: '.5625rem',
+      headerSpace: {
+        x: '.5625rem',
+        y: '.625rem',
+      },
       iconSize: '1rem',
       itemSize: '3.75rem',
       itemSpace: '.313rem',
@@ -191,7 +197,10 @@ const sizeAttributes: SizeAttributes = {
     large: {
       bodyHeight: '320px',
       fontSize: '.875rem',
-      headerSpace: '0',
+      headerSpace: {
+        x: '0',
+        y: '.625rem',
+      },
       iconSize: '1rem',
       itemSize: '3.75rem',
       itemSpace: '.313rem',

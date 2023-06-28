@@ -7,7 +7,7 @@ interface Props extends StyledProps, ResponsiveProp<'datePickerSize', SizeProp> 
 
 export default styled(Header).attrs<Props>({
   getDatePickerSize: (v, t) => `
-    padding: ${t.$.size.datePicker[v].space.x} 0;
+    padding-bottom: ${t.$.size.datePicker[v].space.x};
 
     > div:first-child {
       cursor: default;

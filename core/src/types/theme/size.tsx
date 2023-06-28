@@ -34,7 +34,7 @@ interface DefaultSizeAttributes {
   datePicker: Size<{
     bodyHeight: string
     fontSize: string
-    headerSpace: string
+    headerSpace: Coordinator<string>
     iconSize: string
     itemSize: string
     itemSpace: string
