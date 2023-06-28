@@ -1,7 +1,5 @@
-import { Theme } from '@smart-react-components/core/theme'
 import { PaletteProp, ResponsiveProp, SetState, SizeProp, SizeProps } from '@smart-react-components/core/types'
 import React from 'react'
-import { useTheme } from 'styled-components'
 import { DatePickerSelectedDatePicker } from '../../../constants/date-picker'
 import { applyResponsiveStyledProp } from '../../../util/props'
 import DatePickerListElement from './DatePickerListElement'
@@ -19,8 +17,6 @@ export interface Props extends SizeProps {
 }
 
 const YearPicker: React.FC<Props> = props => {
-  const theme = useTheme() as Theme
-
   const [children, setChildren] = React.useState<JSX.Element[]>([])
 
   const handleChange = date => {

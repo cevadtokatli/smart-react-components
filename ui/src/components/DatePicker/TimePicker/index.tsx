@@ -76,7 +76,7 @@ const TimePicker: React.FC<Props> = props => {
 
     props.setValue(date)
   }
-  
+
   const getHours = () => {
     if (props.timeType === DatePickerTimeType.T12) {
       const hours = props.value.getHours()
