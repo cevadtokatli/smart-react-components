@@ -31,6 +31,22 @@ interface DefaultSizeAttributes {
     space: string
     width: string
   }>
+  datePicker: Size<{
+    bodyHeight: string
+    fontSize: string
+    headerSpace: string
+    iconSize: string
+    itemSize: string
+    itemSpace: string
+    itemWeekSize: string
+    itemWeekSpace: Coordinator<string>
+    space: Coordinator<string>
+    timeArrowSize: string
+    timeInputFontSize: string
+    timeSize: string
+    timeSpace: string
+    width: string
+  }>
   dropdown: Size<{
     fontSize: string
     margin: Coordinator<string>

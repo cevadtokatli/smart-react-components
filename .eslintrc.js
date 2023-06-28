@@ -35,6 +35,7 @@ module.exports = {
     'no-floating-decimal': 'off',
     'no-prototype-builtins': 'off',
     'react/display-name': 'off',
+    'react/no-children-prop': 'off',
     'react/no-find-dom-node': 'off',
     'react/prop-types': 'off',
     'operator-linebreak': ['error', 'before'],

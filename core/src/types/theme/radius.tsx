@@ -6,6 +6,8 @@ interface DefaultRadiusAttributes {
   badge: Shape<string>
   breadcrumb: Shape<string>
   button: Shape<string>
+  datePicker: string
+  datePickerItem: string
   dropdown: string
   checkbox: Shape<string>
   colorPicker: string

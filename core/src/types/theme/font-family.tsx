@@ -3,6 +3,7 @@ import { OptionalThemeAttributes } from './util'
 interface DefaultFontFamilyAttributes {
   primary: string
   secondary: string
+  datePicker: string
   dropdown: string
   alert: string
   badge: string

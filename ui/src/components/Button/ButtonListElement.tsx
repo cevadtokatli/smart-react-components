@@ -25,7 +25,6 @@ export default styled(Div).attrs<Props>(({ hasSpace }: Props) => ({
 }))<Props>(({ isBlock, length }: Props) => `
   align-items: center;
   display: flex;
-  justify-content: flex-start;
 
   ${isBlock
     ? `

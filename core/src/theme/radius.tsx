@@ -18,6 +18,8 @@ const radiusAttributes: RadiusAttributes = {
     rounded: '1.8rem',
   },
   colorPicker: '.25rem',
+  datePicker: '.25rem',
+  datePickerItem: '100%',
   dropdown: '.2rem',
   modal: {
     rectangle: '.3rem',

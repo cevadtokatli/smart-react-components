@@ -6,6 +6,7 @@ const fontWeightAttributes: FontWeightAttributes = {
   semibold: '500',
   bold: '600',
   alertLink: '500',
+  datePicker: '600',
   dropdownCategory: '500',
   popoverHeader: '500',
   tableHead: '500',
