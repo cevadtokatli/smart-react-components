@@ -1,5 +1,5 @@
 import { Div } from '@smart-react-components/core'
-import { DatePicker } from '@smart-react-components/ui'
+import { DatePicker, InputDatePicker } from '@smart-react-components/ui'
 import { DatePickerTimeType } from '@smart-react-components/ui/DatePicker'
 import React from 'react'
 
@@ -9,6 +9,10 @@ export const Palette = () => {
   return (
     <Div display="inline-block">
       <DatePicker
+        setValue={setValue}
+        value={value}
+      />
+      <InputDatePicker
         setValue={setValue}
         value={value}
       />
