@@ -65,7 +65,7 @@
   },
   "devDependencies": {
     "@smart-react-components/core": "2.0.0-alpha-26",
-    "@smart-react-components/router": "2.0.0-alpha-19",
+    "@smart-react-components/router": "2.0.0-alpha-20",
     "@smart-react-components/transition": "2.0.0-alpha-21",
     "@testing-library/react": "13.4.0",
     "@types/jest": "29.0.1",
@@ -84,7 +84,7 @@
   },
   "peerDependencies": {
     "@smart-react-components/core": "^2.0.0-alpha-26",
-    "@smart-react-components/router": "^2.0.0-alpha-19",
+    "@smart-react-components/router": "^2.0.0-alpha-20",
     "@smart-react-components/transition": "^2.0.0-alpha-21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
