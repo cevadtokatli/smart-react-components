@@ -37,7 +37,7 @@ export default styled(Div)<Props>(({ theme, hasBorder, hasExcludedLeftAddon, has
       }
     `
     : `
-      border-color ${!isFocused ? theme.$.color.dynamic.accent : theme.$.palette[palette].main};
+      border-color: ${!isFocused ? theme.$.color.dynamic.accent : theme.$.palette[palette].main};
     `
   }
 
