@@ -1,4 +1,3 @@
-import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import React from 'react'
 import RouteItem from '../RouteItem'
 import RouterContext from '../RouterContext'
@@ -14,7 +13,7 @@ const Routes: React.FC<Props> = ({ children }) => {
   const router = React.useContext(RouterContext).state
   const routes = React.useContext(RoutesContext)
 
-  const getComponent = () => {
+  const component = React.useMemo(() => {
     if (!routes) {
       return null
     }
@@ -50,11 +49,7 @@ const Routes: React.FC<Props> = ({ children }) => {
 
       return item
     }
-  }
-
-  const [component, setComponent] = React.useState<JSX.Element | null>(() => getComponent())
-
-  useChangeEffect(() => setComponent(getComponent()), [children, router.activeURL.fullpath])
+  }, [children, router.activeURL.fullpath])
 
   return component
 }
