@@ -26,7 +26,7 @@ const Routes: React.FC<Props> = ({ children }) => {
             <RoutesContext.Provider key={String(i.path)} value={i.children}>
               { children({
                 children: React.createElement(RouteItem, { route: i }),
-                match: generateMatch(router.activeURL.fullpath, i.path, false),
+                match: generateMatch(router.activeURL.pathname, i.path, false),
                 url: router.activeURL,
               })}
             </RoutesContext.Provider>
@@ -37,7 +37,7 @@ const Routes: React.FC<Props> = ({ children }) => {
       let item: JSX.Element | null = null
 
       for (const i in routes) {
-        const match = generateMatch(router.activeURL.fullpath, routes[i].path, false)
+        const match = generateMatch(router.activeURL.pathname, routes[i].path, false)
         if (match) {
           item = (
             <RoutesContext.Provider key={String(routes[i].path)} value={routes[i].children}>

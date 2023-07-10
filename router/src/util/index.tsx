@@ -17,7 +17,7 @@ export const callGetMethods = (url: string, routes: RouteModule[], modules: obje
     let route: RouteModule
 
     for (const i in curRoutes) {
-      const match = generateMatch(url, curRoutes[i].path, false)
+      const match = generateMatch(activeURL.pathname, curRoutes[i].path, false)
       if (match) {
         const { get } = modules[curRoutes[i].module as any]
         if (get) {
@@ -51,7 +51,12 @@ export const callGetMethods = (url: string, routes: RouteModule[], modules: obje
 /**
  * Retuns the fullpath.
  */
-export const getFullpath = () => window.location.pathname + window.location.search
+export const getFullpath = () => window.location.pathname + window.location.search + window.location.hash
+
+/**
+ * Returns the pathname.
+ */
+export const getPathname = () => window.location.pathname
 
 /**
  * Parses path and generates match object.
@@ -160,7 +165,7 @@ export const loadModulesOnClient = (routes: RouteModule[]) => new Promise<void>(
     let route: RouteModule
 
     for (const i in curRoutes) {
-      if (generateMatch(getFullpath(), curRoutes[i].path, false)) {
+      if (generateMatch(getPathname(), curRoutes[i].path, false)) {
         lazyModules.push(curRoutes[i].module)
         route = curRoutes[i]
         break
