@@ -17,6 +17,7 @@ declare global {
 
 export interface Props {
   children: JSXChildren
+  fallback?: JSX.Element
   params?: any
   progressBar?: JSX.Element
   routes: RouteModule[]
@@ -24,7 +25,7 @@ export interface Props {
 
 export const modules: object = {}
 
-const ClientRouter: React.FC<Props> = ({ children, params, routes, progressBar }) => {
+const ClientRouter: React.FC<Props> = ({ children, fallback, params, routes, progressBar }) => {
   const [state, dispatch] = React.useReducer(reducer, generateInitialState())
 
   const handleURLChange = () => {
@@ -94,7 +95,7 @@ const ClientRouter: React.FC<Props> = ({ children, params, routes, progressBar }
   }, [state.activeURL.fullpath, state.activatingURL?.fullpath])
 
   return (
-    <RouterContext.Provider value={{ state, dispatch, modules }}>
+    <RouterContext.Provider value={{ fallback, state, dispatch, modules }}>
       <RoutesContext.Provider value={routes}>
         { progressBar && React.cloneElement(progressBar, { value: state.percentage }) }
         { children }

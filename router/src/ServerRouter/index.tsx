@@ -7,16 +7,17 @@ import { RouteModule } from '../types'
 
 export interface Props {
   children: JSXChildren
+  fallback?: JSX.Element
   modules: object
   routes: RouteModule[]
   url: string
 }
 
-const ServerRouter: React.FC<Props> = ({ children, modules, routes, url }) => {
+const ServerRouter: React.FC<Props> = ({ children, fallback, modules, routes, url }) => {
   const [state, dispatch] = React.useReducer(reducer, generateInitialState(url))
 
   return (
-    <RouterContext.Provider value={{ state, dispatch, modules }}>
+    <RouterContext.Provider value={{ state, dispatch, fallback, modules }}>
       <RoutesContext.Provider value={routes}>
         { children }
       </RoutesContext.Provider>

@@ -3,6 +3,7 @@ import { Action, State } from '../reducer'
 
 export interface RouterContextState {
   dispatch: Dispatch<Action.All>
+  fallback?: JSX.Element
   modules: object
   state: State
 }

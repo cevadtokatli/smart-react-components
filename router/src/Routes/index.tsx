@@ -10,7 +10,7 @@ export interface Props {
 }
 
 const Routes: React.FC<Props> = ({ children }) => {
-  const router = React.useContext(RouterContext).state
+  const router = React.useContext(RouterContext)
   const routes = React.useContext(RoutesContext)
 
   const component = React.useMemo(() => {
@@ -25,22 +25,22 @@ const Routes: React.FC<Props> = ({ children }) => {
             <RoutesContext.Provider key={String(i.path)} value={i.children}>
               { children({
                 children: React.createElement(RouteItem, { route: i }),
-                match: generateMatch(router.activeURL.pathname, i.path, false),
-                url: router.activeURL,
+                match: generateMatch(router.state.activeURL.pathname, i.path, false),
+                url: router.state.activeURL,
               })}
             </RoutesContext.Provider>
           )) }
         </>
       )
     } else {
-      let item: JSX.Element | null = null
+      let item: JSX.Element | null = router.fallback ?? null
 
       for (const i in routes) {
-        const match = generateMatch(router.activeURL.pathname, routes[i].path, false)
+        const match = generateMatch(router.state.activeURL.pathname, routes[i].path, false)
         if (match) {
           item = (
             <RoutesContext.Provider key={String(routes[i].path)} value={routes[i].children}>
-              <RouteItem key={match.key} route={routes[i]} props={{ match, url: router.activeURL }} />
+              <RouteItem key={match.key} route={routes[i]} props={{ match, url: router.state.activeURL }} />
             </RoutesContext.Provider>
           )
           break
@@ -49,7 +49,7 @@ const Routes: React.FC<Props> = ({ children }) => {
 
       return item
     }
-  }, [children, router.activeURL.fullpath])
+  }, [children, router.state.activeURL.fullpath])
 
   return component
 }
