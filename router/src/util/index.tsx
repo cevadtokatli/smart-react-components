@@ -28,6 +28,7 @@ export const callGetMethods = (url: string, routes: RouteModule[], modules: obje
               activeURL,
               setPercentage,
               setCancelCallback,
+              params,
             ),
           )
         }
