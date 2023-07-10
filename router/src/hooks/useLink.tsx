@@ -31,16 +31,16 @@ interface Return {
 }
 
 const useLink = ({ children, isDisabled, isExact, onClick, path, to }: Props): Return => {
-  const router = useContext(RouterContext)?.state
+  const router = useContext(RouterContext)
 
   const isMatched = (url: URL | null) => url && generateMatch(url.pathname, path ?? to, isExact) !== null
 
-  const [isActive, setActive] = useState(() => isMatched(router.activeURL))
-  const [isActivating, setActivating] = useState(() => isMatched(router.activatingURL))
+  const [isActive, setActive] = useState(() => isMatched(router.state.activeURL))
+  const [isActivating, setActivating] = useState(() => isMatched(router.state.activatingURL))
 
-  useChangeEffect(() => setActive(isMatched(router.activeURL)), [router.activeURL.fullpath])
+  useChangeEffect(() => setActive(isMatched(router.state.activeURL)), [router.state.activeURL.fullpath])
 
-  useChangeEffect(() => setActivating(isMatched(router.activatingURL)), [router.activatingURL?.fullpath])
+  useChangeEffect(() => setActivating(isMatched(router.state.activatingURL)), [router.state.activatingURL?.fullpath])
 
   const handleOnClick = (e: MouseEvent<HTMLAnchorElement>) => {
     if (isDisabled) {
@@ -56,9 +56,9 @@ const useLink = ({ children, isDisabled, isExact, onClick, path, to }: Props): R
     e.preventDefault()
 
     if (e.ctrlKey || e.metaKey || e.altKey || e.shiftKey) {
-      history.redirect(to, true)
+      router.redirect(to, true)
     } else {
-      history.push(to)
+      router.push(to)
     }
   }
 

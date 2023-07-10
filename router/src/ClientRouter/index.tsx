@@ -7,14 +7,6 @@ import RoutesContext from '../RoutesContext'
 import { CancelCallback, RouteModule } from '../types'
 import { generateURL, getFullpath, loadModules } from '../util'
 
-declare global {
-  interface History {
-    push: (to: string) => void
-    redirect: (to: string, isNewPage?: boolean) => void
-    replace: (to: string) => void
-  }
-}
-
 export interface Props {
   children: JSXChildren
   fallback?: JSX.Element
@@ -66,27 +58,25 @@ const ClientRouter: React.FC<Props> = ({ children, fallback, params, routes, pro
     }())
   }
 
-  React.useEffect(() => {
-    history.redirect = (to, isNewPage) => {
-      if (isNewPage) {
-        window.open(to, '_blank')
-      } else {
-        window.location.href = to
-      }
+  const redirect = React.useCallback((to, isNewPage) => {
+    if (isNewPage) {
+      window.open(to, '_blank')
+    } else {
+      window.location.href = to
     }
   }, [])
 
+  const push = React.useCallback((to: string) => {
+    history.pushState({}, null, to)
+    handleURLChange()
+  }, [state.activeURL.fullpath, state.activatingURL?.fullpath])
+
+  const replace = React.useCallback((to: string) => {
+    history.replaceState({}, null, to)
+    handleURLChange()
+  }, [state.activeURL.fullpath, state.activatingURL?.fullpath])
+
   React.useEffect(() => {
-    history.push = to => {
-      history.pushState({}, null, to)
-      handleURLChange()
-    }
-
-    history.replace = to => {
-      history.replaceState({}, null, to)
-      handleURLChange()
-    }
-
     addEventListener(window, ['popstate'], handleURLChange)
 
     return () => {
@@ -95,7 +85,7 @@ const ClientRouter: React.FC<Props> = ({ children, fallback, params, routes, pro
   }, [state.activeURL.fullpath, state.activatingURL?.fullpath])
 
   return (
-    <RouterContext.Provider value={{ fallback, state, dispatch, modules }}>
+    <RouterContext.Provider value={{ fallback, state, dispatch, modules, push, redirect, replace }}>
       <RoutesContext.Provider value={routes}>
         { progressBar && React.cloneElement(progressBar, { value: state.percentage }) }
         { children }

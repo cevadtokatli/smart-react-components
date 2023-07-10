@@ -1,4 +1,5 @@
 import React from 'react'
+import useRouter from '../useRouter'
 
 export interface Props {
   isNewTab?: boolean
@@ -6,8 +7,10 @@ export interface Props {
 }
 
 const Redirect: React.FC<Props> = ({ isNewTab, to }) => {
+  const { redirect } = useRouter()
+
   React.useEffect(() => {
-    history.redirect(to, isNewTab)
+    redirect(to, isNewTab)
   }, [to])
 
   return null
