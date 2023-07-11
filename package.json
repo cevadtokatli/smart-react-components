@@ -1,0 +1,40 @@
+{
+  "name": "@smart-react-components/router-example",
+  "private": true,
+  "scripts": {
+    "dev": "webpack --mode development --progress --watch",
+    "build": "webpack --mode production",
+    "start": "cd dist && node server/index.js"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.17",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
+    "@types/serve-static": "1.15.2",
+    "@types/sqlite3": "3.1.8",
+    "@types/styled-components": "5.1.26",
+    "clean-webpack-plugin": "4.0.0",
+    "copy-webpack-plugin": "11.0.0",
+    "ts-loader": "9.4.4",
+    "typescript": "5.1.6",
+    "webpack": "5.88.1",
+    "webpack-cli": "5.1.4",
+    "webpack-node-externals": "3.0.0"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "1.9.5",
+    "@smart-react-components/core": "2.0.0-alpha-26",
+    "@smart-react-components/router": "2.0.0-alpha-23",
+    "@smart-react-components/transition": "2.0.0-alpha-21",
+    "@smart-react-components/ui": "2.0.0-alpha-57",
+    "express": "4.18.2",
+    "node-fetch": "3.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-redux": "8.1.1",
+    "redux": "4.2.1",
+    "serve-static": "1.15.0",
+    "sqlite3": "5.1.6",
+    "styled-components": "6.0.3"
+  }
+}
