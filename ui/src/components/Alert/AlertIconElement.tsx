@@ -50,7 +50,7 @@ export default styled(Div).attrs<Props>(({ hasBackground, iconPosition }) => ({
       color: ${!isSoft ? theme.$.palette[alertPalette].font : theme.$.palette[alertPalette].softFont};
     `
     : `
-      color: ${!isSoft ? theme.$.palette[alertPalette].main : theme.$.palette[alertPalette].soft};
+      color: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};
     `
   }
 
@@ -58,10 +58,10 @@ export default styled(Div).attrs<Props>(({ hasBackground, iconPosition }) => ({
     ? `
       ${!isSoft
         ? `
-          background: ${(palette !== alertPalette || isOutline) ? theme.$.palette[alertPalette].main : theme.$.palette[alertPalette].darkest};
+          background: ${(palette !== alertPalette || isOutline) ? theme.$.palette[palette].main : theme.$.palette[alertPalette].darkest};
         `
         : `
-          background: ${(palette !== alertPalette || isOutline) ? theme.$.palette[alertPalette].soft : theme.$.palette[alertPalette].softDarkest};
+          background: ${(palette !== alertPalette || isOutline) ? theme.$.palette[palette].soft : theme.$.palette[alertPalette].softDarkest};
         `
       }
     `
