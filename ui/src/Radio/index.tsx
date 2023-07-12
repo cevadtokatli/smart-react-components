@@ -1,5 +1,5 @@
 import extractElementProps from '@smart-react-components/core/element-props'
-import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
+import intrinsicStyledCoreProps, { IntrinsicStyledCoreProps } from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import { ContentElement, PaletteProp, Partial, ResponsiveProp, SetState, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import FormInlineLabel from '../components/Form/FormInlineLabel'
@@ -11,7 +11,7 @@ export { OrderPosition as Position } from '../types'
 
 export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,
-  IntrinsicStyledProps {
+  IntrinsicStyledCoreProps {
   active?: FormValue
   isBlock?: boolean
   isDisabled?: boolean
@@ -56,7 +56,7 @@ const Radio = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
       isBlock={props.isBlock}
       isDisabled={props.isDisabled}
       labelPosition={props.position}
-      {...extractElementProps(props, [intrinsicStyledProps])}
+      {...extractElementProps(props, [intrinsicStyledCoreProps])}
     >
       { React.cloneElement(props.template, {
         children: (

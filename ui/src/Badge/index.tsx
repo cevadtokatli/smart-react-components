@@ -1,27 +1,26 @@
 import extractElementProps from '@smart-react-components/core/element-props'
 import clickEvents, { ClickEvents } from '@smart-react-components/core/element-props/click-events'
-import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
+import intrinsicStyledCoreProps, { IntrinsicStyledCoreProps } from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
+import intrinsicStyledPositionProps, { IntrinsicStyledPositionProps } from '@smart-react-components/core/element-props/intrinsic-styled-position-props'
 import mouseClickEvents from '@smart-react-components/core/element-props/mouse-click-events'
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { ContentElement, JSXElementProps, PaletteProp, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
-import { OrderPosition, Position } from '../types'
+import { OrderPosition } from '../types'
 import BadgeElement, { Content } from '../components/Badge/BadgeElement'
 
 export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,
   ClickEvents,
-  IntrinsicStyledProps {
+  IntrinsicStyledCoreProps,
+  IntrinsicStyledPositionProps {
   children: ContentElement | ContentElement[]
   elementProps?: JSXElementProps
   hasSpace?: boolean
-  isAbsolute?: boolean
   isFixedSize?: boolean
   isOutline?: boolean
   isSoft?: boolean
   palette?: PaletteProp
-  position?: Position
-  offset?: number
   shape?: ShapeProp
 }
 
@@ -76,8 +75,6 @@ const Badge: React.FC<Props> = props => {
 
   return (
     <BadgeElement
-      badgeOffset={props.offset}
-      badgePosition={props.position}
       badgeSize={props.size}
       badgeSizeSm={props.sizeSm}
       badgeSizeMd={props.sizeMd}
@@ -85,15 +82,14 @@ const Badge: React.FC<Props> = props => {
       badgeSizeXl={props.sizeXl}
       hasIconLeft={hasIconLeft}
       hasIconRight={hasIconRight}
-      hasSpace={props.hasSpace ?? !props.isAbsolute}
-      isAbsolute={props.isAbsolute}
+      hasSpace={props.hasSpace}
       isClickable={!!mouseClickEvents.find(i => props[i])}
       isFixedSize={props.isFixedSize}
       isOutline={props.isOutline}
       isSoft={props.isSoft}
       palette={props.palette}
       shape={props.shape}
-      {...extractElementProps(props, [clickEvents, intrinsicStyledProps])}
+      {...extractElementProps(props, [clickEvents, intrinsicStyledCoreProps, intrinsicStyledPositionProps])}
       {...props.elementProps}
     >
       {children}
@@ -103,9 +99,7 @@ const Badge: React.FC<Props> = props => {
 
 Badge.defaultProps = {
   elementProps: {},
-  offset: 10,
   palette: 'primary',
-  position: Position.RIGHT,
   shape: 'rectangle',
   size: 'medium',
 }

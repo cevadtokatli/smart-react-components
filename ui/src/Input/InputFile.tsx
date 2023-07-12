@@ -1,6 +1,6 @@
 import Div from '@smart-react-components/core/Element/Div'
 import extractElementProps from '@smart-react-components/core/element-props'
-import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
+import intrinsicStyledCoreProps, { IntrinsicStyledCoreProps } from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import { ContentElement, PaletteProp, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import FormBlockLabel from '../components/Form/FormBlockLabel'
@@ -13,7 +13,7 @@ import InputAddon from './InputAddon'
 
 export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,
-  IntrinsicStyledProps {
+  IntrinsicStyledCoreProps {
   accept?: string
   hasBorder?: boolean
   isBlock?: boolean
@@ -83,7 +83,7 @@ const InputFile = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
 
   return (
     <FormBlockLabel
-      {...extractElementProps(props, [intrinsicStyledProps])}
+      {...extractElementProps(props, [intrinsicStyledCoreProps])}
       formSize={props.size}
       formSizeSm={props.sizeSm}
       formSizeMd={props.sizeMd}

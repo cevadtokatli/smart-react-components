@@ -1,7 +1,7 @@
 import Div from '@smart-react-components/core/Element/Div'
 import extractElementProps from '@smart-react-components/core/element-props'
 import clickEvents, { ClickEvents } from '@smart-react-components/core/element-props/click-events'
-import intrinsicStyledProps from '@smart-react-components/core/element-props/intrinsic-styled-props'
+import intrinsicStyledCoreProps from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { ContentElement, Nullable } from '@smart-react-components/core/types'
 import React from 'react'
@@ -70,8 +70,8 @@ const Button = React.forwardRef<HTMLElement, Props>((props, forwardRef) => {
     setLoadingEl(getLoadingEl())
   }, [props.loading, props.isLoading])
 
-  const applyIntrinsicStyledProps = () => ({
-    ...extractElementProps(props, [intrinsicStyledProps]),
+  const applyIntrinsicStyledCoreProps = () => ({
+    ...extractElementProps(props, [intrinsicStyledCoreProps]),
     ...(props.hasSpace && {
       margin: `$size.button.${props.size}.margin.y $size.button.${props.size}.margin.x`,
       ...(props.sizeSm && { marginSm: `$size.button.${props.sizeSm}.margin.y $size.button.${props.sizeSm}.margin.x` }),
@@ -87,7 +87,7 @@ const Button = React.forwardRef<HTMLElement, Props>((props, forwardRef) => {
     <ButtonElement
       {...props.elementProps}
       {...((!props.isDisabled && !props.isLoading) && extractElementProps(props, [clickEvents]))}
-      {...(!hasButtonContainer && applyIntrinsicStyledProps())}
+      {...(!hasButtonContainer && applyIntrinsicStyledCoreProps())}
       {...(props.as && { as: props.as })}
       buttonSize={props.size}
       buttonSizeSm={props.sizeSm}
@@ -126,7 +126,7 @@ const Button = React.forwardRef<HTMLElement, Props>((props, forwardRef) => {
   if (hasButtonContainer) {
     Element = (
       <Div
-        {...applyIntrinsicStyledProps()}
+        {...applyIntrinsicStyledCoreProps()}
         display={props.isBlock ? 'flex' : 'inline-flex'}
       >
         { leftAddon?.props?.isSeparated && leftAddon }

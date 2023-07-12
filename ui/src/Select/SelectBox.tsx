@@ -1,7 +1,7 @@
 import Div from '@smart-react-components/core/Element/Div'
 import { GenericProps } from '../types/form'
 import extractElementProps from '@smart-react-components/core/element-props'
-import intrinsicStyledProps from '@smart-react-components/core/element-props/intrinsic-styled-props'
+import intrinsicStyledCoreProps from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { ContentElement } from '@smart-react-components/core/types'
 import React from 'react'
@@ -118,7 +118,7 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
       setStatus={setDropdownStatus}
     >
       <FormBlockLabel
-        {...extractElementProps(props, [intrinsicStyledProps])}
+        {...extractElementProps(props, [intrinsicStyledCoreProps])}
         as="div"
         formSize={props.size}
         formSizeSm={props.sizeSm}

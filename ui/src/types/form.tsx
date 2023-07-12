@@ -1,10 +1,10 @@
-import { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
+import { IntrinsicStyledCoreProps } from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import { ContentElement, JSXElementProps, PaletteProp, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import { FormValue } from '../types'
 
 export interface GenericProps extends
   Partial<ResponsiveProp<'size', SizeProp>>,
-  IntrinsicStyledProps {
+  IntrinsicStyledCoreProps {
   active: FormValue | FormValue[]
   children: JSX.Element | JSX.Element[]
   elementProps?: JSXElementProps

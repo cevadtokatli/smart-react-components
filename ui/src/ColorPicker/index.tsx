@@ -1,6 +1,6 @@
 import { Hr } from '@smart-react-components/core'
 import extractElementProps from '@smart-react-components/core/element-props'
-import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
+import intrinsicStyledCoreProps, { IntrinsicStyledCoreProps } from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { Color, Nullable, PaletteProp, Partial, ResponsiveProp, SetState, SizeProp } from '@smart-react-components/core/types'
 import { getColor } from '@smart-react-components/core/util/color'
@@ -17,7 +17,7 @@ import { colorToString } from '../util/color-picker'
 export { ColorPickerFormat } from '../types/color-picker'
 
 export interface Props extends
-  IntrinsicStyledProps,
+  IntrinsicStyledCoreProps,
   Partial<ResponsiveProp<'size', SizeProp>> {
   canAddColorToPalette?: boolean
   cancelLabel?: string
@@ -97,7 +97,7 @@ const ColorPicker: React.FC<Props> = props => {
       }}
     >
       <ColorPickerElement
-        {...extractElementProps(props, [intrinsicStyledProps])}
+        {...extractElementProps(props, [intrinsicStyledCoreProps])}
         colorPickerSize={props.size}
         colorPickerSizeSm={props.sizeSm}
         colorPickerSizeMd={props.sizeMd}

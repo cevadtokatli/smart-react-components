@@ -1,5 +1,5 @@
 import extractElementProps from '@smart-react-components/core/element-props'
-import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
+import intrinsicStyledCoreProps, { IntrinsicStyledCoreProps } from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import { Theme } from '@smart-react-components/core/theme'
 import { JSXElementProps, PaletteProp, Partial, ResponsiveProp, ShapeProp, SizeProp, TableStripedOrientation } from '@smart-react-components/core/types'
 import React from 'react'
@@ -7,7 +7,7 @@ import { ThemeContext } from 'styled-components'
 import TableElement from '../components/Table/TableElement'
 
 export interface Props extends
-  IntrinsicStyledProps,
+  IntrinsicStyledCoreProps,
   Partial<ResponsiveProp<'size', SizeProp>> {
   children: JSX.Element | JSX.Element[]
   elementProps?: JSXElementProps
@@ -29,7 +29,7 @@ const Table = React.forwardRef<HTMLTableElement, Props>((props, forwardRef) => {
 
   return (
     <TableElement
-      {...extractElementProps(props, [intrinsicStyledProps])}
+      {...extractElementProps(props, [intrinsicStyledCoreProps])}
       hasBorderX={props.hasBorderX}
       hasBorderY={props.hasBorderY}
       hasHeadBackground={props.hasHeadBackground}

@@ -1,6 +1,6 @@
 import Section from '@smart-react-components/core/Element/Section'
 import extractElementProps from '@smart-react-components/core/element-props'
-import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
+import intrinsicStyledCoreProps, { IntrinsicStyledCoreProps } from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import { JSXElementProps, PaletteProp, SetState, SizeProps } from '@smart-react-components/core/types'
 import CSSTransitionSwitch from '@smart-react-components/transition/CSSTransitionSwitch'
 import React from 'react'
@@ -15,7 +15,7 @@ import { Div } from '@smart-react-components/core'
 
 export { DatePickerType, DatePickerTimeType } from '../constants/date-picker'
 
-export interface Props extends IntrinsicStyledProps, SizeProps {
+export interface Props extends IntrinsicStyledCoreProps, SizeProps {
   elementProps?: JSXElementProps
   hasButtons?: boolean
   hasCloseIcon?: boolean
@@ -38,7 +38,7 @@ const DatePicker: React.FC<Props> = props => {
   return (
     <DatePickerElement
       {...props.elementProps}
-      {...extractElementProps(props, [intrinsicStyledProps])}
+      {...extractElementProps(props, [intrinsicStyledCoreProps])}
       {...applyResponsiveStyledProp(props, 'size', 'datePickerSize', v => v)}
     >
       <DatePickerHeader

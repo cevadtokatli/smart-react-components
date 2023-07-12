@@ -1,10 +1,10 @@
 import extractElementProps from '@smart-react-components/core/element-props'
-import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
+import intrinsicStyledCoreProps, { IntrinsicStyledCoreProps } from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import { JSXElementProps, PaletteProp, ShapeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import BreadcrumbListElement from '../components/Breadcrumb/BreadcrumbListElement'
 
-export interface Props extends IntrinsicStyledProps {
+export interface Props extends IntrinsicStyledCoreProps {
   children: JSX.Element[]
   elementProps?: JSXElementProps
   hasWaveEffect?: boolean
@@ -22,7 +22,7 @@ const BreadcrumbList: React.FC<Props> = props => (
     isSoft={props.isSoft}
     palette={props.palette}
     shape={props.shape}
-    {...extractElementProps(props, [intrinsicStyledProps])}
+    {...extractElementProps(props, [intrinsicStyledCoreProps])}
     {...props.elementProps}
   >
     { props.children.map((item, idx) => React.cloneElement(item, {

@@ -1,6 +1,6 @@
 import Div from '@smart-react-components/core/Element/Div'
 import extractElementProps from '@smart-react-components/core/element-props'
-import intrinsicStyledProps from '@smart-react-components/core/element-props/intrinsic-styled-props'
+import intrinsicStyledCoreProps from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import React from 'react'
 import FormBlockLabel from '../components/Form/FormBlockLabel'
 import useAddons from '../hooks/useAddons'
@@ -36,7 +36,7 @@ const Select = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => 
 
   return (
     <FormBlockLabel
-      {...extractElementProps(props, [intrinsicStyledProps])}
+      {...extractElementProps(props, [intrinsicStyledCoreProps])}
       as="div"
       formSize={props.size}
       formSizeSm={props.sizeSm}

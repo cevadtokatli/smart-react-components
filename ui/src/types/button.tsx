@@ -1,8 +1,8 @@
-import { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
+import { IntrinsicStyledCoreProps } from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import { ContentElement, JSXElementProps, PaletteProp, Partial, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 
 export interface ButtonGenericProps<T extends ContentElement> extends
-  IntrinsicStyledProps,
+  IntrinsicStyledCoreProps,
   Partial<ResponsiveProp<'size', SizeProp>> {
   children: T | T[]
   elementProps?: JSXElementProps
@@ -26,7 +26,7 @@ export interface ButtonGenericProps<T extends ContentElement> extends
 }
 
 export interface ButtonListGenericProps extends
-  IntrinsicStyledProps,
+  IntrinsicStyledCoreProps,
   Partial<ResponsiveProp<'size', SizeProp>> {
   children: JSX.Element[]
   hasHover?: boolean

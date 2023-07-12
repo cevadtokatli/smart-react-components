@@ -1,5 +1,5 @@
 import extractElementProps from '@smart-react-components/core/element-props'
-import intrinsicStyledProps from '@smart-react-components/core/element-props/intrinsic-styled-props'
+import intrinsicStyledCoreProps from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import { JSXElementProps } from '@smart-react-components/core/types'
 import React from 'react'
 import ButtonListElement from '../components/Button/ButtonListElement'
@@ -12,7 +12,7 @@ export interface Props extends ButtonListGenericProps {
 }
 
 const ButtonList: React.FC<Props> = props => React.cloneElement(props.template, {
-  ...extractElementProps(props, [intrinsicStyledProps]),
+  ...extractElementProps(props, [intrinsicStyledCoreProps]),
   ...props.elementProps,
   buttonSize: props.size ?? 'medium',
   buttonSizeSm: props.sizeSm,

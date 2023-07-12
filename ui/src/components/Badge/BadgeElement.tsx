@@ -2,7 +2,6 @@ import Div from '@smart-react-components/core/Element/Div'
 import { StyledProps } from '@smart-react-components/core/styled-props'
 import { PaletteProp, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import styled from 'styled-components'
-import { Position } from '../../types'
 import { toCSSValue } from '../../util/css'
 import BadgeIconElement from './BadgeIconElement'
 
@@ -14,12 +13,9 @@ export const Content = styled.div`
 interface Props extends
   StyledProps,
   ResponsiveProp<'badgeSize', SizeProp> {
-  badgeOffset: number
-  badgePosition: Position
   hasIconLeft: boolean
   hasIconRight: boolean
   hasSpace: boolean
-  isAbsolute: boolean
   isClickable: boolean
   isFixedSize: boolean
   isOutline: boolean
@@ -78,7 +74,7 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
       font-size: ${t.$.size.badge[v].iconSize};
     }
   `,
-}))<Props>(({ theme, badgeOffset, badgePosition, hasIconLeft, hasIconRight, isAbsolute, isClickable, isFixedSize, isOutline, isSoft, palette, shape }: Props) => `
+}))<Props>(({ theme, hasIconLeft, hasIconRight, isClickable, isFixedSize, isOutline, isSoft, palette, shape }: Props) => `
   display: inline-flex;
   font-family: ${theme.$.fontFamily.badge};
   word-break: break-word;
@@ -223,14 +219,6 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
     ? `
       cursor: default;
       user-select: none;
-    `
-    : ''
-  }
-
-  ${isAbsolute
-    ? `
-      position: absolute;
-      ${Position[badgePosition].toLowerCase()}: ${badgeOffset}px;
     `
     : ''
   }

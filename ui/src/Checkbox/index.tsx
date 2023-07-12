@@ -1,5 +1,5 @@
 import extractElementProps from '@smart-react-components/core/element-props'
-import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
+import intrinsicStyledCoreProps, { IntrinsicStyledCoreProps } from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { ContentElement, PaletteProp, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
@@ -12,7 +12,7 @@ export { OrderPosition as Position } from '../types'
 
 export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,
-  IntrinsicStyledProps {
+  IntrinsicStyledCoreProps {
   active?: FormValue[]
   isBlock?: boolean
   isChecked?: boolean
@@ -86,7 +86,7 @@ const Checkbox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) =
       isBlock={props.isBlock}
       isDisabled={props.isDisabled}
       labelPosition={props.position}
-      {...extractElementProps(props, [intrinsicStyledProps])}
+      {...extractElementProps(props, [intrinsicStyledCoreProps])}
     >
       { React.cloneElement(props.template, {
         checkboxSize: props.size,

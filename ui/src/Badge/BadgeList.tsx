@@ -1,12 +1,12 @@
 import extractElementProps from '@smart-react-components/core/element-props'
-import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
+import intrinsicStyledCoreProps, { IntrinsicStyledCoreProps } from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import { JSXElementProps, PaletteProp, Partial, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import BadgeListElement from '../components/Badge/BadgeListElement'
 
 export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,
-  IntrinsicStyledProps {
+  IntrinsicStyledCoreProps {
   children: JSX.Element[]
   elementProps?: JSXElementProps
   hasSpace?: boolean
@@ -25,7 +25,7 @@ const BadgeList: React.FC<Props> = props => (
     badgeListSizeLg={props.sizeLg}
     badgeListSizeXl={props.sizeXl}
     hasSpace={props.hasSpace ?? true}
-    {...extractElementProps(props, [intrinsicStyledProps])}
+    {...extractElementProps(props, [intrinsicStyledCoreProps])}
     {...props.elementProps}
   >
     { props.children.map((item, index) => React.cloneElement(item, {

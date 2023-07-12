@@ -1,6 +1,6 @@
 import extractElementProps from '@smart-react-components/core/element-props'
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
-import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
+import intrinsicStyledCoreProps, { IntrinsicStyledCoreProps } from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import { Theme } from '@smart-react-components/core/theme'
 import { JSXElementProps, Partial, ResponsiveProp } from '@smart-react-components/core/types'
 import { addEventListener, removeEventListener } from '@smart-react-components/core/util/dom'
@@ -10,7 +10,7 @@ import TableContainerElement from '../components/Table/TableContainerElement'
 import { getBreakpointValue } from '../util/table'
 
 export interface Props extends
-  IntrinsicStyledProps,
+  IntrinsicStyledCoreProps,
   Partial<ResponsiveProp<'stickyX', number>>,
   Partial<ResponsiveProp<'stickyY', number>> {
   children: JSX.Element
@@ -119,7 +119,7 @@ const TableContainer = React.forwardRef<HTMLElement, Props>((props, forwardRef) 
 
   return (
     <TableContainerElement
-      {...extractElementProps(props, [intrinsicStyledProps])}
+      {...extractElementProps(props, [intrinsicStyledCoreProps])}
       {...props.elementProps}
       ref={getRef()}
       styled={styled}

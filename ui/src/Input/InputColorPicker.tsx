@@ -2,7 +2,7 @@ import Div from '@smart-react-components/core/Element/Div'
 import extractElementProps from '@smart-react-components/core/element-props'
 import changeEvents, { ChangeEvents } from '@smart-react-components/core/element-props/change-events'
 import focusEvents, { FocusEvents } from '@smart-react-components/core/element-props/focus-events'
-import intrinsicStyledProps from '@smart-react-components/core/element-props/intrinsic-styled-props'
+import intrinsicStyledCoreProps from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import keyboardEvents, { KeyboardEvents } from '@smart-react-components/core/element-props/keyboard-events'
 import { Color, ContentElement, Nullable, ShapeProp } from '@smart-react-components/core/types'
 import { getColor } from '@smart-react-components/core/util/color'
@@ -113,7 +113,7 @@ const InputColorPicker = React.forwardRef<HTMLInputElement, Props>((props, forwa
 
   return (
     <FormBlockLabel
-      {...extractElementProps(props, [intrinsicStyledProps])}
+      {...extractElementProps(props, [intrinsicStyledCoreProps])}
       formSize={props.size}
       formSizeSm={props.sizeSm}
       formSizeMd={props.sizeMd}

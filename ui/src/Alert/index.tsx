@@ -1,6 +1,6 @@
 import extractElementProps from '@smart-react-components/core/element-props'
 import clickEvents, { ClickEvents } from '@smart-react-components/core/element-props/click-events'
-import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
+import intrinsicStyledCoreProps, { IntrinsicStyledCoreProps } from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import { ContentElement, JSXElementProps, PaletteProp, Partial, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import AlertElement, { Content } from '../components/Alert/AlertElement'
@@ -9,7 +9,7 @@ import { OrderPosition } from '../types'
 export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,
   ClickEvents,
-  IntrinsicStyledProps {
+  IntrinsicStyledCoreProps {
   children: ContentElement | ContentElement[]
   elementProps?: JSXElementProps
   isOutline?: boolean
@@ -80,7 +80,7 @@ const Alert: React.FC<Props> = props => {
       isSoft={props.isSoft}
       palette={props.palette}
       shape={props.shape}
-      {...extractElementProps(props, [clickEvents, intrinsicStyledProps])}
+      {...extractElementProps(props, [clickEvents, intrinsicStyledCoreProps])}
       {...props.elementProps}
     >
       {children}

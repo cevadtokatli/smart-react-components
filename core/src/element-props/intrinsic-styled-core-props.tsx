@@ -2,8 +2,8 @@ import intrinsicStyledFlexProps, { IntrinsicStyledFlexProps } from './intrinsic-
 import intrinsicStyledMarginProps, { IntrinsicStyledMarginProps } from './intrinsic-styled-margin-props'
 import intrinsicStyledSizeProps, { IntrinsicStyledSizeProps } from './intrinsic-styled-size-props'
 
-export interface IntrinsicStyledProps extends IntrinsicStyledFlexProps, IntrinsicStyledMarginProps, IntrinsicStyledSizeProps {}
+export interface IntrinsicStyledCoreProps extends IntrinsicStyledFlexProps, IntrinsicStyledMarginProps, IntrinsicStyledSizeProps {}
 
-const intrinsicStyledProps = [...intrinsicStyledFlexProps, ...intrinsicStyledMarginProps, ...intrinsicStyledSizeProps]
+const intrinsicStyledCoreProps = [...intrinsicStyledFlexProps, ...intrinsicStyledMarginProps, ...intrinsicStyledSizeProps]
 
-export default intrinsicStyledProps
+export default intrinsicStyledCoreProps

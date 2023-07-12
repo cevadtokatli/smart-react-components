@@ -1,5 +1,5 @@
 import extractElementProps from '@smart-react-components/core/element-props'
-import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
+import intrinsicStyledCoreProps, { IntrinsicStyledCoreProps } from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import { PaletteProp, Partial, ResponsiveProp, SetState, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import FormGroup from '../components/Form/FormGroup'
@@ -9,7 +9,7 @@ export { OrderPosition as Position } from '../types'
 
 export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,
-  IntrinsicStyledProps {
+  IntrinsicStyledCoreProps {
   active: FormValue
   children: JSX.Element[]
   isBlock?: boolean
@@ -26,7 +26,7 @@ export interface Props extends
 const RadioGroup: React.FC<Props> = props => (
   <FormGroup
     isBlock={props.isBlock}
-    {...extractElementProps(props, [intrinsicStyledProps])}
+    {...extractElementProps(props, [intrinsicStyledCoreProps])}
   >
     { props.children.map((item, idx) => React.cloneElement(item, {
       key: item.key ?? idx,
