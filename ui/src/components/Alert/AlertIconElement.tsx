@@ -74,7 +74,7 @@ export default styled(Div).attrs<Props>(({ hasBackground, iconPosition }) => ({
         opacity: .5;
       }
 
-      :hover > * {
+      &:hover > * {
         opacity: 1;
       }
     `
