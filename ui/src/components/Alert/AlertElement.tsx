@@ -99,6 +99,7 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight }) => ({
   }
 
   a {
+    color: inherit;
     font-weight: ${theme.$.fontWeight.alertLink};
   
     &:hover {
