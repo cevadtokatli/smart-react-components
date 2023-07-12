@@ -2,7 +2,7 @@ import { includeResponsiveProps } from './'
 import { Dimension, Position, Property } from '../styled-props/css-properties'
 import { ResponsiveProps } from '../types'
 
-export type IntrinsicStyledFlexProps = ResponsiveProps<{
+export type IntrinsicStyledPositionProps = ResponsiveProps<{
   bottom?: Property<Dimension>
   left?: Property<Dimension>
   position?: Property<Position>
