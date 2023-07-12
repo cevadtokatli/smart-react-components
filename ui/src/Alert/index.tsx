@@ -1,7 +1,6 @@
 import extractElementProps from '@smart-react-components/core/element-props'
 import clickEvents, { ClickEvents } from '@smart-react-components/core/element-props/click-events'
 import intrinsicStyledProps, { IntrinsicStyledProps } from '@smart-react-components/core/element-props/intrinsic-styled-props'
-import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { ContentElement, JSXElementProps, PaletteProp, Partial, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import AlertElement, { Content } from '../components/Alert/AlertElement'
@@ -20,7 +19,7 @@ export interface Props extends
 }
 
 const Alert: React.FC<Props> = props => {
-  const getContent = () => {
+  const { children, hasIconLeft, hasIconRight, hasThickBorder } = React.useMemo(() => {
     const children = !Array.isArray(props.children) ? [props.children] : props.children
     const content = []
     let iconLeft = null
@@ -65,12 +64,6 @@ const Alert: React.FC<Props> = props => {
       hasIconRight: !!iconRight,
       hasThickBorder: !(iconLeft && (iconLeft.props.hasBackground !== false || (iconLeft.props.palette && iconLeft.props.palette !== props.palette))),
     }
-  }
-
-  const [{ children, hasIconLeft, hasIconRight, hasThickBorder }, setContent] = React.useState(() => getContent())
-
-  useChangeEffect(() => {
-    setContent(getContent())
   }, [props.children])
 
   return (
