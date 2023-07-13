@@ -31,6 +31,7 @@ const BreadcrumbList: React.FC<Props> = props => (
       isOutline: props.isOutline,
       isSoft: props.isSoft,
       palette: props.palette,
+      separator: props.separator,
       shape: props.shape,
       waveEffectPalette: props.waveEffectPalette,
     })) }
