@@ -71,50 +71,10 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
   align-items: stretch;
   background: transparent;
   border: 0;
+  border-radius: ${(isFixedSize && shape === 'rounded') ? '100%' : theme.$.radius.button[shape]};
   font-family: ${theme.$.fontFamily.button};
   position: relative;
   transition: box-shadow 300ms 0s ease-in-out;
-
-  &,
-  ${ButtonContent} {
-    border-radius: ${(isFixedSize && shape === 'rounded') ? '100%' : theme.$.radius.button[shape]};
-
-    ${hasSeparatedLeftAddon
-      ? `
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-      `
-      : ''
-    }
-  
-    ${hasSeparatedRightAddon
-      ? `
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-      `
-      : ''
-    }  
-  }
-
-  ${ButtonContent} {
-    ${hasLeftAddon
-      ? `
-        border-left: 0;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-      `
-      : ''
-    }
-
-    ${hasRightAddon
-      ? `
-        border-right: 0;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-      `
-      : ''
-    }
-  }
 
   &:active {
     outline: 0;
@@ -323,5 +283,59 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
       } 
     `
     : ''
+  }
+
+  ${hasSeparatedLeftAddon
+    ? `
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    `
+    : ''
+  }
+
+  ${hasSeparatedRightAddon
+    ? `
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    `
+    : ''
+  }
+
+  ${ButtonContent} {
+    border-radius: ${(isFixedSize && shape === 'rounded') ? '100%' : theme.$.radius.button[shape]};
+  
+    ${hasLeftAddon
+      ? `
+        border-left: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      `
+      : ''
+    }
+
+    ${hasRightAddon
+      ? `
+        border-right: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      `
+      : ''
+    }
+
+    ${hasSeparatedLeftAddon
+      ? `
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      `
+      : ''
+    }
+
+    ${hasSeparatedRightAddon
+      ? `
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      `
+      : ''
+    }
   }
 `)
