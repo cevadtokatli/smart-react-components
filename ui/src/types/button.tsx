@@ -29,6 +29,7 @@ export interface ButtonListGenericProps extends
   IntrinsicStyledCoreProps,
   Partial<ResponsiveProp<'size', SizeProp>> {
   children: JSX.Element[]
+  elementProps?: JSXElementProps
   hasHover?: boolean
   hasWaveEffect?: boolean
   isBlock?: boolean

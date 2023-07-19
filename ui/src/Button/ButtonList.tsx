@@ -1,12 +1,10 @@
 import extractElementProps from '@smart-react-components/core/element-props'
 import intrinsicStyledCoreProps from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
-import { JSXElementProps } from '@smart-react-components/core/types'
 import React from 'react'
 import ButtonListElement from '../components/Button/ButtonListElement'
 import { ButtonListGenericProps } from '../types/button'
 
 export interface Props extends ButtonListGenericProps {
-  elementProps?: JSXElementProps
   hasSpace?: boolean
   template?: JSX.Element
 }

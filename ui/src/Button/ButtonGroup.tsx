@@ -16,7 +16,7 @@ const ButtonGroup: React.FC<Props> = props => (
 )
 
 ButtonGroup.defaultProps = {
-  shape: 'rounded',
+  shape: 'rectangle',
 }
 
 export default ButtonGroup
