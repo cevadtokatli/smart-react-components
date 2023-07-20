@@ -21,6 +21,7 @@ interface Props extends
 }
 
 export default styled(Div).attrs<Props>({
+  className: 'src-button-addon',
   getButtonSize: (v, t) => `
     font-size: ${t.$.size.button[v].fontSize};
     padding: 0 ${toCSSValue(t.$.size.input[v].padding.x)(v => v / 2)};

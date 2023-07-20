@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-export default styled.span`
+export default styled.span.attrs({
+  className: 'src-button-content',
+})`
   align-items: center;
   border: solid 1px;
   box-sizing: border-box;

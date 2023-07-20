@@ -4,8 +4,6 @@ import { StyledProps } from '@smart-react-components/core/styled-props'
 import { PaletteProp, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import styled from 'styled-components'
 import { toCSSValue } from '../../util/css'
-import ButtonAddonElement from './ButtonAddonElement'
-import ButtonContent from './ButtonContent'
 
 interface Props extends
   StyledProps,
@@ -30,7 +28,7 @@ interface Props extends
 
 export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFixedSize }: Props) => ({
   getButtonSize: (v, t) => `
-    ${ButtonContent} {
+    .src-button-content {
       font-size: ${t.$.size.button[v].fontSize};
 
       > ${Svg} {
@@ -99,7 +97,7 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
 
   ${(isBlock || isFixedSize)
     ? `
-      ${ButtonContent} {
+      .src-button-content {
         justify-content: center;
       }
     `
@@ -112,7 +110,7 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
         ? `
           ${!isSoft
             ? `
-              ${ButtonContent} {
+              .src-button-content {
                 color: ${theme.$.palette[palette].font};
 
                 ${!isActive
@@ -130,12 +128,12 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
               ${(!isActive && hasHover)
                 ? `
                   &:hover {
-                    ${ButtonContent} {
+                    .src-button-content {
                       background: ${theme.$.palette[palette].dynamic};
                       border-color: ${theme.$.palette[palette].dynamic};
                     }
     
-                    ${ButtonAddonElement} {
+                    .src-button-addon {
                       background: ${theme.$.palette[palette].dynamicest};
                       border-color: ${theme.$.palette[palette].dynamicest};
                     }
@@ -145,7 +143,7 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
               }
             `
             : `
-              ${ButtonContent} {
+              .src-button-content {
                 color: ${theme.$.palette[palette].softFont};
 
                 ${!isActive
@@ -163,12 +161,12 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
               ${(!isActive && hasHover)
                 ? `
                   &:hover {
-                    ${ButtonContent} {
+                    .src-button-content {
                       background: ${theme.$.palette[palette].softDark};
                       border-color: ${theme.$.palette[palette].softDark};
                     }
 
-                    ${ButtonAddonElement} {
+                    .src-button-addon {
                       background: ${theme.$.palette[palette].softDarkest};
                       border-color: ${theme.$.palette[palette].softDarkest};
                     }
@@ -182,7 +180,7 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
         : `
           ${!isSoft
             ? `
-              ${ButtonContent} {
+              .src-button-content {
                 border-color: ${theme.$.palette[palette].main};
                 color: ${theme.$.palette[palette].main};
               }
@@ -190,12 +188,12 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
               ${hasHover
                 ? `
                   &:hover {
-                    ${ButtonContent} {
+                    .src-button-content {
                       background: ${theme.$.palette[palette].main};
                       color: ${theme.$.palette[palette].font};
                     }
 
-                    ${ButtonAddonElement} {
+                    .src-button-addon {
                       background: ${theme.$.palette[palette].dynamicer};
                       color: ${theme.$.palette[palette].font};
                     }
@@ -205,7 +203,7 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
               }
             `
             : `
-              ${ButtonContent} {
+              .src-button-content {
                 border-color: ${theme.$.palette[palette].soft};
                 color: ${theme.$.palette[palette].soft};
               }
@@ -213,12 +211,12 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
               ${hasHover
                 ? `
                   &:hover {
-                    ${ButtonContent} {
+                    .src-button-content {
                       background: ${theme.$.palette[palette].soft};
                       color: ${theme.$.palette[palette].softFont};
                     }
     
-                    ${ButtonAddonElement} {
+                    .src-button-addon {
                       background: ${theme.$.palette[palette].softDarker};
                       color: ${theme.$.palette[palette].softFont};
                     }
@@ -232,7 +230,7 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
       }
     `
     : `
-      ${ButtonContent} {
+      .src-button-content {
         border-color: transparent;
         color: ${theme.$.palette[palette].main};
         fill: ${theme.$.palette[palette].main};
@@ -241,7 +239,7 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
       ${hasHover
         ? `
           &:hover {
-            ${ButtonContent} {
+            .src-button-content {
               color: ${theme.$.palette[palette].dynamicest};
               text-decoration: underline;
             }
@@ -273,8 +271,8 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
     ? `
       pointer-events: none; 
 
-      ${ButtonContent}, 
-      ${ButtonAddonElement} {
+      .src-button-content,
+      .src-button-addon {
         color: transparent;
 
         > * {
@@ -301,7 +299,7 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
     : ''
   }
 
-  ${ButtonContent} {
+  .src-button-content {
     border-radius: ${(isFixedSize && shape === 'rounded') ? '100%' : theme.$.radius.button[shape]};
   
     ${hasLeftAddon
