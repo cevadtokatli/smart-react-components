@@ -4,7 +4,9 @@ import { PaletteProp, Partial, ResponsiveProp, ShapeProp, SizeProp } from '@smar
 import React from 'react'
 import styled from 'styled-components'
 
-const Container = styled.div(({ theme }) => `
+const Container = styled.div.attrs({
+  className: 'src-checkbox-container',
+})(({ theme }) => `
   border: solid 2px ${theme.$.color.dynamic.accent};
   box-sizing: border-box;
   display: flex;
@@ -13,7 +15,9 @@ const Container = styled.div(({ theme }) => `
   position: relative;
 `)
 
-const Rectangle = styled.div`
+const Rectangle = styled.div.attrs({
+  className: 'src-checkbox-rectangle',
+})`
   position: absolute;
   left: -2px;
   height: calc(100% + 4px);
@@ -24,6 +28,7 @@ const Rectangle = styled.div`
 
 const Svg = styled.svg.attrs({
   children: <path d="M3.5,17.2l7.6,7.6L28.5,7.3" />,
+  className: 'src-checkbox-svg',
   viewBox: '0 0 32 32',
 })(({ theme }) => `
   flex: 0 0 auto;
@@ -66,7 +71,7 @@ export default styled(Div).attrs<Props>(({ children }) => ({
 }))<Props>(({ theme, isChecked, isOutline, isSoft, palette, shape }: Props) => `
   position: relative;
 
-  ${Container} {
+  .src-checkbox-container {
     border-radius: ${theme.$.radius.checkbox[shape]};
   
     ${!isOutline
@@ -77,17 +82,17 @@ export default styled(Div).attrs<Props>(({ children }) => ({
     }
   }
 
-  ${Rectangle} {
+  .src-checkbox-rectangle {
     border-radius: ${theme.$.radius.checkbox[shape]};
   }
 
   ${isChecked
     ? `
-      ${Rectangle} {
+      .src-checkbox-rectangle {
         background: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};
       }
 
-      ${Svg} > path {
+      .src-checkbox-svg > path {
         stroke-dashoffset: 0;
       }
     `

@@ -32,7 +32,7 @@ export interface Props extends
 }
 
 const Checkbox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
-  const getChecked = () => {
+  const isChecked = React.useMemo(() => {
     if (props.setChecked) {
       return props.isChecked
     }
@@ -42,12 +42,6 @@ const Checkbox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) =
     }
 
     return false
-  }
-
-  const [isChecked, setChecked] = React.useState(() => getChecked())
-
-  useChangeEffect(() => {
-    setChecked(getChecked())
   }, [props.active, props.isChecked])
 
   const handleOnChange = () => {
