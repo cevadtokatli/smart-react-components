@@ -1,6 +1,5 @@
 import extractElementProps from '@smart-react-components/core/element-props'
 import intrinsicStyledCoreProps, { IntrinsicStyledCoreProps } from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
-import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { ContentElement, PaletteProp, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import FormInlineLabel from '../components/Form/FormInlineLabel'
