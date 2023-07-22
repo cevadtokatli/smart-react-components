@@ -36,7 +36,7 @@ const WeekPicker: React.FC<Props> = props => {
             isSoft={props.isSoft}
             palette={props.palette}
           >
-            { theme.$.i18n.days[i % 7].substring(0, 2) }
+            { theme.$.i18n.days[i % 7].acroynm2 }
           </DatePickerWeekItemElement>,
         )
       }

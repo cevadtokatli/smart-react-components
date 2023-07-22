@@ -27,7 +27,7 @@ const DatePickerHeader: React.FC<Props> = props => {
   const value = React.useMemo(() => {
     const date = props.value ?? new Date()
     const i18n = theme.$.i18n
-    return `${i18n.days[date.getDay()].substring(0, 3)}, ${date.getDate()} ${i18n.months[props.value.getMonth()].substring(0, 3)} ${date.getFullYear()}`
+    return `${i18n.days[date.getDay()].acroynm3}, ${date.getDate()} ${i18n.months[props.value.getMonth()].acroynm3} ${date.getFullYear()}`
   }, [props.value])
 
   return (

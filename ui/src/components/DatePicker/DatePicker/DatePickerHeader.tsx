@@ -21,7 +21,7 @@ const DatePickerHeader: React.FC<Props> = props => {
 
   const value = React.useMemo(() => {
     if (props.selectedPicker === DatePickerSelectedDatePicker.WEEK) {
-      return `${theme.$.i18n.months[props.value.getMonth()]} ${props.value.getFullYear()}`
+      return `${theme.$.i18n.months[props.value.getMonth()].name} ${props.value.getFullYear()}`
     }
 
     if (props.selectedPicker === DatePickerSelectedDatePicker.MONTH) {

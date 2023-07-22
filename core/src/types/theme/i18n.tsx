@@ -9,10 +9,16 @@ interface DefaultI18NAttributes {
     separator: string
   }
   days: {
-    [key: number]: string
+    [key: number]: {
+      acroynm2: string
+      acroynm3: string
+    }
   }
   months: {
-    [key: number]: string
+    [key: number]: {
+      acroynm3: string
+      name: string
+    }
   }
   pm: string
   progressBar: {

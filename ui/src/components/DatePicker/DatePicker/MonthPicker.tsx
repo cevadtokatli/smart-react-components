@@ -52,7 +52,7 @@ const MonthPicker: React.FC<Props> = props => {
               palette={props.palette}
               onClick={() => handleChange(date)}
             >
-              { theme.$.i18n.months[((i * 4) + j) % 11].substring(0, 3) }
+              { theme.$.i18n.months[((i * 4) + j) % 11].acroynm3 }
             </DatePickerItemElement>,
           )
         }
