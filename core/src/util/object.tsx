@@ -1,4 +1,25 @@
 /**
+ * Clone the object.
+ *
+ * @param source
+ */
+export const clone = <T extends object>(obj: T): T => {
+  const result: any = {}
+
+  for (const i in obj) {
+    if (obj.hasOwnProperty(i)) {
+      if (isObject(obj[i])) {
+        result[i] = clone(obj[i] as object)
+      } else {
+        result[i] = obj[i]
+      }
+    }
+  }
+
+  return result as T
+}
+
+/**
  * Checks if item is a clonable object.
  *
  * @param item

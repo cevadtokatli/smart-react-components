@@ -1,6 +1,6 @@
 import Theme, { InputTheme } from '../types/theme'
 import { isMobile } from '../util/dom'
-import { merge } from '../util/object'
+import { clone, merge } from '../util/object'
 import color from './color'
 import fontFamily from './font-family'
 import fontSize from './font-size'
@@ -67,7 +67,7 @@ const createTheme = (theme: InputTheme = {}, isDarkMode: boolean = false): Theme
   result.$.palette.dynamic = isDarkMode ? result.$.palette.dark : result.$.palette.light
   result.$.palette['!dynamic'] = isDarkMode ? result.$.palette.light : result.$.palette.dark
 
-  return result
+  return clone(result)
 }
 
 export default createTheme
