@@ -2,7 +2,7 @@ import Div from '@smart-react-components/core/Element/Div'
 import extractElementProps from '@smart-react-components/core/element-props'
 import changeEvents, { ChangeEvents } from '@smart-react-components/core/element-props/change-events'
 import focusEvents, { FocusEvents } from '@smart-react-components/core/element-props/focus-events'
-import intrinsicStyledCoreProps from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
+import intrinsicStyledCoreProps, { IntrinsicStyledCoreProps } from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import keyboardEvents, { KeyboardEvents } from '@smart-react-components/core/element-props/keyboard-events'
 import { ContentElement, JSXElementProps, PaletteProp, SetState, ShapeProp, SizeProps } from '@smart-react-components/core/types'
 import React from 'react'
@@ -19,6 +19,7 @@ import DatePicker from '../DatePicker'
 export { DatePickerType, DatePickerTimeType } from '../constants/date-picker'
 
 export interface Props extends
+  IntrinsicStyledCoreProps,
   SizeProps,
   ChangeEvents,
   FocusEvents,
