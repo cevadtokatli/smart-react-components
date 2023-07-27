@@ -129,6 +129,7 @@ export default styled(Input).attrs<Props>(({ hasLeftAddon, hasRightAddon, isInpu
   ${!isInput
     ? `
       align-items: center;
+      cursor: default;
       display: flex;
       justify-content: space-between;
       position: relative;
