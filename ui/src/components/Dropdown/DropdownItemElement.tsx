@@ -15,8 +15,16 @@ interface Props extends StyledProps {
 export default styled(Div)<Props>(({ theme, hasHover, isActive, isDisabled, isOutline, isSoft, palette }: Props) => `
   border-radius: ${theme.$.radius.dropdown};
   cursor: default;
+  fill: currrentcolor;
   transition: 100ms 0s ease-in-out;
   transition-property: background, color, fill;
+
+  svg,
+  svg .fill,
+  svg .stroke {
+    transition: 100ms 0s ease-in-out;
+    transition-property: fill, stroke;
+  }
 
   ${!isActive
     ? `
@@ -27,10 +35,28 @@ export default styled(Div)<Props>(({ theme, hasHover, isActive, isDisabled, isOu
               ? `
                 background: ${!isOutline ? theme.$.palette[palette].dynamic : theme.$.palette[palette].main};
                 color: ${theme.$.palette[palette].font};
+
+                svg,
+                svg .fill {
+                  fill: ${theme.$.palette[palette].font};
+                }
+
+                svg .stroke {
+                  stroke: ${theme.$.palette[palette].font};
+                }
               `
               : `
                 background: ${!isOutline ? theme.$.palette[palette].softDark : theme.$.palette[palette].soft};
                 color: ${theme.$.palette[palette].softFont};
+
+                svg,
+                svg .fill {
+                  fill: ${theme.$.palette[palette].softFont};
+                }
+
+                svg .stroke {
+                  stroke: ${theme.$.palette[palette].softFont};
+                }
               `
             }
           }
@@ -43,10 +69,28 @@ export default styled(Div)<Props>(({ theme, hasHover, isActive, isDisabled, isOu
         ? `
           background: ${!isOutline ? theme.$.palette[palette].dynamicest : theme.$.palette[palette].dynamicer};
           color: ${theme.$.palette[palette].font};
+
+          svg,
+          svg .fill {
+            fill: ${theme.$.palette[palette].font};
+          }
+
+          svg .stroke {
+            stroke: ${theme.$.palette[palette].font};
+          }
         `
         : `
           background: ${!isOutline ? theme.$.palette[palette].softDarkest : theme.$.palette[palette].softDarker};
           color: ${theme.$.palette[palette].softFont};
+
+          svg,
+          svg .fill {
+            fill: ${theme.$.palette[palette].softFont};
+          }
+
+          svg .stroke {
+            stroke: ${theme.$.palette[palette].softFont};
+          }
         `
       }
     `
