@@ -18,7 +18,7 @@ interface Return {
 const useSelectBoxItemList = ({ children }: Props): Return => {
   const collectItems = (arr: Array<{ children: ContentElement, value: FormValue }>, children: JSX.Element | JSX.Element[]) => {
     (!Array.isArray(children) ? [children] : children).forEach(item => {
-      if (typeof item !== 'undefined') {
+      if (item) {
         if (typeof item.props.value !== 'undefined' && item.props.value !== null) {
           arr.push(item.props)
         } else if (typeof item.props.children !== 'undefined') {
