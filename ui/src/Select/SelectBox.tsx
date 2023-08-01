@@ -190,7 +190,7 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
         isSoft={props.isSoft}
         palette={props.palette}
       >
-        { (Array.isArray(props.children) ? props.children : [props.children]).map((item, idx) => item && React.cloneElement(item, {
+        { (Array.isArray(props.children) ? props.children : [props.children]).filter(item => !!item).map((item, idx) => React.cloneElement(item, {
           key: item.key ?? idx,
           active: props.active,
           hasHover: props.hasHover,
