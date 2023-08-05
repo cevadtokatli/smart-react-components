@@ -20,15 +20,21 @@ export interface PrivateProps {
 }
 
 const DropdownItem: React.FC<Props> = ({ children, hasHover, hasWaveEffect, isDisabled, isOutline, isSoft, onClick, palette, setStatus, waveEffectPalette }: (Props & PrivateProps)) => {
+  const isClicked = React.useRef(false)
+
   const handleOnClick = (e: React.MouseEvent<HTMLElement>) => {
-    if (isDisabled) {
+    if (isClicked.current || isDisabled) {
       return
     }
+
+    isClicked.current = true
 
     onClick?.(e)
 
     if (!e.defaultPrevented) {
       setStatus(false)
+    } else {
+      isClicked.current = false
     }
   }
 
