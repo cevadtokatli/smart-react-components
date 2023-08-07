@@ -1,7 +1,7 @@
 import { Theme } from '@smart-react-components/core'
 import extractElementProps from '@smart-react-components/core/element-props'
 import intrinsicStyledSizeProps, { IntrinsicStyledSizeProps } from '@smart-react-components/core/element-props/intrinsic-styled-size-props'
-import { ContentElement, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
+import { ContentElement, JSXElementProps, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import CSSTransition from '@smart-react-components/transition/CSSTransition'
 import { TransitionAfterCallback, TransitionBeforeCallback } from '@smart-react-components/transition/types'
 import React from 'react'
@@ -18,6 +18,7 @@ export interface Props extends
   beforeHide?: TransitionBeforeCallback
   beforeShow?: TransitionBeforeCallback
   children: ContentElement | ContentElement[]
+  elementProps?: JSXElementProps
   hasBorder?: boolean
   hasHideAnimation?: boolean
   hasShowAnimation?: boolean
@@ -63,6 +64,7 @@ const Modal: React.FC<Props> = (props) => {
       >
         <ModalElement
           {...extractElementProps(props, [intrinsicStyledSizeProps])}
+          {...props.elementProps}
           isBlock={props.isBlock}
           isCentered={props.isCentered}
           isStretched={props.isStretched}
@@ -83,6 +85,7 @@ const Modal: React.FC<Props> = (props) => {
 }
 
 Modal.defaultProps = {
+  elementProps: {},
   hasBorder: true,
   hasHideAnimation: true,
   hasShowAnimation: true,
