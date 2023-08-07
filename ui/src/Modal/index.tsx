@@ -1,5 +1,6 @@
 import { Theme } from '@smart-react-components/core'
-import { IntrinsicStyledSizeProps } from '@smart-react-components/core/element-props/intrinsic-styled-size-props'
+import extractElementProps from '@smart-react-components/core/element-props'
+import intrinsicStyledSizeProps, { IntrinsicStyledSizeProps } from '@smart-react-components/core/element-props/intrinsic-styled-size-props'
 import { ContentElement, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import CSSTransition from '@smart-react-components/transition/CSSTransition'
 import { TransitionAfterCallback, TransitionBeforeCallback } from '@smart-react-components/transition/types'
@@ -34,50 +35,62 @@ export interface Props extends
   transitionDuration?: number
 }
 
-const Modal: React.FC<Props> = ({ afterHide, afterShow, beforeHide, beforeShow, children, hasBorder = true, hasHideAnimation = true, hasShowAnimation = true, hasOverlayBackground = true, hasOverlayBlurEffect, isBlock, isCentered, isDismissible = true, isStretched, isFullScreen, setStatus, size = 'medium', sizeSm, sizeMd, sizeLg, sizeXl, shape = 'rectangle', status = true, transitionClassName, transitionDuration }) => {
+const Modal: React.FC<Props> = (props) => {
   const theme = React.useContext<Theme>(ThemeContext)
 
   return (
     <CSSTransition
-      afterHide={afterHide}
-      afterShow={afterShow}
-      beforeHide={beforeHide}
-      beforeShow={beforeShow}
-      className={transitionClassName ?? 'src-modal'}
-      duration={transitionDuration ?? theme.$.transition.modalDuration}
-      hasHideAnimation={hasHideAnimation}
-      hasShowAnimation={hasShowAnimation}
-      status={status}
+      afterHide={props.afterHide}
+      afterShow={props.afterShow}
+      beforeHide={props.beforeHide}
+      beforeShow={props.beforeShow}
+      className={props.transitionClassName ?? 'src-modal'}
+      duration={props.transitionDuration ?? theme.$.transition.modalDuration}
+      hasHideAnimation={props.hasHideAnimation}
+      hasShowAnimation={props.hasShowAnimation}
+      status={props.status}
     >
       <Overlay
-        hasBackground={hasOverlayBackground}
-        hasBlurEffect={hasOverlayBlurEffect}
+        hasBackground={props.hasOverlayBackground}
+        hasBlurEffect={props.hasOverlayBlurEffect}
         template={
           <OverlayElement
-            duration={transitionDuration ?? theme.$.transition.modalDuration}
-            isFullScreen={isFullScreen}
+            duration={props.transitionDuration ?? theme.$.transition.modalDuration}
+            isFullScreen={props.isFullScreen}
           />
         }
-        {...(isDismissible && { onClick: () => setStatus(false) })}
+        {...(props.isDismissible && { onClick: () => props.setStatus(false) })}
       >
         <ModalElement
-          isBlock={isBlock}
-          isCentered={isCentered}
-          isStretched={isStretched}
-          isFullScreen={isFullScreen}
-          hasBorder={hasBorder}
-          modalSize={size}
-          modalSizeSm={sizeSm}
-          modalSizeMd={sizeMd}
-          modalSizeLg={sizeLg}
-          modalSizeXl={sizeXl}
-          shape={shape}
+          {...extractElementProps(props, [intrinsicStyledSizeProps])}
+          isBlock={props.isBlock}
+          isCentered={props.isCentered}
+          isStretched={props.isStretched}
+          isFullScreen={props.isFullScreen}
+          hasBorder={props.hasBorder}
+          modalSize={props.size}
+          modalSizeSm={props.sizeSm}
+          modalSizeMd={props.sizeMd}
+          modalSizeLg={props.sizeLg}
+          modalSizeXl={props.sizeXl}
+          shape={props.shape}
         >
-          {children}
+          {props.children}
         </ModalElement>
       </Overlay>
     </CSSTransition>
   )
+}
+
+Modal.defaultProps = {
+  hasBorder: true,
+  hasHideAnimation: true,
+  hasShowAnimation: true,
+  hasOverlayBackground: true,
+  isDismissible: true,
+  size: 'medium',
+  shape: 'rectangle',
+  status: true,
 }
 
 export default Modal
