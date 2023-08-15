@@ -25,6 +25,7 @@ export interface Props {
   hasHideAnimation?: boolean
   hasShowAnimation?: boolean
   isDismissible?: boolean
+  isOverflowPrevented?: boolean
   maxWidth?: number
   minWidth?: number
   position?: Position
@@ -47,6 +48,7 @@ const FixedBox: React.FC<Props> = ({
   hasHideAnimation = true,
   hasShowAnimation = true,
   isDismissible = true,
+  isOverflowPrevented,
   maxWidth,
   minWidth,
   position = Position.BOTTOM,
@@ -63,7 +65,7 @@ const FixedBox: React.FC<Props> = ({
 
   const getTriggerEl = () => ((children[0] as any).ref ?? triggerEl).current as HTMLElement
 
-  const handlePosition = e => calculatePosition(getTriggerEl(), boxEl.current, e, position, maxWidth, minWidth, space)
+  const handlePosition = e => calculatePosition(getTriggerEl(), boxEl.current, e, position, maxWidth, minWidth, space, isOverflowPrevented)
 
   const {
     getStatus,

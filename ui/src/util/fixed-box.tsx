@@ -13,6 +13,7 @@ export const calculatePosition = (
   maxWidth: number | undefined,
   minWidth: number | undefined,
   space: number,
+  isOverflowPrevented: boolean,
 ) => {
   if (!boxEl) {
     return
@@ -44,8 +45,8 @@ export const calculatePosition = (
 
   boxEl.style.width = `${width}px`
   boxEl.setAttribute('style', position & (Position.LEFT | Position.RIGHT)
-    ? calculatePositionBasedOnXAxis(triggerRect, boxEl, e, position, space, windowWidth, windowHeight)
-    : calculatePositionBasedOnYAxis(triggerRect, boxEl, e, position, space, windowWidth, windowHeight),
+    ? calculatePositionBasedOnXAxis(triggerRect, boxEl, e, position, space, windowWidth, windowHeight, isOverflowPrevented)
+    : calculatePositionBasedOnYAxis(triggerRect, boxEl, e, position, space, windowWidth, windowHeight, isOverflowPrevented),
   )
 }
 
@@ -60,6 +61,7 @@ const calculatePositionBasedOnXAxis = (
   space: number,
   windowWidth: number,
   windowHeight: number,
+  isOverflowPrevented: boolean,
 ): string => {
   // left & width
   let left: number
@@ -76,6 +78,10 @@ const calculatePositionBasedOnXAxis = (
     left = diffLeft
   } else {
     left = triggerLeft + triggerWidth + space
+  }
+
+  if (isOverflowPrevented) {
+    left = Math.max(0, Math.min(windowWidth - width, left))
   }
 
   // top & height
@@ -113,6 +119,7 @@ const calculatePositionBasedOnYAxis = (
   space: number,
   windowWidth: number,
   windowHeight: number,
+  isOverflowPrevented: boolean,
 ): string => {
   // left & width
   let left: number
@@ -126,6 +133,10 @@ const calculatePositionBasedOnYAxis = (
     left = triggerLeft
   } else {
     left = triggerLeft + triggerWidth - width
+  }
+
+  if (isOverflowPrevented) {
+    left = Math.max(0, Math.min(windowWidth - width, left))
   }
 
   // top & height
