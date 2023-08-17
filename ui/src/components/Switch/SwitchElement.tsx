@@ -4,7 +4,9 @@ import styled from 'styled-components'
 import { Props } from '../Checkbox/CheckboxElement'
 import { extractNumberUnit, toCSSValue } from '../../util/css'
 
-const Slider = styled.div(({ theme }) => `
+const Slider = styled.div.attrs({
+  className: 'switch-slider',
+})(({ theme }) => `
   background: ${theme.$.color.dynamic.background};
   border-radius: 100%;
   box-shadow: 0 1px 3px rgba(0,0,0,.4);
@@ -26,7 +28,7 @@ export default styled(Div).attrs<Props>(({ children, isChecked }) => ({
     height: ${t.$.size.switch[v].height};
     width: ${t.$.size.switch[v].width};
 
-    ${Slider} {
+    .switch-slider {
       height: ${t.$.size.switch[v].slider};
       width: ${t.$.size.switch[v].slider};
 
