@@ -6,7 +6,9 @@ import styled from 'styled-components'
 import { toCSSValue } from '../../util/css'
 import { calculateRadioInnerCircleSize } from '../../util/radio'
 
-const Container = styled.div(({ theme }) => `
+const Container = styled.div.attrs({
+  className: 'src-radio-container',
+})(({ theme }) => `
   align-items: center;
   border: solid 2px ${theme.$.color.dynamic.accent};
   border-radius: 100%;
@@ -16,7 +18,9 @@ const Container = styled.div(({ theme }) => `
   height: 100%;
 `)
 
-const OuterCircle = styled.div`
+const OuterCircle = styled.div.attrs({
+  className: 'src-radio-outer-circle',
+})`
   align-items: center;
   border-radius: 100%;
   display: flex;
@@ -27,7 +31,9 @@ const OuterCircle = styled.div`
   transition-property: height, width;
 `
 
-const InnerCircle = styled.div(({ theme }) => `
+const InnerCircle = styled.div.attrs({
+  className: 'src-radio-inner-circle',
+})(({ theme }) => `
   background: ${theme.$.color.dynamic.background};
   border-radius: 100%;
   flex: 0 0 auto;
@@ -57,7 +63,7 @@ export default styled(Div).attrs<Props>(({ children }) => ({
     height: ${t.$.size.radio[v]};
     width: ${t.$.size.radio[v]};
 
-    ${InnerCircle} {
+    .src-radio-inner-circle {
       height: ${toCSSValue(t.$.size.radio[v])(v => calculateRadioInnerCircleSize(v))};
       width: ${toCSSValue(t.$.size.radio[v])(v => calculateRadioInnerCircleSize(v))};
     }
@@ -67,14 +73,14 @@ export default styled(Div).attrs<Props>(({ children }) => ({
 
   ${!isOutline
     ? `
-      ${Container} {
+      .src-radio-container {
         background: ${theme.$.color.dynamic.accent};
       }
     `
     : ''
   }
 
-  ${OuterCircle} {
+  .src-radio-outer-circle {
     background: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};
 
     ${!isChecked
