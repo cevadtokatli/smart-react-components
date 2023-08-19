@@ -17,6 +17,10 @@ export default styled(Div)<Props>(({ theme, isDisabled }) => `
     border-radius: ${toCSSValue(theme.$.radius.colorPicker)(v => v * 2)};
   }
 
+  .src-color-picker-major-picker-bg {
+    border-radius: calc(${toCSSValue(theme.$.radius.colorPicker)(v => v * 2)} + 1px);
+  }
+
   div {
     height: 100%;
   }

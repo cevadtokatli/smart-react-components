@@ -10,7 +10,7 @@ interface Props extends PickerElementProps {
 
 export default styled(PickerElement).attrs<Props>(({ bgElRef, children, value }) => ({
   children: (
-    <div ref={bgElRef}>
+    <div className="src-color-picker-major-picker-bg" ref={bgElRef}>
       <Div
         background="linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0))"
       >
