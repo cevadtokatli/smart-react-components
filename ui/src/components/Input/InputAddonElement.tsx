@@ -22,8 +22,9 @@ interface Props extends
   shape?: ShapeProp
 }
 
-export default styled(Div).attrs<Props>(({ isSeparated }: Props) => ({
+export default styled(Div).attrs<Props>(({ className = '', isSeparated }) => ({
   ...(isSeparated && { as: 'label' }),
+  className: `src-input-addon ${className}`,
   getInputSize: (v, t) => `
     font-size: ${t.$.size.form.blockLabel[v].fontSize};
     padding: ${toCSSValue(t.$.size.input[v].padding.x)(v => v / 2)};

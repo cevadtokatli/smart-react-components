@@ -3,8 +3,6 @@ import { StyledProps } from '@smart-react-components/core/styled-props'
 import { ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
 import styled from 'styled-components'
 import { toCSSValue } from '../../util/css'
-import InputAddonElement from './InputAddonElement'
-import InputElement from './InputElement'
 
 interface Props extends
   StyledProps,
@@ -13,7 +11,7 @@ interface Props extends
 
 export default styled(Div).attrs<Props>({
   getInputSize: (v, t) => `
-    ${InputAddonElement} {
+    .src-input-addon {
       padding: 0; 
 
       > div {
@@ -25,7 +23,7 @@ export default styled(Div).attrs<Props>({
   display: flex;
   flex: 1 1 auto;
 
-  ${InputElement} {
+  .src-input {
     -moz-appearance: textfield;
 
     &::-webkit-inner-spin-button,
@@ -35,7 +33,7 @@ export default styled(Div).attrs<Props>({
     }
   }
 
-  ${InputAddonElement} {
+  .src-input-addon {
     flex-direction: column;
     user-select: none;
 
@@ -55,7 +53,7 @@ export default styled(Div).attrs<Props>({
     }
   }
 
-  &:hover ${InputAddonElement} > div {
+  &:hover .src-input-addon > div {
     visibility: visible;
   }
 `

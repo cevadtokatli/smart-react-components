@@ -2,7 +2,10 @@ import Div from '@smart-react-components/core/Element/Div'
 import extractElementProps from '@smart-react-components/core/element-props'
 import changeEvents, { ChangeEvents } from '@smart-react-components/core/element-props/change-events'
 import focusEvents, { FocusEvents } from '@smart-react-components/core/element-props/focus-events'
-import intrinsicStyledCoreProps, { IntrinsicStyledCoreProps } from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
+import { IntrinsicStyledCoreProps } from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
+import intrinsicStyledFlexProps from '@smart-react-components/core/element-props/intrinsic-styled-flex-props'
+import intrinsicStyledMarginProps from '@smart-react-components/core/element-props/intrinsic-styled-margin-props'
+import intrinsicStyledSizeProps from '@smart-react-components/core/element-props/intrinsic-styled-size-props'
 import keyboardEvents, { KeyboardEvents } from '@smart-react-components/core/element-props/keyboard-events'
 import { ContentElement, JSXElementProps, PaletteProp, Partial, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
@@ -74,7 +77,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
 
   return (
     <FormBlockLabel
-      {...extractElementProps(props, [intrinsicStyledCoreProps])}
+      {...extractElementProps(props, [intrinsicStyledFlexProps, intrinsicStyledMarginProps])}
       formSize={props.size}
       formSizeSm={props.sizeSm}
       formSizeMd={props.sizeMd}
@@ -102,7 +105,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
         >
           { (leftAddon && !leftAddon?.props?.isExcluded) && leftAddon }
           { React.cloneElement(props.template, {
-            ...extractElementProps(props, [changeEvents, focusEvents, keyboardEvents]),
+            ...extractElementProps(props, [changeEvents, focusEvents, keyboardEvents, intrinsicStyledSizeProps]),
             ...(typeof props.defaultValue !== 'undefined' && { defaultValue: props.defaultValue }),
             ...(typeof props.hasSpellCheck !== 'undefined' && { spellCheck: props.hasSpellCheck }),
             ...(props.isDisabled && { disabled: true }),

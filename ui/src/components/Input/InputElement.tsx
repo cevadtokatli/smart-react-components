@@ -20,8 +20,9 @@ export interface Props extends
   palette?: PaletteProp
 }
 
-export default styled(Input).attrs<Props>(({ hasLeftAddon, hasRightAddon, isInput = true }) => ({
+export default styled(Input).attrs<Props>(({ className = '', hasLeftAddon, hasRightAddon, isInput = true }) => ({
   ...(!isInput && { as: 'div' }),
+  className: `src-input ${className}`,
   getInputSize: (v, t) => `
     font-size: ${t.$.size.input[v].fontSize};
     padding: ${t.$.size.input[v].padding.y} ${t.$.size.input[v].padding.x};
