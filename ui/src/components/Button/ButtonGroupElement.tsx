@@ -18,6 +18,14 @@ export default styled(ButtonListElement)<Props>(({ theme, shape }: Props) => `
       border-radius: 0;
     }
 
+    &:not(:last-child) {
+      ${ButtonElement},
+      ${ButtonAddonElement},
+      ${ButtonContent} {
+        border-right: 0;
+      }
+    }
+
     &:focus {
       box-shadow: none;
     }
