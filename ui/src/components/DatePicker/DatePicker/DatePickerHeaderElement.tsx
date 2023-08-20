@@ -12,7 +12,7 @@ export default styled(Header).attrs<Props>({
     > div:first-child {
       cursor: default;
       font-weight: ${t.$.fontWeight.datePicker};
-      padding-left: ${t.$.size.datePicker[v].headerSpace};
+      padding-left: ${t.$.size.datePicker[v].headerSpace.x};
     }
 
     > div:last-child {
