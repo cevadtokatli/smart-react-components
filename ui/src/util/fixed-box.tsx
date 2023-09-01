@@ -56,7 +56,7 @@ export const calculatePosition = (
 const calculatePositionBasedOnXAxis = (
   triggerRect: DOMRect,
   boxEl: HTMLDivElement,
-  e: Nullable<MouseEvent>,
+  e: Nullable<MouseEvent | TouchEvent>,
   position: Position,
   space: number,
   windowWidth: number,
@@ -66,7 +66,7 @@ const calculatePositionBasedOnXAxis = (
   // left & width
   let left: number
   const width = boxEl.offsetWidth + .5
-  const triggerLeft = e?.clientX ?? triggerRect.left
+  const triggerLeft = (e as MouseEvent)?.clientX ?? (e as TouchEvent)?.touches?.[0]?.pageX ?? triggerRect.left
   const triggerWidth = e ? 0 : triggerRect.width
   const diffLeft = triggerRect.left - (space + width)
   const diffRight = windowWidth - (triggerLeft + triggerWidth + space + width)
@@ -87,7 +87,7 @@ const calculatePositionBasedOnXAxis = (
   // top & height
   let top: number
   let height = boxEl.offsetHeight
-  const triggerTop = e?.clientY ?? triggerRect.top
+  const triggerTop = (e as MouseEvent)?.clientY ?? (e as TouchEvent)?.touches?.[0]?.pageY ?? triggerRect.top
   const triggerHeight = e ? 0 : triggerRect.height + triggerRect.top <= windowHeight ? triggerRect.height : (windowHeight - triggerRect.top)
   const diffBottom = windowHeight - (triggerRect.top + height)
   const diffTop = (triggerRect.top + triggerHeight) - height
@@ -114,7 +114,7 @@ const calculatePositionBasedOnXAxis = (
 const calculatePositionBasedOnYAxis = (
   triggerRect: DOMRect,
   boxEl: HTMLDivElement,
-  e: Nullable<MouseEvent>,
+  e: Nullable<MouseEvent | TouchEvent>,
   position: Position,
   space: number,
   windowWidth: number,
@@ -124,7 +124,7 @@ const calculatePositionBasedOnYAxis = (
   // left & width
   let left: number
   const width = boxEl.offsetWidth + .5
-  const triggerLeft = e?.clientX ?? triggerRect.left
+  const triggerLeft = (e as MouseEvent)?.clientX ?? (e as TouchEvent)?.touches?.[0]?.pageX ?? triggerRect.left
   const triggerWidth = e ? 0 : triggerRect.width
   const diffLeft = windowWidth - (triggerLeft + width)
   const diffRight = triggerLeft - width
@@ -142,7 +142,7 @@ const calculatePositionBasedOnYAxis = (
   // top & height
   let top: number
   let height = boxEl.offsetHeight
-  const triggerTop = e?.clientY ?? triggerRect.top
+  const triggerTop = (e as MouseEvent)?.clientY ?? (e as TouchEvent)?.touches?.[0]?.pageY ?? triggerRect.top
   const triggerHeight = e ? 0 : triggerRect.height
   const diffBottom = windowHeight - (triggerTop + triggerHeight + height + space)
   const diffTop = (triggerTop + triggerHeight) - (height + 1)

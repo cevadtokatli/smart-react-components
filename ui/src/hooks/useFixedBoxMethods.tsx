@@ -1,7 +1,9 @@
+import { Theme } from '@smart-react-components/core/theme'
 import { SetState } from '@smart-react-components/core/types'
 import { addEventListener, debounce, isMobile, removeEventListener } from '@smart-react-components/core/util/dom'
 import { TransitionBeforeCallback } from '@smart-react-components/transition/types'
 import { useEffect, useRef, useState } from 'react'
+import { useTheme } from 'styled-components'
 import { TriggerInteraction } from '../types'
 import { isTargetClickable } from '../util/dom'
 
@@ -9,7 +11,7 @@ interface Props {
   beforeShow?: TransitionBeforeCallback
   boxEl: React.MutableRefObject<HTMLDivElement>
   getTriggerEl: () => HTMLElement
-  handlePosition: (e: MouseEvent) => void
+  handlePosition: (e: MouseEvent | TouchEvent) => void
   hoverDelay?: number
   isDismissible: boolean
   key: string
@@ -24,10 +26,13 @@ interface Return {
 }
 
 const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, hoverDelay, isDismissible, key, setStatus, status, triggerInteraction }: Props): Return => {
+  const theme = useTheme() as Theme
+
   const enterTimeout = useRef<NodeJS.Timeout>(null)
   const enterTimeoutMouseMove = useRef<(e: Event) => void>(null)
   const leaveTimeout = useRef<NodeJS.Timeout>(null)
-  const mouseEvent = useRef<MouseEvent>(null)
+  const mouseEvent = useRef<MouseEvent | TouchEvent>(null)
+  const touchStartDate = useRef<number>(null)
   const [localStatus, setLocalStatus] = useState(() => false)
 
   const getStatus = () => status ?? localStatus
@@ -52,6 +57,32 @@ const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, h
 
     if (isTargetClickable(e.target as HTMLElement, triggerEl)) {
       getSetStatus()(true)
+    }
+  }
+
+  const handleTriggerRightTouchStart = e => {
+    e.preventDefault()
+    mouseEvent.current = e
+    touchStartDate.current = Date.now()
+    const triggerEl = getTriggerEl()
+    addEventListener(triggerEl, ['touchend'], handleTriggerRightTouchEnd)
+
+    setTimeout(() => {
+      if (touchStartDate.current) {
+        touchStartDate.current = null
+        removeEventListener(triggerEl, ['touchend'], handleTriggerRightTouchEnd)
+        setStatus(true)
+      }
+    }, 1500)
+  }
+
+  const handleTriggerRightTouchEnd = e => {
+    e.preventDefault()
+
+    if (touchStartDate.current) {
+      touchStartDate.current = null
+      const triggerEl = getTriggerEl()
+      removeEventListener(triggerEl, ['touchend'], handleTriggerRightTouchEnd)
     }
   }
 
@@ -147,7 +178,11 @@ const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, h
     }
 
     if (triggerInteraction & TriggerInteraction.RIGHT_CLICK) {
-      addEventListener(triggerEl, ['contextmenu'], handleTriggerRightClick)
+      if (theme.$.vars.isMobile) {
+        addEventListener(triggerEl, ['touchstart'], handleTriggerRightTouchStart)
+      } else {
+        addEventListener(triggerEl, ['contextmenu'], handleTriggerRightClick)
+      }
 
       if (getStatus()) {
         addEventListener(triggerEl, ['click'], handleTriggerClick)
@@ -179,7 +214,11 @@ const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, h
       }
 
       if (triggerInteraction & TriggerInteraction.RIGHT_CLICK) {
-        removeEventListener(triggerEl, ['contextmenu'], handleTriggerRightClick)
+        if (theme.$.vars.isMobile) {
+          removeEventListener(triggerEl, ['touchstart'], handleTriggerRightTouchStart)
+        } else {
+          removeEventListener(triggerEl, ['contextmenu'], handleTriggerRightClick)
+        }
 
         if (getStatus()) {
           removeEventListener(triggerEl, ['click'], handleTriggerClick)
