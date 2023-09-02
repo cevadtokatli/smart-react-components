@@ -61,7 +61,6 @@ const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, h
   }
 
   const handleTriggerRightTouchStart = e => {
-    e.preventDefault()
     mouseEvent.current = e
     touchStartDate.current = Date.now()
     const triggerEl = getTriggerEl()
@@ -77,8 +76,6 @@ const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, h
   }
 
   const handleTriggerRightTouchEnd = e => {
-    e.preventDefault()
-
     if (touchStartDate.current) {
       touchStartDate.current = null
       const triggerEl = getTriggerEl()
