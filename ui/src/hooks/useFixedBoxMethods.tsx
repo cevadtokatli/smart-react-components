@@ -60,26 +60,47 @@ const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, h
     }
   }
 
-  const handleTriggerRightTouchStart = e => {
+  const handleTriggerLongTouchStart = e => {
     mouseEvent.current = e
     touchStartDate.current = Date.now()
     const triggerEl = getTriggerEl()
-    addEventListener(triggerEl, ['touchend'], handleTriggerRightTouchEnd)
+    addEventListener(triggerEl, ['touchmove'], handleTriggerLongTouchMove)
+    addEventListener(triggerEl, ['touchend'], handleTriggerLongTouchEnd)
 
     setTimeout(() => {
       if (touchStartDate.current) {
         touchStartDate.current = null
-        removeEventListener(triggerEl, ['touchend'], handleTriggerRightTouchEnd)
+        removeEventListener(triggerEl, ['touchmove'], handleTriggerLongTouchMove)
+        removeEventListener(triggerEl, ['touchend'], handleTriggerLongTouchEnd)
         setStatus(true)
       }
     }, 1500)
   }
 
-  const handleTriggerRightTouchEnd = e => {
+  const handleTriggerLongTouchMove = e => {
+    if (touchStartDate.current) {
+      const triggerEl = getTriggerEl()
+      const touch = e.touches[0]
+      const x = touch.pageX
+      const y = touch.pageY
+      const triggerRect = triggerEl.getBoundingClientRect()
+
+      if (x < triggerRect.left || x > triggerRect.right || y < triggerRect.top || y > triggerRect.bottom) {
+        touchStartDate.current = null
+        removeEventListener(triggerEl, ['touchmove'], handleTriggerLongTouchMove)
+        removeEventListener(triggerEl, ['touchend'], handleTriggerLongTouchEnd)
+      } else {
+        mouseEvent.current = e
+      }
+    }
+  }
+
+  const handleTriggerLongTouchEnd = e => {
     if (touchStartDate.current) {
       touchStartDate.current = null
       const triggerEl = getTriggerEl()
-      removeEventListener(triggerEl, ['touchend'], handleTriggerRightTouchEnd)
+      removeEventListener(triggerEl, ['touchmove'], handleTriggerLongTouchMove)
+      removeEventListener(triggerEl, ['touchend'], handleTriggerLongTouchEnd)
     }
   }
 
@@ -176,7 +197,7 @@ const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, h
 
     if (triggerInteraction & TriggerInteraction.RIGHT_CLICK) {
       if (theme.$.vars.isMobile) {
-        addEventListener(triggerEl, ['touchstart'], handleTriggerRightTouchStart)
+        addEventListener(triggerEl, ['touchstart'], handleTriggerLongTouchStart)
       } else {
         addEventListener(triggerEl, ['contextmenu'], handleTriggerRightClick)
       }
@@ -212,7 +233,7 @@ const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, h
 
       if (triggerInteraction & TriggerInteraction.RIGHT_CLICK) {
         if (theme.$.vars.isMobile) {
-          removeEventListener(triggerEl, ['touchstart'], handleTriggerRightTouchStart)
+          removeEventListener(triggerEl, ['touchstart'], handleTriggerLongTouchStart)
         } else {
           removeEventListener(triggerEl, ['contextmenu'], handleTriggerRightClick)
         }
