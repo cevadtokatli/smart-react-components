@@ -18,6 +18,10 @@ export interface RouteModule {
   children?: RouteModule[]
   module: LazyModule
   path: Path
+  searchKeys?: string[]
+  defaultSearchValues?: {
+    [key: string]: string
+  }
 }
 
 export interface URL {

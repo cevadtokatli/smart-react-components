@@ -132,7 +132,13 @@ export const loadModules = (
         }
 
         const activeMatch = generateMatch(activeURL.pathname, item.path, false)
-        if (activeMatch?.key !== activatingMatch.key) {
+        const activeSearch = item.searchKeys?.map(key => activeURL.query[key] ?? item.defaultSearchValues?.[key]).filter(key => key).join('&')
+        const activatingSearch = item.searchKeys?.map(key => activatingURL.query[key] ?? item.defaultSearchValues?.[key]).filter(key => key).join('&')
+
+        if (
+          activeMatch?.key !== activatingMatch.key
+          || activeSearch !== activatingSearch
+        ) {
           modulesToInvokeGetMethods.push({ match: activatingMatch, module: item.module })
         }
 
