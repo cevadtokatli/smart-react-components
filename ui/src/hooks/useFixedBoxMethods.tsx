@@ -1,6 +1,6 @@
 import { Theme } from '@smart-react-components/core/theme'
 import { SetState } from '@smart-react-components/core/types'
-import { addEventListener, debounce, isMobile, removeEventListener } from '@smart-react-components/core/util/dom'
+import { addEventListener, debounce, removeEventListener } from '@smart-react-components/core/util/dom'
 import { TransitionBeforeCallback } from '@smart-react-components/transition/types'
 import { useEffect, useRef, useState } from 'react'
 import { useTheme } from 'styled-components'
@@ -187,7 +187,7 @@ const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, h
       }
     }
 
-    if (!isMobile && triggerInteraction & TriggerInteraction.HOVER) {
+    if (!theme.$.vars.isMobile && triggerInteraction & TriggerInteraction.HOVER) {
       if (!getStatus()) {
         addEventListener(triggerEl, ['mouseenter'], handleTriggerMouseEnter)
       } else {
@@ -223,7 +223,7 @@ const useFixedBoxMethods = ({ beforeShow, boxEl, getTriggerEl, handlePosition, h
         }
       }
 
-      if (!isMobile && triggerInteraction & TriggerInteraction.HOVER) {
+      if (!theme.$.vars.isMobile && triggerInteraction & TriggerInteraction.HOVER) {
         if (!getStatus()) {
           removeEventListener(triggerEl, ['mouseenter'], handleTriggerMouseEnter)
         } else {

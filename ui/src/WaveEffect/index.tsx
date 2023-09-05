@@ -1,6 +1,6 @@
 import { Theme } from '@smart-react-components/core/theme'
 import { PaletteProp } from '@smart-react-components/core/types'
-import { addEventListener, isMobile, removeEventListener } from '@smart-react-components/core/util/dom'
+import { addEventListener, removeEventListener } from '@smart-react-components/core/util/dom'
 import CSSTransitionGroup from '@smart-react-components/transition/CSSTransitionGroup'
 import React from 'react'
 import { ThemeContext } from 'styled-components'
@@ -23,12 +23,12 @@ const WaveEffect = React.forwardRef<HTMLDivElement, Props>(({ children, duration
 
   React.useEffect(() => {
     if (effectItems.length > 0) {
-      addEventListener(window, [isMobile ? 'touchmove' : 'mousemove'], handleMove)
-      addEventListener(window, [isMobile ? 'touchend' : 'mouseup'], handleEnd)
+      addEventListener(window, [theme.$.vars.isMobile ? 'touchmove' : 'mousemove'], handleMove)
+      addEventListener(window, [theme.$.vars.isMobile ? 'touchend' : 'mouseup'], handleEnd)
 
       return () => {
-        removeEventListener(window, [isMobile ? 'touchmove' : 'mousemove'], handleMove)
-        removeEventListener(window, [isMobile ? 'touchend' : 'mouseup'], handleEnd)
+        removeEventListener(window, [theme.$.vars.isMobile ? 'touchmove' : 'mousemove'], handleMove)
+        removeEventListener(window, [theme.$.vars.isMobile ? 'touchend' : 'mouseup'], handleEnd)
       }
     }
   }, [effectItems])
@@ -36,7 +36,7 @@ const WaveEffect = React.forwardRef<HTMLDivElement, Props>(({ children, duration
   const handleMouseDown = (e: MouseEvent) => {
     children.props?.onMouseDown?.(e)
 
-    if (!isMobile && e.button === 0) {
+    if (!theme.$.vars.isMobile && e.button === 0) {
       start(e)
     }
   }
@@ -54,7 +54,7 @@ const WaveEffect = React.forwardRef<HTMLDivElement, Props>(({ children, duration
     let left: number
     let top: number
 
-    if (isMobile) {
+    if (theme.$.vars.isMobile) {
       const t = (e as TouchEvent).touches[0]
       left = (t.pageX - window.pageXOffset) - rect.left
       top = (t.pageY - window.pageYOffset) - rect.top
