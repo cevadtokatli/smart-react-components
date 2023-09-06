@@ -69,7 +69,7 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
   align-items: stretch;
   background: transparent;
   border: 0;
-  border-radius: ${(isFixedSize && shape === 'rounded') ? '100%' : theme.$.radius.button[shape]};
+  border-radius: ${(isFixedSize && shape === 'rounded') ? '100%' : '0'};
   font-family: ${theme.$.fontFamily.button};
   position: relative;
   transition: box-shadow 300ms 0s ease-in-out;
@@ -279,22 +279,6 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
           visibility: hidden;
         }
       } 
-    `
-    : ''
-  }
-
-  ${hasSeparatedLeftAddon
-    ? `
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    `
-    : ''
-  }
-
-  ${hasSeparatedRightAddon
-    ? `
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
     `
     : ''
   }
