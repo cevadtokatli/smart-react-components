@@ -426,6 +426,7 @@ const cssKeys: CSSKeys = {
   textUnderlineOffset: 'text-underline-offset',
   textUnderlinePosition: 'text-underline-position',
   top: 'top',
+  touchAction: 'touch-action',
   transform: 'transform',
   transformBox: 'transform-box',
   transformOrigin: 'transform-origin',

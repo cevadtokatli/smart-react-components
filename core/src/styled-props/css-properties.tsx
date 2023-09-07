@@ -277,6 +277,7 @@ type TextShadow = Color | number | 'none'
 type TextTransform = 'capitalize' | 'lowercase' | 'none' | 'uppercase'
 type TextUnderlineOffset = number | 'auto'
 type TextUnderlinePosition = 'auto' | 'from-font' | 'left' | 'right' | 'under'
+type TouchAction = 'auto' | 'none' | 'manipulation' | 'pan-left' | 'pan-right' | 'pan-x' | 'pan-y' | 'pan-up' | 'pan-down' | 'pinch-zoom'
 type Transform = 'matrix()' | 'matrix3d()' | 'none' | 'perspective()' | 'rotate()' | 'rotate3d()' | 'rotateX()' | 'rotateY()' | 'rotateZ()' | 'scale()' | 'scale3d()' | 'scaleX()' | 'scaleY()' | 'skew()' | 'skewX()' | 'skewY()' | 'translate()' | 'translate3d()' | 'translateX()' | 'translateY()' | 'translateZ()'
 type TransformBox = 'border-box' | 'content-box' | 'fill-box' | 'stroke-box' | 'view-box'
 type TransformOrigin = Props.Position
@@ -699,6 +700,7 @@ export default interface CSSProperties {
   textUnderlineOffset?: Property<TextUnderlineOffset>
   textUnderlinePosition?: Property<TextUnderlinePosition>
   top?: Property<Dimension>
+  touchAction?: Property<TouchAction>
   transform?: Property<Transform>
   transformBox?: Property<TransformBox>
   transformOrigin?: Property<TransformOrigin>
