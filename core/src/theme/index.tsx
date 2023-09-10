@@ -2,6 +2,7 @@ import Theme, { InputTheme } from '../types/theme'
 import { isMobile } from '../util/dom'
 import { clone, merge } from '../util/object'
 import color from './color'
+import cursor from './cursor'
 import fontFamily from './font-family'
 import fontSize from './font-size'
 import fontWeight from './font-weight'
@@ -21,6 +22,7 @@ export { default as Theme } from '../types/theme'
 const defaultTheme: Theme = {
   $: {
     color,
+    cursor,
     fontFamily,
     fontSize,
     fontWeight,

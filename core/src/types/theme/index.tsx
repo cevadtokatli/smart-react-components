@@ -1,5 +1,6 @@
 import { Partial } from '../'
 import ColorAttributes from './color'
+import CursorAttributes from './cursor'
 import FontFamilyAttributes from './font-family'
 import FontSizeAttributes from './font-size'
 import FontWeightAttributes from './font-weight'
@@ -17,6 +18,7 @@ import ZIndexAttributes from './z-index'
 
 interface DefaultThemeAttributes<PaletteType> {
   color: ColorAttributes
+  cursor: CursorAttributes
   fontFamily: FontFamilyAttributes
   fontSize: FontSizeAttributes
   fontWeight: FontWeightAttributes

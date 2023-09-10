@@ -116,7 +116,7 @@ export default styled(Div).attrs<Props>({
 
   ${isSeparated
     ? `
-      cursor: default;
+      cursor: ${!isDisabled ? theme.$.cursor.button : 'default'};
     `
     : ''
   }

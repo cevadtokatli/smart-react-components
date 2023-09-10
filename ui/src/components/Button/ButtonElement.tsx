@@ -70,6 +70,7 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
   background: transparent;
   border: 0;
   border-radius: ${(isFixedSize && shape === 'rounded') ? '100%' : '0'};
+  cursor: ${(!isDisabled && !isLoading) ? theme.$.cursor.button : 'default'};
   font-family: ${theme.$.fontFamily.button};
   position: relative;
   transition: box-shadow 300ms 0s ease-in-out;
