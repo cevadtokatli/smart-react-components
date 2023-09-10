@@ -74,6 +74,7 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
   font-family: ${theme.$.fontFamily.button};
   position: relative;
   transition: box-shadow 300ms 0s ease-in-out;
+  user-select: none;
 
   &:active {
     outline: 0;

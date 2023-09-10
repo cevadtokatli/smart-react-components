@@ -117,6 +117,7 @@ export default styled(Div).attrs<Props>({
   ${isSeparated
     ? `
       cursor: ${!isDisabled ? theme.$.cursor.button : 'default'};
+      user-select: none;
     `
     : ''
   }
