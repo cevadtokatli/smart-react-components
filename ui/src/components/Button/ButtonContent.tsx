@@ -6,7 +6,6 @@ export default styled.span.attrs({
   align-items: center;
   border: solid 1px;
   box-sizing: border-box;
-  cursor: default;
   display: flex;
   fill: currentcolor;
   flex: 1 1 auto;
