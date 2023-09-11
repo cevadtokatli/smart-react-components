@@ -45,7 +45,7 @@ const InputFile = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
     leftAddon: props.leftAddon,
     rightAddon: props.rightAddon,
     props: {
-      cursorKey: 'input',
+      cursorKey: 'inputFile',
       hasBorder: props.hasBorder,
       isDisabled: props.isDisabled,
       isFocused,
@@ -85,7 +85,7 @@ const InputFile = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
   return (
     <FormBlockLabel
       {...extractElementProps(props, [intrinsicStyledCoreProps])}
-      cursorKey="input"
+      cursorKey="inputFile"
       formSize={props.size}
       formSizeSm={props.sizeSm}
       formSizeMd={props.sizeMd}

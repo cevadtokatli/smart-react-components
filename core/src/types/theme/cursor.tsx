@@ -4,6 +4,7 @@ interface DefaultCursorAttributes {
   button: string
   dropdown: string
   input: string
+  inputFile: string
   modalHeaderIcon: string
   radio: string
   selectBox: string

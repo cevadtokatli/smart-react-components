@@ -4,6 +4,7 @@ const cursorAttributes: CursorAttributes = {
   button: 'pointer',
   dropdown: 'pointer',
   input: 'default',
+  inputFile: 'pointer',
   modalHeaderIcon: 'pointer',
   radio: 'default',
   selectBox: 'default',
