@@ -18,6 +18,7 @@ export interface Props extends
 }
 
 interface PrivateProps {
+  cursorKey: string
   hasBorder: boolean
   isDisabled: boolean
   isFocused: boolean
@@ -28,6 +29,7 @@ interface PrivateProps {
 const InputAddon = React.forwardRef<HTMLDivElement, Props>((props: Props & PrivateProps, forwardRef) => (
   <InputAddonElement
     addonPosition={props.position}
+    cursorKey={props.cursorKey}
     hasBorder={props.hasBorder}
     inputSize={props.size}
     inputSizeSm={props.sizeSm}

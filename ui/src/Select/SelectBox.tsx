@@ -88,6 +88,7 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
     leftAddon: props.leftAddon,
     rightAddon: props.rightAddon,
     props: {
+      cursorKey: 'selectBox',
       hasBorder: props.hasBorder,
       isDisabled: props.isDisabled,
       isFocused: false,
@@ -120,6 +121,7 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
       <FormBlockLabel
         {...extractElementProps(props, [intrinsicStyledCoreProps])}
         as="div"
+        cursorKey="selectBox"
         formSize={props.size}
         formSizeSm={props.sizeSm}
         formSizeMd={props.sizeMd}
@@ -136,6 +138,7 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
         >
           { leftAddon?.props?.isExcluded && leftAddon }
           <InputWrapper
+            cursor="$cursor.selectBox"
             hasBorder={props.hasBorder}
             hasExcludedLeftAddon={leftAddon?.props?.isExcluded}
             hasExcludedRightAddon={rightAddon?.props?.isExcluded}

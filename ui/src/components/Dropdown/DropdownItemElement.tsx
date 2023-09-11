@@ -14,7 +14,6 @@ interface Props extends StyledProps {
 
 export default styled(Div)<Props>(({ theme, hasHover, isActive, isDisabled, isOutline, isSoft, palette }: Props) => `
   border-radius: ${theme.$.radius.dropdown};
-  cursor: default;
   fill: currrentcolor;
   transition: 100ms 0s ease-in-out;
   transition-property: background, color, fill;

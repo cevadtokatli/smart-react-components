@@ -11,6 +11,7 @@ interface Props extends
   StyledProps,
   ResponsiveProp<'inputSize', SizeProp> {
   addonPosition: OrderPosition
+  cursorKey: string
   hasBorder: boolean
   isDisabled: boolean
   isExcluded: boolean
@@ -34,9 +35,10 @@ export default styled(Div).attrs<Props>(({ className = '', isSeparated }) => ({
       width: ${t.$.size.icon[v]};
     }
   `,
-}))<Props>(({ theme, addonPosition, hasBorder, isDisabled, isExcluded, isFocused, isOutline, isSeparated, isSoft, palette, shape }: Props) => `
+}))<Props>(({ theme, addonPosition, cursorKey, hasBorder, isDisabled, isExcluded, isFocused, isOutline, isSeparated, isSoft, palette, shape }: Props) => `
   align-items: center;
   box-sizing: border-box;
+  cursor: ${theme.$.cursor[cursorKey]};
   display: inline-flex;
   fill: currentcolor;
   flex: 0 0 auto;
@@ -111,6 +113,13 @@ export default styled(Div).attrs<Props>(({ className = '', isSeparated }) => ({
         `
         : ''
       }
+    `
+    : ''
+  }
+
+  ${isDisabled
+    ? `
+      pointer-events: none;
     `
     : ''
   }

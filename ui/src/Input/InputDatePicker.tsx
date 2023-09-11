@@ -57,6 +57,7 @@ const InputDatePicker = React.forwardRef<HTMLInputElement, Props>((props, forwar
     leftAddon: props.leftAddon,
     rightAddon: props.rightAddon,
     props: {
+      cursorKey: 'selectBox',
       hasBorder: props.hasBorder,
       isDisabled: props.isDisabled,
       isFocused: status,
@@ -89,6 +90,7 @@ const InputDatePicker = React.forwardRef<HTMLInputElement, Props>((props, forwar
   return (
     <FormBlockLabel
       {...extractElementProps(props, [intrinsicStyledCoreProps])}
+      cursorKey="selectBox"
       formSize={props.size}
       formSizeSm={props.sizeSm}
       formSizeMd={props.sizeMd}

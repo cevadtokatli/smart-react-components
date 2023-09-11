@@ -8,6 +8,7 @@ import { calculateFormLabelMarginX } from '../../util/form'
 interface Props extends
   StyledProps,
   ResponsiveProp<'formSize', SizeProp> {
+  cursorKey: string
   isBlock: boolean
   isDisabled: boolean
 }
@@ -34,9 +35,9 @@ export default styled(Label).attrs<Props>(({ display = 'block', isBlock }) => ({
       font-size: ${t.$.size.form.blockLabel[v].fontSize};
     }
   `,
-}))<Props>(({ theme, isBlock, isDisabled }: Props) => `
+}))<Props>(({ theme, cursorKey, isBlock, isDisabled }: Props) => `
   > span {
-    cursor: default;
+    cursor: ${theme.$.cursor[cursorKey]};
     display: block;
     word-break: break-word;
     word-wrap: break-word;

@@ -22,6 +22,7 @@ export default styled(Header)<Props>(({ theme, hasBorder = true }: Props) => `
 
   > ${Svg} {
     box-sizing: content-box;
+    cursor: ${theme.$.cursor.modalHeaderIcon};
     flex: 0 0 auto;
     opacity: .5;
 

@@ -131,7 +131,6 @@ export default styled(Input).attrs<Props>(({ className = '', hasLeftAddon, hasRi
   ${!isInput
     ? `
       align-items: center;
-      cursor: default;
       display: flex;
       justify-content: space-between;
       position: relative;

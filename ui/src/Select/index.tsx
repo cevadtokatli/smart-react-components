@@ -19,6 +19,7 @@ const Select = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => 
     leftAddon: props.leftAddon,
     rightAddon: props.rightAddon,
     props: {
+      cursorKey: 'input',
       hasBorder: props.hasBorder,
       isDisabled: props.isDisabled,
       isFocused: false,
@@ -38,6 +39,7 @@ const Select = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => 
     <FormBlockLabel
       {...extractElementProps(props, [intrinsicStyledCoreProps])}
       as="div"
+      cursorKey="input"
       formSize={props.size}
       formSizeSm={props.sizeSm}
       formSizeMd={props.sizeMd}

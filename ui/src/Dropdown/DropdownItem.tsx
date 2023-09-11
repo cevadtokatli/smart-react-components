@@ -40,6 +40,7 @@ const DropdownItem: React.FC<Props> = ({ children, hasHover, hasWaveEffect, isDi
 
   const content = (
     <DropdownItemElement
+      cursor="$cursor.dropdown"
       hasHover={hasHover}
       isActive={false}
       isDisabled={isDisabled}

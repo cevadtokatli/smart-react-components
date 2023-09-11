@@ -46,6 +46,7 @@ const InputColorPicker = React.forwardRef<HTMLInputElement, Props>((props, forwa
     leftAddon: props.leftAddon,
     rightAddon: props.rightAddon,
     props: {
+      cursorKey: 'selectBox',
       hasBorder: props.hasBorder,
       isDisabled: props.isDisabled,
       isFocused: status,
@@ -114,6 +115,7 @@ const InputColorPicker = React.forwardRef<HTMLInputElement, Props>((props, forwa
   return (
     <FormBlockLabel
       {...extractElementProps(props, [intrinsicStyledCoreProps])}
+      cursorKey="selectBox"
       formSize={props.size}
       formSizeSm={props.sizeSm}
       formSizeMd={props.sizeMd}
