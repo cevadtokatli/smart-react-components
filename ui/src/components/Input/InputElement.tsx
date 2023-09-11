@@ -10,6 +10,7 @@ import InputPlaceholder from './InputPlaceholder'
 export interface Props extends
   StyledProps,
   Partial<ResponsiveProp<'inputSize', SizeProp>> {
+  cursorKey?: string
   hasLeftAddon?: boolean
   hasRightAddon?: boolean
   isDisabled?: boolean
@@ -42,7 +43,7 @@ export default styled(Input).attrs<Props>(({ className = '', hasLeftAddon, hasRi
     }
   `,
   isInput,
-}))<Props>(({ theme, isDisabled, isFocused, isInput, isOutline, isSoft, palette }: Props) => `
+}))<Props>(({ theme, cursorKey, isDisabled, isFocused, isInput, isOutline, isSoft, palette }: Props) => `
   border: 0;
   border-radius: 0;
   flex: 1 1 auto;
@@ -134,6 +135,13 @@ export default styled(Input).attrs<Props>(({ className = '', hasLeftAddon, hasRi
       display: flex;
       justify-content: space-between;
       position: relative;
+    `
+    : ''
+  }
+
+  ${(!isDisabled && cursorKey)
+    ? `
+      cursor: ${theme.$.cursor[cursorKey]};
     `
     : ''
   }
