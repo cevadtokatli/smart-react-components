@@ -33,6 +33,7 @@ const InputFileTemplate: React.FC<Props> = ({ children, hasBorder, hasLeftAddon,
 
   return (
     <InputElement
+      cursorKey="inputFile"
       hasLeftAddon={hasLeftAddon}
       hasRightAddon={hasRightAddon}
       inputSize={inputSize}
