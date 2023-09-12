@@ -18,7 +18,7 @@ export const getWaveEffectPalette = (props: any, isDark: boolean): PaletteProp =
     return props.waveEffectPalette
   }
 
-  if (props.isOutline && ['dynamic', '!dynamic', 'light', 'dark'].includes(props.palette)) {
+  if ((props.isOutline || props.isLink) && ['dynamic', '!dynamic', 'light', 'dark'].includes(props.palette)) {
     return isDark ? 'light' : 'dark'
   }
 
@@ -32,6 +32,6 @@ export const getWaveEffectPalette = (props: any, isDark: boolean): PaletteProp =
     case 'dark':
       return 'light'
     default:
-      return (props.isSoft || props.isOutline) ? props.palette : 'light'
+      return (props.isSoft || props.isOutline || props.isLink) ? props.palette : 'light'
   }
 }

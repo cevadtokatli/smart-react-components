@@ -45,6 +45,8 @@ const Button = React.forwardRef<HTMLElement, Props>((props, forwardRef) => {
     },
   })
 
+  const waveEffectPalette = React.useMemo(() => getWaveEffectPalette(props, theme.$.vars.isDark), [props.palette, props.isOutline, props.isSoft, props.isLink, props.waveEffectPalette])
+
   const getLoadingEl = () => {
     if (!props.loading) {
       return null
@@ -120,7 +122,7 @@ const Button = React.forwardRef<HTMLElement, Props>((props, forwardRef) => {
   )
 
   if (props.hasWaveEffect) {
-    Element = <WaveEffect palette={getWaveEffectPalette(props.waveEffectPalette, props.palette, props.isSoft, props.isLink, theme.$.vars.isDarkMode)}>{Element}</WaveEffect>
+    Element = <WaveEffect palette={waveEffectPalette}>{Element}</WaveEffect>
   }
 
   if (hasButtonContainer) {

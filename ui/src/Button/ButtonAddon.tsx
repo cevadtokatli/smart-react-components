@@ -1,7 +1,9 @@
 import extractElementProps from '@smart-react-components/core/element-props'
 import clickEvents, { ClickEvents } from '@smart-react-components/core/element-props/click-events'
-import { ContentElement, PaletteProp, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
+import { Theme } from '@smart-react-components/core/theme'
+import { ContentElement, JSXElementProps, PaletteProp, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
+import { useTheme } from 'styled-components'
 import { OrderPosition } from '../types'
 import WaveEffect from '../WaveEffect'
 import ButtonAddonElement from '../components/Button/ButtonAddonElement'
@@ -11,6 +13,7 @@ export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,
   ClickEvents {
   children: ContentElement
+  elementProps?: JSXElementProps
   isDisabled?: boolean
   isOutline?: boolean
   isSeparated?: boolean
@@ -27,6 +30,10 @@ interface PrivateProps {
 }
 
 const ButtonAddon: React.FC<Props> = (props: Props & PrivateProps) => {
+  const theme = useTheme() as Theme
+
+  const waveEffectPalette = React.useMemo(() => getWaveEffectPalette(props, theme.$.vars.isDarkMode), [props.palette, props.isOutline, props.isSoft, props.waveEffectPalette])
+
   const El = (
     <ButtonAddonElement
       addonPosition={props.position}
@@ -43,12 +50,17 @@ const ButtonAddon: React.FC<Props> = (props: Props & PrivateProps) => {
       palette={props.palette}
       shape={props.shape}
       {...(!props.isDisabled && extractElementProps(props, [clickEvents]))}
+      {...props.elementProps}
     >
       {props.children}
     </ButtonAddonElement>
   )
 
-  return props.isSeparated && props.hasWaveEffect ? <WaveEffect palette={getWaveEffectPalette(props.waveEffectPalette, props.palette, props.isSoft)}>{El}</WaveEffect> : El
+  return props.isSeparated && props.hasWaveEffect ? <WaveEffect palette={waveEffectPalette}>{El}</WaveEffect> : El
+}
+
+ButtonAddon.defaultProps = {
+  elementProps: {},
 }
 
 ButtonAddon.displayName = 'SRCAddon'
