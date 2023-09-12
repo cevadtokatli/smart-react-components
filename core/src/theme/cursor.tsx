@@ -4,6 +4,8 @@ const cursorAttributes: CursorAttributes = {
   alertIconClickable: 'pointer',
   badgeClickable: 'pointer',
   badgeIconClickable: 'pointer',
+  breadcrumb: 'pointer',
+  breadcrumbDisabled: 'default',
   button: 'pointer',
   dropdown: 'pointer',
   input: 'default',

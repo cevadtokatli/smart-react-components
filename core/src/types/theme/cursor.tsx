@@ -4,6 +4,8 @@ interface DefaultCursorAttributes {
   alertIconClickable: string
   badgeClickable: string
   badgeIconClickable: string
+  breadcrumb: string
+  breadcrumbDisabled: string
   button: string
   dropdown: string
   input: string

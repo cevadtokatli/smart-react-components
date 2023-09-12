@@ -19,7 +19,7 @@ export default styled(Li)<Props>(({ theme, isActive, isDisabled, isOutline, isSo
 
   > a {
     border-radius: ${theme.$.radius.breadcrumb[shape]};
-    cursor: default;
+    cursor: ${isDisabled ? theme.$.cursor.breadcrumbDisabled : theme.$.cursor.breadcrumb};
     display: inline-flex;
     padding: ${theme.$.length.breadcrumb.padding.y} ${theme.$.length.breadcrumb.padding.x};
     text-decoration: none;
