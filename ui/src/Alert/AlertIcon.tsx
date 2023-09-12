@@ -4,6 +4,7 @@ import { JSXElementProps, PaletteProp, ResponsiveProp, SizeProp } from '@smart-r
 import React from 'react'
 import AlertIconElement from '../components/Alert/AlertIconElement'
 import { OrderPosition } from '../types'
+import { isItemClickable } from '../util/props'
 
 export interface Props extends ClickEvents {
   children: JSX.Element
@@ -31,6 +32,7 @@ const AlertIcon: React.FC<Props> = (props: Props & PrivateProps) => (
     hasBackground={props.hasBackground}
     hasHover={props.hasHover}
     iconPosition={props.position}
+    isClickable={isItemClickable(props)}
     isOutline={props.isOutline}
     isSoft={props.isSoft}
     palette={props.palette ?? props.alertPalette}

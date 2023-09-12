@@ -43,3 +43,9 @@ export const applyResponsiveStyledProps = (sizeProps: JSXElementProps, sizePropK
  * If value is right, returns left.
  */
 export const getReverseOrderPosition = (value: OrderPosition) => value ^ (OrderPosition.LEFT | OrderPosition.RIGHT)
+
+/**
+ * Checks if the item is clickable.
+ * If onClick or onMouseDown are defined; isDisabled and isReadOnly are not, returns true.
+ */
+export const isItemClickable = props => (props.onClick || props.onMouseDown) && !props.isDisabled && !props.isReadOnly

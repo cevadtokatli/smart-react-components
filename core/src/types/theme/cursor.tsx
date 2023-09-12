@@ -1,6 +1,7 @@
 import { OptionalThemeAttributes } from './util'
 
 interface DefaultCursorAttributes {
+  alertIconClickable: string
   button: string
   dropdown: string
   input: string

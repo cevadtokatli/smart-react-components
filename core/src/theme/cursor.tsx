@@ -1,6 +1,7 @@
 import CursorAttributes from '../types/theme/cursor'
 
 const cursorAttributes: CursorAttributes = {
+  alertIconClickable: 'pointer',
   button: 'pointer',
   dropdown: 'pointer',
   input: 'default',

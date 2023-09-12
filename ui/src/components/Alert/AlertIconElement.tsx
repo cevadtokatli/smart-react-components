@@ -12,6 +12,7 @@ interface Props extends
   hasBackground: boolean
   hasHover: boolean
   iconPosition: OrderPosition
+  isClickable: boolean
   isOutline: boolean
   isSoft: boolean
   palette: PaletteProp
@@ -37,7 +38,7 @@ export default styled(Div).attrs<Props>(({ hasBackground, iconPosition }) => ({
       font-size: ${t.$.size.alert[v].iconSize};
     }
   `,
-}))<Props>(({ theme, alertPalette, hasBackground, hasHover, isOutline, isSoft, palette }: Props) => `
+}))<Props>(({ theme, alertPalette, hasBackground, hasHover, isClickable, isOutline, isSoft, palette }: Props) => `
   align-items: center;
   align-self: stretch;
   display: flex;
@@ -77,6 +78,13 @@ export default styled(Div).attrs<Props>(({ hasBackground, iconPosition }) => ({
       &:hover > * {
         opacity: 1;
       }
+    `
+    : ''
+  }
+
+  ${isClickable
+    ? `
+      cursor: ${theme.$.cursor.alertIconClickable};
     `
     : ''
   }
