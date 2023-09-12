@@ -8,10 +8,10 @@ const cursorAttributes: CursorAttributes = {
   breadcrumbDisabled: 'default',
   button: 'pointer',
   dropdown: 'pointer',
+  formInlineLabel: 'default',
   input: 'default',
   inputFile: 'pointer',
   modalHeaderIcon: 'pointer',
-  radio: 'default',
   selectBox: 'default',
 }
 

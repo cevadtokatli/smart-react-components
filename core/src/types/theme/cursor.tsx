@@ -8,10 +8,10 @@ interface DefaultCursorAttributes {
   breadcrumbDisabled: string
   button: string
   dropdown: string
+  formInlineLabel: string
   input: string
   inputFile: string
   modalHeaderIcon: string
-  radio: string
   selectBox: string
 }
 

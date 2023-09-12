@@ -33,7 +33,7 @@ export default styled(Label).attrs<Props>(({ isBlock, labelPosition }: Props) =>
   `,
 }))<Props>(({ theme, isBlock, isDisabled, labelPosition }: Props) => `
   align-items: center;
-  cursor: ${theme.$.cursor.radio};
+  cursor: ${theme.$.cursor.formInlineLabel};
   display: ${isBlock ? 'flex' : 'inline-flex'};
   justify-content: space-between;
   position: relative;
