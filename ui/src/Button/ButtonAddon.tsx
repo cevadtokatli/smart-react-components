@@ -32,7 +32,7 @@ interface PrivateProps {
 const ButtonAddon: React.FC<Props> = (props: Props & PrivateProps) => {
   const theme = useTheme() as Theme
 
-  const waveEffectPalette = React.useMemo(() => getWaveEffectPalette(props, theme.$.vars.isDarkMode), [props.palette, props.isOutline, props.isSoft, props.waveEffectPalette])
+  const waveEffectPalette = React.useMemo(() => getWaveEffectPalette(props, theme.$.vars.isDarkMode), [props.palette, props.isOutline, props.isSoft, props.waveEffectPalette, theme.$.vars.isDarkMode])
 
   const El = (
     <ButtonAddonElement

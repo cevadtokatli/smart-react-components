@@ -12,6 +12,8 @@ interface DefaultCursorAttributes {
   input: string
   inputFile: string
   modalHeaderIcon: string
+  pagination: string
+  paginationDisabled: string
   selectBox: string
 }
 

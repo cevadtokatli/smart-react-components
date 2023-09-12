@@ -12,6 +12,8 @@ const cursorAttributes: CursorAttributes = {
   input: 'default',
   inputFile: 'pointer',
   modalHeaderIcon: 'pointer',
+  pagination: 'pointer',
+  paginationDisabled: 'default',
   selectBox: 'default',
 }
 

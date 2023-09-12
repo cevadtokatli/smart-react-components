@@ -22,7 +22,7 @@ export interface Props extends IntrinsicStyledCoreProps {
 const BreadcrumbList: React.FC<Props> = props => {
   const theme = useTheme() as Theme
 
-  const waveEffectPalette = React.useMemo(() => getWaveEffectPalette(props, theme.$.vars.isDarkMode), [props.waveEffectPalette, props.palette, props.isSoft])
+  const waveEffectPalette = React.useMemo(() => getWaveEffectPalette(props, theme.$.vars.isDarkMode), [props.waveEffectPalette, props.palette, props.isOutline, props.isSoft, theme.$.vars.isDarkMode])
 
   return (
     <BreadcrumbListElement
