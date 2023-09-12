@@ -11,12 +11,13 @@ interface Props extends
   StyledProps,
   ResponsiveProp<'inputSize', SizeProp> {
   addonPosition: OrderPosition
-  cursorKey: string
+  cursorKey?: string
   hasBorder: boolean
+  isClickable: boolean
   isDisabled: boolean
-  isExcluded: boolean
   isFocused: boolean
   isOutline: boolean
+  isReadOnly: boolean
   isSeparated: boolean
   isSoft: boolean
   palette: PaletteProp
@@ -35,10 +36,9 @@ export default styled(Div).attrs<Props>(({ className = '', isSeparated }) => ({
       width: ${t.$.size.icon[v]};
     }
   `,
-}))<Props>(({ theme, addonPosition, cursorKey, hasBorder, isDisabled, isExcluded, isFocused, isOutline, isSeparated, isSoft, palette, shape }: Props) => `
+}))<Props>(({ theme, addonPosition, cursorKey, hasBorder, isClickable, isDisabled, isFocused, isOutline, isReadOnly, isSeparated, isSoft, palette, shape }: Props) => `
   align-items: center;
   box-sizing: border-box;
-  cursor: ${theme.$.cursor[cursorKey]};
   display: inline-flex;
   fill: currentcolor;
   flex: 0 0 auto;
@@ -46,7 +46,7 @@ export default styled(Div).attrs<Props>(({ className = '', isSeparated }) => ({
   transition: 200ms 0s ease-in-out;
   transition-property: background, border, color, fill;
 
-  ${isExcluded
+  ${isSeparated
     ? `
       border-bottom-${OrderPosition[addonPosition].toLowerCase()}-radius: ${theme.$.radius.input[shape]};
       border-top-${OrderPosition[addonPosition].toLowerCase()}-radius: ${theme.$.radius.input[shape]};
@@ -105,6 +105,7 @@ export default styled(Div).attrs<Props>(({ className = '', isSeparated }) => ({
   ${(!isSeparated && isDisabled)
     ? `
       opacity: ${theme.$.opacity.formDisabled};
+      pointer-events: none;
 
       ${isOutline
         ? `
@@ -117,9 +118,16 @@ export default styled(Div).attrs<Props>(({ className = '', isSeparated }) => ({
     : ''
   }
 
-  ${isDisabled
+  ${(isSeparated && isClickable)
     ? `
-      pointer-events: none;
+      cursor: ${theme.$.cursor.inputAddonClickable};  
+    `
+    : ''
+  }
+
+  ${(!isSeparated && !isReadOnly && !isDisabled && cursorKey)
+    ? `
+      cursor: ${theme.$.cursor[cursorKey]};
     `
     : ''
   }

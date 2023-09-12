@@ -99,11 +99,11 @@ const InputFile = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
         display="flex"
         flex="1 1 auto"
       >
-        { leftAddon?.props?.isExcluded && leftAddon }
+        { leftAddon?.props?.isSeparated && leftAddon }
         <InputWrapper
           hasBorder={props.hasBorder}
-          hasExcludedLeftAddon={leftAddon?.props?.isExcluded}
-          hasExcludedRightAddon={rightAddon?.props?.isExcluded}
+          hasSeparatedLeftAddon={leftAddon?.props?.isSeparated}
+          hasSeparatedRightAddon={rightAddon?.props?.isSeparated}
           isDisabled={props.isDisabled}
           isFocused={isFocused}
           isOutline={props.isOutline}
@@ -111,7 +111,7 @@ const InputFile = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
           palette={props.palette}
           shape={props.shape}
         >
-          { (leftAddon && !leftAddon?.props?.isExcluded) && leftAddon }
+          { (leftAddon && !leftAddon?.props?.isSeparated) && leftAddon }
           { React.cloneElement(props.template, {
             children: (
               <>
@@ -147,9 +147,9 @@ const InputFile = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
             shape: props.shape,
             value: props.value,
           }) }
-          { (rightAddon && !rightAddon?.props?.isExcluded) && rightAddon }
+          { (rightAddon && !rightAddon?.props?.isSeparated) && rightAddon }
         </InputWrapper>
-        { rightAddon?.props?.isExcluded && rightAddon }
+        { rightAddon?.props?.isSeparated && rightAddon }
       </Div>
     </FormBlockLabel>
   )

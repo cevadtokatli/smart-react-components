@@ -10,10 +10,12 @@ interface DefaultCursorAttributes {
   dropdown: string
   formInlineLabel: string
   input: string
+  inputAddonClickable: string
   inputFile: string
   modalHeaderIcon: string
   pagination: string
   paginationDisabled: string
+  select: string
   selectBox: string
 }
 

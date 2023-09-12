@@ -4,6 +4,7 @@ import { ContentElement, JSXElementProps, PaletteProp, Partial, ResponsiveProp, 
 import React from 'react'
 import { OrderPosition } from '../types'
 import InputAddonElement from '../components/Input/InputAddonElement'
+import { isItemClickable } from '../util/props'
 
 export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,
@@ -11,17 +12,17 @@ export interface Props extends
   children: ContentElement
   elementProps?: JSXElementProps
   isOutline?: boolean
-  isExcluded?: boolean
   isSeparated?: boolean
   isSoft?: boolean
   palette?: PaletteProp
 }
 
 interface PrivateProps {
-  cursorKey: string
+  cursorKey?: string
   hasBorder: boolean
   isDisabled: boolean
   isFocused: boolean
+  isReadOnly: boolean
   position: OrderPosition
   shape: ShapeProp
 }
@@ -36,10 +37,11 @@ const InputAddon = React.forwardRef<HTMLDivElement, Props>((props: Props & Priva
     inputSizeMd={props.sizeMd}
     inputSizeLg={props.sizeLg}
     inputSizeXl={props.sizeXl}
+    isClickable={isItemClickable(props)}
     isDisabled={props.isDisabled}
-    isExcluded={props.isExcluded}
     isFocused={props.isFocused}
     isOutline={props.isOutline}
+    isReadOnly={props.isReadOnly}
     isSeparated={props.isSeparated}
     isSoft={props.isSoft}
     palette={props.palette}

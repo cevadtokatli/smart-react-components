@@ -10,10 +10,12 @@ const cursorAttributes: CursorAttributes = {
   dropdown: 'pointer',
   formInlineLabel: 'default',
   input: 'default',
+  inputAddonClickable: 'pointer',
   inputFile: 'pointer',
   modalHeaderIcon: 'pointer',
   pagination: 'pointer',
   paginationDisabled: 'default',
+  select: 'default',
   selectBox: 'default',
 }
 

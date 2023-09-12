@@ -1,7 +1,9 @@
 import Div from '@smart-react-components/core/Element/Div'
 import extractElementProps from '@smart-react-components/core/element-props'
 import intrinsicStyledCoreProps from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
+import { Theme } from '@smart-react-components/core/theme'
 import React from 'react'
+import { useTheme } from 'styled-components'
 import FormBlockLabel from '../components/Form/FormBlockLabel'
 import useAddons from '../hooks/useAddons'
 import SelectElement from '../components/Select/SelectElement'
@@ -10,16 +12,18 @@ import InputWrapper from '../components/Input/InputWrapper'
 import { GenericProps } from '../types/form'
 import { getInputValue } from '../util/form'
 import InputAddon from './SelectAddon'
+import { getWaveEffectPalette } from '../util/wave-effect'
 
 export type Props = GenericProps
 
 const Select = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
+  const theme = useTheme() as Theme
+
   const { leftAddon, rightAddon } = useAddons({
     Component: InputAddon,
     leftAddon: props.leftAddon,
     rightAddon: props.rightAddon,
     props: {
-      cursorKey: 'input',
       hasBorder: props.hasBorder,
       isDisabled: props.isDisabled,
       isFocused: false,
@@ -35,11 +39,12 @@ const Select = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => 
     },
   })
 
+  const waveEffectPalette = React.useMemo(() => getWaveEffectPalette(props, theme.$.vars.isDarkMode), [props.waveEffectPalette, props.palette, props.isOutline, props.isSoft, theme.$.vars.isDarkMode])
+
   return (
     <FormBlockLabel
       {...extractElementProps(props, [intrinsicStyledCoreProps])}
       as="div"
-      cursorKey="input"
       formSize={props.size}
       formSizeSm={props.sizeSm}
       formSizeMd={props.sizeMd}
@@ -53,11 +58,11 @@ const Select = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => 
         display="flex"
         flex="1 1 auto"
       >
-        { leftAddon?.props?.isExcluded && leftAddon }
+        { leftAddon?.props?.isSeparated && leftAddon }
         <InputWrapper
           hasBorder={props.hasBorder}
-          hasExcludedLeftAddon={leftAddon?.props?.isExcluded}
-          hasExcludedRightAddon={rightAddon?.props?.isExcluded}
+          hasSeparatedLeftAddon={leftAddon?.props?.isSeparated}
+          hasSeparatedRightAddon={rightAddon?.props?.isSeparated}
           isDisabled={props.isDisabled}
           isFocused={false}
           isOutline={props.isOutline}
@@ -65,7 +70,7 @@ const Select = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => 
           palette={props.palette}
           shape={props.shape}
         >
-          { (leftAddon && !leftAddon?.props?.isExcluded) && leftAddon }
+          { (leftAddon && !leftAddon?.props?.isSeparated) && leftAddon }
           <SelectElement
             hasLeftAddon={!!leftAddon}
             hasRightAddon={!!rightAddon}
@@ -90,6 +95,7 @@ const Select = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => 
             { (Array.isArray(props.children) ? props.children : [props.children]).map((item, idx) => React.cloneElement(item, {
               key: item.key ?? idx,
               active: props.active,
+              cursorKey: 'select',
               hasHover: props.hasHover,
               hasWaveEffect: props.hasWaveEffect,
               isEmbedded: true,
@@ -97,13 +103,13 @@ const Select = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => 
               isSoft: props.isSoft,
               palette: props.palette,
               setActive: props.setActive,
-              waveEffectPalette: props.waveEffectPalette,
+              waveEffectPalette,
               ...(props.isDisabled && { isDisabled: true }),
             })) }
           </SelectElement>
-          { (rightAddon && !rightAddon?.props?.isExcluded) && rightAddon }
+          { (rightAddon && !rightAddon?.props?.isSeparated) && rightAddon }
         </InputWrapper>
-        { rightAddon?.props?.isExcluded && rightAddon }
+        { rightAddon?.props?.isSeparated && rightAddon }
       </Div>
     </FormBlockLabel>
   )
@@ -118,7 +124,6 @@ Select.defaultProps = {
   palette: 'primary',
   shape: 'rectangle',
   size: 'medium',
-  waveEffectPalette: 'light',
 }
 
 export default Select

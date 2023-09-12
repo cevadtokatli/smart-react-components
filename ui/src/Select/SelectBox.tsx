@@ -3,32 +3,37 @@ import { GenericProps } from '../types/form'
 import extractElementProps from '@smart-react-components/core/element-props'
 import intrinsicStyledCoreProps from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
+import { Theme } from '@smart-react-components/core/theme'
 import { ContentElement } from '@smart-react-components/core/types'
 import React from 'react'
+import { useTheme } from 'styled-components'
 import Badge from '../Badge'
 import BadgeIcon from '../Badge/BadgeIcon'
 import BadgeList from '../Badge/BadgeList'
 import FormBlockLabel from '../components/Form/FormBlockLabel'
 import HiddenInput from '../components/Form/HiddenInput'
+import InputWrapper from '../components/Input/InputWrapper'
 import Dropdown from '../Dropdown'
 import DropdownArrowIcon from '../Dropdown/DropdownArrowIcon'
 import DropdownListElement from '../components/Dropdown/DropdownListElement'
 import useAddons from '../hooks/useAddons'
+import useSelectBoxItemList from '../hooks/useSelectBoxItemList'
 import CloseIcon from '../icons/Close'
 import InputElement from '../components/Input/InputElement'
 import InputPlaceholder from '../components/Input/InputPlaceholder'
 import { FormValue } from '../types'
 import { getInputValue } from '../util/form'
 import { applyResponsiveStyledProp } from '../util/props'
+import { getWaveEffectPalette } from '../util/wave-effect'
 import InputAddon from './SelectAddon'
-import useSelectBoxItemList from '../hooks/useSelectBoxItemList'
-import InputWrapper from '../components/Input/InputWrapper'
 
 export interface Props extends GenericProps {
   placeholder?: string
 }
 
 const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
+  const theme = useTheme() as Theme
+
   const formEl = React.useRef<HTMLDivElement>(null)
 
   const { itemList } = useSelectBoxItemList({ children: props.children })
@@ -77,6 +82,8 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
   }, [props.active, props.placeholder, itemList])
 
   const [dropdownStatus, setDropdownStatus] = React.useState(false)
+
+  const waveEffectPalette = React.useMemo(() => getWaveEffectPalette(props, theme.$.vars.isDarkMode), [props.waveEffectPalette, props.palette, props.isOutline, props.isSoft, theme.$.vars.isDarkMode])
 
   useChangeEffect(() => {
     const event = new Event('src.fixedBox.setPosition')
@@ -136,12 +143,12 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
           display="flex"
           flex="1 1 auto"
         >
-          { leftAddon?.props?.isExcluded && leftAddon }
+          { leftAddon?.props?.isSeparated && leftAddon }
           <InputWrapper
             cursor="$cursor.selectBox"
             hasBorder={props.hasBorder}
-            hasExcludedLeftAddon={leftAddon?.props?.isExcluded}
-            hasExcludedRightAddon={rightAddon?.props?.isExcluded}
+            hasSeparatedLeftAddon={leftAddon?.props?.isSeparated}
+            hasSeparatedRightAddon={rightAddon?.props?.isSeparated}
             isDisabled={props.isDisabled}
             isFocused={false}
             isOutline={props.isOutline}
@@ -149,7 +156,7 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
             palette={props.palette}
             shape={props.shape}
           >
-            { (leftAddon && !leftAddon?.props?.isExcluded) && leftAddon }
+            { (leftAddon && !leftAddon?.props?.isSeparated) && leftAddon }
             <InputElement
               hasLeftAddon={!!leftAddon}
               hasRightAddon={!!rightAddon}
@@ -178,9 +185,9 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
                 {...applyResponsiveStyledProp(props, 'size', 'iconSize', v => `$size.icon.${v}`)}
               />
             </InputElement>
-            { (rightAddon && !rightAddon?.props?.isExcluded) && rightAddon }
+            { (rightAddon && !rightAddon?.props?.isSeparated) && rightAddon }
           </InputWrapper>
-          { rightAddon?.props?.isExcluded && rightAddon }
+          { rightAddon?.props?.isSeparated && rightAddon }
         </Div>
       </FormBlockLabel>
       <DropdownListElement
@@ -196,6 +203,7 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
         { (Array.isArray(props.children) ? props.children : [props.children]).map((item, idx) => item && React.cloneElement(item, {
           key: item.key ?? idx,
           active: props.active,
+          cursorKey: 'selectBox',
           hasHover: props.hasHover,
           hasWaveEffect: props.hasWaveEffect,
           isEmbedded: false,
@@ -203,7 +211,7 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
           isSoft: props.isSoft,
           palette: props.palette,
           setActive: handleOptionClick,
-          waveEffectPalette: props.waveEffectPalette,
+          waveEffectPalette,
           ...(props.isDisabled && { isDisabled: true }),
         })) }
       </DropdownListElement>
@@ -221,7 +229,6 @@ SelectBox.defaultProps = {
   palette: 'primary',
   shape: 'rectangle',
   size: 'medium',
-  waveEffectPalette: 'light',
 }
 
 export default SelectBox

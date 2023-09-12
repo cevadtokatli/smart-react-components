@@ -12,6 +12,7 @@ export interface Props {
 
 export interface PrivateProps {
   active: FormValue | FormValue[]
+  cursorKey: string
   hasHover: boolean
   hasWaveEffect: boolean
   isDisabled: boolean
@@ -23,7 +24,7 @@ export interface PrivateProps {
   waveEffectPalette: PaletteProp
 }
 
-const Option: React.FC<Props> = ({ active, children, hasHover, hasWaveEffect, isDisabled, isOutline, isSoft, palette, setActive, value, waveEffectPalette }: (Props & PrivateProps)) => {
+const Option: React.FC<Props> = ({ active, children, cursorKey, hasHover, hasWaveEffect, isDisabled, isOutline, isSoft, palette, setActive, value, waveEffectPalette }: (Props & PrivateProps)) => {
   const handleOnClick = () => {
     if (isDisabled) {
       return
@@ -44,7 +45,7 @@ const Option: React.FC<Props> = ({ active, children, hasHover, hasWaveEffect, is
 
   const content = (
     <DropdownItemElement
-      cursor="$cursor.selectBox"
+      cursor={`$cursor.${cursorKey}`}
       hasHover={hasHover}
       isActive={isActive()}
       isDisabled={isDisabled}

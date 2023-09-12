@@ -5,8 +5,8 @@ import styled from 'styled-components'
 
 export interface Props extends StyledProps {
   hasBorder: boolean
-  hasExcludedLeftAddon: boolean
-  hasExcludedRightAddon: boolean
+  hasSeparatedLeftAddon: boolean
+  hasSeparatedRightAddon: boolean
   isDisabled: boolean
   isFocused: boolean
   isOutline: boolean
@@ -15,7 +15,7 @@ export interface Props extends StyledProps {
   shape: ShapeProp
 }
 
-export default styled(Div)<Props>(({ theme, hasBorder, hasExcludedLeftAddon, hasExcludedRightAddon, isDisabled, isFocused, isOutline, isSoft, palette, shape }: Props) => `
+export default styled(Div)<Props>(({ theme, hasBorder, hasSeparatedLeftAddon, hasSeparatedRightAddon, isDisabled, isFocused, isOutline, isSoft, palette, shape }: Props) => `
   border: ${hasBorder ? 'solid 1px' : '0'};
   border-radius: ${theme.$.radius.input[shape]};
   display: flex;
@@ -54,14 +54,14 @@ export default styled(Div)<Props>(({ theme, hasBorder, hasExcludedLeftAddon, has
     : ''
   }
 
-  ${(hasExcludedLeftAddon)
+  ${(hasSeparatedLeftAddon)
     ? `
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
     `
     : ''
   }
-  ${hasExcludedRightAddon
+  ${hasSeparatedRightAddon
     ? `
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;

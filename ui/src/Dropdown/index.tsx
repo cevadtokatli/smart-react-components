@@ -39,7 +39,7 @@ const Dropdown: React.FC<Props> = ({ afterHide, afterShow, beforeHide, beforeSho
       transitionDuration={transitionDuration}
       triggerInteraction={triggerInteraction}
     >
-      { React.cloneElement(children[0], { ref: (children[0] as any).ref ?? triggerEl }) }
+      { React.cloneElement(children[0], { cursor: '$cursor.dropdown', ref: (children[0] as any).ref ?? triggerEl }) }
       { React.cloneElement(children[1], { setStatus: setStatus ?? setLocalStatus }) }
     </FixedBox>
   )
