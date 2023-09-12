@@ -1,4 +1,4 @@
-import { Nullable, PaletteProp } from '@smart-react-components/core/types'
+import { PaletteProp } from '@smart-react-components/core/types'
 
 /**
  * If waveEffectPalette is given returns it however if not, generates a default palette for the wave effect.
