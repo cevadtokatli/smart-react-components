@@ -104,6 +104,8 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
 
       ${isClickable
         ? `
+          cursor: ${theme.$.cursor.badgeClickable};
+
           &:active {
             ${!isSoft
               ? `

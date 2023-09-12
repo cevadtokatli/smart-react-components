@@ -2,12 +2,12 @@ import extractElementProps from '@smart-react-components/core/element-props'
 import clickEvents, { ClickEvents } from '@smart-react-components/core/element-props/click-events'
 import intrinsicStyledCoreProps, { IntrinsicStyledCoreProps } from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import intrinsicStyledPositionProps, { IntrinsicStyledPositionProps } from '@smart-react-components/core/element-props/intrinsic-styled-position-props'
-import mouseClickEvents from '@smart-react-components/core/element-props/mouse-click-events'
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { ContentElement, JSXElementProps, PaletteProp, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import { OrderPosition } from '../types'
 import BadgeElement, { Content } from '../components/Badge/BadgeElement'
+import { isItemClickable } from '../util/props'
 
 export interface Props extends
   Partial<ResponsiveProp<'size', SizeProp>>,
@@ -83,7 +83,7 @@ const Badge: React.FC<Props> = props => {
       hasIconLeft={hasIconLeft}
       hasIconRight={hasIconRight}
       hasSpace={props.hasSpace}
-      isClickable={!!mouseClickEvents.find(i => props[i])}
+      isClickable={isItemClickable(props)}
       isFixedSize={props.isFixedSize}
       isOutline={props.isOutline}
       isSoft={props.isSoft}

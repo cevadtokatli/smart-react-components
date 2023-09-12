@@ -46,6 +46,6 @@ export const getReverseOrderPosition = (value: OrderPosition) => value ^ (OrderP
 
 /**
  * Checks if the item is clickable.
- * If onClick or onMouseDown are defined; isDisabled and isReadOnly are not, returns true.
+ * If onClick, onMouseDown, or onMouseUp are defined; isDisabled and isReadOnly are not, returns true.
  */
-export const isItemClickable = props => (props.onClick || props.onMouseDown) && !props.isDisabled && !props.isReadOnly
+export const isItemClickable = props => (props.onClick || props.onMouseDown || props.onMouseUp) && !props.isDisabled && !props.isReadOnly

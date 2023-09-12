@@ -44,6 +44,8 @@ export default styled(Div)<Props>(({ theme, iconPosition, isClickable, isOutline
 
       ${isClickable
         ? `
+          cursor: ${theme.$.cursor.badgeIconClickable};
+
           &:active {
             ${!isSoft
               ? `
