@@ -56,6 +56,7 @@ export default styled(Div)<Props>(({ theme, hasBorder, hasSeparatedLeftAddon, ha
 
   ${(hasSeparatedLeftAddon)
     ? `
+      border-left: 0;
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
     `
@@ -63,6 +64,7 @@ export default styled(Div)<Props>(({ theme, hasBorder, hasSeparatedLeftAddon, ha
   }
   ${hasSeparatedRightAddon
     ? `
+      border-right: 0;
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
     `
