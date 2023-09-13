@@ -1,4 +1,4 @@
-import { Checkbox, CheckboxGroup } from '@smart-react-components/ui'
+import { Checkbox, CheckboxAll, CheckboxGroup } from '@smart-react-components/ui'
 import React from 'react'
 
 export const Palette = () => {
@@ -97,6 +97,19 @@ export const Block = () => {
 
   return (
     <CheckboxGroup active={active} setActive={setActive} isBlock isRequired>
+      <Checkbox value="item-1" label="Item 1" />
+      <Checkbox value="item-2" label="Item 2" />
+      <Checkbox value="item-3" label="Item 3" />
+    </CheckboxGroup>
+  )
+}
+
+export const All = () => {
+  const [active, setActive] = React.useState(() => [])
+
+  return (
+    <CheckboxGroup active={active} setActive={setActive} isBlock>
+      <CheckboxAll label="All" setActive={setActive} items={['item-1', 'item-2', 'item-3']} />
       <Checkbox value="item-1" label="Item 1" />
       <Checkbox value="item-2" label="Item 2" />
       <Checkbox value="item-3" label="Item 3" />
