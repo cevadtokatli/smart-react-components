@@ -15,6 +15,7 @@ export interface Props extends
   active?: FormValue[]
   isBlock?: boolean
   isChecked?: boolean
+  isIndeterminate?: boolean
   isDisabled?: boolean
   isOutline?: boolean
   isRequired?: boolean
@@ -94,6 +95,8 @@ const Checkbox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) =
           </>
         ),
         isChecked,
+        isDisabled: props.isDisabled,
+        isIndeterminate: props.isIndeterminate,
         isOutline: props.isOutline,
         isSoft: props.isSoft,
         palette: props.palette,
