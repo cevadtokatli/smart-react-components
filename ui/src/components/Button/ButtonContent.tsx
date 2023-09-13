@@ -11,7 +11,6 @@ export default styled.span.attrs({
   flex: 1 1 auto;
   transition: 300ms 0s ease-in-out;
   transition-property: background, border, color, fill;
-  user-select: none;
   word-break: break-word;
   word-wrap: break-word;
 `
