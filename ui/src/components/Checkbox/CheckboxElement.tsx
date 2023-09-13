@@ -44,23 +44,41 @@ const Svg = styled.svg.attrs({
   }
 `)
 
+const IndeterminateMark = styled.div.attrs({
+  className: 'src-checkbox-indeterminate-mark',
+})(({ theme }) => `
+  background: ${theme.$.color.dynamic.background};
+  height: 2px;
+  margin-top: -1px;
+  opacity: 0;
+  position: absolute;
+  trasnform: scaleX(0) rotate(45deg);
+  transition-duration: 200ms;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-in-out;
+  top: 50%;
+  width: 100%;
+`)
+
 export interface Props extends
   StyledProps,
   Partial<ResponsiveProp<'checkboxSize', SizeProp>> {
   isChecked?: boolean
+  isIndeterminate?: boolean
   isOutline?: boolean
   isSoft?: boolean
   palette?: PaletteProp
   shape?: ShapeProp
 }
 
-export default styled(Div).attrs<Props>(({ children }) => ({
+export default styled(Div).attrs<Props>(({ children, isIndeterminate }) => ({
   children: (
     <>
       { children && children }
       <Container>
         <Rectangle />
         <Svg />
+        { typeof isIndeterminate !== 'undefined' && <IndeterminateMark /> }
       </Container>
     </>
   ),
@@ -68,7 +86,7 @@ export default styled(Div).attrs<Props>(({ children }) => ({
     height: ${t.$.size.checkbox[v]};
     width: ${t.$.size.checkbox[v]};
   `,
-}))<Props>(({ theme, isChecked, isOutline, isSoft, palette, shape }: Props) => `
+}))<Props>(({ theme, isChecked, isIndeterminate, isOutline, isSoft, palette, shape }: Props) => `
   position: relative;
 
   .src-checkbox-container {
@@ -92,8 +110,18 @@ export default styled(Div).attrs<Props>(({ children }) => ({
         background: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};
       }
 
-      .src-checkbox-svg > path {
-        stroke-dashoffset: 0;
+      ${!isIndeterminate
+        ? `
+          .src-checkbox-svg > path {
+            stroke-dashoffset: 0;
+          }
+        `
+        : `
+          .src-checkbox-indeterminate-mark {
+            opacity: 1;
+            transform: scaleX(1);
+          }
+        `
       }
     `
     : ''
