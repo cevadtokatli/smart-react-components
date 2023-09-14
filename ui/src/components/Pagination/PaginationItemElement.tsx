@@ -28,6 +28,13 @@ export default styled(Li)<Props>(({ theme, isActive, isDisabled, isFixedSize, is
     transition: 300ms 0s ease-in-out;
     transition-property: background, border, color, fill;
 
+    ${isSoft
+      ? `
+        font-weight: ${theme.$.fontWeight.bold};  
+      `
+      : ''
+    }
+
     ${isFixedSize
       ? `
         height: ${theme.$.length.pagination.fixedSize};

@@ -54,6 +54,13 @@ export default styled(Input).attrs<Props>(({ className = '', hasLeftAddon, hasRi
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
 
+  ${(!isOutline && isSoft)
+    ? `
+      font-weight: ${theme.$.fontWeight.bold};  
+    `
+    : ''
+  }
+
   ${!isOutline
     ? `
       ${!isSoft
@@ -106,6 +113,13 @@ export default styled(Input).attrs<Props>(({ className = '', hasLeftAddon, hasRi
               ${!isDisabled
                 ? `
                   color: ${theme.$.color.dynamic.accent};
+                `
+                : ''
+              }
+
+              ${(!isOutline && isSoft)
+                ? `
+                  font-weight: ${theme.$.fontWeight.bold};  
                 `
                 : ''
               }

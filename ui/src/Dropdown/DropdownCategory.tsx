@@ -10,7 +10,7 @@ export interface Props {
 
 const DropdownCategory: React.FC<Props> = ({ children, hasHover, hasWaveEffect, isOutline, isSoft, label, palette, setStatus, waveEffectPalette }: Props & PrivateProps) => (
   <>
-    <Div fontWeight="$fontWeight.dropdownCategory">{label}</Div>
+    <Div fontWeight={isSoft ? '$fontWeight.bold' : '$fontWeight.semibold'}>{label}</Div>
     { (Array.isArray(children) ? children : [children]).map((item, idx) => React.cloneElement(item, {
       key: item.key ?? idx,
       hasHover,

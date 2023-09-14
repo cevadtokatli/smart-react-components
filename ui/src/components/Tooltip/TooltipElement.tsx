@@ -32,6 +32,7 @@ export default styled(Div).attrs({
       background: ${theme.$.palette[palette].soft};
       color: ${theme.$.palette[palette].softFont};
       fill: ${theme.$.palette[palette].softFont};
+      font-weight: ${theme.$.fontWeight.bold};
 
       ${PopoverArrow} {
         fill: ${theme.$.palette[palette].soft};

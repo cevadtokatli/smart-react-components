@@ -25,6 +25,13 @@ export default styled(Div)<Props>(({ theme, hasHover, isActive, isDisabled, isOu
     transition-property: fill, stroke;
   }
 
+  ${isSoft
+    ? `
+      font-weight: ${theme.$.fontWeight.bold};
+    `
+    : ''
+  }
+
   ${!isActive
     ? `
       ${hasHover && !theme.$.vars.isMobile
