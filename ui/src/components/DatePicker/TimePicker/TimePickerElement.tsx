@@ -41,18 +41,38 @@ export default styled(Section).attrs<Props>({
   }
 
   input {
+    border: solid 1px;
     border-radius: ${theme.$.radius.datePicker};
     text-align: center;
 
     ${!isSoft
       ? `
         background: ${theme.$.palette[palette].main};
+        border-color: ${theme.$.palette[palette].dynamic};
         color: ${theme.$.palette[palette].font};
+
+        &:active,
+        &:focus {
+          background: ${theme.$.palette[palette].dark};
+          border-color: ${theme.$.palette[palette].dynamicer};
+        }
       `
       : `
         background: ${theme.$.palette[palette].soft};
+        border-color: ${theme.$.palette[palette].softDark};
         color: ${theme.$.palette[palette].softFont};
+
+        &:active,
+        &:focus {
+          background: ${theme.$.palette[palette].softDark};
+          border-color: ${theme.$.palette[palette].softDarker};
+        }
       `
+    }
+
+    &:active,
+    &:focus {
+      outline: 0;
     }
   }
 

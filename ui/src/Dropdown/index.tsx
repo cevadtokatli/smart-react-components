@@ -4,7 +4,7 @@ import FixedBox, { Props, TriggerInteraction } from '../FixedBox'
 
 export * from '../FixedBox'
 
-const Dropdown: React.FC<Props> = ({ afterHide, afterShow, beforeHide, beforeShow, breakpoint, children, elementProps = {}, hasHideAnimation, hasShowAnimation, isDismissible, maxWidth, minWidth, position, setStatus, space, status, transitionClassName, transitionDuration, triggerInteraction }) => {
+const Dropdown: React.FC<Props> = ({ afterHide, afterShow, beforeHide, beforeShow, breakpoint, children, elementProps = {}, hasHideAnimation, hasShowAnimation, isDismissible, maxWidth, minWidth, position, setStatus, space, status, transitionClassName, transitionDuration, triggerInteraction = TriggerInteraction.CLICK }) => {
   const triggerEl = React.useRef<HTMLElement>(null)
 
   const [localStatus, setLocalStatus] = React.useState(() => false)
@@ -39,7 +39,7 @@ const Dropdown: React.FC<Props> = ({ afterHide, afterShow, beforeHide, beforeSho
       transitionDuration={transitionDuration}
       triggerInteraction={triggerInteraction}
     >
-      { React.cloneElement(children[0], { ref: (children[0] as any).ref ?? triggerEl, cursor: triggerInteraction & TriggerInteraction.CLICK ? '$cursor.dropdown' : undefined }) }
+      { React.cloneElement(children[0], { ref: (children[0] as any).ref ?? triggerEl, ...(triggerInteraction & TriggerInteraction.CLICK ? { cursor: '$cursor.dropdown' } : {}) }) }
       { React.cloneElement(children[1], { setStatus: setStatus ?? setLocalStatus }) }
     </FixedBox>
   )
