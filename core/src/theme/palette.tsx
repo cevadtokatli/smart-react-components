@@ -24,13 +24,13 @@ const createPaletteItem = (paletteItem: InputPaletteItem, theme: Theme): Palette
   result.font ||= getFontColor(result.main, theme)
   result.shadow ||= mainColor.alpha(.5).rgb().toString()
 
-  result.dark ||= mainColor.darken(.075).hex().toString()
-  result.darker ||= mainColor.darken(.175).hex().toString()
-  result.darkest ||= getColor(result.darker).darken(.075).hex().toString()
+  result.dark ||= mainColor.darken(.15).hex().toString()
+  result.darker ||= getColor(result.dark).darken(.05).hex().toString()
+  result.darkest ||= getColor(result.darker).darken(.05).hex().toString()
 
-  result.light ||= mainColor.lighten(.075).hex().toString()
-  result.lighter ||= mainColor.lighten(.175).hex().toString()
-  result.lightest ||= getColor(result.lighter).lighten(.075).hex().toString()
+  result.light ||= mainColor.lighten(.15).hex().toString()
+  result.lighter ||= getColor(result.light).lighten(.05).hex().toString()
+  result.lightest ||= getColor(result.lighter).lighten(.05).hex().toString()
 
   result.dynamic = theme.$.vars.isDarkMode ? result.light : result.dark
   result.dynamicer = theme.$.vars.isDarkMode ? result.lighter : result.darker

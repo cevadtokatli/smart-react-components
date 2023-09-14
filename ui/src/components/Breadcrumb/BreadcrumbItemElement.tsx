@@ -26,22 +26,23 @@ export default styled(Li)<Props>(({ theme, isActive, isDisabled, isOutline, isSo
     transition: 200ms 0s ease-in-out;
     transition-property: background, border, color, fill;
 
-    ${!isActive && !isDisabled
+    ${isSoft
+      ? `
+        font-weight: ${theme.$.fontWeight.bold};  
+      `
+      : ''
+    }
+
+    ${!isDisabled
       ? `
         &:hover {
           text-decoration: underline;
         }  
       `
       : `
+        opacity: ${theme.$.opacity.breadcrumbDisabled};
         pointer-events: none;
       `
-    }
-
-    ${isDisabled
-      ? `
-        opacity: ${theme.$.opacity.breadcrumbDisabled};
-      `
-      : ''
     }
 
     ${!isOutline
@@ -62,12 +63,12 @@ export default styled(Li)<Props>(({ theme, isActive, isDisabled, isOutline, isSo
           : `
             ${(!isActive && !isDisabled) || isDisabled
               ? `
-                color: ${theme.$.palette[palette].softFont};
-                fill: ${theme.$.palette[palette].softFont};
-              `
-              : `
                 color: ${theme.$.palette[palette].softDarkest};
                 fill: ${theme.$.palette[palette].softDarkest};
+              `
+              : `
+                color: ${theme.$.palette[palette].softFont};
+                fill: ${theme.$.palette[palette].softFont};
               `
             }
           `
@@ -84,8 +85,8 @@ export default styled(Li)<Props>(({ theme, isActive, isDisabled, isOutline, isSo
                     fill: ${theme.$.palette[palette].main};
                   `
                   : `
-                    color: ${theme.$.palette[palette].dynamicest};
-                    fill: ${theme.$.palette[palette].dynamicest};
+                    color: ${theme.$.color.dynamic.font};
+                    fill: ${theme.$.color.dynamic.font};
                   `
                 }
               `
@@ -96,8 +97,8 @@ export default styled(Li)<Props>(({ theme, isActive, isDisabled, isOutline, isSo
                     fill: ${theme.$.palette[palette].soft};
                   `
                   : `
-                    color: ${theme.$.palette[palette].softDarkest};
-                    fill: ${theme.$.palette[palette].softDarkest};
+                    color: ${theme.$.color.dynamic.font};
+                    fill: ${theme.$.color.dynamic.font};
                   `
                 }
               `
@@ -124,6 +125,13 @@ export default styled(Li)<Props>(({ theme, isActive, isDisabled, isOutline, isSo
       : `
         color: ${theme.$.color.dynamic.accent};
       `
+    }
+
+    ${isSoft
+      ? `
+        font-weight: ${theme.$.fontWeight.bold};  
+      `
+      : ''
     }
   }
 `)

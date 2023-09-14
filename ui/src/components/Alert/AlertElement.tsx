@@ -53,6 +53,13 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight }) => ({
   word-break: break-word;
   word-wrap: break-word;
 
+  ${isSoft
+    ? `
+      font-weight: ${theme.$.fontWeight.semibold};
+    `
+    : ''
+  }
+
   ${!isOutline
     ? `
       ${!isSoft
@@ -100,7 +107,7 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight }) => ({
 
   a {
     color: inherit;
-    font-weight: ${theme.$.fontWeight.alertLink};
+    font-weight: ${!isSoft ? theme.$.fontWeight.semibold : theme.$.fontWeight.bold};
   
     &:hover {
       text-decoration: underline;

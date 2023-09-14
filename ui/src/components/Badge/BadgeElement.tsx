@@ -85,6 +85,13 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
     border-radius: ${(isFixedSize && shape === 'rounded') ? '100%' : theme.$.radius.badge[shape]};
   }
 
+  ${isSoft
+    ? `
+      font-weight: ${theme.$.fontWeight.bold};
+    `
+    : ''
+  }
+
   ${!isOutline
     ? `  
       ${Content} {
