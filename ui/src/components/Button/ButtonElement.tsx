@@ -80,6 +80,13 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
     outline: 0;
   }
 
+  ${isSoft
+    ? `
+      font-weight: ${theme.$.fontWeight.bold};
+    `
+    : ''
+  }
+
   ${!isFixedSize
     ? `
       ${(!isBlock)
