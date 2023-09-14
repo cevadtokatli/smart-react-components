@@ -21,7 +21,7 @@ export default styled(Li)<Props>(({ theme, isActive, isDisabled, isFixedSize, is
     align-items: center;
     border: solid 1px;
     border-radius: ${shape === 'rounded' && isFixedSize ? '100%' : theme.$.radius.pagination[shape]};
-    cursor: ${!isDisabled ? theme.$.cursor.pagination : theme.$.cursor.paginationDisabled}};
+    cursor: ${!isDisabled ? theme.$.cursor.pagination : theme.$.cursor.paginationDisabled};
     display: inline-flex;
     justify-content: center;
     text-decoration: none;
