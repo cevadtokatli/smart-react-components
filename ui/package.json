@@ -64,7 +64,7 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@smart-react-components/core": "2.0.0-alpha-39",
+    "@smart-react-components/core": "2.0.0-alpha-40",
     "@smart-react-components/router": "2.0.0-alpha-36",
     "@smart-react-components/transition": "2.0.0-alpha-33",
     "@testing-library/react": "13.4.0",
@@ -83,7 +83,7 @@
     "typescript": "4.8.3"
   },
   "peerDependencies": {
-    "@smart-react-components/core": "^2.0.0-alpha-39",
+    "@smart-react-components/core": "^2.0.0-alpha-40",
     "@smart-react-components/router": "^2.0.0-alpha-36",
     "@smart-react-components/transition": "^2.0.0-alpha-33",
     "react": "^18.2.0",
