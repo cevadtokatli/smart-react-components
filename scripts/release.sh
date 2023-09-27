@@ -66,10 +66,10 @@ function release() {
   echo -e "$YELLOW***** Releasing $module *****$NC"
   cd $module
 
-  rm -rf node_modules yarn.lock
-  yarn install
+  rm -rf node_modules package-lock.json yarn.lock
+  npm install
 
-  yarn lint
+  npm run lint
 
   if [ $? -ne '0' ] ; then
     echo -e "$RED***** There are some linting issues in your changes *****$NC"
@@ -79,7 +79,7 @@ function release() {
   local version=$(getVersion)
   updateVersion "version" $version
 
-  yarn build
+  npm run build
 
   if [ $? -ne '0' ] ; then
     echo -e "$RED***** The build operatin has been failed *****$NC"
@@ -91,7 +91,7 @@ function release() {
   git commit -a -m "Release module \"$module\" to \"$version\""
   git push -u origin
 
-  cd lib && yarn publish
+  cd lib && npm publish
 
   cd ../..
   echo -e "$GREEN***** $module has been released *****$NC"
@@ -120,8 +120,8 @@ function main() {
   fi
 
   cd ./playground
-  rm -rf node_modules yarn.lock
-  yarn install
+  rm -rf node_modules package-lock.json yarn.lock
+  npm install
 }
 
 main $1
