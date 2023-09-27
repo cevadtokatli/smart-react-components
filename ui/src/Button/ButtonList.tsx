@@ -21,7 +21,7 @@ const ButtonList: React.FC<Props> = props => React.cloneElement(props.template, 
   isBlock: props.isBlock,
   length: props.children.length,
   ...props.template.props,
-  children: props.children.map((item, idx) => React.cloneElement(item, {
+  children: props.children.map((item, idx) => item && React.cloneElement(item, {
     key: item.key ?? idx,
     hasHover: props.hasHover ?? item.props.hasHover,
     hasSpace: props.hasSpace ?? item.props.hasSpace,
