@@ -24,11 +24,11 @@ const createPaletteItem = (paletteItem: InputPaletteItem, theme: Theme): Palette
   result.font ||= getFontColor(result.main, theme)
   result.shadow ||= mainColor.alpha(.5).rgb().toString()
 
-  result.dark ||= mainColor.darken(.15).hex().toString()
+  result.dark ||= mainColor.darken(.10).hex().toString()
   result.darker ||= getColor(result.dark).darken(.05).hex().toString()
   result.darkest ||= getColor(result.darker).darken(.05).hex().toString()
 
-  result.light ||= mainColor.lighten(.15).hex().toString()
+  result.light ||= mainColor.lighten(.10).hex().toString()
   result.lighter ||= getColor(result.light).lighten(.05).hex().toString()
   result.lightest ||= getColor(result.lighter).lighten(.05).hex().toString()
 
