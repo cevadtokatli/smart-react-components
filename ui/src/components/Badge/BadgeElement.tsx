@@ -123,7 +123,7 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
 
                 ${BadgeIconElement} {
                   background: ${theme.$.palette[palette].dynamicest};
-                  border-color: ${theme.$.palette[palette].dynamicest};  
+                  border-color: ${theme.$.palette[palette].dynamicest};
                 }
               `
               : `

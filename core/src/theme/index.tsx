@@ -64,7 +64,11 @@ const createTheme = (theme: InputTheme = {}, isDarkMode: boolean = false): Theme
     darker: '#F2F4F7',
     darkest: '#E9ECEF',
   }, result)
-  result.$.palette.dark = createPaletteItem(theme?.$?.palette?.dark ?? result.$.color.gray900, result)
+  result.$.palette.dark = createPaletteItem(theme?.$?.palette?.dark ?? {
+    main: result.$.color.gray900,
+    background: '#2B2D31',
+    font: '#DBDEE1',
+  }, result)
 
   result.$.palette.dynamic = isDarkMode ? result.$.palette.dark : result.$.palette.light
   result.$.palette['!dynamic'] = isDarkMode ? result.$.palette.light : result.$.palette.dark
