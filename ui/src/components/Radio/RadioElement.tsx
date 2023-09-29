@@ -34,7 +34,7 @@ const OuterCircle = styled.div.attrs({
 const InnerCircle = styled.div.attrs({
   className: 'src-radio-inner-circle',
 })(({ theme }) => `
-  background: ${theme.$.color.dynamic.background};
+  background: ${theme.$.color.white};
   border-radius: 100%;
   flex: 0 0 auto;
 `)
