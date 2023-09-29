@@ -91,7 +91,8 @@ export default styled(Div).attrs<Props>(({ children, isIndeterminate }) => ({
 
   .src-checkbox-container {
     border-radius: ${theme.$.radius.checkbox[shape]};
-  
+    transition: border-color 200ms 0s ease-in-out;
+
     ${!isOutline
       ? `
         background: ${theme.$.color.dynamic.accent};
@@ -106,22 +107,26 @@ export default styled(Div).attrs<Props>(({ children, isIndeterminate }) => ({
 
   ${isChecked
     ? `
-      .src-checkbox-rectangle {
-        background: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};
-      }
+      .src-checkbox-container {
+        border-color: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};
 
-      ${!isIndeterminate
-        ? `
-          .src-checkbox-svg > path {
-            stroke-dashoffset: 0;
-          }
-        `
-        : `
-          .src-checkbox-indeterminate-mark {
-            opacity: 1;
-            transform: scaleX(1);
-          }
-        `
+        .src-checkbox-rectangle {
+          background: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};
+        }
+
+        ${!isIndeterminate
+          ? `
+            .src-checkbox-svg > path {
+              stroke-dashoffset: 0;
+            }
+          `
+          : `
+            .src-checkbox-indeterminate-mark {
+              opacity: 1;
+              transform: scaleX(1);
+            }
+          `
+        }
       }
     `
     : ''
