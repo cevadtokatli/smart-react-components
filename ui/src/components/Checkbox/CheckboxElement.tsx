@@ -36,7 +36,7 @@ const Svg = styled.svg.attrs({
 
   > path {
     fill: transparent;
-    stroke: ${theme.$.color.dynamic.background};
+    stroke: ${theme.$.color.white};
     stroke-width: 4px;
     stroke-dasharray: 36px;
     stroke-dashoffset: 36px;
@@ -47,7 +47,7 @@ const Svg = styled.svg.attrs({
 const IndeterminateMark = styled.div.attrs({
   className: 'src-checkbox-indeterminate-mark',
 })(({ theme }) => `
-  background: ${theme.$.color.dynamic.background};
+  background: ${theme.$.color.white};
   height: 2px;
   margin-top: -1px;
   opacity: 0;
