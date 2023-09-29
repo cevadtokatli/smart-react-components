@@ -3,7 +3,8 @@ import clickEvents, { ClickEvents } from '@smart-react-components/core/element-p
 import intrinsicStyledCoreProps, { IntrinsicStyledCoreProps } from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import { ContentElement, JSXElementProps, PaletteProp, Partial, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
-import AlertElement, { Content } from '../components/Alert/AlertElement'
+import AlertContent from '../components/Alert/AlertContent'
+import AlertElement from '../components/Alert/AlertElement'
 import { OrderPosition } from '../types'
 
 export interface Props extends
@@ -56,7 +57,7 @@ const Alert: React.FC<Props> = props => {
       children: (
         <>
           { iconLeft && iconLeft }
-          <Content>{content}</Content>
+          <AlertContent>{content}</AlertContent>
           { iconRight && iconRight }
         </>
       ),

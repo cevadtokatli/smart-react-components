@@ -4,11 +4,6 @@ import { PaletteProp, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-c
 import styled from 'styled-components'
 import { toCSSValue } from '../../util/css'
 
-export const Content = styled.div`
-  flex: 1 1 auto;
-  min-width: 1px;
-`
-
 interface Props extends
   StyledProps,
   ResponsiveProp<'alertSize', SizeProp> {
@@ -25,7 +20,7 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight }) => ({
   getAlertSize: (v, t) => `
     font-size: ${t.$.size.alert[v].fontSize};
 
-    ${Content} {
+    .src-alert-content {
       padding: ${t.$.size.alert[v].padding.y} ${t.$.size.alert[v].padding.x};
 
       ${hasIconLeft
@@ -41,7 +36,6 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight }) => ({
         `
         : ''
       }
-
     }
   `,
 }))<Props>(({ theme, hasThickBorder, isOutline, isSoft, palette, shape }: Props) => `
@@ -94,7 +88,7 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight }) => ({
     border-left-width: 10px;
   `}
 
-  ${Content} > {
+  .src-alert-content > {
     header, h1, h2, h3, h4, h5, h6, p, hr {
       margin-bottom: ${theme.$.length['3']};
       margin-top: 0;
