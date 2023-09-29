@@ -24,7 +24,7 @@ export default styled(Li).attrs<Props>(({
   `,
 }))<Props>(({ theme, isDisabled }: Props) => `
   align-items: center;
-  border-color: ${theme.$.color.gray400};
+  border-color: ${theme.$.vars.isDarkMode ? theme.$.color.gray700 : theme.$.color.gray400};
   border-radius: ${theme.$.radius.colorPicker};
   display: flex;
   justify-content: center;
@@ -36,7 +36,7 @@ export default styled(Li).attrs<Props>(({
   }
 
   ${Svg} {
-    fill: ${theme.$.color.gray500};
+    fill: ${theme.$.vars.isDarkMode ? theme.$.color.gray600 : theme.$.color.gray500};
   }
 
   ${isDisabled

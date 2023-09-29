@@ -15,7 +15,7 @@ export default styled(Div).attrs<Props>({
     width: ${t.$.size.colorPicker[v].width};
 
     > *:not(:first-child) {
-      padding-top: ${t.$.size.colorPicker[v].space};
+      margin-top: ${t.$.size.colorPicker[v].space};
     }
   `,
 })<Props>(({ theme, isOutline }: Props) => `

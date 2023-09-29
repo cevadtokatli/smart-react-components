@@ -1,7 +1,9 @@
 import Section from '@smart-react-components/core/Element/Section'
+import { Theme } from '@smart-react-components/core/theme'
 import { SetState } from '@smart-react-components/core/types'
 import CSSTransition from '@smart-react-components/transition/CSSTransition'
 import React from 'react'
+import { useTheme } from 'styled-components'
 import { ColorPickerFormat } from '../../../ColorPicker'
 import { defaultPaletteColors } from '../../../constants/color-picker'
 import ColorPickerProps from '../../../context/ColorPickerProps'
@@ -17,6 +19,8 @@ interface Props {
 }
 
 const PaletteSection: React.FC<Props> = ({ canAddColorToPalette, format, paletteColors, setPaletteColors }) => {
+  const theme = useTheme() as Theme
+
   const { colorPickerSize, colorPickerSizeSm, colorPickerSizeMd, colorPickerSizeLg, colorPickerSizeXl, isDisabled } = React.useContext(ColorPickerProps)
   const [localPaletteColors, setLocalPaletteColors] = React.useState<string[]>(() => defaultPaletteColors)
   const [status, setStatus] = React.useState<boolean>(() => false)
@@ -27,7 +31,7 @@ const PaletteSection: React.FC<Props> = ({ canAddColorToPalette, format, palette
         <ArrowMultipleDownIcon
           {...applyResponsiveStyledProp({ colorPickerSize, colorPickerSizeSm, colorPickerSizeMd, colorPickerSizeLg, colorPickerSizeXl }, 'colorPickerSize', 'iconSize', v => `$size.icon.${v}`)}
           display="block"
-          fill="$color.gray500"
+          fill={theme.$.vars.isDarkMode ? '$color.gray600' : '$color.gray500'}
           margin="auto"
           {...(!isDisabled && { onClick: () => setStatus(!status) })}
         />

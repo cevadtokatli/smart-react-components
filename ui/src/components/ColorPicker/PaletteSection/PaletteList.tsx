@@ -1,8 +1,10 @@
 import Hr from '@smart-react-components/core/Element/Hr'
 import Ul from '@smart-react-components/core/Element/Ul'
+import { Theme } from '@smart-react-components/core/theme'
 import { SetState } from '@smart-react-components/core/types'
 import { getColor } from '@smart-react-components/core/util/color'
 import React from 'react'
+import { useTheme } from 'styled-components'
 import { ColorPickerFormat } from '../../../ColorPicker'
 import ColorPickerProps from '../../../context/ColorPickerProps'
 import Add from '../../../icons/Add'
@@ -19,6 +21,8 @@ interface Props {
 }
 
 const PaletteList: React.FC<Props> = ({ canAddColorToPalette, format, paletteColors, setPaletteColors }) => {
+  const theme = useTheme() as Theme
+
   const { colorPickerSize, colorPickerSizeSm, colorPickerSizeMd, colorPickerSizeLg, colorPickerSizeXl, isDisabled, updateValue, value } = React.useContext(ColorPickerProps)
 
   const handleAddItemClick = () => {
@@ -34,7 +38,7 @@ const PaletteList: React.FC<Props> = ({ canAddColorToPalette, format, paletteCol
           marginLeft: v => `-$size.colorPicker.${v}.space`,
           width: v => `calc(100% + calc({size.colorPicker.${v}.space} * 2))`,
         })}
-        background="$color.gray400"
+        background={theme.$.vars.isDarkMode ? '$color.gray800' : '$color.gray400'}
         backgroundClip="content-box"
         border="none"
         boxSizing="content-box"
