@@ -46,7 +46,7 @@ export default styled(Div).attrs<Props>(({ isBlock, isFullScreen }: Props) => ({
 }))<Props>(({ theme, hasBorder, isBlock, isCentered, isFullScreen, isStretched, shape }: Props) => `
   background: ${theme.$.color.dynamic.background};
   box-sizing: border-box;
-  color: ${theme.$.color.dynamic.font};
+  color: ${theme.$.color.dynamic.bodyFont};
   display: flex;
   fill: currentcolor;
   flex-direction: column;
