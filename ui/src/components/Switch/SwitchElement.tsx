@@ -7,7 +7,7 @@ import { extractNumberUnit, toCSSValue } from '../../util/css'
 const Slider = styled.div.attrs({
   className: 'switch-slider',
 })(({ theme }) => `
-  background: ${theme.$.color.dynamic.background};
+  background: ${theme.$.color.white};
   border-radius: 100%;
   box-shadow: 0 1px 3px rgba(0,0,0,.4);
   left: 0;
