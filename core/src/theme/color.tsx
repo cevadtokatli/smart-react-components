@@ -23,7 +23,7 @@ const colorAttributes: ColorAttributes = {
   white: '#fff',
   yellow: '#f7b84b',
   dark: {
-    accent: '#dbdbdb',
+    accent: '#444e57',
     background: '#2b2d31',
     bodyFont: '#dbdee1',
     font: '#fff',
