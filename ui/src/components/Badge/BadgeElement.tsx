@@ -3,12 +3,6 @@ import { StyledProps } from '@smart-react-components/core/styled-props'
 import { PaletteProp, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import styled from 'styled-components'
 import { toCSSValue } from '../../util/css'
-import BadgeIconElement from './BadgeIconElement'
-
-export const Content = styled.div`
-  border: solid 1px;
-  flex: 0 1 auto;
-`
 
 interface Props extends
   StyledProps,
@@ -33,7 +27,7 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
       : ''
     }
 
-    ${Content} {
+    .src-badge-content {
       font-size: ${t.$.size.badge[v].fontSize};
 
       ${!isFixedSize
@@ -61,7 +55,7 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
       }
     }
 
-    ${BadgeIconElement} {
+    .src-badge-icon {
       padding: 0 ${toCSSValue(t.$.size.badge[v].padding.x)(value => value / 2)};
     }
 
@@ -80,7 +74,7 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
   word-break: break-word;
   word-wrap: break-word;
 
-  ${Content} {
+  .src-badge-content {
     border-color: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};  
     border-radius: ${(isFixedSize && shape === 'rounded') ? '100%' : theme.$.radius.badge[shape]};
   }
@@ -94,7 +88,7 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
 
   ${!isOutline
     ? `  
-      ${Content} {
+      .src-badge-content {
         ${!isSoft
           ? `
             background: ${theme.$.palette[palette].main};
@@ -116,23 +110,23 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
           &:active {
             ${!isSoft
               ? `
-                ${Content} {
+                .src-badge-content {
                   background: ${theme.$.palette[palette].dynamicer};
                   border-color: ${theme.$.palette[palette].dynamicer};
                 }
 
-                ${BadgeIconElement} {
+                .src-badge-icon {
                   background: ${theme.$.palette[palette].dynamicest};
                   border-color: ${theme.$.palette[palette].dynamicest};
                 }
               `
               : `
-                ${Content} {
+                .src-badge-content {
                   background: ${theme.$.palette[palette].softDarker};
                   border-color: ${theme.$.palette[palette].softDarker};
                 }
 
-                ${BadgeIconElement} {
+                .src-badge-icon {
                   background: ${theme.$.palette[palette].softDarkest};
                   border-color: ${theme.$.palette[palette].softDarkest};
                 }
@@ -144,7 +138,7 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
       }
     `
     : `
-      ${Content} {
+      .src-badge-content {
         ${!isSoft
           ? `
             color: ${theme.$.palette[palette].main};
@@ -162,26 +156,26 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
           &:active {
             ${!isSoft
               ? `
-                ${Content} {
+               .src-badge-content {
                   background: ${theme.$.palette[palette].main};
                   color: ${theme.$.palette[palette].font};
                   fill: ${theme.$.palette[palette].font};
                 }
 
-                ${BadgeIconElement} {
+                .src-badge-icon {
                   background: ${theme.$.palette[palette].dynamicer};
                   color: ${theme.$.palette[palette].font};
                   fill: ${theme.$.palette[palette].font}; 
                 }
               `
               : `
-                ${Content} {
+               .src-badge-content {
                   background: ${theme.$.palette[palette].soft};
                   color: ${theme.$.palette[palette].softFont};
                   fill: ${theme.$.palette[palette].softFont};
                 }
 
-                ${BadgeIconElement} {
+                .src-badge-icon {
                   background: ${theme.$.palette[palette].softDarker};
                   color: ${theme.$.palette[palette].softFont};
                   fill: ${theme.$.palette[palette].softFont};
@@ -195,7 +189,7 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
     `
   }
 
-  ${Content} {
+  .src-badge-content {
     ${isFixedSize
       ? `
         align-items: center;

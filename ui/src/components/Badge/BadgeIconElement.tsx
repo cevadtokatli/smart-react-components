@@ -14,7 +14,9 @@ interface Props extends StyledProps {
   shape: ShapeProp
 }
 
-export default styled(Div)<Props>(({ theme, iconPosition, isClickable, isOutline, isSoft, palette, shape }: Props) => `
+export default styled(Div).attrs<Props>({
+  className: 'src-badge-icon',
+})<Props>(({ theme, iconPosition, isClickable, isOutline, isSoft, palette, shape }: Props) => `
   align-items: center;
   align-self: stretch;
   border: solid 1px;
