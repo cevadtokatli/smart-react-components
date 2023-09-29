@@ -55,8 +55,8 @@ export default styled(Li)<Props>(({ theme, isActive, isDisabled, isOutline, isSo
                 fill: ${theme.$.palette[palette].font};
               `
               : `
-                color: ${theme.$.palette[palette].dynamicest};
-                fill: ${theme.$.palette[palette].dynamicest};
+                color: ${theme.$.palette[palette].darkest};
+                fill: ${theme.$.palette[palette].darkest};
               `
             }
           `
@@ -85,8 +85,8 @@ export default styled(Li)<Props>(({ theme, isActive, isDisabled, isOutline, isSo
                     fill: ${theme.$.palette[palette].main};
                   `
                   : `
-                    color: ${theme.$.color.dynamic.font};
-                    fill: ${theme.$.color.dynamic.font};
+                    color: ${theme.$.color.dynamic.bodyFont};
+                    fill: ${theme.$.color.dynamic.bodyFont};
                   `
                 }
               `
@@ -97,8 +97,8 @@ export default styled(Li)<Props>(({ theme, isActive, isDisabled, isOutline, isSo
                     fill: ${theme.$.palette[palette].soft};
                   `
                   : `
-                    color: ${theme.$.color.dynamic.font};
-                    fill: ${theme.$.color.dynamic.font};
+                    color: ${theme.$.color.dynamic.bodyFont};
+                    fill: ${theme.$.color.dynamic.bodyFont};
                   `
                 }
               `

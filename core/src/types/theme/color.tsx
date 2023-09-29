@@ -3,6 +3,7 @@ import { OptionalThemeAttributes } from './util'
 interface DefaultDynamicAttributes {
   accent: string
   background: string
+  bodyFont: string
   font: string
   gray: string
   shadow: string

@@ -25,6 +25,7 @@ const colorAttributes: ColorAttributes = {
   dark: {
     accent: '#dbdbdb',
     background: '#2b2d31',
+    bodyFont: '#dbdee1',
     font: '#fff',
     gray: '#eee',
     shadow: 'rgba(154, 161, 171, .15)',
@@ -32,6 +33,7 @@ const colorAttributes: ColorAttributes = {
   light: {
     accent: '#dbdbdb',
     background: '#fff',
+    bodyFont: '#323a46',
     font: '#323a46',
     gray: '#eee',
     shadow: 'rgba(154, 161, 171, .15)',
