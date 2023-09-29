@@ -6,7 +6,8 @@ import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { ContentElement, JSXElementProps, PaletteProp, ResponsiveProp, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import { OrderPosition } from '../types'
-import BadgeElement, { Content } from '../components/Badge/BadgeElement'
+import BadgeContent from '../components/Badge/BadgeContent'
+import BadgeElement from '../components/Badge/BadgeElement'
 import { isItemClickable } from '../util/props'
 
 export interface Props extends
@@ -58,7 +59,7 @@ const Badge: React.FC<Props> = props => {
       children: (
         <>
           { iconLeft && iconLeft }
-          <Content>{content}</Content>
+          <BadgeContent>{content}</BadgeContent>
           { iconRight && iconRight }
         </>
       ),
