@@ -43,7 +43,7 @@ export default styled(Label).attrs<Props>(({ isBlock, labelPosition }: Props) =>
   }
 
   > span {
-    color: ${theme.$.color.dynamic.font};
+    color: ${theme.$.color.dynamic.bodyFont};
     display: inline-flex;
     flex: 1 1 auto;
     font-family: ${theme.$.fontFamily.form};
