@@ -4,7 +4,7 @@ const colorAttributes: ColorAttributes = {
   black: '#000',
   blue: '#0665d0',
   cyan: '#4fc6e1',
-  gray100: '#f1f5f7',
+  gray100: '#f9fbfc',
   gray200: '#eef0f3',
   gray300: '#dee2e6',
   gray400: '#ced4da',
