@@ -40,13 +40,13 @@ export default styled(Div).attrs({
       }
     `
     : `
-      background: ${theme.$.palette[palette].background};
+      background: ${theme.$.palette[palette].main};
       color: ${theme.$.palette[palette].font};
       fill: ${theme.$.palette[palette].font};
 
       ${PopoverArrow} {
-        fill: ${theme.$.palette[palette].background};
-        stroke: ${theme.$.palette[palette].background};
+        fill: ${theme.$.palette[palette].main};
+        stroke: ${theme.$.palette[palette].main};
       }
     `
   }
