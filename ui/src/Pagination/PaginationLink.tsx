@@ -5,7 +5,9 @@ import WaveEffect from '../WaveEffect'
 import { PrivateProps as PaginationItemPrivateProps } from './PaginationItem'
 import PaginationItemElement from '../components/Pagination/PaginationItemElement'
 
-export interface Props extends LinkProps {}
+export interface Props extends LinkProps {
+  isActive?: boolean
+}
 
 const PaginationLink: React.FC<Props> = (props: Props & PaginationItemPrivateProps) => {
   const { children, handleOnClick, isActive } = useLink({
@@ -30,7 +32,7 @@ const PaginationLink: React.FC<Props> = (props: Props & PaginationItemPrivatePro
 
   return (
     <PaginationItemElement
-      isActive={isActive}
+      isActive={props.isActive ?? isActive}
       isDisabled={props.isDisabled}
       isFixedSize={props.isFixedSize}
       isOutline={props.isOutline}
