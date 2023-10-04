@@ -64,7 +64,7 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight }) => ({
         `
         : `
           background: ${theme.$.palette[palette].soft};
-          border-color: ${theme.$.palette[palette].softDarkest};
+          border-color: ${theme.$.palette[palette].softDynamicest};
           color: ${theme.$.palette[palette].softFont};
         `
       }
@@ -109,7 +109,7 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight }) => ({
   }
 
   hr {
-    background: ${!isSoft ? theme.$.palette[palette].darkest : theme.$.palette[palette].softDarkest};
+    background: ${!isSoft ? theme.$.palette[palette].darkest : theme.$.palette[palette].softDynamicest};
     border: 0;
     height: 1px;
     width: 100%;

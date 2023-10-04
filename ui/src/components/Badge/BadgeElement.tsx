@@ -122,13 +122,13 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
               `
               : `
                 .src-badge-content {
-                  background: ${theme.$.palette[palette].softDarker};
-                  border-color: ${theme.$.palette[palette].softDarker};
+                  background: ${theme.$.palette[palette].softDynamicer};
+                  border-color: ${theme.$.palette[palette].softDynamicer};
                 }
 
                 .src-badge-icon {
-                  background: ${theme.$.palette[palette].softDarkest};
-                  border-color: ${theme.$.palette[palette].softDarkest};
+                  background: ${theme.$.palette[palette].softDynamicest};
+                  border-color: ${theme.$.palette[palette].softDynamicest};
                 }
               `
             }
@@ -176,7 +176,7 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
                 }
 
                 .src-badge-icon {
-                  background: ${theme.$.palette[palette].softDarker};
+                  background: ${theme.$.palette[palette].softDynamicer};
                   color: ${theme.$.palette[palette].softFont};
                   fill: ${theme.$.palette[palette].softFont};
                 }

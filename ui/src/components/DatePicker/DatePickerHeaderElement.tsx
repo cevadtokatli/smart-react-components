@@ -57,12 +57,12 @@ export default styled(Header).attrs<Props>({
       position: relative;
 
       > svg {
-        fill: ${!isSoft ? theme.$.palette[palette].darker : theme.$.palette[palette].softDarker};
+        fill: ${!isSoft ? theme.$.palette[palette].darker : theme.$.palette[palette].softDynamicer};
         position: absolute;
         transition: 150ms ease-in-out;
 
         &:hover {
-          fill: ${!isSoft ? theme.$.palette[palette].darkest : theme.$.palette[palette].softDarkest};
+          fill: ${!isSoft ? theme.$.palette[palette].darkest : theme.$.palette[palette].softDynamicest};
         }
 
         &.src-fade-show {

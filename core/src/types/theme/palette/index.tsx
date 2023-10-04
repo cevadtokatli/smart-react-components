@@ -17,9 +17,9 @@ interface DefaultPaletteItemAttributes {
   dynamicest: string
   soft: string
   softFont: string
-  softDark: string
-  softDarker: string
-  softDarkest: string
+  softDynamic: string
+  softDynamicer: string
+  softDynamicest: string
   waveEffect: string
 }
 

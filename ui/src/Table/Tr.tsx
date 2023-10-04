@@ -22,8 +22,8 @@ export default styled(Tr)<Props>(({ theme, hasHover, isEven, isSoft, palette, st
             color: ${theme.$.palette[palette].font};
           `
           : `
-            background: ${!isEven ? theme.$.palette[palette].softBackground : theme.$.palette[palette].softDark};
-            border-color: ${theme.$.palette[palette].softDarkest};
+            background: ${!isEven ? theme.$.palette[palette].softBackground : theme.$.palette[palette].softDynamic};
+            border-color: ${theme.$.palette[palette].softDynamicest};
             color: ${theme.$.palette[palette].softFont};
           `
         }
@@ -32,7 +32,7 @@ export default styled(Tr)<Props>(({ theme, hasHover, isEven, isSoft, palette, st
       ${hasHover
         ? `
           &:hover > *:nth-child(n+${startIndex}) {
-            background: ${!isSoft ? theme.$.palette[palette].dynamicer : theme.$.palette[palette].softDarker};
+            background: ${!isSoft ? theme.$.palette[palette].dynamicer : theme.$.palette[palette].softDynamicer};
           }
         `
         : ''

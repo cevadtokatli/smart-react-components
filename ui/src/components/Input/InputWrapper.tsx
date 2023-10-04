@@ -32,7 +32,7 @@ export default styled(Div)<Props>(({ theme, hasBorder, hasSeparatedLeftAddon, ha
           border-color: ${!isFocused ? theme.$.palette[palette].dark : theme.$.palette[palette].dynamicest};
         `
         : `
-          border-color: ${!isFocused ? theme.$.palette[palette].softDark : theme.$.palette[palette].softDarkest};
+          border-color: ${!isFocused ? theme.$.palette[palette].softDynamic : theme.$.palette[palette].softDynamicest};
         `
       }
     `

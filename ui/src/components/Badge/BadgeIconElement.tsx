@@ -21,7 +21,7 @@ export default styled(Div).attrs<Props>({
   align-self: stretch;
   border: solid 1px;
   border-${OrderPosition[getReverseOrderPosition(iconPosition)].toLowerCase()}: 0;
-  border-color: ${!isSoft ? theme.$.palette[palette].dynamicer : theme.$.palette[palette].softDarker};  
+  border-color: ${!isSoft ? theme.$.palette[palette].dynamicer : theme.$.palette[palette].softDynamicer};  
   border-radius: ${theme.$.radius.badge[shape]};
   border-bottom-${OrderPosition[getReverseOrderPosition(iconPosition)].toLowerCase()}-radius: 0;
   border-top-${OrderPosition[getReverseOrderPosition(iconPosition)].toLowerCase()}-radius: 0;
@@ -38,7 +38,7 @@ export default styled(Div).attrs<Props>({
           fill: ${theme.$.palette[palette].font};
         `
         : `
-          background: ${theme.$.palette[palette].softDarker};
+          background: ${theme.$.palette[palette].softDynamicer};
           color: ${theme.$.palette[palette].softFont};
           fill: ${theme.$.palette[palette].softFont};       
         `
@@ -55,8 +55,8 @@ export default styled(Div).attrs<Props>({
                 border-color: ${theme.$.palette[palette].dynamicest};  
               `
               : `
-                background: ${theme.$.palette[palette].softDarkest};
-                border-color: ${theme.$.palette[palette].softDarkest};
+                background: ${theme.$.palette[palette].softDynamicest};
+                border-color: ${theme.$.palette[palette].softDynamicest};
               `
             }
           }
@@ -86,7 +86,7 @@ export default styled(Div).attrs<Props>({
                 fill: ${theme.$.palette[palette].font};
               `
               : `
-                background: ${theme.$.palette[palette].softDarker};
+                background: ${theme.$.palette[palette].softDynamicer};
                 color: ${theme.$.palette[palette].softFont};
                 fill: ${theme.$.palette[palette].softFont};
               `

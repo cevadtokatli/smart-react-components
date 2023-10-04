@@ -69,7 +69,7 @@ export default styled(Input).attrs<Props>(({ className = '', hasLeftAddon, hasRi
           color: ${theme.$.palette[palette].font};
         `
         : `
-          background: ${!isFocused ? theme.$.palette[palette].soft : theme.$.palette[palette].softDarker};
+          background: ${!isFocused ? theme.$.palette[palette].soft : theme.$.palette[palette].softDynamicer};
           color: ${theme.$.palette[palette].softFont};
         `
       }

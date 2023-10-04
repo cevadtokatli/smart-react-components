@@ -161,8 +161,8 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
                     border-color: ${theme.$.palette[palette].soft};
                   `
                   : `
-                    background: ${theme.$.palette[palette].softDarker};
-                    border-color: ${theme.$.palette[palette].softDarker};
+                    background: ${theme.$.palette[palette].softDynamicer};
+                    border-color: ${theme.$.palette[palette].softDynamicer};
                   `
                 }
               }
@@ -171,13 +171,13 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
                 ? `
                   &:hover {
                     .src-button-content {
-                      background: ${theme.$.palette[palette].softDark};
-                      border-color: ${theme.$.palette[palette].softDark};
+                      background: ${theme.$.palette[palette].softDynamic};
+                      border-color: ${theme.$.palette[palette].softDynamic};
                     }
 
                     .src-button-addon {
-                      background: ${theme.$.palette[palette].softDarkest};
-                      border-color: ${theme.$.palette[palette].softDarkest};
+                      background: ${theme.$.palette[palette].softDynamicest};
+                      border-color: ${theme.$.palette[palette].softDynamicest};
                     }
                   }
                 `
@@ -226,7 +226,7 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
                     }
     
                     .src-button-addon {
-                      background: ${theme.$.palette[palette].softDarker};
+                      background: ${theme.$.palette[palette].softDynamicer};
                       color: ${theme.$.palette[palette].softFont};
                     }
                   }

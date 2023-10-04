@@ -59,13 +59,13 @@ export default styled(Section).attrs<Props>({
       `
       : `
         background: ${theme.$.palette[palette].soft};
-        border-color: ${theme.$.palette[palette].softDark};
+        border-color: ${theme.$.palette[palette].softDynamic};
         color: ${theme.$.palette[palette].softFont};
 
         &:active,
         &:focus {
-          background: ${theme.$.palette[palette].softDark};
-          border-color: ${theme.$.palette[palette].softDarker};
+          background: ${theme.$.palette[palette].softDynamic};
+          border-color: ${theme.$.palette[palette].softDynamicer};
         }
       `
     }

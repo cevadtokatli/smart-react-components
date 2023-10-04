@@ -64,15 +64,15 @@ export default styled(Div).attrs<Props>({
           }
         `
         : `
-          background: ${theme.$.palette[palette].softDarker};
-          border-color: ${theme.$.palette[palette].softDarker};
+          background: ${theme.$.palette[palette].softDynamicer};
+          border-color: ${theme.$.palette[palette].softDynamicer};
           color: ${theme.$.palette[palette].softFont};
 
           ${(isSeparated && hasHover)
             ? `
               &:hover {
-                background: ${theme.$.palette[palette].softDarkest};
-                border-color: ${theme.$.palette[palette].softDarkest};
+                background: ${theme.$.palette[palette].softDynamicest};
+                border-color: ${theme.$.palette[palette].softDynamicest};
               }
             `
             : ''
@@ -97,13 +97,13 @@ export default styled(Div).attrs<Props>({
           }
         `
         : `
-          border-color: ${theme.$.palette[palette].softDarker};
-          color: ${theme.$.palette[palette].softDarker};
+          border-color: ${theme.$.palette[palette].softDynamicer};
+          color: ${theme.$.palette[palette].softDynamicer};
 
           ${(isSeparated && hasHover)
             ? `
               &:hover {
-                background: ${theme.$.palette[palette].softDarker};
+                background: ${theme.$.palette[palette].softDynamicer};
                 color: ${theme.$.palette[palette].softFont};
               }
             `

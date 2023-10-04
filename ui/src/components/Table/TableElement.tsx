@@ -139,14 +139,14 @@ export default styled(Table).attrs<Props>({
     : `
       > * > tr > * {
         background: ${theme.$.palette[palette].softBackground};
-        border-color: ${theme.$.palette[palette].softDarkest};
+        border-color: ${theme.$.palette[palette].softDynamicest};
         color: ${theme.$.palette[palette].softFont};
       }
 
       ${hasHeadBackground
         ? `
           > thead > tr > * {
-            background: ${theme.$.palette[palette].softDark};
+            background: ${theme.$.palette[palette].softDynamic};
           }
         `
         : ''
@@ -155,7 +155,7 @@ export default styled(Table).attrs<Props>({
       ${isStriped
         ? `
           > tbody > tr:nth-child(${stripedOrientation}) > * {
-            background: ${theme.$.palette[palette].softDark};
+            background: ${theme.$.palette[palette].softDynamic};
           }
         `
         : ''
@@ -164,7 +164,7 @@ export default styled(Table).attrs<Props>({
       ${hasHover
         ? `
           > tbody > tr:hover > * {
-            background: ${theme.$.palette[palette].softDarker};
+            background: ${theme.$.palette[palette].softDynamicer};
           }
         `
         : ''

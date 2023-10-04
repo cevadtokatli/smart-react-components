@@ -90,21 +90,21 @@ export default styled(Li)<Props>(({ theme, isActive, isDisabled, isFixedSize, is
             ${!isActive
               ? `
                 background: ${theme.$.palette[palette].soft};
-                border-color: ${theme.$.palette[palette].softDark};
+                border-color: ${theme.$.palette[palette].softDynamic};
 
                 ${!isDisabled
                   ? `
                     &:hover {
-                      background: ${theme.$.palette[palette].softDarker};
-                      border-color: ${theme.$.palette[palette].softDarkest};
+                      background: ${theme.$.palette[palette].softDynamicer};
+                      border-color: ${theme.$.palette[palette].softDynamicest};
                     }
                   `
                   : ''
                 }
               `
               : `
-                background: ${theme.$.palette[palette].softDarker};
-                border-color: ${theme.$.palette[palette].softDarkest};
+                background: ${theme.$.palette[palette].softDynamicer};
+                border-color: ${theme.$.palette[palette].softDynamicest};
               `
             }
           `

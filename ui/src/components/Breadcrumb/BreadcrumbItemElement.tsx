@@ -63,8 +63,8 @@ export default styled(Li)<Props>(({ theme, isActive, isDisabled, isOutline, isSo
           : `
             ${(!isActive && !isDisabled) || isDisabled
               ? `
-                color: ${theme.$.palette[palette].softDarkest};
-                fill: ${theme.$.palette[palette].softDarkest};
+                color: ${theme.$.palette[palette].softDynamicest};
+                fill: ${theme.$.palette[palette].softDynamicest};
               `
               : `
                 color: ${theme.$.palette[palette].softFont};

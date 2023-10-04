@@ -52,13 +52,13 @@ export default styled(Div).attrs({
     ${isSoft
       ? `
         background: ${theme.$.palette[palette].soft};
-        border: solid 1px ${theme.$.palette[palette].softDarker};
+        border: solid 1px ${theme.$.palette[palette].softDynamicer};
         color: ${theme.$.palette[palette].softFont};
         fill: ${theme.$.palette[palette].softFont};
 
         ~ ${PopoverArrow}[data-arrow-header="true"] {
           fill: ${theme.$.palette[palette].soft};
-          stroke: ${theme.$.palette[palette].softDarker};
+          stroke: ${theme.$.palette[palette].softDynamicer};
         }
       `
       : `

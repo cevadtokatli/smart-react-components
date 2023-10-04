@@ -62,7 +62,7 @@ export default styled(Div).attrs<Props>(({ hasBackground, iconPosition }) => ({
           background: ${(palette !== alertPalette || isOutline) ? theme.$.palette[palette].main : theme.$.palette[alertPalette].darkest};
         `
         : `
-          background: ${(palette !== alertPalette || isOutline) ? theme.$.palette[palette].soft : theme.$.palette[alertPalette].softDarkest};
+          background: ${(palette !== alertPalette || isOutline) ? theme.$.palette[palette].soft : theme.$.palette[alertPalette].softDynamicest};
         `
       }
     `

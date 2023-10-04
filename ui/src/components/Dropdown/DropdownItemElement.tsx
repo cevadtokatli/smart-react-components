@@ -52,7 +52,7 @@ export default styled(Div)<Props>(({ theme, hasHover, isActive, isDisabled, isOu
                 }
               `
               : `
-                background: ${!isOutline ? theme.$.palette[palette].softDark : theme.$.palette[palette].soft};
+                background: ${!isOutline ? theme.$.palette[palette].softDynamic : theme.$.palette[palette].soft};
                 color: ${theme.$.palette[palette].softFont};
 
                 .svg,
@@ -86,7 +86,7 @@ export default styled(Div)<Props>(({ theme, hasHover, isActive, isDisabled, isOu
           }
         `
         : `
-          background: ${!isOutline ? theme.$.palette[palette].softDarkest : theme.$.palette[palette].softDarker};
+          background: ${!isOutline ? theme.$.palette[palette].softDynamicest : theme.$.palette[palette].softDynamicer};
           color: ${theme.$.palette[palette].softFont};
 
           .svg,
