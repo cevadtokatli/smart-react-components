@@ -121,9 +121,12 @@ export const loadModules = (
 
   while (curRoutes) {
     let route: RouteModule
+    // Holds the information whether the active route is matched with an item in the current modules array.
+    let isMatched = false
 
     for (const i in curRoutes) {
       const item = curRoutes[i]
+      const activeMatch = generateMatch(activeURL.pathname, item.path, false)
       const activatingMatch = generateMatch(activatingURL.pathname, item.path, false)
 
       if (activatingMatch) {
@@ -131,12 +134,12 @@ export const loadModules = (
           lazyModules.push(item.module)
         }
 
-        const activeMatch = generateMatch(activeURL.pathname, item.path, false)
         const activeSearch = item.searchKeys?.map(key => activeURL.query[key] ?? item.defaultSearchValues?.[key]).filter(key => key).join('&')
         const activatingSearch = item.searchKeys?.map(key => activatingURL.query[key] ?? item.defaultSearchValues?.[key]).filter(key => key).join('&')
 
         if (
-          activeMatch?.key !== activatingMatch.key
+          isMatched
+          || activeMatch?.key !== activatingMatch.key
           || activeSearch !== activatingSearch
         ) {
           modulesToInvokeGetMethods.push({ match: activatingMatch, module: item.module })
@@ -145,6 +148,10 @@ export const loadModules = (
         route = item
 
         break
+      }
+
+      if (activeMatch) {
+        isMatched = true
       }
     }
 
