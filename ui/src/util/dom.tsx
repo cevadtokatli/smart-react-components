@@ -69,14 +69,20 @@ export const canBeRenderedInPortal = () => !isServer && process.env.NODE_ENV !==
  */
 export const getScrollParent = (el: HTMLElement): HTMLElement => {
   for (let parent = el; (parent = parent.parentElement);) {
-    const style = window.getComputedStyle(parent, null)
-
-    if (/(auto|scroll|hidden)/.test(style.overflow + style.overflowX + style.overflowY)) {
+    if (isElementScrollable(parent)) {
       return parent
     }
   }
 
   return null
+}
+
+/**
+ * Checks if the given element is scrollable.
+ */
+export const isElementScrollable = (el: HTMLElement): boolean => {
+  const style = window.getComputedStyle(el, null)
+  return /(auto|scroll|hidden)/.test(style.overflow + style.overflowX + style.overflowY)
 }
 
 /**

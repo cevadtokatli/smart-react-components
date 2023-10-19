@@ -8,7 +8,7 @@ import { addEventListener, displayWarning, removeEventListener } from '@smart-re
 import React from 'react'
 import { createPortal } from 'react-dom'
 import { ThemeContext } from 'styled-components'
-import { canBeRenderedInPortal, getScrollParent, mouseWheel } from '../util/dom'
+import { canBeRenderedInPortal, getScrollParent, isElementScrollable, mouseWheel } from '../util/dom'
 import OverlayElement from '../components/Overlay/OverlayElement'
 
 export interface Props extends ClickEvents {
@@ -45,11 +45,16 @@ const Overlay = React.forwardRef<HTMLDivElement, Props>((props, forwardRef) => {
   const handleResize = () => setActive(getActive())
 
   const handleMouseWheel = (e: WheelEvent) => {
+    const activeOverlayEls = document.querySelectorAll('body > *[data-src-overlay="visible"]')
+    if (activeOverlayEls[activeOverlayEls.length - 1] !== ref.current) {
+      return
+    }
+
     const container = ref.current
     const delta = ((e.deltaY || -(e as any).wheelDelta || e.detail) >> 10) || 1
     const up = delta < 0
     const el = e.target as HTMLElement
-    let scrollEl = getScrollParent(el)
+    let scrollEl = isElementScrollable(el) ? el : getScrollParent(el)
 
     while (scrollEl && (scrollEl === container || container.contains(scrollEl as Node))) {
       if (
