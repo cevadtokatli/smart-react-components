@@ -23,6 +23,7 @@ export interface Props extends
   ChangeEvents,
   FocusEvents,
   KeyboardEvents {
+  containerProps?: JSXElementProps
   defaultValue?: string
   hasBorder?: boolean
   hasSpellCheck?: boolean
@@ -79,6 +80,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
   return (
     <FormBlockLabel
       {...extractElementProps(props, [intrinsicStyledFlexProps, intrinsicStyledMarginProps])}
+      {...props.containerProps}
       cursorKey="input"
       formSize={props.size}
       formSizeSm={props.sizeSm}
@@ -145,6 +147,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
 })
 
 Input.defaultProps = {
+  containerProps: {},
   hasBorder: true,
   inputProps: {},
   isBlock: true,
