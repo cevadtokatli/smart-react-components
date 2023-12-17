@@ -1,10 +1,11 @@
-import { ContentElement, PaletteProp, SetState } from '@smart-react-components/core/types'
+import { ContentElement, JSXElementProps, PaletteProp, SetState } from '@smart-react-components/core/types'
 import React from 'react'
 import WaveEffect from '../WaveEffect'
 import DropdownItemElement from '../components/Dropdown/DropdownItemElement'
 
 export interface Props {
   children: ContentElement
+  elementProps?: JSXElementProps
   isDisabled?: boolean
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
 }
@@ -19,7 +20,7 @@ export interface PrivateProps {
   waveEffectPalette: PaletteProp
 }
 
-const DropdownItem: React.FC<Props> = ({ children, hasHover, hasWaveEffect, isDisabled, isOutline, isSoft, onClick, palette, setStatus, waveEffectPalette }: (Props & PrivateProps)) => {
+const DropdownItem: React.FC<Props> = ({ children, elementProps = {}, hasHover, hasWaveEffect, isDisabled, isOutline, isSoft, onClick, palette, setStatus, waveEffectPalette }: (Props & PrivateProps)) => {
   const isClicked = React.useRef(false)
 
   const handleOnClick = (e: React.MouseEvent<HTMLElement>) => {
@@ -48,6 +49,7 @@ const DropdownItem: React.FC<Props> = ({ children, hasHover, hasWaveEffect, isDi
       isSoft={isSoft}
       palette={palette}
       onClick={handleOnClick}
+      {...elementProps}
     >
       {children}
     </DropdownItemElement>
