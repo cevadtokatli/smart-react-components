@@ -1,5 +1,5 @@
 import { Theme } from '@smart-react-components/core/theme'
-import { PaletteProp, Partial, ResponsiveProp, SetState, SizeProp } from '@smart-react-components/core/types'
+import { JSXElementProps, PaletteProp, Partial, ResponsiveProp, SetState, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import { useTheme } from 'styled-components'
 import DropdownListElement from '../components/Dropdown/DropdownListElement'
@@ -7,6 +7,7 @@ import { getWaveEffectPalette } from '../util/wave-effect'
 
 export interface Props extends Partial<ResponsiveProp<'size', SizeProp>> {
   children: JSX.Element | JSX.Element[]
+  elementProps?: JSXElementProps
   hasHover?: boolean
   hasWaveEffect?: boolean
   isOutline?: boolean
@@ -31,6 +32,7 @@ const DropdownList = React.forwardRef<HTMLDivElement, Props>((props: Props & Pri
       dropdownListSizeMd={props.sizeMd}
       dropdownListSizeLg={props.sizeLg}
       dropdownListSizeXl={props.sizeXl}
+      elementProps={props.elementProps}
       isOutline={props.isOutline}
       isSoft={props.isSoft}
       palette={props.palette}
@@ -42,6 +44,7 @@ const DropdownList = React.forwardRef<HTMLDivElement, Props>((props: Props & Pri
 })
 
 DropdownList.defaultProps = {
+  elementProps: {},
   hasHover: true,
   hasWaveEffect: true,
   isOutline: true,
