@@ -19,7 +19,7 @@ interface PrivateProps {
   setStatus: SetState<boolean>
 }
 
-const DropdownList = React.forwardRef<HTMLDivElement, Props & PrivateProps>((props, forwardRef) => {
+const DropdownList = React.forwardRef<HTMLDivElement, Props>((props: Props & PrivateProps, forwardRef) => {
   const theme = useTheme() as Theme
 
   const waveEffectPalette = React.useMemo(() => getWaveEffectPalette(props, theme.$.vars.isDarkMode), [props.waveEffectPalette, props.palette, props.isOutline, props.isSoft, theme.$.vars.isDarkMode])
