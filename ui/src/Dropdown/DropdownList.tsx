@@ -32,11 +32,11 @@ const DropdownList = React.forwardRef<HTMLDivElement, Props>((props: Props & Pri
       dropdownListSizeMd={props.sizeMd}
       dropdownListSizeLg={props.sizeLg}
       dropdownListSizeXl={props.sizeXl}
-      elementProps={props.elementProps}
       isOutline={props.isOutline}
       isSoft={props.isSoft}
       palette={props.palette}
       ref={forwardRef}
+      {...props.elementProps}
     >
       { (Array.isArray(props.children) ? props.children : [props.children]).map((item, idx) => item && React.cloneElement(item, { key: item.key ?? idx, hasHover: props.hasHover, hasWaveEffect: props.hasWaveEffect, isOutline: props.isOutline, isSoft: props.isSoft, palette: props.palette, setStatus: props.setStatus, waveEffectPalette })) }
     </DropdownListElement>
