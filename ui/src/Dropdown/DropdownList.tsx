@@ -19,7 +19,7 @@ interface PrivateProps {
   setStatus: SetState<boolean>
 }
 
-const DropdownList: React.FC<Props> = (props: Props & PrivateProps) => {
+const DropdownList = React.forwardRef<HTMLDivElement, Props & PrivateProps>((props, forwardRef) => {
   const theme = useTheme() as Theme
 
   const waveEffectPalette = React.useMemo(() => getWaveEffectPalette(props, theme.$.vars.isDarkMode), [props.waveEffectPalette, props.palette, props.isOutline, props.isSoft, theme.$.vars.isDarkMode])
@@ -34,11 +34,12 @@ const DropdownList: React.FC<Props> = (props: Props & PrivateProps) => {
       isOutline={props.isOutline}
       isSoft={props.isSoft}
       palette={props.palette}
+      ref={forwardRef}
     >
       { (Array.isArray(props.children) ? props.children : [props.children]).map((item, idx) => item && React.cloneElement(item, { key: item.key ?? idx, hasHover: props.hasHover, hasWaveEffect: props.hasWaveEffect, isOutline: props.isOutline, isSoft: props.isSoft, palette: props.palette, setStatus: props.setStatus, waveEffectPalette })) }
     </DropdownListElement>
   )
-}
+})
 
 DropdownList.defaultProps = {
   hasHover: true,
