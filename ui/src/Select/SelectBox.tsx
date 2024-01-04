@@ -67,6 +67,7 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
       >
         {
           props.active
+            .map(item => item)
             .sort((a, b) => itemList[String(a)].idx < itemList[String(b)].idx ? -1 : 1)
             .map(item => (
               <Badge key={String(item)} elementProps={{ 'data-src-not-clickable': true }}>

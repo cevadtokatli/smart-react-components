@@ -41,7 +41,7 @@ const Option: React.FC<Props> = ({ active, children, cursorKey, hasHover, hasWav
     }
   }
 
-  const isActive = () => !Array.isArray(active) ? value === active : active.includes(value)
+  const isActive = () => !Array.isArray(active) ? (value !== null && value === active) : active.includes(value)
 
   const content = (
     <DropdownItemElement

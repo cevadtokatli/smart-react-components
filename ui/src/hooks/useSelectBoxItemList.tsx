@@ -21,7 +21,7 @@ const useSelectBoxItemList = ({ children }: Props): Return => {
       if (item) {
         if (typeof item.props.value !== 'undefined' && item.props.value !== null) {
           arr.push(item.props)
-        } else if (typeof item.props.children !== 'undefined') {
+        } else if (typeof item.props.children !== 'undefined' && item.props.value !== null) {
           collectItems(arr, item.props.children)
         }
       }
