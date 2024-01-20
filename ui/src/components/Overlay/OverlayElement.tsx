@@ -10,7 +10,7 @@ const overlayCSS = ({ theme, hasBackground }) => `
   justify-content: center;
   height: 100%;
   left: 0;
-  padding: ${theme.$.length.overlay.space};
+  padding: ${theme.$.length.overlay.space.y} ${theme.$.length.overlay.space.x};
   top: 0;
   touch-action: none;
   width: 100%;

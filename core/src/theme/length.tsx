@@ -30,7 +30,10 @@ const lengthAttributes: LengthAttributes = {
     space: '15px',
   },
   overlay: {
-    space: '1.75rem',
+    space: {
+      x: '1.75rem',
+      y: '1.75rem',
+    },
   },
   pagination: {
     fixedSize: '32px',

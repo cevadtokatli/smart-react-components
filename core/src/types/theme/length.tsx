@@ -18,7 +18,7 @@ interface DefaultLengthAttributes {
     space: string
   }
   overlay: {
-    space: string
+    space: Coordinator<string>
   }
   pagination: {
     fixedSize: string

@@ -25,7 +25,7 @@ export default styled(OverlayElement)<Props>(({ theme, duration, isFullScreen }:
     opacity: 0;
 
     > ${ModalElement} {
-      transform: translateY(-${theme.$.length.overlay.space});
+      transform: translateY(-${theme.$.length.overlay.space.y});
     }
   }
 
@@ -49,7 +49,7 @@ export default styled(OverlayElement)<Props>(({ theme, duration, isFullScreen }:
     opacity: 0;
 
     > ${ModalElement} {
-      transform: translateY(-${theme.$.length.overlay.space});
+      transform: translateY(-${theme.$.length.overlay.space.y});
     }
   }
 
