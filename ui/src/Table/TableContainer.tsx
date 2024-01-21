@@ -40,6 +40,7 @@ const TableContainer = React.forwardRef<HTMLElement, Props>((props, forwardRef) 
 
     let left = 0
     let leftZIndex = x + 1
+    let containerZIndex = leftZIndex
     const el = getRef()
     const xEls = el.current.querySelectorAll('table:first-child > * > tr > *')
     const yEls = el.current.querySelectorAll('table:first-child > thead > tr')
@@ -99,7 +100,14 @@ const TableContainer = React.forwardRef<HTMLElement, Props>((props, forwardRef) 
           }
         `
       }
+
+      containerZIndex = zIndex
     }
+
+    styled = `
+      z-index: ${containerZIndex + 1};
+      ${styled}
+    `
 
     setStyled(styled)
   }
