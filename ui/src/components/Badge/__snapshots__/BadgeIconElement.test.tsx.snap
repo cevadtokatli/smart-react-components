@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BadgeIconElement /> should be clickable 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  border: solid 1px;
+  border-right: 0;
+  border-color: #0553AC;
+  border-radius: .15rem;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #0553AC;
+  color: #fff;
+  fill: #fff;
+}
+
+.c0:active {
+  background: #054D9F;
+  border-color: #054D9F;
+}
+
+<div
+    class=" c0"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<BadgeIconElement /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  border: solid 1px;
+  border-right: 0;
+  border-color: #0553AC;
+  border-radius: .15rem;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #0553AC;
+  color: #fff;
+  fill: #fff;
+}
+
+<div
+    class=" c0"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<BadgeIconElement /> should render component outline 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  border: solid 1px;
+  border-right: 0;
+  border-color: #0553AC;
+  border-radius: .15rem;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #0665d0;
+  fill: #0665d0;
+}
+
+<div
+    class=" c0"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<BadgeIconElement /> should render component outline with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  border: solid 1px;
+  border-right: 0;
+  border-color: #a7c9ee;
+  border-radius: .15rem;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #cde0f5;
+  fill: #cde0f5;
+}
+
+<div
+    class=" c0"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<BadgeIconElement /> should render component with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  border: solid 1px;
+  border-right: 0;
+  border-color: #a7c9ee;
+  border-radius: .15rem;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #a7c9ee;
+  color: #033c7c;
+  fill: #033c7c;
+}
+
+<div
+    class=" c0"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;

@@ -1,0 +1,535 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Prompt /> should render component 1`] = `
+<DocumentFragment>
+  .c2 {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.c4 {
+  width: 500px;
+}
+
+.c4 > * {
+  padding: 1rem 1rem;
+}
+
+.c4 .c6 .c8 {
+  font-size: 1.1rem;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c19 {
+  margin: -.5rem -.5rem;
+}
+
+.c21 {
+  margin: .5rem .5rem;
+  isolation: isolate;
+  overflow: hidden;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c21 .c23 {
+  font-size: .875rem;
+  padding: .45rem .9rem;
+}
+
+.c21 .c23 > :not(:last-child) {
+  margin-right: 0.225rem;
+}
+
+.c24 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  box-sizing: border-box;
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: currentcolor;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+.c22 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  position: relative;
+  -webkit-transition: box-shadow 300ms 0s ease-in-out;
+  transition: box-shadow 300ms 0s ease-in-out;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c22,
+.c22 .c23 {
+  border-radius: .125rem;
+}
+
+.c22:active {
+  outline: 0;
+}
+
+.c22 .c23 {
+  border-color: #0665d0;
+  color: #0665d0;
+}
+
+.c22:hover .c23 {
+  background: #0665d0;
+  color: #fff;
+}
+
+.c22:focus {
+  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
+}
+
+.c25 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  position: relative;
+  -webkit-transition: box-shadow 300ms 0s ease-in-out;
+  transition: box-shadow 300ms 0s ease-in-out;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c25,
+.c25 .c23 {
+  border-radius: .125rem;
+}
+
+.c25:active {
+  outline: 0;
+}
+
+.c25 .c23 {
+  background: #0665d0;
+  border-color: #0665d0;
+  color: #fff;
+}
+
+.c25:hover .c23 {
+  background: #065DC0;
+  border-color: #065DC0;
+}
+
+.c25:focus {
+  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
+}
+
+.c20 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c11 > span {
+  margin-bottom: .5rem;
+}
+
+.c11 > span {
+  font-size: 1rem;
+}
+
+.c12 > span {
+  cursor: default;
+  display: block;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c15 {
+  font-size: .875rem;
+  padding: .45rem .9rem;
+}
+
+.c16 {
+  border: 0;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  min-width: 1px;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  background: #fff;
+  color: #323a46;
+}
+
+.c16::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c16::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c16:-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c16:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c16::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c16::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c16:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c16::placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c16:active,
+.c16:focus {
+  outline: 0;
+}
+
+.c14 {
+  border: solid 1px;
+  border-radius: .2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 1px;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: border;
+  transition-property: border;
+  border-color: #dbdbdb;
+}
+
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-bottom: solid 1px #dbdbdb;
+}
+
+.c9 {
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  margin: 0;
+}
+
+.c5 {
+  background: #fff;
+  box-sizing: border-box;
+  color: #323a46;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: currentcolor;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: 100%;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  border-radius: .3rem;
+  border: solid 1px #dbdbdb;
+}
+
+.c5 > *:first-child {
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
+}
+
+.c5 > *:last-child {
+  border-bottom-left-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+}
+
+.c0 {
+  position: fixed;
+  z-index: 2000;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+  left: 0;
+  padding: 1.75rem;
+  top: 0;
+  touch-action: none;
+  width: 100%;
+  background: rgba(0,0,0,.3);
+}
+
+.c1 {
+  will-change: opacity;
+}
+
+.c1 > .c3 {
+  will-change: transform;
+}
+
+.c1.src-modal-show {
+  opacity: 0;
+}
+
+.c1.src-modal-show > .c3 {
+  -webkit-transform: translateY(-1.75rem);
+  -ms-transform: translateY(-1.75rem);
+  transform: translateY(-1.75rem);
+}
+
+.c1.src-modal-show-active {
+  opacity: 1;
+}
+
+.c1.src-modal-show-active > .c3 {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.c1.src-modal-hide {
+  opacity: 1;
+}
+
+.c1.src-modal-hide > .c3 {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.c1.src-modal-hide-active {
+  opacity: 0;
+}
+
+.c1.src-modal-hide-active > .c3 {
+  -webkit-transform: translateY(-1.75rem);
+  -ms-transform: translateY(-1.75rem);
+  transform: translateY(-1.75rem);
+}
+
+.c1.src-modal-show-active,
+.c1.src-modal-hide-active {
+  -webkit-transition: opacity 300ms 0s ease-in-out;
+  transition: opacity 300ms 0s ease-in-out;
+}
+
+.c1.src-modal-show-active > .c3,
+.c1.src-modal-hide-active > .c3 {
+  -webkit-transition: -webkit-transform 300ms 0s ease-in-out;
+  -webkit-transition: transform 300ms 0s ease-in-out;
+  transition: transform 300ms 0s ease-in-out;
+}
+
+.c10 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  overflow: auto;
+}
+
+.c10 > :last-child {
+  margin-bottom: 0;
+}
+
+.c17 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c17 .c18 {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+<div
+    class=" c0 c1"
+  >
+    <div
+      class="c2"
+      height="100%"
+      width="100%"
+    />
+    <div
+      class="c3 c4 c5"
+      shape="rectangle"
+    >
+      <header
+        class="c6  c7"
+      >
+        <h3
+          class="c8  c9"
+        >
+          Title
+        </h3>
+      </header>
+      <section
+        class=" c10"
+      >
+        <label
+          class="c11 c12"
+        >
+          <span>
+            Message
+          </span>
+          <div
+            class="c13"
+            display="flex"
+          >
+            <div
+              class=" c14"
+              shape="rectangle"
+            >
+              <input
+                class="c15 c16"
+                placeholder="Placeholder"
+                shape="rectangle"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </label>
+      </section>
+      <footer
+        class=" c17"
+      >
+        <div
+          class="c18 c19 c20"
+        >
+          <button
+            class="c21 c22"
+            overflow="hidden"
+            shape="rectangle"
+          >
+            <span
+              class="c23 c24"
+            >
+              Cancel
+            </span>
+          </button>
+          <button
+            class="c21 c25"
+            overflow="hidden"
+            shape="rectangle"
+          >
+            <span
+              class="c23 c24"
+            >
+              OK
+            </span>
+          </button>
+        </div>
+      </footer>
+    </div>
+  </div>
+</DocumentFragment>
+`;

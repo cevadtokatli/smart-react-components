@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonGroup /> should render component 1`] = `
+<DocumentFragment>
+  .c2 {
+  isolation: isolate;
+  overflow: hidden;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c2 .c4 {
+  font-size: .875rem;
+  padding: .45rem .9rem;
+}
+
+.c2 .c4 > :not(:last-child) {
+  margin-right: 0.225rem;
+}
+
+.c5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  box-sizing: border-box;
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: currentcolor;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+.c3 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  position: relative;
+  -webkit-transition: box-shadow 300ms 0s ease-in-out;
+  transition: box-shadow 300ms 0s ease-in-out;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c3,
+.c3 .c4 {
+  border-radius: .125rem;
+}
+
+.c3:active {
+  outline: 0;
+}
+
+.c3 .c4 {
+  background: #0665d0;
+  border-color: #0665d0;
+  color: #fff;
+}
+
+.c3:hover .c4 {
+  background: #065DC0;
+  border-color: #065DC0;
+}
+
+.c3:focus {
+  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c1 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.c1 > *:focus {
+  box-shadow: none;
+}
+
+<div
+    class="c0 c1"
+  >
+    <button
+      class="c2 c3"
+      overflow="hidden"
+      shape="rectangle"
+    >
+      <span
+        class="c4 c5"
+      >
+        Button-1
+      </span>
+    </button>
+    <button
+      class="c2 c3"
+      overflow="hidden"
+      shape="rectangle"
+    >
+      <span
+        class="c4 c5"
+      >
+        Button-2
+      </span>
+    </button>
+    <button
+      class="c2 c3"
+      overflow="hidden"
+      shape="rectangle"
+    >
+      <span
+        class="c4 c5"
+      >
+        Button-3
+      </span>
+    </button>
+  </div>
+</DocumentFragment>
+`;

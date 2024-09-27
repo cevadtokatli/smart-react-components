@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SelectElement /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: .875rem;
+}
+
+.c0 > div {
+  margin: 0.225rem 0.45rem;
+  padding: 0.225rem 0.45rem;
+}
+
+.c1 {
+  border: 0;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  min-width: 1px;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  background: #fff;
+  color: #323a46;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+}
+
+.c1:active,
+.c1:focus {
+  outline: 0;
+}
+
+.c2 {
+  display: block;
+}
+
+<div
+    class="c0 c1 c2"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;

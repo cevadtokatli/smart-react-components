@@ -1,0 +1,10 @@
+import { render } from '@testing-library/react'
+import React from 'react'
+import {pascalCase} from './{pascalCase}'
+
+describe('<{pascalCase} />', () => {
+  it('should render {camelCase} element', () => {
+    const screen = render({container}<{pascalCase} />{/container})
+    expect(screen.container.querySelector('{camelCase}')).toBeTruthy()
+  })
+})

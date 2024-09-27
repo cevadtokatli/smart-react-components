@@ -1,0 +1,200 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputNumberTemplate /> should render component 1`] = `
+<DocumentFragment>
+  .c5 {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c6 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: currentcolor;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  background: #fff;
+  border-color: #0665d0;
+  color: #323a46;
+}
+
+.c2 {
+  border: 0;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  min-width: 1px;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  background: #fff;
+  color: #323a46;
+}
+
+.c2::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c2::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c2:-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c2:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c2::-webkit-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c2::-moz-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c2:-ms-input-placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c2::placeholder {
+  opacity: 1;
+  color: #dbdbdb;
+}
+
+.c2:active,
+.c2:focus {
+  outline: 0;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c0 .c1 {
+  -moz-appearance: textfield;
+}
+
+.c0 .c1::-webkit-inner-spin-button,
+.c0 .c1::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.c0 .c3 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0 .c3 > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50%;
+  visibility: hidden;
+}
+
+.c0 .c3 > div > svg {
+  height: .65rem;
+  width: .65rem;
+}
+
+.c0 .c3 > div:active {
+  opacity: .3;
+}
+
+.c0:hover .c3 > div {
+  visibility: visible;
+}
+
+<div
+    class=" c0"
+  >
+    <input
+      class="c1  c2"
+      shape="rectangle"
+      type="number"
+      value="1"
+    />
+    <div
+      class="c3  c4"
+      shape="rectangle"
+    >
+      <div
+        class="c5"
+      >
+        <svg
+          class=""
+          viewBox="0 0 320 512"
+        >
+          <path
+            d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"
+          />
+        </svg>
+      </div>
+      <div
+        class="c6"
+      >
+        <svg
+          class=""
+          viewBox="0 0 320 512"
+        >
+          <path
+            d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

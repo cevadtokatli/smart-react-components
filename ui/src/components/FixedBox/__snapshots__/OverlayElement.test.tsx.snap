@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OverlayElement /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  position: fixed;
+  z-index: 2000;
+}
+
+.c1 > * {
+  will-change: opacity,transform;
+}
+
+.c1.src-fixed-box-show > * {
+  opacity: 0;
+  -webkit-transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  transform: translateY(60px);
+}
+
+.c1.src-fixed-box-show-active > * {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.c1.src-fixed-box-hide > * {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.c1.src-fixed-box-hide-active > * {
+  opacity: 0;
+  -webkit-transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  transform: translateY(60px);
+}
+
+.c1.src-fixed-box-show-active > *,
+.c1.src-fixed-box-hide-active > * {
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+}
+
+<div
+    class=" c0 c1"
+  />
+</DocumentFragment>
+`;
+
+exports[`<OverlayElement /> should render component in media 1`] = `
+<DocumentFragment>
+  .c0 {
+  position: fixed;
+  z-index: 2000;
+}
+
+@media (max-width:575px) {
+  .c0 {
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%;
+    left: 0;
+    padding: 1.75rem;
+    top: 0;
+    touch-action: none;
+    width: 100%;
+    background: rgba(0,0,0,.3);
+  }
+}
+
+@media (max-width:767px) {
+  .c1 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    will-change: opacity;
+  }
+
+  .c1.src-fixed-box-show {
+    opacity: 0;
+  }
+
+  .c1.src-fixed-box-show-active {
+    opacity: 1;
+  }
+
+  .c1.src-fixed-box-hide {
+    opacity: 1;
+  }
+
+  .c1.src-fixed-box-hide-active {
+    opacity: 0;
+  }
+
+  .c1.src-fixed-box-show-active,
+  .c1.src-fixed-box-hide-active {
+    -webkit-transition: opacity 300ms 0s ease-in-out;
+    transition: opacity 300ms 0s ease-in-out;
+  }
+}
+
+@media (min-width:768px) {
+  .c1 > * {
+    will-change: opacity,transform;
+  }
+
+  .c1.src-fixed-box-show > * {
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+    -ms-transform: translateY(60px);
+    transform: translateY(60px);
+  }
+
+  .c1.src-fixed-box-show-active > * {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  .c1.src-fixed-box-hide > * {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  .c1.src-fixed-box-hide-active > * {
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+    -ms-transform: translateY(60px);
+    transform: translateY(60px);
+  }
+
+  .c1.src-fixed-box-show-active > *,
+  .c1.src-fixed-box-hide-active > * {
+    -webkit-transition: 300ms 0s ease-in-out;
+    transition: 300ms 0s ease-in-out;
+    -webkit-transition-property: opacity,-webkit-transform;
+    -webkit-transition-property: opacity,transform;
+    transition-property: opacity,transform;
+  }
+}
+
+<div
+    class=" c0 c1"
+  />
+</DocumentFragment>
+`;

@@ -1,0 +1,370 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SelectBox /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  isolation: isolate;
+  overflow: hidden;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c0 .c2 {
+  font-size: .875rem;
+  padding: .45rem .9rem;
+}
+
+.c0 .c2 > :not(:last-child) {
+  margin-right: 0.225rem;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  box-sizing: border-box;
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: currentcolor;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+.c1 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  position: relative;
+  -webkit-transition: box-shadow 300ms 0s ease-in-out;
+  transition: box-shadow 300ms 0s ease-in-out;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c1,
+.c1 .c2 {
+  border-radius: .125rem;
+}
+
+.c1:active {
+  outline: 0;
+}
+
+.c1 .c2 {
+  background: #0665d0;
+  border-color: #0665d0;
+  color: #fff;
+}
+
+.c1:hover .c2 {
+  background: #065DC0;
+  border-color: #065DC0;
+}
+
+.c1:focus {
+  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
+}
+
+@media (max-width:767px) {
+
+}
+
+@media (max-width:767px) {
+
+}
+
+@media (max-width:767px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+<div
+    class="c0 c1"
+    overflow="hidden"
+    shape="rectangle"
+  >
+    <span
+      class="c2 c3"
+    >
+      <span>
+        Item 1
+      </span>
+      <svg
+        class=""
+        viewBox="5 4 14 14"
+      >
+        <path
+          d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+        />
+      </svg>
+    </span>
+  </div>
+  .c2 {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.c3 {
+  overflow: initial !important;
+}
+
+.c5 {
+  padding: .3125rem 0;
+}
+
+.c5 > div {
+  font-size: .875rem;
+  margin: .125rem .45rem;
+  padding: .3125rem .3125rem;
+}
+
+.c7 {
+  font-weight: 500;
+}
+
+.c8 {
+  isolation: isolate;
+  overflow: hidden;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c0 {
+  position: fixed;
+  z-index: 2000;
+}
+
+.c4 {
+  overflow: auto;
+  position: fixed;
+  z-index: 1000;
+}
+
+.c6 {
+  border-radius: .2rem;
+  box-shadow: 0 0 10px 1px rgba(154,161,171,.15);
+  font-family: inherit;
+  height: inherit;
+  overflow: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: inherit;
+  -webkit-overflow-scrolling: touch;
+  background: #0665d0;
+  color: #fff;
+  fill: #fff;
+}
+
+.c6 > div {
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+.c9 {
+  border-radius: .2rem;
+  cursor: default;
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
+  background: #054D9F;
+  color: #fff;
+}
+
+.c10 {
+  border-radius: .2rem;
+  cursor: default;
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
+}
+
+.c10:hover {
+  background: #065DC0;
+  color: #fff;
+}
+
+@media (max-width:767px) {
+  .c0 {
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%;
+    left: 0;
+    padding: 1.75rem;
+    top: 0;
+    touch-action: none;
+    width: 100%;
+    background: rgba(0,0,0,.3);
+  }
+}
+
+@media (max-width:767px) {
+  .c4 {
+    height: auto !important;
+    max-height: 100% !important;
+    position: static;
+    width: 100% !important;
+  }
+}
+
+@media (max-width:767px) {
+  .c1 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    will-change: opacity;
+  }
+
+  .c1.src-fixed-box-show {
+    opacity: 0;
+  }
+
+  .c1.src-fixed-box-show-active {
+    opacity: 1;
+  }
+
+  .c1.src-fixed-box-hide {
+    opacity: 1;
+  }
+
+  .c1.src-fixed-box-hide-active {
+    opacity: 0;
+  }
+
+  .c1.src-fixed-box-show-active,
+  .c1.src-fixed-box-hide-active {
+    -webkit-transition: opacity 300ms 0s ease-in-out;
+    transition: opacity 300ms 0s ease-in-out;
+  }
+}
+
+@media (min-width:768px) {
+  .c1 > * {
+    will-change: opacity,transform;
+  }
+
+  .c1.src-fixed-box-show > * {
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+    -ms-transform: translateY(60px);
+    transform: translateY(60px);
+  }
+
+  .c1.src-fixed-box-show-active > * {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  .c1.src-fixed-box-hide > * {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  .c1.src-fixed-box-hide-active > * {
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+    -ms-transform: translateY(60px);
+    transform: translateY(60px);
+  }
+
+  .c1.src-fixed-box-show-active > *,
+  .c1.src-fixed-box-hide-active > * {
+    -webkit-transition: 300ms 0s ease-in-out;
+    transition: 300ms 0s ease-in-out;
+    -webkit-transition-property: opacity,-webkit-transform;
+    -webkit-transition-property: opacity,transform;
+    transition-property: opacity,transform;
+  }
+}
+
+<div
+    class=" c0 c1 sc-bczRLJ sc-kDDrLX  c0"
+  >
+    <div
+      class="c2"
+      height="100%"
+      width="100%"
+    />
+    <div
+      class="c3 c4"
+      overflow="initial,true"
+      style="pointer-events: none; visibility: hidden;"
+    >
+      <div
+        class="c5 c6"
+      >
+        <div
+          class="c7"
+          font-weight="$fontWeight.semibold"
+        >
+          Category
+        </div>
+        <div
+          class="c8 c9"
+          overflow="hidden"
+        >
+          Item 1
+        </div>
+        <div
+          class="c8 c10"
+          overflow="hidden"
+        >
+          Item 2
+        </div>
+        <div
+          class="c8 c10"
+          overflow="hidden"
+        >
+          Item 3
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

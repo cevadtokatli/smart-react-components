@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SwitchGroup /> should render component 1`] = `
+<DocumentFragment>
+  .c3 {
+  height: 16px;
+  width: 28px;
+}
+
+.c3 .c6 {
+  height: 14px;
+  width: 14px;
+  left: 12px;
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c1 {
+  margin: 1rem .5rem;
+}
+
+.c1 > span {
+  font-size: 1rem;
+  margin-left: 0.46874rem;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+}
+
+.c2 > div {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c2 > span {
+  color: #323a46;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c5 {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.c7 {
+  background: #fff;
+  border-radius: 100%;
+  box-shadow: 0 1px 3px rgba(0,0,0,.4);
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: left,right;
+  transition-property: left,right;
+}
+
+.c4 {
+  border: solid 1px #dbdbdb;
+  border-radius: 20px;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-transition: 400ms 0s ease-in-out;
+  transition: 400ms 0s ease-in-out;
+  -webkit-transition-property: border,box-shadow;
+  transition-property: border,box-shadow;
+  background: #dbdbdb;
+  box-shadow: #dbdbdb 0 0 0 0 inset;
+  -webkit-transition: border 400ms 0s ease-in-out,box-shadow 400ms 0s ease-in-out,background 0s 400ms ease-in-out;
+  transition: border 400ms 0s ease-in-out,box-shadow 400ms 0s ease-in-out,background 0s 400ms ease-in-out;
+  background: #0665d0;
+  border-color: #0665d0;
+  box-shadow: #0665d0 0 0 0 11px inset;
+}
+
+<div
+    class=" c0"
+  >
+    <label
+      class="c1 c2"
+    >
+      <div
+        class="c3 c4"
+        shape="rectangle"
+      >
+        <input
+          checked=""
+          class="c5"
+          type="checkbox"
+        />
+        <div
+          class="c6 c7"
+        />
+      </div>
+      <span>
+        Item 1
+      </span>
+    </label>
+    <label
+      class="c1 c2"
+    >
+      <div
+        class="c3 c4"
+        shape="rectangle"
+      >
+        <input
+          checked=""
+          class="c5"
+          type="checkbox"
+        />
+        <div
+          class="c6 c7"
+        />
+      </div>
+      <span>
+        Item 2
+      </span>
+    </label>
+    <label
+      class="c1 c2"
+    >
+      <div
+        class="c3 c4"
+        shape="rectangle"
+      >
+        <input
+          checked=""
+          class="c5"
+          type="checkbox"
+        />
+        <div
+          class="c6 c7"
+        />
+      </div>
+      <span>
+        Item 3
+      </span>
+    </label>
+  </div>
+</DocumentFragment>
+`;

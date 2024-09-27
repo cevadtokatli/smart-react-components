@@ -1,0 +1,270 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BreadcrumbItemElement /> should be active 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 0;
+}
+
+.c0 > a {
+  border-radius: .125rem;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: .475rem .6rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  pointer-events: none;
+  color: #054D9F;
+  fill: #054D9F;
+}
+
+.c0:not(:last-child)::after {
+  content: "/";
+  display: inline-block;
+  padding: 0 1px;
+  color: #fff;
+}
+
+<li
+    class=" c0"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<BreadcrumbItemElement /> should be disabled 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 0;
+}
+
+.c0 > a {
+  border-radius: .125rem;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: .475rem .6rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  pointer-events: none;
+  opacity: 0.7;
+  color: #fff;
+  fill: #fff;
+}
+
+.c0:not(:last-child)::after {
+  content: "/";
+  display: inline-block;
+  padding: 0 1px;
+  color: #fff;
+}
+
+<li
+    class=" c0"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<BreadcrumbItemElement /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 0;
+}
+
+.c0 > a {
+  border-radius: .125rem;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: .475rem .6rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  color: #fff;
+  fill: #fff;
+}
+
+.c0 > a:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c0:not(:last-child)::after {
+  content: "/";
+  display: inline-block;
+  padding: 0 1px;
+  color: #fff;
+}
+
+<li
+    class=" c0"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<BreadcrumbItemElement /> should render component outline 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 0;
+}
+
+.c0 > a {
+  border-radius: .125rem;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: .475rem .6rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  color: #0665d0;
+  fill: #0665d0;
+}
+
+.c0 > a:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c0:not(:last-child)::after {
+  content: "/";
+  display: inline-block;
+  padding: 0 1px;
+  color: #dbdbdb;
+}
+
+<li
+    class=" c0"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<BreadcrumbItemElement /> should render component outline with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 0;
+}
+
+.c0 > a {
+  border-radius: .125rem;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: .475rem .6rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  color: #cde0f5;
+  fill: #cde0f5;
+}
+
+.c0 > a:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c0:not(:last-child)::after {
+  content: "/";
+  display: inline-block;
+  padding: 0 1px;
+  color: #dbdbdb;
+}
+
+<li
+    class=" c0"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;
+
+exports[`<BreadcrumbItemElement /> should render component with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 0;
+}
+
+.c0 > a {
+  border-radius: .125rem;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: .475rem .6rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  color: #033c7c;
+  fill: #033c7c;
+}
+
+.c0 > a:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c0:not(:last-child)::after {
+  content: "/";
+  display: inline-block;
+  padding: 0 1px;
+  color: #033c7c;
+}
+
+<li
+    class=" c0"
+    shape="rectangle"
+  />
+</DocumentFragment>
+`;

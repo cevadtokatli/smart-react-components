@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormBlockLabel /> should be disabled 1`] = `
+<DocumentFragment>
+  .c0 > span {
+  margin-bottom: .5rem;
+}
+
+.c0 > span {
+  font-size: 1rem;
+}
+
+.c1 > span {
+  cursor: default;
+  display: block;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c1 > span {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+<label
+    class="c0 c1"
+  >
+    <span>
+      Label
+    </span>
+    <input />
+  </label>
+</DocumentFragment>
+`;
+
+exports[`<FormBlockLabel /> should not be block 1`] = `
+<DocumentFragment>
+  .c0 {
+  margin-bottom: .5rem;
+}
+
+.c0 > span {
+  margin-right: 0.46874rem;
+}
+
+.c0 > span {
+  font-size: 1rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 > span {
+  cursor: default;
+  display: block;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c1 > span {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c1 > div {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+<label
+    class="c0 c1"
+  >
+    <span>
+      Label
+    </span>
+    <input />
+  </label>
+</DocumentFragment>
+`;
+
+exports[`<FormBlockLabel /> should render component 1`] = `
+<DocumentFragment>
+  .c0 > span {
+  margin-bottom: .5rem;
+}
+
+.c0 > span {
+  font-size: 1rem;
+}
+
+.c1 > span {
+  cursor: default;
+  display: block;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
+}
+
+<label
+    class="c0 c1"
+  >
+    <span>
+      Label
+    </span>
+    <input />
+  </label>
+</DocumentFragment>
+`;

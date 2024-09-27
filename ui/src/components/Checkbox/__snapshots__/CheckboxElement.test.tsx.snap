@@ -1,0 +1,364 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CheckboxElement /> should not be checked 1`] = `
+<DocumentFragment>
+  .c0 {
+  height: 16px;
+  width: 16px;
+}
+
+.c3 {
+  border: solid 2px #dbdbdb;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+}
+
+.c5 {
+  position: absolute;
+  left: -2px;
+  height: calc(100% + 4px);
+  top: -2px;
+  -webkit-transition: background 200ms 0s ease-in-out;
+  transition: background 200ms 0s ease-in-out;
+  width: calc(100% + 4px);
+}
+
+.c6 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.c6 > path {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-dasharray: 36px;
+  stroke-dashoffset: 36px;
+  -webkit-transition: stroke-dashoffset 200ms 0s ease-in-out;
+  transition: stroke-dashoffset 200ms 0s ease-in-out;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c1 .c2 {
+  border-radius: .125rem;
+  background: #dbdbdb;
+}
+
+.c1 .c4 {
+  border-radius: .125rem;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  >
+    <div
+      class="c2 c3"
+    >
+      <div
+        class="c4 c5"
+      />
+      <svg
+        class="c6"
+        viewBox="0 0 32 32"
+      >
+        <path
+          d="M3.5,17.2l7.6,7.6L28.5,7.3"
+        />
+      </svg>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<CheckboxElement /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  height: 16px;
+  width: 16px;
+}
+
+.c3 {
+  border: solid 2px #dbdbdb;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+}
+
+.c5 {
+  position: absolute;
+  left: -2px;
+  height: calc(100% + 4px);
+  top: -2px;
+  -webkit-transition: background 200ms 0s ease-in-out;
+  transition: background 200ms 0s ease-in-out;
+  width: calc(100% + 4px);
+}
+
+.c7 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.c7 > path {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-dasharray: 36px;
+  stroke-dashoffset: 36px;
+  -webkit-transition: stroke-dashoffset 200ms 0s ease-in-out;
+  transition: stroke-dashoffset 200ms 0s ease-in-out;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c1 .c2 {
+  border-radius: .125rem;
+  background: #dbdbdb;
+}
+
+.c1 .c4 {
+  border-radius: .125rem;
+}
+
+.c1 .c4 {
+  background: #0665d0;
+}
+
+.c1 .c6 > path {
+  stroke-dashoffset: 0;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  >
+    <div
+      class="c2 c3"
+    >
+      <div
+        class="c4 c5"
+      />
+      <svg
+        class="c6 c7"
+        viewBox="0 0 32 32"
+      >
+        <path
+          d="M3.5,17.2l7.6,7.6L28.5,7.3"
+        />
+      </svg>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<CheckboxElement /> should render component outline 1`] = `
+<DocumentFragment>
+  .c0 {
+  height: 16px;
+  width: 16px;
+}
+
+.c3 {
+  border: solid 2px #dbdbdb;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+}
+
+.c5 {
+  position: absolute;
+  left: -2px;
+  height: calc(100% + 4px);
+  top: -2px;
+  -webkit-transition: background 200ms 0s ease-in-out;
+  transition: background 200ms 0s ease-in-out;
+  width: calc(100% + 4px);
+}
+
+.c7 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.c7 > path {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-dasharray: 36px;
+  stroke-dashoffset: 36px;
+  -webkit-transition: stroke-dashoffset 200ms 0s ease-in-out;
+  transition: stroke-dashoffset 200ms 0s ease-in-out;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c1 .c2 {
+  border-radius: .125rem;
+}
+
+.c1 .c4 {
+  border-radius: .125rem;
+}
+
+.c1 .c4 {
+  background: #0665d0;
+}
+
+.c1 .c6 > path {
+  stroke-dashoffset: 0;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  >
+    <div
+      class="c2 c3"
+    >
+      <div
+        class="c4 c5"
+      />
+      <svg
+        class="c6 c7"
+        viewBox="0 0 32 32"
+      >
+        <path
+          d="M3.5,17.2l7.6,7.6L28.5,7.3"
+        />
+      </svg>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<CheckboxElement /> should render component with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  height: 16px;
+  width: 16px;
+}
+
+.c3 {
+  border: solid 2px #dbdbdb;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+}
+
+.c5 {
+  position: absolute;
+  left: -2px;
+  height: calc(100% + 4px);
+  top: -2px;
+  -webkit-transition: background 200ms 0s ease-in-out;
+  transition: background 200ms 0s ease-in-out;
+  width: calc(100% + 4px);
+}
+
+.c7 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.c7 > path {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-dasharray: 36px;
+  stroke-dashoffset: 36px;
+  -webkit-transition: stroke-dashoffset 200ms 0s ease-in-out;
+  transition: stroke-dashoffset 200ms 0s ease-in-out;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c1 .c2 {
+  border-radius: .125rem;
+  background: #dbdbdb;
+}
+
+.c1 .c4 {
+  border-radius: .125rem;
+}
+
+.c1 .c4 {
+  background: #cde0f5;
+}
+
+.c1 .c6 > path {
+  stroke-dashoffset: 0;
+}
+
+<div
+    class="c0 c1"
+    shape="rectangle"
+  >
+    <div
+      class="c2 c3"
+    >
+      <div
+        class="c4 c5"
+      />
+      <svg
+        class="c6 c7"
+        viewBox="0 0 32 32"
+      >
+        <path
+          d="M3.5,17.2l7.6,7.6L28.5,7.3"
+        />
+      </svg>
+    </div>
+  </div>
+</DocumentFragment>
+`;

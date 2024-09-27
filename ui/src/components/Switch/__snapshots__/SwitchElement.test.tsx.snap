@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SwitchElement /> should not be checked 1`] = `
+<DocumentFragment>
+  .c0 {
+  height: 16px;
+  width: 28px;
+}
+
+.c0 .c2 {
+  height: 14px;
+  width: 14px;
+}
+
+.c3 {
+  background: #fff;
+  border-radius: 100%;
+  box-shadow: 0 1px 3px rgba(0,0,0,.4);
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: left,right;
+  transition-property: left,right;
+}
+
+.c1 {
+  border: solid 1px #dbdbdb;
+  border-radius: 20px;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-transition: 400ms 0s ease-in-out;
+  transition: 400ms 0s ease-in-out;
+  -webkit-transition-property: border,box-shadow;
+  transition-property: border,box-shadow;
+  background: #dbdbdb;
+  box-shadow: #dbdbdb 0 0 0 0 inset;
+}
+
+<div
+    class="c0 c1"
+  >
+    <div
+      class="c2 c3"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<SwitchElement /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  height: 16px;
+  width: 28px;
+}
+
+.c0 .c2 {
+  height: 14px;
+  width: 14px;
+  left: 12px;
+}
+
+.c3 {
+  background: #fff;
+  border-radius: 100%;
+  box-shadow: 0 1px 3px rgba(0,0,0,.4);
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: left,right;
+  transition-property: left,right;
+}
+
+.c1 {
+  border: solid 1px #dbdbdb;
+  border-radius: 20px;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-transition: 400ms 0s ease-in-out;
+  transition: 400ms 0s ease-in-out;
+  -webkit-transition-property: border,box-shadow;
+  transition-property: border,box-shadow;
+  background: #dbdbdb;
+  box-shadow: #dbdbdb 0 0 0 0 inset;
+  -webkit-transition: border 400ms 0s ease-in-out,box-shadow 400ms 0s ease-in-out,background 0s 400ms ease-in-out;
+  transition: border 400ms 0s ease-in-out,box-shadow 400ms 0s ease-in-out,background 0s 400ms ease-in-out;
+  background: #0665d0;
+  border-color: #0665d0;
+  box-shadow: #0665d0 0 0 0 11px inset;
+}
+
+<div
+    class="c0 c1"
+  >
+    <div
+      class="c2 c3"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<SwitchElement /> should render component outline 1`] = `
+<DocumentFragment>
+  .c0 {
+  height: 16px;
+  width: 28px;
+}
+
+.c0 .c2 {
+  height: 14px;
+  width: 14px;
+  left: 12px;
+}
+
+.c3 {
+  background: #fff;
+  border-radius: 100%;
+  box-shadow: 0 1px 3px rgba(0,0,0,.4);
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: left,right;
+  transition-property: left,right;
+}
+
+.c1 {
+  border: solid 1px #dbdbdb;
+  border-radius: 20px;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-transition: 400ms 0s ease-in-out;
+  transition: 400ms 0s ease-in-out;
+  -webkit-transition-property: border,box-shadow;
+  transition-property: border,box-shadow;
+  -webkit-transition: border 400ms 0s ease-in-out,box-shadow 400ms 0s ease-in-out,background 0s 400ms ease-in-out;
+  transition: border 400ms 0s ease-in-out,box-shadow 400ms 0s ease-in-out,background 0s 400ms ease-in-out;
+  background: #0665d0;
+  border-color: #0665d0;
+  box-shadow: #0665d0 0 0 0 11px inset;
+}
+
+<div
+    class="c0 c1"
+  >
+    <div
+      class="c2 c3"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<SwitchElement /> should render component with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  height: 16px;
+  width: 28px;
+}
+
+.c0 .c2 {
+  height: 14px;
+  width: 14px;
+  left: 12px;
+}
+
+.c3 {
+  background: #fff;
+  border-radius: 100%;
+  box-shadow: 0 1px 3px rgba(0,0,0,.4);
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: left,right;
+  transition-property: left,right;
+}
+
+.c1 {
+  border: solid 1px #dbdbdb;
+  border-radius: 20px;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-transition: 400ms 0s ease-in-out;
+  transition: 400ms 0s ease-in-out;
+  -webkit-transition-property: border,box-shadow;
+  transition-property: border,box-shadow;
+  background: #dbdbdb;
+  box-shadow: #dbdbdb 0 0 0 0 inset;
+  -webkit-transition: border 400ms 0s ease-in-out,box-shadow 400ms 0s ease-in-out,background 0s 400ms ease-in-out;
+  transition: border 400ms 0s ease-in-out,box-shadow 400ms 0s ease-in-out,background 0s 400ms ease-in-out;
+  background: #cde0f5;
+  border-color: #cde0f5;
+  box-shadow: #cde0f5 0 0 0 11px inset;
+}
+
+<div
+    class="c0 c1"
+  >
+    <div
+      class="c2 c3"
+    />
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,252 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OverlayElement /> should be full screen 1`] = `
+<DocumentFragment>
+  .c3 > * {
+  padding: 1rem 1rem;
+}
+
+.c4 {
+  background: #fff;
+  box-sizing: border-box;
+  color: #323a46;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: currentcolor;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: 100%;
+  width: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c0 {
+  position: fixed;
+  z-index: 2000;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+  left: 0;
+  padding: 1.75rem;
+  top: 0;
+  touch-action: none;
+  width: 100%;
+  background: rgba(0,0,0,.3);
+}
+
+.c1 {
+  padding: 0;
+  will-change: opacity;
+}
+
+.c1 > .c2 {
+  will-change: transform;
+}
+
+.c1.src-modal-show {
+  opacity: 0;
+}
+
+.c1.src-modal-show > .c2 {
+  -webkit-transform: translateY(-1.75rem);
+  -ms-transform: translateY(-1.75rem);
+  transform: translateY(-1.75rem);
+}
+
+.c1.src-modal-show-active {
+  opacity: 1;
+}
+
+.c1.src-modal-show-active > .c2 {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.c1.src-modal-hide {
+  opacity: 1;
+}
+
+.c1.src-modal-hide > .c2 {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.c1.src-modal-hide-active {
+  opacity: 0;
+}
+
+.c1.src-modal-hide-active > .c2 {
+  -webkit-transform: translateY(-1.75rem);
+  -ms-transform: translateY(-1.75rem);
+  transform: translateY(-1.75rem);
+}
+
+.c1.src-modal-show-active,
+.c1.src-modal-hide-active {
+  -webkit-transition: opacity 300ms 0s ease-in-out;
+  transition: opacity 300ms 0s ease-in-out;
+}
+
+.c1.src-modal-show-active > .c2,
+.c1.src-modal-hide-active > .c2 {
+  -webkit-transition: -webkit-transform 300ms 0s ease-in-out;
+  -webkit-transition: transform 300ms 0s ease-in-out;
+  transition: transform 300ms 0s ease-in-out;
+}
+
+<div
+    class=" c0 c1"
+  >
+    <div
+      class="c2 c3 c4"
+      shape="rectangle"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<OverlayElement /> should render component 1`] = `
+<DocumentFragment>
+  .c3 {
+  width: 500px;
+}
+
+.c3 > * {
+  padding: 1rem 1rem;
+}
+
+.c4 {
+  background: #fff;
+  box-sizing: border-box;
+  color: #323a46;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: currentcolor;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: 100%;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  border-radius: .3rem;
+}
+
+.c4 > *:first-child {
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
+}
+
+.c4 > *:last-child {
+  border-bottom-left-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+}
+
+.c0 {
+  position: fixed;
+  z-index: 2000;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+  left: 0;
+  padding: 1.75rem;
+  top: 0;
+  touch-action: none;
+  width: 100%;
+  background: rgba(0,0,0,.3);
+}
+
+.c1 {
+  will-change: opacity;
+}
+
+.c1 > .c2 {
+  will-change: transform;
+}
+
+.c1.src-modal-show {
+  opacity: 0;
+}
+
+.c1.src-modal-show > .c2 {
+  -webkit-transform: translateY(-1.75rem);
+  -ms-transform: translateY(-1.75rem);
+  transform: translateY(-1.75rem);
+}
+
+.c1.src-modal-show-active {
+  opacity: 1;
+}
+
+.c1.src-modal-show-active > .c2 {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.c1.src-modal-hide {
+  opacity: 1;
+}
+
+.c1.src-modal-hide > .c2 {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.c1.src-modal-hide-active {
+  opacity: 0;
+}
+
+.c1.src-modal-hide-active > .c2 {
+  -webkit-transform: translateY(-1.75rem);
+  -ms-transform: translateY(-1.75rem);
+  transform: translateY(-1.75rem);
+}
+
+.c1.src-modal-show-active,
+.c1.src-modal-hide-active {
+  -webkit-transition: opacity 300ms 0s ease-in-out;
+  transition: opacity 300ms 0s ease-in-out;
+}
+
+.c1.src-modal-show-active > .c2,
+.c1.src-modal-hide-active > .c2 {
+  -webkit-transition: -webkit-transform 300ms 0s ease-in-out;
+  -webkit-transition: transform 300ms 0s ease-in-out;
+  transition: transform 300ms 0s ease-in-out;
+}
+
+<div
+    class=" c0 c1"
+  >
+    <div
+      class="c2 c3 c4"
+      shape="rectangle"
+    />
+  </div>
+</DocumentFragment>
+`;

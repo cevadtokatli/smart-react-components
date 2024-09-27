@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProgressBar /> should calculate percentage by total value 1`] = `
+<DocumentFragment>
+  .c0 {
+  height: 16px;
+  -webkit-transition-duration: 450px;
+  transition-duration: 450px;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.c2 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #0665d0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: #0665d0;
+  overflow: hidden;
+  position: relative;
+  border-radius: .125rem;
+}
+
+.c1 .c3 {
+  background: #0665d0;
+  color: #fff;
+  fill: #fff;
+  -webkit-transition: width 450ms 0s linear;
+  transition: width 450ms 0s linear;
+  border-radius: .125rem;
+}
+
+<div
+    class="c0 c1"
+    height="16px"
+  >
+    <div
+      class="c2"
+      style="left: 0px; visibility: visible;"
+    >
+      100 / 1000
+    </div>
+    <div
+      class="c3 c4"
+      style="width: 10%;"
+    >
+      <div
+        class="c2"
+        style="left: 0px; visibility: visible;"
+      >
+        100 / 1000
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<ProgressBar /> should display value 1`] = `
+<DocumentFragment>
+  .c0 {
+  height: 16px;
+  -webkit-transition-duration: 450px;
+  transition-duration: 450px;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.c2 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #0665d0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: #0665d0;
+  overflow: hidden;
+  position: relative;
+  border-radius: .125rem;
+}
+
+.c1 .c3 {
+  background: #0665d0;
+  color: #fff;
+  fill: #fff;
+  -webkit-transition: width 450ms 0s linear;
+  transition: width 450ms 0s linear;
+  border-radius: .125rem;
+}
+
+<div
+    class="c0 c1"
+    height="16px"
+  >
+    <div
+      class="c2"
+      style="left: 0px; visibility: visible;"
+    >
+      50%
+    </div>
+    <div
+      class="c3 c4"
+      style="width: 50%;"
+    >
+      <div
+        class="c2"
+        style="left: 0px; visibility: visible;"
+      >
+        50%
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<ProgressBar /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  height: 4px;
+  -webkit-transition-duration: 450px;
+  transition-duration: 450px;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #0665d0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: #0665d0;
+  overflow: hidden;
+  position: relative;
+  border-radius: .125rem;
+}
+
+.c1 .c2 {
+  background: #0665d0;
+  color: #fff;
+  fill: #fff;
+  -webkit-transition: width 450ms 0s linear;
+  transition: width 450ms 0s linear;
+  border-radius: .125rem;
+}
+
+<div
+    class="c0 c1"
+    height="4px"
+  >
+    <div
+      class="c2 c3"
+      style="width: 50%;"
+    />
+  </div>
+</DocumentFragment>
+`;

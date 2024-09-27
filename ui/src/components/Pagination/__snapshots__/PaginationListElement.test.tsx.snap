@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PaginationListElement /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font-family: inherit;
+  font-size: 1rem;
+  list-style: none;
+  margin: -.2525rem -.2525rem;
+}
+
+<ul
+    class=" c0"
+  />
+</DocumentFragment>
+`;

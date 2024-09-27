@@ -1,0 +1,389 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox /> should not render label 1`] = `
+<DocumentFragment>
+  .c0 {
+  margin: 1rem .5rem;
+}
+
+.c0 > span {
+  font-size: 1rem;
+  margin-left: 0.46874rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+}
+
+.c1 > div {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c1 > span {
+  color: #323a46;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c4 {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.c2 {
+  height: 16px;
+  width: 16px;
+}
+
+.c6 {
+  border: solid 2px #dbdbdb;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+}
+
+.c8 {
+  position: absolute;
+  left: -2px;
+  height: calc(100% + 4px);
+  top: -2px;
+  -webkit-transition: background 200ms 0s ease-in-out;
+  transition: background 200ms 0s ease-in-out;
+  width: calc(100% + 4px);
+}
+
+.c9 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.c9 > path {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-dasharray: 36px;
+  stroke-dashoffset: 36px;
+  -webkit-transition: stroke-dashoffset 200ms 0s ease-in-out;
+  transition: stroke-dashoffset 200ms 0s ease-in-out;
+}
+
+.c3 {
+  position: relative;
+}
+
+.c3 .c5 {
+  border-radius: .125rem;
+  background: #dbdbdb;
+}
+
+.c3 .c7 {
+  border-radius: .125rem;
+}
+
+<label
+    class="c0 c1"
+  >
+    <div
+      class="c2 c3"
+      shape="rectangle"
+    >
+      <input
+        class="c4"
+        type="checkbox"
+      />
+      <div
+        class="c5 c6"
+      >
+        <div
+          class="c7 c8"
+        />
+        <svg
+          class="c9"
+          viewBox="0 0 32 32"
+        >
+          <path
+            d="M3.5,17.2l7.6,7.6L28.5,7.3"
+          />
+        </svg>
+      </div>
+    </div>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`<Checkbox /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  margin: 1rem .5rem;
+}
+
+.c0 > span {
+  font-size: 1rem;
+  margin-left: 0.46874rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+}
+
+.c1 > div {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c1 > span {
+  color: #323a46;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c4 {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.c2 {
+  height: 16px;
+  width: 16px;
+}
+
+.c6 {
+  border: solid 2px #dbdbdb;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+}
+
+.c8 {
+  position: absolute;
+  left: -2px;
+  height: calc(100% + 4px);
+  top: -2px;
+  -webkit-transition: background 200ms 0s ease-in-out;
+  transition: background 200ms 0s ease-in-out;
+  width: calc(100% + 4px);
+}
+
+.c10 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.c10 > path {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-dasharray: 36px;
+  stroke-dashoffset: 36px;
+  -webkit-transition: stroke-dashoffset 200ms 0s ease-in-out;
+  transition: stroke-dashoffset 200ms 0s ease-in-out;
+}
+
+.c3 {
+  position: relative;
+}
+
+.c3 .c5 {
+  border-radius: .125rem;
+  background: #dbdbdb;
+}
+
+.c3 .c7 {
+  border-radius: .125rem;
+}
+
+.c3 .c7 {
+  background: #0665d0;
+}
+
+.c3 .c9 > path {
+  stroke-dashoffset: 0;
+}
+
+<label
+    class="c0 c1"
+  >
+    <div
+      class="c2 c3"
+      shape="rectangle"
+    >
+      <input
+        checked=""
+        class="c4"
+        type="checkbox"
+      />
+      <div
+        class="c5 c6"
+      >
+        <div
+          class="c7 c8"
+        />
+        <svg
+          class="c9 c10"
+          viewBox="0 0 32 32"
+        >
+          <path
+            d="M3.5,17.2l7.6,7.6L28.5,7.3"
+          />
+        </svg>
+      </div>
+    </div>
+    <span>
+      Label
+    </span>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`<Checkbox /> should render custom component 1`] = `
+<DocumentFragment>
+  .c0 {
+  margin: 1rem .5rem;
+}
+
+.c0 > span {
+  font-size: 1rem;
+  margin-left: 0.46874rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+}
+
+.c1 > div {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c1 > span {
+  color: #323a46;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-family: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c2 {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+<label
+    class="c0 c1"
+  >
+    <div>
+      <input
+        class="c2"
+        type="checkbox"
+      />
+      <svg />
+    </div>
+    <span>
+      Label
+    </span>
+  </label>
+</DocumentFragment>
+`;

@@ -1,0 +1,286 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProgressBarElement /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  height: 400px;
+  -webkit-transition-duration: 450px;
+  transition-duration: 450px;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.c2 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #0665d0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: #0665d0;
+  overflow: hidden;
+  position: relative;
+  border-radius: .125rem;
+}
+
+.c1 .c3 {
+  background: #0665d0;
+  color: #fff;
+  fill: #fff;
+  -webkit-transition: width 450ms 0s linear;
+  transition: width 450ms 0s linear;
+  border-radius: .125rem;
+}
+
+.c1,
+.c1 .c3 {
+  background-image: linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
+  background-size: 400px 400px;
+}
+
+.c1,
+.c1 .c3 {
+  -webkit-animation: src-progress-bar-stripes 400ms 0s linear infinite;
+  animation: src-progress-bar-stripes 400ms 0s linear infinite;
+}
+
+<div
+    class="c0 c1"
+    height="400px"
+  >
+    <div
+      class="c2"
+      style="left: 200px;"
+    >
+      50%
+    </div>
+    <div
+      class="c3 c4"
+      style="width: 50%;"
+    >
+      <div
+        class="c2"
+        style="left: 200px;"
+      >
+        50%
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<ProgressBarElement /> should render component filled 1`] = `
+<DocumentFragment>
+  .c0 {
+  height: 400px;
+  -webkit-transition-duration: 450px;
+  transition-duration: 450px;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.c2 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #0665d0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: #0665d0;
+  overflow: hidden;
+  position: relative;
+  background: #eee;
+  border-radius: .125rem;
+}
+
+.c1 .c3 {
+  background: #0665d0;
+  color: #fff;
+  fill: #fff;
+  -webkit-transition: width 450ms 0s linear;
+  transition: width 450ms 0s linear;
+  border-radius: .125rem;
+}
+
+.c1,
+.c1 .c3 {
+  background-image: linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
+  background-size: 400px 400px;
+}
+
+.c1,
+.c1 .c3 {
+  -webkit-animation: src-progress-bar-stripes 400ms 0s linear infinite;
+  animation: src-progress-bar-stripes 400ms 0s linear infinite;
+}
+
+<div
+    class="c0 c1"
+    height="400px"
+  >
+    <div
+      class="c2"
+      style="left: 200px;"
+    >
+      50%
+    </div>
+    <div
+      class="c3 c4"
+      style="width: 50%;"
+    >
+      <div
+        class="c2"
+        style="left: 200px;"
+      >
+        50%
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<ProgressBarElement /> should render component nested 1`] = `
+<DocumentFragment>
+  .c0 {
+  height: 400px;
+  -webkit-transition-duration: 450px;
+  transition-duration: 450px;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.c2 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #0665d0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: #0665d0;
+  overflow: hidden;
+  position: relative;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c1 .c3 {
+  background: #0665d0;
+  color: #fff;
+  fill: #fff;
+  -webkit-transition: width 450ms 0s linear;
+  transition: width 450ms 0s linear;
+  background: rgba(255,255,255,0.3);
+}
+
+.c1,
+.c1 .c3 {
+  background-image: linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
+  background-size: 400px 400px;
+}
+
+.c1,
+.c1 .c3 {
+  -webkit-animation: src-progress-bar-stripes 400ms 0s linear infinite;
+  animation: src-progress-bar-stripes 400ms 0s linear infinite;
+}
+
+<div
+    class="c0 c1"
+    height="400px"
+  >
+    <div
+      class="c2"
+      style="left: 200px;"
+    >
+      50%
+    </div>
+    <div
+      class="c3 c4"
+      style="width: 50%;"
+    >
+      <div
+        class="c2"
+        style="left: 200px;"
+      >
+        50%
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

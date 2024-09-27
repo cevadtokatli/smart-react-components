@@ -1,17 +1,11 @@
 {
-    "compilerOptions": {
-        "target": "es2015",
-        "module": "esnext",
-        "jsx": "react",
-        "moduleResolution": "node",
-        "esModuleInterop": true,
-        "experimentalDecorators": true,
-        "resolveJsonModule": true,
-        "downlevelIteration": true,
-        "outDir": "./dist",
-        "declaration": true,
-        "declarationDir": "./dist"
-    },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules"]
+  "compilerOptions": {
+    "declaration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "module": "CommonJS",
+    "skipLibCheck": true,
+    "target": "es2015"
+  }
 }

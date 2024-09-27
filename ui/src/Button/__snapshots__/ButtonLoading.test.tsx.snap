@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonLoading /> should render component 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.c3 {
+  stroke: #fff;
+  stroke-width: 4px;
+}
+
+.c1 {
+  height: 20px;
+  width: 20px;
+}
+
+.c2 {
+  -webkit-animation: src-loading-animation 2000ms linear infinite;
+  animation: src-loading-animation 2000ms linear infinite;
+}
+
+.c2 circle {
+  -webkit-animation: src-loading-circle-animation 2000ms linear infinite;
+  animation: src-loading-circle-animation 2000ms linear infinite;
+  fill: none;
+  stroke-dasharray: 1,150;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+}
+
+<div
+    class=" c0"
+  >
+    <svg
+      class="c1 c2"
+      viewBox="0 0 44 44"
+    >
+      <circle
+        class="c3"
+        cx="22"
+        cy="22"
+        r="20"
+        stroke="!primary.font"
+        stroke-width="4"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<ButtonLoading /> should render component with custom content 1`] = `
+<DocumentFragment>
+  .c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+<div
+    class=" c0"
+  >
+    <div />
+  </div>
+</DocumentFragment>
+`;
