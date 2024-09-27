@@ -94,7 +94,7 @@ function release() {
   npm run build
 
   if [ $? -ne '0' ] ; then
-    echo -e "$RED***** The build operatin has been failed *****$NC"
+    echo -e "$RED***** The build operation has been failed *****$NC"
     exit 1
   fi
 
