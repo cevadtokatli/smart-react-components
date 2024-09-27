@@ -1,5 +1,5 @@
 import { CancelCallback, URL } from '../types'
-import { generateURL, getFullpath } from '../util'
+import { generateURL } from '../util'
 
 export namespace Action {
   export const SET_ACTIVE_URL: string = 'SET_ACTIVE_URL'
@@ -62,14 +62,16 @@ export const setPercentage = (payload: { key: number, value: number }) => ({
 export interface State {
   activatingURL: URL | null
   activeURL: URL
+  isHashRouter: boolean
   key: number | null
   cancelCallback: CancelCallback | null
   percentage: number
 }
 
-export const generateInitialState = (fullpath = getFullpath()): State => ({
+export const generateInitialState = (fullpath: string, isHashRouter: boolean): State => ({
   activatingURL: null,
   activeURL: generateURL(fullpath),
+  isHashRouter,
   key: null,
   cancelCallback: null,
   percentage: 0,
@@ -81,6 +83,7 @@ const reducer = (state: State, action): State => {
       return {
         activeURL: action.payload,
         activatingURL: null,
+        isHashRouter: state.isHashRouter,
         key: null,
         cancelCallback: null,
         percentage: 0,

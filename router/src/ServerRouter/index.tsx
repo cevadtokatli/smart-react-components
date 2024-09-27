@@ -14,7 +14,7 @@ export interface Props {
 }
 
 const ServerRouter: React.FC<Props> = ({ children, fallback, modules, routes, url }) => {
-  const [state, dispatch] = React.useReducer(reducer, generateInitialState(url))
+  const [state, dispatch] = React.useReducer(reducer, generateInitialState(url, false))
 
   const push = React.useCallback((to: string) => {}, [])
 

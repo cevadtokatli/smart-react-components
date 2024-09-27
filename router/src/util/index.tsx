@@ -52,7 +52,7 @@ export const callGetMethods = (url: string, routes: RouteModule[], modules: obje
 /**
  * Retuns the fullpath.
  */
-export const getFullpath = () => window.location.pathname + window.location.search + window.location.hash
+export const getFullpath = (isHashRouter: boolean) => isHashRouter ? window.location.hash.substring(1) : window.location.pathname + window.location.search + window.location.hash
 
 /**
  * Returns the pathname.

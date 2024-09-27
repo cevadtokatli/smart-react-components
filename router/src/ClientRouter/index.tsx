@@ -9,6 +9,7 @@ import { generateURL, getFullpath, loadModules } from '../util'
 
 export interface Props {
   children: JSXChildren
+  isHashRouter?: boolean
   fallback?: JSX.Element
   params?: any
   progressBar?: JSX.Element
@@ -17,11 +18,11 @@ export interface Props {
 
 export const modules: object = {}
 
-const ClientRouter: React.FC<Props> = ({ children, fallback, params, routes, progressBar }) => {
-  const [state, dispatch] = React.useReducer(reducer, generateInitialState())
+const ClientRouter: React.FC<Props> = ({ children, fallback, isHashRouter, params, routes, progressBar }) => {
+  const [state, dispatch] = React.useReducer(reducer, generateInitialState(getFullpath(isHashRouter), isHashRouter))
 
   const handleURLChange = () => {
-    const url = generateURL(getFullpath())
+    const url = generateURL(getFullpath(isHashRouter))
 
     if (
       state.activatingURL?.fullpath === url.fullpath
@@ -67,14 +68,16 @@ const ClientRouter: React.FC<Props> = ({ children, fallback, params, routes, pro
   }, [])
 
   const push = React.useCallback((to: string) => {
-    history.pushState({}, null, to)
+    const url = isHashRouter ? window.location.pathname + window.location.search + '#' + to : to
+    history.pushState({}, null, url)
     handleURLChange()
-  }, [state.activeURL.fullpath, state.activatingURL?.fullpath])
+  }, [isHashRouter, state.activeURL.fullpath, state.activatingURL?.fullpath])
 
   const replace = React.useCallback((to: string) => {
-    history.replaceState({}, null, to)
+    const url = isHashRouter ? window.location.pathname + window.location.search + '#' + to : to
+    history.replaceState({}, null, url)
     handleURLChange()
-  }, [state.activeURL.fullpath, state.activatingURL?.fullpath])
+  }, [isHashRouter, state.activeURL.fullpath, state.activatingURL?.fullpath])
 
   React.useEffect(() => {
     addEventListener(window, ['popstate'], handleURLChange)
@@ -92,6 +95,10 @@ const ClientRouter: React.FC<Props> = ({ children, fallback, params, routes, pro
       </RoutesContext.Provider>
     </RouterContext.Provider>
   )
+}
+
+ClientRouter.defaultProps = {
+  isHashRouter: false,
 }
 
 export default ClientRouter
