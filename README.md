@@ -18,7 +18,7 @@ Smart React Components is consist of different modules and each one provides dif
 
 ## Documentation
 
-Visit [the documentation page](https://src.cevadtokatli.com) for more information and demo about SRC.
+Visit [the documentation page](https://cevadtokatli.github.io/smart-react-components/) for more information and demo about SRC.
 
 ## Installation
 

@@ -1,5 +1,5 @@
 # Core
 
-The core module includes [theme](https://src.cevadtokatli.com/theme), [Styled props](https://src.cevadtokatli.com/styled-props), and [Element components](https://src.cevadtokatli.com/element).
+The core module includes [theme](https://cevadtokatli.github.io/smart-react-components/#/theme), [Styled props](https://cevadtokatli.github.io/smart-react-components/#/styled-props), and [Element components](https://cevadtokatli.github.io/smart-react-components/#/element).
 
-Visit [the documentation page](https://src.cevadtokatli.com) for more information about the mentioned topics.
+Visit [the documentation page](https://cevadtokatli.github.io/smart-react-components) for more information about the mentioned topics.
