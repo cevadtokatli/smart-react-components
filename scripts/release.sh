@@ -14,7 +14,7 @@ function getVersion() {
   local currentVersion=$(grep -o '"version": "[^"]*' package.json | grep -o '[^"]*$')
   local currentVersionNumber=$(echo $currentVersion | grep -o '[0-9]*$')
 
-  if [ $shouldUpdateVersion = "false" ] ; then
+  if [ "$shouldUpdateVersion" = "false" ] ; then
     echo $currentVersion
     return
   fi
@@ -86,8 +86,8 @@ function release() {
     exit 1
   fi
 
-  local version=$(getVersion $shouldUpdateVersion)
-  if [ $shouldUpdateVersion = "false" ] ; then
+  local version=$(getVersion "$shouldUpdateVersion")
+  if [ "$shouldUpdateVersion" = "false" ] ; then
     updateVersion "version" $version
   fi
 
@@ -121,15 +121,15 @@ function main() {
     exit 1
   fi
 
-  release $module $shouldUpdateVersion
+  release $module "$shouldUpdateVersion"
 
   if [ $module = "core" ] ; then
-    release "transition" $shouldUpdateVersion
-    release "router" $shouldUpdateVersion
+    release "transition" "$shouldUpdateVersion"
+    release "router" "$shouldUpdateVersion"
   fi
 
   if [ $module != "ui" ] ; then
-    release "ui" $shouldUpdateVersion
+    release "ui" "$shouldUpdateVersion"
   fi
 
   cd ./playground
