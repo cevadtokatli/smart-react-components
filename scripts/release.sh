@@ -8,8 +8,17 @@ NC='\033[0m'
 
 # Returns the version value from the package.json increasing it by 1.
 function getVersion() {
+  # params
+  local updateVersion=$1
+
   local currentVersion=$(grep -o '"version": "[^"]*' package.json | grep -o '[^"]*$')
   local currentVersionNumber=$(echo $currentVersion | grep -o '[0-9]*$')
+
+  if [ $updateVersion = "false" ] ; then
+    echo $currentVersion
+    return
+  fi
+
   local newVersionNumber=$((currentVersionNumber + 1))
   local newVersion=$(echo $currentVersion | sed "s/[0-9]*$/$newVersionNumber/g")
 
@@ -62,6 +71,7 @@ function updateModuleDependentsPackageJson() {
 function release() {
   # params
   local module=$1
+  local updateVersion=$2
 
   echo -e "$YELLOW***** Releasing $module *****$NC"
   cd $module
@@ -77,7 +87,9 @@ function release() {
   fi
 
   local version=$(getVersion)
-  updateVersion "version" $version
+  if [ $updateVersion = "false" ] ; then
+    updateVersion "version" $version
+  fi
 
   npm run build
 
@@ -100,6 +112,7 @@ function release() {
 function main() {
   # params
   local module=$1
+  local updateVersion=$2
 
   cd ..
 
@@ -108,15 +121,15 @@ function main() {
     exit 1
   fi
 
-  release $module
+  release $module $updateVersion
 
   if [ $module = "core" ] ; then
-    release "transition"
-    release "router"
+    release "transition" $updateVersion
+    release "router" $updateVersion
   fi
 
   if [ $module != "ui" ] ; then
-    release "ui"
+    release "ui" $updateVersion
   fi
 
   cd ./playground
