@@ -9,12 +9,12 @@ NC='\033[0m'
 # Returns the version value from the package.json increasing it by 1.
 function getVersion() {
   # params
-  local updateVersion=$1
+  local shouldUpdateVersion=$1
 
   local currentVersion=$(grep -o '"version": "[^"]*' package.json | grep -o '[^"]*$')
   local currentVersionNumber=$(echo $currentVersion | grep -o '[0-9]*$')
 
-  if [ $updateVersion = "false" ] ; then
+  if [ $shouldUpdateVersion = "false" ] ; then
     echo $currentVersion
     return
   fi
@@ -71,7 +71,7 @@ function updateModuleDependentsPackageJson() {
 function release() {
   # params
   local module=$1
-  local updateVersion=$2
+  local shouldUpdateVersion=$2
 
   echo -e "$YELLOW***** Releasing $module *****$NC"
   cd $module
@@ -86,8 +86,8 @@ function release() {
     exit 1
   fi
 
-  local version=$(getVersion)
-  if [ $updateVersion = "false" ] ; then
+  local version=$(getVersion $shouldUpdateVersion)
+  if [ $shouldUpdateVersion = "false" ] ; then
     updateVersion "version" $version
   fi
 
@@ -112,7 +112,7 @@ function release() {
 function main() {
   # params
   local module=$1
-  local updateVersion=$2
+  local shouldUpdateVersion=$2
 
   cd ..
 
@@ -121,15 +121,15 @@ function main() {
     exit 1
   fi
 
-  release $module $updateVersion
+  release $module $shouldUpdateVersion
 
   if [ $module = "core" ] ; then
-    release "transition" $updateVersion
-    release "router" $updateVersion
+    release "transition" $shouldUpdateVersion
+    release "router" $shouldUpdateVersion
   fi
 
   if [ $module != "ui" ] ; then
-    release "ui" $updateVersion
+    release "ui" $shouldUpdateVersion
   fi
 
   cd ./playground
