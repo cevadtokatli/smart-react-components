@@ -92,10 +92,9 @@ function release() {
 
   if [ "$shouldUpdateVersion" = "true" ] ; then
     updateModuleDependentsPackageJson $module $version
+    git commit -a -m "Release module \"$module\" to \"$version\""
+    git push -u origin
   fi
-
-  git commit -a -m "Release module \"$module\" to \"$version\""
-  git push -u origin
 
   cd lib && npm publish
 
