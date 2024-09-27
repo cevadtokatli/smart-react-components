@@ -16,10 +16,10 @@
     "webpack-dev-server": "4.11.0"
   },
   "dependencies": {
-    "@smart-react-components/core": "2.0.0-alpha-49",
-    "@smart-react-components/router": "2.0.0-alpha-48",
-    "@smart-react-components/transition": "2.0.0-alpha-43",
-    "@smart-react-components/ui": "2.0.0-alpha-138",
+    "@smart-react-components/core": "2.0.2",
+    "@smart-react-components/router": "2.0.2",
+    "@smart-react-components/transition": "2.0.2",
+    "@smart-react-components/ui": "2.0.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-components": "5.3.5"

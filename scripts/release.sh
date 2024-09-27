@@ -8,16 +8,8 @@ NC='\033[0m'
 
 # Returns the version value from the package.json increasing it by 1.
 function getVersion() {
-  # params
-  local shouldUpdateVersion=$1
-
   local currentVersion=$(grep -o '"version": "[^"]*' package.json | grep -o '[^"]*$')
   local currentVersionNumber=$(echo $currentVersion | grep -o '[0-9]*$')
-
-  if [ "$shouldUpdateVersion" = "false" ] ; then
-    echo $currentVersion
-    return
-  fi
 
   local newVersionNumber=$((currentVersionNumber + 1))
   local newVersion=$(echo $currentVersion | sed "s/[0-9]*$/$newVersionNumber/g")
@@ -86,8 +78,8 @@ function release() {
     exit 1
   fi
 
-  local version=$(getVersion "$shouldUpdateVersion")
-  if [ "$shouldUpdateVersion" = "false" ] ; then
+  if [ "$shouldUpdateVersion" = "true" ] ; then
+    local version=$(getVersion)
     updateVersion "version" $version
   fi
 
@@ -98,7 +90,9 @@ function release() {
     exit 1
   fi
 
-  updateModuleDependentsPackageJson $module $version
+  if [ "$shouldUpdateVersion" = "true" ] ; then
+    updateModuleDependentsPackageJson $module $version
+  fi
 
   git commit -a -m "Release module \"$module\" to \"$version\""
   git push -u origin
