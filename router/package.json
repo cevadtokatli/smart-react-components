@@ -34,7 +34,8 @@
     "copy": "cp package.json lib/package.json && cp README.md lib/README.md && cp ../LICENSE lib/LICENSE",
     "dev": "tsc -w --outDir lib",
     "lint": "eslint src",
-    "release": "../scripts/release.sh router",
+    "release": "../scripts/release.sh router true",
+    "release-no-version": "../scripts/release.sh router false",
     "test": "jest"
   },
   "devDependencies": {

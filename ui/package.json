@@ -60,7 +60,8 @@
     "copy": "cp package.json lib/package.json && cp README.md lib/README.md && cp ../LICENSE lib/LICENSE",
     "dev": "tsc -w --outDir lib",
     "lint": "eslint src",
-    "release": "../scripts/release.sh ui",
+    "release": "../scripts/release.sh ui true",
+    "release-no-version": "../scripts/release.sh ui false",
     "test": "jest"
   },
   "devDependencies": {
