@@ -28,7 +28,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "yarn clear && tsc --outDir lib && yarn copy",
+    "build": "npm run clear && tsc --outDir lib && npm run copy",
     "clear": "rm -rf lib",
     "copy": "cp package.json lib/package.json && cp README.md lib/README.md && cp ../LICENSE lib/LICENSE",
     "dev": "tsc -w --outDir lib",
