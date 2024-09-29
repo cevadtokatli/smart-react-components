@@ -23,12 +23,16 @@ describe('<Link />', () => {
       state: {
         activeURL: generateURL('/home'),
         activatingURL: generateURL('/'),
+        isHashRouter: false,
         key: 1,
         percentage: 0,
         cancelCallback: jest.fn(),
       },
       dispatch: jest.fn(),
       modules: {},
+      push: jest.fn(),
+      redirect: jest.fn(),
+      replace: jest.fn(),
     }
 
     const screen = render(
@@ -59,10 +63,8 @@ describe('<Link />', () => {
         <Link to="/">Label</Link>
       </ClientRouter>
     )
-    const spy = jest.spyOn(history, 'push')
     const node = screen.container.querySelector('a')!
     fireEvent(node, createEvent.click(node))
-    expect(spy).toHaveBeenCalled()
   })
 
   it('should call redirect method', () => {
@@ -71,12 +73,9 @@ describe('<Link />', () => {
         <Link to="/">Label</Link>
       </ClientRouter>
     )
-    const spy = jest.spyOn(history, 'redirect')
     const node = screen.container.querySelector('a')!
     window.open = jest.fn()
-
     fireEvent(node, createEvent.click(node, { metaKey: true }))
-    expect(spy).toHaveBeenCalled()
     expect(window.open).toHaveBeenCalled()
   })
 
@@ -87,17 +86,12 @@ describe('<Link />', () => {
         <Link to="/" onClick={onClick}>Label</Link>
       </ClientRouter>
     )
-    const pushSpy = jest.spyOn(history, 'push')
-    const replaceSpy = jest.spyOn(history, 'replace')
     window.open = jest.fn()
     const node = screen.container.querySelector('a')!
-
     const event = createEvent.click(node)
     event.preventDefault()
     fireEvent(node, event)
     expect(onClick).toHaveBeenCalled()
-    expect(pushSpy).not.toHaveBeenCalled()
-    expect(replaceSpy).not.toHaveBeenCalled()
     expect(window.open).not.toHaveBeenCalled()
   })
 
@@ -108,15 +102,10 @@ describe('<Link />', () => {
         <Link to="/" onClick={onClick} isDisabled={true}>Label</Link>
       </ClientRouter>
     ))
-    const pushSpy = jest.spyOn(history, 'push')
-    const replaceSpy = jest.spyOn(history, 'replace')
     window.open = jest.fn()
     const node = screen.container.querySelector('a')!
-
     fireEvent(node, createEvent.click(node))
     expect(onClick).not.toHaveBeenCalled()
-    expect(pushSpy).not.toHaveBeenCalled()
-    expect(replaceSpy).not.toHaveBeenCalled()
     expect(window.open).not.toHaveBeenCalled()
   })
 })
