@@ -23,7 +23,6 @@ export interface Props extends
   KeyboardEvents {
   children: JSXChildren
   containerProps?: JSXElementProps
-  defaultValue?: string
   dropdownProps?: JSXElementProps
   hasBorder?: boolean
   hasHover?: boolean
@@ -41,10 +40,10 @@ export interface Props extends
   palette?: PaletteProp
   placeholder?: string
   rightAddon?: ContentElement
-  setValue?: SetState<string>
+  setValue: SetState<string>
   shape?: ShapeProp
   template?: JSX.Element
-  value?: string
+  value: string
   waveEffectPalette?: PaletteProp
 }
 
@@ -111,7 +110,6 @@ const SelectSearchBox = React.forwardRef<HTMLInputElement, Props>((props, forwar
       <Input
         {...extractElementProps(props, [changeEvents, focusEvents, intrinsicStyledFlexProps, intrinsicStyledMarginProps, intrinsicStyledSizeProps, keyboardEvents])}
         containerProps={props.containerProps}
-        defaultValue={props.defaultValue}
         hasBorder={props.hasBorder}
         hasSpellCheck={props.hasSpellCheck}
         inputProps={props.inputProps}
