@@ -2,23 +2,23 @@
 
 exports[`<AlertIcon /> should render component 1`] = `
 <DocumentFragment>
-  .c0 {
-  font-size: 1rem;
-}
-
-.c0 .c2 {
-  padding: .75rem 1.25rem;
-}
-
-.c3 {
+  .c2 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  min-width: 1px;
+}
+
+.c0 {
+  font-size: 1rem;
+}
+
+.c0 .src-alert-content {
+  padding: .75rem 1.25rem;
 }
 
 .c1 {
   border: solid 1px;
-  border-left-width: 10px;
   border-radius: .25rem;
   box-sizing: border-box;
   display: -webkit-box;
@@ -29,36 +29,38 @@ exports[`<AlertIcon /> should render component 1`] = `
   word-break: break-word;
   word-wrap: break-word;
   background: #0665d0;
-  border-color: #054D9F;
+  border-color: #0552A9;
   color: #fff;
+  border-left-width: 10px;
 }
 
-.c1 .c2 > header,
-.c1 .c2 > h1,
-.c1 .c2 > h2,
-.c1 .c2 > h3,
-.c1 .c2 > h4,
-.c1 .c2 > h5,
-.c1 .c2 > h6,
-.c1 .c2 > p,
-.c1 .c2 > hr {
+.c1 .src-alert-content > header,
+.c1 .src-alert-content > h1,
+.c1 .src-alert-content > h2,
+.c1 .src-alert-content > h3,
+.c1 .src-alert-content > h4,
+.c1 .src-alert-content > h5,
+.c1 .src-alert-content > h6,
+.c1 .src-alert-content > p,
+.c1 .src-alert-content > hr {
   margin-bottom: 1rem;
   margin-top: 0;
 }
 
-.c1 .c2 > header:last-child,
-.c1 .c2 > h1:last-child,
-.c1 .c2 > h2:last-child,
-.c1 .c2 > h3:last-child,
-.c1 .c2 > h4:last-child,
-.c1 .c2 > h5:last-child,
-.c1 .c2 > h6:last-child,
-.c1 .c2 > p:last-child,
-.c1 .c2 > hr:last-child {
+.c1 .src-alert-content > header:last-child,
+.c1 .src-alert-content > h1:last-child,
+.c1 .src-alert-content > h2:last-child,
+.c1 .src-alert-content > h3:last-child,
+.c1 .src-alert-content > h4:last-child,
+.c1 .src-alert-content > h5:last-child,
+.c1 .src-alert-content > h6:last-child,
+.c1 .src-alert-content > p:last-child,
+.c1 .src-alert-content > hr:last-child {
   margin-bottom: 0;
 }
 
 .c1 a {
+  color: inherit;
   font-weight: 500;
 }
 
@@ -68,7 +70,7 @@ exports[`<AlertIcon /> should render component 1`] = `
 }
 
 .c1 hr {
-  background: #054D9F;
+  background: #0552A9;
   border: 0;
   height: 1px;
   width: 100%;
@@ -79,7 +81,7 @@ exports[`<AlertIcon /> should render component 1`] = `
     shape="rectangle"
   >
     <div
-      class="c2 c3"
+      class="c2 src-alert-content"
     >
       <svg />
     </div>

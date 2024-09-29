@@ -12,31 +12,35 @@ exports[`<InputNumber /> should render component 1`] = `
   flex: 1 1 auto;
 }
 
-.c4 .c9 {
+.c4 .src-input-addon {
   padding: 0;
 }
 
-.c4 .c9 > div {
+.c4 .src-input-addon > div {
   padding: 0 0.45rem;
 }
 
-.c10 {
+.c8 {
   font-size: 1rem;
   padding: 0.45rem;
 }
 
-.c12 {
+.c10 {
   -webkit-align-items: flex-end;
   -webkit-box-align: flex-end;
   -ms-flex-align: flex-end;
   align-items: flex-end;
 }
 
-.c13 {
+.c11 {
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+}
+
+.c0 {
+  display: block;
 }
 
 .c0 > span {
@@ -48,14 +52,14 @@ exports[`<InputNumber /> should render component 1`] = `
 }
 
 .c1 > span {
-  cursor: default;
   display: block;
   word-break: break-word;
   word-wrap: break-word;
   -webkit-tap-highlight-color: transparent;
+  cursor: default;
 }
 
-.c11 {
+.c9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -82,14 +86,15 @@ exports[`<InputNumber /> should render component 1`] = `
   color: #323a46;
 }
 
-.c7 {
+.c6 {
   font-size: .875rem;
   padding: .45rem .9rem;
   padding-right: 0.45rem;
 }
 
-.c8 {
+.c7 {
   border: 0;
+  border-radius: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -105,48 +110,48 @@ exports[`<InputNumber /> should render component 1`] = `
   color: #323a46;
 }
 
-.c8::-webkit-input-placeholder {
+.c7::-webkit-input-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c8::-moz-placeholder {
+.c7::-moz-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c8:-moz-placeholder {
+.c7:-moz-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c8:-ms-input-placeholder {
+.c7:-ms-input-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c8::-webkit-input-placeholder {
+.c7::-webkit-input-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c8::-moz-placeholder {
+.c7::-moz-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c8:-ms-input-placeholder {
+.c7:-ms-input-placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c8::placeholder {
+.c7::placeholder {
   opacity: 1;
   color: #dbdbdb;
 }
 
-.c8:active,
-.c8:focus {
+.c7:active,
+.c7:focus {
   outline: 0;
 }
 
@@ -160,17 +165,17 @@ exports[`<InputNumber /> should render component 1`] = `
   flex: 1 1 auto;
 }
 
-.c5 .c6 {
+.c5 .src-input {
   -moz-appearance: textfield;
 }
 
-.c5 .c6::-webkit-inner-spin-button,
-.c5 .c6::-webkit-outer-spin-button {
+.c5 .src-input::-webkit-inner-spin-button,
+.c5 .src-input::-webkit-outer-spin-button {
   margin: 0;
   -webkit-appearance: none;
 }
 
-.c5 .c9 {
+.c5 .src-input-addon {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -180,7 +185,7 @@ exports[`<InputNumber /> should render component 1`] = `
   user-select: none;
 }
 
-.c5 .c9 > div {
+.c5 .src-input-addon > div {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -189,16 +194,16 @@ exports[`<InputNumber /> should render component 1`] = `
   visibility: hidden;
 }
 
-.c5 .c9 > div > svg {
+.c5 .src-input-addon > div > svg {
   height: .65rem;
   width: .65rem;
 }
 
-.c5 .c9 > div:active {
+.c5 .src-input-addon > div:active {
   opacity: .3;
 }
 
-.c5:hover .c9 > div {
+.c5:hover .src-input-addon > div {
   visibility: visible;
 }
 
@@ -213,6 +218,7 @@ exports[`<InputNumber /> should render component 1`] = `
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   min-width: 1px;
+  overflow: hidden;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: border;
@@ -222,6 +228,7 @@ exports[`<InputNumber /> should render component 1`] = `
 
 <label
     class="c0 c1"
+    display="block"
   >
     <span>
       Label
@@ -238,17 +245,17 @@ exports[`<InputNumber /> should render component 1`] = `
           class="c4 c5"
         >
           <input
-            class="c6 c7 c8"
+            class="c6 c7 src-input "
             shape="rectangle"
             type="number"
             value="1"
           />
           <div
-            class="c9 c10 c11"
+            class="c8 c9 src-input-addon "
             shape="rectangle"
           >
             <div
-              class="c12"
+              class="c10"
             >
               <svg
                 class=""
@@ -260,7 +267,7 @@ exports[`<InputNumber /> should render component 1`] = `
               </svg>
             </div>
             <div
-              class="c13"
+              class="c11"
             >
               <svg
                 class=""

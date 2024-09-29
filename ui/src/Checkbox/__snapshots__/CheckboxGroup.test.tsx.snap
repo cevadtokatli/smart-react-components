@@ -82,7 +82,7 @@ exports[`<CheckboxGroup /> should render component 1`] = `
   width: 100%;
 }
 
-.c7 {
+.c6 {
   border: solid 2px #dbdbdb;
   box-sizing: border-box;
   display: -webkit-box;
@@ -97,7 +97,7 @@ exports[`<CheckboxGroup /> should render component 1`] = `
   position: relative;
 }
 
-.c9 {
+.c7 {
   position: absolute;
   left: -2px;
   height: calc(100% + 4px);
@@ -107,14 +107,14 @@ exports[`<CheckboxGroup /> should render component 1`] = `
   width: calc(100% + 4px);
 }
 
-.c11 {
+.c8 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   position: relative;
 }
 
-.c11 > path {
+.c8 > path {
   fill: transparent;
   stroke: #fff;
   stroke-width: 4px;
@@ -128,33 +128,41 @@ exports[`<CheckboxGroup /> should render component 1`] = `
   position: relative;
 }
 
-.c4 .c6 {
+.c4 .src-checkbox-container {
   border-radius: .125rem;
+  -webkit-transition: border-color 200ms 0s ease-in-out;
+  transition: border-color 200ms 0s ease-in-out;
   background: #dbdbdb;
 }
 
-.c4 .c8 {
+.c4 .src-checkbox-rectangle {
   border-radius: .125rem;
 }
 
-.c4 .c8 {
+.c4 .src-checkbox-container {
+  border-color: #0665d0;
+}
+
+.c4 .src-checkbox-container .src-checkbox-rectangle {
   background: #0665d0;
 }
 
-.c4 .c10 > path {
+.c4 .src-checkbox-container .src-checkbox-svg > path {
   stroke-dashoffset: 0;
 }
 
-.c12 {
+.c9 {
   position: relative;
 }
 
-.c12 .c6 {
+.c9 .src-checkbox-container {
   border-radius: .125rem;
+  -webkit-transition: border-color 200ms 0s ease-in-out;
+  transition: border-color 200ms 0s ease-in-out;
   background: #dbdbdb;
 }
 
-.c12 .c8 {
+.c9 .src-checkbox-rectangle {
   border-radius: .125rem;
 }
 
@@ -174,13 +182,13 @@ exports[`<CheckboxGroup /> should render component 1`] = `
           type="checkbox"
         />
         <div
-          class="c6 c7"
+          class="c6 src-checkbox-container"
         >
           <div
-            class="c8 c9"
+            class="c7 src-checkbox-rectangle"
           />
           <svg
-            class="c10 c11"
+            class="c8 src-checkbox-svg"
             viewBox="0 0 32 32"
           >
             <path
@@ -197,7 +205,7 @@ exports[`<CheckboxGroup /> should render component 1`] = `
       class="c1 c2"
     >
       <div
-        class="c3 c12"
+        class="c3 c9"
         shape="rectangle"
       >
         <input
@@ -205,13 +213,13 @@ exports[`<CheckboxGroup /> should render component 1`] = `
           type="checkbox"
         />
         <div
-          class="c6 c7"
+          class="c6 src-checkbox-container"
         >
           <div
-            class="c8 c9"
+            class="c7 src-checkbox-rectangle"
           />
           <svg
-            class="c10 c11"
+            class="c8 src-checkbox-svg"
             viewBox="0 0 32 32"
           >
             <path
@@ -228,7 +236,7 @@ exports[`<CheckboxGroup /> should render component 1`] = `
       class="c1 c2"
     >
       <div
-        class="c3 c12"
+        class="c3 c9"
         shape="rectangle"
       >
         <input
@@ -236,13 +244,13 @@ exports[`<CheckboxGroup /> should render component 1`] = `
           type="checkbox"
         />
         <div
-          class="c6 c7"
+          class="c6 src-checkbox-container"
         >
           <div
-            class="c8 c9"
+            class="c7 src-checkbox-rectangle"
           />
           <svg
-            class="c10 c11"
+            class="c8 src-checkbox-svg"
             viewBox="0 0 32 32"
           >
             <path

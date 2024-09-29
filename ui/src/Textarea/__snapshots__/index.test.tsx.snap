@@ -12,6 +12,10 @@ exports[`<Textarea /> should render component 1`] = `
   flex: 1 1 auto;
 }
 
+.c0 {
+  display: block;
+}
+
 .c0 > span {
   margin-bottom: .5rem;
 }
@@ -21,11 +25,11 @@ exports[`<Textarea /> should render component 1`] = `
 }
 
 .c1 > span {
-  cursor: default;
   display: block;
   word-break: break-word;
   word-wrap: break-word;
   -webkit-tap-highlight-color: transparent;
+  cursor: default;
 }
 
 .c4 {
@@ -36,6 +40,7 @@ exports[`<Textarea /> should render component 1`] = `
 
 .c5 {
   border: 0;
+  border-radius: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -107,6 +112,7 @@ exports[`<Textarea /> should render component 1`] = `
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   min-width: 1px;
+  overflow: hidden;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: border;
@@ -116,6 +122,7 @@ exports[`<Textarea /> should render component 1`] = `
 
 <label
     class="c0 c1"
+    display="block"
   >
     <div
       class="c2"
@@ -126,7 +133,7 @@ exports[`<Textarea /> should render component 1`] = `
         shape="rectangle"
       >
         <textarea
-          class="c4 c5"
+          class="c4 c5 src-input "
           shape="rectangle"
           style="height: 150px;"
           type="text"

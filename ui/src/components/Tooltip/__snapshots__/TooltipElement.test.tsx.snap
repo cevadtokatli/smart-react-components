@@ -47,7 +47,7 @@ exports[`<TooltipElement /> should render component 1`] = `
   box-sizing: border-box;
   font-family: inherit;
   position: fixed;
-  z-index: 1000;
+  z-index: 3000;
   background: #0665d0;
   color: #fff;
   fill: #fff;
@@ -125,7 +125,7 @@ exports[`<TooltipElement /> should render component with responsive size props 1
   box-sizing: border-box;
   font-family: inherit;
   position: fixed;
-  z-index: 1000;
+  z-index: 3000;
   background: #0665d0;
   color: #fff;
   fill: #fff;
@@ -217,10 +217,11 @@ exports[`<TooltipElement /> should render component with soft colors 1`] = `
   box-sizing: border-box;
   font-family: inherit;
   position: fixed;
-  z-index: 1000;
+  z-index: 3000;
   background: #cde0f5;
   color: #033c7c;
   fill: #033c7c;
+  font-weight: 600;
 }
 
 .c1 .c2 {
@@ -295,7 +296,7 @@ exports[`<TooltipElement /> should render component with transition 1`] = `
   box-sizing: border-box;
   font-family: inherit;
   position: fixed;
-  z-index: 1000;
+  z-index: 3000;
   background: #0665d0;
   color: #fff;
   fill: #fff;

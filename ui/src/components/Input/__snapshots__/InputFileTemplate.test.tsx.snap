@@ -10,13 +10,13 @@ exports[`<InputFileTemplate /> should render multiple values 1`] = `
   margin: .3125rem .3125rem;
 }
 
-.c4 .c8 {
+.c4 .src-badge-content {
   font-size: .75rem;
   padding: .1875rem .375rem;
   padding-left: 0.1875rem;
 }
 
-.c4 .c6 {
+.c4 .src-badge-icon {
   padding: 0 0.1875rem;
 }
 
@@ -29,7 +29,7 @@ exports[`<InputFileTemplate /> should render multiple values 1`] = `
   font-size: .75rem;
 }
 
-.c7 {
+.c6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -39,7 +39,7 @@ exports[`<InputFileTemplate /> should render multiple values 1`] = `
   align-self: stretch;
   border: solid 1px;
   border-right: 0;
-  border-color: #0553AC;
+  border-color: #0556B2;
   border-radius: .15rem;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
@@ -54,17 +54,18 @@ exports[`<InputFileTemplate /> should render multiple values 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background: #0553AC;
+  background: #0556B2;
   color: #fff;
   fill: #fff;
+  cursor: pointer;
 }
 
-.c7:active {
-  background: #054D9F;
-  border-color: #054D9F;
+.c6:active {
+  background: #0552A9;
+  border-color: #0552A9;
 }
 
-.c9 {
+.c7 {
   border: solid 1px;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
@@ -81,18 +82,18 @@ exports[`<InputFileTemplate /> should render multiple values 1`] = `
   word-wrap: break-word;
 }
 
-.c5 .c8 {
+.c5 .src-badge-content {
   border-color: #0665d0;
   border-radius: .15rem;
 }
 
-.c5 .c8 {
+.c5 .src-badge-content {
   background: #0665d0;
   color: #fff;
   fill: #fff;
 }
 
-.c5 .c8 {
+.c5 .src-badge-content {
   border-left: 0;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -119,6 +120,7 @@ exports[`<InputFileTemplate /> should render multiple values 1`] = `
 
 .c1 {
   border: 0;
+  border-radius: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -145,6 +147,7 @@ exports[`<InputFileTemplate /> should render multiple values 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   position: relative;
+  cursor: pointer;
 }
 
 .c1:active,
@@ -153,7 +156,7 @@ exports[`<InputFileTemplate /> should render multiple values 1`] = `
 }
 
 <div
-    class="c0 c1"
+    class="c0 c1 src-input "
   >
     <input />
     <div
@@ -164,7 +167,7 @@ exports[`<InputFileTemplate /> should render multiple values 1`] = `
         shape="rectangle"
       >
         <div
-          class="c6  c7"
+          class=" c6 src-badge-icon"
           shape="rectangle"
         >
           <svg
@@ -177,7 +180,7 @@ exports[`<InputFileTemplate /> should render multiple values 1`] = `
           </svg>
         </div>
         <div
-          class="c8 c9"
+          class="c7 src-badge-content"
         >
           foo.jpg
         </div>
@@ -187,7 +190,7 @@ exports[`<InputFileTemplate /> should render multiple values 1`] = `
         shape="rectangle"
       >
         <div
-          class="c6  c7"
+          class=" c6 src-badge-icon"
           shape="rectangle"
         >
           <svg
@@ -200,7 +203,7 @@ exports[`<InputFileTemplate /> should render multiple values 1`] = `
           </svg>
         </div>
         <div
-          class="c8 c9"
+          class="c7 src-badge-content"
         >
           bar.jpg
         </div>
@@ -219,6 +222,7 @@ exports[`<InputFileTemplate /> should render placeholder 1`] = `
 
 .c1 {
   border: 0;
+  border-radius: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -245,6 +249,7 @@ exports[`<InputFileTemplate /> should render placeholder 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   position: relative;
+  cursor: pointer;
 }
 
 .c1:active,
@@ -253,7 +258,7 @@ exports[`<InputFileTemplate /> should render placeholder 1`] = `
 }
 
 <div
-    class="c0 c1"
+    class="c0 c1 src-input "
   >
     <input />
     <div
@@ -274,6 +279,7 @@ exports[`<InputFileTemplate /> should render single value 1`] = `
 
 .c1 {
   border: 0;
+  border-radius: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -300,6 +306,7 @@ exports[`<InputFileTemplate /> should render single value 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   position: relative;
+  cursor: pointer;
 }
 
 .c1:active,
@@ -308,7 +315,7 @@ exports[`<InputFileTemplate /> should render single value 1`] = `
 }
 
 <div
-    class="c0 c1"
+    class="c0 c1 src-input "
   >
     <input />
     file.jpg

@@ -12,6 +12,15 @@ exports[`<SelectBox /> should render component 1`] = `
   flex: 1 1 auto;
 }
 
+.c3 {
+  cursor: default;
+}
+
+.c0 {
+  cursor: pointer;
+  display: block;
+}
+
 .c0 > span {
   margin-bottom: .5rem;
 }
@@ -21,14 +30,14 @@ exports[`<SelectBox /> should render component 1`] = `
 }
 
 .c1 > span {
-  cursor: default;
   display: block;
   word-break: break-word;
   word-wrap: break-word;
   -webkit-tap-highlight-color: transparent;
+  cursor: default;
 }
 
-.c6 {
+.c7 {
   height: 100%;
   left: 0;
   opacity: 0;
@@ -38,19 +47,39 @@ exports[`<SelectBox /> should render component 1`] = `
   width: 100%;
 }
 
-.c7 {
+.c4 {
+  border: solid 1px;
+  border-radius: .2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 1px;
+  overflow: hidden;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: border;
+  transition-property: border;
+  border-color: #dbdbdb;
+}
+
+.c8 {
   fill: currentcolor;
   height: 1rem;
   width: 1rem;
 }
 
-.c4 {
+.c5 {
   font-size: .875rem;
   padding: .45rem .9rem;
 }
 
-.c5 {
+.c6 {
   border: 0;
+  border-radius: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -79,27 +108,9 @@ exports[`<SelectBox /> should render component 1`] = `
   position: relative;
 }
 
-.c5:active,
-.c5:focus {
+.c6:active,
+.c6:focus {
   outline: 0;
-}
-
-.c3 {
-  border: solid 1px;
-  border-radius: .2rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-width: 1px;
-  -webkit-transition: 200ms 0s ease-in-out;
-  transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: border;
-  transition-property: border;
-  border-color: #dbdbdb;
 }
 
 @media (max-width:767px) {
@@ -120,27 +131,30 @@ exports[`<SelectBox /> should render component 1`] = `
 
 <div
     class="c0 c1"
+    cursor="$cursor.dropdown"
+    display="block"
   >
     <div
       class="c2"
       display="flex"
     >
       <div
-        class=" c3"
+        class="c3 c4"
+        cursor="$cursor.selectBox"
         shape="rectangle"
       >
         <div
-          class="c4 c5"
+          class="c5 c6 src-input "
         >
           <input
-            class="c6"
+            class="c7"
             value="item-1"
           />
           <div>
             Item 1
           </div>
           <svg
-            class="c7"
+            class="c8"
             fill="currentcolor"
             viewBox="5 4 14 14"
           >
@@ -179,6 +193,7 @@ exports[`<SelectBox /> should render component 1`] = `
 }
 
 .c8 {
+  cursor: default;
   isolation: isolate;
   overflow: hidden;
   position: relative;
@@ -220,27 +235,63 @@ exports[`<SelectBox /> should render component 1`] = `
 
 .c9 {
   border-radius: .2rem;
-  cursor: default;
+  fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
   transition-property: background,color,fill;
-  background: #0553AC;
+  background: #0556B2;
   color: #fff;
+}
+
+.c9 .svg,
+.c9 .svg .fill,
+.c9 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
+}
+
+.c9 .svg,
+.c9 .svg .fill {
+  fill: #fff;
+}
+
+.c9 .svg .stroke {
+  stroke: #fff;
 }
 
 .c10 {
   border-radius: .2rem;
-  cursor: default;
+  fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
   transition-property: background,color,fill;
+}
+
+.c10 .svg,
+.c10 .svg .fill,
+.c10 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
 }
 
 .c10:hover {
   background: #0665d0;
   color: #fff;
+}
+
+.c10:hover .svg,
+.c10:hover .svg .fill {
+  fill: #fff;
+}
+
+.c10:hover .svg .stroke {
+  stroke: #fff;
 }
 
 @media (max-width:767px) {
@@ -256,7 +307,7 @@ exports[`<SelectBox /> should render component 1`] = `
     justify-content: center;
     height: 100%;
     left: 0;
-    padding: 1.75rem;
+    padding: 1.75rem 1.75rem;
     top: 0;
     touch-action: none;
     width: 100%;
@@ -349,7 +400,7 @@ exports[`<SelectBox /> should render component 1`] = `
 }
 
 <div
-    class=" c0 c1 sc-bczRLJ sc-ftvSup  c0"
+    class=" c0 c1 sc-bczRLJ sc-papXJ  c0"
   >
     <div
       class="c2"
@@ -372,18 +423,21 @@ exports[`<SelectBox /> should render component 1`] = `
         </div>
         <div
           class="c8 c9"
+          cursor="$cursor.selectBox"
           overflow="hidden"
         >
           Item 1
         </div>
         <div
           class="c8 c10"
+          cursor="$cursor.selectBox"
           overflow="hidden"
         >
           Item 2
         </div>
         <div
           class="c8 c10"
+          cursor="$cursor.selectBox"
           overflow="hidden"
         >
           Item 3

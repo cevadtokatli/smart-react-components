@@ -95,6 +95,7 @@ const ButtonSelect = React.forwardRef<HTMLDivElement, Props>((props, forwardRef)
         { (Array.isArray(props.children) ? props.children : [props.children]).map((item, idx) => React.cloneElement(item, {
           key: item.key ?? idx,
           active: props.active,
+          cursorKey: 'selectBox',
           hasHover: props.hasHover,
           hasWaveEffect: props.hasWaveEffect,
           isEmbedded: false,

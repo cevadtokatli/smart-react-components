@@ -23,7 +23,7 @@ exports[`<PaginationList /> should render component 1`] = `
   align-items: center;
   border: solid 1px;
   border-radius: .125rem;
-  cursor: default;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -42,12 +42,12 @@ exports[`<PaginationList /> should render component 1`] = `
   color: #fff;
   fill: #fff;
   background: #0665d0;
-  border-color: #065DC0;
+  border-color: #055BBB;
 }
 
 .c1 > a:hover {
-  background: #0553AC;
-  border-color: #054D9F;
+  background: #0556B2;
+  border-color: #0552A9;
 }
 
 .c3 {
@@ -85,7 +85,7 @@ exports[`<PaginationList /> should render component 1`] = `
   color: #fff;
   fill: #fff;
   background: #0665d0;
-  border-color: #065DC0;
+  border-color: #055BBB;
 }
 
 .c4 {
@@ -102,7 +102,7 @@ exports[`<PaginationList /> should render component 1`] = `
   align-items: center;
   border: solid 1px;
   border-radius: .125rem;
-  cursor: default;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -120,8 +120,8 @@ exports[`<PaginationList /> should render component 1`] = `
   padding: .4rem .65rem;
   color: #fff;
   fill: #fff;
-  background: #0553AC;
-  border-color: #054D9F;
+  background: #0556B2;
+  border-color: #0552A9;
 }
 
 .c0 {

@@ -16,7 +16,7 @@ exports[`<PaginationItemElement /> should be active 1`] = `
   align-items: center;
   border: solid 1px;
   border-radius: .125rem;
-  cursor: default;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -34,8 +34,8 @@ exports[`<PaginationItemElement /> should be active 1`] = `
   padding: .4rem .65rem;
   color: #fff;
   fill: #fff;
-  background: #0553AC;
-  border-color: #054D9F;
+  background: #0556B2;
+  border-color: #0552A9;
 }
 
 <li
@@ -61,7 +61,7 @@ exports[`<PaginationItemElement /> should be circle 1`] = `
   align-items: center;
   border: solid 1px;
   border-radius: 100%;
-  cursor: default;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -82,12 +82,12 @@ exports[`<PaginationItemElement /> should be circle 1`] = `
   color: #fff;
   fill: #fff;
   background: #0665d0;
-  border-color: #065DC0;
+  border-color: #055BBB;
 }
 
 .c0 > a:hover {
-  background: #0553AC;
-  border-color: #054D9F;
+  background: #0556B2;
+  border-color: #0552A9;
 }
 
 <li
@@ -134,7 +134,7 @@ exports[`<PaginationItemElement /> should be disabled 1`] = `
   color: #fff;
   fill: #fff;
   background: #0665d0;
-  border-color: #065DC0;
+  border-color: #055BBB;
 }
 
 <li
@@ -160,7 +160,7 @@ exports[`<PaginationItemElement /> should render component 1`] = `
   align-items: center;
   border: solid 1px;
   border-radius: .125rem;
-  cursor: default;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -179,12 +179,12 @@ exports[`<PaginationItemElement /> should render component 1`] = `
   color: #fff;
   fill: #fff;
   background: #0665d0;
-  border-color: #065DC0;
+  border-color: #055BBB;
 }
 
 .c0 > a:hover {
-  background: #0553AC;
-  border-color: #054D9F;
+  background: #0556B2;
+  border-color: #0552A9;
 }
 
 <li
@@ -210,7 +210,7 @@ exports[`<PaginationItemElement /> should render component outline 1`] = `
   align-items: center;
   border: solid 1px;
   border-radius: .125rem;
-  cursor: default;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -261,7 +261,7 @@ exports[`<PaginationItemElement /> should render component outline with soft col
   align-items: center;
   border: solid 1px;
   border-radius: .125rem;
-  cursor: default;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -276,6 +276,7 @@ exports[`<PaginationItemElement /> should render component outline with soft col
   transition: 300ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
+  font-weight: 600;
   padding: .4rem .65rem;
   border-color: #dbdbdb;
   color: #323a46;
@@ -312,7 +313,7 @@ exports[`<PaginationItemElement /> should render component with soft colors 1`] 
   align-items: center;
   border: solid 1px;
   border-radius: .125rem;
-  cursor: default;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -327,6 +328,7 @@ exports[`<PaginationItemElement /> should render component with soft colors 1`] 
   transition: 300ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
+  font-weight: 600;
   padding: .4rem .65rem;
   color: #033c7c;
   fill: #033c7c;

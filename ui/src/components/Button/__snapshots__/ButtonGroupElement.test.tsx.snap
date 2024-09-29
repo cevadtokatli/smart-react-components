@@ -11,10 +11,6 @@ exports[`<ButtonGroupElement /> children should be block 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
 }
 
 .c0 > * {
@@ -29,9 +25,11 @@ exports[`<ButtonGroupElement /> children should be block 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  border-radius: undefined;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 .c1 > *:focus {
@@ -59,10 +57,6 @@ exports[`<ButtonGroupElement /> children should have space 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -73,9 +67,11 @@ exports[`<ButtonGroupElement /> children should have space 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  border-radius: undefined;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 .c2 > *:focus {
@@ -99,10 +95,6 @@ exports[`<ButtonGroupElement /> should render component 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -113,9 +105,11 @@ exports[`<ButtonGroupElement /> should render component 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  border-radius: undefined;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 .c1 > *:focus {

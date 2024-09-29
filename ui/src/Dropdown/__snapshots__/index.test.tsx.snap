@@ -18,7 +18,9 @@ exports[`<Dropdown /> should render component 1`] = `
 
 }
 
-<button>
+<button
+    cursor="$cursor.dropdown"
+  >
     Button
   </button>
   .c2 {
@@ -48,6 +50,7 @@ exports[`<Dropdown /> should render component 1`] = `
 }
 
 .c8 {
+  cursor: pointer;
   isolation: isolate;
   overflow: hidden;
   position: relative;
@@ -67,16 +70,34 @@ exports[`<Dropdown /> should render component 1`] = `
 
 .c9 {
   border-radius: .2rem;
-  cursor: default;
+  fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
   transition-property: background,color,fill;
 }
 
+.c9 .svg,
+.c9 .svg .fill,
+.c9 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
+}
+
 .c9:hover {
   background: #0665d0;
   color: #fff;
+}
+
+.c9:hover .svg,
+.c9:hover .svg .fill {
+  fill: #fff;
+}
+
+.c9:hover .svg .stroke {
+  stroke: #fff;
 }
 
 .c6 {
@@ -114,7 +135,7 @@ exports[`<Dropdown /> should render component 1`] = `
     justify-content: center;
     height: 100%;
     left: 0;
-    padding: 1.75rem;
+    padding: 1.75rem 1.75rem;
     top: 0;
     touch-action: none;
     width: 100%;
@@ -224,24 +245,27 @@ exports[`<Dropdown /> should render component 1`] = `
       >
         <div
           class="c7"
-          font-weight="$fontWeight.dropdownCategory"
+          font-weight="$fontWeight.semibold"
         >
           Category
         </div>
         <div
           class="c8 c9"
+          cursor="$cursor.dropdown"
           overflow="hidden"
         >
           Item 1
         </div>
         <div
           class="c8 c9"
+          cursor="$cursor.dropdown"
           overflow="hidden"
         >
           Item 2
         </div>
         <div
           class="c8 c9"
+          cursor="$cursor.dropdown"
           overflow="hidden"
         >
           Item 3

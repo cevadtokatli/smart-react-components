@@ -64,7 +64,7 @@ exports[`<Checkbox /> should not render label 1`] = `
   width: 16px;
 }
 
-.c6 {
+.c5 {
   border: solid 2px #dbdbdb;
   box-sizing: border-box;
   display: -webkit-box;
@@ -79,7 +79,7 @@ exports[`<Checkbox /> should not render label 1`] = `
   position: relative;
 }
 
-.c8 {
+.c6 {
   position: absolute;
   left: -2px;
   height: calc(100% + 4px);
@@ -89,14 +89,14 @@ exports[`<Checkbox /> should not render label 1`] = `
   width: calc(100% + 4px);
 }
 
-.c9 {
+.c7 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   position: relative;
 }
 
-.c9 > path {
+.c7 > path {
   fill: transparent;
   stroke: #fff;
   stroke-width: 4px;
@@ -110,12 +110,14 @@ exports[`<Checkbox /> should not render label 1`] = `
   position: relative;
 }
 
-.c3 .c5 {
+.c3 .src-checkbox-container {
   border-radius: .125rem;
+  -webkit-transition: border-color 200ms 0s ease-in-out;
+  transition: border-color 200ms 0s ease-in-out;
   background: #dbdbdb;
 }
 
-.c3 .c7 {
+.c3 .src-checkbox-rectangle {
   border-radius: .125rem;
 }
 
@@ -131,13 +133,13 @@ exports[`<Checkbox /> should not render label 1`] = `
         type="checkbox"
       />
       <div
-        class="c5 c6"
+        class="c5 src-checkbox-container"
       >
         <div
-          class="c7 c8"
+          class="c6 src-checkbox-rectangle"
         />
         <svg
-          class="c9"
+          class="c7 src-checkbox-svg"
           viewBox="0 0 32 32"
         >
           <path
@@ -214,7 +216,7 @@ exports[`<Checkbox /> should render component 1`] = `
   width: 16px;
 }
 
-.c6 {
+.c5 {
   border: solid 2px #dbdbdb;
   box-sizing: border-box;
   display: -webkit-box;
@@ -229,7 +231,7 @@ exports[`<Checkbox /> should render component 1`] = `
   position: relative;
 }
 
-.c8 {
+.c6 {
   position: absolute;
   left: -2px;
   height: calc(100% + 4px);
@@ -239,14 +241,14 @@ exports[`<Checkbox /> should render component 1`] = `
   width: calc(100% + 4px);
 }
 
-.c10 {
+.c7 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   position: relative;
 }
 
-.c10 > path {
+.c7 > path {
   fill: transparent;
   stroke: #fff;
   stroke-width: 4px;
@@ -260,20 +262,26 @@ exports[`<Checkbox /> should render component 1`] = `
   position: relative;
 }
 
-.c3 .c5 {
+.c3 .src-checkbox-container {
   border-radius: .125rem;
+  -webkit-transition: border-color 200ms 0s ease-in-out;
+  transition: border-color 200ms 0s ease-in-out;
   background: #dbdbdb;
 }
 
-.c3 .c7 {
+.c3 .src-checkbox-rectangle {
   border-radius: .125rem;
 }
 
-.c3 .c7 {
+.c3 .src-checkbox-container {
+  border-color: #0665d0;
+}
+
+.c3 .src-checkbox-container .src-checkbox-rectangle {
   background: #0665d0;
 }
 
-.c3 .c9 > path {
+.c3 .src-checkbox-container .src-checkbox-svg > path {
   stroke-dashoffset: 0;
 }
 
@@ -290,13 +298,13 @@ exports[`<Checkbox /> should render component 1`] = `
         type="checkbox"
       />
       <div
-        class="c5 c6"
+        class="c5 src-checkbox-container"
       >
         <div
-          class="c7 c8"
+          class="c6 src-checkbox-rectangle"
         />
         <svg
-          class="c9 c10"
+          class="c7 src-checkbox-svg"
           viewBox="0 0 32 32"
         >
           <path

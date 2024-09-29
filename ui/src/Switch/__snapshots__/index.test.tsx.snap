@@ -64,13 +64,13 @@ exports[`<Switch /> should render component 1`] = `
   width: 28px;
 }
 
-.c2 .c5 {
+.c2 .switch-slider {
   height: 14px;
   width: 14px;
   left: 12px;
 }
 
-.c6 {
+.c5 {
   background: #fff;
   border-radius: 100%;
   box-shadow: 0 1px 3px rgba(0,0,0,.4);
@@ -114,7 +114,7 @@ exports[`<Switch /> should render component 1`] = `
         type="checkbox"
       />
       <div
-        class="c5 c6"
+        class="c5 switch-slider"
       />
     </div>
     <span>

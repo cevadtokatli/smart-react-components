@@ -7,197 +7,7 @@ exports[`<RadioElement /> should not be checked 1`] = `
   width: 16px;
 }
 
-.c0 .c6 {
-  height: 4px;
-  width: 4px;
-}
-
-.c3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: solid 2px #dbdbdb;
-  border-radius: 100%;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 100%;
-}
-
-.c5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-radius: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  overflow: hidden;
-  -webkit-transition: 200ms 0s ease-in-out;
-  transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: height,width;
-  transition-property: height,width;
-}
-
-.c7 {
-  background: #fff;
-  border-radius: 100%;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.c1 {
-  position: relative;
-}
-
-.c1 .c2 {
-  background: #dbdbdb;
-}
-
-.c1 .c4 {
-  background: #0665d0;
-  height: 0;
-  width: 0;
-}
-
-<div
-    class="c0 c1"
-  >
-    <div
-      class="c2 c3"
-    >
-      <div
-        class="c4 c5"
-      >
-        <div
-          class="c6 c7"
-        />
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`<RadioElement /> should render component 1`] = `
-<DocumentFragment>
-  .c0 {
-  height: 16px;
-  width: 16px;
-}
-
-.c0 .c6 {
-  height: 4px;
-  width: 4px;
-}
-
-.c3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: solid 2px #dbdbdb;
-  border-radius: 100%;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 100%;
-}
-
-.c5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-radius: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  overflow: hidden;
-  -webkit-transition: 200ms 0s ease-in-out;
-  transition: 200ms 0s ease-in-out;
-  -webkit-transition-property: height,width;
-  transition-property: height,width;
-}
-
-.c7 {
-  background: #fff;
-  border-radius: 100%;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.c1 {
-  position: relative;
-}
-
-.c1 .c2 {
-  background: #dbdbdb;
-}
-
-.c1 .c4 {
-  background: #0665d0;
-  height: calc(100% + 4px);
-  width: calc(100% + 4px);
-}
-
-<div
-    class="c0 c1"
-  >
-    <div
-      class="c2 c3"
-    >
-      <div
-        class="c4 c5"
-      >
-        <div
-          class="c6 c7"
-        />
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`<RadioElement /> should render component outline 1`] = `
-<DocumentFragment>
-  .c0 {
-  height: 16px;
-  width: 16px;
-}
-
-.c0 .c5 {
+.c0 .src-radio-inner-circle {
   height: 4px;
   width: 4px;
 }
@@ -221,7 +31,7 @@ exports[`<RadioElement /> should render component outline 1`] = `
   height: 100%;
 }
 
-.c4 {
+.c3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -245,7 +55,7 @@ exports[`<RadioElement /> should render component outline 1`] = `
   transition-property: height,width;
 }
 
-.c6 {
+.c4 {
   background: #fff;
   border-radius: 100%;
   -webkit-flex: 0 0 auto;
@@ -257,23 +67,27 @@ exports[`<RadioElement /> should render component outline 1`] = `
   position: relative;
 }
 
-.c1 .c3 {
+.c1 .src-radio-container {
+  background: #dbdbdb;
+}
+
+.c1 .src-radio-outer-circle {
   background: #0665d0;
-  height: calc(100% + 4px);
-  width: calc(100% + 4px);
+  height: 0;
+  width: 0;
 }
 
 <div
     class="c0 c1"
   >
     <div
-      class="c2"
+      class="c2 src-radio-container"
     >
       <div
-        class="c3 c4"
+        class="c3 src-radio-outer-circle"
       >
         <div
-          class="c5 c6"
+          class="c4 src-radio-inner-circle"
         />
       </div>
     </div>
@@ -281,19 +95,19 @@ exports[`<RadioElement /> should render component outline 1`] = `
 </DocumentFragment>
 `;
 
-exports[`<RadioElement /> should render component with soft colors 1`] = `
+exports[`<RadioElement /> should render component 1`] = `
 <DocumentFragment>
   .c0 {
   height: 16px;
   width: 16px;
 }
 
-.c0 .c6 {
+.c0 .src-radio-inner-circle {
   height: 4px;
   width: 4px;
 }
 
-.c3 {
+.c2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -312,7 +126,7 @@ exports[`<RadioElement /> should render component with soft colors 1`] = `
   height: 100%;
 }
 
-.c5 {
+.c3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -336,7 +150,7 @@ exports[`<RadioElement /> should render component with soft colors 1`] = `
   transition-property: height,width;
 }
 
-.c7 {
+.c4 {
   background: #fff;
   border-radius: 100%;
   -webkit-flex: 0 0 auto;
@@ -348,11 +162,197 @@ exports[`<RadioElement /> should render component with soft colors 1`] = `
   position: relative;
 }
 
-.c1 .c2 {
+.c1 .src-radio-container {
   background: #dbdbdb;
 }
 
-.c1 .c4 {
+.c1 .src-radio-outer-circle {
+  background: #0665d0;
+  height: calc(100% + 4px);
+  width: calc(100% + 4px);
+}
+
+<div
+    class="c0 c1"
+  >
+    <div
+      class="c2 src-radio-container"
+    >
+      <div
+        class="c3 src-radio-outer-circle"
+      >
+        <div
+          class="c4 src-radio-inner-circle"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<RadioElement /> should render component outline 1`] = `
+<DocumentFragment>
+  .c0 {
+  height: 16px;
+  width: 16px;
+}
+
+.c0 .src-radio-inner-circle {
+  height: 4px;
+  width: 4px;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 2px #dbdbdb;
+  border-radius: 100%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: height,width;
+  transition-property: height,width;
+}
+
+.c4 {
+  background: #fff;
+  border-radius: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c1 .src-radio-outer-circle {
+  background: #0665d0;
+  height: calc(100% + 4px);
+  width: calc(100% + 4px);
+}
+
+<div
+    class="c0 c1"
+  >
+    <div
+      class="c2 src-radio-container"
+    >
+      <div
+        class="c3 src-radio-outer-circle"
+      >
+        <div
+          class="c4 src-radio-inner-circle"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<RadioElement /> should render component with soft colors 1`] = `
+<DocumentFragment>
+  .c0 {
+  height: 16px;
+  width: 16px;
+}
+
+.c0 .src-radio-inner-circle {
+  height: 4px;
+  width: 4px;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 2px #dbdbdb;
+  border-radius: 100%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  -webkit-transition: 200ms 0s ease-in-out;
+  transition: 200ms 0s ease-in-out;
+  -webkit-transition-property: height,width;
+  transition-property: height,width;
+}
+
+.c4 {
+  background: #fff;
+  border-radius: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c1 .src-radio-container {
+  background: #dbdbdb;
+}
+
+.c1 .src-radio-outer-circle {
   background: #cde0f5;
   height: calc(100% + 4px);
   width: calc(100% + 4px);
@@ -362,13 +362,13 @@ exports[`<RadioElement /> should render component with soft colors 1`] = `
     class="c0 c1"
   >
     <div
-      class="c2 c3"
+      class="c2 src-radio-container"
     >
       <div
-        class="c4 c5"
+        class="c3 src-radio-outer-circle"
       >
         <div
-          class="c6 c7"
+          class="c4 src-radio-inner-circle"
         />
       </div>
     </div>

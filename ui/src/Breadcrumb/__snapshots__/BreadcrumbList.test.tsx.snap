@@ -18,7 +18,7 @@ exports[`<BreadcrumbList /> should render component 1`] = `
 
 .c1 > a {
   border-radius: .125rem;
-  cursor: default;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -67,8 +67,8 @@ exports[`<BreadcrumbList /> should render component 1`] = `
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  pointer-events: none;
   opacity: 0.7;
+  pointer-events: none;
   color: #fff;
   fill: #fff;
 }
@@ -89,7 +89,7 @@ exports[`<BreadcrumbList /> should render component 1`] = `
 
 .c4 > a {
   border-radius: .125rem;
-  cursor: default;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -101,9 +101,13 @@ exports[`<BreadcrumbList /> should render component 1`] = `
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  pointer-events: none;
-  color: #054D9F;
-  fill: #054D9F;
+  color: #0552A9;
+  fill: #0552A9;
+}
+
+.c4 > a:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .c4:not(:last-child)::after {

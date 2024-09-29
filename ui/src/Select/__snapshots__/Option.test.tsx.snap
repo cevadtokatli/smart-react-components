@@ -3,18 +3,41 @@
 exports[`<Option /> should be active 1`] = `
 <DocumentFragment>
   .c0 {
-  border-radius: .2rem;
   cursor: default;
+}
+
+.c1 {
+  border-radius: .2rem;
+  fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
   transition-property: background,color,fill;
-  background: #0553AC;
+  background: #0556B2;
   color: #fff;
 }
 
+.c1 .svg,
+.c1 .svg .fill,
+.c1 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
+}
+
+.c1 .svg,
+.c1 .svg .fill {
+  fill: #fff;
+}
+
+.c1 .svg .stroke {
+  stroke: #fff;
+}
+
 <div
-    class=" c0"
+    class="c0 c1"
+    cursor="$cursor.selectBox"
   >
     Content
   </div>
@@ -24,16 +47,30 @@ exports[`<Option /> should be active 1`] = `
 exports[`<Option /> should render component 1`] = `
 <DocumentFragment>
   .c0 {
-  border-radius: .2rem;
   cursor: default;
+}
+
+.c1 {
+  border-radius: .2rem;
+  fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
   transition-property: background,color,fill;
 }
 
+.c1 .svg,
+.c1 .svg .fill,
+.c1 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
+}
+
 <div
-    class=" c0"
+    class="c0 c1"
+    cursor="$cursor.selectBox"
   >
     Content
   </div>
@@ -43,6 +80,7 @@ exports[`<Option /> should render component 1`] = `
 exports[`<Option /> should render waveEffect 1`] = `
 <DocumentFragment>
   .c0 {
+  cursor: default;
   isolation: isolate;
   overflow: hidden;
   position: relative;
@@ -51,15 +89,25 @@ exports[`<Option /> should render waveEffect 1`] = `
 
 .c1 {
   border-radius: .2rem;
-  cursor: default;
+  fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
   transition-property: background,color,fill;
 }
 
+.c1 .svg,
+.c1 .svg .fill,
+.c1 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
+}
+
 <div
     class="c0 c1"
+    cursor="$cursor.selectBox"
     overflow="hidden"
   >
     Content

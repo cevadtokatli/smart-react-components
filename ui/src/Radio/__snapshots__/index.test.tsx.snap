@@ -64,12 +64,12 @@ exports[`<Radio /> should not render label 1`] = `
   width: 16px;
 }
 
-.c2 .c9 {
+.c2 .src-radio-inner-circle {
   height: 4px;
   width: 4px;
 }
 
-.c6 {
+.c5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -88,7 +88,7 @@ exports[`<Radio /> should not render label 1`] = `
   height: 100%;
 }
 
-.c8 {
+.c6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -112,7 +112,7 @@ exports[`<Radio /> should not render label 1`] = `
   transition-property: height,width;
 }
 
-.c10 {
+.c7 {
   background: #fff;
   border-radius: 100%;
   -webkit-flex: 0 0 auto;
@@ -124,11 +124,11 @@ exports[`<Radio /> should not render label 1`] = `
   position: relative;
 }
 
-.c3 .c5 {
+.c3 .src-radio-container {
   background: #dbdbdb;
 }
 
-.c3 .c7 {
+.c3 .src-radio-outer-circle {
   background: #0665d0;
   height: 0;
   width: 0;
@@ -145,13 +145,13 @@ exports[`<Radio /> should not render label 1`] = `
         type="radio"
       />
       <div
-        class="c5 c6"
+        class="c5 src-radio-container"
       >
         <div
-          class="c7 c8"
+          class="c6 src-radio-outer-circle"
         >
           <div
-            class="c9 c10"
+            class="c7 src-radio-inner-circle"
           />
         </div>
       </div>
@@ -224,12 +224,12 @@ exports[`<Radio /> should render component 1`] = `
   width: 16px;
 }
 
-.c2 .c9 {
+.c2 .src-radio-inner-circle {
   height: 4px;
   width: 4px;
 }
 
-.c6 {
+.c5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -248,7 +248,7 @@ exports[`<Radio /> should render component 1`] = `
   height: 100%;
 }
 
-.c8 {
+.c6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -272,7 +272,7 @@ exports[`<Radio /> should render component 1`] = `
   transition-property: height,width;
 }
 
-.c10 {
+.c7 {
   background: #fff;
   border-radius: 100%;
   -webkit-flex: 0 0 auto;
@@ -284,11 +284,11 @@ exports[`<Radio /> should render component 1`] = `
   position: relative;
 }
 
-.c3 .c5 {
+.c3 .src-radio-container {
   background: #dbdbdb;
 }
 
-.c3 .c7 {
+.c3 .src-radio-outer-circle {
   background: #0665d0;
   height: calc(100% + 4px);
   width: calc(100% + 4px);
@@ -306,13 +306,13 @@ exports[`<Radio /> should render component 1`] = `
         type="radio"
       />
       <div
-        class="c5 c6"
+        class="c5 src-radio-container"
       >
         <div
-          class="c7 c8"
+          class="c6 src-radio-outer-circle"
         >
           <div
-            class="c9 c10"
+            class="c7 src-radio-inner-circle"
           />
         </div>
       </div>

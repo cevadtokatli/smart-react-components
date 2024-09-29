@@ -33,12 +33,13 @@ exports[`<InputAddonElement /> should be disabled 1`] = `
   border-color: #dbdbdb;
   color: #323a46;
   opacity: 0.7;
+  pointer-events: none;
   background: #dbdbdb;
   color: #eee;
 }
 
 <div
-    class="c0 c1"
+    class="c0 c1 src-input-addon "
     shape="rectangle"
   />
 </DocumentFragment>
@@ -79,7 +80,7 @@ exports[`<InputAddonElement /> should be focused 1`] = `
 }
 
 <div
-    class="c0 c1"
+    class="c0 c1 src-input-addon "
     shape="rectangle"
   />
 </DocumentFragment>
@@ -114,13 +115,17 @@ exports[`<InputAddonElement /> should be separated 1`] = `
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
+  border-bottom-left-radius: .2rem;
+  border-top-left-radius: .2rem;
+  border: solid 1px;
+  border-right: 0;
   background: #fff;
   border-color: #dbdbdb;
   color: #323a46;
 }
 
 <label
-    class="c0 c1"
+    class="c0 c1 src-input-addon "
     shape="rectangle"
   />
 </DocumentFragment>
@@ -161,7 +166,7 @@ exports[`<InputAddonElement /> should render component 1`] = `
 }
 
 <div
-    class="c0 c1"
+    class="c0 c1 src-input-addon "
     shape="rectangle"
   />
 </DocumentFragment>
@@ -202,7 +207,7 @@ exports[`<InputAddonElement /> should render component at right 1`] = `
 }
 
 <div
-    class="c0 c1"
+    class="c0 c1 src-input-addon "
     shape="rectangle"
   />
 </DocumentFragment>
@@ -241,12 +246,13 @@ exports[`<InputAddonElement /> should render component disabled 1`] = `
   border-color: #dbdbdb;
   color: #323a46;
   opacity: 0.7;
+  pointer-events: none;
   background: #dbdbdb;
   color: #eee;
 }
 
 <div
-    class="c0 c1"
+    class="c0 c1 src-input-addon "
     shape="rectangle"
   />
 </DocumentFragment>
@@ -287,7 +293,7 @@ exports[`<InputAddonElement /> should render component focused 1`] = `
 }
 
 <div
-    class="c0 c1"
+    class="c0 c1 src-input-addon "
     shape="rectangle"
   />
 </DocumentFragment>
@@ -324,11 +330,11 @@ exports[`<InputAddonElement /> should render component not outline 1`] = `
   transition-property: background,border,color,fill;
   color: #fff;
   background: #0665d0;
-  border-color: #065DC0;
+  border-color: #055BBB;
 }
 
 <div
-    class="c0 c1"
+    class="c0 c1 src-input-addon "
     shape="rectangle"
   />
 </DocumentFragment>
@@ -369,7 +375,7 @@ exports[`<InputAddonElement /> should render component with soft colors 1`] = `
 }
 
 <div
-    class="c0 c1"
+    class="c0 c1 src-input-addon "
     shape="rectangle"
   />
 </DocumentFragment>
@@ -424,7 +430,7 @@ exports[`<InputAddonElement /> should resize component responsively 1`] = `
 }
 
 <div
-    class="c0 c1"
+    class="c0 c1 src-input-addon "
     shape="rectangle"
   />
 </DocumentFragment>

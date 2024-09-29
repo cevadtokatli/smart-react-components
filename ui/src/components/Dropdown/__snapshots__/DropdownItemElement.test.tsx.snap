@@ -4,13 +4,31 @@ exports[`<DropdownItemElement /> isActive should render component 1`] = `
 <DocumentFragment>
   .c0 {
   border-radius: .2rem;
-  cursor: default;
+  fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
   transition-property: background,color,fill;
-  background: #0553AC;
+  background: #0556B2;
   color: #fff;
+}
+
+.c0 .svg,
+.c0 .svg .fill,
+.c0 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
+}
+
+.c0 .svg,
+.c0 .svg .fill {
+  fill: #fff;
+}
+
+.c0 .svg .stroke {
+  stroke: #fff;
 }
 
 <div
@@ -23,13 +41,31 @@ exports[`<DropdownItemElement /> isActive should render component not outline 1`
 <DocumentFragment>
   .c0 {
   border-radius: .2rem;
-  cursor: default;
+  fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
   transition-property: background,color,fill;
-  background: #054D9F;
+  background: #0552A9;
   color: #fff;
+}
+
+.c0 .svg,
+.c0 .svg .fill,
+.c0 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
+}
+
+.c0 .svg,
+.c0 .svg .fill {
+  fill: #fff;
+}
+
+.c0 .svg .stroke {
+  stroke: #fff;
 }
 
 <div
@@ -42,13 +78,32 @@ exports[`<DropdownItemElement /> isActive should render component not outline wi
 <DocumentFragment>
   .c0 {
   border-radius: .2rem;
-  cursor: default;
+  fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
   transition-property: background,color,fill;
+  font-weight: 600;
   background: #8eb9e9;
   color: #033c7c;
+}
+
+.c0 .svg,
+.c0 .svg .fill,
+.c0 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
+}
+
+.c0 .svg,
+.c0 .svg .fill {
+  fill: #033c7c;
+}
+
+.c0 .svg .stroke {
+  stroke: #033c7c;
 }
 
 <div
@@ -61,13 +116,32 @@ exports[`<DropdownItemElement /> isActive should render component with soft colo
 <DocumentFragment>
   .c0 {
   border-radius: .2rem;
-  cursor: default;
+  fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
   transition-property: background,color,fill;
+  font-weight: 600;
   background: #a7c9ee;
   color: #033c7c;
+}
+
+.c0 .svg,
+.c0 .svg .fill,
+.c0 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
+}
+
+.c0 .svg,
+.c0 .svg .fill {
+  fill: #033c7c;
+}
+
+.c0 .svg .stroke {
+  stroke: #033c7c;
 }
 
 <div
@@ -80,7 +154,7 @@ exports[`<DropdownItemElement /> should be disabled 1`] = `
 <DocumentFragment>
   .c0 {
   border-radius: .2rem;
-  cursor: default;
+  fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
@@ -89,9 +163,27 @@ exports[`<DropdownItemElement /> should be disabled 1`] = `
   pointer-events: none;
 }
 
+.c0 .svg,
+.c0 .svg .fill,
+.c0 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
+}
+
 .c0:hover {
   background: #0665d0;
   color: #fff;
+}
+
+.c0:hover .svg,
+.c0:hover .svg .fill {
+  fill: #fff;
+}
+
+.c0:hover .svg .stroke {
+  stroke: #fff;
 }
 
 <div
@@ -104,11 +196,20 @@ exports[`<DropdownItemElement /> should not have hover 1`] = `
 <DocumentFragment>
   .c0 {
   border-radius: .2rem;
-  cursor: default;
+  fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
   transition-property: background,color,fill;
+}
+
+.c0 .svg,
+.c0 .svg .fill,
+.c0 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
 }
 
 <div
@@ -121,16 +222,34 @@ exports[`<DropdownItemElement /> should render component 1`] = `
 <DocumentFragment>
   .c0 {
   border-radius: .2rem;
-  cursor: default;
+  fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
   transition-property: background,color,fill;
 }
 
+.c0 .svg,
+.c0 .svg .fill,
+.c0 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
+}
+
 .c0:hover {
   background: #0665d0;
   color: #fff;
+}
+
+.c0:hover .svg,
+.c0:hover .svg .fill {
+  fill: #fff;
+}
+
+.c0:hover .svg .stroke {
+  stroke: #fff;
 }
 
 <div
@@ -143,16 +262,34 @@ exports[`<DropdownItemElement /> should render component not outline 1`] = `
 <DocumentFragment>
   .c0 {
   border-radius: .2rem;
-  cursor: default;
+  fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
   transition-property: background,color,fill;
 }
 
+.c0 .svg,
+.c0 .svg .fill,
+.c0 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
+}
+
 .c0:hover {
-  background: #065DC0;
+  background: #055BBB;
   color: #fff;
+}
+
+.c0:hover .svg,
+.c0:hover .svg .fill {
+  fill: #fff;
+}
+
+.c0:hover .svg .stroke {
+  stroke: #fff;
 }
 
 <div
@@ -165,16 +302,35 @@ exports[`<DropdownItemElement /> should render component not outline with soft c
 <DocumentFragment>
   .c0 {
   border-radius: .2rem;
-  cursor: default;
+  fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
   transition-property: background,color,fill;
+  font-weight: 600;
+}
+
+.c0 .svg,
+.c0 .svg .fill,
+.c0 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
 }
 
 .c0:hover {
   background: #b9d3f1;
   color: #033c7c;
+}
+
+.c0:hover .svg,
+.c0:hover .svg .fill {
+  fill: #033c7c;
+}
+
+.c0:hover .svg .stroke {
+  stroke: #033c7c;
 }
 
 <div
@@ -187,16 +343,35 @@ exports[`<DropdownItemElement /> should render component with soft colors 1`] = 
 <DocumentFragment>
   .c0 {
   border-radius: .2rem;
-  cursor: default;
+  fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
   transition-property: background,color,fill;
+  font-weight: 600;
+}
+
+.c0 .svg,
+.c0 .svg .fill,
+.c0 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
 }
 
 .c0:hover {
   background: #cde0f5;
   color: #033c7c;
+}
+
+.c0:hover .svg,
+.c0:hover .svg .fill {
+  fill: #033c7c;
+}
+
+.c0:hover .svg .stroke {
+  stroke: #033c7c;
 }
 
 <div

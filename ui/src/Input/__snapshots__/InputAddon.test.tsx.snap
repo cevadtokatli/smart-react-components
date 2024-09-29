@@ -30,7 +30,7 @@ exports[`<InputAddon /> should render component 1`] = `
 }
 
 <div
-    class=" c0"
+    class=" c0 src-input-addon "
     shape="rectangle"
   >
     Addon

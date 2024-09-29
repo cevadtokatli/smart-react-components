@@ -61,7 +61,7 @@ exports[`<PopoverElement /> should render component 1`] = `
   fill: #323a46;
   font-family: inherit;
   position: fixed;
-  z-index: 1000;
+  z-index: 3000;
 }
 
 .c1 .c4 {
@@ -71,14 +71,14 @@ exports[`<PopoverElement /> should render component 1`] = `
 
 .c1 .c2 {
   background: #0665d0;
-  border: solid 1px #0553AC;
+  border: solid 1px #0556B2;
   color: #fff;
   fill: #fff;
 }
 
 .c1 .c2 ~ .c6[data-arrow-header="true"] {
   fill: #0665d0;
-  stroke: #0553AC;
+  stroke: #0556B2;
 }
 
 .c1 .c2 + .c4 {
@@ -178,7 +178,7 @@ exports[`<PopoverElement /> should render component with responsive size props 1
   fill: #323a46;
   font-family: inherit;
   position: fixed;
-  z-index: 1000;
+  z-index: 3000;
 }
 
 .c1 .c4 {
@@ -188,14 +188,14 @@ exports[`<PopoverElement /> should render component with responsive size props 1
 
 .c1 .c2 {
   background: #0665d0;
-  border: solid 1px #0553AC;
+  border: solid 1px #0556B2;
   color: #fff;
   fill: #fff;
 }
 
 .c1 .c2 ~ .c6[data-arrow-header="true"] {
   fill: #0665d0;
-  stroke: #0553AC;
+  stroke: #0556B2;
 }
 
 .c1 .c2 + .c4 {
@@ -319,7 +319,7 @@ exports[`<PopoverElement /> should render component with soft colors 1`] = `
   fill: #323a46;
   font-family: inherit;
   position: fixed;
-  z-index: 1000;
+  z-index: 3000;
 }
 
 .c1 .c4 {
@@ -436,7 +436,7 @@ exports[`<PopoverElement /> should render component with transition 1`] = `
   fill: #323a46;
   font-family: inherit;
   position: fixed;
-  z-index: 1000;
+  z-index: 3000;
 }
 
 .c1 .c4 {
@@ -446,14 +446,14 @@ exports[`<PopoverElement /> should render component with transition 1`] = `
 
 .c1 .c2 {
   background: #0665d0;
-  border: solid 1px #0553AC;
+  border: solid 1px #0556B2;
   color: #fff;
   fill: #fff;
 }
 
 .c1 .c2 ~ .c6[data-arrow-header="true"] {
   fill: #0665d0;
-  stroke: #0553AC;
+  stroke: #0556B2;
 }
 
 .c1 .c2 + .c4 {

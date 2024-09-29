@@ -23,7 +23,7 @@ exports[`<PaginationLink /> should render component 1`] = `
   align-items: center;
   border: solid 1px;
   border-radius: .125rem;
-  cursor: default;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -41,8 +41,8 @@ exports[`<PaginationLink /> should render component 1`] = `
   padding: .4rem .65rem;
   color: #fff;
   fill: #fff;
-  background: #0553AC;
-  border-color: #054D9F;
+  background: #0556B2;
+  border-color: #0552A9;
 }
 
 <li

@@ -2,18 +2,21 @@
 
 exports[`<Badge /> should render component 1`] = `
 <DocumentFragment>
-  .c0 {
-  margin: .3125rem .3125rem;
+  .c3 {
+  border: solid 1px;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
 }
 
-.c0 .c4 {
+.c0 .src-badge-content {
   font-size: .75rem;
   padding: .1875rem .375rem;
   padding-left: 0.1875rem;
   padding-right: 0.1875rem;
 }
 
-.c0 .c2 {
+.c0 .src-badge-icon {
   padding: 0 0.1875rem;
 }
 
@@ -26,73 +29,6 @@ exports[`<Badge /> should render component 1`] = `
   font-size: .75rem;
 }
 
-.c3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  border: solid 1px;
-  border-right: 0;
-  border-color: #0553AC;
-  border-radius: .15rem;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background: #0553AC;
-  color: #fff;
-  fill: #fff;
-}
-
-.c6 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  border: solid 1px;
-  border-left: 0;
-  border-color: #0553AC;
-  border-radius: .15rem;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background: #0553AC;
-  color: #fff;
-  fill: #fff;
-}
-
-.c5 {
-  border: solid 1px;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-}
-
 .c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -103,18 +39,18 @@ exports[`<Badge /> should render component 1`] = `
   word-wrap: break-word;
 }
 
-.c1 .c4 {
+.c1 .src-badge-content {
   border-color: #0665d0;
   border-radius: .15rem;
 }
 
-.c1 .c4 {
+.c1 .src-badge-content {
   background: #0665d0;
   color: #fff;
   fill: #fff;
 }
 
-.c1 .c4 {
+.c1 .src-badge-content {
   border-left: 0;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -123,25 +59,85 @@ exports[`<Badge /> should render component 1`] = `
   border-top-right-radius: 0;
 }
 
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  border: solid 1px;
+  border-right: 0;
+  border-color: #0556B2;
+  border-radius: .15rem;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #0556B2;
+  color: #fff;
+  fill: #fff;
+}
+
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  border: solid 1px;
+  border-left: 0;
+  border-color: #0556B2;
+  border-radius: .15rem;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #0556B2;
+  color: #fff;
+  fill: #fff;
+}
+
 <div
     class="c0 c1"
     shape="rectangle"
   >
     <div
-      class="c2  c3"
+      class=" c2 src-badge-icon"
       shape="rectangle"
     >
       <svg />
     </div>
     <div
-      class="c4 c5"
+      class="c3 src-badge-content"
     >
       <span>
         Content
       </span>
     </div>
     <div
-      class="c2  c6"
+      class=" c4 src-badge-icon"
       shape="rectangle"
     >
       <svg />

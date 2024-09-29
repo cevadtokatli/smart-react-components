@@ -12,6 +12,10 @@ exports[`<Input /> should render component 1`] = `
   flex: 1 1 auto;
 }
 
+.c0 {
+  display: block;
+}
+
 .c0 > span {
   margin-bottom: .5rem;
 }
@@ -21,11 +25,11 @@ exports[`<Input /> should render component 1`] = `
 }
 
 .c1 > span {
-  cursor: default;
   display: block;
   word-break: break-word;
   word-wrap: break-word;
   -webkit-tap-highlight-color: transparent;
+  cursor: default;
 }
 
 .c4 {
@@ -35,6 +39,7 @@ exports[`<Input /> should render component 1`] = `
 
 .c5 {
   border: 0;
+  border-radius: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -106,6 +111,7 @@ exports[`<Input /> should render component 1`] = `
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   min-width: 1px;
+  overflow: hidden;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: border;
@@ -115,6 +121,7 @@ exports[`<Input /> should render component 1`] = `
 
 <label
     class="c0 c1"
+    display="block"
   >
     <span>
       Label
@@ -128,7 +135,7 @@ exports[`<Input /> should render component 1`] = `
         shape="rectangle"
       >
         <input
-          class="c4 c5"
+          class="c4 c5 src-input "
           shape="rectangle"
           type="text"
         />
@@ -150,6 +157,10 @@ exports[`<Input /> should render custom component 1`] = `
   flex: 1 1 auto;
 }
 
+.c0 {
+  display: block;
+}
+
 .c0 > span {
   margin-bottom: .5rem;
 }
@@ -159,11 +170,11 @@ exports[`<Input /> should render custom component 1`] = `
 }
 
 .c1 > span {
-  cursor: default;
   display: block;
   word-break: break-word;
   word-wrap: break-word;
   -webkit-tap-highlight-color: transparent;
+  cursor: default;
 }
 
 .c3 {
@@ -177,6 +188,7 @@ exports[`<Input /> should render custom component 1`] = `
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   min-width: 1px;
+  overflow: hidden;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: border;
@@ -186,6 +198,7 @@ exports[`<Input /> should render custom component 1`] = `
 
 <label
     class="c0 c1"
+    display="block"
   >
     <div
       class="c2"

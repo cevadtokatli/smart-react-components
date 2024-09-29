@@ -7,7 +7,7 @@ exports[`<CheckboxElement /> should not be checked 1`] = `
   width: 16px;
 }
 
-.c3 {
+.c2 {
   border: solid 2px #dbdbdb;
   box-sizing: border-box;
   display: -webkit-box;
@@ -22,7 +22,7 @@ exports[`<CheckboxElement /> should not be checked 1`] = `
   position: relative;
 }
 
-.c5 {
+.c3 {
   position: absolute;
   left: -2px;
   height: calc(100% + 4px);
@@ -32,14 +32,14 @@ exports[`<CheckboxElement /> should not be checked 1`] = `
   width: calc(100% + 4px);
 }
 
-.c6 {
+.c4 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   position: relative;
 }
 
-.c6 > path {
+.c4 > path {
   fill: transparent;
   stroke: #fff;
   stroke-width: 4px;
@@ -53,12 +53,14 @@ exports[`<CheckboxElement /> should not be checked 1`] = `
   position: relative;
 }
 
-.c1 .c2 {
+.c1 .src-checkbox-container {
   border-radius: .125rem;
+  -webkit-transition: border-color 200ms 0s ease-in-out;
+  transition: border-color 200ms 0s ease-in-out;
   background: #dbdbdb;
 }
 
-.c1 .c4 {
+.c1 .src-checkbox-rectangle {
   border-radius: .125rem;
 }
 
@@ -67,13 +69,13 @@ exports[`<CheckboxElement /> should not be checked 1`] = `
     shape="rectangle"
   >
     <div
-      class="c2 c3"
+      class="c2 src-checkbox-container"
     >
       <div
-        class="c4 c5"
+        class="c3 src-checkbox-rectangle"
       />
       <svg
-        class="c6"
+        class="c4 src-checkbox-svg"
         viewBox="0 0 32 32"
       >
         <path
@@ -92,7 +94,7 @@ exports[`<CheckboxElement /> should render component 1`] = `
   width: 16px;
 }
 
-.c3 {
+.c2 {
   border: solid 2px #dbdbdb;
   box-sizing: border-box;
   display: -webkit-box;
@@ -107,7 +109,7 @@ exports[`<CheckboxElement /> should render component 1`] = `
   position: relative;
 }
 
-.c5 {
+.c3 {
   position: absolute;
   left: -2px;
   height: calc(100% + 4px);
@@ -117,14 +119,14 @@ exports[`<CheckboxElement /> should render component 1`] = `
   width: calc(100% + 4px);
 }
 
-.c7 {
+.c4 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   position: relative;
 }
 
-.c7 > path {
+.c4 > path {
   fill: transparent;
   stroke: #fff;
   stroke-width: 4px;
@@ -138,20 +140,26 @@ exports[`<CheckboxElement /> should render component 1`] = `
   position: relative;
 }
 
-.c1 .c2 {
+.c1 .src-checkbox-container {
   border-radius: .125rem;
+  -webkit-transition: border-color 200ms 0s ease-in-out;
+  transition: border-color 200ms 0s ease-in-out;
   background: #dbdbdb;
 }
 
-.c1 .c4 {
+.c1 .src-checkbox-rectangle {
   border-radius: .125rem;
 }
 
-.c1 .c4 {
+.c1 .src-checkbox-container {
+  border-color: #0665d0;
+}
+
+.c1 .src-checkbox-container .src-checkbox-rectangle {
   background: #0665d0;
 }
 
-.c1 .c6 > path {
+.c1 .src-checkbox-container .src-checkbox-svg > path {
   stroke-dashoffset: 0;
 }
 
@@ -160,13 +168,13 @@ exports[`<CheckboxElement /> should render component 1`] = `
     shape="rectangle"
   >
     <div
-      class="c2 c3"
+      class="c2 src-checkbox-container"
     >
       <div
-        class="c4 c5"
+        class="c3 src-checkbox-rectangle"
       />
       <svg
-        class="c6 c7"
+        class="c4 src-checkbox-svg"
         viewBox="0 0 32 32"
       >
         <path
@@ -185,7 +193,7 @@ exports[`<CheckboxElement /> should render component outline 1`] = `
   width: 16px;
 }
 
-.c3 {
+.c2 {
   border: solid 2px #dbdbdb;
   box-sizing: border-box;
   display: -webkit-box;
@@ -200,7 +208,7 @@ exports[`<CheckboxElement /> should render component outline 1`] = `
   position: relative;
 }
 
-.c5 {
+.c3 {
   position: absolute;
   left: -2px;
   height: calc(100% + 4px);
@@ -210,14 +218,14 @@ exports[`<CheckboxElement /> should render component outline 1`] = `
   width: calc(100% + 4px);
 }
 
-.c7 {
+.c4 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   position: relative;
 }
 
-.c7 > path {
+.c4 > path {
   fill: transparent;
   stroke: #fff;
   stroke-width: 4px;
@@ -231,19 +239,25 @@ exports[`<CheckboxElement /> should render component outline 1`] = `
   position: relative;
 }
 
-.c1 .c2 {
+.c1 .src-checkbox-container {
+  border-radius: .125rem;
+  -webkit-transition: border-color 200ms 0s ease-in-out;
+  transition: border-color 200ms 0s ease-in-out;
+}
+
+.c1 .src-checkbox-rectangle {
   border-radius: .125rem;
 }
 
-.c1 .c4 {
-  border-radius: .125rem;
+.c1 .src-checkbox-container {
+  border-color: #0665d0;
 }
 
-.c1 .c4 {
+.c1 .src-checkbox-container .src-checkbox-rectangle {
   background: #0665d0;
 }
 
-.c1 .c6 > path {
+.c1 .src-checkbox-container .src-checkbox-svg > path {
   stroke-dashoffset: 0;
 }
 
@@ -252,13 +266,13 @@ exports[`<CheckboxElement /> should render component outline 1`] = `
     shape="rectangle"
   >
     <div
-      class="c2 c3"
+      class="c2 src-checkbox-container"
     >
       <div
-        class="c4 c5"
+        class="c3 src-checkbox-rectangle"
       />
       <svg
-        class="c6 c7"
+        class="c4 src-checkbox-svg"
         viewBox="0 0 32 32"
       >
         <path
@@ -277,7 +291,7 @@ exports[`<CheckboxElement /> should render component with soft colors 1`] = `
   width: 16px;
 }
 
-.c3 {
+.c2 {
   border: solid 2px #dbdbdb;
   box-sizing: border-box;
   display: -webkit-box;
@@ -292,7 +306,7 @@ exports[`<CheckboxElement /> should render component with soft colors 1`] = `
   position: relative;
 }
 
-.c5 {
+.c3 {
   position: absolute;
   left: -2px;
   height: calc(100% + 4px);
@@ -302,14 +316,14 @@ exports[`<CheckboxElement /> should render component with soft colors 1`] = `
   width: calc(100% + 4px);
 }
 
-.c7 {
+.c4 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   position: relative;
 }
 
-.c7 > path {
+.c4 > path {
   fill: transparent;
   stroke: #fff;
   stroke-width: 4px;
@@ -323,20 +337,26 @@ exports[`<CheckboxElement /> should render component with soft colors 1`] = `
   position: relative;
 }
 
-.c1 .c2 {
+.c1 .src-checkbox-container {
   border-radius: .125rem;
+  -webkit-transition: border-color 200ms 0s ease-in-out;
+  transition: border-color 200ms 0s ease-in-out;
   background: #dbdbdb;
 }
 
-.c1 .c4 {
+.c1 .src-checkbox-rectangle {
   border-radius: .125rem;
 }
 
-.c1 .c4 {
+.c1 .src-checkbox-container {
+  border-color: #cde0f5;
+}
+
+.c1 .src-checkbox-container .src-checkbox-rectangle {
   background: #cde0f5;
 }
 
-.c1 .c6 > path {
+.c1 .src-checkbox-container .src-checkbox-svg > path {
   stroke-dashoffset: 0;
 }
 
@@ -345,13 +365,13 @@ exports[`<CheckboxElement /> should render component with soft colors 1`] = `
     shape="rectangle"
   >
     <div
-      class="c2 c3"
+      class="c2 src-checkbox-container"
     >
       <div
-        class="c4 c5"
+        class="c3 src-checkbox-rectangle"
       />
       <svg
-        class="c6 c7"
+        class="c4 src-checkbox-svg"
         viewBox="0 0 32 32"
       >
         <path

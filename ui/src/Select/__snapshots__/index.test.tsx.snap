@@ -17,10 +17,15 @@ exports[`<Select /> should render component 1`] = `
 }
 
 .c9 {
+  cursor: default;
   isolation: isolate;
   overflow: hidden;
   position: relative;
   -webkit-tap-highlight-color: transparent;
+}
+
+.c0 {
+  display: block;
 }
 
 .c0 > span {
@@ -32,7 +37,6 @@ exports[`<Select /> should render component 1`] = `
 }
 
 .c1 > span {
-  cursor: default;
   display: block;
   word-break: break-word;
   word-wrap: break-word;
@@ -50,6 +54,7 @@ exports[`<Select /> should render component 1`] = `
 
 .c5 {
   border: 0;
+  border-radius: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -108,6 +113,7 @@ exports[`<Select /> should render component 1`] = `
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   min-width: 1px;
+  overflow: hidden;
   -webkit-transition: 200ms 0s ease-in-out;
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: border;
@@ -117,22 +123,49 @@ exports[`<Select /> should render component 1`] = `
 
 .c10 {
   border-radius: .2rem;
-  cursor: default;
+  fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
   transition-property: background,color,fill;
-  background: #0553AC;
+  background: #0556B2;
   color: #fff;
+}
+
+.c10 .svg,
+.c10 .svg .fill,
+.c10 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
+}
+
+.c10 .svg,
+.c10 .svg .fill {
+  fill: #fff;
+}
+
+.c10 .svg .stroke {
+  stroke: #fff;
 }
 
 .c11 {
   border-radius: .2rem;
-  cursor: default;
+  fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
   transition-property: background,color,fill;
+}
+
+.c11 .svg,
+.c11 .svg .fill,
+.c11 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
 }
 
 .c11:hover {
@@ -140,8 +173,18 @@ exports[`<Select /> should render component 1`] = `
   color: #fff;
 }
 
+.c11:hover .svg,
+.c11:hover .svg .fill {
+  fill: #fff;
+}
+
+.c11:hover .svg .stroke {
+  stroke: #fff;
+}
+
 <div
     class="c0 c1"
+    display="block"
   >
     <div
       class="c2"
@@ -152,7 +195,7 @@ exports[`<Select /> should render component 1`] = `
         shape="rectangle"
       >
         <div
-          class="c4 c5 c6"
+          class="c4 c5 c6 src-input "
         >
           <input
             class="c7"
@@ -166,18 +209,21 @@ exports[`<Select /> should render component 1`] = `
           </div>
           <div
             class="c9 c10"
+            cursor="$cursor.select"
             overflow="hidden"
           >
             Item 1
           </div>
           <div
             class="c9 c11"
+            cursor="$cursor.select"
             overflow="hidden"
           >
             Item 2
           </div>
           <div
             class="c9 c11"
+            cursor="$cursor.select"
             overflow="hidden"
           >
             Item 3

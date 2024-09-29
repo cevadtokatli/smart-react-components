@@ -7,7 +7,7 @@ exports[`<SwitchGroup /> should render component 1`] = `
   width: 28px;
 }
 
-.c3 .c6 {
+.c3 .switch-slider {
   height: 14px;
   width: 14px;
   left: 12px;
@@ -88,7 +88,7 @@ exports[`<SwitchGroup /> should render component 1`] = `
   width: 100%;
 }
 
-.c7 {
+.c6 {
   background: #fff;
   border-radius: 100%;
   box-shadow: 0 1px 3px rgba(0,0,0,.4);
@@ -135,7 +135,7 @@ exports[`<SwitchGroup /> should render component 1`] = `
           type="checkbox"
         />
         <div
-          class="c6 c7"
+          class="c6 switch-slider"
         />
       </div>
       <span>
@@ -155,7 +155,7 @@ exports[`<SwitchGroup /> should render component 1`] = `
           type="checkbox"
         />
         <div
-          class="c6 c7"
+          class="c6 switch-slider"
         />
       </div>
       <span>
@@ -175,7 +175,7 @@ exports[`<SwitchGroup /> should render component 1`] = `
           type="checkbox"
         />
         <div
-          class="c6 c7"
+          class="c6 switch-slider"
         />
       </div>
       <span>

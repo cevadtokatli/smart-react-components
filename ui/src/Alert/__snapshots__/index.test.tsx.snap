@@ -2,16 +2,25 @@
 
 exports[`<Alert /> should render component 1`] = `
 <DocumentFragment>
-  .c0 {
+  .c4 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 1px;
+}
+
+.c0 {
   font-size: 1rem;
 }
 
-.c0 .c4 {
+.c0 .src-alert-content {
   padding: .75rem 1.25rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
 }
 
 .c2 {
-  padding: 0 1.25rem;
+  padding: 0 0.625rem;
 }
 
 .c2 > svg {
@@ -23,15 +32,8 @@ exports[`<Alert /> should render component 1`] = `
   font-size: 1rem;
 }
 
-.c5 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
 .c1 {
   border: solid 1px;
-  border-left-width: 10px;
   border-radius: .25rem;
   box-sizing: border-box;
   display: -webkit-box;
@@ -42,44 +44,37 @@ exports[`<Alert /> should render component 1`] = `
   word-break: break-word;
   word-wrap: break-word;
   background: #0665d0;
-  border-color: #054D9F;
+  border-color: #0552A9;
   color: #fff;
 }
 
-.c1 > .c4 {
-  padding-left: 0;
-}
-
-.c1 > .c4 {
-  padding-right: 0;
-}
-
-.c1 .c4 > header,
-.c1 .c4 > h1,
-.c1 .c4 > h2,
-.c1 .c4 > h3,
-.c1 .c4 > h4,
-.c1 .c4 > h5,
-.c1 .c4 > h6,
-.c1 .c4 > p,
-.c1 .c4 > hr {
+.c1 false .src-alert-content > header,
+.c1 false .src-alert-content > h1,
+.c1 false .src-alert-content > h2,
+.c1 false .src-alert-content > h3,
+.c1 false .src-alert-content > h4,
+.c1 false .src-alert-content > h5,
+.c1 false .src-alert-content > h6,
+.c1 false .src-alert-content > p,
+.c1 false .src-alert-content > hr {
   margin-bottom: 1rem;
   margin-top: 0;
 }
 
-.c1 .c4 > header:last-child,
-.c1 .c4 > h1:last-child,
-.c1 .c4 > h2:last-child,
-.c1 .c4 > h3:last-child,
-.c1 .c4 > h4:last-child,
-.c1 .c4 > h5:last-child,
-.c1 .c4 > h6:last-child,
-.c1 .c4 > p:last-child,
-.c1 .c4 > hr:last-child {
+.c1 false .src-alert-content > header:last-child,
+.c1 false .src-alert-content > h1:last-child,
+.c1 false .src-alert-content > h2:last-child,
+.c1 false .src-alert-content > h3:last-child,
+.c1 false .src-alert-content > h4:last-child,
+.c1 false .src-alert-content > h5:last-child,
+.c1 false .src-alert-content > h6:last-child,
+.c1 false .src-alert-content > p:last-child,
+.c1 false .src-alert-content > hr:last-child {
   margin-bottom: 0;
 }
 
 .c1 a {
+  color: inherit;
   font-weight: 500;
 }
 
@@ -89,7 +84,7 @@ exports[`<Alert /> should render component 1`] = `
 }
 
 .c1 hr {
-  background: #054D9F;
+  background: #0552A9;
   border: 0;
   height: 1px;
   width: 100%;
@@ -107,6 +102,7 @@ exports[`<Alert /> should render component 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  fill: currentcolor;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -115,7 +111,7 @@ exports[`<Alert /> should render component 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   color: #fff;
-  fill: #fff;
+  background: #0552A9;
 }
 
 <div
@@ -128,7 +124,7 @@ exports[`<Alert /> should render component 1`] = `
       <svg />
     </div>
     <div
-      class="c4 c5"
+      class="c4 src-alert-content"
     >
       <span>
         Content

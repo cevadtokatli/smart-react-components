@@ -7,7 +7,7 @@ exports[`<RadioGroup /> should render component 1`] = `
   width: 16px;
 }
 
-.c3 .c10 {
+.c3 .src-radio-inner-circle {
   height: 4px;
   width: 4px;
 }
@@ -87,7 +87,7 @@ exports[`<RadioGroup /> should render component 1`] = `
   width: 100%;
 }
 
-.c7 {
+.c6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -106,7 +106,7 @@ exports[`<RadioGroup /> should render component 1`] = `
   height: 100%;
 }
 
-.c9 {
+.c7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -130,7 +130,7 @@ exports[`<RadioGroup /> should render component 1`] = `
   transition-property: height,width;
 }
 
-.c11 {
+.c8 {
   background: #fff;
   border-radius: 100%;
   -webkit-flex: 0 0 auto;
@@ -142,25 +142,25 @@ exports[`<RadioGroup /> should render component 1`] = `
   position: relative;
 }
 
-.c4 .c6 {
+.c4 .src-radio-container {
   background: #dbdbdb;
 }
 
-.c4 .c8 {
+.c4 .src-radio-outer-circle {
   background: #0665d0;
   height: calc(100% + 4px);
   width: calc(100% + 4px);
 }
 
-.c12 {
+.c9 {
   position: relative;
 }
 
-.c12 .c6 {
+.c9 .src-radio-container {
   background: #dbdbdb;
 }
 
-.c12 .c8 {
+.c9 .src-radio-outer-circle {
   background: #0665d0;
   height: 0;
   width: 0;
@@ -181,13 +181,13 @@ exports[`<RadioGroup /> should render component 1`] = `
           type="radio"
         />
         <div
-          class="c6 c7"
+          class="c6 src-radio-container"
         >
           <div
-            class="c8 c9"
+            class="c7 src-radio-outer-circle"
           >
             <div
-              class="c10 c11"
+              class="c8 src-radio-inner-circle"
             />
           </div>
         </div>
@@ -200,20 +200,20 @@ exports[`<RadioGroup /> should render component 1`] = `
       class="c1 c2"
     >
       <div
-        class="c3 c12"
+        class="c3 c9"
       >
         <input
           class="c5"
           type="radio"
         />
         <div
-          class="c6 c7"
+          class="c6 src-radio-container"
         >
           <div
-            class="c8 c9"
+            class="c7 src-radio-outer-circle"
           >
             <div
-              class="c10 c11"
+              class="c8 src-radio-inner-circle"
             />
           </div>
         </div>
@@ -226,20 +226,20 @@ exports[`<RadioGroup /> should render component 1`] = `
       class="c1 c2"
     >
       <div
-        class="c3 c12"
+        class="c3 c9"
       >
         <input
           class="c5"
           type="radio"
         />
         <div
-          class="c6 c7"
+          class="c6 src-radio-container"
         >
           <div
-            class="c8 c9"
+            class="c7 src-radio-outer-circle"
           >
             <div
-              class="c10 c11"
+              class="c8 src-radio-inner-circle"
             />
           </div>
         </div>

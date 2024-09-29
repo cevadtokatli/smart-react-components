@@ -11,7 +11,7 @@ exports[`<BreadcrumbItemElement /> should be active 1`] = `
 
 .c0 > a {
   border-radius: .125rem;
-  cursor: default;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -23,9 +23,13 @@ exports[`<BreadcrumbItemElement /> should be active 1`] = `
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  pointer-events: none;
-  color: #054D9F;
-  fill: #054D9F;
+  color: #0552A9;
+  fill: #0552A9;
+}
+
+.c0 > a:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .c0:not(:last-child)::after {
@@ -65,8 +69,8 @@ exports[`<BreadcrumbItemElement /> should be disabled 1`] = `
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  pointer-events: none;
   opacity: 0.7;
+  pointer-events: none;
   color: #fff;
   fill: #fff;
 }
@@ -96,7 +100,7 @@ exports[`<BreadcrumbItemElement /> should render component 1`] = `
 
 .c0 > a {
   border-radius: .125rem;
-  cursor: default;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -142,7 +146,7 @@ exports[`<BreadcrumbItemElement /> should render component outline 1`] = `
 
 .c0 > a {
   border-radius: .125rem;
-  cursor: default;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -188,7 +192,7 @@ exports[`<BreadcrumbItemElement /> should render component outline with soft col
 
 .c0 > a {
   border-radius: .125rem;
-  cursor: default;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -200,6 +204,7 @@ exports[`<BreadcrumbItemElement /> should render component outline with soft col
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
+  font-weight: 600;
   color: #cde0f5;
   fill: #cde0f5;
 }
@@ -214,6 +219,7 @@ exports[`<BreadcrumbItemElement /> should render component outline with soft col
   display: inline-block;
   padding: 0 1px;
   color: #dbdbdb;
+  font-weight: 600;
 }
 
 <li
@@ -234,7 +240,7 @@ exports[`<BreadcrumbItemElement /> should render component with soft colors 1`] 
 
 .c0 > a {
   border-radius: .125rem;
-  cursor: default;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -246,8 +252,9 @@ exports[`<BreadcrumbItemElement /> should render component with soft colors 1`] 
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  color: #033c7c;
-  fill: #033c7c;
+  font-weight: 600;
+  color: #8eb9e9;
+  fill: #8eb9e9;
 }
 
 .c0 > a:hover {
@@ -260,6 +267,7 @@ exports[`<BreadcrumbItemElement /> should render component with soft colors 1`] 
   display: inline-block;
   padding: 0 1px;
   color: #033c7c;
+  font-weight: 600;
 }
 
 <li

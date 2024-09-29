@@ -4,12 +4,12 @@ exports[`<Tr /> should render component 1`] = `
 <DocumentFragment>
   .c0 > *:nth-child(n+0) {
   background: #fff;
-  border-color: #A8C0CD;
+  border-color: #E9ECEF;
   color: #323a46;
 }
 
 .c0:hover > *:nth-child(n+0) {
-  background: #BBCED8;
+  background: #F2F4F7;
 }
 
 <table>
@@ -26,12 +26,12 @@ exports[`<Tr /> should render component with soft colors 1`] = `
 <DocumentFragment>
   .c0 > *:nth-child(n+0) {
   background: undefined;
-  border-color: #f8fafb;
-  color: #909394;
+  border-color: #fcfdfd;
+  color: #959697;
 }
 
 .c0:hover > *:nth-child(n+0) {
-  background: #fafbfc;
+  background: #fcfdfd;
 }
 
 <table>

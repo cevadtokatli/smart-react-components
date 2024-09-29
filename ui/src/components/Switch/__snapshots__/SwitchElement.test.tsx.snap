@@ -7,12 +7,12 @@ exports[`<SwitchElement /> should not be checked 1`] = `
   width: 28px;
 }
 
-.c0 .c2 {
+.c0 .switch-slider {
   height: 14px;
   width: 14px;
 }
 
-.c3 {
+.c2 {
   background: #fff;
   border-radius: 100%;
   box-shadow: 0 1px 3px rgba(0,0,0,.4);
@@ -42,7 +42,7 @@ exports[`<SwitchElement /> should not be checked 1`] = `
     class="c0 c1"
   >
     <div
-      class="c2 c3"
+      class="c2 switch-slider"
     />
   </div>
 </DocumentFragment>
@@ -55,13 +55,13 @@ exports[`<SwitchElement /> should render component 1`] = `
   width: 28px;
 }
 
-.c0 .c2 {
+.c0 .switch-slider {
   height: 14px;
   width: 14px;
   left: 12px;
 }
 
-.c3 {
+.c2 {
   background: #fff;
   border-radius: 100%;
   box-shadow: 0 1px 3px rgba(0,0,0,.4);
@@ -96,7 +96,7 @@ exports[`<SwitchElement /> should render component 1`] = `
     class="c0 c1"
   >
     <div
-      class="c2 c3"
+      class="c2 switch-slider"
     />
   </div>
 </DocumentFragment>
@@ -109,13 +109,13 @@ exports[`<SwitchElement /> should render component outline 1`] = `
   width: 28px;
 }
 
-.c0 .c2 {
+.c0 .switch-slider {
   height: 14px;
   width: 14px;
   left: 12px;
 }
 
-.c3 {
+.c2 {
   background: #fff;
   border-radius: 100%;
   box-shadow: 0 1px 3px rgba(0,0,0,.4);
@@ -148,7 +148,7 @@ exports[`<SwitchElement /> should render component outline 1`] = `
     class="c0 c1"
   >
     <div
-      class="c2 c3"
+      class="c2 switch-slider"
     />
   </div>
 </DocumentFragment>
@@ -161,13 +161,13 @@ exports[`<SwitchElement /> should render component with soft colors 1`] = `
   width: 28px;
 }
 
-.c0 .c2 {
+.c0 .switch-slider {
   height: 14px;
   width: 14px;
   left: 12px;
 }
 
-.c3 {
+.c2 {
   background: #fff;
   border-radius: 100%;
   box-shadow: 0 1px 3px rgba(0,0,0,.4);
@@ -202,7 +202,7 @@ exports[`<SwitchElement /> should render component with soft colors 1`] = `
     class="c0 c1"
   >
     <div
-      class="c2 c3"
+      class="c2 switch-slider"
     />
   </div>
 </DocumentFragment>

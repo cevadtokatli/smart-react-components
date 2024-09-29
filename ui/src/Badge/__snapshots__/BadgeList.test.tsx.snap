@@ -10,9 +10,13 @@ exports[`<BadgeList /> should render component 1`] = `
   margin: .3125rem .3125rem;
 }
 
-.c2 .c4 {
+.c2 .src-badge-content {
   font-size: .75rem;
   padding: .1875rem .375rem;
+}
+
+.c2 .src-badge-icon {
+  padding: 0 0.1875rem;
 }
 
 .c2 svg {
@@ -38,7 +42,7 @@ exports[`<BadgeList /> should render component 1`] = `
   flex-wrap: wrap;
 }
 
-.c5 {
+.c4 {
   border: solid 1px;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
@@ -55,12 +59,12 @@ exports[`<BadgeList /> should render component 1`] = `
   word-wrap: break-word;
 }
 
-.c3 .c4 {
+.c3 .src-badge-content {
   border-color: #0665d0;
   border-radius: .15rem;
 }
 
-.c3 .c4 {
+.c3 .src-badge-content {
   background: #0665d0;
   color: #fff;
   fill: #fff;
@@ -74,7 +78,7 @@ exports[`<BadgeList /> should render component 1`] = `
       shape="rectangle"
     >
       <div
-        class="c4 c5"
+        class="c4 src-badge-content"
       >
         Item 1
       </div>
@@ -84,7 +88,7 @@ exports[`<BadgeList /> should render component 1`] = `
       shape="rectangle"
     >
       <div
-        class="c4 c5"
+        class="c4 src-badge-content"
       >
         Item 2
       </div>
@@ -94,7 +98,7 @@ exports[`<BadgeList /> should render component 1`] = `
       shape="rectangle"
     >
       <div
-        class="c4 c5"
+        class="c4 src-badge-content"
       >
         Item 3
       </div>

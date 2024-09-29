@@ -34,23 +34,129 @@ exports[`<Confirm /> should render component 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
-.c15 .c17 {
+.c15 .src-button-content {
   font-size: .875rem;
   padding: .45rem .9rem;
 }
 
-.c15 .c17 > :not(:last-child) {
+.c15 .src-button-content > :not(:last-child) {
   margin-right: 0.225rem;
 }
 
+.c16 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background: transparent;
+  border: 0;
+  border-radius: .125rem;
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+  -webkit-transition: box-shadow 300ms 0s ease-in-out;
+  transition: box-shadow 300ms 0s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c16:active {
+  outline: 0;
+}
+
+.c16 .src-button-content {
+  border-color: #0665d0;
+  color: #0665d0;
+}
+
+.c16:hover .src-button-content {
+  background: #0665d0;
+  color: #fff;
+}
+
+.c16:hover .src-button-addon {
+  background: #0556B2;
+  color: #fff;
+}
+
+.c16:focus {
+  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
+}
+
+.c16 .src-button-content {
+  border-radius: .125rem;
+}
+
 .c18 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background: transparent;
+  border: 0;
+  border-radius: .125rem;
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+  -webkit-transition: box-shadow 300ms 0s ease-in-out;
+  transition: box-shadow 300ms 0s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c18:active {
+  outline: 0;
+}
+
+.c18 .src-button-content {
+  color: #fff;
+  background: #0665d0;
+  border-color: #0665d0;
+}
+
+.c18:hover .src-button-content {
+  background: #055BBB;
+  border-color: #055BBB;
+}
+
+.c18:hover .src-button-addon {
+  background: #0552A9;
+  border-color: #0552A9;
+}
+
+.c18:focus {
+  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
+}
+
+.c18 .src-button-content {
+  border-radius: .125rem;
+}
+
+.c17 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   border: solid 1px;
   box-sizing: border-box;
-  cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -63,99 +169,8 @@ exports[`<Confirm /> should render component 1`] = `
   transition: 300ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   word-break: break-word;
   word-wrap: break-word;
-}
-
-.c16 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  background: transparent;
-  border: 0;
-  font-family: inherit;
-  position: relative;
-  -webkit-transition: box-shadow 300ms 0s ease-in-out;
-  transition: box-shadow 300ms 0s ease-in-out;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-}
-
-.c16,
-.c16 .c17 {
-  border-radius: .125rem;
-}
-
-.c16:active {
-  outline: 0;
-}
-
-.c16 .c17 {
-  border-color: #0665d0;
-  color: #0665d0;
-}
-
-.c16:hover .c17 {
-  background: #0665d0;
-  color: #fff;
-}
-
-.c16:focus {
-  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
-}
-
-.c19 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  background: transparent;
-  border: 0;
-  font-family: inherit;
-  position: relative;
-  -webkit-transition: box-shadow 300ms 0s ease-in-out;
-  transition: box-shadow 300ms 0s ease-in-out;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-}
-
-.c19,
-.c19 .c17 {
-  border-radius: .125rem;
-}
-
-.c19:active {
-  outline: 0;
-}
-
-.c19 .c17 {
-  background: #0665d0;
-  border-color: #0665d0;
-  color: #fff;
-}
-
-.c19:hover .c17 {
-  background: #065DC0;
-  border-color: #065DC0;
-}
-
-.c19:focus {
-  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
 }
 
 .c14 {
@@ -167,10 +182,6 @@ exports[`<Confirm /> should render component 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -246,7 +257,7 @@ exports[`<Confirm /> should render component 1`] = `
   justify-content: center;
   height: 100%;
   left: 0;
-  padding: 1.75rem;
+  padding: 1.75rem 1.75rem;
   top: 0;
   touch-action: none;
   width: 100%;
@@ -315,6 +326,7 @@ exports[`<Confirm /> should render component 1`] = `
 }
 
 .c10 {
+  background: #fff;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -377,18 +389,18 @@ exports[`<Confirm /> should render component 1`] = `
             shape="rectangle"
           >
             <span
-              class="c17 c18"
+              class="c17 src-button-content"
             >
               Cancel
             </span>
           </button>
           <button
-            class="c15 c19"
+            class="c15 c18"
             overflow="hidden"
             shape="rectangle"
           >
             <span
-              class="c17 c18"
+              class="c17 src-button-content"
             >
               OK
             </span>

@@ -5,7 +5,7 @@ import ButtonSelect from './ButtonSelect'
 import Option from '../Select/Option'
 import OptionGroup from '../Select/OptionGroup'
 
-describe('<SelectBox />', () => {
+describe('<ButtonSelect />', () => {
   it('should render component', async () => {
     const { asFragment, container } = render(wrapTheme(
       <ButtonSelect active="item-1" setActive={jest.fn()} placeholder="Placeholder">

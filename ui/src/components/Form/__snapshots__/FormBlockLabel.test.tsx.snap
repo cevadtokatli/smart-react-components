@@ -2,7 +2,11 @@
 
 exports[`<FormBlockLabel /> should be disabled 1`] = `
 <DocumentFragment>
-  .c0 > span {
+  .c0 {
+  display: block;
+}
+
+.c0 > span {
   margin-bottom: .5rem;
 }
 
@@ -11,7 +15,6 @@ exports[`<FormBlockLabel /> should be disabled 1`] = `
 }
 
 .c1 > span {
-  cursor: default;
   display: block;
   word-break: break-word;
   word-wrap: break-word;
@@ -25,6 +28,7 @@ exports[`<FormBlockLabel /> should be disabled 1`] = `
 
 <label
     class="c0 c1"
+    display="block"
   >
     <span>
       Label
@@ -37,6 +41,7 @@ exports[`<FormBlockLabel /> should be disabled 1`] = `
 exports[`<FormBlockLabel /> should not be block 1`] = `
 <DocumentFragment>
   .c0 {
+  display: block;
   margin-bottom: .5rem;
 }
 
@@ -56,7 +61,6 @@ exports[`<FormBlockLabel /> should not be block 1`] = `
 }
 
 .c1 > span {
-  cursor: default;
   display: block;
   word-break: break-word;
   word-wrap: break-word;
@@ -77,6 +81,7 @@ exports[`<FormBlockLabel /> should not be block 1`] = `
 
 <label
     class="c0 c1"
+    display="block"
   >
     <span>
       Label
@@ -88,7 +93,11 @@ exports[`<FormBlockLabel /> should not be block 1`] = `
 
 exports[`<FormBlockLabel /> should render component 1`] = `
 <DocumentFragment>
-  .c0 > span {
+  .c0 {
+  display: block;
+}
+
+.c0 > span {
   margin-bottom: .5rem;
 }
 
@@ -97,7 +106,6 @@ exports[`<FormBlockLabel /> should render component 1`] = `
 }
 
 .c1 > span {
-  cursor: default;
   display: block;
   word-break: break-word;
   word-wrap: break-word;
@@ -106,6 +114,7 @@ exports[`<FormBlockLabel /> should render component 1`] = `
 
 <label
     class="c0 c1"
+    display="block"
   >
     <span>
       Label

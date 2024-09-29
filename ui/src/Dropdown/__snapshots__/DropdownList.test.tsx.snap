@@ -17,6 +17,7 @@ exports[`<DropdownList /> should render component 1`] = `
 }
 
 .c3 {
+  cursor: pointer;
   isolation: isolate;
   overflow: hidden;
   position: relative;
@@ -47,11 +48,20 @@ exports[`<DropdownList /> should render component 1`] = `
 
 .c4 {
   border-radius: .2rem;
-  cursor: default;
+  fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
   transition-property: background,color,fill;
+}
+
+.c4 .svg,
+.c4 .svg .fill,
+.c4 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
 }
 
 .c4:hover {
@@ -59,29 +69,41 @@ exports[`<DropdownList /> should render component 1`] = `
   color: #fff;
 }
 
+.c4:hover .svg,
+.c4:hover .svg .fill {
+  fill: #fff;
+}
+
+.c4:hover .svg .stroke {
+  stroke: #fff;
+}
+
 <div
     class="c0 c1"
   >
     <div
       class="c2"
-      font-weight="$fontWeight.dropdownCategory"
+      font-weight="$fontWeight.semibold"
     >
       Category
     </div>
     <div
       class="c3 c4"
+      cursor="$cursor.dropdown"
       overflow="hidden"
     >
       Item 1
     </div>
     <div
       class="c3 c4"
+      cursor="$cursor.dropdown"
       overflow="hidden"
     >
       Item 2
     </div>
     <div
       class="c3 c4"
+      cursor="$cursor.dropdown"
       overflow="hidden"
     >
       Item 3

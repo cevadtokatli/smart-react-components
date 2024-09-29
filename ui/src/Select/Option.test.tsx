@@ -12,6 +12,7 @@ describe('<Option />', () => {
 
     props = {
       active: 'active',
+      cursorKey: 'selectBox',
       hasHover: false,
       hasWaveEffect: false,
       isOutline: true,

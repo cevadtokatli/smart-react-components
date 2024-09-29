@@ -2,41 +2,13 @@
 
 exports[`<Button /> should be block 1`] = `
 <DocumentFragment>
-  .c0 .c2 {
+  .c0 .src-button-content {
   font-size: .875rem;
   padding: .45rem .9rem;
 }
 
-.c0 .c2 > :not(:last-child) {
+.c0 .src-button-content > :not(:last-child) {
   margin-right: 0.225rem;
-}
-
-.c3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: solid 1px;
-  box-sizing: border-box;
-  cursor: default;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  fill: currentcolor;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-transition: 300ms 0s ease-in-out;
-  transition: 300ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  word-break: break-word;
-  word-wrap: break-word;
 }
 
 .c1 {
@@ -46,10 +18,16 @@ exports[`<Button /> should be block 1`] = `
   align-items: stretch;
   background: transparent;
   border: 0;
+  border-radius: .125rem;
+  cursor: pointer;
   font-family: inherit;
   position: relative;
   -webkit-transition: box-shadow 300ms 0s ease-in-out;
   transition: box-shadow 300ms 0s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -60,69 +38,48 @@ exports[`<Button /> should be block 1`] = `
   width: 100%;
 }
 
-.c1,
-.c1 .c2 {
-  border-radius: .125rem;
-}
-
 .c1:active {
   outline: 0;
 }
 
-.c1 .c2 {
+.c1 .src-button-content {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
 
-.c1 .c2 {
+.c1 .src-button-content {
+  color: #fff;
   background: #0665d0;
   border-color: #0665d0;
-  color: #fff;
 }
 
-.c1:hover .c2 {
-  background: #065DC0;
-  border-color: #065DC0;
+.c1:hover .src-button-content {
+  background: #055BBB;
+  border-color: #055BBB;
+}
+
+.c1:hover .src-button-addon {
+  background: #0552A9;
+  border-color: #0552A9;
 }
 
 .c1:focus {
   box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
 }
 
-<button
-    class="c0 c1"
-    shape="rectangle"
-  >
-    <span
-      class="c2 c3"
-    >
-      Content
-    </span>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`<Button /> should be disabled 1`] = `
-<DocumentFragment>
-  .c0 .c2 {
-  font-size: .875rem;
-  padding: .45rem .9rem;
+.c1 .src-button-content {
+  border-radius: .125rem;
 }
 
-.c0 .c2 > :not(:last-child) {
-  margin-right: 0.225rem;
-}
-
-.c3 {
+.c2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   border: solid 1px;
   box-sizing: border-box;
-  cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -135,12 +92,32 @@ exports[`<Button /> should be disabled 1`] = `
   transition: 300ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   word-break: break-word;
   word-wrap: break-word;
+}
+
+<button
+    class="c0 c1"
+    shape="rectangle"
+  >
+    <span
+      class="c2 src-button-content"
+    >
+      Content
+    </span>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`<Button /> should be disabled 1`] = `
+<DocumentFragment>
+  .c0 .src-button-content {
+  font-size: .875rem;
+  padding: .45rem .9rem;
+}
+
+.c0 .src-button-content > :not(:last-child) {
+  margin-right: 0.225rem;
 }
 
 .c1 {
@@ -150,10 +127,16 @@ exports[`<Button /> should be disabled 1`] = `
   align-items: stretch;
   background: transparent;
   border: 0;
+  border-radius: .125rem;
+  cursor: default;
   font-family: inherit;
   position: relative;
   -webkit-transition: box-shadow 300ms 0s ease-in-out;
   transition: box-shadow 300ms 0s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -166,35 +149,62 @@ exports[`<Button /> should be disabled 1`] = `
   pointer-events: none;
 }
 
-.c1,
-.c1 .c2 {
-  border-radius: .125rem;
-}
-
 .c1:active {
   outline: 0;
 }
 
-.c1 .c2 {
+.c1 .src-button-content {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
 
-.c1 .c2 {
+.c1 .src-button-content {
+  color: #fff;
   background: #0665d0;
   border-color: #0665d0;
-  color: #fff;
 }
 
-.c1:hover .c2 {
-  background: #065DC0;
-  border-color: #065DC0;
+.c1:hover .src-button-content {
+  background: #055BBB;
+  border-color: #055BBB;
+}
+
+.c1:hover .src-button-addon {
+  background: #0552A9;
+  border-color: #0552A9;
 }
 
 .c1:focus {
   box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
+}
+
+.c1 .src-button-content {
+  border-radius: .125rem;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: currentcolor;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  word-break: break-word;
+  word-wrap: break-word;
 }
 
 <button
@@ -202,7 +212,7 @@ exports[`<Button /> should be disabled 1`] = `
     shape="rectangle"
   >
     <span
-      class="c2 c3"
+      class="c2 src-button-content"
     >
       Content
     </span>
@@ -212,24 +222,77 @@ exports[`<Button /> should be disabled 1`] = `
 
 exports[`<Button /> should be fixed size 1`] = `
 <DocumentFragment>
-  .c0 .c2 {
+  .c0 .src-button-content {
   font-size: .875rem;
   height: 32px;
   width: 32px;
 }
 
-.c0 .c2 > :not(:last-child) {
+.c0 .src-button-content > :not(:last-child) {
   margin-right: 0.225rem;
 }
 
-.c3 {
+.c1 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background: transparent;
+  border: 0;
+  border-radius: .125rem;
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+  -webkit-transition: box-shadow 300ms 0s ease-in-out;
+  transition: box-shadow 300ms 0s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c1:active {
+  outline: 0;
+}
+
+.c1 .src-button-content {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 .src-button-content {
+  color: #fff;
+  background: #0665d0;
+  border-color: #0665d0;
+}
+
+.c1:hover .src-button-content {
+  background: #055BBB;
+  border-color: #055BBB;
+}
+
+.c1:hover .src-button-addon {
+  background: #0552A9;
+  border-color: #0552A9;
+}
+
+.c1:focus {
+  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
+}
+
+.c1 .src-button-content {
+  border-radius: .125rem;
+}
+
+.c2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   border: solid 1px;
   box-sizing: border-box;
-  cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -242,56 +305,8 @@ exports[`<Button /> should be fixed size 1`] = `
   transition: 300ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   word-break: break-word;
   word-wrap: break-word;
-}
-
-.c1 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  background: transparent;
-  border: 0;
-  font-family: inherit;
-  position: relative;
-  -webkit-transition: box-shadow 300ms 0s ease-in-out;
-  transition: box-shadow 300ms 0s ease-in-out;
-}
-
-.c1,
-.c1 .c2 {
-  border-radius: .125rem;
-}
-
-.c1:active {
-  outline: 0;
-}
-
-.c1 .c2 {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c1 .c2 {
-  background: #0665d0;
-  border-color: #0665d0;
-  color: #fff;
-}
-
-.c1:hover .c2 {
-  background: #065DC0;
-  border-color: #065DC0;
-}
-
-.c1:focus {
-  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
 }
 
 <button
@@ -299,7 +314,7 @@ exports[`<Button /> should be fixed size 1`] = `
     shape="rectangle"
   >
     <span
-      class="c2 c3"
+      class="c2 src-button-content"
     >
       Content
     </span>
@@ -309,41 +324,13 @@ exports[`<Button /> should be fixed size 1`] = `
 
 exports[`<Button /> should be loading 1`] = `
 <DocumentFragment>
-  .c0 .c2 {
+  .c0 .src-button-content {
   font-size: .875rem;
   padding: .45rem .9rem;
 }
 
-.c0 .c2 > :not(:last-child) {
+.c0 .src-button-content > :not(:last-child) {
   margin-right: 0.225rem;
-}
-
-.c3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: solid 1px;
-  box-sizing: border-box;
-  cursor: default;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  fill: currentcolor;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-transition: 300ms 0s ease-in-out;
-  transition: 300ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  word-break: break-word;
-  word-wrap: break-word;
 }
 
 .c1 {
@@ -353,10 +340,16 @@ exports[`<Button /> should be loading 1`] = `
   align-items: stretch;
   background: transparent;
   border: 0;
+  border-radius: .125rem;
+  cursor: default;
   font-family: inherit;
   position: relative;
   -webkit-transition: box-shadow 300ms 0s ease-in-out;
   transition: box-shadow 300ms 0s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -368,69 +361,58 @@ exports[`<Button /> should be loading 1`] = `
   pointer-events: none;
 }
 
-.c1,
-.c1 .c2 {
-  border-radius: .125rem;
-}
-
 .c1:active {
   outline: 0;
 }
 
-.c1 .c2 {
+.c1 .src-button-content {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
 
-.c1 .c2 {
+.c1 .src-button-content {
+  color: #fff;
   background: #0665d0;
   border-color: #0665d0;
-  color: #fff;
 }
 
-.c1:hover .c2 {
-  background: #065DC0;
-  border-color: #065DC0;
+.c1:hover .src-button-content {
+  background: #055BBB;
+  border-color: #055BBB;
+}
+
+.c1:hover .src-button-addon {
+  background: #0552A9;
+  border-color: #0552A9;
 }
 
 .c1:focus {
   box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
 }
 
-<button
-    class="c0 c1"
-    shape="rectangle"
-  >
-    <span
-      class="c2 c3"
-    >
-      Content
-    </span>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`<Button /> should be under the button container 1`] = `
-<DocumentFragment>
-  .c0 .c2 {
-  font-size: .875rem;
-  padding: .45rem .9rem;
+.c1 .src-button-content,
+.c1 .src-button-addon {
+  color: transparent;
 }
 
-.c0 .c2 > :not(:last-child) {
-  margin-right: 0.225rem;
+.c1 .src-button-content > *,
+.c1 .src-button-addon > * {
+  visibility: hidden;
 }
 
-.c3 {
+.c1 .src-button-content {
+  border-radius: .125rem;
+}
+
+.c2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   border: solid 1px;
   box-sizing: border-box;
-  cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -443,12 +425,32 @@ exports[`<Button /> should be under the button container 1`] = `
   transition: 300ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   word-break: break-word;
   word-wrap: break-word;
+}
+
+<button
+    class="c0 c1"
+    shape="rectangle"
+  >
+    <span
+      class="c2 src-button-content"
+    >
+      Content
+    </span>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`<Button /> should be under the button container 1`] = `
+<DocumentFragment>
+  .c0 .src-button-content {
+  font-size: .875rem;
+  padding: .45rem .9rem;
+}
+
+.c0 .src-button-content > :not(:last-child) {
+  margin-right: 0.225rem;
 }
 
 .c1 {
@@ -458,10 +460,16 @@ exports[`<Button /> should be under the button container 1`] = `
   align-items: stretch;
   background: transparent;
   border: 0;
+  border-radius: .125rem;
+  cursor: pointer;
   font-family: inherit;
   position: relative;
   -webkit-transition: box-shadow 300ms 0s ease-in-out;
   transition: box-shadow 300ms 0s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -472,31 +480,58 @@ exports[`<Button /> should be under the button container 1`] = `
   width: 100%;
 }
 
-.c1,
-.c1 .c2 {
-  border-radius: .125rem;
-}
-
 .c1:active {
   outline: 0;
 }
 
-.c1 .c2 {
+.c1 .src-button-content {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
 
-.c1 .c2 {
+.c1 .src-button-content {
+  color: #fff;
   background: #0665d0;
   border-color: #0665d0;
-  color: #fff;
 }
 
-.c1:hover .c2 {
-  background: #065DC0;
-  border-color: #065DC0;
+.c1:hover .src-button-content {
+  background: #055BBB;
+  border-color: #055BBB;
+}
+
+.c1:hover .src-button-addon {
+  background: #0552A9;
+  border-color: #0552A9;
+}
+
+.c1 .src-button-content {
+  border-radius: .125rem;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: currentcolor;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  word-break: break-word;
+  word-wrap: break-word;
 }
 
 <button
@@ -504,7 +539,7 @@ exports[`<Button /> should be under the button container 1`] = `
     shape="rectangle"
   >
     <span
-      class="c2 c3"
+      class="c2 src-button-content"
     >
       Content
     </span>
@@ -514,17 +549,105 @@ exports[`<Button /> should be under the button container 1`] = `
 
 exports[`<Button /> should have addon 1`] = `
 <DocumentFragment>
-  .c0 .c4 {
+  .c0 .src-button-content {
   font-size: .875rem;
   padding: .45rem .9rem;
   padding-left: 0.45rem;
 }
 
-.c0 .c4 > :not(:last-child) {
+.c0 .src-button-content > :not(:last-child) {
   margin-right: 0.225rem;
 }
 
+.c1 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background: transparent;
+  border: 0;
+  border-radius: .125rem;
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+  -webkit-transition: box-shadow 300ms 0s ease-in-out;
+  transition: box-shadow 300ms 0s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.c1:active {
+  outline: 0;
+}
+
+.c1 .src-button-content {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 .src-button-content {
+  color: #fff;
+  background: #0665d0;
+  border-color: #0665d0;
+}
+
+.c1:hover .src-button-content {
+  background: #055BBB;
+  border-color: #055BBB;
+}
+
+.c1:hover .src-button-addon {
+  background: #0552A9;
+  border-color: #0552A9;
+}
+
+.c1:focus {
+  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
+}
+
+.c1 .src-button-content {
+  border-radius: .125rem;
+  border-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 .c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: currentcolor;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-transition: 300ms 0s ease-in-out;
+  transition: 300ms 0s ease-in-out;
+  -webkit-transition-property: background,border,color,fill;
+  transition-property: background,border,color,fill;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+.c2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -550,100 +673,9 @@ exports[`<Button /> should have addon 1`] = `
   transition: 300ms 0s ease-in-out;
   -webkit-transition-property: background,border,color;
   transition-property: background,border,color;
-  background: #0553AC;
-  border-color: #0553AC;
+  background: #0556B2;
+  border-color: #0556B2;
   color: #fff;
-}
-
-.c5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: solid 1px;
-  box-sizing: border-box;
-  cursor: default;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  fill: currentcolor;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-transition: 300ms 0s ease-in-out;
-  transition: 300ms 0s ease-in-out;
-  -webkit-transition-property: background,border,color,fill;
-  transition-property: background,border,color,fill;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  word-break: break-word;
-  word-wrap: break-word;
-}
-
-.c1 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  background: transparent;
-  border: 0;
-  font-family: inherit;
-  position: relative;
-  -webkit-transition: box-shadow 300ms 0s ease-in-out;
-  transition: box-shadow 300ms 0s ease-in-out;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-}
-
-.c1,
-.c1 .c4 {
-  border-radius: .125rem;
-}
-
-.c1 .c4 {
-  border-left: 0;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.c1:active {
-  outline: 0;
-}
-
-.c1 .c4 {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c1 .c4 {
-  background: #0665d0;
-  border-color: #0665d0;
-  color: #fff;
-}
-
-.c1:hover .c4 {
-  background: #065DC0;
-  border-color: #065DC0;
-}
-
-.c1:hover .c2 {
-  background: #054D9F;
-  border-color: #054D9F;
-}
-
-.c1:focus {
-  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
 }
 
 <button
@@ -651,13 +683,13 @@ exports[`<Button /> should have addon 1`] = `
     shape="rectangle"
   >
     <div
-      class="c2  c3"
+      class=" c2 src-button-addon"
       shape="rectangle"
     >
       Addon
     </div>
     <span
-      class="c4 c5"
+      class="c3 src-button-content"
     >
       Content
     </span>
@@ -667,23 +699,88 @@ exports[`<Button /> should have addon 1`] = `
 
 exports[`<Button /> should have separated addon 1`] = `
 <DocumentFragment>
-  .c0 .c2 {
+  .c0 .src-button-content {
   font-size: .875rem;
   padding: .45rem .9rem;
 }
 
-.c0 .c2 > :not(:last-child) {
+.c0 .src-button-content > :not(:last-child) {
   margin-right: 0.225rem;
 }
 
-.c3 {
+.c1 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background: transparent;
+  border: 0;
+  border-radius: .125rem;
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+  -webkit-transition: box-shadow 300ms 0s ease-in-out;
+  transition: box-shadow 300ms 0s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c1:active {
+  outline: 0;
+}
+
+.c1 .src-button-content {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 .src-button-content {
+  color: #fff;
+  background: #0665d0;
+  border-color: #0665d0;
+}
+
+.c1:hover .src-button-content {
+  background: #055BBB;
+  border-color: #055BBB;
+}
+
+.c1:hover .src-button-addon {
+  background: #0552A9;
+  border-color: #0552A9;
+}
+
+.c1:focus {
+  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
+}
+
+.c1 .src-button-content {
+  border-radius: .125rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   border: solid 1px;
   box-sizing: border-box;
-  cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -696,66 +793,8 @@ exports[`<Button /> should have separated addon 1`] = `
   transition: 300ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   word-break: break-word;
   word-wrap: break-word;
-}
-
-.c1 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  background: transparent;
-  border: 0;
-  font-family: inherit;
-  position: relative;
-  -webkit-transition: box-shadow 300ms 0s ease-in-out;
-  transition: box-shadow 300ms 0s ease-in-out;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-}
-
-.c1,
-.c1 .c2 {
-  border-radius: .125rem;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.c1:active {
-  outline: 0;
-}
-
-.c1 .c2 {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c1 .c2 {
-  background: #0665d0;
-  border-color: #0665d0;
-  color: #fff;
-}
-
-.c1:hover .c2 {
-  background: #065DC0;
-  border-color: #065DC0;
-}
-
-.c1:focus {
-  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
 }
 
 <button
@@ -763,7 +802,7 @@ exports[`<Button /> should have separated addon 1`] = `
     shape="rectangle"
   >
     <span
-      class="c2 c3"
+      class="c2 src-button-content"
     >
       Content
     </span>
@@ -773,23 +812,84 @@ exports[`<Button /> should have separated addon 1`] = `
 
 exports[`<Button /> should render component 1`] = `
 <DocumentFragment>
-  .c0 .c2 {
+  .c0 .src-button-content {
   font-size: .875rem;
   padding: .45rem .9rem;
 }
 
-.c0 .c2 > :not(:last-child) {
+.c0 .src-button-content > :not(:last-child) {
   margin-right: 0.225rem;
 }
 
-.c3 {
+.c1 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background: transparent;
+  border: 0;
+  border-radius: .125rem;
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+  -webkit-transition: box-shadow 300ms 0s ease-in-out;
+  transition: box-shadow 300ms 0s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.c1:active {
+  outline: 0;
+}
+
+.c1 .src-button-content {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 .src-button-content {
+  color: #fff;
+  background: #0665d0;
+  border-color: #0665d0;
+}
+
+.c1:hover .src-button-content {
+  background: #055BBB;
+  border-color: #055BBB;
+}
+
+.c1:hover .src-button-addon {
+  background: #0552A9;
+  border-color: #0552A9;
+}
+
+.c1:focus {
+  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
+}
+
+.c1 .src-button-content {
+  border-radius: .125rem;
+}
+
+.c2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   border: solid 1px;
   box-sizing: border-box;
-  cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -802,64 +902,8 @@ exports[`<Button /> should render component 1`] = `
   transition: 300ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   word-break: break-word;
   word-wrap: break-word;
-}
-
-.c1 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  background: transparent;
-  border: 0;
-  font-family: inherit;
-  position: relative;
-  -webkit-transition: box-shadow 300ms 0s ease-in-out;
-  transition: box-shadow 300ms 0s ease-in-out;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-}
-
-.c1,
-.c1 .c2 {
-  border-radius: .125rem;
-}
-
-.c1:active {
-  outline: 0;
-}
-
-.c1 .c2 {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c1 .c2 {
-  background: #0665d0;
-  border-color: #0665d0;
-  color: #fff;
-}
-
-.c1:hover .c2 {
-  background: #065DC0;
-  border-color: #065DC0;
-}
-
-.c1:focus {
-  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
 }
 
 <button
@@ -867,7 +911,7 @@ exports[`<Button /> should render component 1`] = `
     shape="rectangle"
   >
     <span
-      class="c2 c3"
+      class="c2 src-button-content"
     >
       Content
     </span>
@@ -877,23 +921,80 @@ exports[`<Button /> should render component 1`] = `
 
 exports[`<Button /> should render component as link 1`] = `
 <DocumentFragment>
-  .c0 .c2 {
+  .c0 .src-button-content {
   font-size: .875rem;
   padding: .45rem .9rem;
 }
 
-.c0 .c2 > :not(:last-child) {
+.c0 .src-button-content > :not(:last-child) {
   margin-right: 0.225rem;
 }
 
-.c3 {
+.c1 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background: transparent;
+  border: 0;
+  border-radius: .125rem;
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+  -webkit-transition: box-shadow 300ms 0s ease-in-out;
+  transition: box-shadow 300ms 0s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.c1:active {
+  outline: 0;
+}
+
+.c1 .src-button-content {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 .src-button-content {
+  border-color: transparent;
+  color: #0665d0;
+  fill: #0665d0;
+}
+
+.c1:hover .src-button-content {
+  color: #0552A9;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus {
+  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
+}
+
+.c1 .src-button-content {
+  border-radius: .125rem;
+}
+
+.c2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   border: solid 1px;
   box-sizing: border-box;
-  cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -906,65 +1007,8 @@ exports[`<Button /> should render component as link 1`] = `
   transition: 300ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   word-break: break-word;
   word-wrap: break-word;
-}
-
-.c1 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  background: transparent;
-  border: 0;
-  font-family: inherit;
-  position: relative;
-  -webkit-transition: box-shadow 300ms 0s ease-in-out;
-  transition: box-shadow 300ms 0s ease-in-out;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-}
-
-.c1,
-.c1 .c2 {
-  border-radius: .125rem;
-}
-
-.c1:active {
-  outline: 0;
-}
-
-.c1 .c2 {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c1 .c2 {
-  border-color: transparent;
-  color: #0665d0;
-  fill: #0665d0;
-}
-
-.c1:hover .c2 {
-  color: #054D9F;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c1:focus {
-  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
 }
 
 <button
@@ -972,7 +1016,7 @@ exports[`<Button /> should render component as link 1`] = `
     shape="rectangle"
   >
     <span
-      class="c2 c3"
+      class="c2 src-button-content"
     >
       Content
     </span>
@@ -982,23 +1026,83 @@ exports[`<Button /> should render component as link 1`] = `
 
 exports[`<Button /> should render component outline 1`] = `
 <DocumentFragment>
-  .c0 .c2 {
+  .c0 .src-button-content {
   font-size: .875rem;
   padding: .45rem .9rem;
 }
 
-.c0 .c2 > :not(:last-child) {
+.c0 .src-button-content > :not(:last-child) {
   margin-right: 0.225rem;
 }
 
-.c3 {
+.c1 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background: transparent;
+  border: 0;
+  border-radius: .125rem;
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+  -webkit-transition: box-shadow 300ms 0s ease-in-out;
+  transition: box-shadow 300ms 0s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.c1:active {
+  outline: 0;
+}
+
+.c1 .src-button-content {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 .src-button-content {
+  border-color: #0665d0;
+  color: #0665d0;
+}
+
+.c1:hover .src-button-content {
+  background: #0665d0;
+  color: #fff;
+}
+
+.c1:hover .src-button-addon {
+  background: #0556B2;
+  color: #fff;
+}
+
+.c1:focus {
+  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
+}
+
+.c1 .src-button-content {
+  border-radius: .125rem;
+}
+
+.c2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   border: solid 1px;
   box-sizing: border-box;
-  cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1011,63 +1115,8 @@ exports[`<Button /> should render component outline 1`] = `
   transition: 300ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   word-break: break-word;
   word-wrap: break-word;
-}
-
-.c1 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  background: transparent;
-  border: 0;
-  font-family: inherit;
-  position: relative;
-  -webkit-transition: box-shadow 300ms 0s ease-in-out;
-  transition: box-shadow 300ms 0s ease-in-out;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-}
-
-.c1,
-.c1 .c2 {
-  border-radius: .125rem;
-}
-
-.c1:active {
-  outline: 0;
-}
-
-.c1 .c2 {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c1 .c2 {
-  border-color: #0665d0;
-  color: #0665d0;
-}
-
-.c1:hover .c2 {
-  background: #0665d0;
-  color: #fff;
-}
-
-.c1:focus {
-  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
 }
 
 <button
@@ -1075,7 +1124,7 @@ exports[`<Button /> should render component outline 1`] = `
     shape="rectangle"
   >
     <span
-      class="c2 c3"
+      class="c2 src-button-content"
     >
       Content
     </span>
@@ -1085,23 +1134,84 @@ exports[`<Button /> should render component outline 1`] = `
 
 exports[`<Button /> should render component outline with soft colors 1`] = `
 <DocumentFragment>
-  .c0 .c2 {
+  .c0 .src-button-content {
   font-size: .875rem;
   padding: .45rem .9rem;
 }
 
-.c0 .c2 > :not(:last-child) {
+.c0 .src-button-content > :not(:last-child) {
   margin-right: 0.225rem;
 }
 
-.c3 {
+.c1 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background: transparent;
+  border: 0;
+  border-radius: .125rem;
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+  -webkit-transition: box-shadow 300ms 0s ease-in-out;
+  transition: box-shadow 300ms 0s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.c1:active {
+  outline: 0;
+}
+
+.c1 .src-button-content {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 .src-button-content {
+  border-color: #cde0f5;
+  color: #cde0f5;
+}
+
+.c1:hover .src-button-content {
+  background: #cde0f5;
+  color: #033c7c;
+}
+
+.c1:hover .src-button-addon {
+  background: #a7c9ee;
+  color: #033c7c;
+}
+
+.c1:focus {
+  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
+}
+
+.c1 .src-button-content {
+  border-radius: .125rem;
+}
+
+.c2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   border: solid 1px;
   box-sizing: border-box;
-  cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1114,63 +1224,8 @@ exports[`<Button /> should render component outline with soft colors 1`] = `
   transition: 300ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   word-break: break-word;
   word-wrap: break-word;
-}
-
-.c1 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  background: transparent;
-  border: 0;
-  font-family: inherit;
-  position: relative;
-  -webkit-transition: box-shadow 300ms 0s ease-in-out;
-  transition: box-shadow 300ms 0s ease-in-out;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-}
-
-.c1,
-.c1 .c2 {
-  border-radius: .125rem;
-}
-
-.c1:active {
-  outline: 0;
-}
-
-.c1 .c2 {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c1 .c2 {
-  border-color: #cde0f5;
-  color: #cde0f5;
-}
-
-.c1:hover .c2 {
-  background: #cde0f5;
-  color: #033c7c;
-}
-
-.c1:focus {
-  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
 }
 
 <button
@@ -1178,7 +1233,7 @@ exports[`<Button /> should render component outline with soft colors 1`] = `
     shape="rectangle"
   >
     <span
-      class="c2 c3"
+      class="c2 src-button-content"
     >
       Content
     </span>
@@ -1188,23 +1243,85 @@ exports[`<Button /> should render component outline with soft colors 1`] = `
 
 exports[`<Button /> should render component with soft colors 1`] = `
 <DocumentFragment>
-  .c0 .c2 {
+  .c0 .src-button-content {
   font-size: .875rem;
   padding: .45rem .9rem;
 }
 
-.c0 .c2 > :not(:last-child) {
+.c0 .src-button-content > :not(:last-child) {
   margin-right: 0.225rem;
 }
 
-.c3 {
+.c1 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background: transparent;
+  border: 0;
+  border-radius: .125rem;
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+  -webkit-transition: box-shadow 300ms 0s ease-in-out;
+  transition: box-shadow 300ms 0s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.c1:active {
+  outline: 0;
+}
+
+.c1 .src-button-content {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 .src-button-content {
+  color: #033c7c;
+  background: #cde0f5;
+  border-color: #cde0f5;
+}
+
+.c1:hover .src-button-content {
+  background: #b9d3f1;
+  border-color: #b9d3f1;
+}
+
+.c1:hover .src-button-addon {
+  background: #8eb9e9;
+  border-color: #8eb9e9;
+}
+
+.c1:focus {
+  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
+}
+
+.c1 .src-button-content {
+  border-radius: .125rem;
+}
+
+.c2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   border: solid 1px;
   box-sizing: border-box;
-  cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1217,64 +1334,8 @@ exports[`<Button /> should render component with soft colors 1`] = `
   transition: 300ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   word-break: break-word;
   word-wrap: break-word;
-}
-
-.c1 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  background: transparent;
-  border: 0;
-  font-family: inherit;
-  position: relative;
-  -webkit-transition: box-shadow 300ms 0s ease-in-out;
-  transition: box-shadow 300ms 0s ease-in-out;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-}
-
-.c1,
-.c1 .c2 {
-  border-radius: .125rem;
-}
-
-.c1:active {
-  outline: 0;
-}
-
-.c1 .c2 {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c1 .c2 {
-  background: #cde0f5;
-  border-color: #cde0f5;
-  color: #033c7c;
-}
-
-.c1:hover .c2 {
-  background: #b9d3f1;
-  border-color: #b9d3f1;
-}
-
-.c1:focus {
-  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
 }
 
 <button
@@ -1282,7 +1343,7 @@ exports[`<Button /> should render component with soft colors 1`] = `
     shape="rectangle"
   >
     <span
-      class="c2 c3"
+      class="c2 src-button-content"
     >
       Content
     </span>
@@ -1292,23 +1353,84 @@ exports[`<Button /> should render component with soft colors 1`] = `
 
 exports[`<Button /> should resize component responsively 1`] = `
 <DocumentFragment>
-  .c0 .c2 {
+  .c0 .src-button-content {
   font-size: .75rem;
   padding: .28rem .8rem;
 }
 
-.c0 .c2 > :not(:last-child) {
+.c0 .src-button-content > :not(:last-child) {
   margin-right: 0.2rem;
 }
 
-.c3 {
+.c1 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background: transparent;
+  border: 0;
+  border-radius: .125rem;
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+  -webkit-transition: box-shadow 300ms 0s ease-in-out;
+  transition: box-shadow 300ms 0s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.c1:active {
+  outline: 0;
+}
+
+.c1 .src-button-content {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 .src-button-content {
+  color: #fff;
+  background: #0665d0;
+  border-color: #0665d0;
+}
+
+.c1:hover .src-button-content {
+  background: #055BBB;
+  border-color: #055BBB;
+}
+
+.c1:hover .src-button-addon {
+  background: #0552A9;
+  border-color: #0552A9;
+}
+
+.c1:focus {
+  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
+}
+
+.c1 .src-button-content {
+  border-radius: .125rem;
+}
+
+.c2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   border: solid 1px;
   box-sizing: border-box;
-  cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1321,84 +1443,28 @@ exports[`<Button /> should resize component responsively 1`] = `
   transition: 300ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   word-break: break-word;
   word-wrap: break-word;
 }
 
-.c1 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  background: transparent;
-  border: 0;
-  font-family: inherit;
-  position: relative;
-  -webkit-transition: box-shadow 300ms 0s ease-in-out;
-  transition: box-shadow 300ms 0s ease-in-out;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-}
-
-.c1,
-.c1 .c2 {
-  border-radius: .125rem;
-}
-
-.c1:active {
-  outline: 0;
-}
-
-.c1 .c2 {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c1 .c2 {
-  background: #0665d0;
-  border-color: #0665d0;
-  color: #fff;
-}
-
-.c1:hover .c2 {
-  background: #065DC0;
-  border-color: #065DC0;
-}
-
-.c1:focus {
-  box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
-}
-
 @media (min-width:768px) {
-  .c0 .c2 {
+  .c0 .src-button-content {
     font-size: .875rem;
     padding: .45rem .9rem;
   }
 
-  .c0 .c2 > :not(:last-child) {
+  .c0 .src-button-content > :not(:last-child) {
     margin-right: 0.225rem;
   }
 }
 
 @media (min-width:992px) {
-  .c0 .c2 {
+  .c0 .src-button-content {
     font-size: 1rem;
     padding: .5rem 1rem;
   }
 
-  .c0 .c2 > :not(:last-child) {
+  .c0 .src-button-content > :not(:last-child) {
     margin-right: 0.25rem;
   }
 }
@@ -1408,7 +1474,7 @@ exports[`<Button /> should resize component responsively 1`] = `
     shape="rectangle"
   >
     <span
-      class="c2 c3"
+      class="c2 src-button-content"
     >
       Content
     </span>

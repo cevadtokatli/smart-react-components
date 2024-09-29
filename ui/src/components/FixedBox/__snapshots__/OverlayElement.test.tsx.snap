@@ -74,7 +74,7 @@ exports[`<OverlayElement /> should render component in media 1`] = `
     justify-content: center;
     height: 100%;
     left: 0;
-    padding: 1.75rem;
+    padding: 1.75rem 1.75rem;
     top: 0;
     touch-action: none;
     width: 100%;

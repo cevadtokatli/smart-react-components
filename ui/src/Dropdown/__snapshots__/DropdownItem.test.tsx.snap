@@ -3,16 +3,30 @@
 exports[`<DropdownItem /> should render component 1`] = `
 <DocumentFragment>
   .c0 {
+  cursor: pointer;
+}
+
+.c1 {
   border-radius: .2rem;
-  cursor: default;
+  fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
   transition-property: background,color,fill;
 }
 
+.c1 .svg,
+.c1 .svg .fill,
+.c1 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
+}
+
 <div
-    class=" c0"
+    class="c0 c1"
+    cursor="$cursor.dropdown"
   >
     Content
   </div>
@@ -22,6 +36,7 @@ exports[`<DropdownItem /> should render component 1`] = `
 exports[`<DropdownItem /> should render waveEffect 1`] = `
 <DocumentFragment>
   .c0 {
+  cursor: pointer;
   isolation: isolate;
   overflow: hidden;
   position: relative;
@@ -30,15 +45,25 @@ exports[`<DropdownItem /> should render waveEffect 1`] = `
 
 .c1 {
   border-radius: .2rem;
-  cursor: default;
+  fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
   transition-property: background,color,fill;
 }
 
+.c1 .svg,
+.c1 .svg .fill,
+.c1 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
+}
+
 <div
     class="c0 c1"
+    cursor="$cursor.dropdown"
     overflow="hidden"
   >
     Content

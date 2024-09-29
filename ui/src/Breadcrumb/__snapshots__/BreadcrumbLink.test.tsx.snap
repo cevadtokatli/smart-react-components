@@ -18,7 +18,7 @@ exports[`<BreadcrumbLink /> should render component 1`] = `
 
 .c0 > a {
   border-radius: .125rem;
-  cursor: default;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -30,9 +30,13 @@ exports[`<BreadcrumbLink /> should render component 1`] = `
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  pointer-events: none;
-  color: #054D9F;
-  fill: #054D9F;
+  color: #0552A9;
+  fill: #0552A9;
+}
+
+.c0 > a:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .c0:not(:last-child)::after {

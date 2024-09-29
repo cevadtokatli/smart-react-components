@@ -43,11 +43,11 @@ describe('<DropdownItem />', () => {
   })
 
   it('should call only onClick when event prevented', async () => {
-    const onClick = jest.fn()
+    const onClick = jest.fn(e => e.preventDefault())
     const setStatus = jest.fn()
     const { container } = render(wrapTheme(<DropdownItem {...props} onClick={onClick} setStatus={setStatus}>{children}</DropdownItem>))
     const node = container.querySelector('div')!
-    fireEvent(node, createEvent.click(node, { defaultPrevented: true }))
+    fireEvent(node, createEvent.click(node))
     await waitFor(() => {
       expect(onClick).toHaveBeenCalled()
       expect(setStatus).not.toHaveBeenCalled()
