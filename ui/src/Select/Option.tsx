@@ -61,4 +61,6 @@ const Option: React.FC<Props> = ({ active, children, cursorKey, hasHover, hasWav
   return hasWaveEffect ? <WaveEffect palette={waveEffectPalette}>{content}</WaveEffect> : content
 }
 
+Option.displayName = 'Option'
+
 export default Option

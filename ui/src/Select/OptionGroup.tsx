@@ -27,4 +27,6 @@ const OptionGroup: React.FC<Props> = ({ children, active, hasHover, hasWaveEffec
   </>
 )
 
+OptionGroup.displayName = 'OptionGroup'
+
 export default OptionGroup
