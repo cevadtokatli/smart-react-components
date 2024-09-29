@@ -23,6 +23,13 @@ function release() {
     exit 1
   fi
 
+  npm run test
+
+  if [ $? -ne '0' ] ; then
+    echo -e "$RED***** There are some failing test cases after your changes *****$NC"
+    exit 1
+  fi
+
   npm run build
 
   if [ $? -ne '0' ] ; then
