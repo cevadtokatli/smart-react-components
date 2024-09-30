@@ -21,6 +21,7 @@ import useSelectBoxItemList from '../hooks/useSelectBoxItemList'
 import CloseIcon from '../icons/Close'
 import InputElement from '../components/Input/InputElement'
 import InputPlaceholder from '../components/Input/InputPlaceholder'
+import useSelectBoxHover from '../hooks/useSelectBoxHover'
 import { FormValue } from '../types'
 import { getInputValue } from '../util/form'
 import { applyResponsiveStyledProp } from '../util/props'
@@ -85,6 +86,15 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
   const [dropdownStatus, setDropdownStatus] = React.useState(false)
 
   const waveEffectPalette = React.useMemo(() => getWaveEffectPalette(props, theme.$.vars.isDarkMode), [props.waveEffectPalette, props.palette, props.isOutline, props.isSoft, theme.$.vars.isDarkMode])
+
+  const { hovered, setHovered } = useSelectBoxHover({
+    active: props.active,
+    children: Array.isArray(props.children) ? props.children : [props.children],
+    dropdownStatus,
+    hasHover: props.hasHover,
+    setActive: props.setActive,
+    setDropdownStatus,
+  })
 
   useChangeEffect(() => {
     const event = new Event('src.fixedBox.setPosition')
@@ -205,13 +215,15 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
           key: item.key ?? idx,
           active: props.active,
           cursorKey: 'selectBox',
-          hasHover: props.hasHover,
+          hasHover: false,
           hasWaveEffect: props.hasWaveEffect,
+          hovered,
           isEmbedded: false,
           isOutline: props.isOutline,
           isSoft: props.isSoft,
           palette: props.palette,
           setActive: handleOptionClick,
+          setHovered: props.hasHover ? setHovered : null,
           waveEffectPalette,
           ...(props.isDisabled && { isDisabled: true }),
         })) }

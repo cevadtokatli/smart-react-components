@@ -15,16 +15,18 @@ export interface PrivateProps {
   cursorKey: string
   hasHover: boolean
   hasWaveEffect: boolean
+  hovered: FormValue
   isDisabled: boolean
   isEmbedded: boolean
   isOutline: boolean
   isSoft: boolean
   palette: PaletteProp
   setActive: SetState<FormValue | FormValue[]>
+  setHovered: SetState<FormValue>
   waveEffectPalette: PaletteProp
 }
 
-const Option: React.FC<Props> = ({ active, children, cursorKey, hasHover, hasWaveEffect, isDisabled, isOutline, isSoft, palette, setActive, value, waveEffectPalette }: (Props & PrivateProps)) => {
+const Option: React.FC<Props> = ({ active, children, cursorKey, hasHover, hasWaveEffect, hovered, isDisabled, isOutline, isSoft, palette, setActive, setHovered, value, waveEffectPalette }: (Props & PrivateProps)) => {
   const handleOnClick = () => {
     if (isDisabled) {
       return
@@ -43,16 +45,20 @@ const Option: React.FC<Props> = ({ active, children, cursorKey, hasHover, hasWav
 
   const isActive = () => !Array.isArray(active) ? (value !== null && value === active) : active.includes(value)
 
+  const isHovered = () => hovered !== undefined && hovered === value
+
   const content = (
     <DropdownItemElement
       cursor={`$cursor.${cursorKey}`}
       hasHover={hasHover}
       isActive={isActive()}
       isDisabled={isDisabled}
+      isHovered={isHovered()}
       isOutline={isOutline}
       isSoft={isSoft}
       palette={palette}
       onClick={handleOnClick}
+      {...(setHovered && !isDisabled) && { onMouseEnter: () => setHovered(value) }}
     >
       {children}
     </DropdownItemElement>

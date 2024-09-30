@@ -6,13 +6,14 @@ import styled from 'styled-components'
 interface Props extends StyledProps {
   hasHover: boolean
   isActive: boolean
+  isHovered: boolean
   isDisabled: boolean
   isOutline: boolean
   isSoft: boolean
   palette: PaletteProp
 }
 
-export default styled(Div)<Props>(({ theme, hasHover, isActive, isDisabled, isOutline, isSoft, palette }: Props) => `
+export default styled(Div)<Props>(({ theme, hasHover, isActive, isDisabled, isHovered, isOutline, isSoft, palette }: Props) => `
   border-radius: ${theme.$.radius.dropdown};
   fill: currrentcolor;
   transition: 100ms 0s ease-in-out;
@@ -34,9 +35,9 @@ export default styled(Div)<Props>(({ theme, hasHover, isActive, isDisabled, isOu
 
   ${!isActive
     ? `
-      ${hasHover && !theme.$.vars.isMobile
+      ${(hasHover || isHovered) && !theme.$.vars.isMobile
         ? `
-          &:hover {
+          ${!isHovered ? '&:hover {' : ''}
             ${!isSoft
               ? `
                 background: ${!isOutline ? theme.$.palette[palette].dynamic : theme.$.palette[palette].main};
@@ -65,7 +66,7 @@ export default styled(Div)<Props>(({ theme, hasHover, isActive, isDisabled, isOu
                 }
               `
             }
-          }
+          ${!isHovered ? '}' : ''}
         `
         : ''
       }

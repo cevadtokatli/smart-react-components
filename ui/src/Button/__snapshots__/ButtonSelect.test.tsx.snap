@@ -246,20 +246,6 @@ exports[`<ButtonSelect /> should render component 1`] = `
   transition-property: fill,stroke;
 }
 
-.c10:hover {
-  background: #055BBB;
-  color: #fff;
-}
-
-.c10:hover .svg,
-.c10:hover .svg .fill {
-  fill: #fff;
-}
-
-.c10:hover .svg .stroke {
-  stroke: #fff;
-}
-
 @media (max-width:767px) {
   .c0 {
     box-sizing: border-box;

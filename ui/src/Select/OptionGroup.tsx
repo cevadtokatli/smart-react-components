@@ -8,7 +8,7 @@ export interface Props {
   label: ContentElement
 }
 
-const OptionGroup: React.FC<Props> = ({ children, active, cursorKey, hasHover, hasWaveEffect, isDisabled, isEmbedded, isOutline, isSoft, label, palette, setActive, waveEffectPalette }: Props & PrivateProps) => (
+const OptionGroup: React.FC<Props> = ({ children, active, cursorKey, hasHover, hasWaveEffect, hovered, isDisabled, isEmbedded, isOutline, isSoft, label, palette, setActive, setHovered, waveEffectPalette }: Props & PrivateProps) => (
   <>
     <Div fontWeight="$fontWeight.semibold">{label}</Div>
     { (Array.isArray(children) ? children : [children]).map((item, idx) => React.cloneElement(item, {
@@ -17,11 +17,13 @@ const OptionGroup: React.FC<Props> = ({ children, active, cursorKey, hasHover, h
       cursorKey,
       hasHover,
       hasWaveEffect,
+      hovered,
       isEmbedded,
       isOutline,
       isSoft,
       palette,
       setActive,
+      setHovered,
       waveEffectPalette,
       ...(isDisabled && { isDisabled }),
     })) }
