@@ -8,6 +8,7 @@ interface Props {
   children: JSX.Element[]
   dropdownStatus: boolean
   hasHover: boolean
+  isDisabled: boolean
   setActive: SetState<FormValue | FormValue[]>
   setDropdownStatus: SetState<boolean>
 }
@@ -17,14 +18,22 @@ interface Return {
   setHovered: SetState<FormValue>
 }
 
-const useSelectBoxHover = ({ active, children, dropdownStatus, hasHover, setActive, setDropdownStatus }: Props): Return => {
+const useSelectBoxHover = ({ active, children, dropdownStatus, hasHover, isDisabled, setActive, setDropdownStatus }: Props): Return => {
   const [hovered, setHovered] = useState<FormValue>(undefined)
 
   /**
    * Finds the hovered JSX element based on the value.
    * Pushes the parents to the path array.
    */
-  const findHoveredChild = (children: JSX.Element[], path: JSX.Element[][]): JSX.Element => {
+  const findHoveredChild = (parent: JSX.Element | JSX.Element[], path: Array<JSX.Element | JSX.Element[]>): JSX.Element => {
+    let children: JSX.Element[]
+
+    if (Array.isArray(parent)) {
+      children = parent
+    } else {
+      children = Array.isArray(parent.props.children) ? parent.props.children : [parent.props.children]
+    }
+
     for (let i = 0; i < children.length; i++) {
       const child = children[i]
 
@@ -36,10 +45,9 @@ const useSelectBoxHover = ({ active, children, dropdownStatus, hasHover, setActi
 
           break
         case 'OptionGroup':
-          const arr = Array.isArray(child.props.children) ? child.props.children : [child.props.children]
-          path.push(arr)
+          path.push(child)
 
-          const hoveredChild = findHoveredChild(arr, path)
+          const hoveredChild = findHoveredChild(child, path)
           if (hoveredChild) {
             return hoveredChild
           }
@@ -56,20 +64,21 @@ const useSelectBoxHover = ({ active, children, dropdownStatus, hasHover, setActi
   /**
    * Finds the next hovered JSX element based on the current hovered element and direction.
    */
-  const findNextHoveredChild = (child: JSX.Element, path: JSX.Element[][], direction: 1 | -1): JSX.Element => {
+  const findNextHoveredChild = (child: JSX.Element, path: Array<JSX.Element | JSX.Element[]>, direction: 1 | -1, skipIncrease: boolean = false): JSX.Element => {
     if (path.length === 0) {
       return null
     }
 
-    const children = path.pop()
-    let idx = -1
+    const parent = path.pop()
+    let children: JSX.Element[]
 
-    if (!child) {
-      idx = direction === 1 ? 0 : children.length - 1
+    if (Array.isArray(parent)) {
+      children = parent
     } else {
-      idx = children.findIndex(i => i === child)
-      idx += direction
+      children = Array.isArray(parent.props.children) ? parent.props.children : [parent.props.children]
     }
+
+    let idx = children.findIndex(i => i === child) + (skipIncrease ? 0 : direction)
 
     while (idx >= 0 && idx < children.length) {
       const child = children[idx]
@@ -82,12 +91,17 @@ const useSelectBoxHover = ({ active, children, dropdownStatus, hasHover, setActi
 
           break
         case 'OptionGroup':
-          const arr = Array.isArray(child.props.children) ? child.props.children : [child.props.children]
-          path.push(arr)
-          const nextChild = findNextHoveredChild(null, path, direction)
+          path.push(child)
+
+          const nextChildCandidate = Array.isArray(child.props.children)
+            ? direction === 1 ? child.props.children[0] : child.props.children[child.props.children.length - 1]
+            : child.props.children
+          const nextChild = findNextHoveredChild(nextChildCandidate, path, direction, true)
+
           if (nextChild) {
             return nextChild
           }
+
           path.pop()
 
           break
@@ -96,7 +110,12 @@ const useSelectBoxHover = ({ active, children, dropdownStatus, hasHover, setActi
       idx += direction
     }
 
-    return findNextHoveredChild(null, path, direction)
+    // Array means that parent is root, so no need to go further since the root cannot have more parents.
+    if (Array.isArray(parent)) {
+      return null
+    }
+
+    return findNextHoveredChild(parent, path, direction)
   }
 
   const handleKeyDown = (e: KeyboardEvent) => {
@@ -133,14 +152,14 @@ const useSelectBoxHover = ({ active, children, dropdownStatus, hasHover, setActi
   }, [dropdownStatus])
 
   useChangeEffect(() => {
-    if (hasHover && dropdownStatus) {
+    if (hasHover && dropdownStatus && !isDisabled) {
       window.addEventListener('keydown', handleKeyDown)
 
       return () => {
         window.removeEventListener('keydown', handleKeyDown)
       }
     }
-  }, [dropdownStatus, hasHover, hovered])
+  }, [dropdownStatus, hasHover, hovered, isDisabled])
 
   return {
     hovered,

@@ -101,6 +101,7 @@ const SelectSearchBox = React.forwardRef<HTMLInputElement, Props>((props, forwar
     children: optionList,
     dropdownStatus,
     hasHover: props.hasHover,
+    isDisabled: props.isDisabled,
     setActive: props.setValue,
     setDropdownStatus,
   })

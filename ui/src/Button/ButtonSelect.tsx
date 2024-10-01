@@ -67,6 +67,7 @@ const ButtonSelect = React.forwardRef<HTMLDivElement, Props>((props, forwardRef)
     children: Array.isArray(props.children) ? props.children : [props.children],
     dropdownStatus,
     hasHover: props.hasHover,
+    isDisabled: props.isDisabled,
     setActive: props.setActive,
     setDropdownStatus,
   })
