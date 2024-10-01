@@ -45,6 +45,7 @@ const DropdownItem: React.FC<Props> = ({ children, elementProps = {}, hasHover, 
       hasHover={hasHover}
       isActive={false}
       isDisabled={isDisabled}
+      isHovered={false}
       isOutline={isOutline}
       isSoft={isSoft}
       palette={palette}

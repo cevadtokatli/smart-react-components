@@ -6,11 +6,13 @@ import intrinsicStyledFlexProps from '@smart-react-components/core/element-props
 import intrinsicStyledMarginProps from '@smart-react-components/core/element-props/intrinsic-styled-margin-props'
 import intrinsicStyledSizeProps from '@smart-react-components/core/element-props/intrinsic-styled-size-props'
 import keyboardEvents, { KeyboardEvents } from '@smart-react-components/core/element-props/keyboard-events'
+import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { Theme } from '@smart-react-components/core/theme'
 import { ContentElement, JSXChildren, JSXElementProps, PaletteProp, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import { useTheme } from 'styled-components'
 import DropdownListElement from '../components/Dropdown/DropdownListElement'
+import useSelectBoxHover from '../hooks/useSelectBoxHover'
 import { getWaveEffectPalette } from '../util/wave-effect'
 import Dropdown from '../Dropdown'
 import Input from '../Input'
@@ -94,7 +96,21 @@ const SelectSearchBox = React.forwardRef<HTMLInputElement, Props>((props, forwar
     return children
   }, [props.children, props.value, dropdownStatus])
 
+  const { hovered, setHovered } = useSelectBoxHover({
+    active: props.value,
+    children: optionList,
+    dropdownStatus,
+    hasHover: props.hasHover,
+    isDisabled: props.isDisabled,
+    setActive: props.setValue,
+    setDropdownStatus,
+  })
+
   const waveEffectPalette = React.useMemo(() => getWaveEffectPalette(props, theme.$.vars.isDarkMode), [props.waveEffectPalette, props.palette, props.isOutline, props.isSoft, theme.$.vars.isDarkMode])
+
+  useChangeEffect(() => {
+    setHovered(undefined)
+  }, [optionList])
 
   const handleOptionClick = value => {
     setDropdownStatus(false)
@@ -149,13 +165,15 @@ const SelectSearchBox = React.forwardRef<HTMLInputElement, Props>((props, forwar
           key: item.key ?? idx,
           active: props.value,
           cursorKey: 'selectBox',
-          hasHover: props.hasHover,
+          hasHover: false,
           hasWaveEffect: props.hasWaveEffect,
+          hovered,
           isEmbedded: false,
           isOutline: props.isOutline,
           isSoft: props.isSoft,
           palette: props.palette,
           setActive: handleOptionClick,
+          setHovered: props.hasHover ? setHovered : null,
           waveEffectPalette,
           ...(props.isDisabled && { isDisabled: true }),
         })) }

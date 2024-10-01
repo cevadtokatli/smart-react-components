@@ -280,20 +280,6 @@ exports[`<SelectBox /> should render component 1`] = `
   transition-property: fill,stroke;
 }
 
-.c10:hover {
-  background: #0665d0;
-  color: #fff;
-}
-
-.c10:hover .svg,
-.c10:hover .svg .fill {
-  fill: #fff;
-}
-
-.c10:hover .svg .stroke {
-  stroke: #fff;
-}
-
 @media (max-width:767px) {
   .c0 {
     box-sizing: border-box;

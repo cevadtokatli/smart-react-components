@@ -5,6 +5,7 @@ import Button from './'
 import DropdownArrowIcon from '../Dropdown/DropdownArrowIcon'
 import Dropdown from '../Dropdown'
 import DropdownListElement from '../components/Dropdown/DropdownListElement'
+import useSelectBoxHover from '../hooks/useSelectBoxHover'
 import useSelectBoxItemList from '../hooks/useSelectBoxItemList'
 import { FormValue } from '../types'
 import { ButtonGenericProps } from '../types/button'
@@ -61,6 +62,16 @@ const ButtonSelect = React.forwardRef<HTMLDivElement, Props>((props, forwardRef)
     ((forwardRef ?? ref) as React.MutableRefObject<HTMLDivElement>).current.dispatchEvent(event)
   }, [content])
 
+  const { hovered, setHovered } = useSelectBoxHover({
+    active: props.active,
+    children: Array.isArray(props.children) ? props.children : [props.children],
+    dropdownStatus,
+    hasHover: props.hasHover,
+    isDisabled: props.isDisabled,
+    setActive: props.setActive,
+    setDropdownStatus,
+  })
+
   const handleOptionClick = active => {
     props.setActive(active)
 
@@ -96,13 +107,15 @@ const ButtonSelect = React.forwardRef<HTMLDivElement, Props>((props, forwardRef)
           key: item.key ?? idx,
           active: props.active,
           cursorKey: 'selectBox',
-          hasHover: props.hasHover,
+          hasHover: false,
           hasWaveEffect: props.hasWaveEffect,
+          hovered,
           isEmbedded: false,
           isOutline: props.isOutline,
           isSoft: props.isSoft,
           palette: props.palette,
           setActive: handleOptionClick,
+          setHovered: props.hasHover ? setHovered : null,
           waveEffectPalette: props.waveEffectPalette,
           ...(props.isDisabled && { isDisabled: true }),
         })) }
