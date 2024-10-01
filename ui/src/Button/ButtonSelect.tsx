@@ -5,10 +5,10 @@ import Button from './'
 import DropdownArrowIcon from '../Dropdown/DropdownArrowIcon'
 import Dropdown from '../Dropdown'
 import DropdownListElement from '../components/Dropdown/DropdownListElement'
+import useSelectBoxHover from '../hooks/useSelectBoxHover'
 import useSelectBoxItemList from '../hooks/useSelectBoxItemList'
 import { FormValue } from '../types'
 import { ButtonGenericProps } from '../types/button'
-import useSelectBoxHover from '../hooks/useSelectBoxHover'
 
 interface Props extends ButtonGenericProps<JSX.Element> {
   active: FormValue | FormValue[]
