@@ -88,12 +88,13 @@ const FixedBox: React.FC<Props> = ({
       >
         <Overlay
           breakpoint={triggerInteraction & TriggerInteraction.RIGHT_CLICK ? null : breakpoint}
-          elementProps={{
-            as: OverlayElement,
-            duration: transitionDuration ?? theme.$.transition.fixedBoxDuration,
-            isDisplayedWhenBreakpointNull: triggerInteraction & TriggerInteraction.RIGHT_CLICK,
-          }}
           hasBackground={!(triggerInteraction & TriggerInteraction.RIGHT_CLICK)}
+          template={
+            <OverlayElement
+              duration={transitionDuration ?? theme.$.transition.fixedBoxDuration}
+              isDisplayedWhenBreakpointNull={!!(triggerInteraction & TriggerInteraction.RIGHT_CLICK)}
+            />
+          }
         >
           <FixedBoxElement
             {...elementProps}

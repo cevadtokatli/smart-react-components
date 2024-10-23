@@ -12,7 +12,7 @@ exports[`<InputColorPicker /> should render component 1`] = `
   flex: 1 1 auto;
 }
 
-.c10 {
+.c9 {
   height: 100%;
   left: 0;
   position: absolute;
@@ -20,7 +20,7 @@ exports[`<InputColorPicker /> should render component 1`] = `
   width: 100%;
 }
 
-.c11 {
+.c10 {
   width: 275px;
   background: #fff;
   border-radius: .25rem;
@@ -28,53 +28,53 @@ exports[`<InputColorPicker /> should render component 1`] = `
   height: auto !important;
 }
 
-.c13 {
+.c12 {
   padding: 10px;
   width: 275px;
 }
 
-.c13 > *:not(:first-child) {
+.c12 > *:not(:first-child) {
   margin-top: 10px;
 }
 
-.c16 {
+.c15 {
   height: 175px;
   width: 175px;
 }
 
-.c18 {
+.c17 {
   background: linear-gradient(to right,rgba(255,255,255,1),rgba(255,255,255,0));
 }
 
-.c19 {
+.c18 {
   background: linear-gradient(to top,rgba(0,0,0,1),rgba(0,0,0,0));
   box-shadow: 0 0 3px rgba(0,0,0,.3) inset;
 }
 
-.c23 {
+.c22 {
   height: 175px;
   width: 30px;
 }
 
-.c26 {
+.c25 {
   background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAIAAADZF8uwAAAAGUlEQVQYV2M4gwH+YwCGIasIUwhT25BVBADtzYNYrHvv4gAAAABJRU5ErkJggg==');
 }
 
-.c27 {
+.c26 {
   box-shadow: 0 0 3px rgba(0,0,0,.3) inset;
 }
 
-.c33 {
+.c32 {
   font-size: 1rem;
   padding: 0.45rem;
 }
 
-.c33 .c35 {
+.c32 .c34 {
   height: 1rem;
   width: 1rem;
 }
 
-.c40 {
+.c39 {
   margin-right: 10px;
   isolation: isolate;
   overflow: hidden;
@@ -82,42 +82,42 @@ exports[`<InputColorPicker /> should render component 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
-.c40 .src-button-content {
+.c39 .src-button-content {
   font-size: .875rem;
   padding: .45rem .9rem;
 }
 
-.c40 .src-button-content > .c35 {
+.c39 .src-button-content > .c34 {
   height: 1.1rem;
   width: 1.1rem;
 }
 
-.c40 .src-button-content > :not(:last-child) {
+.c39 .src-button-content > :not(:last-child) {
   margin-right: 0.225rem;
 }
 
-.c43 {
+.c42 {
   isolation: isolate;
   overflow: hidden;
   position: relative;
   -webkit-tap-highlight-color: transparent;
 }
 
-.c43 .src-button-content {
+.c42 .src-button-content {
   font-size: .875rem;
   padding: .45rem .9rem;
 }
 
-.c43 .src-button-content > .c35 {
+.c42 .src-button-content > .c34 {
   height: 1.1rem;
   width: 1.1rem;
 }
 
-.c43 .src-button-content > :not(:last-child) {
+.c42 .src-button-content > :not(:last-child) {
   margin-right: 0.225rem;
 }
 
-.c28 {
+.c27 {
   border: none;
   background: transparent;
   width: 100%;
@@ -128,7 +128,7 @@ exports[`<InputColorPicker /> should render component 1`] = `
   padding: .45rem .9rem;
 }
 
-.c37 {
+.c36 {
   font-size: .875rem;
   padding: .45rem .9rem;
   padding-left: 0.45rem;
@@ -148,19 +148,19 @@ exports[`<InputColorPicker /> should render component 1`] = `
   font-size: 1rem;
 }
 
-.c30 {
+.c29 {
   display: block;
 }
 
-.c30 > span {
+.c29 > span {
   margin-bottom: .5rem;
 }
 
-.c30 > span {
+.c29 > span {
   font-size: 1rem;
 }
 
-.c15 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -171,17 +171,17 @@ exports[`<InputColorPicker /> should render component 1`] = `
   justify-content: space-between;
 }
 
-.c20 {
+.c19 {
   height: 18px;
   width: 18px;
 }
 
-.c25 {
+.c24 {
   height: 14px;
   width: 14px;
 }
 
-.c44 {
+.c43 {
   height: 1rem;
   width: 1rem;
   display: block;
@@ -189,7 +189,7 @@ exports[`<InputColorPicker /> should render component 1`] = `
   margin: auto;
 }
 
-.c41 {
+.c40 {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -216,42 +216,42 @@ exports[`<InputColorPicker /> should render component 1`] = `
   width: 100%;
 }
 
-.c41:active {
+.c40:active {
   outline: 0;
 }
 
-.c41 .src-button-content {
+.c40 .src-button-content {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
 
-.c41 .src-button-content {
+.c40 .src-button-content {
   color: #fff;
   background: #0665d0;
   border-color: #0665d0;
 }
 
-.c41:hover .src-button-content {
+.c40:hover .src-button-content {
   background: #055BBB;
   border-color: #055BBB;
 }
 
-.c41:hover .src-button-addon {
+.c40:hover .src-button-addon {
   background: #0552A9;
   border-color: #0552A9;
 }
 
-.c41:focus {
+.c40:focus {
   box-shadow: 0 0 0 .15rem rgba(6,101,208,0.5);
 }
 
-.c41 .src-button-content {
+.c40 .src-button-content {
   border-radius: .125rem;
 }
 
-.c42 {
+.c41 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -274,7 +274,7 @@ exports[`<InputColorPicker /> should render component 1`] = `
   word-wrap: break-word;
 }
 
-.c39 {
+.c38 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -285,14 +285,14 @@ exports[`<InputColorPicker /> should render component 1`] = `
   display: flex;
 }
 
-.c39 > * {
+.c38 > * {
   -webkit-flex: 1 1 50%;
   -ms-flex: 1 1 50%;
   flex: 1 1 50%;
   width: 50%;
 }
 
-.c14 {
+.c13 {
   border-radius: .25rem;
   box-sizing: border-box;
 }
@@ -324,7 +324,7 @@ exports[`<InputColorPicker /> should render component 1`] = `
   align-self: flex-start;
 }
 
-.c31 > span {
+.c30 > span {
   display: block;
   word-break: break-word;
   word-wrap: break-word;
@@ -414,7 +414,7 @@ exports[`<InputColorPicker /> should render component 1`] = `
   border-color: #dbdbdb;
 }
 
-.c36 {
+.c35 {
   border: 0;
   border-radius: .2rem;
   display: -webkit-box;
@@ -439,7 +439,7 @@ exports[`<InputColorPicker /> should render component 1`] = `
   border-top-right-radius: 0;
 }
 
-.c34 {
+.c33 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -469,7 +469,7 @@ exports[`<InputColorPicker /> should render component 1`] = `
   cursor: pointer;
 }
 
-.c38 {
+.c37 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -499,25 +499,25 @@ exports[`<InputColorPicker /> should render component 1`] = `
   cursor: pointer;
 }
 
-.c29 {
+.c28 {
   background-clip: content-box;
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAIAAADZF8uwAAAAGUlEQVQYV2M4gwH+YwCGIasIUwhT25BVBADtzYNYrHvv4gAAAABJRU5ErkJggg==');
   border-radius: .2rem;
 }
 
-.c29 .c4,
-.c29 .c32 {
+.c28 .c4,
+.c28 .c31 {
   color: #fff;
   -webkit-transition: none;
   transition: none;
 }
 
-.c29 .c4[data-src-is-dark="true"],
-.c29 .c32[data-src-is-dark="true"] {
+.c28 .c4[data-src-is-dark="true"],
+.c28 .c31[data-src-is-dark="true"] {
   color: #2b2d31;
 }
 
-.c21 {
+.c20 {
   border: solid 2px #fff;
   border-radius: 100%;
   box-shadow: 0 0 5px rgba(0,0,0,.5);
@@ -525,11 +525,11 @@ exports[`<InputColorPicker /> should render component 1`] = `
   position: absolute;
 }
 
-.c21[data-src-is-dark="true"] {
+.c20[data-src-is-dark="true"] {
   border-color: #2b2d31;
 }
 
-.c22::after {
+.c21::after {
   border: solid 4px #fff;
   border-radius: 100%;
   content: "";
@@ -538,11 +538,11 @@ exports[`<InputColorPicker /> should render component 1`] = `
   top: calc(50% - 4px);
 }
 
-.c22[data-src-is-dark="true"]::after {
+.c21[data-src-is-dark="true"]::after {
   border-color: #2b2d31;
 }
 
-.c17 {
+.c16 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -552,27 +552,22 @@ exports[`<InputColorPicker /> should render component 1`] = `
   cursor: pointer;
 }
 
-.c17,
-.c17 div {
+.c16,
+.c16 div {
   border-radius: 0.5rem;
 }
 
-.c17 .src-color-picker-major-picker-bg {
+.c16 .src-color-picker-major-picker-bg {
   border-radius: calc(0.5rem + 1px);
 }
 
-.c17 div {
+.c16 div {
   height: 100%;
 }
 
-.c24 {
+.c23 {
   background: linear-gradient(to bottom,#f00,#ff0,#0f0,#0ff,#00f,#f0f,#f00);
   box-shadow: 0 0 3px rgba(0,0,0,.3) inset;
-}
-
-.c9 {
-  position: fixed;
-  z-index: 2000;
 }
 
 .c7 {
@@ -580,55 +575,14 @@ exports[`<InputColorPicker /> should render component 1`] = `
   z-index: 2000;
 }
 
-.c12 {
+.c11 {
   overflow: auto;
   position: fixed;
   z-index: 1000;
 }
 
-.c8 > * {
-  will-change: opacity,transform;
-}
-
-.c8.src-fixed-box-show > * {
-  opacity: 0;
-  -webkit-transform: translateY(60px);
-  -ms-transform: translateY(60px);
-  transform: translateY(60px);
-}
-
-.c8.src-fixed-box-show-active > * {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-}
-
-.c8.src-fixed-box-hide > * {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-}
-
-.c8.src-fixed-box-hide-active > * {
-  opacity: 0;
-  -webkit-transform: translateY(60px);
-  -ms-transform: translateY(60px);
-  transform: translateY(60px);
-}
-
-.c8.src-fixed-box-show-active > *,
-.c8.src-fixed-box-hide-active > * {
-  -webkit-transition: undefinedms 0s ease-in-out;
-  transition: undefinedms 0s ease-in-out;
-  -webkit-transition-property: opacity,-webkit-transform;
-  -webkit-transition-property: opacity,transform;
-  transition-property: opacity,transform;
-}
-
 @media (max-width:767px) {
-  .c9 {
+  .c7 {
     box-sizing: border-box;
     display: -webkit-box;
     display: -webkit-flex;
@@ -649,10 +603,85 @@ exports[`<InputColorPicker /> should render component 1`] = `
 }
 
 @media (max-width:767px) {
-  .c12 {
+  .c11 {
     height: auto !important;
     max-height: 100% !important;
     position: static;
+  }
+}
+
+@media (max-width:767px) {
+  .c8 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    will-change: opacity;
+  }
+
+  .c8.src-fixed-box-show {
+    opacity: 0;
+  }
+
+  .c8.src-fixed-box-show-active {
+    opacity: 1;
+  }
+
+  .c8.src-fixed-box-hide {
+    opacity: 1;
+  }
+
+  .c8.src-fixed-box-hide-active {
+    opacity: 0;
+  }
+
+  .c8.src-fixed-box-show-active,
+  .c8.src-fixed-box-hide-active {
+    -webkit-transition: opacity 300ms 0s ease-in-out;
+    transition: opacity 300ms 0s ease-in-out;
+  }
+}
+
+@media (min-width:768px) {
+  .c8 > * {
+    will-change: opacity,transform;
+  }
+
+  .c8.src-fixed-box-show > * {
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+    -ms-transform: translateY(60px);
+    transform: translateY(60px);
+  }
+
+  .c8.src-fixed-box-show-active > * {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  .c8.src-fixed-box-hide > * {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  .c8.src-fixed-box-hide-active > * {
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+    -ms-transform: translateY(60px);
+    transform: translateY(60px);
+  }
+
+  .c8.src-fixed-box-show-active > *,
+  .c8.src-fixed-box-hide-active > * {
+    -webkit-transition: 300ms 0s ease-in-out;
+    transition: 300ms 0s ease-in-out;
+    -webkit-transition-property: opacity,-webkit-transform;
+    -webkit-transition-property: opacity,transform;
+    transition-property: opacity,transform;
   }
 }
 
@@ -674,23 +703,23 @@ exports[`<InputColorPicker /> should render component 1`] = `
           value="#FF0000"
         />
         <div
-          class=" c7 c8 sc-bczRLJ sc-hZFzCs  c9"
+          class=" c7 c8"
         >
           <div
-            class="c10"
+            class="c9"
           />
           <div
-            class="c11 c12"
+            class="c10 c11"
             style="pointer-events: none; visibility: hidden;"
           >
             <div
-              class="c13 c14"
+              class="c12 c13"
             >
               <section
-                class="c15"
+                class="c14"
               >
                 <div
-                  class="c16 c17"
+                  class="c15 c16"
                   style="background: rgb(255, 0, 0);"
                   value="rgb(255, 0, 0)"
                 >
@@ -698,13 +727,13 @@ exports[`<InputColorPicker /> should render component 1`] = `
                     class="src-color-picker-major-picker-bg"
                   >
                     <div
-                      class="c18"
+                      class="c17"
                     >
                       <div
-                        class="c19"
+                        class="c18"
                       >
                         <span
-                          class="c20 c21 c22"
+                          class="c19 c20 c21"
                           data-src-is-dark="false"
                           style="left: 0px; top: 0px;"
                           value="rgb(255, 0, 0)"
@@ -714,27 +743,27 @@ exports[`<InputColorPicker /> should render component 1`] = `
                   </div>
                 </div>
                 <div
-                  class="c23 c17 c24"
+                  class="c22 c16 c23"
                   value="rgb(255, 0, 0)"
                 >
                   <span
-                    class="c25 c21"
+                    class="c24 c20"
                     style="left: 0px; top: 0px;"
                     value="rgb(255, 0, 0)"
                   />
                 </div>
                 <div
-                  class="c23 c17"
+                  class="c22 c16"
                   value="rgb(255, 0, 0)"
                 >
                   <div
-                    class="c26"
+                    class="c25"
                   >
                     <div
-                      class="c27"
+                      class="c26"
                     >
                       <span
-                        class="c25 c21"
+                        class="c24 c20"
                         data-src-is-dark="false"
                         style="left: 0px; top: 0px;"
                         value="rgb(255, 0, 0)"
@@ -744,25 +773,25 @@ exports[`<InputColorPicker /> should render component 1`] = `
                 </div>
               </section>
               <hr
-                class="c28"
+                class="c27"
               />
               <section
-                class=" c29"
+                class=" c28"
               >
                 <label
-                  class="c30 c31"
+                  class="c29 c30"
                 >
                   <div
                     class="c2"
                   >
                     <label
-                      class="c32 c33 c34 src-input-addon "
+                      class="c31 c32 c33 src-input-addon "
                       data-src-is-dark="false"
                       shape="rectangle"
                       style="background: rgb(255, 0, 0);"
                     >
                       <svg
-                        class="c35 "
+                        class="c34 "
                         viewBox="0 0 24 24"
                       >
                         <path
@@ -775,11 +804,11 @@ exports[`<InputColorPicker /> should render component 1`] = `
                       </svg>
                     </label>
                     <div
-                      class=" c36"
+                      class=" c35"
                       shape="rectangle"
                     >
                       <input
-                        class="c4 c37 c6 src-input "
+                        class="c4 c36 c6 src-input "
                         data-src-is-dark="false"
                         shape="rectangle"
                         style="background: rgb(255, 0, 0);"
@@ -787,13 +816,13 @@ exports[`<InputColorPicker /> should render component 1`] = `
                       />
                     </div>
                     <label
-                      class="c32 c33 c38 src-input-addon "
+                      class="c31 c32 c37 src-input-addon "
                       data-src-is-dark="false"
                       shape="rectangle"
                       style="background: rgb(255, 0, 0);"
                     >
                       <svg
-                        class="c35 "
+                        class="c34 "
                         viewBox="0 0 2048 1792"
                       >
                         <path
@@ -808,17 +837,17 @@ exports[`<InputColorPicker /> should render component 1`] = `
                 class=""
               >
                 <div
-                  class="c39"
+                  class="c38"
                 >
                   <button
-                    class="c40 c41"
+                    class="c39 c40"
                     shape="rectangle"
                   >
                     <span
-                      class="c42 src-button-content"
+                      class="c41 src-button-content"
                     >
                       <svg
-                        class="c35 "
+                        class="c34 "
                         viewBox="0 0 24 24"
                       >
                         <path
@@ -835,14 +864,14 @@ exports[`<InputColorPicker /> should render component 1`] = `
                     </span>
                   </button>
                   <button
-                    class="c43 c41"
+                    class="c42 c40"
                     shape="rectangle"
                   >
                     <span
-                      class="c42 src-button-content"
+                      class="c41 src-button-content"
                     >
                       <svg
-                        class="c35 "
+                        class="c34 "
                         viewBox="0 0 1792 1792"
                       >
                         <path
@@ -860,7 +889,7 @@ exports[`<InputColorPicker /> should render component 1`] = `
                 class=""
               >
                 <svg
-                  class="c35 c44"
+                  class="c34 c43"
                   viewBox="0 0 1792 1792"
                 >
                   <path

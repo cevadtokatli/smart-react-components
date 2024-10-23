@@ -18,10 +18,18 @@ exports[`<FixedBox /> should render component when status true 1`] = `
 
 }
 
+@media (max-width:767px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
 <button>
     Button
   </button>
-  .c3 {
+  .c2 {
   height: 100%;
   left: 0;
   position: absolute;
@@ -29,65 +37,19 @@ exports[`<FixedBox /> should render component when status true 1`] = `
   width: 100%;
 }
 
-.c2 {
-  position: fixed;
-  z-index: 2000;
-}
-
 .c0 {
   position: fixed;
   z-index: 2000;
 }
 
-.c4 {
+.c3 {
   overflow: auto;
   position: fixed;
   z-index: 1000;
 }
 
-.c1 > * {
-  will-change: opacity,transform;
-}
-
-.c1.src-fixed-box-show > * {
-  opacity: 0;
-  -webkit-transform: translateY(60px);
-  -ms-transform: translateY(60px);
-  transform: translateY(60px);
-}
-
-.c1.src-fixed-box-show-active > * {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-}
-
-.c1.src-fixed-box-hide > * {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-}
-
-.c1.src-fixed-box-hide-active > * {
-  opacity: 0;
-  -webkit-transform: translateY(60px);
-  -ms-transform: translateY(60px);
-  transform: translateY(60px);
-}
-
-.c1.src-fixed-box-show-active > *,
-.c1.src-fixed-box-hide-active > * {
-  -webkit-transition: undefinedms 0s ease-in-out;
-  transition: undefinedms 0s ease-in-out;
-  -webkit-transition-property: opacity,-webkit-transform;
-  -webkit-transition-property: opacity,transform;
-  transition-property: opacity,transform;
-}
-
 @media (max-width:767px) {
-  .c2 {
+  .c0 {
     box-sizing: border-box;
     display: -webkit-box;
     display: -webkit-flex;
@@ -108,7 +70,7 @@ exports[`<FixedBox /> should render component when status true 1`] = `
 }
 
 @media (max-width:767px) {
-  .c4 {
+  .c3 {
     height: auto !important;
     max-height: 100% !important;
     position: static;
@@ -116,14 +78,89 @@ exports[`<FixedBox /> should render component when status true 1`] = `
   }
 }
 
+@media (max-width:767px) {
+  .c1 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    will-change: opacity;
+  }
+
+  .c1.src-fixed-box-show {
+    opacity: 0;
+  }
+
+  .c1.src-fixed-box-show-active {
+    opacity: 1;
+  }
+
+  .c1.src-fixed-box-hide {
+    opacity: 1;
+  }
+
+  .c1.src-fixed-box-hide-active {
+    opacity: 0;
+  }
+
+  .c1.src-fixed-box-show-active,
+  .c1.src-fixed-box-hide-active {
+    -webkit-transition: opacity 300ms 0s ease-in-out;
+    transition: opacity 300ms 0s ease-in-out;
+  }
+}
+
+@media (min-width:768px) {
+  .c1 > * {
+    will-change: opacity,transform;
+  }
+
+  .c1.src-fixed-box-show > * {
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+    -ms-transform: translateY(60px);
+    transform: translateY(60px);
+  }
+
+  .c1.src-fixed-box-show-active > * {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  .c1.src-fixed-box-hide > * {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  .c1.src-fixed-box-hide-active > * {
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+    -ms-transform: translateY(60px);
+    transform: translateY(60px);
+  }
+
+  .c1.src-fixed-box-show-active > *,
+  .c1.src-fixed-box-hide-active > * {
+    -webkit-transition: 300ms 0s ease-in-out;
+    transition: 300ms 0s ease-in-out;
+    -webkit-transition-property: opacity,-webkit-transform;
+    -webkit-transition-property: opacity,transform;
+    transition-property: opacity,transform;
+  }
+}
+
 <div
-    class=" c0 c1 sc-bczRLJ sc-gsnTZi  c2"
+    class=" c0 c1"
   >
     <div
-      class="c3"
+      class="c2"
     />
     <div
-      class=" c4"
+      class=" c3"
       style="pointer-events: none; visibility: hidden;"
     >
       <div>
