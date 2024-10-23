@@ -1,4 +1,6 @@
 import styled from 'styled-components'
 import applyStyledProps, { StyledProps, shouldForwardProp } from '../styled-props'
 
-export default styled.canvas.withConfig({ shouldForwardProp })<StyledProps>(applyStyledProps)
+export default styled.canvas.withConfig({
+  shouldForwardProp: (prop, defaultValidatorFn) => shouldForwardProp(prop) && defaultValidatorFn(prop),
+})<StyledProps>(applyStyledProps)
