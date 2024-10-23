@@ -505,6 +505,7 @@ exports[`<Prompt /> should render component 1`] = `
             >
               <input
                 class="c15 c16 src-input "
+                placeholder="Placeholder"
                 shape="rectangle"
                 type="text"
                 value=""
