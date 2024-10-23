@@ -1,4 +1,4 @@
-import { StyledComponent } from 'styled-components'
+import { StyledComponent, shouldForwardProp as styledShouldForwardProp } from 'styled-components'
 import { Theme } from '../theme'
 import { ResponsiveProps } from '../types'
 import { convertStyledPropToCSS } from '../util/css'
@@ -16,8 +16,7 @@ export interface StyledProps extends ResponsiveProps<StandardProps> {
 export const shouldForwardProp = (prop: string) => (
   typeof cssKeys[prop] === 'undefined'
   && typeof cssKeys[prop.substring(0, prop.length - 2)] === 'undefined'
-  && !['as', 'palette', 'size', 'theme'].includes(prop)
-  && prop === prop.toLowerCase()
+  && styledShouldForwardProp(prop)
 )
 
 export default (props: object & { theme: Theme }) => Object.keys(props).map(key => convertStyledPropToCSS(key, props, props.theme))
