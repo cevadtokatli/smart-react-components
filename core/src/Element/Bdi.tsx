@@ -1,4 +1,4 @@
 import styled from 'styled-components'
-import applyStyledProps, { StyledProps } from '../styled-props'
+import applyStyledProps, { StyledProps, shouldForwardProp } from '../styled-props'
 
-export default styled.bdi<StyledProps>(applyStyledProps)
+export default styled.bdi.withConfig({ shouldForwardProp })<StyledProps>(applyStyledProps)

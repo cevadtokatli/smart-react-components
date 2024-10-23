@@ -1,4 +1,4 @@
 import styled from 'styled-components'
-import applyStyledProps, { StyledProps } from '../styled-props'
+import applyStyledProps, { StyledProps, shouldForwardProp } from '../styled-props'
 
-export default styled.audio<StyledProps>(applyStyledProps)
+export default styled.audio.withConfig({ shouldForwardProp })<StyledProps>(applyStyledProps)

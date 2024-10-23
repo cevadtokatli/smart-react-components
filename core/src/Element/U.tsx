@@ -1,4 +1,4 @@
 import styled from 'styled-components'
-import applyStyledProps, { StyledProps } from '../styled-props'
+import applyStyledProps, { StyledProps, shouldForwardProp } from '../styled-props'
 
-export default styled.u<StyledProps>(applyStyledProps)
+export default styled.u.withConfig({ shouldForwardProp })<StyledProps>(applyStyledProps)

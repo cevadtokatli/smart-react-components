@@ -1,4 +1,4 @@
 import styled from 'styled-components'
-import applyStyledProps, { StyledProps } from '../styled-props'
+import applyStyledProps, { StyledProps, shouldForwardProp } from '../styled-props'
 
-export default styled.table<StyledProps>(applyStyledProps)
+export default styled.table.withConfig({ shouldForwardProp })<StyledProps>(applyStyledProps)

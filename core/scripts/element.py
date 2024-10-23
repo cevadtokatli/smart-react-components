@@ -186,10 +186,10 @@ for item in ELEMENTS:
   (name, parent) = (item, None) if isinstance(item, str) else item
   convertedName = convertName(name)
 
-  with open(target + '/' + convertedName['pascalCase'] + '.tsx', 'w') as file:
+  with open(target + '/' + convertedName['pascalCase'] + '.tsx', 'w', newline='\n') as file:
     file.write(replaceVariablesInFile(componentFileContent, convertedName, parent))
 
-  with open(target + '/' + convertedName['pascalCase'] + '.test.tsx', 'w') as file:
+  with open(target + '/' + convertedName['pascalCase'] + '.test.tsx', 'w', newline='\n') as file:
     file.write(replaceVariablesInFile(componentTestFileContent, convertedName, parent))
 
   indexFileContent += 'export { default as ' + convertedName['pascalCase'] + ' } from \'./' + convertedName['pascalCase'] + '\'\n'
