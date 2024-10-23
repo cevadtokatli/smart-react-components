@@ -496,7 +496,6 @@ exports[`<ColorPicker /> should match snapshot 1`] = `
   >
     <section
       class="c2"
-      display="flex"
     >
       <div
         class="c3 c4"
@@ -554,18 +553,15 @@ exports[`<ColorPicker /> should match snapshot 1`] = `
     </section>
     <hr
       class="c15"
-      width="100%"
     />
     <section
       class=" c16"
     >
       <label
         class="c17 c18"
-        display="block"
       >
         <div
           class="c19"
-          display="flex"
         >
           <label
             class="c20 c21 c22 src-input-addon "
@@ -624,7 +620,6 @@ exports[`<ColorPicker /> should match snapshot 1`] = `
       >
         <button
           class="c30 c31"
-          overflow="hidden"
           shape="rectangle"
         >
           <span
@@ -649,7 +644,6 @@ exports[`<ColorPicker /> should match snapshot 1`] = `
         </button>
         <button
           class="c33 c31"
-          overflow="hidden"
           shape="rectangle"
         >
           <span
@@ -675,8 +669,6 @@ exports[`<ColorPicker /> should match snapshot 1`] = `
     >
       <svg
         class="c23 c34"
-        display="block"
-        fill="$color.gray500"
         viewBox="0 0 1792 1792"
       >
         <path

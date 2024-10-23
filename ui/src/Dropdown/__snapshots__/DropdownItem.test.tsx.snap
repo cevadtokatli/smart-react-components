@@ -26,7 +26,6 @@ exports[`<DropdownItem /> should render component 1`] = `
 
 <div
     class="c0 c1"
-    cursor="$cursor.dropdown"
   >
     Content
   </div>
@@ -63,8 +62,6 @@ exports[`<DropdownItem /> should render waveEffect 1`] = `
 
 <div
     class="c0 c1"
-    cursor="$cursor.dropdown"
-    overflow="hidden"
   >
     Content
   </div>

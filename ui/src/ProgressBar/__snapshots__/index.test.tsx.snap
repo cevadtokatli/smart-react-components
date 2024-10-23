@@ -59,7 +59,6 @@ exports[`<ProgressBar /> should calculate percentage by total value 1`] = `
 
 <div
     class="c0 c1"
-    height="16px"
   >
     <div
       class="c2"
@@ -141,7 +140,6 @@ exports[`<ProgressBar /> should display value 1`] = `
 
 <div
     class="c0 c1"
-    height="16px"
   >
     <div
       class="c2"
@@ -216,7 +214,6 @@ exports[`<ProgressBar /> should render component 1`] = `
 
 <div
     class="c0 c1"
-    height="4px"
   >
     <div
       class="c2 c3"

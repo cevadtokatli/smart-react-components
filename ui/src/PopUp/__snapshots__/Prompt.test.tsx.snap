@@ -473,8 +473,6 @@ exports[`<Prompt /> should render component 1`] = `
   >
     <div
       class="c2"
-      height="100%"
-      width="100%"
     />
     <div
       class="c3 c4 c5"
@@ -494,14 +492,12 @@ exports[`<Prompt /> should render component 1`] = `
       >
         <label
           class="c11 c12"
-          display="block"
         >
           <span>
             Message
           </span>
           <div
             class="c13"
-            display="flex"
           >
             <div
               class=" c14"
@@ -509,7 +505,6 @@ exports[`<Prompt /> should render component 1`] = `
             >
               <input
                 class="c15 c16 src-input "
-                placeholder="Placeholder"
                 shape="rectangle"
                 type="text"
                 value=""
@@ -526,7 +521,6 @@ exports[`<Prompt /> should render component 1`] = `
         >
           <button
             class="c21 c22"
-            overflow="hidden"
             shape="rectangle"
           >
             <span
@@ -537,7 +531,6 @@ exports[`<Prompt /> should render component 1`] = `
           </button>
           <button
             class="c21 c24"
-            overflow="hidden"
             shape="rectangle"
           >
             <span

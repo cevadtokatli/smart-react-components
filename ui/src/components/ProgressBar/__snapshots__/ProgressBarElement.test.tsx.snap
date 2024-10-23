@@ -71,7 +71,6 @@ exports[`<ProgressBarElement /> should render component 1`] = `
 
 <div
     class="c0 c1"
-    height="400px"
   >
     <div
       class="c2"
@@ -166,7 +165,6 @@ exports[`<ProgressBarElement /> should render component filled 1`] = `
 
 <div
     class="c0 c1"
-    height="400px"
   >
     <div
       class="c2"
@@ -262,7 +260,6 @@ exports[`<ProgressBarElement /> should render component nested 1`] = `
 
 <div
     class="c0 c1"
-    height="400px"
   >
     <div
       class="c2"

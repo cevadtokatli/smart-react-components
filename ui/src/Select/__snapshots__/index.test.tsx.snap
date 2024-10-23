@@ -184,11 +184,9 @@ exports[`<Select /> should render component 1`] = `
 
 <div
     class="c0 c1"
-    display="block"
   >
     <div
       class="c2"
-      display="flex"
     >
       <div
         class=" c3"
@@ -203,28 +201,21 @@ exports[`<Select /> should render component 1`] = `
           />
           <div
             class="c8"
-            font-weight="$fontWeight.semibold"
           >
             Category
           </div>
           <div
             class="c9 c10"
-            cursor="$cursor.select"
-            overflow="hidden"
           >
             Item 1
           </div>
           <div
             class="c9 c11"
-            cursor="$cursor.select"
-            overflow="hidden"
           >
             Item 2
           </div>
           <div
             class="c9 c11"
-            cursor="$cursor.select"
-            overflow="hidden"
           >
             Item 3
           </div>

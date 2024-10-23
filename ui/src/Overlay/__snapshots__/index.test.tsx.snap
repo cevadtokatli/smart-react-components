@@ -36,8 +36,6 @@ exports[`<Overlay /> should render component 1`] = `
   >
     <div
       class="c1"
-      height="100%"
-      width="100%"
     />
     <div>
       Overlay

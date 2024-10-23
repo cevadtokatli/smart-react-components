@@ -52,7 +52,6 @@ exports[`<BreadcrumbItem /> should render component 1`] = `
   >
     <a
       class="c1"
-      overflow="hidden"
     >
       Breadcrumb Item
     </a>

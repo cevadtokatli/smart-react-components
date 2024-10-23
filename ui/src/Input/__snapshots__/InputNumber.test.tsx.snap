@@ -228,14 +228,12 @@ exports[`<InputNumber /> should render component 1`] = `
 
 <label
     class="c0 c1"
-    display="block"
   >
     <span>
       Label
     </span>
     <div
       class="c2"
-      display="flex"
     >
       <div
         class=" c3"

@@ -122,11 +122,9 @@ exports[`<Textarea /> should render component 1`] = `
 
 <label
     class="c0 c1"
-    display="block"
   >
     <div
       class="c2"
-      display="flex"
     >
       <div
         class=" c3"

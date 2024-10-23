@@ -52,7 +52,6 @@ exports[`<PaginationLink /> should render component 1`] = `
     <a
       class="c1"
       href="/"
-      overflow="hidden"
     >
       1
     </a>

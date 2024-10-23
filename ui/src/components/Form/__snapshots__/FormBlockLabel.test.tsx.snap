@@ -28,7 +28,6 @@ exports[`<FormBlockLabel /> should be disabled 1`] = `
 
 <label
     class="c0 c1"
-    display="block"
   >
     <span>
       Label
@@ -81,7 +80,6 @@ exports[`<FormBlockLabel /> should not be block 1`] = `
 
 <label
     class="c0 c1"
-    display="block"
   >
     <span>
       Label
@@ -114,7 +112,6 @@ exports[`<FormBlockLabel /> should render component 1`] = `
 
 <label
     class="c0 c1"
-    display="block"
   >
     <span>
       Label

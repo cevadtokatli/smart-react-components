@@ -96,9 +96,7 @@ exports[`<ButtonLink /> should render component 1`] = `
 <a
     class="c0 c1"
     href="/link"
-    overflow="hidden"
     shape="rectangle"
-    text-decoration="none"
   >
     <span
       class="c2 src-button-content"

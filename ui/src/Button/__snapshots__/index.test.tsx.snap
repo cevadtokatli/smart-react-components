@@ -137,7 +137,6 @@ exports[`<Button /> should have addon 1`] = `
 
 <button
     class="c0 c1"
-    overflow="hidden"
     shape="rectangle"
   >
     <div
@@ -315,11 +314,9 @@ exports[`<Button /> should have separated addon 1`] = `
 
 <div
     class="c0"
-    display="inline-flex"
   >
     <button
       class="c1 c2"
-      overflow="hidden"
       shape="rectangle"
     >
       <span
@@ -330,7 +327,6 @@ exports[`<Button /> should have separated addon 1`] = `
     </button>
     <div
       class="c4 c5 src-button-addon"
-      overflow="hidden"
       shape="rectangle"
     >
       Separated Right Addon
@@ -436,7 +432,6 @@ exports[`<Button /> should render component 1`] = `
 
 <button
     class="c0 c1"
-    overflow="hidden"
     shape="rectangle"
   >
     <span

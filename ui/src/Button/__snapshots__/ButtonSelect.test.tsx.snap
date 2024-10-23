@@ -103,17 +103,8 @@ exports[`<ButtonSelect /> should render component 1`] = `
 
 }
 
-@media (max-width:767px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
 <div
     class="c0 c1"
-    overflow="hidden"
     shape="rectangle"
   >
     <span
@@ -132,7 +123,7 @@ exports[`<ButtonSelect /> should render component 1`] = `
       </svg>
     </span>
   </div>
-  .c2 {
+  .c3 {
   height: 100%;
   left: 0;
   position: absolute;
@@ -140,25 +131,25 @@ exports[`<ButtonSelect /> should render component 1`] = `
   width: 100%;
 }
 
-.c3 {
+.c4 {
   overflow: initial !important;
 }
 
-.c5 {
+.c6 {
   padding: .3125rem 0;
 }
 
-.c5 > div {
+.c6 > div {
   font-size: .875rem;
   margin: .125rem .45rem;
   padding: .3125rem .3125rem;
 }
 
-.c7 {
+.c8 {
   font-weight: 500;
 }
 
-.c8 {
+.c9 {
   cursor: default;
   isolation: isolate;
   overflow: hidden;
@@ -166,18 +157,64 @@ exports[`<ButtonSelect /> should render component 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
+.c2 {
+  position: fixed;
+  z-index: 2000;
+}
+
 .c0 {
   position: fixed;
   z-index: 2000;
 }
 
-.c4 {
+.c5 {
   overflow: auto;
   position: fixed;
   z-index: 1000;
 }
 
-.c6 {
+.c1 > * {
+  will-change: opacity,transform;
+}
+
+.c1.src-fixed-box-show > * {
+  opacity: 0;
+  -webkit-transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  transform: translateY(60px);
+}
+
+.c1.src-fixed-box-show-active > * {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.c1.src-fixed-box-hide > * {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.c1.src-fixed-box-hide-active > * {
+  opacity: 0;
+  -webkit-transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  transform: translateY(60px);
+}
+
+.c1.src-fixed-box-show-active > *,
+.c1.src-fixed-box-hide-active > * {
+  -webkit-transition: undefinedms 0s ease-in-out;
+  transition: undefinedms 0s ease-in-out;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+}
+
+.c7 {
   border-radius: .2rem;
   box-shadow: 0 0 10px 1px rgba(154,161,171,.15);
   font-family: inherit;
@@ -194,38 +231,9 @@ exports[`<ButtonSelect /> should render component 1`] = `
   fill: #fff;
 }
 
-.c6 > div {
+.c7 > div {
   word-break: break-word;
   word-wrap: break-word;
-}
-
-.c9 {
-  border-radius: .2rem;
-  fill: currrentcolor;
-  -webkit-transition: 100ms 0s ease-in-out;
-  transition: 100ms 0s ease-in-out;
-  -webkit-transition-property: background,color,fill;
-  transition-property: background,color,fill;
-  background: #0552A9;
-  color: #fff;
-}
-
-.c9 .svg,
-.c9 .svg .fill,
-.c9 .svg .stroke {
-  -webkit-transition: 100ms 0s ease-in-out;
-  transition: 100ms 0s ease-in-out;
-  -webkit-transition-property: fill,stroke;
-  transition-property: fill,stroke;
-}
-
-.c9 .svg,
-.c9 .svg .fill {
-  fill: #fff;
-}
-
-.c9 .svg .stroke {
-  stroke: #fff;
 }
 
 .c10 {
@@ -235,6 +243,8 @@ exports[`<ButtonSelect /> should render component 1`] = `
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: background,color,fill;
   transition-property: background,color,fill;
+  background: #0552A9;
+  color: #fff;
 }
 
 .c10 .svg,
@@ -246,8 +256,35 @@ exports[`<ButtonSelect /> should render component 1`] = `
   transition-property: fill,stroke;
 }
 
+.c10 .svg,
+.c10 .svg .fill {
+  fill: #fff;
+}
+
+.c10 .svg .stroke {
+  stroke: #fff;
+}
+
+.c11 {
+  border-radius: .2rem;
+  fill: currrentcolor;
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: background,color,fill;
+  transition-property: background,color,fill;
+}
+
+.c11 .svg,
+.c11 .svg .fill,
+.c11 .svg .stroke {
+  -webkit-transition: 100ms 0s ease-in-out;
+  transition: 100ms 0s ease-in-out;
+  -webkit-transition-property: fill,stroke;
+  transition-property: fill,stroke;
+}
+
 @media (max-width:767px) {
-  .c0 {
+  .c2 {
     box-sizing: border-box;
     display: -webkit-box;
     display: -webkit-flex;
@@ -268,7 +305,7 @@ exports[`<ButtonSelect /> should render component 1`] = `
 }
 
 @media (max-width:767px) {
-  .c4 {
+  .c5 {
     height: auto !important;
     max-height: 100% !important;
     position: static;
@@ -276,121 +313,36 @@ exports[`<ButtonSelect /> should render component 1`] = `
   }
 }
 
-@media (max-width:767px) {
-  .c1 {
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    will-change: opacity;
-  }
-
-  .c1.src-fixed-box-show {
-    opacity: 0;
-  }
-
-  .c1.src-fixed-box-show-active {
-    opacity: 1;
-  }
-
-  .c1.src-fixed-box-hide {
-    opacity: 1;
-  }
-
-  .c1.src-fixed-box-hide-active {
-    opacity: 0;
-  }
-
-  .c1.src-fixed-box-show-active,
-  .c1.src-fixed-box-hide-active {
-    -webkit-transition: opacity 300ms 0s ease-in-out;
-    transition: opacity 300ms 0s ease-in-out;
-  }
-}
-
-@media (min-width:768px) {
-  .c1 > * {
-    will-change: opacity,transform;
-  }
-
-  .c1.src-fixed-box-show > * {
-    opacity: 0;
-    -webkit-transform: translateY(60px);
-    -ms-transform: translateY(60px);
-    transform: translateY(60px);
-  }
-
-  .c1.src-fixed-box-show-active > * {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  .c1.src-fixed-box-hide > * {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  .c1.src-fixed-box-hide-active > * {
-    opacity: 0;
-    -webkit-transform: translateY(60px);
-    -ms-transform: translateY(60px);
-    transform: translateY(60px);
-  }
-
-  .c1.src-fixed-box-show-active > *,
-  .c1.src-fixed-box-hide-active > * {
-    -webkit-transition: 300ms 0s ease-in-out;
-    transition: 300ms 0s ease-in-out;
-    -webkit-transition-property: opacity,-webkit-transform;
-    -webkit-transition-property: opacity,transform;
-    transition-property: opacity,transform;
-  }
-}
-
 <div
-    class=" c0 c1 sc-bczRLJ sc-kDDrLX  c0"
+    class=" c0 c1 sc-bczRLJ sc-kDDrLX  c2"
   >
     <div
-      class="c2"
-      height="100%"
-      width="100%"
+      class="c3"
     />
     <div
-      class="c3 c4"
-      overflow="initial,true"
+      class="c4 c5"
       style="pointer-events: none; visibility: hidden;"
     >
       <div
-        class="c5 c6"
+        class="c6 c7"
       >
         <div
-          class="c7"
-          font-weight="$fontWeight.semibold"
+          class="c8"
         >
           Category
         </div>
         <div
-          class="c8 c9"
-          cursor="$cursor.selectBox"
-          overflow="hidden"
+          class="c9 c10"
         >
           Item 1
         </div>
         <div
-          class="c8 c10"
-          cursor="$cursor.selectBox"
-          overflow="hidden"
+          class="c9 c11"
         >
           Item 2
         </div>
         <div
-          class="c8 c10"
-          cursor="$cursor.selectBox"
-          overflow="hidden"
+          class="c9 c11"
         >
           Item 3
         </div>

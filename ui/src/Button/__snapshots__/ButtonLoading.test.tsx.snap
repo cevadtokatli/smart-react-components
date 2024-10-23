@@ -58,8 +58,6 @@ exports[`<ButtonLoading /> should render component 1`] = `
         cx="22"
         cy="22"
         r="20"
-        stroke="!primary.font"
-        stroke-width="4"
       />
     </svg>
   </div>

@@ -22,7 +22,6 @@ exports[`<FixedBoxElement /> should add breakpoint 1`] = `
 
 <div
     class="c0 c1"
-    width="300"
   />
 </DocumentFragment>
 `;
@@ -63,7 +62,6 @@ exports[`<FixedBoxElement /> should replace width 1`] = `
 
 <div
     class="c0 c1"
-    width="300"
   />
 </DocumentFragment>
 `;

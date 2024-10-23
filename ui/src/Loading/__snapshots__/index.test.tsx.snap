@@ -35,8 +35,6 @@ exports[`<Loading /> should render component 1`] = `
       cx="22"
       cy="22"
       r="20"
-      stroke="$color.blue"
-      stroke-width="4"
     />
   </svg>
 </DocumentFragment>

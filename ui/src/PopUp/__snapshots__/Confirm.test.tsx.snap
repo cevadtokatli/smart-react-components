@@ -356,8 +356,6 @@ exports[`<Confirm /> should render component 1`] = `
   >
     <div
       class="c2"
-      height="100%"
-      width="100%"
     />
     <div
       class="c3 c4 c5"
@@ -385,7 +383,6 @@ exports[`<Confirm /> should render component 1`] = `
         >
           <button
             class="c15 c16"
-            overflow="hidden"
             shape="rectangle"
           >
             <span
@@ -396,7 +393,6 @@ exports[`<Confirm /> should render component 1`] = `
           </button>
           <button
             class="c15 c18"
-            overflow="hidden"
             shape="rectangle"
           >
             <span

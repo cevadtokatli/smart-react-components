@@ -144,7 +144,6 @@ exports[`<BreadcrumbList /> should render component 1`] = `
     >
       <a
         class="c2"
-        overflow="hidden"
       >
         Home
       </a>
@@ -155,7 +154,6 @@ exports[`<BreadcrumbList /> should render component 1`] = `
     >
       <a
         class="c2"
-        overflow="hidden"
       >
         Section
       </a>
@@ -166,7 +164,6 @@ exports[`<BreadcrumbList /> should render component 1`] = `
     >
       <a
         class="c2"
-        overflow="hidden"
       >
         Item
       </a>

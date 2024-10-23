@@ -131,7 +131,6 @@ exports[`<ButtonGroup /> should render component 1`] = `
   >
     <button
       class="c2 c3"
-      overflow="hidden"
       shape="rectangle"
     >
       <span
@@ -142,7 +141,6 @@ exports[`<ButtonGroup /> should render component 1`] = `
     </button>
     <button
       class="c2 c3"
-      overflow="hidden"
       shape="rectangle"
     >
       <span
@@ -153,7 +151,6 @@ exports[`<ButtonGroup /> should render component 1`] = `
     </button>
     <button
       class="c2 c3"
-      overflow="hidden"
       shape="rectangle"
     >
       <span

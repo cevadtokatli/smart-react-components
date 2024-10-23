@@ -288,8 +288,6 @@ exports[`<Alert /> should render component 1`] = `
   >
     <div
       class="c2"
-      height="100%"
-      width="100%"
     />
     <div
       class="c3 c4 c5"
@@ -311,11 +309,9 @@ exports[`<Alert /> should render component 1`] = `
       </section>
       <footer
         class="c11 c12"
-        display="flex"
       >
         <button
           class="c13 c14"
-          overflow="hidden"
           shape="rectangle"
         >
           <span

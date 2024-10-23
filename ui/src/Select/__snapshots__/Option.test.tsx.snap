@@ -37,7 +37,6 @@ exports[`<Option /> should be active 1`] = `
 
 <div
     class="c0 c1"
-    cursor="$cursor.selectBox"
   >
     Content
   </div>
@@ -70,7 +69,6 @@ exports[`<Option /> should render component 1`] = `
 
 <div
     class="c0 c1"
-    cursor="$cursor.selectBox"
   >
     Content
   </div>
@@ -107,8 +105,6 @@ exports[`<Option /> should render waveEffect 1`] = `
 
 <div
     class="c0 c1"
-    cursor="$cursor.selectBox"
-    overflow="hidden"
   >
     Content
   </div>

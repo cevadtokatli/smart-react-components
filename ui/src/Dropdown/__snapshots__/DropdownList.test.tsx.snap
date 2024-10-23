@@ -83,28 +83,21 @@ exports[`<DropdownList /> should render component 1`] = `
   >
     <div
       class="c2"
-      font-weight="$fontWeight.semibold"
     >
       Category
     </div>
     <div
       class="c3 c4"
-      cursor="$cursor.dropdown"
-      overflow="hidden"
     >
       Item 1
     </div>
     <div
       class="c3 c4"
-      cursor="$cursor.dropdown"
-      overflow="hidden"
     >
       Item 2
     </div>
     <div
       class="c3 c4"
-      cursor="$cursor.dropdown"
-      overflow="hidden"
     >
       Item 3
     </div>
