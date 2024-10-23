@@ -13,6 +13,11 @@ export interface StyledProps extends ResponsiveProps<StandardProps> {
   theme?: Theme
 }
 
-export const shouldForwardProp = (prop: string) => typeof cssKeys[prop] === 'undefined' && typeof cssKeys[prop.substring(0, prop.length - 2)] === 'undefined'
+export const shouldForwardProp = (prop: string) => (
+  typeof cssKeys[prop] === 'undefined'
+  && typeof cssKeys[prop.substring(0, prop.length - 2)] === 'undefined'
+  && !['as', 'palette', 'size', 'theme'].includes(prop)
+  && prop === prop.toLowerCase()
+)
 
 export default (props: object & { theme: Theme }) => Object.keys(props).map(key => convertStyledPropToCSS(key, props, props.theme))
