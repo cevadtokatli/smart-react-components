@@ -6,6 +6,7 @@ import DropdownItemElement from '../components/Dropdown/DropdownItemElement'
 export interface Props {
   children: ContentElement
   elementProps?: JSXElementProps
+  isActive?: boolean
   isDisabled?: boolean
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
 }
@@ -20,7 +21,7 @@ export interface PrivateProps {
   waveEffectPalette: PaletteProp
 }
 
-const DropdownItem: React.FC<Props> = ({ children, elementProps = {}, hasHover, hasWaveEffect, isDisabled, isOutline, isSoft, onClick, palette, setStatus, waveEffectPalette }: (Props & PrivateProps)) => {
+const DropdownItem: React.FC<Props> = ({ children, elementProps = {}, hasHover, hasWaveEffect, isActive = false,isDisabled, isOutline, isSoft, onClick, palette, setStatus, waveEffectPalette }: (Props & PrivateProps)) => {
   const isClicked = React.useRef(false)
 
   const handleOnClick = (e: React.MouseEvent<HTMLElement>) => {
@@ -43,7 +44,7 @@ const DropdownItem: React.FC<Props> = ({ children, elementProps = {}, hasHover, 
     <DropdownItemElement
       cursor="$cursor.dropdown"
       hasHover={hasHover}
-      isActive={false}
+      isActive={isActive}
       isDisabled={isDisabled}
       isHovered={false}
       isOutline={isOutline}
