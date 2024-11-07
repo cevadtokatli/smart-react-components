@@ -21,7 +21,7 @@ export interface PrivateProps {
   waveEffectPalette: PaletteProp
 }
 
-const DropdownItem: React.FC<Props> = ({ children, elementProps = {}, hasHover, hasWaveEffect, isActive = false,isDisabled, isOutline, isSoft, onClick, palette, setStatus, waveEffectPalette }: (Props & PrivateProps)) => {
+const DropdownItem: React.FC<Props> = ({ children, elementProps = {}, hasHover, hasWaveEffect, isActive = false, isDisabled, isOutline, isSoft, onClick, palette, setStatus, waveEffectPalette }: (Props & PrivateProps)) => {
   const isClicked = React.useRef(false)
 
   const handleOnClick = (e: React.MouseEvent<HTMLElement>) => {
