@@ -28,6 +28,11 @@ const Alert: React.FC<Props> = props => {
 
     for (let i = 0; i < children.length; i++) {
       const item = children[i] as JSX.Element
+
+      if (!item) {
+        continue
+      }
+
       if (item.type?.displayName === 'SRCAlertIcon') {
         const iconEl = React.cloneElement(item, {
           alertPalette: props.palette,
