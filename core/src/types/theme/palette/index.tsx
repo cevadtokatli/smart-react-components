@@ -21,6 +21,54 @@ interface DefaultPaletteItemAttributes {
   softDynamicer: string
   softDynamicest: string
   waveEffect: string
+
+  button?: {
+    background?: string
+    border?: string
+    font?: string
+
+    active?: {
+      background?: string
+      border?: string
+      font?: string
+    }
+
+    addon?: {
+      hover?: {
+        background?: string
+        border?: string
+      }
+    }
+
+    hover?: {
+      background?: string
+      border?: string
+      font?: string
+    }
+
+    link?: {
+      font?: string
+
+      hover?: {
+        font?: string
+      }
+    }
+
+    outline?: {
+      border?: string
+      font?: string
+
+      hover?: {
+        background?: string
+        font?: string
+
+        addon?: {
+          background?: string
+          font?: string
+        }
+      }
+    }
+  }
 }
 
 export type PaletteItem = DefaultPaletteItemAttributes & OptionalThemeAttributes
