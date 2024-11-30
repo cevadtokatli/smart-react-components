@@ -41,6 +41,7 @@ interface DefaultPaletteItemAttributes {
       addon?: {
         background?: string
         border?: string
+        font?: string
       }
     }
 

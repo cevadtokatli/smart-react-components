@@ -144,8 +144,8 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
                     }
     
                     .src-button-addon {
-                      background: ${theme.$.palette[palette].button?.addon?.hover?.background ?? theme.$.palette[palette].dynamicest};
-                      border-color: ${theme.$.palette[palette].button?.addon?.hover?.border ?? theme.$.palette[palette].dynamicest};
+                      background: ${theme.$.palette[palette].button?.hover?.addon?.background ?? theme.$.palette[palette].dynamicest};
+                      border-color: ${theme.$.palette[palette].button?.hover?.addon?.border ?? theme.$.palette[palette].dynamicest};
                     }
                   } 
                 `
