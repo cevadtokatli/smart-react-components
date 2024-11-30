@@ -71,10 +71,12 @@ interface DefaultPaletteItemAttributes {
 
   input?: {
     background?: string
+    border?: string
     font?: string
 
     focused?: {
       background?: string
+      border?: string
       font?: string
     }
 

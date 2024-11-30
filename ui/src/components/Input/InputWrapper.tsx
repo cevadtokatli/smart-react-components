@@ -29,7 +29,7 @@ export default styled(Div)<Props>(({ theme, hasBorder, hasSeparatedLeftAddon, ha
     ? `
       ${!isSoft
         ? `
-          border-color: ${!isFocused ? theme.$.palette[palette].dark : theme.$.palette[palette].dynamicest};
+          border-color: ${!isFocused ? (theme.$.palette[palette].input?.border ?? theme.$.palette[palette].dark) : (theme.$.palette[palette].input?.focused?.border ?? theme.$.palette[palette].dynamicest)};
         `
         : `
           border-color: ${!isFocused ? theme.$.palette[palette].softDynamic : theme.$.palette[palette].softDynamicest};
