@@ -68,9 +68,9 @@ exports[`<ButtonList /> should render component 1`] = `
 }
 
 .c3 .src-button-content {
-  color: #fff;
   background: #0665d0;
   border-color: #0665d0;
+  color: #fff;
 }
 
 .c3:hover .src-button-content {

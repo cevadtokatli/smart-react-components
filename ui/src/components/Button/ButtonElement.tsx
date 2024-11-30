@@ -140,7 +140,13 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
                     .src-button-content {
                       background: ${theme.$.palette[palette].button?.hover?.background ?? theme.$.palette[palette].dynamic};
                       border-color: ${theme.$.palette[palette].button?.hover?.border ?? theme.$.palette[palette].dynamic};
-                      color: ${theme.$.palette[palette].button?.hover?.font ?? theme.$.palette[palette].font};
+
+                      ${theme.$.palette[palette].button?.hover?.font
+                        ? `
+                          color: ${theme.$.palette[palette].button?.hover?.font};
+                        `
+                        : ''
+                      }
                     }
     
                     .src-button-addon {
@@ -242,15 +248,15 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
     : `
       .src-button-content {
         border-color: transparent;
-        color: ${theme.$.paette[palette]?.button?.link?.font ?? theme.$.palette[palette].main};
-        fill: ${theme.$.paette[palette]?.button?.link?.font ?? theme.$.palette[palette].main};
+        color: ${theme.$.palette[palette]?.button?.link?.font ?? theme.$.palette[palette].main};
+        fill: ${theme.$.palette[palette]?.button?.link?.font ?? theme.$.palette[palette].main};
       }
 
       ${hasHover
         ? `
           &:hover {
             .src-button-content {
-              color: ${theme.$.paette[palette]?.button?.link?.hover?.font ?? theme.$.palette[palette].dynamicest};
+              color: ${theme.$.palette[palette]?.button?.link?.hover?.font ?? theme.$.palette[palette].dynamicest};
               text-decoration: underline;
             }
           } 

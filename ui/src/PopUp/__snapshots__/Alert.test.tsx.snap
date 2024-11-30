@@ -69,9 +69,9 @@ exports[`<Alert /> should render component 1`] = `
 }
 
 .c14 .src-button-content {
-  color: #fff;
   background: #0665d0;
   border-color: #0665d0;
+  color: #fff;
 }
 
 .c14:hover .src-button-content {

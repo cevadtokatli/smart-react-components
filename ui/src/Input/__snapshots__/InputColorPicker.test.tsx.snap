@@ -228,9 +228,9 @@ exports[`<InputColorPicker /> should render component 1`] = `
 }
 
 .c40 .src-button-content {
-  color: #fff;
   background: #0665d0;
   border-color: #0665d0;
+  color: #fff;
 }
 
 .c40:hover .src-button-content {

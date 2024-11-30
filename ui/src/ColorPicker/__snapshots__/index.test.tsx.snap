@@ -194,9 +194,9 @@ exports[`<ColorPicker /> should match snapshot 1`] = `
 }
 
 .c31 .src-button-content {
-  color: #fff;
   background: #0665d0;
   border-color: #0665d0;
+  color: #fff;
 }
 
 .c31:hover .src-button-content {

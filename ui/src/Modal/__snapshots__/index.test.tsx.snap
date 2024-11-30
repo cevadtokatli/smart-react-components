@@ -74,9 +74,9 @@ exports[`<Modal /> should render component 1`] = `
 }
 
 .c16 .src-button-content {
-  color: #fff;
   background: #0665d0;
   border-color: #0665d0;
+  color: #fff;
 }
 
 .c16:hover .src-button-content {

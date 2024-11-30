@@ -50,9 +50,9 @@ exports[`<Button /> should be block 1`] = `
 }
 
 .c1 .src-button-content {
-  color: #fff;
   background: #0665d0;
   border-color: #0665d0;
+  color: #fff;
 }
 
 .c1:hover .src-button-content {
@@ -161,9 +161,9 @@ exports[`<Button /> should be disabled 1`] = `
 }
 
 .c1 .src-button-content {
-  color: #fff;
   background: #0665d0;
   border-color: #0665d0;
+  color: #fff;
 }
 
 .c1:hover .src-button-content {
@@ -263,9 +263,9 @@ exports[`<Button /> should be fixed size 1`] = `
 }
 
 .c1 .src-button-content {
-  color: #fff;
   background: #0665d0;
   border-color: #0665d0;
+  color: #fff;
 }
 
 .c1:hover .src-button-content {
@@ -373,9 +373,9 @@ exports[`<Button /> should be loading 1`] = `
 }
 
 .c1 .src-button-content {
-  color: #fff;
   background: #0665d0;
   border-color: #0665d0;
+  color: #fff;
 }
 
 .c1:hover .src-button-content {
@@ -492,9 +492,9 @@ exports[`<Button /> should be under the button container 1`] = `
 }
 
 .c1 .src-button-content {
-  color: #fff;
   background: #0665d0;
   border-color: #0665d0;
+  color: #fff;
 }
 
 .c1:hover .src-button-content {
@@ -598,9 +598,9 @@ exports[`<Button /> should have addon 1`] = `
 }
 
 .c1 .src-button-content {
-  color: #fff;
   background: #0665d0;
   border-color: #0665d0;
+  color: #fff;
 }
 
 .c1:hover .src-button-content {
@@ -749,9 +749,9 @@ exports[`<Button /> should have separated addon 1`] = `
 }
 
 .c1 .src-button-content {
-  color: #fff;
   background: #0665d0;
   border-color: #0665d0;
+  color: #fff;
 }
 
 .c1:hover .src-button-content {
@@ -860,9 +860,9 @@ exports[`<Button /> should render component 1`] = `
 }
 
 .c1 .src-button-content {
-  color: #fff;
   background: #0665d0;
   border-color: #0665d0;
+  color: #fff;
 }
 
 .c1:hover .src-button-content {
@@ -1401,9 +1401,9 @@ exports[`<Button /> should resize component responsively 1`] = `
 }
 
 .c1 .src-button-content {
-  color: #fff;
   background: #0665d0;
   border-color: #0665d0;
+  color: #fff;
 }
 
 .c1:hover .src-button-content {
