@@ -33,17 +33,15 @@ interface DefaultPaletteItemAttributes {
       font?: string
     }
 
-    addon?: {
-      hover?: {
-        background?: string
-        border?: string
-      }
-    }
-
     hover?: {
       background?: string
       border?: string
       font?: string
+
+      addon?: {
+        background?: string
+        border?: string
+      }
     }
 
     link?: {
