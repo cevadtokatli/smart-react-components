@@ -65,8 +65,8 @@ export default styled(Input).attrs<Props>(({ className = '', hasLeftAddon, hasRi
     ? `
       ${!isSoft
         ? `
-          background: ${!isFocused ? theme.$.palette[palette].main : theme.$.palette[palette].dynamicer};
-          color: ${theme.$.palette[palette].font};
+          background: ${!isFocused ? (theme.$.palette[palette].input?.background ?? theme.$.palette[palette].main) : (theme.$.palette[palette].input?.focused?.background ?? theme.$.palette[palette].dynamicer)};
+          color: ${theme.$.palette[palette].input?.font ?? theme.$.palette[palette].font};
         `
         : `
           background: ${!isFocused ? theme.$.palette[palette].soft : theme.$.palette[palette].softDynamicer};
@@ -77,13 +77,13 @@ export default styled(Input).attrs<Props>(({ className = '', hasLeftAddon, hasRi
       ${!isInput
         ? `
           ${InputPlaceholder} {
-            color: ${getColor(!isSoft ? theme.$.palette[palette].font : theme.$.palette[palette].softFont).alpha(theme.$.opacity.inputPlaceholder).rgb().toString()};
+            color: ${(!isSoft && theme.$.palette[palette].input?.placeholder?.font) ? theme.$.palette[palette].input?.placeholder?.font : getColor(!isSoft ? theme.$.palette[palette].font : theme.$.palette[palette].softFont).alpha(theme.$.opacity.inputPlaceholder).rgb().toString()};
           }
         `
         : `
           ${placeholder.map(item => `
             &${item} {
-              color: ${getColor(!isSoft ? theme.$.palette[palette].font : theme.$.palette[palette].softFont).alpha(theme.$.opacity.inputPlaceholder).rgb().toString()};
+              color: ${(!isSoft && theme.$.palette[palette].input?.placeholder?.font) ? theme.$.palette[palette].input?.placeholder?.font : getColor(!isSoft ? theme.$.palette[palette].font : theme.$.palette[palette].softFont).alpha(theme.$.opacity.inputPlaceholder).rgb().toString()};
               opacity: 1;
             }
           `).join(' ')}

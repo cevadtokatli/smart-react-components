@@ -68,6 +68,20 @@ interface DefaultPaletteItemAttributes {
       }
     }
   }
+
+  input?: {
+    background?: string
+    font?: string
+
+    focused?: {
+      background?: string
+      font?: string
+    }
+
+    placeholder?: {
+      font?: string
+    }
+  }
 }
 
 export type PaletteItem = DefaultPaletteItemAttributes & OptionalThemeAttributes
