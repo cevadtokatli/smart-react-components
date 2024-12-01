@@ -98,15 +98,29 @@ export default styled(Table).attrs<Props>({
   ${!isSoft
     ? `
       > * > tr > * {
-        background: ${theme.$.palette[palette].background};
-        border-color: ${theme.$.palette[palette].dynamicest};
-        color: ${theme.$.palette[palette].font};
+        background: ${theme.$.palette[palette].table?.odd?.background ?? theme.$.palette[palette].background};
+        border-color: ${theme.$.palette[palette].table?.odd?.border ?? theme.$.palette[palette].dynamicest};
+        color: ${theme.$.palette[palette].table?.odd?.font ?? theme.$.palette[palette].font};
       }
 
       ${hasHeadBackground
         ? `
           > thead > tr > * {
-            background: ${theme.$.palette[palette].dynamic};
+            background: ${theme.$.palette[palette].table?.even?.background ?? theme.$.palette[palette].dynamic};
+
+            ${theme.$.palette[palette].table?.even?.border
+              ? `
+                border-color: ${theme.$.palette[palette].table?.even?.border};
+              `
+              : ''
+            }
+
+            ${theme.$.palette[palette].table?.even?.font
+              ? `
+                border-color: ${theme.$.palette[palette].table?.even?.font};
+              `
+              : ''
+            }
           }
         `
         : ''
@@ -115,7 +129,21 @@ export default styled(Table).attrs<Props>({
       ${isStriped
         ? `
           > tbody > tr:nth-child(${stripedOrientation}) > * {
-            background: ${theme.$.palette[palette].dynamic};
+            background: ${theme.$.palette[palette].table?.even?.background ?? theme.$.palette[palette].dynamic};
+
+            ${theme.$.palette[palette].table?.even?.border
+              ? `
+                border-color: ${theme.$.palette[palette].table?.even?.border};
+              `
+              : ''
+            }
+
+            ${theme.$.palette[palette].table?.even?.font
+              ? `
+                border-color: ${theme.$.palette[palette].table?.even?.font};
+              `
+              : ''
+            }
           }
         `
         : ''
@@ -125,11 +153,20 @@ export default styled(Table).attrs<Props>({
         ? `
           > tbody > tr {
             > * {
-              transition: background 150ms 0 ease-in-out;
+              transition: background 150ms 0s ease-in-out;
             }
 
             &:hover > * {
-              background: ${theme.$.palette[palette].dynamicer};
+              background: ${theme.$.palette[palette].table?.odd?.hover?.background ?? theme.$.palette[palette].dynamicer};
+            }
+
+            ${(isStriped && theme.$.palette[palette].table?.even?.hover?.background)
+              ? `
+                > tbody > tr:nth-child(${stripedOrientation}) > * {
+                  background: ${theme.$.palette[palette].table?.even?.hover?.background};
+                }
+              `
+              : ''
             }
           }
         `
