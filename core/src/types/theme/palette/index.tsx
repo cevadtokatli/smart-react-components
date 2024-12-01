@@ -84,6 +84,28 @@ interface DefaultPaletteItemAttributes {
       font?: string
     }
   }
+
+  table?: {
+    odd?: {
+      background?: string
+      border?: string
+      font?: string
+
+      hover?: {
+        background?: string
+      }
+    }
+
+    even?: {
+      background?: string
+      border?: string
+      font?: string
+
+      hover?: {
+        background?: string
+      }
+    }
+  }
 }
 
 export type PaletteItem = DefaultPaletteItemAttributes & OptionalThemeAttributes

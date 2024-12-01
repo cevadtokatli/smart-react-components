@@ -17,9 +17,9 @@ export default styled(Tr)<Props>(({ theme, hasHover, isEven, isSoft, palette, st
       > *:nth-child(n+${startIndex}) {
         ${!isSoft
           ? `
-            background: ${!isEven ? theme.$.palette[palette].background : theme.$.palette[palette].dynamic};
-            border-color: ${theme.$.palette[palette].dynamicest};
-            color: ${theme.$.palette[palette].font};
+            background: ${!isEven ? (theme.$.palette[palette].table?.odd?.background ?? theme.$.palette[palette].background) : (theme.$.palette[palette].table?.even?.background ?? theme.$.palette[palette].dynamic)};
+            border-color: ${!isEven ? (theme.$.palette[palette].table?.odd?.border ?? theme.$.palette[palette].dynamicest) : (theme.$.palette[palette].table?.even?.border ?? theme.$.palette[palette].dynamicest)};
+            color: ${!isEven ? (theme.$.palette[palette]?.odd?.font ?? theme.$.palette[palette].font) : (theme.$.palette[palette]?.even?.font ?? theme.$.palette[palette].font)};
           `
           : `
             background: ${!isEven ? theme.$.palette[palette].softBackground : theme.$.palette[palette].softDynamic};
@@ -32,7 +32,14 @@ export default styled(Tr)<Props>(({ theme, hasHover, isEven, isSoft, palette, st
       ${hasHover
         ? `
           &:hover > *:nth-child(n+${startIndex}) {
-            background: ${!isSoft ? theme.$.palette[palette].dynamicer : theme.$.palette[palette].softDynamicer};
+            ${!isSoft
+              ? `
+                background: ${!isEven ? (theme.$.palette[palette].table?.odd?.hover?.background ?? theme.$.palette[palette].dynamicer) : (theme.$.palette[palette].table?.even?.hover?.background ?? theme.$.palette[palette].dynamicer)};
+              `
+              : `
+                background: ${theme.$.palette[palette].softDynamicer};
+              `
+            }
           }
         `
         : ''
