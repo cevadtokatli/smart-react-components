@@ -117,7 +117,7 @@ export default styled(Table).attrs<Props>({
 
             ${theme.$.palette[palette].table?.even?.font
               ? `
-                border-color: ${theme.$.palette[palette].table?.even?.font};
+                color: ${theme.$.palette[palette].table?.even?.font};
               `
               : ''
             }
