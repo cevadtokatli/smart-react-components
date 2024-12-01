@@ -1,6 +1,6 @@
 {
   "name": "@smart-react-components/router",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "license": "MIT",
   "main": "index.js",
   "description": "SRC router includes router components.",
