@@ -38,7 +38,7 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@smart-react-components/core": "2.0.13",
+    "@smart-react-components/core": "2.0.14",
     "@testing-library/react": "13.4.0",
     "@types/jest": "29.0.1",
     "@types/react": "18.0.19",
@@ -57,7 +57,7 @@
     "react-router": "5.2.0"
   },
   "peerDependencies": {
-    "@smart-react-components/core": "^2.0.13",
+    "@smart-react-components/core": "^2.0.14",
     "react": "^18.2.0",
     "styled-components": "^5.3.5"
   }
