@@ -75,7 +75,6 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
   word-wrap: break-word;
 
   .src-badge-content {
-    border-color: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};  
     border-radius: ${(isFixedSize && shape === 'rounded') ? '100%' : theme.$.radius.badge[shape]};
   }
 
@@ -91,12 +90,14 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
       .src-badge-content {
         ${!isSoft
           ? `
-            background: ${theme.$.palette[palette].main};
-            color: ${theme.$.palette[palette].font};
-            fill: ${theme.$.palette[palette].font};
+            background: ${theme.$.palette[palette].badge?.background ?? theme.$.palette[palette].main};
+            border-color: ${theme.$.palette[palette].badge?.border ?? theme.$.palette[palette].main};
+            color: ${theme.$.palette[palette].badge?.font ?? theme.$.palette[palette].font};
+            fill: ${theme.$.palette[palette].badge?.font ?? theme.$.palette[palette].font};
           `
           : `
             background: ${theme.$.palette[palette].soft};
+            border-color: ${theme.$.palette[palette].soft};
             color: ${theme.$.palette[palette].softFont};
             fill: ${theme.$.palette[palette].softFont};
           `
@@ -141,10 +142,12 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
       .src-badge-content {
         ${!isSoft
           ? `
-            color: ${theme.$.palette[palette].main};
-            fill: ${theme.$.palette[palette].main};
+            border-color: ${theme.$.palette[palette].badge?.outline?.border ?? theme.$.palette[palette].main};
+            color: ${theme.$.palette[palette].badge?.outline?.font ?? theme.$.palette[palette].main};
+            fill: ${theme.$.palette[palette].badge?.outline?.font ?? theme.$.palette[palette].main};
           `
           : `
+            border-color: ${theme.$.palette[palette].soft};
             color: ${theme.$.palette[palette].soft};
             fill: ${theme.$.palette[palette].soft};
           `

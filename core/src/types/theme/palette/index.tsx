@@ -22,6 +22,17 @@ interface DefaultPaletteItemAttributes {
   softDynamicest: string
   waveEffect: string
 
+  badge?: {
+    background?: string
+    border?: string
+    font?: string
+
+    outline?: {
+      border?: string
+      font?: string
+    }
+  }
+
   button?: {
     background?: string
     border?: string
