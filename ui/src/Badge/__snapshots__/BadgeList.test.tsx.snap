@@ -60,12 +60,12 @@ exports[`<BadgeList /> should render component 1`] = `
 }
 
 .c3 .src-badge-content {
-  border-color: #0665d0;
   border-radius: .15rem;
 }
 
 .c3 .src-badge-content {
   background: #0665d0;
+  border-color: #0665d0;
   color: #fff;
   fill: #fff;
 }

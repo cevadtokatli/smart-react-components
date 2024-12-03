@@ -44,12 +44,12 @@ exports[`<BadgeElement /> should be absolute 1`] = `
 }
 
 .c1 .src-badge-content {
-  border-color: #0665d0;
   border-radius: .15rem;
 }
 
 .c1 .src-badge-content {
   background: #0665d0;
+  border-color: #0665d0;
   color: #fff;
   fill: #fff;
 }
@@ -120,12 +120,12 @@ exports[`<BadgeElement /> should be fixed size 1`] = `
 }
 
 .c1 .src-badge-content {
-  border-color: #0665d0;
   border-radius: .15rem;
 }
 
 .c1 .src-badge-content {
   background: #0665d0;
+  border-color: #0665d0;
   color: #fff;
   fill: #fff;
 }
@@ -214,12 +214,12 @@ exports[`<BadgeElement /> should have space 1`] = `
 }
 
 .c1 .src-badge-content {
-  border-color: #0665d0;
   border-radius: .15rem;
 }
 
 .c1 .src-badge-content {
   background: #0665d0;
+  border-color: #0665d0;
   color: #fff;
   fill: #fff;
 }
@@ -283,12 +283,12 @@ exports[`<BadgeElement /> should not be clickable 1`] = `
 }
 
 .c1 .src-badge-content {
-  border-color: #0665d0;
   border-radius: .15rem;
 }
 
 .c1 .src-badge-content {
   background: #0665d0;
+  border-color: #0665d0;
   color: #fff;
   fill: #fff;
 }
@@ -348,12 +348,12 @@ exports[`<BadgeElement /> should render component 1`] = `
 }
 
 .c1 .src-badge-content {
-  border-color: #0665d0;
   border-radius: .15rem;
 }
 
 .c1 .src-badge-content {
   background: #0665d0;
+  border-color: #0665d0;
   color: #fff;
   fill: #fff;
 }
@@ -422,11 +422,11 @@ exports[`<BadgeElement /> should render component outline 1`] = `
 }
 
 .c1 .src-badge-content {
-  border-color: #0665d0;
   border-radius: .15rem;
 }
 
 .c1 .src-badge-content {
+  border-color: #0665d0;
   color: #0665d0;
   fill: #0665d0;
 }
@@ -498,11 +498,11 @@ exports[`<BadgeElement /> should render component outline with soft colors 1`] =
 }
 
 .c1 .src-badge-content {
-  border-color: #cde0f5;
   border-radius: .15rem;
 }
 
 .c1 .src-badge-content {
+  border-color: #cde0f5;
   color: #cde0f5;
   fill: #cde0f5;
 }
@@ -575,12 +575,12 @@ exports[`<BadgeElement /> should render component with soft colors 1`] = `
 }
 
 .c1 .src-badge-content {
-  border-color: #cde0f5;
   border-radius: .15rem;
 }
 
 .c1 .src-badge-content {
   background: #cde0f5;
+  border-color: #cde0f5;
   color: #033c7c;
   fill: #033c7c;
 }
@@ -650,12 +650,12 @@ exports[`<BadgeElement /> should resize component responsively 1`] = `
 }
 
 .c1 .src-badge-content {
-  border-color: #0665d0;
   border-radius: .15rem;
 }
 
 .c1 .src-badge-content {
   background: #0665d0;
+  border-color: #0665d0;
   color: #fff;
   fill: #fff;
 }
