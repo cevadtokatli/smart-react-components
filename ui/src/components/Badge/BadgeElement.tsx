@@ -139,8 +139,8 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
               `
               : `
                 .src-badge-content {
-                  background: ${theme.$.palette[palette].badge?.soft?.active?.background && theme.$.palette[palette].softDynamicer};
-                  border-color: ${theme.$.palette[palette].badge?.soft?.active?.border && theme.$.palette[palette].softDynamicer};
+                  background: ${theme.$.palette[palette].badge?.soft?.active?.background ?? theme.$.palette[palette].softDynamicer};
+                  border-color: ${theme.$.palette[palette].badge?.soft?.active?.border ?? theme.$.palette[palette].softDynamicer};
 
                   ${theme.$.palette[palette].badge?.soft?.active?.font
                     ? `
@@ -152,8 +152,8 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
                 }
 
                 .src-badge-icon {
-                  background: ${theme.$.palette[palette].badge?.soft?.active?.icon?.background && theme.$.palette[palette].softDynamicest};
-                  border-color: ${theme.$.palette[palette].badge?.soft?.active?.icon?.border && theme.$.palette[palette].softDynamicest};
+                  background: ${theme.$.palette[palette].badge?.soft?.active?.icon?.background ?? theme.$.palette[palette].softDynamicest};
+                  border-color: ${theme.$.palette[palette].badge?.soft?.active?.icon?.border ?? theme.$.palette[palette].softDynamicest};
 
                   ${theme.$.palette[palette].badge?.soft?.active?.icon?.font
                     ? `
