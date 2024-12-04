@@ -58,27 +58,26 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight }) => ({
     ? `
       ${!isSoft
         ? `
-          background: ${theme.$.palette[palette].main};
-          border-color: ${theme.$.palette[palette].darkest};
-          color: ${theme.$.palette[palette].font};
+          background: ${theme.$.palette[palette].alert?.background ?? theme.$.palette[palette].main};
+          border-color: ${theme.$.palette[palette].alert?.border ?? theme.$.palette[palette].darkest};
+          color: ${theme.$.palette[palette].alert?.font ?? theme.$.palette[palette].font};
         `
         : `
-          background: ${theme.$.palette[palette].soft};
-          border-color: ${theme.$.palette[palette].softDynamicest};
-          color: ${theme.$.palette[palette].softFont};
+          background: ${theme.$.palette[palette].alert?.soft?.background ?? theme.$.palette[palette].soft};
+          border-color: ${theme.$.palette[palette].alert?.soft?.border ?? theme.$.palette[palette].softDynamicest};
+          color: ${theme.$.palette[palette].alert?.soft?.font ?? theme.$.palette[palette].softFont};
         `
       }
     `
     : `
       ${!isSoft
         ? `
-          border-color: ${theme.$.palette[palette].main};
-          color: ${theme.$.palette[palette].main};
-
+          border-color: ${theme.$.palette[palette].alert?.outline?.border ?? theme.$.palette[palette].main};
+          color: ${theme.$.palette[palette].alert?.outline?.font ?? theme.$.palette[palette].main};
         `
         : `
-          border-color: ${theme.$.palette[palette].soft};
-          color: ${theme.$.palette[palette].soft};
+          border-color: ${theme.$.palette[palette].alert?.soft?.outline?.border ?? theme.$.palette[palette].soft};
+          color: ${theme.$.palette[palette].alert?.soft?.outline?.font ?? theme.$.palette[palette].soft};
         `
       }
     `
@@ -109,7 +108,7 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight }) => ({
   }
 
   hr {
-    background: ${!isSoft ? theme.$.palette[palette].darkest : theme.$.palette[palette].softDynamicest};
+    background: ${!isSoft ? (theme.$.palette[palette].alert?.separatorLine ?? theme.$.palette[palette].darkest) : (theme.$.palette[palette].alert?.soft?.separatorLine ?? theme.$.palette[palette].softDynamicest)};
     border: 0;
     height: 1px;
     width: 100%;

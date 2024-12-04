@@ -1,5 +1,6 @@
 import { Partial } from '../..'
 import { OptionalThemeAttributes } from '../util'
+import { AlertPaletteItemAttributes } from './alert'
 
 interface DefaultPaletteItemAttributes {
   main: string
@@ -21,6 +22,8 @@ interface DefaultPaletteItemAttributes {
   softDynamicer: string
   softDynamicest: string
   waveEffect: string
+
+  alert?: AlertPaletteItemAttributes
 
   badge?: {
     background?: string
