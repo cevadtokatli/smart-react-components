@@ -198,9 +198,9 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
                 }
 
                 .src-badge-icon {
-                  background: ${theme.$.palette[palette].dynamicer};
-                  color: ${theme.$.palette[palette].font};
-                  fill: ${theme.$.palette[palette].font}; 
+                  background: ${theme.$.palette[palette].badge?.outline?.active?.icon?.background ?? theme.$.palette[palette].dynamicer};
+                  color: ${theme.$.palette[palette].badge?.outline?.active?.icon?.font ?? theme.$.palette[palette].font};
+                  fill: ${theme.$.palette[palette].badge?.outline?.active?.icon?.font ?? theme.$.palette[palette].font};
                 }
               `
               : `
@@ -211,9 +211,9 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
                 }
 
                 .src-badge-icon {
-                  background: ${theme.$.palette[palette].softDynamicer};
-                  color: ${theme.$.palette[palette].softFont};
-                  fill: ${theme.$.palette[palette].softFont};
+                  background: ${theme.$.palette[palette].badge?.soft?.outline?.active?.icon?.background ?? theme.$.palette[palette].softDynamicer};
+                  color: ${theme.$.palette[palette].badge?.soft?.outline?.active?.icon?.font ?? theme.$.palette[palette].softFont};
+                  fill: ${theme.$.palette[palette].badge?.soft?.outline?.active?.icon?.font ?? theme.$.palette[palette].softFont};
                 }
               `
             }

@@ -16,7 +16,7 @@
     "webpack-dev-server": "4.11.0"
   },
   "dependencies": {
-    "@smart-react-components/core": "2.1.0-alpha-1",
+    "@smart-react-components/core": "2.1.0-alpha-2",
     "@smart-react-components/router": "2.1.0-alpha-1",
     "@smart-react-components/transition": "2.1.0-alpha-1",
     "@smart-react-components/ui": "2.1.0-alpha-1",
