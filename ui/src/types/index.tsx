@@ -1,6 +1,6 @@
 import { Value } from '@smart-react-components/core/types'
 
-export type FormValue = Value | boolean
+export type FormValue = Value | boolean | object
 
 export enum InputType {
   EMAIL = 'email',
