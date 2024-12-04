@@ -5,20 +5,12 @@ export interface AlertPaletteItemAttributes {
   separatorLine?: string // darkest
 
   icon?: {
-    background?: string
-    font?: string
-
-    outline?: {
-      font?: string
-    }
+    background?: string // main
+    font?: string // font
 
     soft?: {
-      background?: string
-      font?: string
-
-      outline?: {
-        font?: string
-      }
+      background?: string // soft
+      font?: string // softFont
     }
   }
 

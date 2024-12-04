@@ -48,10 +48,10 @@ export default styled(Div).attrs<Props>(({ hasBackground, iconPosition }) => ({
 
   ${((palette === alertPalette && !isOutline) || hasBackground)
     ? `
-      color: ${!isSoft ? theme.$.palette[alertPalette].font : theme.$.palette[alertPalette].softFont};
+      color: ${!isSoft ? (theme.$.palette[alertPalette].alert?.icon?.font ?? theme.$.palette[alertPalette].font) : (theme.$.palette[alertPalette]?.alert?.icon?.font ?? theme.$.palette[alertPalette].softFont)};
     `
     : `
-      color: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};
+      color: ${!isSoft ? (theme.$.palette[palette].alert?.icon?.font ?? theme.$.palette[palette].main) : (theme.$.palette[alertPalette]?.alert?.icon?.soft?.font ?? theme.$.palette[palette].soft)};
     `
   }
 
@@ -59,10 +59,17 @@ export default styled(Div).attrs<Props>(({ hasBackground, iconPosition }) => ({
     ? `
       ${!isSoft
         ? `
-          background: ${(palette !== alertPalette || isOutline) ? theme.$.palette[palette].main : theme.$.palette[alertPalette].darkest};
+          ${theme.$.palette[palette].alert?.icon?.background
+            ? `background: ${theme.$.palette[palette].alert.icon.background};`
+            : `background: ${(palette !== alertPalette || isOutline) ? theme.$.palette[palette].main : theme.$.palette[alertPalette].darkest};`
+          }
+
         `
         : `
-          background: ${(palette !== alertPalette || isOutline) ? theme.$.palette[palette].soft : theme.$.palette[alertPalette].softDynamicest};
+          ${theme.$.palette[palette].alert?.icon?.soft?.background
+            ? `background: ${theme.$.palette[palette].alert.icon.soft.background};`
+            : `background: ${(palette !== alertPalette || isOutline) ? theme.$.palette[palette].soft : theme.$.palette[alertPalette].softDynamicest};`
+          }
         `
       }
     `
