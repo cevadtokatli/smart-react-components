@@ -1,6 +1,7 @@
 import { Partial } from '../..'
 import { OptionalThemeAttributes } from '../util'
 import { AlertPaletteItemAttributes } from './alert'
+import { BadgePaletteItemAttributes } from './badge'
 
 interface DefaultPaletteItemAttributes {
   main: string
@@ -24,17 +25,7 @@ interface DefaultPaletteItemAttributes {
   waveEffect: string
 
   alert?: AlertPaletteItemAttributes
-
-  badge?: {
-    background?: string
-    border?: string
-    font?: string
-
-    outline?: {
-      border?: string
-      font?: string
-    }
-  }
+  badge?: BadgePaletteItemAttributes
 
   button?: {
     background?: string

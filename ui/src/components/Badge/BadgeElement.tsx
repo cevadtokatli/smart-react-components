@@ -96,10 +96,10 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
             fill: ${theme.$.palette[palette].badge?.font ?? theme.$.palette[palette].font};
           `
           : `
-            background: ${theme.$.palette[palette].soft};
-            border-color: ${theme.$.palette[palette].soft};
-            color: ${theme.$.palette[palette].softFont};
-            fill: ${theme.$.palette[palette].softFont};
+            background: ${theme.$.palette[palette].badge?.soft?.background ?? theme.$.palette[palette].soft};
+            border-color: ${theme.$.palette[palette].badge?.soft?.border ?? theme.$.palette[palette].soft};
+            color: ${theme.$.palette[palette].badge?.soft?.font ?? theme.$.palette[palette].softFont};
+            fill: ${theme.$.palette[palette].badge?.soft?.font ?? theme.$.palette[palette].softFont};
           `
         }
       }
@@ -112,24 +112,56 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
             ${!isSoft
               ? `
                 .src-badge-content {
-                  background: ${theme.$.palette[palette].dynamicer};
-                  border-color: ${theme.$.palette[palette].dynamicer};
+                  background: ${theme.$.palette[palette].badge?.active?.background ?? theme.$.palette[palette].dynamicer};
+                  border-color: ${theme.$.palette[palette].badge?.active?.border ?? theme.$.palette[palette].dynamicer};
+
+                  ${theme.$.palette[palette].badge?.active?.font
+                    ? `
+                      color: ${theme.$.palette[palette].badge?.active?.font};
+                      fill: ${theme.$.palette[palette].badge?.active?.font};
+                    `
+                    : ''
+                  }
                 }
 
                 .src-badge-icon {
-                  background: ${theme.$.palette[palette].dynamicest};
-                  border-color: ${theme.$.palette[palette].dynamicest};
+                  background: ${theme.$.palette[palette].badge?.active?.icon?.background ?? theme.$.palette[palette].dynamicest};
+                  border-color: ${theme.$.palette[palette].badge?.active?.icon?.border ?? theme.$.palette[palette].dynamicest};
+
+                  ${theme.$.palette[palette].badge?.active?.icon?.font
+                    ? `
+                      color: ${theme.$.palette[palette].badge?.active?.icon?.font};
+                      fill: ${theme.$.palette[palette].badge?.active?.icon?.font};
+                    `
+                    : ''
+                  }
                 }
               `
               : `
                 .src-badge-content {
-                  background: ${theme.$.palette[palette].softDynamicer};
-                  border-color: ${theme.$.palette[palette].softDynamicer};
+                  background: ${theme.$.palette[palette].badge?.soft?.active?.background && theme.$.palette[palette].softDynamicer};
+                  border-color: ${theme.$.palette[palette].badge?.soft?.active?.border && theme.$.palette[palette].softDynamicer};
+
+                  ${theme.$.palette[palette].badge?.soft?.active?.font
+                    ? `
+                      color: ${theme.$.palette[palette].badge?.soft?.active?.font};
+                      fill: ${theme.$.palette[palette].badge?.soft?.active?.font};
+                    `
+                    : ''
+                  }
                 }
 
                 .src-badge-icon {
-                  background: ${theme.$.palette[palette].softDynamicest};
-                  border-color: ${theme.$.palette[palette].softDynamicest};
+                  background: ${theme.$.palette[palette].badge?.soft?.active?.icon?.background && theme.$.palette[palette].softDynamicest};
+                  border-color: ${theme.$.palette[palette].badge?.soft?.active?.icon?.border && theme.$.palette[palette].softDynamicest};
+
+                  ${theme.$.palette[palette].badge?.soft?.active?.icon?.font
+                    ? `
+                      color: ${theme.$.palette[palette].badge?.soft?.active?.icon?.font};
+                      fill: ${theme.$.palette[palette].badge?.soft?.active?.icon?.font};
+                    `
+                    : ''
+                  }
                 }
               `
             }
@@ -147,9 +179,9 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
             fill: ${theme.$.palette[palette].badge?.outline?.font ?? theme.$.palette[palette].main};
           `
           : `
-            border-color: ${theme.$.palette[palette].soft};
-            color: ${theme.$.palette[palette].soft};
-            fill: ${theme.$.palette[palette].soft};
+            border-color: ${theme.$.palette[palette].badge?.soft?.outline?.border ?? theme.$.palette[palette].soft};
+            color: ${theme.$.palette[palette].badge?.soft?.outline?.font ?? theme.$.palette[palette].soft};
+            fill: ${theme.$.palette[palette].badge?.soft?.outline?.font ?? theme.$.palette[palette].soft};
           `
         }
       }
@@ -160,9 +192,9 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
             ${!isSoft
               ? `
                .src-badge-content {
-                  background: ${theme.$.palette[palette].main};
-                  color: ${theme.$.palette[palette].font};
-                  fill: ${theme.$.palette[palette].font};
+                  background: ${theme.$.palette[palette].badge?.outline?.active?.background ?? theme.$.palette[palette].main};
+                  color: ${theme.$.palette[palette].badge?.outline?.active?.font ?? theme.$.palette[palette].font};
+                  fill: ${theme.$.palette[palette].badge?.outline?.active?.font ?? theme.$.palette[palette].font};
                 }
 
                 .src-badge-icon {
@@ -173,9 +205,9 @@ export default styled(Div).attrs<Props>(({ hasIconLeft, hasIconRight, hasSpace, 
               `
               : `
                .src-badge-content {
-                  background: ${theme.$.palette[palette].soft};
-                  color: ${theme.$.palette[palette].softFont};
-                  fill: ${theme.$.palette[palette].softFont};
+                  background: ${theme.$.palette[palette]?.badge?.soft?.outline?.active?.background ?? theme.$.palette[palette].soft};
+                  color: ${theme.$.palette[palette]?.badge?.soft?.outline?.active?.font ?? theme.$.palette[palette].softFont};
+                  fill: ${theme.$.palette[palette]?.badge?.soft?.outline?.active?.font ?? theme.$.palette[palette].softFont};
                 }
 
                 .src-badge-icon {

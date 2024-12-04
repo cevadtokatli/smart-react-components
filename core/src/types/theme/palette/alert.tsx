@@ -2,17 +2,11 @@ export interface AlertPaletteItemAttributes {
   background?: string // main
   border?: string // darkest
   font?: string // font
-  separatorLine?: string // darkest
-
   icon?: {
     background?: string // main
     font?: string // font
-
-    soft?: {
-      background?: string // soft
-      font?: string // softFont
-    }
   }
+  separatorLine?: string // darkest
 
   outline?: {
     border?: string // main
@@ -23,6 +17,10 @@ export interface AlertPaletteItemAttributes {
     background?: string // soft
     border?: string // softDynamicest
     font?: string // softFont
+    icon?: {
+      background?: string // soft
+      font?: string // softFont
+    }
     separatorLine?: string // softDynamicest
 
     outline?: {

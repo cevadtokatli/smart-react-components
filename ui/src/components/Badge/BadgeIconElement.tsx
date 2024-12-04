@@ -33,14 +33,14 @@ export default styled(Div).attrs<Props>({
     ? `  
       ${!isSoft
         ? `
-          background: ${theme.$.palette[palette].dynamicer};
-          color: ${theme.$.palette[palette].font};
-          fill: ${theme.$.palette[palette].font};
+          background: ${theme.$.palette[palette].badge?.icon?.background ?? theme.$.palette[palette].dynamicer};
+          color: ${theme.$.palette[palette].badge?.icon?.font ?? theme.$.palette[palette].font};
+          fill: ${theme.$.palette[palette].badge?.icon?.font ?? theme.$.palette[palette].font};
         `
         : `
-          background: ${theme.$.palette[palette].softDynamicer};
-          color: ${theme.$.palette[palette].softFont};
-          fill: ${theme.$.palette[palette].softFont};       
+          background: ${theme.$.palette[palette].badge?.soft?.icon?.background ?? theme.$.palette[palette].softDynamicer};
+          color: ${theme.$.palette[palette].badge?.soft?.icon?.font ?? theme.$.palette[palette].softFont};
+          fill: ${theme.$.palette[palette].badge?.soft?.icon?.font ?? theme.$.palette[palette].softFont};       
         `
       }
 
@@ -51,12 +51,28 @@ export default styled(Div).attrs<Props>({
           &:active {
             ${!isSoft
               ? `
-                background: ${theme.$.palette[palette].dynamicest};
-                border-color: ${theme.$.palette[palette].dynamicest};  
+                background: ${theme.$.palette[palette].badge?.active?.icon?.background ?? theme.$.palette[palette].dynamicest};
+                border-color: ${theme.$.palette[palette].badge?.active?.icon?.border ?? theme.$.palette[palette].dynamicest};  
+
+                ${theme.$.palette[palette].badge?.active?.icon?.font
+                  ? `
+                    color: ${theme.$.palette[palette].badge?.active?.icon?.font};
+                    fill: ${theme.$.palette[palette].badge?.active?.icon?.font};
+                  `
+                  : ''
+                }
               `
               : `
-                background: ${theme.$.palette[palette].softDynamicest};
-                border-color: ${theme.$.palette[palette].softDynamicest};
+                background: ${theme.$.palette[palette].badge?.soft?.active?.icon?.background ?? theme.$.palette[palette].softDynamicest};
+                border-color: ${theme.$.palette[palette].badge?.soft?.active?.icon?.border ?? theme.$.palette[palette].softDynamicest};
+
+                ${theme.$.palette[palette].badge?.soft?.active?.font
+                  ? `
+                    color: ${theme.$.palette[palette].badge?.soft?.active?.font};
+                    fill: ${theme.$.palette[palette].badge?.soft?.active?.font};
+                  `
+                  : ''
+                }
               `
             }
           }
@@ -67,12 +83,12 @@ export default styled(Div).attrs<Props>({
     : `
      ${!isSoft
         ? `
-          color: ${theme.$.palette[palette].main};
-          fill: ${theme.$.palette[palette].main};
+          color: ${theme.$.palette[palette]?.badge?.outline?.icon?.font ?? theme.$.palette[palette].main};
+          fill: ${theme.$.palette[palette]?.badge?.outline?.icon?.font ?? theme.$.palette[palette].main};
         `
         : `
-          color: ${theme.$.palette[palette].soft};
-          fill: ${theme.$.palette[palette].soft};       
+          color: ${theme.$.palette[palette]?.badge?.soft?.outline?.icon?.font ?? theme.$.palette[palette].soft};
+          fill: ${theme.$.palette[palette]?.badge?.soft?.outline?.icon?.font ?? theme.$.palette[palette].soft};       
         `
       }
 
@@ -81,14 +97,14 @@ export default styled(Div).attrs<Props>({
           &:active {
             ${!isSoft
               ? `
-                background: ${theme.$.palette[palette].dynamicer};
-                color: ${theme.$.palette[palette].font};
-                fill: ${theme.$.palette[palette].font};
+                background: ${theme.$.palette[palette].badge?.outline?.active?.icon?.background ?? theme.$.palette[palette].dynamicer};
+                color: ${theme.$.palette[palette].badge?.outline?.active?.icon?.font ?? theme.$.palette[palette].font};
+                fill: ${theme.$.palette[palette].badge?.outline?.active?.icon?.font ?? theme.$.palette[palette].font};
               `
               : `
-                background: ${theme.$.palette[palette].softDynamicer};
-                color: ${theme.$.palette[palette].softFont};
-                fill: ${theme.$.palette[palette].softFont};
+                background: ${theme.$.palette[palette].badge?.soft?.outline?.active?.icon?.background ?? theme.$.palette[palette].softDynamicer};
+                color: ${theme.$.palette[palette].badge?.soft?.outline?.active?.icon?.font ?? theme.$.palette[palette].softFont};
+                fill: ${theme.$.palette[palette].badge?.soft?.outline?.active?.icon?.font ?? theme.$.palette[palette].softFont};
               `
             }
           }
