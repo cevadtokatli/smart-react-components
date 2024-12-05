@@ -1292,9 +1292,9 @@ exports[`<Button /> should render component with soft colors 1`] = `
 }
 
 .c1 .src-button-content {
-  color: #033c7c;
   background: #cde0f5;
   border-color: #cde0f5;
+  color: #033c7c;
 }
 
 .c1:hover .src-button-content {
