@@ -4,7 +4,7 @@ import extractElementProps from '@smart-react-components/core/element-props'
 import intrinsicStyledCoreProps from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { Theme } from '@smart-react-components/core/theme'
-import { ContentElement } from '@smart-react-components/core/types'
+import { ContentElement, JSXElementProps } from '@smart-react-components/core/types'
 import React from 'react'
 import { useTheme } from 'styled-components'
 import Badge from '../Badge'
@@ -29,6 +29,7 @@ import { getWaveEffectPalette } from '../util/wave-effect'
 import InputAddon from './SelectAddon'
 
 export interface Props extends GenericProps {
+  dropdownArrowIconElementProps?: JSXElementProps
   placeholder?: string
 }
 
@@ -195,6 +196,7 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
               <DropdownArrowIcon
                 fill="currentcolor"
                 {...applyResponsiveStyledProp(props, 'size', 'iconSize', v => `$size.icon.${v}`)}
+                {...props.dropdownArrowIconElementProps}
               />
             </InputElement>
             { (rightAddon && !rightAddon?.props?.isSeparated) && rightAddon }
@@ -234,6 +236,7 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
 })
 
 SelectBox.defaultProps = {
+  dropdownArrowIconElementProps: {},
   elementProps: {},
   hasBorder: true,
   hasHover: true,
