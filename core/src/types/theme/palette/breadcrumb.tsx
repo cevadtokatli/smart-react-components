@@ -35,7 +35,7 @@ export interface BreadcrumbPaletteItemAttributes {
       font?: string // softDynamicest
     }
 
-    outliine?: {
+    outline?: {
       font?: string // soft
 
       active?: {
