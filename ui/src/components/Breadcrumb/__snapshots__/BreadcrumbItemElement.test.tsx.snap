@@ -253,8 +253,8 @@ exports[`<BreadcrumbItemElement /> should render component with soft colors 1`] 
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
   font-weight: 600;
-  color: #8eb9e9;
-  fill: #8eb9e9;
+  color: #033c7c;
+  fill: #033c7c;
 }
 
 .c0 > a:hover {
