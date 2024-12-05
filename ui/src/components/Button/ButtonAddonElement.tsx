@@ -49,30 +49,30 @@ export default styled(Div).attrs<Props>({
     ? `
       ${!isSoft
         ? `
-          background: ${theme.$.palette[palette].dynamicer};
-          border-color: ${theme.$.palette[palette].dynamicer};
-          color: ${theme.$.palette[palette].font};
+          background: ${theme.$.palette[palette].button?.addon?.background ?? theme.$.palette[palette].dynamicer};
+          border-color: ${theme.$.palette[palette].button?.addon?.border ?? theme.$.palette[palette].dynamicer};
+          color: ${theme.$.palette[palette].button?.addon?.font ?? theme.$.palette[palette].font};
 
           ${(isSeparated && hasHover)
             ? `
               &:hover {
-                background: ${theme.$.palette[palette].dynamicest};
-                border-color: ${theme.$.palette[palette].dynamicest};
+                background: ${theme.$.palette[palette].button?.hover?.addon?.background ?? theme.$.palette[palette].dynamicest};
+                border-color: ${theme.$.palette[palette].button?.hover?.addon?.border ?? theme.$.palette[palette].dynamicest};
               }
             `
             : ''
           }
         `
         : `
-          background: ${theme.$.palette[palette].softDynamicer};
-          border-color: ${theme.$.palette[palette].softDynamicer};
-          color: ${theme.$.palette[palette].softFont};
+          background: ${theme.$.palette[palette].button?.soft?.addon?.background ?? theme.$.palette[palette].softDynamicer};
+          border-color: ${theme.$.palette[palette].button?.soft?.addon?.border ?? theme.$.palette[palette].softDynamicer};
+          color: ${theme.$.palette[palette].button?.soft?.addon?.font ?? theme.$.palette[palette].softFont};
 
           ${(isSeparated && hasHover)
             ? `
               &:hover {
-                background: ${theme.$.palette[palette].softDynamicest};
-                border-color: ${theme.$.palette[palette].softDynamicest};
+                background: ${theme.$.palette[palette].button?.soft?.hover?.addon?.background ?? theme.$.palette[palette].softDynamicest};
+                border-color: ${theme.$.palette[palette].button?.soft?.hover?.addon?.border ?? theme.$.palette[palette].softDynamicest};
               }
             `
             : ''
@@ -83,28 +83,28 @@ export default styled(Div).attrs<Props>({
     : `
       ${!isSoft
         ? `
-          border-color: ${theme.$.palette[palette].dynamicer};
-          color: ${theme.$.palette[palette].dynamicer};
+          border-color: ${theme.$.palette[palette].button?.outline?.addon?.border ?? theme.$.palette[palette].dynamicer};
+          color: ${theme.$.palette[palette].button?.outline?.addon?.font ?? theme.$.palette[palette].dynamicer};
 
           ${(isSeparated && hasHover)
             ? `
               &:hover {
-                background: ${theme.$.palette[palette].dynamicer};
-                color: ${theme.$.palette[palette].font};
+                background: ${theme.$.palette[palette].button?.outline?.hover?.addon?.background ?? theme.$.palette[palette].dynamicer};
+                color: ${theme.$.palette[palette].button?.outline?.hover?.addon?.font ?? theme.$.palette[palette].font};
               }
             `
             : ''
           }
         `
         : `
-          border-color: ${theme.$.palette[palette].softDynamicer};
-          color: ${theme.$.palette[palette].softDynamicer};
+          border-color: ${theme.$.palette[palette].button?.soft?.outline?.addon?.border ?? theme.$.palette[palette].softDynamicer};
+          color: ${theme.$.palette[palette].button?.soft?.outline?.addon?.font ?? theme.$.palette[palette].softDynamicer};
 
           ${(isSeparated && hasHover)
             ? `
               &:hover {
-                background: ${theme.$.palette[palette].softDynamicer};
-                color: ${theme.$.palette[palette].softFont};
+                background: ${theme.$.palette[palette].button?.soft?.outline?.hover?.addon?.background ?? theme.$.palette[palette].softDynamicer};
+                color: ${theme.$.palette[palette].button?.soft?.outline?.hover?.addon?.font ?? theme.$.palette[palette].softFont};
               }
             `
             : ''

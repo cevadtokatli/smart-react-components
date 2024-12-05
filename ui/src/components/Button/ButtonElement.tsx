@@ -160,16 +160,17 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
             `
             : `
               .src-button-content {
-                color: ${theme.$.palette[palette].softFont};
 
                 ${!isActive
                   ? `
-                    background: ${theme.$.palette[palette].soft};
-                    border-color: ${theme.$.palette[palette].soft};
+                    background: ${theme.$.palette[palette].button?.soft?.background ?? theme.$.palette[palette].soft};
+                    border-color: ${theme.$.palette[palette].button?.soft?.border ?? theme.$.palette[palette].soft};
+                    color: ${theme.$.palette[palette].button?.soft?.font ?? theme.$.palette[palette].softFont};
                   `
                   : `
-                    background: ${theme.$.palette[palette].softDynamicer};
-                    border-color: ${theme.$.palette[palette].softDynamicer};
+                    background: ${theme.$.palette[palette].button?.soft?.active?.background ?? theme.$.palette[palette].softDynamicer};
+                    border-color: ${theme.$.palette[palette].button?.soft?.active?.border ?? theme.$.palette[palette].softDynamicer};
+                    color: ${theme.$.palette[palette].button?.soft?.active?.font ?? theme.$.palette[palette].softFont};
                   `
                 }
               }
@@ -178,13 +179,20 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
                 ? `
                   &:hover {
                     .src-button-content {
-                      background: ${theme.$.palette[palette].softDynamic};
-                      border-color: ${theme.$.palette[palette].softDynamic};
+                      background: ${theme.$.palette[palette].button?.soft?.hover?.background ?? theme.$.palette[palette].softDynamic};
+                      border-color: ${theme.$.palette[palette].button?.soft?.hover?.border ?? theme.$.palette[palette].softDynamic};
+
+                      ${theme.$.palette[palette].button?.soft?.hover?.font
+                        ? `
+                          color: ${theme.$.palette[palette].button?.soft?.hover?.font};
+                        `
+                        : ''
+                      }
                     }
 
                     .src-button-addon {
-                      background: ${theme.$.palette[palette].softDynamicest};
-                      border-color: ${theme.$.palette[palette].softDynamicest};
+                      background: ${theme.$.palette[palette].button?.soft?.hovr?.addon?.background ?? theme.$.palette[palette].softDynamicest};
+                      border-color: ${theme.$.palette[palette].button?.soft?.hovr?.addon?.border ?? theme.$.palette[palette].softDynamicest};
                     }
                   }
                 `
@@ -220,21 +228,21 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
             `
             : `
               .src-button-content {
-                border-color: ${theme.$.palette[palette].soft};
-                color: ${theme.$.palette[palette].soft};
+                border-color: ${theme.$.palette[palette].button?.soft?.outline?.border ?? theme.$.palette[palette].soft};
+                color: ${theme.$.palette[palette].button?.soft?.outline?.font ?? theme.$.palette[palette].soft};
               }
 
               ${hasHover
                 ? `
                   &:hover {
                     .src-button-content {
-                      background: ${theme.$.palette[palette].soft};
-                      color: ${theme.$.palette[palette].softFont};
+                      background: ${theme.$.palette[palette].button?.soft?.outline?.hover?.background ?? theme.$.palette[palette].soft};
+                      color: ${theme.$.palette[palette].button?.soft?.outline?.hover?.font ?? theme.$.palette[palette].softFont};
                     }
     
                     .src-button-addon {
-                      background: ${theme.$.palette[palette].softDynamicer};
-                      color: ${theme.$.palette[palette].softFont};
+                      background: ${theme.$.palette[palette].button?.soft?.outline?.hover?.addon?.background ?? theme.$.palette[palette].softDynamicer};
+                      color: ${theme.$.palette[palette].button?.soft?.outline?.hover?.addon?.font ?? theme.$.palette[palette].softFont};
                     }
                   }
                 `
@@ -269,7 +277,7 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
   ${!hasButtonContainer
     ? `
       &:focus {
-        box-shadow: 0 0 0 .15rem ${theme.$.palette[palette].shadow};
+        box-shadow: 0 0 0 .15rem ${theme.$.palette[palette].button?.shadow ?? theme.$.palette[palette].shadow};
       }
     `
     : ''

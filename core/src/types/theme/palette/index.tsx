@@ -3,6 +3,7 @@ import { OptionalThemeAttributes } from '../util'
 import { AlertPaletteItemAttributes } from './alert'
 import { BadgePaletteItemAttributes } from './badge'
 import { BreadcrumbPaletteItemAttributes } from './breadcrumb'
+import { ButtonPaletteItemAttributes } from './button'
 
 interface DefaultPaletteItemAttributes {
   main: string
@@ -28,53 +29,7 @@ interface DefaultPaletteItemAttributes {
   alert?: AlertPaletteItemAttributes
   badge?: BadgePaletteItemAttributes
   breadcrumb?: BreadcrumbPaletteItemAttributes
-
-  button?: {
-    background?: string
-    border?: string
-    font?: string
-
-    active?: {
-      background?: string
-      border?: string
-      font?: string
-    }
-
-    hover?: {
-      background?: string
-      border?: string
-      font?: string
-
-      addon?: {
-        background?: string
-        border?: string
-        font?: string
-      }
-    }
-
-    link?: {
-      font?: string
-
-      hover?: {
-        font?: string
-      }
-    }
-
-    outline?: {
-      border?: string
-      font?: string
-
-      hover?: {
-        background?: string
-        font?: string
-
-        addon?: {
-          background?: string
-          font?: string
-        }
-      }
-    }
-  }
+  button?: ButtonPaletteItemAttributes
 
   input?: {
     background?: string
