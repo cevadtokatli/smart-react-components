@@ -2,6 +2,7 @@ import { Partial } from '../..'
 import { OptionalThemeAttributes } from '../util'
 import { AlertPaletteItemAttributes } from './alert'
 import { BadgePaletteItemAttributes } from './badge'
+import { BreadcrumbPaletteItemAttributes } from './breadcrumb'
 
 interface DefaultPaletteItemAttributes {
   main: string
@@ -26,6 +27,7 @@ interface DefaultPaletteItemAttributes {
 
   alert?: AlertPaletteItemAttributes
   badge?: BadgePaletteItemAttributes
+  breadcrumb?: BreadcrumbPaletteItemAttributes
 
   button?: {
     background?: string

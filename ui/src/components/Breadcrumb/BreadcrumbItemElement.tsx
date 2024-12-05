@@ -51,24 +51,24 @@ export default styled(Li)<Props>(({ theme, isActive, isDisabled, isOutline, isSo
           ? `
             ${(!isActive && !isDisabled) || isDisabled
               ? `
-                color: ${theme.$.palette[palette].font};
-                fill: ${theme.$.palette[palette].font};
+                color: ${theme.$.palette[palette].breadcrumb?.font ?? theme.$.palette[palette].font};
+                fill: ${theme.$.palette[palette].breadcrumb?.font ?? theme.$.palette[palette].font};
               `
               : `
-                color: ${theme.$.palette[palette].darkest};
-                fill: ${theme.$.palette[palette].darkest};
+                color: ${theme.$.palette[palette].breadcrumb?.active?.font ?? theme.$.palette[palette].darkest};
+                fill: ${theme.$.palette[palette].breadcrumb?.active?.font ?? theme.$.palette[palette].darkest};
               `
             }
           `
           : `
             ${(!isActive && !isDisabled) || isDisabled
               ? `
-                color: ${theme.$.palette[palette].softDynamicest};
-                fill: ${theme.$.palette[palette].softDynamicest};
+                color: ${theme.$.palette[palette].breadcrumb?.soft?.font ?? theme.$.palette[palette].softFont};
+                fill: ${theme.$.palette[palette].breadcrumb?.soft?.font ?? theme.$.palette[palette].softFont};
               `
               : `
-                color: ${theme.$.palette[palette].softFont};
-                fill: ${theme.$.palette[palette].softFont};
+                color: ${theme.$.palette[palette].breadcrumb?.soft?.active?.font ?? theme.$.palette[palette].softDynamicest};
+                fill: ${theme.$.palette[palette].breadcrumb?.soft?.active?.font ?? theme.$.palette[palette].softDynamicest};
               `
             }
           `
@@ -81,32 +81,32 @@ export default styled(Li)<Props>(({ theme, isActive, isDisabled, isOutline, isSo
               ? `
                 ${!isActive
                   ? `
-                    color: ${theme.$.palette[palette].main};
-                    fill: ${theme.$.palette[palette].main};
+                    color: ${theme.$.palette[palette].breadcrumb?.outline?.font ?? theme.$.palette[palette].main};
+                    fill: ${theme.$.palette[palette].breadcrumb?.outline?.font ?? theme.$.palette[palette].main};
                   `
                   : `
-                    color: ${theme.$.color.dynamic.bodyFont};
-                    fill: ${theme.$.color.dynamic.bodyFont};
+                    color: ${theme.$.palette[palette].breadcrumb?.outline?.active?.font ?? theme.$.color.dynamic.bodyFont};
+                    fill: ${theme.$.palette[palette].breadcrumb?.outline?.active?.font ?? theme.$.color.dynamic.bodyFont};
                   `
                 }
               `
               : `
                 ${!isActive
                   ? `
-                    color: ${theme.$.palette[palette].soft};
-                    fill: ${theme.$.palette[palette].soft};
+                    color: ${theme.$.palette[palette].breadcrumb?.soft?.outline?.font ?? theme.$.palette[palette].soft};
+                    fill: ${theme.$.palette[palette].breadcrumb?.soft?.outline?.font ?? theme.$.palette[palette].soft};
                   `
                   : `
-                    color: ${theme.$.color.dynamic.bodyFont};
-                    fill: ${theme.$.color.dynamic.bodyFont};
+                    color: ${theme.$.palette[palette].breadcrumb?.soft?.outline?.active?.font ?? theme.$.color.dynamic.bodyFont};
+                    fill: ${theme.$.palette[palette].breadcrumb?.soft?.outline?.active?.font ?? theme.$.color.dynamic.bodyFont};
                   `
                 }
               `
             }
           `
           : `
-            color: ${theme.$.color.dynamic.accent};
-            fill: ${theme.$.color.dynamic.accent};
+            color: ${theme.$.palett[palette].breadcrumb?.outline?.disabled?.font ?? theme.$.color.dynamic.accent};
+            fill: ${theme.$.palett[palette].breadcrumb?.outline?.disabled?.font ?? theme.$.color.dynamic.accent};
           `
         }
       `
@@ -120,10 +120,17 @@ export default styled(Li)<Props>(({ theme, isActive, isDisabled, isOutline, isSo
 
     ${!isOutline
       ? `
-        color: ${!isSoft ? theme.$.palette[palette].font : theme.$.palette[palette].softFont};
+        ${!isSoft
+          ? `
+            color: ${theme.$.palette[palette].breadcrumb?.separator?.font ?? theme.$.palette[palette].font};
+          `
+          : `
+            color: ${theme.$.palette[palette].breadcrumb?.soft?.separator?.font ?? theme.$.palette[palette].softFont};
+          `
+        }
       `
       : `
-        color: ${theme.$.color.dynamic.accent};
+        color: ${theme.$.palette[palette].breadcrumb?.outline?.separator?.font ?? theme.$.color.dynamic.accent};
       `
     }
 

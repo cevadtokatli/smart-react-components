@@ -21,7 +21,14 @@ export default styled(Ul)<Props>(({ theme, isOutline, isSoft, palette, shape }: 
 
   ${!isOutline
     ? `
-      background: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};
+      ${!isSoft
+        ? `
+          background: ${theme.$.palette[palette].breadcrumb?.background ?? theme.$.palette[palette].main};
+        `
+        : `
+          background: ${theme.$.palette[palette].breadcrumb?.soft?.background ?? theme.$.palette[palette].soft};
+        `
+      }
     `
     : ''
   }
