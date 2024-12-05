@@ -218,8 +218,8 @@ export default styled(Button).attrs<Props>(({ hasLeftAddon, hasRightAddon, isFix
                     }
 
                     .src-button-addon {
-                      background: ${theme.$.palette[palette].button?.hover?.addon?.background ?? theme.$.palette[palette].dynamicer};
-                      color: ${theme.$.palette[palette].button?.hover?.addon?.font ?? theme.$.palette[palette].font};
+                      background: ${theme.$.palette[palette].button?.outline?.hover?.addon?.background ?? theme.$.palette[palette].dynamicer};
+                      color: ${theme.$.palette[palette].button?.outline?.hover?.addon?.font ?? theme.$.palette[palette].font};
                     }
                   }
                 `
