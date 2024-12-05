@@ -4,7 +4,7 @@ import extractElementProps from '@smart-react-components/core/element-props'
 import intrinsicStyledCoreProps from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { Theme } from '@smart-react-components/core/theme'
-import { ContentElement, JSXElementProps } from '@smart-react-components/core/types'
+import { ContentElement, JSXElementProps, PaletteProp } from '@smart-react-components/core/types'
 import React from 'react'
 import { useTheme } from 'styled-components'
 import Badge from '../Badge'
@@ -30,6 +30,8 @@ import InputAddon from './SelectAddon'
 
 export interface Props extends GenericProps {
   dropdownArrowIconElementProps?: JSXElementProps
+  dropdownPalette?: PaletteProp
+  isDropdownOutline?: boolean
   placeholder?: string
 }
 
@@ -210,9 +212,9 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
         dropdownListSizeMd={props.sizeMd}
         dropdownListSizeLg={props.sizeLg}
         dropdownListSizeXl={props.sizeXl}
-        isOutline={props.isOutline}
+        isOutline={props.isDropdownOutline ?? props.isOutline}
         isSoft={props.isSoft}
-        palette={props.palette}
+        palette={props.dropdownPalette ?? props.palette}
       >
         { (Array.isArray(props.children) ? props.children : [props.children]).map((item, idx) => item && React.cloneElement(item, {
           key: item.key ?? idx,
@@ -222,9 +224,9 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
           hasWaveEffect: props.hasWaveEffect,
           hovered,
           isEmbedded: false,
-          isOutline: props.isOutline,
+          isOutline: props.isDropdownOutline ?? props.isOutline,
           isSoft: props.isSoft,
-          palette: props.palette,
+          palette: props.dropdownPalette ?? props.palette,
           setActive: handleOptionClick,
           setHovered: props.hasHover ? setHovered : null,
           waveEffectPalette,
