@@ -20,6 +20,7 @@ describe('<FormInlineLabel />', () => {
       isBlock: false,
       isDisabled: false,
       labelPosition: OrderPosition.RIGHT,
+      palette: 'primary',
     }
   })
 
