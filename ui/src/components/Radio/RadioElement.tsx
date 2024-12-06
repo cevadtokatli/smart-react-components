@@ -8,9 +8,9 @@ import { calculateRadioInnerCircleSize } from '../../util/radio'
 
 const Container = styled.div.attrs({
   className: 'src-radio-container',
-})(({ theme }) => `
+})<{ palette: PaletteProp }>(({ theme, palette }) => `
   align-items: center;
-  border: solid 2px ${theme.$.color.dynamic.accent};
+  border: solid 2px ${theme.$.palette[palette].radio?.border ?? theme.$.color.dynamic.accent};
   border-radius: 100%;
   box-sizing: border-box;
   display: flex;
@@ -33,8 +33,8 @@ const OuterCircle = styled.div.attrs({
 
 const InnerCircle = styled.div.attrs({
   className: 'src-radio-inner-circle',
-})(({ theme }) => `
-  background: ${theme.$.color.white};
+})<{ palette: PaletteProp }>(({ theme, palette }) => `
+  background: ${theme.$.palette[palette].radio?.active?.mark ?? theme.$.color.white};
   border-radius: 100%;
   flex: 0 0 auto;
 `)
@@ -48,13 +48,13 @@ interface Props extends
   palette?: PaletteProp
 }
 
-export default styled(Div).attrs<Props>(({ children }) => ({
+export default styled(Div).attrs<Props>(({ children, palette }) => ({
   children: (
     <>
       { children && children }
-      <Container>
+      <Container palette={palette}>
         <OuterCircle>
-          <InnerCircle />
+          <InnerCircle palette={palette} />
         </OuterCircle>
       </Container>
     </>
@@ -74,14 +74,14 @@ export default styled(Div).attrs<Props>(({ children }) => ({
   ${!isOutline
     ? `
       .src-radio-container {
-        background: ${theme.$.color.dynamic.accent};
+        background: ${theme.$.palette[palette].radio?.background ?? theme.$.color.dynamic.accent};
       }
     `
     : ''
   }
 
   .src-radio-outer-circle {
-    background: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};
+    background: ${!isSoft ? (theme.$.palette[palette].radio?.active?.background ?? theme.$.palette[palette].main) : (theme.$.palette[palette].radio?.soft?.active?.background ?? theme.$.palette[palette].soft)};
 
     ${!isChecked
       ? `

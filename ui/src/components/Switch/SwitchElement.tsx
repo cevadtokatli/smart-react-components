@@ -1,4 +1,5 @@
 import Div from '@smart-react-components/core/Element/Div'
+import { PaletteProp } from '@smart-react-components/core/types'
 import React from 'react'
 import styled from 'styled-components'
 import { Props } from '../Checkbox/CheckboxElement'
@@ -6,8 +7,8 @@ import { extractNumberUnit, toCSSValue } from '../../util/css'
 
 const Slider = styled.div.attrs({
   className: 'switch-slider',
-})(({ theme }) => `
-  background: ${theme.$.color.white};
+})<{ palette: PaletteProp }>(({ theme, palette }) => `
+  background: ${theme.$.palette[palette].slider?.mark ?? theme.$.color.white};
   border-radius: 100%;
   box-shadow: 0 1px 3px rgba(0,0,0,.4);
   left: 0;
@@ -17,11 +18,11 @@ const Slider = styled.div.attrs({
   transition-property: left, right;
 `)
 
-export default styled(Div).attrs<Props>(({ children, isChecked }) => ({
+export default styled(Div).attrs<Props>(({ children, isChecked, palette }) => ({
   children: (
     <>
       {children}
-      <Slider />
+      <Slider palette={palette} />
     </>
   ),
   getCheckboxSize: (v, t) => `
@@ -50,8 +51,8 @@ export default styled(Div).attrs<Props>(({ children, isChecked }) => ({
 
   ${!isOutline
     ? `
-      background: ${theme.$.color.dynamic.accent};
-      box-shadow: ${theme.$.color.dynamic.accent} 0 0 0 0 inset;
+      background: ${theme.$.palette[palette].switch?.background ?? theme.$.color.dynamic.accent};
+      box-shadow: ${theme.$.palette[palette].switch?.background ?? theme.$.color.dynamic.accent} 0 0 0 0 inset;
     `
     : ''
   }
@@ -62,14 +63,14 @@ export default styled(Div).attrs<Props>(({ children, isChecked }) => ({
 
       ${!isSoft
         ? `
-          background: ${theme.$.palette[palette].main};
-          border-color: ${theme.$.palette[palette].main};
-          box-shadow: ${theme.$.palette[palette].main} 0 0 0 11px inset;
+          background: ${theme.$.palette[palette].switch?.active?.background ?? theme.$.palette[palette].main};
+          border-color: ${theme.$.palette[palette].switch?.active?.background ?? theme.$.palette[palette].main};
+          box-shadow: ${theme.$.palette[palette].switch?.active?.background ?? theme.$.palette[palette].main} 0 0 0 11px inset;
         `
         : `
-          background: ${theme.$.palette[palette].soft};
-          border-color: ${theme.$.palette[palette].soft};
-          box-shadow: ${theme.$.palette[palette].soft} 0 0 0 11px inset;
+          background: ${theme.$.palette[palette].switch?.soft?.active?.background ?? theme.$.palette[palette].soft};
+          border-color: ${theme.$.palette[palette].switch?.soft?.active?.background ?? theme.$.palette[palette].soft};
+          box-shadow: ${theme.$.palette[palette].switch?.soft?.active?.background ?? theme.$.palette[palette].soft} 0 0 0 11px inset;
         `
       }
     `

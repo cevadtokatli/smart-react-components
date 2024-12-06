@@ -4,6 +4,10 @@ import { AlertPaletteItemAttributes } from './alert'
 import { BadgePaletteItemAttributes } from './badge'
 import { BreadcrumbPaletteItemAttributes } from './breadcrumb'
 import { ButtonPaletteItemAttributes } from './button'
+import { CheckboxPaletteItemAttributes } from './checkbox'
+import { FormPaletteItemAttributes } from './form'
+import { RadioPaletteItemAttributes } from './radio'
+import { SwitchPaletteItemAttributes } from './switch'
 
 interface DefaultPaletteItemAttributes {
   main: string
@@ -30,6 +34,10 @@ interface DefaultPaletteItemAttributes {
   badge?: BadgePaletteItemAttributes
   breadcrumb?: BreadcrumbPaletteItemAttributes
   button?: ButtonPaletteItemAttributes
+  checkbox?: CheckboxPaletteItemAttributes
+  form?: FormPaletteItemAttributes
+  radio?: RadioPaletteItemAttributes
+  switch?: SwitchPaletteItemAttributes
 
   input?: {
     background?: string

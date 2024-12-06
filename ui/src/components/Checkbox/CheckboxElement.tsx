@@ -6,8 +6,8 @@ import styled from 'styled-components'
 
 const Container = styled.div.attrs({
   className: 'src-checkbox-container',
-})(({ theme }) => `
-  border: solid 2px ${theme.$.color.dynamic.accent};
+})<{ palette: PaletteProp }>(({ theme, palette }) => `
+  border: solid 2px ${theme.$.palette[palette].checkbox?.border ?? theme.$.color.dynamic.accent};
   box-sizing: border-box;
   display: flex;
   height: 100%;
@@ -30,13 +30,13 @@ const Svg = styled.svg.attrs({
   children: <path d="M3.5,17.2l7.6,7.6L28.5,7.3" />,
   className: 'src-checkbox-svg',
   viewBox: '0 0 32 32',
-})(({ theme }) => `
+})<{ palette: PaletteProp }>(({ theme, palette }) => `
   flex: 0 0 auto;
   position: relative;
 
   > path {
     fill: transparent;
-    stroke: ${theme.$.color.white};
+    stroke: ${theme.$.palette[palette].checkbox?.active?.mark ?? theme.$.color.white};
     stroke-width: 4px;
     stroke-dasharray: 36px;
     stroke-dashoffset: 36px;
@@ -46,8 +46,8 @@ const Svg = styled.svg.attrs({
 
 const IndeterminateMark = styled.div.attrs({
   className: 'src-checkbox-indeterminate-mark',
-})(({ theme }) => `
-  background: ${theme.$.color.white};
+})<{ palette: PaletteProp }>(({ theme, palette }) => `
+  background: ${theme.$.palette[palette].checkbox?.active?.mark ?? theme.$.color.white};
   height: 2px;
   margin-top: -1px;
   opacity: 0;
@@ -71,14 +71,14 @@ export interface Props extends
   shape?: ShapeProp
 }
 
-export default styled(Div).attrs<Props>(({ children, isIndeterminate }) => ({
+export default styled(Div).attrs<Props>(({ children, isIndeterminate, palette }) => ({
   children: (
     <>
       { children && children }
-      <Container>
+      <Container palette={palette}>
         <Rectangle />
-        <Svg />
-        { typeof isIndeterminate !== 'undefined' && <IndeterminateMark /> }
+        <Svg palette={palette} />
+        { typeof isIndeterminate !== 'undefined' && <IndeterminateMark palette={palette} /> }
       </Container>
     </>
   ),
@@ -95,7 +95,7 @@ export default styled(Div).attrs<Props>(({ children, isIndeterminate }) => ({
 
     ${!isOutline
       ? `
-        background: ${theme.$.color.dynamic.accent};
+        background: ${theme.$.palette[palette].checkbox?.background ?? theme.$.color.dynamic.accent};
       `
       : ''
     }
@@ -108,10 +108,10 @@ export default styled(Div).attrs<Props>(({ children, isIndeterminate }) => ({
   ${isChecked
     ? `
       .src-checkbox-container {
-        border-color: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};
+        border-color: ${!isSoft ? (theme.$.palette[palette].checkbox?.active?.border ?? theme.$.palette[palette].main) : (theme.$.palette[palette].checkbox?.soft?.active?.border ?? theme.$.palette[palette].soft)};
 
         .src-checkbox-rectangle {
-          background: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};
+          background: ${!isSoft ? (theme.$.palette[palette].checkbox?.active?.background ?? theme.$.palette[palette].main) : (theme.$.palette[palette].checkbox?.soft?.active?.background ?? theme.$.palette[palette].soft)};
         }
 
         ${!isIndeterminate

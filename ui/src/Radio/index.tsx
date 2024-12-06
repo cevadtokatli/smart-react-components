@@ -56,6 +56,7 @@ const Radio = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
       isBlock={props.isBlock}
       isDisabled={props.isDisabled}
       labelPosition={props.position}
+      palette={props.palette}
       {...extractElementProps(props, [intrinsicStyledCoreProps])}
     >
       { React.cloneElement(props.template, {

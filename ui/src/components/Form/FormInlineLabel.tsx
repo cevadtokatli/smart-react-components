@@ -1,6 +1,6 @@
 import Label from '@smart-react-components/core/Element/Label'
 import { StyledProps } from '@smart-react-components/core/styled-props'
-import { ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
+import { PaletteProp, ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
 import styled from 'styled-components'
 import { OrderPosition } from '../../types'
 import { toCSSValue } from '../../util/css'
@@ -13,6 +13,7 @@ interface Props extends
   isBlock: boolean
   isDisabled: boolean
   labelPosition: OrderPosition
+  palette: PaletteProp
 }
 
 export default styled(Label).attrs<Props>(({ isBlock, labelPosition }: Props) => ({
@@ -31,7 +32,7 @@ export default styled(Label).attrs<Props>(({ isBlock, labelPosition }: Props) =>
       margin-${OrderPosition[getReverseOrderPosition(labelPosition)].toLowerCase()}: ${toCSSValue(t.$.size.form.inlineLabel[v].margin.x)(calculateFormLabelMarginX)};
     }
   `,
-}))<Props>(({ theme, isBlock, isDisabled, labelPosition }: Props) => `
+}))<Props>(({ theme, palette, isBlock, isDisabled, labelPosition }: Props) => `
   align-items: center;
   cursor: ${theme.$.cursor.formInlineLabel};
   display: ${isBlock ? 'flex' : 'inline-flex'};
@@ -43,7 +44,7 @@ export default styled(Label).attrs<Props>(({ isBlock, labelPosition }: Props) =>
   }
 
   > span {
-    color: ${theme.$.color.dynamic.bodyFont};
+    color: ${theme.$.palette[palette].form?.inlineLabel?.font ?? theme.$.color.dynamic.bodyFont};
     display: inline-flex;
     flex: 1 1 auto;
     font-family: ${theme.$.fontFamily.form};
