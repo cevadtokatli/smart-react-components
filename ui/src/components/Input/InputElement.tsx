@@ -66,40 +66,62 @@ export default styled(Input).attrs<Props>(({ className = '', hasLeftAddon, hasRi
       ${!isSoft
         ? `
           background: ${!isFocused ? (theme.$.palette[palette].input?.background ?? theme.$.palette[palette].main) : (theme.$.palette[palette].input?.focused?.background ?? theme.$.palette[palette].dynamicer)};
-          color: ${theme.$.palette[palette].input?.font ?? theme.$.palette[palette].font};
+          color: ${!isFocused ? (theme.$.palette[palette].input?.font ?? theme.$.palette[palette].font) : (theme.$.palette[palette].input?.focused?.font ?? theme.$.palette[palette].font)};
         `
         : `
-          background: ${!isFocused ? theme.$.palette[palette].soft : theme.$.palette[palette].softDynamicer};
-          color: ${theme.$.palette[palette].softFont};
+          background: ${!isFocused ? (theme.$.palette[palette].input?.soft?.background ?? theme.$.palette[palette].soft) : (theme.$.palette[palette].input?.soft?.focused?.background ?? theme.$.palette[palette].softDynamicer)};
+          color: ${!isFocused ? (theme.$.palette[palette].input?.soft?.font ?? theme.$.palette[palette].softFont) : (theme.$.palette[palette].input?.soft?.focused?.font ?? theme.$.palette[palette].softFont)};
         `
       }
 
       ${!isInput
         ? `
           ${InputPlaceholder} {
-            color: ${(!isSoft && theme.$.palette[palette].input?.placeholder?.font) ? theme.$.palette[palette].input?.placeholder?.font : getColor(!isSoft ? theme.$.palette[palette].font : theme.$.palette[palette].softFont).alpha(theme.$.opacity.inputPlaceholder).rgb().toString()};
+            ${!isSoft
+              ? `
+                color: ${theme.$.palette[palette].input?.placeholder?.font ? theme.$.palette[palette].input?.placeholder?.font : getColor(theme.$.palette[palette].font).alpha(theme.$.opacity.inputPlaceholder).rgb().toString()};
+              `
+              : `
+                color: ${theme.$.palette[palette].input?.soft?.placeholder?.font ? theme.$.palette[palette].input?.soft?.placeholder?.font : getColor(theme.$.palette[palette].softFont).alpha(theme.$.opacity.inputPlaceholder).rgb().toString()};
+              `
+            }
           }
         `
         : `
           ${placeholder.map(item => `
             &${item} {
-              color: ${(!isSoft && theme.$.palette[palette].input?.placeholder?.font) ? theme.$.palette[palette].input?.placeholder?.font : getColor(!isSoft ? theme.$.palette[palette].font : theme.$.palette[palette].softFont).alpha(theme.$.opacity.inputPlaceholder).rgb().toString()};
+              ${!isSoft
+                ? `
+                  color: ${theme.$.palette[palette].input?.placeholder?.font ? theme.$.palette[palette].input?.placeholder?.font : getColor(theme.$.palette[palette].font).alpha(theme.$.opacity.inputPlaceholder).rgb().toString()};
+                `
+                : `
+                  color: ${theme.$.palette[palette].input?.soft?.placeholder?.font ? theme.$.palette[palette].input?.soft?.placeholder?.font : getColor(theme.$.palette[palette].softFont).alpha(theme.$.opacity.inputPlaceholder).rgb().toString()};
+                `
+              }
               opacity: 1;
-            }
+          }
           `).join(' ')}
         `
       }
     `
     : `
-      background: ${theme.$.color.dynamic.background};
-      color: ${theme.$.color.dynamic.font};
+      ${!isSoft
+        ? `
+          background: ${theme.$.palette[palette].input?.outline?.background ?? theme.$.color.dynamic.background};
+          color: ${theme.$.palette[palette].input?.outline?.font ?? theme.$.color.dynamic.font};
+        `
+        : `
+          background: ${theme.$.palette[palette].input?.soft?.outline?.background ?? theme.$.color.dynamic.background};
+          color: ${theme.$.palette[palette].input?.soft?.outline?.font ?? theme.$.color.dynamic.font};
+        `
+      }
 
       ${!isInput
         ? `
           ${!isDisabled
             ? `
               ${InputPlaceholder} {
-                color: ${theme.$.color.dynamic.accent};
+                color: ${!isSoft ? (theme.$.palette[palette].input?.outline?.placeholder?.font ?? theme.$.color.dynamic.accent) : (theme.$.palette[palette].input?.soft?.outline?.placeholder?.font ?? theme.$.color.dynamic.accent)};
               }
             `
             : ''
@@ -112,7 +134,7 @@ export default styled(Input).attrs<Props>(({ className = '', hasLeftAddon, hasRi
 
               ${!isDisabled
                 ? `
-                  color: ${theme.$.color.dynamic.accent};
+                  color: ${!isSoft ? (theme.$.palette[palette].input?.outline?.placeholder?.font ?? theme.$.color.dynamic.accent) : (theme.$.palette[palette].input?.soft?.outline?.placeholder?.font ?? theme.$.color.dynamic.accent)};
                 `
                 : ''
               }
@@ -137,8 +159,8 @@ export default styled(Input).attrs<Props>(({ className = '', hasLeftAddon, hasRi
 
   ${isDisabled && isOutline
     ? `
-      background: ${theme.$.color.dynamic.accent};  
-      color: ${theme.$.color.dynamic.gray};
+      background: ${!isSoft ? (theme.$.palette[palette].input?.outline?.disabled?.background ?? theme.$.color.dynamic.accent) : (theme.$.palette[palette].input?.soft?.outline?.disabled?.background ?? theme.$.color.dynamic.accent)};  
+      color: ${!isSoft ? (theme.$.palette[palette].input?.outline?.disabled?.font ?? theme.$.color.dynamic.gray) : (theme.$.palette[palette].input?.soft?.outline?.disabled?.font ?? theme.$.color.dynamic.gray)};
     `
     : ''
   }

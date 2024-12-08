@@ -7,6 +7,7 @@ import { ButtonPaletteItemAttributes } from './button'
 import { CheckboxPaletteItemAttributes } from './checkbox'
 import { DropdownPaletteItemAttributes } from './dropdown'
 import { FormPaletteItemAttributes } from './form'
+import { InputPaletteItemAttributes } from './input'
 import { ProgressBarPaletteItemAttributes } from './progress-bar'
 import { RadioPaletteItemAttributes } from './radio'
 import { SwitchPaletteItemAttributes } from './switch'
@@ -39,25 +40,10 @@ interface DefaultPaletteItemAttributes {
   checkbox?: CheckboxPaletteItemAttributes
   dropdown?: DropdownPaletteItemAttributes
   form?: FormPaletteItemAttributes
+  input?: InputPaletteItemAttributes
   progressBar?: ProgressBarPaletteItemAttributes
   radio?: RadioPaletteItemAttributes
   switch?: SwitchPaletteItemAttributes
-
-  input?: {
-    background?: string
-    border?: string
-    font?: string
-
-    focused?: {
-      background?: string
-      border?: string
-      font?: string
-    }
-
-    placeholder?: {
-      font?: string
-    }
-  }
 
   table?: {
     odd?: {

@@ -32,17 +32,17 @@ export default styled(Div)<Props>(({ theme, hasBorder, hasSeparatedLeftAddon, ha
           border-color: ${!isFocused ? (theme.$.palette[palette].input?.border ?? theme.$.palette[palette].dark) : (theme.$.palette[palette].input?.focused?.border ?? theme.$.palette[palette].dynamicest)};
         `
         : `
-          border-color: ${!isFocused ? theme.$.palette[palette].softDynamic : theme.$.palette[palette].softDynamicest};
+          border-color: ${!isFocused ? (theme.$.palette[palette].input?.soft?.border ?? theme.$.palette[palette].softDynamic) : (theme.$.palette[palette]?.soft?.focused?.border ?? theme.$.palette[palette].softDynamicest)};
         `
       }
     `
     : `
       ${!isFocused
       ? `
-        border-color: ${theme.$.color.dynamic.accent};
+        border-color: ${!isSoft ? (theme.$.palette[palette].input?.outline?.border ?? theme.$.color.dynamic.accent) : (theme.$.palette[palette].input?.soft?.outline?.border ?? theme.$.color.dynamic.accent)};
       `
       : `
-        border-color: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};
+        border-color: ${!isSoft ? (thme.$.palette[palette].input?.outline?.focused?.border ?? theme.$.palette[palette].main) : (theme.$.palette[palette].input?.soft?.outline?.focused?.border ?? theme.$.palette[palette].soft)};
       `}
     `
   }

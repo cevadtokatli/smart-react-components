@@ -66,39 +66,67 @@ export default styled(Div).attrs<Props>(({ className = '', isSeparated }) => ({
     ? `
       ${!isSoft
         ? `
-          color: ${theme.$.palette[palette].font};
 
           ${!isFocused
             ? `
-              background: ${theme.$.palette[palette].main};
-              border-color: ${theme.$.palette[palette].dark};
+              background: ${theme.$.palette[palette].input?.addon?.background ?? theme.$.palette[palette].main};
+              border-color: ${theme.$.palette[palette].input?.addon?.border ?? theme.$.palette[palette].dark};
+              color: ${theme.$.palette[palette].input?.addon?.font ?? theme.$.palette[palette].font};
             `
             : `
-              background: ${theme.$.palette[palette].dynamicer};
-              border-color: ${theme.$.palette[palette].dynamicest};
+              background: ${theme.$.palette[palette].input?.focused?.addon?.background ?? theme.$.palette[palette].dynamicer};
+              border-color: ${theme.$.palette[palette].input?.focused?.addon?.border ?? theme.$.palette[palette].dynamicest};
+              color: ${theme.$.palette[palette].input?.focused?.addon?.font ?? theme.$.palette[palette].font};
             `
           }
         `
         : `
-          color: ${theme.$.palette[palette].softFont};
-
           ${!isFocused
             ? `
-              background: ${theme.$.palette[palette].soft};
-              border-color: ${theme.$.palette[palette].softDynamic};
+              background: ${theme.$.palette[palette].input?.soft?.addon?.background ?? theme.$.palette[palette].soft};
+              border-color: ${theme.$.palette[palette].input?.soft?.addon?.border ?? theme.$.palette[palette].softDynamic};
+              color: ${theme.$.palette[palette].input?.soft?.addon?.font ?? theme.$.palette[palette].softFont};
             `
             : `
-              background: ${theme.$.palette[palette].softDynamicer};
-              border-color: ${theme.$.palette[palette].softDynamicest};
+              background: ${theme.$.palette[palette].input?.soft?.focused?.addon?.background ?? theme.$.palette[palette].softDynamicer};
+              border-color: ${theme.$.palette[palette].input?.soft?.focused?.addon?.border ?? theme.$.palette[palette].softDynamicest};
+              color: ${theme.$.palette[palette].input?.soft?.focused?.addon?.font ?? theme.$.palette[palette].softFont};
             `
           }
         `
       }
     `
     : `
-      background: ${theme.$.color.dynamic.background};
-      border-color ${!isFocused ? theme.$.color.dynamic.accent : theme.$.palette[palette].main};
-      color: ${theme.$.color.dynamic.font};
+      ${!isSoft
+        ? `
+          ${!isFocused
+            ? `
+              background: ${theme.$.palette[palette].input?.outline?.addon?.background ?? theme.$.color.dynamic.background};
+              border-color ${theme.$.palette[palette].input?.outline?.addon?.border ?? theme.$.color.dynamic.accent};
+              color: ${theme.$.palette[palette].input?.outline?.addon?.font ?? theme.$.color.dynamic.font};
+            `
+            : `
+              background: ${theme.$.palette[palette].input?.outline?.focused?.addon?.background ?? theme.$.color.dynamic.background};
+              border-color ${theme.$.palette[palette].input?.outline?.focused?.addon?.border ?? theme.$.palette[palette].main};
+              color: ${theme.$.palette[palette].input?.outline?.focused?.addon?.font ?? theme.$.color.dynamic.font};
+            `
+          }
+        `
+        : `
+          ${!isFocused
+            ? `
+              background: ${theme.$.palette[palette].input?.soft?.outline?.addon?.background ?? theme.$.color.dynamic.background};
+              border-color ${theme.$.palette[palette].input?.soft?.outline?.addon?.border ?? theme.$.color.dynamic.accent};
+              color: ${theme.$.palette[palette].input?.soft?.outline?.addon?.font ?? theme.$.color.dynamic.font};
+            `
+            : `
+              background: ${theme.$.palette[palette].input?.soft?.outline?.focused?.addon?.background ?? theme.$.color.dynamic.background};
+              border-color ${theme.$.palette[palette].input?.soft?.outline?.focused?.addon?.border ?? theme.$.palette[palette].main};
+              color: ${theme.$.palette[palette].input?.soft?.outline?.focused?.addon?.font ?? theme.$.color.dynamic.font};
+            `
+          }
+        `
+      }
     `
   }
 
@@ -109,8 +137,8 @@ export default styled(Div).attrs<Props>(({ className = '', isSeparated }) => ({
 
       ${isOutline
         ? `
-          background: ${theme.$.color.dynamic.accent};  
-          color: ${theme.$.color.dynamic.gray};
+          background: ${!isSoft ? (theme.$.palette[palette].input?.outline?.disabled?.addon?.background ?? theme.$.color.dynamic.accent) : (theme.$.palette[palette].input?.soft?.outline?.disabled?.addon?.background ?? theme.$.color.dynamic.accent)};  
+          color: ${!isSoft ? (theme.$.palette[palette].input?.outline?.disabled?.addon?.font ?? theme.$.color.dynamic.gray) : (theme.$.palette[palette].input?.soft?.outline?.disabled?.addon?.font ?? theme.$.color.dynamic.gray)};
         `
         : ''
       }

@@ -1,6 +1,6 @@
 import Label from '@smart-react-components/core/Element/Label'
 import { StyledProps } from '@smart-react-components/core/styled-props'
-import { ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
+import { PaletteProp, ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
 import styled from 'styled-components'
 import { toCSSValue } from '../../util/css'
 import { calculateFormLabelMarginX } from '../../util/form'
@@ -11,6 +11,7 @@ interface Props extends
   cursorKey?: string
   isBlock: boolean
   isDisabled: boolean
+  palette: PaletteProp
 }
 
 export default styled(Label).attrs<Props>(({ display = 'block', isBlock }) => ({
@@ -35,8 +36,9 @@ export default styled(Label).attrs<Props>(({ display = 'block', isBlock }) => ({
       font-size: ${t.$.size.form.blockLabel[v].fontSize};
     }
   `,
-}))<Props>(({ theme, cursorKey, isBlock, isDisabled }: Props) => `
+}))<Props>(({ theme, cursorKey, isBlock, isDisabled, palette }: Props) => `
   > span {
+    color: ${theme.$.palette[palette].form?.blockLabel?.font ?? theme.$.color.dynamic.bodyFont};
     display: block;
     word-break: break-word;
     word-wrap: break-word;
