@@ -68,7 +68,7 @@ export default styled(Div).attrs({
         fill: ${theme.$.palette[palette].popover?.soft?.header?.font ?? theme.$.palette[palette].softFont};
 
         ~ ${PopoverArrow}[data-arrow-header="true"] {
-          fill: ${theme.$.palette[palette].popover?.soft?.header?.background ?? heme.$.palette[palette].soft};
+          fill: ${theme.$.palette[palette].popover?.soft?.header?.background ?? theme.$.palette[palette].soft};
           stroke: ${theme.$.palette[palette].popover?.soft?.header?.border ?? theme.$.palette[palette].softDynamicer};
         }
       `
