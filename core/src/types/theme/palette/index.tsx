@@ -5,6 +5,7 @@ import { BadgePaletteItemAttributes } from './badge'
 import { BreadcrumbPaletteItemAttributes } from './breadcrumb'
 import { ButtonPaletteItemAttributes } from './button'
 import { CheckboxPaletteItemAttributes } from './checkbox'
+import { DropdownPaletteItemAttributes } from './dropdown'
 import { FormPaletteItemAttributes } from './form'
 import { RadioPaletteItemAttributes } from './radio'
 import { SwitchPaletteItemAttributes } from './switch'
@@ -35,6 +36,7 @@ interface DefaultPaletteItemAttributes {
   breadcrumb?: BreadcrumbPaletteItemAttributes
   button?: ButtonPaletteItemAttributes
   checkbox?: CheckboxPaletteItemAttributes
+  dropdown?: DropdownPaletteItemAttributes
   form?: FormPaletteItemAttributes
   radio?: RadioPaletteItemAttributes
   switch?: SwitchPaletteItemAttributes

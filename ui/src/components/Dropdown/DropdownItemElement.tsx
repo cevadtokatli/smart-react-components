@@ -40,29 +40,29 @@ export default styled(Div)<Props>(({ theme, hasHover, isActive, isDisabled, isHo
           ${!isHovered ? '&:hover {' : ''}
             ${!isSoft
               ? `
-                background: ${!isOutline ? theme.$.palette[palette].dynamic : theme.$.palette[palette].main};
-                color: ${theme.$.palette[palette].font};
+                background: ${!isOutline ? (theme.$.palette[palette].dropdown?.hover?.background ?? theme.$.palette[palette].dynamic) : (theme.$.palette[palette].dropdown?.outline?.hover?.background ?? theme.$.palette[palette].main)};
+                color: ${!isOutline ? (theme.$.palette[palette].dropdown?.hover?.font ?? theme.$.palette[palette].font) : (theme.$.palette[palette].dropdown?.outline?.hover?.font ?? theme.$.palette[palette].font)};
 
                 .svg,
                 .svg .fill {
-                  fill: ${theme.$.palette[palette].font};
+                  fill: ${!isOutline ? (theme.$.palette[palette].dropdown?.hover?.font ?? theme.$.palette[palette].font) : (theme.$.palette[palette].dropdown?.outline?.hover?.font ?? theme.$.palette[palette].font)};
                 }
 
                 .svg .stroke {
-                  stroke: ${theme.$.palette[palette].font};
+                  stroke: $${!isOutline ? (theme.$.palette[palette].dropdown?.hover?.font ?? theme.$.palette[palette].font) : (theme.$.palette[palette].dropdown?.outline?.hover?.font ?? theme.$.palette[palette].font)};
                 }
               `
               : `
-                background: ${!isOutline ? theme.$.palette[palette].softDynamic : theme.$.palette[palette].soft};
-                color: ${theme.$.palette[palette].softFont};
+                background: ${!isOutline ? (theme.$.palette[palette].dropdown?.soft?.hover?.background ?? theme.$.palette[palette].softDynamic) : (theme.$.palette[palette].dropdown?.soft?.outline?.hover?.background ?? theme.$.palette[palette].soft)};
+                color: ${!isOutline ? (theme.$.palette[palette].dropdown?.soft?.hover?.font ?? theme.$.palette[palette].softFont) : (theme.$.palette[palette].dropdown?.soft?.outline?.hover?.font ?? theme.$.palette[palette].softFont)};
 
                 .svg,
                 .svg .fill {
-                  fill: ${theme.$.palette[palette].softFont};
+                  fill: ${!isOutline ? (theme.$.palette[palette].dropdown?.soft?.hover?.font ?? theme.$.palette[palette].softFont) : (theme.$.palette[palette].dropdown?.soft?.outline?.hover?.font ?? theme.$.palette[palette].softFont)};
                 }
 
                 .svg .stroke {
-                  stroke: ${theme.$.palette[palette].softFont};
+                  stroke: ${!isOutline ? (theme.$.palette[palette].dropdown?.soft?.hover?.font ?? theme.$.palette[palette].softFont) : (theme.$.palette[palette].dropdown?.soft?.outline?.hover?.font ?? theme.$.palette[palette].softFont)};
                 }
               `
             }
@@ -74,29 +74,29 @@ export default styled(Div)<Props>(({ theme, hasHover, isActive, isDisabled, isHo
     : `
       ${!isSoft
         ? `
-          background: ${!isOutline ? theme.$.palette[palette].dynamicest : theme.$.palette[palette].dynamicer};
-          color: ${theme.$.palette[palette].font};
+          background: ${!isOutline ? (theme.$.palette[palette].dropdown?.active?.background ?? theme.$.palette[palette].dynamicest) : (theme.$.palette[palette].dropdown?.outline?.active?.background ?? theme.$.palette[palette].dynamicer)};
+          color: ${!isOutline ? (theme.$.palette[palette].dropdown?.active?.font ?? theme.$.palette[palette].font) : (theme.$.palette[palette].dropdown?.outline?.active?.font ?? theme.$.palette[palette].font)};
 
           .svg,
           .svg .fill {
-            fill: ${theme.$.palette[palette].font};
+            fill: ${!isOutline ? (theme.$.palette[palette].dropdown?.active?.font ?? theme.$.palette[palette].font) : (theme.$.palette[palette].dropdown?.outline?.active?.font ?? theme.$.palette[palette].font)};
           }
 
           .svg .stroke {
-            stroke: ${theme.$.palette[palette].font};
+            stroke: ${!isOutline ? (theme.$.palette[palette].dropdown?.active?.font ?? theme.$.palette[palette].font) : (theme.$.palette[palette].dropdown?.outline?.active?.font ?? theme.$.palette[palette].font)};
           }
         `
         : `
-          background: ${!isOutline ? theme.$.palette[palette].softDynamicest : theme.$.palette[palette].softDynamicer};
-          color: ${theme.$.palette[palette].softFont};
+          background: ${!isOutline ? (theme.$.palette[palette].dropdown?.soft?.active?.background ?? theme.$.palette[palette].softDynamicest) : (theme.$.palette[palette].dropdown?.soft?.outline?.active?.background ?? theme.$.palette[palette].softDynamicer)};
+          color: ${!isOutline ? (theme.$.palette[palette].dropdown?.soft?.active?.font ?? theme.$.palette[palette].softFont) : (theme.$.palette[palette].dropdown?.soft?.outline?.active?.font ?? theme.$.palette[palette].softFont)};
 
           .svg,
           .svg .fill {
-            fill: ${theme.$.palette[palette].softFont};
+            fill: ${!isOutline ? (theme.$.palette[palette].dropdown?.soft?.active?.font ?? theme.$.palette[palette].softFont) : (theme.$.palette[palette].dropdown?.soft?.outline?.active?.font ?? theme.$.palette[palette].softFont)};
           }
 
           .svg .stroke {
-            stroke: ${theme.$.palette[palette].softFont};
+            stroke: ${!isOutline ? (theme.$.palette[palette].dropdown?.soft?.active?.font ?? theme.$.palette[palette].softFont) : (theme.$.palette[palette].dropdown?.soft?.outline?.active?.font ?? theme.$.palette[palette].softFont)};
           }
         `
       }

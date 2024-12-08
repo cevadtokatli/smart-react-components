@@ -23,7 +23,7 @@ export default styled(Div).attrs({
   `,
 })<Props>(({ theme, isOutline, isSoft, palette }: Props) => `
   border-radius: ${theme.$.radius.dropdown};
-  box-shadow: 0 0 10px 1px ${theme.$.color.dynamic.shadow};
+  box-shadow: 0 0 10px 1px ${theme.$.palette[palette].dropdown?.shadow ?? theme.$.color.dynamic.shadow};
   font-family: ${theme.$.fontFamily.dropdown};
   height: inherit;
   overflow: auto;
@@ -38,14 +38,14 @@ export default styled(Div).attrs({
 
   ${!isOutline
     ? `
-      background: ${!isSoft ? theme.$.palette[palette].main : theme.$.palette[palette].soft};
-      color: ${!isSoft ? theme.$.palette[palette].font : theme.$.palette[palette].softFont};
-      fill:  ${!isSoft ? theme.$.palette[palette].font : theme.$.palette[palette].softFont};
+      background: ${!isSoft ? (theme.$.palette[palette].dropdown?.background ?? theme.$.palette[palette].main) : (theme.$.palette[palette].dropdown?.soft?.background ?? theme.$.palette[palette].soft)};
+      color: ${!isSoft ? (theme.$.palette[palette].dropdown?.font ?? theme.$.palette[palette].font) : (theme.$.palette[palette].dropdown?.soft?.font ?? theme.$.palette[palette].softFont)};
+      fill:  ${!isSoft ? (theme.$.palette[palette].dropdown?.font ?? theme.$.palette[palette].font) : (theme.$.palette[palette].dropdown?.soft?.font ?? theme.$.palette[palette].softFont)};
     `
     : `
-      background: ${theme.$.color.dynamic.background};
-      color: ${theme.$.color.dynamic.font};
-      fill: ${theme.$.color.dynamic.font};
+      background: ${!isSoft ? (theme.$.palette[palette].dropdown?.outline?.background ?? theme.$.color.dynamic.background) : (theme.$.palette[palette].dropdown?.soft?.outline?.background ?? theme.$.color.dynamic.background)};
+      color: ${!isSoft ? (theme.$.palette[palette].dropdown?.outline?.font ?? theme.$.color.dynamic.font) : (theme.$.palette[palette].dropdown?.soft?.outline?.font ?? theme.$.color.dynamic.font)};
+      fill: ${!isSoft ? (theme.$.palette[palette].dropdown?.outline?.font ?? theme.$.color.dynamic.font) : (theme.$.palette[palette].dropdown?.soft?.outline?.font ?? theme.$.color.dynamic.font)};
     `
   }
 `)
