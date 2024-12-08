@@ -39,10 +39,10 @@ exports[`<PaginationLink /> should render component 1`] = `
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
   padding: .4rem .65rem;
-  color: #fff;
-  fill: #fff;
   background: #0556B2;
   border-color: #0552A9;
+  color: #fff;
+  fill: #fff;
 }
 
 <li
