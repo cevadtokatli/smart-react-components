@@ -8,6 +8,7 @@ import { CheckboxPaletteItemAttributes } from './checkbox'
 import { DropdownPaletteItemAttributes } from './dropdown'
 import { FormPaletteItemAttributes } from './form'
 import { InputPaletteItemAttributes } from './input'
+import { PaginationPaletteItemAttributes } from './pagination'
 import { ProgressBarPaletteItemAttributes } from './progress-bar'
 import { RadioPaletteItemAttributes } from './radio'
 import { SwitchPaletteItemAttributes } from './switch'
@@ -41,6 +42,7 @@ interface DefaultPaletteItemAttributes {
   dropdown?: DropdownPaletteItemAttributes
   form?: FormPaletteItemAttributes
   input?: InputPaletteItemAttributes
+  pagination?: PaginationPaletteItemAttributes
   progressBar?: ProgressBarPaletteItemAttributes
   radio?: RadioPaletteItemAttributes
   switch?: SwitchPaletteItemAttributes
