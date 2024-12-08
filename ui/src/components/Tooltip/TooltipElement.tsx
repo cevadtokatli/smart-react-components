@@ -27,7 +27,7 @@ export default styled(Div).attrs({
   position: fixed;
   z-index: ${theme.$.zIndex.tooltip};
 
-  ${isSoft
+  ${!isSoft
     ? `
       background: ${theme.$.palette[palette].tooltip?.background ?? theme.$.palette[palette].main};
       color: ${theme.$.palette[palette].tooltip?.font ?? theme.$.palette[palette].font};
