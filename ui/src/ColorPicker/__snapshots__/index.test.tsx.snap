@@ -265,6 +265,7 @@ exports[`<ColorPicker /> should match snapshot 1`] = `
 }
 
 .c18 > span {
+  color: #323a46;
   display: block;
   word-break: break-word;
   word-wrap: break-word;

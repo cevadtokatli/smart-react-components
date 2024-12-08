@@ -328,9 +328,9 @@ exports[`<InputAddonElement /> should render component not outline 1`] = `
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  color: #fff;
   background: #0665d0;
   border-color: #055BBB;
+  color: #fff;
 }
 
 <div
@@ -369,9 +369,9 @@ exports[`<InputAddonElement /> should render component with soft colors 1`] = `
   transition: 200ms 0s ease-in-out;
   -webkit-transition-property: background,border,color,fill;
   transition-property: background,border,color,fill;
-  color: #033c7c;
   background: #cde0f5;
   border-color: #b9d3f1;
+  color: #033c7c;
 }
 
 <div

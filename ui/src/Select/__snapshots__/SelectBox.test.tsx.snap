@@ -30,6 +30,7 @@ exports[`<SelectBox /> should render component 1`] = `
 }
 
 .c1 > span {
+  color: #323a46;
   display: block;
   word-break: break-word;
   word-wrap: break-word;

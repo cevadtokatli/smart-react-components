@@ -123,6 +123,7 @@ const InputColorPicker = React.forwardRef<HTMLInputElement, Props>((props, forwa
       formSizeXl={props.sizeXl}
       isBlock={props.isBlock}
       isDisabled={props.isDisabled}
+      palette={props.palette}
     >
       { props.label && <span>{props.label}</span> }
       <Div

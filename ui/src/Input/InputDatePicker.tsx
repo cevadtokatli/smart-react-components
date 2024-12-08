@@ -98,6 +98,7 @@ const InputDatePicker = React.forwardRef<HTMLInputElement, Props>((props, forwar
       formSizeXl={props.sizeXl}
       isBlock={props.isBlock}
       isDisabled={props.isDisabled}
+      palette={props.palette}
     >
       { props.label && <span>{props.label}</span> }
       <Div

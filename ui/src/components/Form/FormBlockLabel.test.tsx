@@ -16,6 +16,7 @@ describe('<FormBlockLabel />', () => {
       formSize: 'medium',
       isBlock: true,
       isDisabled: false,
+      palette: 'primary',
     }
   })
 

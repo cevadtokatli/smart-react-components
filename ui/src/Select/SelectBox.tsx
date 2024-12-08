@@ -152,6 +152,7 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
         isBlock={props.isBlock}
         isDisabled={props.isDisabled}
         ref={formEl}
+        palette={props.palette}
       >
         { props.label && <span>{props.label}</span> }
         <Div

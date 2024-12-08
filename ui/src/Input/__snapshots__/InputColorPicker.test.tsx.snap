@@ -305,6 +305,7 @@ exports[`<InputColorPicker /> should render component 1`] = `
 }
 
 .c1 > span {
+  color: #323a46;
   display: block;
   word-break: break-word;
   word-wrap: break-word;
@@ -325,6 +326,7 @@ exports[`<InputColorPicker /> should render component 1`] = `
 }
 
 .c30 > span {
+  color: #323a46;
   display: block;
   word-break: break-word;
   word-wrap: break-word;
