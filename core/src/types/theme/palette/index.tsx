@@ -12,6 +12,7 @@ import { PaginationPaletteItemAttributes } from './pagination'
 import { ProgressBarPaletteItemAttributes } from './progress-bar'
 import { RadioPaletteItemAttributes } from './radio'
 import { SwitchPaletteItemAttributes } from './switch'
+import { TooltipPaletteItemAttributes } from './tooltip'
 
 interface DefaultPaletteItemAttributes {
   main: string
@@ -46,6 +47,7 @@ interface DefaultPaletteItemAttributes {
   progressBar?: ProgressBarPaletteItemAttributes
   radio?: RadioPaletteItemAttributes
   switch?: SwitchPaletteItemAttributes
+  tooltip?: TooltipPaletteItemAttributes
 
   table?: {
     odd?: {

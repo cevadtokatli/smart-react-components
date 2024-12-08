@@ -21,7 +21,7 @@ export default styled(Div).attrs({
   `,
 })(({ theme, duration, hasTransition, isSoft, palette }: Props) => `
   border-radius: ${theme.$.radius.tooltip};
-  box-shadow: 0 0 10px 1px ${theme.$.palette[palette].shadow};
+  box-shadow: 0 0 10px 1px ${theme.$.palette[palette].tooltip?.shadow ?? theme.$.palette[palette].shadow};
   box-sizing: border-box;
   font-family: ${theme.$.fontFamily.tooltip};
   position: fixed;
@@ -29,24 +29,24 @@ export default styled(Div).attrs({
 
   ${isSoft
     ? `
-      background: ${theme.$.palette[palette].soft};
-      color: ${theme.$.palette[palette].softFont};
-      fill: ${theme.$.palette[palette].softFont};
-      font-weight: ${theme.$.fontWeight.bold};
+      background: ${theme.$.palette[palette].tooltip?.background ?? theme.$.palette[palette].main};
+      color: ${theme.$.palette[palette].tooltip?.font ?? theme.$.palette[palette].font};
+      fill: ${theme.$.palette[palette].tooltip?.font ?? theme.$.palette[palette].font};
 
       ${PopoverArrow} {
-        fill: ${theme.$.palette[palette].soft};
-        stroke: ${theme.$.palette[palette].soft};
+        fill: ${theme.$.palette[palette].tooltip?.background ?? theme.$.palette[palette].main};
+        stroke: ${theme.$.palette[palette].tooltip?.background ?? theme.$.palette[palette].main};
       }
     `
     : `
-      background: ${theme.$.palette[palette].main};
-      color: ${theme.$.palette[palette].font};
-      fill: ${theme.$.palette[palette].font};
+      background: ${theme.$.palette[palette].tooltip?.soft?.background ?? theme.$.palette[palette].soft};
+      color: ${theme.$.palette[palette].tooltip?.soft?.font ?? theme.$.palette[palette].softFont};
+      fill: ${theme.$.palette[palette].tooltip?.soft?.font ?? theme.$.palette[palette].softFont};
+      font-weight: ${theme.$.fontWeight.bold};
 
       ${PopoverArrow} {
-        fill: ${theme.$.palette[palette].main};
-        stroke: ${theme.$.palette[palette].main};
+        fill: ${theme.$.palette[palette].tooltip?.soft?.background ?? theme.$.palette[palette].soft};
+        stroke: ${theme.$.palette[palette].tooltip?.soft?.background ?? theme.$.palette[palette].soft};
       }
     `
   }
