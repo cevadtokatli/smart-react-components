@@ -31,21 +31,21 @@ interface Props extends StyledProps {
 
 export default styled(Div)<Props>(({ theme, hasStripedAnimation, height, isFilled, isNested, isStriped, palette, stripedAnimationDuration, transitionDuration, transitionTimingFunction }: Props) => `
   align-items: center;
-  color: ${theme.$.palette[palette].main};
+  color: ${theme.$.palette[palette].progressBar?.background ?? theme.$.palette[palette].main};
   display: flex;
-  fill: ${theme.$.palette[palette].main};
+  fill: ${theme.$.palette[palette].progressBar?.background ?? theme.$.palette[palette].main};
   overflow: hidden;
   position: relative;
 
   ${Bar} {
-    background: ${theme.$.palette[palette].main};
-    color: ${theme.$.palette[palette].font};
-    fill: ${theme.$.palette[palette].font};
+    background: ${theme.$.palette[palette].progressBar?.background ?? theme.$.palette[palette].main};
+    color: ${theme.$.palette[palette].progressBar?.font ?? theme.$.palette[palette].font};
+    fill: ${theme.$.palette[palette].progressBar?.font ?? theme.$.palette[palette].font};
     transition: width ${transitionDuration}ms 0s ${transitionTimingFunction};
 
     ${isNested
       ? `
-        background: ${getColor(theme.$.color.light.background).alpha(.3).rgb().toString()};
+        background: ${theme.$.palette[palette].progressBar?.nested?.background ? theme.$.palette[palette].progressBar?.nested?.background : getColor(theme.$.color.light.background).alpha(.3).rgb().toString()};
       `
       : `
         border-radius: .125rem;
@@ -55,7 +55,7 @@ export default styled(Div)<Props>(({ theme, hasStripedAnimation, height, isFille
 
   ${isFilled
     ? `
-      background: ${theme.$.color.dynamic.gray};
+      background: ${theme.$.palette[palette].progressBar?.filled?.background ?? theme.$.color.dynamic.gray};
     `
     : ''
   }
