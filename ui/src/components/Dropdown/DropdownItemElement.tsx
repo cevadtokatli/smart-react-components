@@ -49,7 +49,7 @@ export default styled(Div)<Props>(({ theme, hasHover, isActive, isDisabled, isHo
                 }
 
                 .svg .stroke {
-                  stroke: $${!isOutline ? (theme.$.palette[palette].dropdown?.hover?.font ?? theme.$.palette[palette].font) : (theme.$.palette[palette].dropdown?.outline?.hover?.font ?? theme.$.palette[palette].font)};
+                  stroke: ${!isOutline ? (theme.$.palette[palette].dropdown?.hover?.font ?? theme.$.palette[palette].font) : (theme.$.palette[palette].dropdown?.outline?.hover?.font ?? theme.$.palette[palette].font)};
                 }
               `
               : `
