@@ -45,7 +45,7 @@ interface DefaultPaletteItemAttributes {
   form?: FormPaletteItemAttributes
   input?: InputPaletteItemAttributes
   pagination?: PaginationPaletteItemAttributes
-  popoover?: PopoverPaletteItemAttributes
+  popover?: PopoverPaletteItemAttributes
   progressBar?: ProgressBarPaletteItemAttributes
   radio?: RadioPaletteItemAttributes
   switch?: SwitchPaletteItemAttributes
