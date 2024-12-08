@@ -9,6 +9,7 @@ import { DropdownPaletteItemAttributes } from './dropdown'
 import { FormPaletteItemAttributes } from './form'
 import { InputPaletteItemAttributes } from './input'
 import { PaginationPaletteItemAttributes } from './pagination'
+import { PopoverPaletteItemAttributes } from './popover'
 import { ProgressBarPaletteItemAttributes } from './progress-bar'
 import { RadioPaletteItemAttributes } from './radio'
 import { SwitchPaletteItemAttributes } from './switch'
@@ -44,6 +45,7 @@ interface DefaultPaletteItemAttributes {
   form?: FormPaletteItemAttributes
   input?: InputPaletteItemAttributes
   pagination?: PaginationPaletteItemAttributes
+  popoover?: PopoverPaletteItemAttributes
   progressBar?: ProgressBarPaletteItemAttributes
   radio?: RadioPaletteItemAttributes
   switch?: SwitchPaletteItemAttributes

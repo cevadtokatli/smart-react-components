@@ -37,39 +37,39 @@ export default styled(Div).attrs({
   `,
 })<Props>(({ theme, palette, duration, hasTransition, isSoft }: Props) => `
   box-sizing: border-box;
-  color: ${theme.$.color.dynamic.font};
+  color: ${theme.$.palette[palette].popover?.font ?? theme.$.color.dynamic.font};
   fill: ${theme.$.color.dynamic.font};
   font-family: ${theme.$.fontFamily.popover};
   position: fixed;
   z-index: ${theme.$.zIndex.popover};
 
   ${PopoverContent} {
-    background: ${theme.$.color.dynamic.background};
-    border: solid 1px ${theme.$.color.dynamic.accent};
+    background: ${theme.$.palette[palette].popover?.background ?? theme.$.color.dynamic.background};
+    border: solid 1px ${theme.$.palette[palette].popover?.border ?? theme.$.color.dynamic.accent};
   }
 
   ${PopoverHeader} {
-    ${isSoft
+    ${!isSoft
       ? `
-        background: ${theme.$.palette[palette].soft};
-        border: solid 1px ${theme.$.palette[palette].softDynamicer};
-        color: ${theme.$.palette[palette].softFont};
-        fill: ${theme.$.palette[palette].softFont};
+        background: ${theme.$.palette[palette].popover?.header?.background ?? theme.$.palette[palette].main};
+        border: solid 1px ${theme.$.palette[palette].popover?.header?.border ?? theme.$.palette[palette].dynamicer};
+        color: ${theme.$.palette[palette].popover?.header?.font ?? theme.$.palette[palette].font};
+        fill: ${theme.$.palette[palette].popover?.header?.font ?? theme.$.palette[palette].font};
 
         ~ ${PopoverArrow}[data-arrow-header="true"] {
-          fill: ${theme.$.palette[palette].soft};
-          stroke: ${theme.$.palette[palette].softDynamicer};
+          fill: ${theme.$.palette[palette].popover?.header?.background ?? theme.$.palette[palette].main};
+          stroke: ${theme.$.palette[palette].popover?.header?.border ?? theme.$.palette[palette].dynamicer};
         }
       `
       : `
-        background: ${theme.$.palette[palette].main};
-        border: solid 1px ${theme.$.palette[palette].dynamicer};
-        color: ${theme.$.palette[palette].font};
-        fill: ${theme.$.palette[palette].font};
+        background: ${theme.$.palette[palette].popover?.soft?.header?.background ?? theme.$.palette[palette].soft};
+        border: solid 1px ${theme.$.palette[palette].popover?.soft?.header?.border ?? theme.$.palette[palette].softDynamicer};
+        color: ${theme.$.palette[palette].popover?.soft?.header?.font ?? theme.$.palette[palette].softFont};
+        fill: ${theme.$.palette[palette].popover?.soft?.header?.font ?? theme.$.palette[palette].softFont};
 
         ~ ${PopoverArrow}[data-arrow-header="true"] {
-          fill: ${theme.$.palette[palette].main};
-          stroke: ${theme.$.palette[palette].dynamicer};
+          fill: ${theme.$.palette[palette].popover?.soft?.header?.background ?? heme.$.palette[palette].soft};
+          stroke: ${theme.$.palette[palette].popover?.soft?.header?.border ?? theme.$.palette[palette].softDynamicer};
         }
       `
     }
@@ -80,8 +80,8 @@ export default styled(Div).attrs({
   }
 
   ${PopoverArrow}[data-arrow-header="false"] {
-    fill: ${theme.$.color.dynamic.background};
-    stroke: ${theme.$.color.dynamic.accent};
+    fill: ${theme.$.palette[palette].popover?.background ?? theme.$.color.dynamic.background};
+    stroke: ${theme.$.palette[palette].popover?.border ?? theme.$.color.dynamic.accent};
   }
 
   ${hasTransition ? generateCSSTransitionClasses('popover', duration) : ''}
