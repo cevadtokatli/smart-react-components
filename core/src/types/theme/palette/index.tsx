@@ -13,6 +13,7 @@ import { PopoverPaletteItemAttributes } from './popover'
 import { ProgressBarPaletteItemAttributes } from './progress-bar'
 import { RadioPaletteItemAttributes } from './radio'
 import { SwitchPaletteItemAttributes } from './switch'
+import { TablePaletteItemAttributes } from './table'
 import { TooltipPaletteItemAttributes } from './tooltip'
 
 interface DefaultPaletteItemAttributes {
@@ -49,29 +50,8 @@ interface DefaultPaletteItemAttributes {
   progressBar?: ProgressBarPaletteItemAttributes
   radio?: RadioPaletteItemAttributes
   switch?: SwitchPaletteItemAttributes
+  table?: TablePaletteItemAttributes
   tooltip?: TooltipPaletteItemAttributes
-
-  table?: {
-    odd?: {
-      background?: string
-      border?: string
-      font?: string
-
-      hover?: {
-        background?: string
-      }
-    }
-
-    even?: {
-      background?: string
-      border?: string
-      font?: string
-
-      hover?: {
-        background?: string
-      }
-    }
-  }
 }
 
 export type PaletteItem = DefaultPaletteItemAttributes & OptionalThemeAttributes

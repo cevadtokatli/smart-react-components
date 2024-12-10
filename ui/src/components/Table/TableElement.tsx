@@ -107,20 +107,8 @@ export default styled(Table).attrs<Props>({
         ? `
           > thead > tr > * {
             background: ${theme.$.palette[palette].table?.even?.background ?? theme.$.palette[palette].dynamic};
-
-            ${theme.$.palette[palette].table?.even?.border
-              ? `
-                border-color: ${theme.$.palette[palette].table?.even?.border};
-              `
-              : ''
-            }
-
-            ${theme.$.palette[palette].table?.even?.font
-              ? `
-                color: ${theme.$.palette[palette].table?.even?.font};
-              `
-              : ''
-            }
+            border-color: ${theme.$.palette[palette].table?.even?.border ?? theme.$.palette[palette].dynamicest};
+            color: ${theme.$.palette[palette].table?.even?.font ?? theme.$.palette[palette].font};
           }
         `
         : ''
@@ -130,20 +118,8 @@ export default styled(Table).attrs<Props>({
         ? `
           > tbody > tr:nth-child(${stripedOrientation}) > * {
             background: ${theme.$.palette[palette].table?.even?.background ?? theme.$.palette[palette].dynamic};
-
-            ${theme.$.palette[palette].table?.even?.border
-              ? `
-                border-color: ${theme.$.palette[palette].table?.even?.border};
-              `
-              : ''
-            }
-
-            ${theme.$.palette[palette].table?.even?.font
-              ? `
-                border-color: ${theme.$.palette[palette].table?.even?.font};
-              `
-              : ''
-            }
+            border-color: ${theme.$.palette[palette].table?.even?.border ?? theme.$.palette[palette].dynamicest};
+            color: ${theme.$.palette[palette].table?.even?.font ?? theme.$.palette[palette].font};
           }
         `
         : ''
@@ -158,12 +134,16 @@ export default styled(Table).attrs<Props>({
 
             &:hover > * {
               background: ${theme.$.palette[palette].table?.odd?.hover?.background ?? theme.$.palette[palette].dynamicer};
+              border-color: ${theme.$.palette[palette].table?.odd?.hover?.border ?? theme.$.palette[palette].dynamicest};
+              color: ${theme.$.palette[palette].table?.odd?.hover?.font ?? theme.$.palette[palette].font};
             }
 
             ${(isStriped && theme.$.palette[palette].table?.even?.hover?.background)
               ? `
                 > tbody > tr:nth-child(${stripedOrientation}) > * {
-                  background: ${theme.$.palette[palette].table?.even?.hover?.background};
+                  background: ${theme.$.palette[palette].table?.even?.hover?.background ?? theme.$.palette[palette].dynamicer};
+                  border-color: ${theme.$.palette[palette].table?.even?.hover?.border ?? theme.$.palette[palette].dynamicest};
+                  color: ${theme.$.palette[palette].table?.even?.hover?.font ?? theme.$.palette[palette].font};
                 }
               `
               : ''
@@ -175,15 +155,17 @@ export default styled(Table).attrs<Props>({
     `
     : `
       > * > tr > * {
-        background: ${theme.$.palette[palette].softBackground};
-        border-color: ${theme.$.palette[palette].softDynamicest};
-        color: ${theme.$.palette[palette].softFont};
+        background: ${theme.$.palette[palette].table?.odd?.soft?.background ?? theme.$.palette[palette].softBackground};
+        border-color: ${theme.$.palette[palette].table?.odd?.soft?.border ?? theme.$.palette[palette].softDynamicest};
+        color: ${theme.$.palette[palette].table?.odd?.soft?.font ?? theme.$.palette[palette].softFont};
       }
 
       ${hasHeadBackground
         ? `
           > thead > tr > * {
-            background: ${theme.$.palette[palette].softDynamic};
+            background: ${theme.$.palette[palette].table.even?.soft?.background ?? theme.$.palette[palette].softDynamic};
+            border-color: ${theme.$.palette[palette].table.even?.soft?.border ?? theme.$.palette[palette].softDynamicest};
+            color: ${theme.$.palette[palette].table.even?.soft?.font ?? theme.$.palette[palette].softFont};
           }
         `
         : ''
@@ -192,7 +174,9 @@ export default styled(Table).attrs<Props>({
       ${isStriped
         ? `
           > tbody > tr:nth-child(${stripedOrientation}) > * {
-            background: ${theme.$.palette[palette].softDynamic};
+            background: ${theme.$.palette[palette].table?.even?.soft?.background ?? theme.$.palette[palette].softDynamic};
+            border-color: ${theme.$.palette[palette].table?.even?.soft?.border ?? theme.$.palette[palette].softDynamicest};
+            color: ${theme.$.palette[palette].table?.even?.soft?.font ?? theme.$.palette[palette].softFont};
           }
         `
         : ''
@@ -200,8 +184,27 @@ export default styled(Table).attrs<Props>({
 
       ${hasHover
         ? `
-          > tbody > tr:hover > * {
-            background: ${theme.$.palette[palette].softDynamicer};
+          > tbody > tr {
+            > * {
+              transition: background 150ms 0s ease-in-out;
+            }
+
+            &:hover > * {
+              background: ${theme.$.palette[palette].table?.odd?.soft?.hover?.background ?? theme.$.palette[palette].softDynamicer};
+              border-color: ${theme.$.palette[palette].table?.odd?.soft?.hover?.border ?? theme.$.palette[palette].softDynamicest};
+              color: ${theme.$.palette[palette].table?.odd?.soft?.hover?.font ?? theme.$.palette[palette].softFont};
+            }
+
+            ${(isStriped && theme.$.palette[palette].table?.even?.hover?.background)
+              ? `
+                > tbody > tr:nth-child(${stripedOrientation}) > * {
+                  background: ${theme.$.palette[palette].table?.even?.soft?.hover?.background ?? theme.$.palette[palette].softDynamicer};
+                  border-color: ${theme.$.palette[palette].table?.even?.soft?.hover?.border ?? theme.$.palette[palette].softDynamicest};
+                  color: ${theme.$.palette[palette].table?.even?.hover?.soft?.font ?? theme.$.palette[palette].softFont};
+                }
+              `
+              : ''
+            }
           }
         `
         : ''

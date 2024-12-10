@@ -19,12 +19,12 @@ export default styled(Tr)<Props>(({ theme, hasHover, isEven, isSoft, palette, st
           ? `
             background: ${!isEven ? (theme.$.palette[palette].table?.odd?.background ?? theme.$.palette[palette].background) : (theme.$.palette[palette].table?.even?.background ?? theme.$.palette[palette].dynamic)};
             border-color: ${!isEven ? (theme.$.palette[palette].table?.odd?.border ?? theme.$.palette[palette].dynamicest) : (theme.$.palette[palette].table?.even?.border ?? theme.$.palette[palette].dynamicest)};
-            color: ${!isEven ? (theme.$.palette[palette]?.odd?.font ?? theme.$.palette[palette].font) : (theme.$.palette[palette]?.even?.font ?? theme.$.palette[palette].font)};
+            color: ${!isEven ? (theme.$.palette[palette]?.table?.odd?.font ?? theme.$.palette[palette].font) : (theme.$.palette[palette]?.table?.even?.font ?? theme.$.palette[palette].font)};
           `
           : `
-            background: ${!isEven ? theme.$.palette[palette].softBackground : theme.$.palette[palette].softDynamic};
-            border-color: ${theme.$.palette[palette].softDynamicest};
-            color: ${theme.$.palette[palette].softFont};
+            background: ${!isEven ? (theme.$.palette[palette].table?.odd?.soft?.background ?? theme.$.palette[palette].softBackground) : (theme.$.palette[palette].table?.even?.soft?.background ?? theme.$.palette[palette].softDynamic)};
+            border-color: ${!isEven ? (theme.$.palette[palette].table?.odd?.soft?.border ?? theme.$.palette[palette].softDynamicest) : (theme.$.palette[palette].table?.even.soft?.border ?? theme.$.palette[palette].softDynamicest)};
+            color: ${!isEven ? (theme.$.palette[palette].table?.odd?.soft?.font ?? theme.$.palette[palette].softFont) : (theme.$.palette[palette].table?.even?.soft?.font ?? theme.$.palette[palette].softFont)};
           `
         }
       }
@@ -35,9 +35,13 @@ export default styled(Tr)<Props>(({ theme, hasHover, isEven, isSoft, palette, st
             ${!isSoft
               ? `
                 background: ${!isEven ? (theme.$.palette[palette].table?.odd?.hover?.background ?? theme.$.palette[palette].dynamicer) : (theme.$.palette[palette].table?.even?.hover?.background ?? theme.$.palette[palette].dynamicer)};
+                border: ${!isEven ? (theme.$.palette[palette].table?.odd?.hover?.border ?? theme.$.palette[palette].dynamicest) : (theme.$.palette[palette].table?.even?.hover?.border ?? theme.$.palette[palette].dynamicest)};
+                color: ${!isEven ? (theme.$.palette[palette]?.table?.odd?.hover?.font ?? theme.$.palette[palette].font) : (theme.$.palette[palette]?.table?.even?.hover?.font ?? theme.$.palette[palette].font)};
               `
               : `
-                background: ${theme.$.palette[palette].softDynamicer};
+                background: ${!isEven ? (theme.$.palette[palette].table?.odd?.soft?.hover?.background ?? theme.$.palette[palette].softDynamicer) : (theme.$.palette[palette].table?.even?.soft?.hover?.background ?? theme.$.palette[palette].softDynamicer)};
+                border: ${!isEven ? (theme.$.palette[palette].table?.odd?.soft?.hover?.border ?? theme.$.palette[palette].softDynamicest) : (theme.$.palette[palette].table?.even?.soft?.hover?.border ?? theme.$.palette[palette].softDynamicest)};
+                color: ${!isEven ? (theme.$.palette[palette].table?.odd?.soft?.hover?.font ?? theme.$.palette[palette].softFont) : (theme.$.palette[palette].table?.even?.soft?.hover?.font ?? theme.$.palette[palette].softFont)};
               `
             }
           }
