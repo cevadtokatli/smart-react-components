@@ -10,6 +10,8 @@ exports[`<Tr /> should render component 1`] = `
 
 .c0:hover > *:nth-child(n+0) {
   background: #F2F4F7;
+  border: #E9ECEF;
+  color: #323a46;
 }
 
 <table>
@@ -32,6 +34,8 @@ exports[`<Tr /> should render component with soft colors 1`] = `
 
 .c0:hover > *:nth-child(n+0) {
   background: #fcfdfd;
+  border: #fcfdfd;
+  color: #959697;
 }
 
 <table>
