@@ -30,6 +30,8 @@ const DatePicker: React.FC<Props> = props => {
     >
       <DatePickerHeader
         {...applyResponsiveStyledProp(props, 'size', 'size', v => v) as SizeProps}
+        isSoft={props.isSoft}
+        palette={props.palette}
         selectedDate={props.selectedDate}
         selectedPicker={props.selectedPicker}
         setSelectedDate={props.setSelectedDate}

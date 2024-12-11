@@ -1,5 +1,5 @@
 import { Theme } from '@smart-react-components/core/theme'
-import { ResponsiveProp, SizeProps, SizeProp, SetState } from '@smart-react-components/core/types'
+import { ResponsiveProp, SizeProps, SizeProp, SetState, PaletteProp } from '@smart-react-components/core/types'
 import React from 'react'
 import { useTheme } from 'styled-components'
 import { DatePickerSelectedDatePicker } from '../../../constants/date-picker'
@@ -9,6 +9,8 @@ import { applyResponsiveStyledProp } from '../../../util/props'
 import DatePickerHeaderElement from './DatePickerHeaderElement'
 
 export interface Props extends SizeProps {
+  isSoft: boolean
+  palette: PaletteProp
   selectedDate: Date
   selectedPicker: DatePickerSelectedDatePicker
   setSelectedDate: SetState<Date>
@@ -73,6 +75,8 @@ const DatePickerHeader: React.FC<Props> = props => {
 
   return (
     <DatePickerHeaderElement
+      isSoft={props.isSoft}
+      palette={props.palette}
       {...applyResponsiveStyledProp(props, 'size', 'datePickerSize', v => v) as ResponsiveProp<'datePickerSize', SizeProp>}
     >
       <div onClick={changeSelectedPicker}>{ value }</div>
