@@ -1,13 +1,14 @@
 import Li from '@smart-react-components/core/Element/Li'
 import Svg from '@smart-react-components/core/Element/Svg'
 import { StyledProps } from '@smart-react-components/core/styled-props'
-import { ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
+import { PaletteProp, ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
 import styled from 'styled-components'
 
 interface Props extends
   StyledProps,
   ResponsiveProp<'colorPickerSize', SizeProp> {
   isDisabled: boolean
+  palette: PaletteProp
 }
 
 export default styled(Li).attrs<Props>(({
@@ -22,9 +23,9 @@ export default styled(Li).attrs<Props>(({
       width: ${t.$.size.icon[v]};
     }
   `,
-}))<Props>(({ theme, isDisabled }: Props) => `
+}))<Props>(({ theme, isDisabled, palette }: Props) => `
   align-items: center;
-  border-color: ${theme.$.vars.isDarkMode ? theme.$.color.gray700 : theme.$.color.gray400};
+  border-color: ${theme.$.vars.isDarkMode ? (theme.$.palette[palette].colorPicker?.paletteDarkBorder ?? theme.$.color.gray700) : (theme.$.palette[palette].colorPicker?.paletteLightBorder ??theme.$.color.gray400)};
   border-radius: ${theme.$.radius.colorPicker};
   display: flex;
   justify-content: center;
@@ -36,7 +37,7 @@ export default styled(Li).attrs<Props>(({
   }
 
   ${Svg} {
-    fill: ${theme.$.vars.isDarkMode ? theme.$.color.gray600 : theme.$.color.gray500};
+    fill: ${theme.$.vars.isDarkMode ? (theme.$.palette[palette].colorPicker?.paletteDarkIcon ?? theme.$.color.gray600) : (theme.$.palette[palette].colorPicker?.paletteLightIcon ?? theme.$.color.gray500)};
   }
 
   ${isDisabled

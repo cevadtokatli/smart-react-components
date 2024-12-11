@@ -1,4 +1,4 @@
-import { Color, Nullable } from '@smart-react-components/core/types'
+import { Color, Nullable, PaletteProp } from '@smart-react-components/core/types'
 import React from 'react'
 import ColorPickerProps from '../../../context/ColorPickerProps'
 import Eraser from '../../../icons/Eraser'
@@ -12,10 +12,11 @@ import ConsoleSectionElement from './ConsoleSectionElement'
 interface Props {
   format: ColorPickerFormat
   initialValue: Nullable<Color>
+  palette: PaletteProp
   onRef: (v: ConsoleRef) => void
 }
 
-const ConsoleSection: React.FC<Props> = ({ format, initialValue, onRef }) => {
+const ConsoleSection: React.FC<Props> = ({ format, initialValue, onRef, palette }) => {
   const { colorPickerSize, colorPickerSizeSm, colorPickerSizeMd, colorPickerSizeLg, colorPickerSizeXl, isDisabled, updateValue, value } = React.useContext(ColorPickerProps)
 
   const clearButtonEl = React.useRef<HTMLDivElement>(null)
@@ -55,6 +56,7 @@ const ConsoleSection: React.FC<Props> = ({ format, initialValue, onRef }) => {
   return (
     <ConsoleSectionElement
       isDisabled={isDisabled}
+      palette={palette}
     >
       <Input
         hasBorder={false}

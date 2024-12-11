@@ -5,6 +5,7 @@ import { BadgePaletteItemAttributes } from './badge'
 import { BreadcrumbPaletteItemAttributes } from './breadcrumb'
 import { ButtonPaletteItemAttributes } from './button'
 import { CheckboxPaletteItemAttributes } from './checkbox'
+import { ColorPickerPaletteItemAttributes } from './color-picker'
 import { DropdownPaletteItemAttributes } from './dropdown'
 import { FormPaletteItemAttributes } from './form'
 import { InputPaletteItemAttributes } from './input'
@@ -42,6 +43,7 @@ interface DefaultPaletteItemAttributes {
   breadcrumb?: BreadcrumbPaletteItemAttributes
   button?: ButtonPaletteItemAttributes
   checkbox?: CheckboxPaletteItemAttributes
+  colorPicker?: ColorPickerPaletteItemAttributes
   dropdown?: DropdownPaletteItemAttributes
   form?: FormPaletteItemAttributes
   input?: InputPaletteItemAttributes
