@@ -6,6 +6,7 @@ import { BreadcrumbPaletteItemAttributes } from './breadcrumb'
 import { ButtonPaletteItemAttributes } from './button'
 import { CheckboxPaletteItemAttributes } from './checkbox'
 import { ColorPickerPaletteItemAttributes } from './color-picker'
+import { DatePickerPaletteItemAttributes } from './date-picker'
 import { DropdownPaletteItemAttributes } from './dropdown'
 import { FormPaletteItemAttributes } from './form'
 import { InputPaletteItemAttributes } from './input'
@@ -44,6 +45,7 @@ interface DefaultPaletteItemAttributes {
   button?: ButtonPaletteItemAttributes
   checkbox?: CheckboxPaletteItemAttributes
   colorPicker?: ColorPickerPaletteItemAttributes
+  datePicker?: DatePickerPaletteItemAttributes
   dropdown?: DropdownPaletteItemAttributes
   form?: FormPaletteItemAttributes
   input?: InputPaletteItemAttributes

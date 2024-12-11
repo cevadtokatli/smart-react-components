@@ -29,22 +29,22 @@ export default styled(Li).attrs<Props>({
 
       ${isSoft
         ? `
-          background: ${theme.$.palette[palette].soft};
-          color: ${theme.$.palette[palette].softFont};
+          background: ${theme.$.palette[palette].datePicker?.soft?.date?.active?.background ?? theme.$.palette[palette].soft};
+          color: ${theme.$.palette[palette].datePicker?.soft?.date?.active?.font ?? theme.$.palette[palette].softFont};
         `
         : `
-          background: ${theme.$.palette[palette].main};
-          color: ${theme.$.palette[palette].font}; 
+          background: ${theme.$.palette[palette].datePicker?.date?.active?.background ?? theme.$.palette[palette].main};
+          color: ${theme.$.palette[palette].datePicker?.date?.active?.background ?? theme.$.palette[palette].font}; 
         `
       }
     `
     : `
       ${isNotCurrentDate
         ? `
-          color: ${theme.$.color.gray600};
+          color: ${!isSoft ? (theme.$.palette[palette].datePicker?.date?.icon ?? theme.$.color.gray600) : (theme.$.palette[palette].datePicker?.soft?.date?.icon ?? theme.$.color.gray600)};
         `
         : `
-          color: ${theme.$.color.dynamic.font};
+          color: ${!isSoft ? (theme.$.palette[palette].datePicker?.date?.font ?? theme.$.color.dynamic.font) : (theme.$.palette[palette].datePicker?.soft?.date?.font ?? theme.$.color.dynamic.font)};
           font-weight: ${theme.$.fontWeight.datePicker};
         `
       }

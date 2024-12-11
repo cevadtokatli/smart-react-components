@@ -37,12 +37,12 @@ export default styled(Header).attrs<Props>({
 
   ${!isSoft
     ? `
-      background: ${theme.$.palette[palette].main};
-      color: ${theme.$.palette[palette].font};
+      background: ${theme.$.palette[palette].datePicker?.header?.background ?? theme.$.palette[palette].main};
+      color: ${theme.$.palette[palette].datePicker?.header?.font ?? theme.$.palette[palette].font};
     `
     : `
-      background: ${theme.$.palette[palette].soft};
-      color: ${theme.$.palette[palette].softFont};
+      background: ${theme.$.palette[palette].datePicker?.soft?.header?.background ?? theme.$.palette[palette].soft};
+      color: ${theme.$.palette[palette].datePicker?.soft?.header?.background ?? theme.$.palette[palette].softFont};
     `
   }
 
@@ -57,12 +57,12 @@ export default styled(Header).attrs<Props>({
       position: relative;
 
       > svg {
-        fill: ${!isSoft ? theme.$.palette[palette].darker : theme.$.palette[palette].softDynamicer};
+        fill: ${!isSoft ? (theme.$.palette[palette].datePicker?.header?.icon ?? theme.$.palette[palette].darker) : (theme.$.palette[palette].datePicker?.soft?.header?.icon ?? theme.$.palette[palette].softDynamicer)};
         position: absolute;
         transition: 150ms ease-in-out;
 
         &:hover {
-          fill: ${!isSoft ? theme.$.palette[palette].darkest : theme.$.palette[palette].softDynamicest};
+          fill: ${!isSoft ? (theme.$.palette[palette].datePicker?.header?.hover?.icon ?? theme.$.palette[palette].darkest) : (theme.$.palette[palette].datePicker?.soft?.header?.hover?.icon ?? theme.$.palette[palette].softDynamicest)};
         }
 
         &.src-fade-show {

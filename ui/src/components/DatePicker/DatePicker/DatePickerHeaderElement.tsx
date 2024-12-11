@@ -1,9 +1,12 @@
 import Header from '@smart-react-components/core/Element/Header'
 import { StyledProps } from '@smart-react-components/core/styled-props'
-import { ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
+import { PaletteProp, ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
 import styled from 'styled-components'
 
-interface Props extends StyledProps, ResponsiveProp<'datePickerSize', SizeProp> {}
+interface Props extends StyledProps, ResponsiveProp<'datePickerSize', SizeProp> {
+  isSoft: boolean
+  palette: PaletteProp
+}
 
 export default styled(Header).attrs<Props>({
   getDatePickerSize: (v, t) => `
@@ -27,7 +30,7 @@ export default styled(Header).attrs<Props>({
       }
     }
   `,
-})<Props>(({ theme }) => `
+})<Props>(({ theme, isSoft, palette }) => `
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -47,7 +50,7 @@ export default styled(Header).attrs<Props>({
       justify-content: center;
 
       svg {
-        fill: ${theme.$.color.gray600};
+        fill: ${!isSoft ? (theme.$.palette[palette].datePicker?.date?.icon ?? theme.$.color.gray600) : (theme.$.palette[palette].datePicker?.soft?.date?.icon ?? theme.$.color.gray600)};
       }
     }
   }

@@ -47,25 +47,27 @@ export default styled(Section).attrs<Props>({
 
     ${!isSoft
       ? `
-        background: ${theme.$.palette[palette].main};
-        border-color: ${theme.$.palette[palette].dynamic};
-        color: ${theme.$.palette[palette].font};
+        background: ${theme.$.palette[palette].datePicker?.time?.background ?? theme.$.palette[palette].main};
+        border-color: ${theme.$.palette[palette].datePicker?.time?.border ?? theme.$.palette[palette].dynamic};
+        color: ${theme.$.palette[palette].datePicker?.time?.font ?? theme.$.palette[palette].font};
 
         &:active,
         &:focus {
-          background: ${theme.$.palette[palette].dark};
-          border-color: ${theme.$.palette[palette].dynamicer};
+          background: ${theme.$.palette[palette].datePicker?.time?.active?.background ?? theme.$.palette[palette].dark};
+          border-color: ${theme.$.palette[palette].datePicker?.time?.active?.border ?? theme.$.palette[palette].dynamicer};
+          color: ${theme.$.palette[palette].datePicker?.time?.active?.font ?? theme.$.palette[palette].font};
         }
       `
       : `
-        background: ${theme.$.palette[palette].soft};
-        border-color: ${theme.$.palette[palette].softDynamic};
-        color: ${theme.$.palette[palette].softFont};
+        background: ${theme.$.palette[palette].datePicker?.soft?.time?.background ?? theme.$.palette[palette].soft};
+        border-color: ${theme.$.palette[palette].datePicker?.soft?.time?.border ?? theme.$.palette[palette].softDynamic};
+        color: ${theme.$.palette[palette].datePicker?.soft?.time?.font ?? theme.$.palette[palette].softFont};
 
         &:active,
         &:focus {
-          background: ${theme.$.palette[palette].softDynamic};
-          border-color: ${theme.$.palette[palette].softDynamicer};
+          background: ${theme.$.palette[palette].datePicker?.soft?.time?.active?.background ?? theme.$.palette[palette].softDynamic};
+          border-color: ${theme.$.palette[palette].datePicker?.soft?.time?.active?.border ?? theme.$.palette[palette].softDynamicer};
+          color: ${theme.$.palette[palette].datePicker?.soft?.time?.active?.font ?? theme.$.palette[palette].softFont};
         }
       `
     }
@@ -77,6 +79,6 @@ export default styled(Section).attrs<Props>({
   }
 
   svg {
-    fill: ${theme.$.color.gray600};
+    fill: ${!isSoft ? (theme.$.palette[palette].datePicker?.time?.icon ?? theme.$.color.gray600) : (theme.$.palette[palette].datePicker?.soft?.time?.icon ?? theme.$.color.gray600)};
   }
 `)
