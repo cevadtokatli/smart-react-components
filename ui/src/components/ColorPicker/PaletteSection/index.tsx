@@ -41,6 +41,7 @@ const PaletteSection: React.FC<Props> = ({ canAddColorToPalette, format, palette
         <PaletteList
           canAddColorToPalette={canAddColorToPalette}
           format={format}
+          palette={palette}
           paletteColors={paletteColors ?? localPaletteColors}
           setPaletteColors={setPaletteColors ?? setLocalPaletteColors}
         />

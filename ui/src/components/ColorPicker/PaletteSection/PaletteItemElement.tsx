@@ -25,7 +25,7 @@ export default styled(Li).attrs<Props>(({
   `,
 }))<Props>(({ theme, isDisabled, palette }: Props) => `
   align-items: center;
-  border-color: ${theme.$.vars.isDarkMode ? (theme.$.palette[palette].colorPicker?.paletteDarkBorder ?? theme.$.color.gray700) : (theme.$.palette[palette].colorPicker?.paletteLightBorder ??theme.$.color.gray400)};
+  border-color: ${theme.$.vars.isDarkMode ? (theme.$.palette[palette].colorPicker?.paletteDarkBorder ?? theme.$.color.gray700) : (theme.$.palette[palette].colorPicker?.paletteLightBorder ?? theme.$.color.gray400)};
   border-radius: ${theme.$.radius.colorPicker};
   display: flex;
   justify-content: center;

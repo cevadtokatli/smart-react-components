@@ -1,7 +1,7 @@
 import Hr from '@smart-react-components/core/Element/Hr'
 import Ul from '@smart-react-components/core/Element/Ul'
 import { Theme } from '@smart-react-components/core/theme'
-import { SetState } from '@smart-react-components/core/types'
+import { PaletteProp, SetState } from '@smart-react-components/core/types'
 import { getColor } from '@smart-react-components/core/util/color'
 import React from 'react'
 import { useTheme } from 'styled-components'
@@ -16,11 +16,12 @@ import PaletteListContainerElement from './PaletteListContainerElement'
 interface Props {
   canAddColorToPalette: boolean
   format: ColorPickerFormat
+  palette: PaletteProp
   paletteColors: string[]
   setPaletteColors: SetState<string[]>
 }
 
-const PaletteList: React.FC<Props> = ({ canAddColorToPalette, format, paletteColors, setPaletteColors }) => {
+const PaletteList: React.FC<Props> = ({ canAddColorToPalette, format, palette, paletteColors, setPaletteColors }) => {
   const theme = useTheme() as Theme
 
   const { colorPickerSize, colorPickerSizeSm, colorPickerSizeMd, colorPickerSizeLg, colorPickerSizeXl, isDisabled, updateValue, value } = React.useContext(ColorPickerProps)
@@ -62,6 +63,7 @@ const PaletteList: React.FC<Props> = ({ canAddColorToPalette, format, paletteCol
             colorPickerSizeMd={colorPickerSizeMd}
             colorPickerSizeLg={colorPickerSizeLg}
             colorPickerSizeXl={colorPickerSizeXl}
+            palette={palette}
             isDisabled={isDisabled}
             {...(!isDisabled && { onClick: handleAddItemClick })}
           >
@@ -78,6 +80,7 @@ const PaletteList: React.FC<Props> = ({ canAddColorToPalette, format, paletteCol
             colorPickerSizeXl={colorPickerSizeXl}
             key={item}
             isDisabled={isDisabled}
+            palette={palette}
             {...(!isDisabled && { onClick: () => updateValue(item) })}
           >
             <div

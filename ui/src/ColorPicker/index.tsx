@@ -104,6 +104,7 @@ const ColorPicker: React.FC<Props> = props => {
         colorPickerSizeLg={props.sizeLg}
         colorPickerSizeXl={props.sizeXl}
         isOutline={props.isOutline}
+        palette={props.palette}
       >
         <PickerSection
           hasOpacityPicker={props.hasOpacityPicker}
@@ -121,6 +122,7 @@ const ColorPicker: React.FC<Props> = props => {
             format={props.format}
             initialValue={initialValue}
             onRef={v => { consoleSection.current = v }}
+            palette={props.palette}
           />
         ) }
         { props.hasButtons && (
@@ -137,6 +139,7 @@ const ColorPicker: React.FC<Props> = props => {
           <PaletteSection
             canAddColorToPalette={props.canAddColorToPalette}
             format={props.format}
+            palette={props.palette}
             paletteColors={props.paletteColors}
             setPaletteColors={props.setPaletteColors}
           />
