@@ -51,6 +51,7 @@ export default styled(Div).attrs<Props>(({ isBlock, isFullScreen }: Props) => ({
   fill: currentcolor;
   flex-direction: column;
   max-height: 100%;
+  min-width: 1px;
 
   ${(isBlock || isFullScreen)
     ? `
