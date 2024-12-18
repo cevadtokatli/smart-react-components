@@ -22,10 +22,7 @@ const Dropdown: React.FC<Props> = ({ afterHide, afterShow, beforeHide, beforeSho
       beforeHide={beforeHide}
       beforeShow={beforeShow}
       breakpoint={breakpoint}
-      elementProps={{
-        overflow: ['initial', true],
-        ...elementProps,
-      }}
+      elementProps={elementProps}
       hasHideAnimation={hasHideAnimation}
       hasShowAnimation={hasShowAnimation}
       isDismissible={isDismissible}
