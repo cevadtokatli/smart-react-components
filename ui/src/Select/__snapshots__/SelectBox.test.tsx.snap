@@ -170,25 +170,21 @@ exports[`<SelectBox /> should render component 1`] = `
   width: 100%;
 }
 
-.c3 {
-  overflow: initial !important;
-}
-
-.c5 {
+.c4 {
   padding: .3125rem 0;
 }
 
-.c5 > div {
+.c4 > div {
   font-size: .875rem;
   margin: .125rem .45rem;
   padding: .3125rem .3125rem;
 }
 
-.c7 {
+.c6 {
   font-weight: 500;
 }
 
-.c8 {
+.c7 {
   cursor: default;
   isolation: isolate;
   overflow: hidden;
@@ -201,13 +197,13 @@ exports[`<SelectBox /> should render component 1`] = `
   z-index: 2000;
 }
 
-.c4 {
+.c3 {
   overflow: auto;
   position: fixed;
   z-index: 1000;
 }
 
-.c6 {
+.c5 {
   border-radius: .2rem;
   box-shadow: 0 0 10px 1px rgba(154,161,171,.15);
   font-family: inherit;
@@ -224,12 +220,12 @@ exports[`<SelectBox /> should render component 1`] = `
   fill: #323a46;
 }
 
-.c6 > div {
+.c5 > div {
   word-break: break-word;
   word-wrap: break-word;
 }
 
-.c9 {
+.c8 {
   border-radius: .2rem;
   fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
@@ -240,25 +236,25 @@ exports[`<SelectBox /> should render component 1`] = `
   color: #fff;
 }
 
-.c9 .svg,
-.c9 .svg .fill,
-.c9 .svg .stroke {
+.c8 .svg,
+.c8 .svg .fill,
+.c8 .svg .stroke {
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: fill,stroke;
   transition-property: fill,stroke;
 }
 
-.c9 .svg,
-.c9 .svg .fill {
+.c8 .svg,
+.c8 .svg .fill {
   fill: #fff;
 }
 
-.c9 .svg .stroke {
+.c8 .svg .stroke {
   stroke: #fff;
 }
 
-.c10 {
+.c9 {
   border-radius: .2rem;
   fill: currrentcolor;
   -webkit-transition: 100ms 0s ease-in-out;
@@ -267,9 +263,9 @@ exports[`<SelectBox /> should render component 1`] = `
   transition-property: background,color,fill;
 }
 
-.c10 .svg,
-.c10 .svg .fill,
-.c10 .svg .stroke {
+.c9 .svg,
+.c9 .svg .fill,
+.c9 .svg .stroke {
   -webkit-transition: 100ms 0s ease-in-out;
   transition: 100ms 0s ease-in-out;
   -webkit-transition-property: fill,stroke;
@@ -298,7 +294,7 @@ exports[`<SelectBox /> should render component 1`] = `
 }
 
 @media (max-width:767px) {
-  .c4 {
+  .c3 {
     height: auto !important;
     max-height: 100% !important;
     position: static;
@@ -388,29 +384,29 @@ exports[`<SelectBox /> should render component 1`] = `
       class="c2"
     />
     <div
-      class="c3 c4"
+      class=" c3"
       style="pointer-events: none; visibility: hidden;"
     >
       <div
-        class="c5 c6"
+        class="c4 c5"
       >
         <div
-          class="c7"
+          class="c6"
         >
           Category
         </div>
         <div
-          class="c8 c9"
+          class="c7 c8"
         >
           Item 1
         </div>
         <div
-          class="c8 c10"
+          class="c7 c9"
         >
           Item 2
         </div>
         <div
-          class="c8 c10"
+          class="c7 c9"
         >
           Item 3
         </div>
