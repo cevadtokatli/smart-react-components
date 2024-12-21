@@ -63,18 +63,18 @@ const ClientRouter: React.FC<Props> = ({ children, fallback, isHashRouter, param
     if (isNewPage) {
       window.open(to, '_blank')
     } else {
-      window.location.href = to
+      window.location.href = isHashRouter ? `${window.location.pathname}${window.location.search}#${to}` : to
     }
   }, [])
 
   const push = React.useCallback((to: string) => {
-    const url = isHashRouter ? window.location.pathname + window.location.search + '#' + to : to
+    const url = isHashRouter ? `${window.location.pathname}${window.location.search}#${to}` : to
     history.pushState({}, null, url)
     handleURLChange()
   }, [isHashRouter, state.activeURL.fullpath, state.activatingURL?.fullpath])
 
   const replace = React.useCallback((to: string) => {
-    const url = isHashRouter ? window.location.pathname + window.location.search + '#' + to : to
+    const url = isHashRouter ? `${window.location.pathname}${window.location.search}#${to}` : to
     history.replaceState({}, null, url)
     handleURLChange()
   }, [isHashRouter, state.activeURL.fullpath, state.activatingURL?.fullpath])
