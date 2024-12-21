@@ -28,6 +28,7 @@ interface Return {
   handleOnClick: (e: MouseEvent<HTMLAnchorElement>) => void
   isActivating: boolean
   isActive: boolean
+  to: string
 }
 
 const useLink = ({ children, isDisabled, isExact, onClick, path, to }: Props): Return => {
@@ -67,6 +68,7 @@ const useLink = ({ children, isDisabled, isExact, onClick, path, to }: Props): R
     handleOnClick,
     isActivating,
     isActive,
+    to: router.state.isHashRouter ? `${window.location.pathname}${window.location.search}#${to}` : to,
   }
 }
 

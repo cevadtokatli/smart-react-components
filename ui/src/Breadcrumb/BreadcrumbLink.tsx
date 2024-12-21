@@ -15,7 +15,7 @@ const BreadcrumbLink: React.FC<Props> = (props: Props & BreadcrumbItemPrivatePro
 
   const waveEffectPalette = React.useMemo(() => getWaveEffectPalette(props, theme.$.vars.isDarkMode), [props.palette, props.isOutline, props.isSoft, props.waveEffectPalette, theme.$.vars.isDarkMode])
 
-  const { children, handleOnClick, isActive } = useLink({
+  const { children, handleOnClick, isActive, to } = useLink({
     children: props.children,
     isDisabled: props.isDisabled,
     isExact: props.isExact,
@@ -27,7 +27,7 @@ const BreadcrumbLink: React.FC<Props> = (props: Props & BreadcrumbItemPrivatePro
   const AnchorEl = (
     <A
       {...props.elementProps}
-      href={props.to}
+      href={to}
       onClick={handleOnClick}
     >
       {children}

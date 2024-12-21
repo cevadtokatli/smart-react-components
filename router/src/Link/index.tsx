@@ -11,7 +11,7 @@ export interface Props extends LinkProps, ClickEvents, IntrinsicStyledCoreProps 
 }
 
 const Link: React.FC<Props> = props => {
-  const { children, handleOnClick, isActivating, isActive } = useLink({
+  const { children, handleOnClick, isActivating, isActive, to } = useLink({
     children: props.children,
     isDisabled: props.isDisabled,
     isExact: props.isExact,
@@ -27,7 +27,7 @@ const Link: React.FC<Props> = props => {
       {...extractElementProps(props, [clickEvents, intrinsicStyledCoreProps])}
       {...props.elementProps}
       className={`${props.elementProps.className ?? ''} ${isActive ? 'active' : ''} ${isActivating ? 'activating' : ''}`}
-      href={props.to}
+      href={to}
       onClick={handleOnClick}
     >
       {children}

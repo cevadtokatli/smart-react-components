@@ -9,7 +9,7 @@ export interface Props extends ButtonGenericProps<ContentElement> {
 }
 
 const ButtonLink = React.forwardRef<HTMLAnchorElement, Props>((props, forwardRef) => {
-  const { children, handleOnClick } = useLink({
+  const { children, handleOnClick, to } = useLink({
     children: props.children,
     isDisabled: props.isDisabled,
     to: props.to,
@@ -21,7 +21,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, Props>((props, forwardRef
       as="a"
       elementProps={{
         ...props.elementProps,
-        href: props.to,
+        href: to,
         textDecoration: 'none',
       }}
       onClick={handleOnClick}

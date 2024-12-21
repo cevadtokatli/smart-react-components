@@ -10,7 +10,7 @@ export interface Props extends LinkProps {
 }
 
 const PaginationLink: React.FC<Props> = (props: Props & PaginationItemPrivateProps) => {
-  const { children, handleOnClick, isActive } = useLink({
+  const { children, handleOnClick, isActive, to } = useLink({
     children: props.children,
     isDisabled: props.isDisabled,
     isExact: props.isExact,
@@ -22,7 +22,7 @@ const PaginationLink: React.FC<Props> = (props: Props & PaginationItemPrivatePro
   const AnchorEl = (
     <A
       {...props.elementProps}
-      href={props.to}
+      href={to}
       onClick={handleOnClick}
     >
       {children}
