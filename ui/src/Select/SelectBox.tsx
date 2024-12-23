@@ -36,6 +36,7 @@ export interface Props extends GenericProps, Partial<ResponsiveProp<'searchInput
   dropdownPalette?: PaletteProp
   hasSearch?: boolean
   isDropdownOutline?: boolean
+  isSearchInputOutline?: boolean
   placeholder?: string
   searchInputPalette?: PaletteProp
   searchInputPlaceholder?: string
@@ -250,6 +251,7 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
             }}
           >
             <Input
+              isOutline={props.isSearchInputOutline ?? props.isDropdownOutline ?? props.isOutline}
               palette={props.searchInputPalette ?? props.dropdownPalette ?? props.palette}
               placeholder={props.searchInputPlaceholder}
               setValue={setSearchValue}
