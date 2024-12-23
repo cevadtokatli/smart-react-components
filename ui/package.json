@@ -1,6 +1,6 @@
 {
   "name": "@smart-react-components/ui",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "license": "MIT",
   "main": "index.js",
   "description": "SRC UI includes React and Styled components.",
