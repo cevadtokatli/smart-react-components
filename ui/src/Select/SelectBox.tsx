@@ -22,15 +22,19 @@ import CloseIcon from '../icons/Close'
 import InputElement from '../components/Input/InputElement'
 import InputPlaceholder from '../components/Input/InputPlaceholder'
 import useSelectBoxHover from '../hooks/useSelectBoxHover'
+import useSelectSearch from '../hooks/useSelectSearch'
 import { FormValue } from '../types'
 import { getInputValue } from '../util/form'
 import { applyResponsiveStyledProp } from '../util/props'
 import { getWaveEffectPalette } from '../util/wave-effect'
+import DropdownItem from '../Dropdown/DropdownItem'
+import Input from '../Input'
 import InputAddon from './SelectAddon'
 
 export interface Props extends GenericProps {
   dropdownArrowIconElementProps?: JSXElementProps
   dropdownPalette?: PaletteProp
+  hasSearch?: boolean
   isDropdownOutline?: boolean
   placeholder?: string
 }
@@ -88,11 +92,19 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
 
   const [dropdownStatus, setDropdownStatus] = React.useState(false)
 
+  const [searchValue, setSearchValue] = React.useState('')
+
   const waveEffectPalette = React.useMemo(() => getWaveEffectPalette(props, theme.$.vars.isDarkMode), [props.waveEffectPalette, props.palette, props.isOutline, props.isSoft, theme.$.vars.isDarkMode])
+
+  const { optionList } = useSelectSearch({
+    children: props.children,
+    dropdownStatus,
+    searchValue,
+  })
 
   const { hovered, setHovered } = useSelectBoxHover({
     active: props.active,
-    children: Array.isArray(props.children) ? props.children : [props.children],
+    children: optionList,
     dropdownStatus,
     hasHover: props.hasHover,
     isDisabled: props.isDisabled,
@@ -103,7 +115,7 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
   useChangeEffect(() => {
     const event = new Event('src.fixedBox.setPosition')
     formEl.current.dispatchEvent(event)
-  }, [content])
+  }, [content, optionList])
 
   const { leftAddon, rightAddon } = useAddons({
     Component: InputAddon,
@@ -125,6 +137,10 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
       sizeXl: props.sizeXl,
     },
   })
+
+  useChangeEffect(() => {
+    setHovered(undefined)
+  }, [optionList])
 
   const handleOptionClick = active => {
     props.setActive(active)
@@ -217,7 +233,29 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
         isSoft={props.isSoft}
         palette={props.dropdownPalette ?? props.palette}
       >
-        { (Array.isArray(props.children) ? props.children : [props.children]).map((item, idx) => item && React.cloneElement(item, {
+        { props.hasSearch && (
+          <DropdownItem
+            elementProps={{
+              cursor: 'initial',
+            }}
+            {...{
+              hasHover: false,
+              hasWaveEffect: false,
+              isOutline: props.isDropdownOutline ?? props.isOutline,
+              isSoft: props.isSoft,
+              palette: props.dropdownPalette ?? props.palette,
+              setStatus: () => {},
+            }}
+          >
+            <Input
+              palette={props.dropdownPalette ?? props.palette}
+              placeholder="Search..."
+              setValue={setSearchValue}
+              value={searchValue}
+            />
+          </DropdownItem>
+        )}
+        { optionList.map((item, idx) => item && React.cloneElement(item, {
           key: item.key ?? idx,
           active: props.active,
           cursorKey: 'selectBox',
@@ -243,6 +281,7 @@ SelectBox.defaultProps = {
   elementProps: {},
   hasBorder: true,
   hasHover: true,
+  hasSearch: false,
   hasWaveEffect: true,
   isBlock: true,
   isOutline: true,

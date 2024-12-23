@@ -13,6 +13,7 @@ import React from 'react'
 import { useTheme } from 'styled-components'
 import DropdownListElement from '../components/Dropdown/DropdownListElement'
 import useSelectBoxHover from '../hooks/useSelectBoxHover'
+import useSelectSearch from '../hooks/useSelectSearch'
 import { getWaveEffectPalette } from '../util/wave-effect'
 import Dropdown from '../Dropdown'
 import Input from '../Input'
@@ -54,47 +55,11 @@ const SelectSearchBox = React.forwardRef<HTMLInputElement, Props>((props, forwar
 
   const [dropdownStatus, setDropdownStatus] = React.useState(false)
 
-  const lastOptionList = React.useRef<JSX.Element[]>([])
-
-  const applySearch = React.useCallback((children: JSX.Element[], list: JSX.Element[], value: string) => {
-    children.forEach(item => {
-      switch (item.type.displayName) {
-        case 'Option':
-          if (!value || item.props.value.trim().toLowerCase().includes(value)) {
-            list.push(item)
-          }
-          break
-        case 'OptionGroup':
-          const group = React.cloneElement(item, { children: [] })
-          if (item.props.children) {
-            applySearch(Array.isArray(item.props.children) ? item.props.children : [item.props.children], group.props.children, value)
-          }
-          if (group.props.children.length > 0) {
-            list.push(group)
-          }
-          break
-      }
-    })
-  }, [])
-
-  const optionList = React.useMemo<JSX.Element[]>(() => {
-    /**
-     * Returns the same list when the dropdown gets closed since it is not needed to update during the closing animation.
-     */
-    if (!dropdownStatus && lastOptionList.current.length > 0) {
-      return lastOptionList.current
-    }
-
-    const children = []
-    const value = props.value.trim().toLowerCase()
-    applySearch(Array.isArray(props.children) ? props.children : [props.children], children, value)
-
-    if (dropdownStatus) {
-      lastOptionList.current = children
-    }
-
-    return children
-  }, [props.children, props.value, dropdownStatus])
+  const { optionList } = useSelectSearch({
+    children: props.children,
+    dropdownStatus,
+    searchValue: props.value,
+  })
 
   const { hovered, setHovered } = useSelectBoxHover({
     active: props.value,
