@@ -20,7 +20,7 @@ const useSelectSearch = (props: Props): Return => {
         case 'Option':
           if (
             !value
-            || item.props.value.trim().toLowerCase().includes(value)
+            || (typeof item.props.value === 'string' && item.props.value.trim().toLowerCase().includes(value))
             || (typeof item.props.children === 'string' && item.props.children.trim().toLowerCase().includes(value))
           ) {
             list.push(item)

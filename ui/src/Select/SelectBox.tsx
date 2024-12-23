@@ -4,7 +4,7 @@ import extractElementProps from '@smart-react-components/core/element-props'
 import intrinsicStyledCoreProps from '@smart-react-components/core/element-props/intrinsic-styled-core-props'
 import useChangeEffect from '@smart-react-components/core/hooks/useChangeEffect'
 import { Theme } from '@smart-react-components/core/theme'
-import { ContentElement, JSXElementProps, PaletteProp } from '@smart-react-components/core/types'
+import { ContentElement, JSXElementProps, PaletteProp, ResponsiveProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import { useTheme } from 'styled-components'
 import Badge from '../Badge'
@@ -31,12 +31,14 @@ import DropdownItem from '../Dropdown/DropdownItem'
 import Input from '../Input'
 import InputAddon from './SelectAddon'
 
-export interface Props extends GenericProps {
+export interface Props extends GenericProps, Partial<ResponsiveProp<'searchInputSize', SizeProp>> {
   dropdownArrowIconElementProps?: JSXElementProps
   dropdownPalette?: PaletteProp
   hasSearch?: boolean
   isDropdownOutline?: boolean
   placeholder?: string
+  searchInputPalette?: PaletteProp
+  searchInputPlaceholder?: string
 }
 
 const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) => {
@@ -248,9 +250,14 @@ const SelectBox = React.forwardRef<HTMLInputElement, Props>((props, forwardRef) 
             }}
           >
             <Input
-              palette={props.dropdownPalette ?? props.palette}
-              placeholder="Search..."
+              palette={props.searchInputPalette ?? props.dropdownPalette ?? props.palette}
+              placeholder={props.searchInputPlaceholder}
               setValue={setSearchValue}
+              size={props.searchInputSize ?? props.size}
+              sizeSm={props.searchInputSizeSm ?? props.sizeSm}
+              sizeMd={props.searchInputSizeMd ?? props.sizeMd}
+              sizeLg={props.searchInputSizeLg ?? props.sizeLg}
+              sizeXl={props.searchInputSizeLg ?? props.sizeXl}
               value={searchValue}
             />
           </DropdownItem>
@@ -286,6 +293,7 @@ SelectBox.defaultProps = {
   isBlock: true,
   isOutline: true,
   palette: 'primary',
+  searchInputPlaceholder: 'Search...',
   shape: 'rectangle',
   size: 'medium',
 }
