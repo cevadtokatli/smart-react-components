@@ -113,6 +113,7 @@ const Button = React.forwardRef<HTMLElement, Props>((props, forwardRef) => {
       palette={props.palette}
       ref={forwardRef}
       shape={props.shape}
+      type={props.type}
     >
       { loadingEl && loadingEl }
       { (leftAddon && !leftAddon.props.isSeparated) && leftAddon }
@@ -148,7 +149,6 @@ Button.defaultProps = {
   palette: 'primary',
   shape: 'rectangle',
   size: 'medium',
-  type: ButtonType.BUTTON,
 }
 
 export default Button
