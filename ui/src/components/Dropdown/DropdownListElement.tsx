@@ -15,7 +15,8 @@ export default styled(Div).attrs({
   getDropdownListSize: (v, t) => `
     padding: ${t.$.size.dropdown[v].padding.y} 0;
 
-    > div {
+    > div,
+    > a {
       font-size: ${t.$.size.dropdown[v].fontSize};
       margin: ${t.$.size.dropdown[v].margin.y} ${t.$.size.dropdown[v].margin.x};
       padding: ${t.$.size.dropdown[v].padding.y} ${t.$.size.dropdown[v].padding.x};
@@ -31,7 +32,8 @@ export default styled(Div).attrs({
   width: inherit;
   -webkit-overflow-scrolling: touch;
 
-  > div {
+  > div,
+  > a {
     word-break: break-word;
     word-wrap: break-word;
   }

@@ -174,7 +174,8 @@ exports[`<SelectBox /> should render component 1`] = `
   padding: .3125rem 0;
 }
 
-.c4 > div {
+.c4 > div,
+.c4 > a {
   font-size: .875rem;
   margin: .125rem .45rem;
   padding: .3125rem .3125rem;
@@ -220,7 +221,8 @@ exports[`<SelectBox /> should render component 1`] = `
   fill: #323a46;
 }
 
-.c5 > div {
+.c5 > div,
+.c5 > a {
   word-break: break-word;
   word-wrap: break-word;
 }

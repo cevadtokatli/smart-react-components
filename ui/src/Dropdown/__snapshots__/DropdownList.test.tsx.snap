@@ -6,7 +6,8 @@ exports[`<DropdownList /> should render component 1`] = `
   padding: .3125rem 0;
 }
 
-.c0 > div {
+.c0 > div,
+.c0 > a {
   font-size: .875rem;
   margin: .125rem .45rem;
   padding: .3125rem .3125rem;
@@ -41,7 +42,8 @@ exports[`<DropdownList /> should render component 1`] = `
   fill: #323a46;
 }
 
-.c1 > div {
+.c1 > div,
+.c1 > a {
   word-break: break-word;
   word-wrap: break-word;
 }

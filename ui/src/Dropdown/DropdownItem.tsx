@@ -33,7 +33,7 @@ const DropdownItem: React.FC<Props> = ({ children, elementProps = {}, hasHover, 
 
     onClick?.(e)
 
-    if (!e.defaultPrevented) {
+    if (!e.defaultPrevented || e.target instanceof HTMLAnchorElement) {
       setStatus(false)
     } else {
       isClicked.current = false
