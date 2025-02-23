@@ -48,6 +48,13 @@ exports[`<DropdownList /> should render component 1`] = `
   word-wrap: break-word;
 }
 
+.c1 > a {
+  color: inherit;
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c4 {
   border-radius: .2rem;
   fill: currrentcolor;

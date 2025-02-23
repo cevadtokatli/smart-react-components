@@ -36,6 +36,13 @@ exports[`<DropdownListElement /> should render component 1`] = `
   word-wrap: break-word;
 }
 
+.c1 > a {
+  color: inherit;
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     class="c0 c1"
   />
@@ -76,6 +83,13 @@ exports[`<DropdownListElement /> should render component not outline 1`] = `
 .c1 > a {
   word-break: break-word;
   word-wrap: break-word;
+}
+
+.c1 > a {
+  color: inherit;
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
@@ -120,6 +134,13 @@ exports[`<DropdownListElement /> should render component not outline with soft c
   word-wrap: break-word;
 }
 
+.c1 > a {
+  color: inherit;
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     class="c0 c1"
   />
@@ -162,6 +183,13 @@ exports[`<DropdownListElement /> should render component with soft colors 1`] = 
   word-wrap: break-word;
 }
 
+.c1 > a {
+  color: inherit;
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     class="c0 c1"
   />
@@ -202,6 +230,13 @@ exports[`<DropdownListElement /> should resize component responsively 1`] = `
 .c1 > a {
   word-break: break-word;
   word-wrap: break-word;
+}
+
+.c1 > a {
+  color: inherit;
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 @media (min-width:768px) {

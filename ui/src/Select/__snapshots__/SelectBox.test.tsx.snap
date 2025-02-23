@@ -227,6 +227,13 @@ exports[`<SelectBox /> should render component 1`] = `
   word-wrap: break-word;
 }
 
+.c5 > a {
+  color: inherit;
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c8 {
   border-radius: .2rem;
   fill: currrentcolor;

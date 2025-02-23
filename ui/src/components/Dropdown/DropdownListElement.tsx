@@ -38,6 +38,12 @@ export default styled(Div).attrs({
     word-wrap: break-word;
   }
 
+  > a {
+    color: inherit;
+    display: block;
+    text-decoration: none; 
+  }
+
   ${!isOutline
     ? `
       background: ${!isSoft ? (theme.$.palette[palette].dropdown?.background ?? theme.$.palette[palette].main) : (theme.$.palette[palette].dropdown?.soft?.background ?? theme.$.palette[palette].soft)};
