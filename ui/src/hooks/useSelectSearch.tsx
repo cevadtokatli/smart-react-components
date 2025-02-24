@@ -16,7 +16,7 @@ const useSelectSearch = (props: Props): Return => {
 
   const applySearch = useCallback((children: JSX.Element[], list: JSX.Element[], value: string) => {
     children.forEach(item => {
-      switch (item?.type.displayName) {
+      switch (item?.type?.displayName) {
         case 'Option':
           if (
             !value
